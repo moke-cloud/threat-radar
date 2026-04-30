@@ -154,6 +154,27 @@ func (s *Store) RebuildIndex(daysBack int) error {
 	if err := s.writeJSON("stats.json", stats); err != nil {
 		return err
 	}
+
+	// RSS feeds for Outlook / Feedly / Inoreader subscribers.
+	const siteLink = "https://moke-cloud.github.io/threat-radar/"
+	if err := WriteFeed(all, FeedOptions{
+		Title:       "ThreatRadar — all items",
+		Description: "Auto-curated cybersecurity intel from CISA KEV / NVD / JPCERT and major news sources. Updated daily 06:30 JST.",
+		SiteLink:    siteLink,
+		OutPath:     filepath.Join(s.Root, "feed.xml"),
+		MaxItems:    100,
+	}); err != nil {
+		return err
+	}
+	if err := WriteFeed(critical, FeedOptions{
+		Title:       "ThreatRadar — critical & high",
+		Description: "Critical and high-severity entries only. Updated daily 06:30 JST.",
+		SiteLink:    siteLink,
+		OutPath:     filepath.Join(s.Root, "feed-critical.xml"),
+		MaxItems:    100,
+	}); err != nil {
+		return err
+	}
 	return nil
 }
 

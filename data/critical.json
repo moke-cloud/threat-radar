@@ -1,5 +1,53 @@
 [
   {
+    "id": "9d966f61c42576e4e408f85f96fd422a",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Critical cPanel and WHM bug exploited as a zero-day, PoC now available",
+    "url": "https://www.bleepingcomputer.com/news/security/critical-cpanel-and-whm-bug-exploited-as-a-zero-day-poc-now-available/",
+    "summary": "The critical CVE-2026-41940 authentication bypass vulnerability in cPanel, WHM, and WP Squared is being actively exploited in the wild and has been leveraged in attempts since late February. [...]",
+    "published": "2026-04-30T11:40:31Z",
+    "fetched": "2026-04-30T22:28:47.81451706Z",
+    "tags": [
+      "auth-bypass",
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 87,
+    "cves": [
+      "CVE-2026-41940"
+    ]
+  },
+  {
+    "id": "57dcabb55431823988e3b8b585c7608b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-41940 — WebPros cPanel & WHM and WP2 (WordPress Squared): WebPros cPanel & WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41940",
+    "summary": "WebPros cPanel & WHM (WebHost Manager) and WP2 (WordPress Squared) contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-03",
+    "published": "2026-04-30T00:00:00Z",
+    "fetched": "2026-04-30T22:28:47.81451706Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "wordpress",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "webpros",
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-41940"
+    ]
+  },
+  {
     "id": "d9ddc54ec1c3fbb35ec57c076587b920",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -2620,253 +2668,6 @@
     ],
     "cves": [
       "CVE-2025-52691"
-    ]
-  },
-  {
-    "id": "0c8c82ad5cfb13f35423459e1e6518ff",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-23760 — SmarterTools SmarterMail: SmarterTools SmarterMail Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23760",
-    "summary": "SmarterTools SmarterMail contains an authentication bypass using an alternate path or channel vulnerability in the password reset API. The force-reset-password endpoint permits anonymous requests and fails to verify the existing password or a reset token when resetting system administrator accounts. This could allow an unauthenticated attacker to supply a target administrator username and a new password to reset the account, resulting in full administrative compromise of the SmarterMail instance.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-02-16",
-    "published": "2026-01-26T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "ransomware",
-      "auth-bypass"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "smartertools"
-    ],
-    "cves": [
-      "CVE-2026-23760"
-    ]
-  },
-  {
-    "id": "a76f55f8dcb1faaf0f053003c5a3fcc6",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-24061 — GNU InetUtils: GNU InetUtils Argument Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24061",
-    "summary": "GNU InetUtils contains an argument injection vulnerability in telnetd that could allow for remote authentication bypass via a \"-f root\" value for the USER environment variable.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-02-16",
-    "published": "2026-01-26T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "auth-bypass"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "gnu"
-    ],
-    "cves": [
-      "CVE-2026-24061"
-    ]
-  },
-  {
-    "id": "77935cc20e982dd18e673300d15e1abc",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-21509 — Microsoft Office: Microsoft Office Security Feature Bypass Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21509",
-    "summary": "Microsoft Office contains a security feature bypass vulnerability in which reliance on untrusted inputs in a security decision in Microsoft Office could allow an unauthorized attacker to bypass a security feature locally. Some of the impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-02-16",
-    "published": "2026-01-26T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-21509"
-    ]
-  },
-  {
-    "id": "5246c3b8619de0bd1bef5b85906fd585",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2024-37079 — Broadcom VMware vCenter Server: Broadcom VMware vCenter Server Out-of-bounds Write Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-37079",
-    "summary": "Broadcom VMware vCenter Server contains an out-of-bounds write vulnerability in the implementation of the DCERPC protocol. This could allow a malicious actor with network access to vCenter Server to send specially crafted network packets, potentially leading to remote code execution.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-02-13",
-    "published": "2026-01-23T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "vmware",
-      "watch",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "broadcom",
-      "vmware"
-    ],
-    "cves": [
-      "CVE-2024-37079"
-    ]
-  },
-  {
-    "id": "50b009bfea568a481b4b9addb1238093",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2025-68645 — Synacor  Zimbra Collaboration Suite (ZCS): Synacor Zimbra Collaboration Suite (ZCS) PHP Remote File Inclusion Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68645",
-    "summary": "Synacor Zimbra Collaboration Suite (ZCS) contains a PHP remote file inclusion vulnerability that could allow for remote attackers to craft requests to the /h/rest endpoint to influence internal request dispatching, allowing inclusion of arbitrary files from the WebRoot directory.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-02-12",
-    "published": "2026-01-22T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "synacor"
-    ],
-    "cves": [
-      "CVE-2025-68645"
-    ]
-  },
-  {
-    "id": "f0b20da1f5e1b3e4fae8293ec6f8b697",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2025-34026 — Versa Concerto: Versa Concerto Improper Authentication Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34026",
-    "summary": "Versa Concerto SD-WAN orchestration platform contains an improper authentication vulnerability in the Traefik reverse proxy configuration, allowing at attacker to access administrative endpoints. The internal Actuator endpoint can be leveraged for access to heap dumps and trace logs.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-02-12",
-    "published": "2026-01-22T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "versa"
-    ],
-    "cves": [
-      "CVE-2025-34026"
-    ]
-  },
-  {
-    "id": "59af13e652338f2613eb6819663806b5",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2025-31125 — Vite Vitejs: Vite Vitejs Improper Access Control Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-31125",
-    "summary": "Vite Vitejs contains an improper access control vulnerability that exposes content of non-allowed files using ?inline&import or ?raw?import. Only apps explicitly exposing the Vite dev server to the network (using --host or server.host config option) are affected.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-02-12",
-    "published": "2026-01-22T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "vite"
-    ],
-    "cves": [
-      "CVE-2025-31125"
-    ]
-  },
-  {
-    "id": "740b35ebe114ffd5ebc52f28380adad8",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2025-54313 — Prettier eslint-config-prettier: Prettier eslint-config-prettier Embedded Malicious Code Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54313",
-    "summary": "Prettier eslint-config-prettier contains an embedded malicious code vulnerability. Installing an affected package executes an install.js file that launches the node-gyp.dll malware on Windows.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-02-12",
-    "published": "2026-01-22T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch",
-      "malware"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "prettier",
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2025-54313"
-    ]
-  },
-  {
-    "id": "064273a4dc1651f204d63ef7066c82d9",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-20045 — Cisco Unified Communications Manager: Cisco Unified Communications Products Code Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20045",
-    "summary": "Cisco Unified Communications Manager (Unified CM), Cisco Unified Communications Manager Session Management Edition (Unified CM SME), Cisco Unified Communications Manager IM & Presence Service (Unified CM IM&P), Cisco Unity Connection, and Cisco Webex Calling Dedicated Instance contain a code injection vulnerability that could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to root.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-02-11",
-    "published": "2026-01-21T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20045"
-    ]
-  },
-  {
-    "id": "fa7cea38b04a6eef587aeb77aba37af6",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-20805 — Microsoft Windows: Microsoft Windows Information Disclosure Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20805",
-    "summary": "Microsoft Windows Desktop Windows Manager contains an information disclosure vulnerability that allows an authorized attacker to disclose information locally.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-02-03",
-    "published": "2026-01-13T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-20805"
     ]
   }
 ]

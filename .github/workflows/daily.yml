@@ -1,0 +1,98 @@
+name: ThreatRadar daily collection
+
+on:
+  schedule:
+    # 06:30 JST = 21:30 UTC (previous day)
+    - cron: "30 21 * * *"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Comma-separated source IDs to fetch (blank = all)"
+        required: false
+        default: ""
+      dry:
+        description: "Dry run (no commit)"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: threat-radar-collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+          cache-dependency-path: collector/go.sum
+
+      - name: Build collector
+        working-directory: collector
+        run: go build -o ../collector-bin ./cmd/collector
+
+      - name: Run collector
+        # No secrets are required. The collector only fetches public RSS / JSON
+        # feeds; it does not call any authenticated API.
+        run: |
+          ARGS="-config config.yaml -out data"
+          if [ -n "${{ github.event.inputs.only }}" ]; then
+            ARGS="$ARGS -only ${{ github.event.inputs.only }}"
+          fi
+          if [ "${{ github.event.inputs.dry }}" = "true" ]; then
+            ARGS="$ARGS -dry"
+          fi
+          ./collector-bin $ARGS
+
+      - name: Commit data
+        if: github.event.inputs.dry != 'true'
+        run: |
+          if [ -z "$(git status --porcelain data)" ]; then
+            echo "No data changes."
+            exit 0
+          fi
+          git config user.name  "threat-radar-bot"
+          git config user.email "threat-radar-bot@users.noreply.github.com"
+          git add data
+          git commit -m "data: threat-radar update $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
+
+  deploy-pages:
+    needs: collect
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          ref: ${{ github.ref }}
+
+      - name: Stage site
+        run: |
+          mkdir -p _site
+          cp -r web/* _site/
+          mkdir -p _site/data
+          cp data/index.json _site/data/ 2>/dev/null || true
+          cp data/critical.json _site/data/ 2>/dev/null || true
+          cp data/stats.json _site/data/ 2>/dev/null || true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

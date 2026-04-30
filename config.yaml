@@ -84,16 +84,16 @@ sources:
     weight: 1.4
 
   - id: jpcert-wr
-    name: "JPCERT/CC Weekly Report"
+    name: "JPCERT/CC 全フィード"
     type: rss
-    url: https://www.jpcert.or.jp/rss/wr.rdf
+    url: https://www.jpcert.or.jp/rss/jpcert-all.rdf
     category: advisory
     weight: 0.8
 
   - id: ipa-alert
     name: "IPA セキュリティセンター"
     type: rss
-    url: https://www.ipa.go.jp/security/announce/alert.rss
+    url: https://www.ipa.go.jp/security/alert-rss.rdf
     category: advisory
     weight: 1.2
 
@@ -144,9 +144,9 @@ sources:
     weight: 1.1
 
   - id: msrc
-    name: "Microsoft Security Response Center"
+    name: "Microsoft Security Blog"
     type: rss
-    url: https://msrc.microsoft.com/blog/feed/
+    url: https://www.microsoft.com/en-us/security/blog/feed/
     category: advisory
     weight: 1.2
 
@@ -154,5 +154,33 @@ sources:
     name: "Google Online Security Blog"
     type: rss
     url: https://security.googleblog.com/feeds/posts/default
+    category: research
+    weight: 0.9
+
+  - id: mandiant
+    name: "Google Threat Intelligence (Mandiant)"
+    type: rss
+    url: https://www.mandiant.com/resources/blog/rss.xml
+    category: research
+    weight: 1.1
+
+  - id: zdi
+    name: "Zero Day Initiative — Published"
+    type: rss
+    url: https://www.zerodayinitiative.com/rss/published/
+    category: vuln
+    weight: 1.0
+
+  - id: rapid7
+    name: "Rapid7 Blog"
+    type: rss
+    url: https://www.rapid7.com/blog/rss/
+    category: research
+    weight: 0.9
+
+  - id: trailofbits
+    name: "Trail of Bits Blog"
+    type: rss
+    url: https://blog.trailofbits.com/feed/
     category: research
     weight: 0.9

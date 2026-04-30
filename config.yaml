@@ -1,0 +1,158 @@
+# ThreatRadar collector configuration.
+#
+# - sources : list of feeds / APIs to poll
+# - watch   : vendors / tags that get a score boost
+# - retain  : how much history to keep per file
+# - enrich  : optional LLM enrichment (off by default)
+
+http:
+  user_agent: "ThreatRadar/1.0 (+https://github.com/moke-cloud/SHIGOTOBA)"
+  timeout_seconds: 30
+  parallel: 8
+
+retain:
+  index_max_items: 500    # data/index.json keeps only the most recent N items
+  daily_files_keep: 90    # delete data/items/YYYY-MM-DD.ndjson older than N days
+
+# Note: an earlier draft included optional LLM-driven JP translation. Removed
+# to avoid managing API keys in CI. Translate manually as needed — each
+# dashboard card has a "copy" button that yields title + URL + summary
+# in plain text, ready to paste into a translator.
+
+watch:
+  vendors:
+    - microsoft
+    - cisco
+    - fortinet
+    - paloalto
+    - citrix
+    - vmware
+    - ivanti
+    - apache
+    - openssl
+    - linux
+    - chrome
+    - firefox
+    - wordpress
+    - jenkins
+    - confluence
+    - exchange
+    - sharepoint
+  tags:
+    - kev
+    - actively-exploited
+    - 0day
+    - rce
+    - auth-bypass
+    - supply-chain
+    - ransomware
+
+# ----------------------------------------------------------------------------
+
+sources:
+
+  # -- Government / CSIRT --
+
+  - id: cisa-kev
+    name: "CISA Known Exploited Vulnerabilities"
+    type: cisa-kev
+    url: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+    category: vuln
+    weight: 1.5
+
+  - id: cisa-advisories
+    name: "CISA Cybersecurity Advisories"
+    type: rss
+    url: https://www.cisa.gov/cybersecurity-advisories/all.xml
+    category: advisory
+    weight: 1.2
+
+  - id: nvd-recent
+    name: "NVD CVE recent"
+    type: nvd
+    url: https://services.nvd.nist.gov/rest/json/cves/2.0
+    category: vuln
+    weight: 1.0
+    options:
+      lookback_hours: 48
+
+  - id: jpcert-at
+    name: "JPCERT/CC 注意喚起"
+    type: rss
+    url: https://www.jpcert.or.jp/rss/jpcert.rdf
+    category: advisory
+    weight: 1.4
+
+  - id: jpcert-wr
+    name: "JPCERT/CC Weekly Report"
+    type: rss
+    url: https://www.jpcert.or.jp/rss/wr.rdf
+    category: advisory
+    weight: 0.8
+
+  - id: ipa-alert
+    name: "IPA セキュリティセンター"
+    type: rss
+    url: https://www.ipa.go.jp/security/announce/alert.rss
+    category: advisory
+    weight: 1.2
+
+  # -- Major news / analysis --
+
+  - id: thehackernews
+    name: "The Hacker News"
+    type: rss
+    url: https://feeds.feedburner.com/TheHackersNews
+    category: news
+    weight: 0.7
+
+  - id: bleeping
+    name: "Bleeping Computer"
+    type: rss
+    url: https://www.bleepingcomputer.com/feed/
+    category: news
+    weight: 0.9
+
+  - id: krebs
+    name: "Krebs on Security"
+    type: rss
+    url: https://krebsonsecurity.com/feed/
+    category: news
+    weight: 1.0
+
+  - id: sans-isc
+    name: "SANS Internet Storm Center"
+    type: rss
+    url: https://isc.sans.edu/rssfeed.xml
+    category: news
+    weight: 1.0
+
+  - id: schneier
+    name: "Schneier on Security"
+    type: rss
+    url: https://www.schneier.com/feed/atom/
+    category: analysis
+    weight: 0.6
+
+  # -- Vendor / research --
+
+  - id: project-zero
+    name: "Google Project Zero"
+    type: rss
+    url: https://googleprojectzero.blogspot.com/feeds/posts/default
+    category: research
+    weight: 1.1
+
+  - id: msrc
+    name: "Microsoft Security Response Center"
+    type: rss
+    url: https://msrc.microsoft.com/blog/feed/
+    category: advisory
+    weight: 1.2
+
+  - id: google-security
+    name: "Google Online Security Blog"
+    type: rss
+    url: https://security.googleblog.com/feeds/posts/default
+    category: research
+    weight: 0.9

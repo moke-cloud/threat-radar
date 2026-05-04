@@ -5,7 +5,28 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 03 May 2026 22:07:22 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 22:32:50 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Trellix discloses data breach after source code repository hack</title>
+      <link>https://www.bleepingcomputer.com/news/security/trellix-discloses-data-breach-after-source-code-repository-hack/</link>
+      <guid isPermaLink="false">d4f077fda2ac45cf635264c786afe497</guid>
+      <pubDate>Mon, 04 May 2026 16:25:07 +0000</pubDate>
+      <description>Cybersecurity firm Trellix disclosed a data breach after attackers gained access to &#34;a portion&#34; of its source code repository. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>breach</category>
+    </item>
+    <item>
+      <title>[HIGH] CISA says ‘Copy Fail’ flaw now exploited to root Linux systems</title>
+      <link>https://www.bleepingcomputer.com/news/security/cisa-says-copy-fail-flaw-now-exploited-to-root-linux-systems/</link>
+      <guid isPermaLink="false">073f83c89b3f7075f86773bfee4e1cc7</guid>
+      <pubDate>Mon, 04 May 2026 11:28:15 +0000</pubDate>
+      <description>CISA has warned that threat actors have started exploiting the &#34;Copy Fail&#34; Linux security vulnerability in the wild, one day after Theori researchers disclosed it and shared a proof-of-concept (PoC) exploit. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>actively-exploited</category>
+    </item>
     <item>
       <title>[HIGH] [CVSS 7.3 HIGH] CVE-2026-7698 — A vulnerability was identified in Tiandy Easy7 Integrated Management Platform 7.…</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7698</link>
@@ -299,6 +320,57 @@
       <category>rce</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-23866 — Incomplete validation of AI rich response messages for Instagram Reels in WhatsA…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-23866</link>
+      <guid isPermaLink="false">7efe952c31d21984a8a156b1497de1c7</guid>
+      <pubDate>Fri, 01 May 2026 16:16:29 +0000</pubDate>
+      <description>Incomplete validation of AI rich response messages for Instagram Reels in WhatsApp for iOS v2.25.8.0 to v2.26.15.72 and WhatsApp for Android v2.25.8.0 to v2.26.7.10 could have allowed a user to trigger processing of media content from an arbitrary URL on another user’s device, including triggering OS-controlled custom URL scheme handlers. We have not seen evidence of exploitation in the wild.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>actively-exploited</category>
+      <category>sap</category>
+      <category>sap</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 6.5 MEDIUM] CVE-2026-23863 — An attachment spoofing issue in WhatsApp for Windows prior to v2.3000.1032164386…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-23863</link>
+      <guid isPermaLink="false">719c97ad52222f80e8a8584060cb4d7c</guid>
+      <pubDate>Fri, 01 May 2026 16:16:29 +0000</pubDate>
+      <description>An attachment spoofing issue in WhatsApp for Windows prior to v2.3000.1032164386.258709 could have allowed maliciously formatted documents with embedded NUL bytes in the filename to be shown in the application as one type of file but run as an executable when opened. We have not seen evidence of exploitation in the wild.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>actively-exploited</category>
+      <category>sap</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>sap</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-7584 — The LabOne Q serialization framework uses a class-loading mechanism (import_cls)…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7584</link>
+      <guid isPermaLink="false">395ab6f12561b21e2bb823f84b5a0f79</guid>
+      <pubDate>Fri, 01 May 2026 08:16:01 +0000</pubDate>
+      <description>The LabOne Q serialization framework uses a class-loading mechanism (import_cls) to dynamically import and instantiate Python classes during deserialization. Prior to the fix, this mechanism accepted arbitrary fully-qualified class names from the serialized data without any validation of the target class or restriction on which modules could be imported. An attacker can craft a serialized experiment file that causes the deserialization engine to import and instantiate arbitrary Python classes with attacker-controlled constructor arguments, resulting in arbitrary code execution in the context of the user running the Python process. Exploitation requires the victim to load a malicious file using LabOne Q&#39;s deserialization functions, for example a compromised experiment file shared for collaboration or support purposes.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>deserialization</category>
+      <category>zhinst</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-42994 — Bitwarden CLI 2026.4.0 from 2026-04-22T21:57Z to 2026-04-22T23:30Z, when obtaine…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42994</link>
+      <guid isPermaLink="false">b87a78b0b246a4d4305cb64e2f9a7cb8</guid>
+      <pubDate>Fri, 01 May 2026 05:16:01 +0000</pubDate>
+      <description>Bitwarden CLI 2026.4.0 from 2026-04-22T21:57Z to 2026-04-22T23:30Z, when obtained from npm, had embedded malicious code. This is related to a Checkmarx supply chain incident.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>supply-chain</category>
+      <category>bitwarden</category>
+    </item>
+    <item>
       <title>[CRIT] [KEV] CVE-2026-31431 — Linux Kernel: Linux Kernel Incorrect Resource Transfer Between Spheres Vulnerability</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-31431</link>
       <guid isPermaLink="false">71df044fb556919968febea59900c6be</guid>
@@ -313,6 +385,17 @@
       <category>rce</category>
       <category>lpe</category>
       <category>linux</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-7551 — HKUDS OpenHarness contains a remote code execution vulnerability in the /bridge …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7551</link>
+      <guid isPermaLink="false">95c5cb84c7ec752302103dccd050e83d</guid>
+      <pubDate>Thu, 30 Apr 2026 22:16:27 +0000</pubDate>
+      <description>HKUDS OpenHarness contains a remote code execution vulnerability in the /bridge slash command that allows remote senders accepted by configuration to execute arbitrary operating system commands. Attackers can invoke the /bridge spawn command with attacker-controlled command text that is forwarded to the bridge session manager and executed through the shared shell subprocess helper, allowing them to spawn shell sessions as the OpenHarness process user and access local files, credentials, workspace state, and repository contents.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>hkuds</category>
     </item>
     <item>
       <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-7435 — SSCMS v7.4.0 contains a SQL injection vulnerability in the stl:sqlContent tag wh…</title>
@@ -431,6 +514,28 @@
       <category>rce</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-36765 — An XML external entity (XXE) vulnerability in the /designer/loadReport endpoint …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-36765</link>
+      <guid isPermaLink="false">83b6e37323aa804dda1b11f6223e725c</guid>
+      <pubDate>Thu, 30 Apr 2026 18:16:29 +0000</pubDate>
+      <description>An XML external entity (XXE) vulnerability in the /designer/loadReport endpoint of SpringBlade v4.8.0 allows authenticated attackers to execute arbitrary code via injecting a crafted payload.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-4670 — Authentication bypass by primary weakness vulnerability in Progress Software MOV…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-4670</link>
+      <guid isPermaLink="false">b27b48c8e7fd3849e598ce0c8632f6b7</guid>
+      <pubDate>Thu, 30 Apr 2026 16:16:44 +0000</pubDate>
+      <description>Authentication bypass by primary weakness vulnerability in Progress Software MOVEit Automation allows Authentication Bypass.&#xA;&#xA;This issue affects MOVEit Automation: from 2025.0.0 before 2025.0.9, from 2024.0.0 before 2024.1.8, versions prior to 2024.0.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>auth-bypass</category>
+      <category>progress</category>
+    </item>
+    <item>
       <title>[CRIT] Critical cPanel and WHM bug exploited as a zero-day, PoC now available</title>
       <link>https://www.bleepingcomputer.com/news/security/critical-cpanel-and-whm-bug-exploited-as-a-zero-day-poc-now-available/</link>
       <guid isPermaLink="false">9d966f61c42576e4e408f85f96fd422a</guid>
@@ -481,6 +586,17 @@
       <category>wordpress</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-7422 — Insufficient packet validation in FreeRTOS-Plus-TCP before V4.2.6 and V4.4.1 all…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7422</link>
+      <guid isPermaLink="false">23e843a75180830f7dc8e1ae4388c89c</guid>
+      <pubDate>Wed, 29 Apr 2026 19:16:26 +0000</pubDate>
+      <description>Insufficient packet validation in FreeRTOS-Plus-TCP before V4.2.6 and V4.4.1 allows an adjacent network actor to bypass all checksum and minimum-size validation by spoofing the Ethernet source MAC address to match one of the device&#39;s own registered endpoints, because the loopback detection mechanism skips all input validation for packets whose source MAC matches a local endpoint.&#xA;&#xA;&#xA;&#xA;To mitigate this issue, users should upgrade to the fixed version when available.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>amazon</category>
+    </item>
+    <item>
       <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-41499 — Wazuh is a free and open source platform used for threat prevention, detection, …</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-41499</link>
       <guid isPermaLink="false">7d2be9c2bd9187b47e07d895e64bba75</guid>
@@ -515,6 +631,40 @@
       <category>rce</category>
       <category>postgresql</category>
       <category>postgres</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-41940 — cPanel and WHM versions after 11.40 contain an authentication bypass vulnerabili…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-41940</link>
+      <guid isPermaLink="false">f4639405e7b4ce7bc3e6f0c6c5e99c41</guid>
+      <pubDate>Wed, 29 Apr 2026 16:16:25 +0000</pubDate>
+      <description>cPanel and WHM versions after 11.40 contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>auth-bypass</category>
+      <category>cpanel</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-5140 — Improper neutralization of CRLF sequences (&#39;CRLF injection&#39;) vulnerability in TU…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-5140</link>
+      <guid isPermaLink="false">c2deeb781d503683943bc49c933bea51</guid>
+      <pubDate>Wed, 29 Apr 2026 14:16:19 +0000</pubDate>
+      <description>Improper neutralization of CRLF sequences (&#39;CRLF injection&#39;) vulnerability in TUBITAK BILGEM Software Technologies Research Institute Pardus Update allows Authentication Bypass.&#xA;&#xA;This issue affects Pardus Update: from 0.6.3 before 0.6.4.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>auth-bypass</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 3.1 LOW] CVE-2026-22741 — Spring MVC and WebFlux applications are vulnerable to cache poisoning when resol…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-22741</link>
+      <guid isPermaLink="false">dd91837169bf70de70d15e4c6d6271ed</guid>
+      <pubDate>Wed, 29 Apr 2026 12:16:18 +0000</pubDate>
+      <description>Spring MVC and WebFlux applications are vulnerable to cache poisoning when resolving static resources.&#xA;&#xA;&#xA;More precisely, an application can be vulnerable when all the following are true:&#xA;&#xA;  *  the application is using Spring MVC or Spring WebFlux&#xA;  *  the application is configuring the  resource chain support https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-config/static-resources.html#page-title  with caching enabled&#xA;  *  the application adds support for encoded resources resolution&#xA;  *  the resource cache must be empty when the attacker has access to the application&#xA;&#xA;&#xA;When all the conditions above are met, the attacker can send malicious requests and poison the resource cache with resources using the wrong encoding. This can cause a denial of service by breaking the front-end application for clients.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>vmware</category>
     </item>
     <item>
       <title>[HIGH] CISA orders feds to patch Windows flaw exploited as zero-day</title>
@@ -610,6 +760,21 @@
       <category>high</category>
       <category>rce</category>
       <category>openclaw</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-24178 — NVIDIA NVFlare Dashboard contains a vulnerability in the user management and aut…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-24178</link>
+      <guid isPermaLink="false">f5cdfdbf761baf7b8d88833171bb1459</guid>
+      <pubDate>Tue, 28 Apr 2026 19:36:45 +0000</pubDate>
+      <description>NVIDIA NVFlare Dashboard contains a vulnerability in the user management and authentication system where an unauthenticated attacker may cause authorization bypass through user-controlled key. A successful exploit of this vulnerability may lead to privilege escalation, data tampering, information disclosure, code execution, and denial of service.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>lpe</category>
+      <category>watch</category>
+      <category>nvidia</category>
+      <category>apple</category>
+      <category>linux</category>
     </item>
     <item>
       <title>[HIGH] [CVSS 7.3 HIGH] CVE-2026-7324 — Memory safety bugs present in Thunderbird 150.0.0. Some of these bugs showed evi…</title>
@@ -737,93 +902,6 @@
       <category>actively-exploited</category>
       <category>path-traversal</category>
       <category>samsung</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2024-57728 — SimpleHelp  SimpleHelp: SimpleHelp Path Traversal Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2024-57728</link>
-      <guid isPermaLink="false">a5385abcfffc6f331979eff53776c1b8</guid>
-      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
-      <description>SimpleHelp contains a path traversal vulnerability that allows admin users to upload arbitrary files anywhere on the file system by uploading a crafted zip file (i.e. zip slip). This can be exploited to execute arbitrary code on the host in the context of the SimpleHelp server user.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-08</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>path-traversal</category>
-      <category>simplehelp</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2024-57726 — SimpleHelp  SimpleHelp: SimpleHelp Missing Authorization Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2024-57726</link>
-      <guid isPermaLink="false">4248c464457c592289c433e361c7c941</guid>
-      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
-      <description>SimpleHelp contains a missing authorization vulnerability that could allow low-privileged technicians to create API keys with excessive permissions. These API keys can be used to escalate privileges to the server admin role.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-08</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>simplehelp</category>
-    </item>
-    <item>
-      <title>[HIGH] AI threats in the wild: The current state of prompt injections on the web</title>
-      <link>http://security.googleblog.com/2026/04/ai-threats-in-wild-current-state-of.html</link>
-      <guid isPermaLink="false">a579abe9bf3eb2a8d8e6659d04258eca</guid>
-      <pubDate>Thu, 23 Apr 2026 21:38:00 +0000</pubDate>
-      <description>Posted by Thomas Brunner, Yu-Han Liu, Moni PandeAt Google, our Threat Intelligence teams are dedicated to staying ahead of real-world adversarial activity, proactively monitoring emerging threats before they can impact users. Right now, Indirect Prompt Injection (IPI) is a top priority for the security community, anticipating it as a primary attack vector for adversaries to target and compromise AI agents. But while the danger of IPI is widely discussed, are threat actors actually exploiting this vector today – and if so, how?To answer these questions and to uncover real-world abuse, we init...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Google Online Security Blog</source>
-      <category>high</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-39987 — Marimo Marimo: Marimo Remote Code Execution Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-39987</link>
-      <guid isPermaLink="false">3d7e1d32d8d098573f0ce09150b84b48</guid>
-      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
-      <description>Marimo contains an pre-authorization remote code execution vulnerability, allowing an unauthenticated attacked to shell access and execute arbitrary system commands.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-07</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>rce</category>
-      <category>marimo</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-33825 — Microsoft Defender: Microsoft Defender Insufficient Granularity of Access Control Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33825</link>
-      <guid isPermaLink="false">b9f39be064746f14be06a756a8eda01d</guid>
-      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
-      <description>Microsoft Defender contains an insufficient granularity of access control vulnerability that could allow an authorized attacker to escalate privileges locally.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-06</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.1 CRITICAL] CVE-2026-40903 — goshs is a SimpleHTTPServer written in Go. Prior to 2.0.0-beta.6, goshs has an A…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40903</link>
-      <guid isPermaLink="false">f32e44db9e4a499025d0d2abdd613467</guid>
-      <pubDate>Tue, 21 Apr 2026 20:17:02 +0000</pubDate>
-      <description>goshs is a SimpleHTTPServer written in Go. Prior to 2.0.0-beta.6, goshs has an ArtiPACKED vulnerability. ArtiPACKED can lead to leakage of the GITHUB_TOKEN through workflow artifacts, even though the token is not present in the repository source code. This vulnerability is fixed in 2.0.0-beta.6.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>github</category>
-      <category>rce</category>
-      <category>goshs</category>
-      <category>github</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-245: (0Day) aws-mcp-server AWS CLI Command Injection Remote Code Execution Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-245/</link>
-      <guid isPermaLink="false">63cb6b850d1ec56c4c597320b7a2658f</guid>
-      <pubDate>Tue, 21 Apr 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of aws-mcp-server. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.8. The following CVEs are assigned: CVE-2026-5059.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>0day</category>
     </item>
   </channel>
 </rss>

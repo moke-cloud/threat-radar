@@ -5,7 +5,18 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 04 May 2026 22:32:50 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 22:31:04 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Weaver E-cology RCE Flaw CVE-2026-22679 Actively Exploited via Debug API</title>
+      <link>https://thehackernews.com/2026/05/weaver-e-cology-rce-flaw-cve-2026-22679.html</link>
+      <guid isPermaLink="false">6a68d43e28336f1af58712172a7c0a01</guid>
+      <pubDate>Tue, 05 May 2026 07:37:00 +0000</pubDate>
+      <description>A critical security vulnerability in Weaver (Fanwei) E-cology, an enterprise office automation (OA) and collaboration platform, has come under active exploitation in the wild. The vulnerability (CVE-2026-22679, CVSS score: 9.8) relates to a case of unauthenticated remote code execution affecting Weaver E-cology 10.0 versions prior to 20260312. The issue resides in the &#34;/papi/esearch/data/devops/</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
+    </item>
     <item>
       <title>[HIGH] Trellix discloses data breach after source code repository hack</title>
       <link>https://www.bleepingcomputer.com/news/security/trellix-discloses-data-breach-after-source-code-repository-hack/</link>
@@ -570,6 +581,17 @@
       <category>freebsd</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 7.1 HIGH] CVE-2025-13030 — All versions of the package django-mdeditor are vulnerable to Missing Authentica…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-13030</link>
+      <guid isPermaLink="false">9de434a3a72f46d243198b8dad82dc9f</guid>
+      <pubDate>Thu, 30 Apr 2026 06:16:14 +0000</pubDate>
+      <description>All versions of the package django-mdeditor are vulnerable to Missing Authentication for Critical Function in the image upload endpoint. An attacker can upload malicious files and achieve arbitrary code execution since this endpoint lacks authentication protection and proper sanitisation of file names.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>pylixm</category>
+    </item>
+    <item>
       <title>[CRIT] [KEV] CVE-2026-41940 — WebPros cPanel &amp; WHM and WP2 (WordPress Squared): WebPros cPanel &amp; WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-41940</link>
       <guid isPermaLink="false">57dcabb55431823988e3b8b585c7608b</guid>
@@ -653,6 +675,22 @@
       <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>high</category>
       <category>auth-bypass</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.0 CRITICAL] CVE-2026-42523 — Jenkins GitHub Plugin 1.46.0 and earlier improperly processes the current job UR…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42523</link>
+      <guid isPermaLink="false">4eccaab3a10b857e4551e357eab9e4e7</guid>
+      <pubDate>Wed, 29 Apr 2026 14:16:19 +0000</pubDate>
+      <description>Jenkins GitHub Plugin 1.46.0 and earlier improperly processes the current job URL as part of JavaScript implementing validation of the feature &#34;GitHub hook trigger for GITScm polling&#34;, resulting in a stored cross-site scripting (XSS) vulnerability exploitable by non-anonymous attackers with Overall/Read permission.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>xss</category>
+      <category>jenkins</category>
+      <category>github</category>
+      <category>watch</category>
+      <category>jenkins</category>
+      <category>github</category>
     </item>
     <item>
       <title>[HIGH] [CVSS 3.1 LOW] CVE-2026-22741 — Spring MVC and WebFlux applications are vulnerable to cache poisoning when resol…</title>
@@ -803,105 +841,6 @@
       <category>watch</category>
       <category>mozilla</category>
       <category>firefox</category>
-    </item>
-    <item>
-      <title>[HIGH] Microsoft Confirms Active Exploitation of Windows Shell CVE-2026-32202</title>
-      <link>https://thehackernews.com/2026/04/microsoft-confirms-active-exploitation.html</link>
-      <guid isPermaLink="false">5702e39f2ed7eb8ac54a36d164a493f1</guid>
-      <pubDate>Tue, 28 Apr 2026 05:50:00 +0000</pubDate>
-      <description>Microsoft on Monday revised its advisory for a now-patched, high-severity security flaw impacting Windows Shell to acknowledge that it has been actively exploited in the wild. The vulnerability in question is CVE-2026-32202 (CVSS score: 4.3), a spoofing vulnerability that could allow an attacker to access sensitive information. It was addressed as part of its Patch Tuesday update for this</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-305: (0Day) OpenAI Codex Sandbox Escape Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-305/</link>
-      <guid isPermaLink="false">789ccd9b866e5578cbccf09867e00066</guid>
-      <pubDate>Tue, 28 Apr 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to bypass the sandbox on affected installations of OpenAI Codex. User interaction is required to exploit this vulnerability in that the target must use Codex to process a repository containing malicious JavaScript. The ZDI has assigned a CVSS rating of 8.6.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2024-1708 — ConnectWise ScreenConnect: ConnectWise ScreenConnect Path Traversal Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2024-1708</link>
-      <guid isPermaLink="false">e9fa7b88bbdafbcc86f993b5cdeba8c6</guid>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
-      <description>ConnectWise ScreenConnect contains a path traversal vulnerability which could allow an attacker to execute remote code or directly impact confidential data and critical systems.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-12</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>path-traversal</category>
-      <category>connectwise</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-32202 — Microsoft Windows: Microsoft Windows Protection Mechanism Failure Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-32202</link>
-      <guid isPermaLink="false">c10bb377bc7ff145b24ac332fa481b53</guid>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
-      <description>Microsoft Windows Shell contains a protection mechanism failure vulnerability that allows an unauthorized attacker to perform spoofing over a network.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-12</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] TeamPCP Supply Chain Campaign: Update 008 - 26-Day Pause Ends with Three Concurrent Compromises (Checkmarx KICS, Bitwarden CLI Cascade, xinference PyPI), CanisterSprawl npm Worm Identified, and Tier 1 Coverage Returns, (Mon, Apr 27th)</title>
-      <link>https://isc.sans.edu/diary/rss/32926</link>
-      <guid isPermaLink="false">7471eb61bf480f98294cbe5d37583afc</guid>
-      <pubDate>Mon, 27 Apr 2026 14:01:17 +0000</pubDate>
-      <description>This update succeeds&amp;&amp;#x23&amp;#x3b;x26&amp;#x3b;&amp;#x23&amp;#x3b;xc2&amp;#x3b;&amp;&amp;#x23&amp;#x3b;x26&amp;#x3b;&amp;#x23&amp;#x3b;xa0&amp;#x3b;TeamPCP Supply Chain Campaign Update 007, published April 8, 2026, which left the campaign in credential-monetization mode following the Cisco source code theft via Trivy-linked credentials, Google GTIG&amp;&amp;#x23&amp;#x3b;x26&amp;#x3b;&amp;#x23&amp;#x3b;39&amp;#x3b;s formal designation of the operators as UNC6780 (with their credential stealer named SANDCLOCK), and the lapsed CISA KEV remediation deadline for CVE-2026-33634 with no standalone federal advisory. The Sportradar publication deadline flagged in Update 007...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>high</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[HIGH] LMDeploy CVE-2026-33626 Flaw Exploited Within 13 Hours of Disclosure</title>
-      <link>https://thehackernews.com/2026/04/lmdeploy-cve-2026-33626-flaw-exploited.html</link>
-      <guid isPermaLink="false">cec62c68da88096ce4c61a95053d4995</guid>
-      <pubDate>Fri, 24 Apr 2026 07:24:00 +0000</pubDate>
-      <description>A high-severity security flaw in LMDeploy, an open-source toolkit for compressing, deploying, and serving large language models (LLMs), has come under active exploitation in the wild less than 13 hours after its public disclosure. The vulnerability, tracked as CVE-2026-33626 (CVSS score: 7.5), relates to a Server-Side Request Forgery (SSRF) vulnerability that could be exploited to access</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2025-29635 — D-Link DIR-823X: D-Link DIR-823X Command Injection Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-29635</link>
-      <guid isPermaLink="false">84f450c69dc13e02eda7ab9c027519db</guid>
-      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
-      <description>D-Link DIR-823X contains a command injection vulnerability that allows an authorized attacker to execute arbitrary commands on remote devices by sending a POST request to /goform/set_prohibiting via the corresponding function. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-08</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>d-link</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2024-7399 — Samsung MagicINFO 9 Server: Samsung MagicINFO 9 Server Path Traversal Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2024-7399</link>
-      <guid isPermaLink="false">d69b6e2bc880baf4704b58d1062098a8</guid>
-      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
-      <description>Samsung MagicINFO 9 Server contains a path traversal vulnerability that could allow an attacker to write arbitrary files as system authority.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-08</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>path-traversal</category>
-      <category>samsung</category>
     </item>
   </channel>
 </rss>

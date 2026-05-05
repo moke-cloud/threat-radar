@@ -1,5 +1,25 @@
 [
   {
+    "id": "6a68d43e28336f1af58712172a7c0a01",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Weaver E-cology RCE Flaw CVE-2026-22679 Actively Exploited via Debug API",
+    "url": "https://thehackernews.com/2026/05/weaver-e-cology-rce-flaw-cve-2026-22679.html",
+    "summary": "A critical security vulnerability in Weaver (Fanwei) E-cology, an enterprise office automation (OA) and collaboration platform, has come under active exploitation in the wild. The vulnerability (CVE-2026-22679, CVSS score: 9.8) relates to a case of unauthenticated remote code execution affecting Weaver E-cology 10.0 versions prior to 20260312. The issue resides in the \"/papi/esearch/data/devops/",
+    "published": "2026-05-05T07:37:00Z",
+    "fetched": "2026-05-05T22:31:04.141476737Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-22679"
+    ]
+  },
+  {
     "id": "d4f077fda2ac45cf635264c786afe497",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1047,6 +1067,28 @@
     ]
   },
   {
+    "id": "9de434a3a72f46d243198b8dad82dc9f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.1 HIGH] CVE-2025-13030 — All versions of the package django-mdeditor are vulnerable to Missing Authentica…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13030",
+    "summary": "All versions of the package django-mdeditor are vulnerable to Missing Authentication for Critical Function in the image upload endpoint. An attacker can upload malicious files and achieve arbitrary code execution since this endpoint lacks authentication protection and proper sanitisation of file names.",
+    "published": "2026-04-30T06:16:14.86Z",
+    "fetched": "2026-05-05T22:31:04.141476737Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "pylixm"
+    ],
+    "cves": [
+      "CVE-2025-13030"
+    ]
+  },
+  {
     "id": "57dcabb55431823988e3b8b585c7608b",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -1204,6 +1246,33 @@
     "score": 60,
     "cves": [
       "CVE-2026-5140"
+    ]
+  },
+  {
+    "id": "4eccaab3a10b857e4551e357eab9e4e7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.0 CRITICAL] CVE-2026-42523 — Jenkins GitHub Plugin 1.46.0 and earlier improperly processes the current job UR…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42523",
+    "summary": "Jenkins GitHub Plugin 1.46.0 and earlier improperly processes the current job URL as part of JavaScript implementing validation of the feature \"GitHub hook trigger for GITScm polling\", resulting in a stored cross-site scripting (XSS) vulnerability exploitable by non-anonymous attackers with Overall/Read permission.",
+    "published": "2026-04-29T14:16:19.36Z",
+    "fetched": "2026-05-05T22:31:04.141476737Z",
+    "tags": [
+      "critical-cvss",
+      "xss",
+      "jenkins",
+      "github",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 63,
+    "vendors": [
+      "jenkins",
+      "github"
+    ],
+    "cves": [
+      "CVE-2026-42523"
     ]
   },
   {
@@ -1476,186 +1545,6 @@
     ],
     "cves": [
       "CVE-2026-7322"
-    ]
-  },
-  {
-    "id": "5702e39f2ed7eb8ac54a36d164a493f1",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Microsoft Confirms Active Exploitation of Windows Shell CVE-2026-32202",
-    "url": "https://thehackernews.com/2026/04/microsoft-confirms-active-exploitation.html",
-    "summary": "Microsoft on Monday revised its advisory for a now-patched, high-severity security flaw impacting Windows Shell to acknowledge that it has been actively exploited in the wild. The vulnerability in question is CVE-2026-32202 (CVSS score: 4.3), a spoofing vulnerability that could allow an attacker to access sensitive information. It was addressed as part of its Patch Tuesday update for this",
-    "published": "2026-04-28T05:50:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-32202"
-    ]
-  },
-  {
-    "id": "789ccd9b866e5578cbccf09867e00066",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-305: (0Day) OpenAI Codex Sandbox Escape Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-305/",
-    "summary": "This vulnerability allows remote attackers to bypass the sandbox on affected installations of OpenAI Codex. User interaction is required to exploit this vulnerability in that the target must use Codex to process a repository containing malicious JavaScript. The ZDI has assigned a CVSS rating of 8.6.",
-    "published": "2026-04-28T05:00:00Z",
-    "fetched": "2026-04-30T08:02:39.325391908Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 61
-  },
-  {
-    "id": "e9fa7b88bbdafbcc86f993b5cdeba8c6",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2024-1708 — ConnectWise ScreenConnect: ConnectWise ScreenConnect Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-1708",
-    "summary": "ConnectWise ScreenConnect contains a path traversal vulnerability which could allow an attacker to execute remote code or directly impact confidential data and critical systems.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-12",
-    "published": "2026-04-28T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "connectwise"
-    ],
-    "cves": [
-      "CVE-2024-1708"
-    ]
-  },
-  {
-    "id": "c10bb377bc7ff145b24ac332fa481b53",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-32202 — Microsoft Windows: Microsoft Windows Protection Mechanism Failure Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32202",
-    "summary": "Microsoft Windows Shell contains a protection mechanism failure vulnerability that allows an unauthorized attacker to perform spoofing over a network.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-12",
-    "published": "2026-04-28T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-32202"
-    ]
-  },
-  {
-    "id": "7471eb61bf480f98294cbe5d37583afc",
-    "source": "sans-isc",
-    "source_name": "SANS Internet Storm Center",
-    "category": "news",
-    "title": "TeamPCP Supply Chain Campaign: Update 008 - 26-Day Pause Ends with Three Concurrent Compromises (Checkmarx KICS, Bitwarden CLI Cascade, xinference PyPI), CanisterSprawl npm Worm Identified, and Tier 1 Coverage Returns, (Mon, Apr 27th)",
-    "url": "https://isc.sans.edu/diary/rss/32926",
-    "summary": "This update succeeds&&#x23&#x3b;x26&#x3b;&#x23&#x3b;xc2&#x3b;&&#x23&#x3b;x26&#x3b;&#x23&#x3b;xa0&#x3b;TeamPCP Supply Chain Campaign Update 007, published April 8, 2026, which left the campaign in credential-monetization mode following the Cisco source code theft via Trivy-linked credentials, Google GTIG&&#x23&#x3b;x26&#x3b;&#x23&#x3b;39&#x3b;s formal designation of the operators as UNC6780 (with their credential stealer named SANDCLOCK), and the lapsed CISA KEV remediation deadline for CVE-2026-33634 with no standalone federal advisory. The Sportradar publication deadline flagged in Update 007...",
-    "published": "2026-04-27T14:01:17Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-33634"
-    ]
-  },
-  {
-    "id": "cec62c68da88096ce4c61a95053d4995",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "LMDeploy CVE-2026-33626 Flaw Exploited Within 13 Hours of Disclosure",
-    "url": "https://thehackernews.com/2026/04/lmdeploy-cve-2026-33626-flaw-exploited.html",
-    "summary": "A high-severity security flaw in LMDeploy, an open-source toolkit for compressing, deploying, and serving large language models (LLMs), has come under active exploitation in the wild less than 13 hours after its public disclosure. The vulnerability, tracked as CVE-2026-33626 (CVSS score: 7.5), relates to a Server-Side Request Forgery (SSRF) vulnerability that could be exploited to access",
-    "published": "2026-04-24T07:24:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 78,
-    "cves": [
-      "CVE-2026-33626"
-    ]
-  },
-  {
-    "id": "84f450c69dc13e02eda7ab9c027519db",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2025-29635 — D-Link DIR-823X: D-Link DIR-823X Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29635",
-    "summary": "D-Link DIR-823X contains a command injection vulnerability that allows an authorized attacker to execute arbitrary commands on remote devices by sending a POST request to /goform/set_prohibiting via the corresponding function. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-08",
-    "published": "2026-04-24T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "d-link"
-    ],
-    "cves": [
-      "CVE-2025-29635"
-    ]
-  },
-  {
-    "id": "d69b6e2bc880baf4704b58d1062098a8",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2024-7399 — Samsung MagicINFO 9 Server: Samsung MagicINFO 9 Server Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7399",
-    "summary": "Samsung MagicINFO 9 Server contains a path traversal vulnerability that could allow an attacker to write arbitrary files as system authority.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-08",
-    "published": "2026-04-24T00:00:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "samsung"
-    ],
-    "cves": [
-      "CVE-2024-7399"
     ]
   }
 ]

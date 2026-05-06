@@ -5,7 +5,76 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 05 May 2026 22:31:04 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 22:25:00 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Critical Buffer Overflow in Palo Alto Networks PAN-OS User-ID Authentication Portal (CVE-2026-0300)</title>
+      <link>https://www.rapid7.com/blog/post/etr-critical-buffer-overflow-in-palo-alto-networks-pan-os-user-id-authentication-portal-cve-2026-0300</link>
+      <guid isPermaLink="false">a92e3ba3d57540896939238928eee11f</guid>
+      <pubDate>Wed, 06 May 2026 13:27:31 +0000</pubDate>
+      <description>OverviewOn May 6, 2026, Palo Alto Networks published a security advisory for CVE-2026-0300, a critical unauthenticated buffer overflow vulnerability affecting PAN-OS PA-Series and VM-Series firewall appliances. Prisma Access, Cloud NGFW, and Panorama appliances are not affected by this vulnerability. The vulnerability carries a CVSSv4 score of 9.3 and has been confirmed as exploited in the wild by the vendor.CVE-2026-0300 is a buffer overflow (CWE-787) in the User-ID™ Authentication Portal (also known as Captive Portal), a non-default PAN-OS feature used to map IP addresses to usernames. An ...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
+      <category>high</category>
+      <category>paloalto</category>
+      <category>watch</category>
+      <category>actively-exploited</category>
+      <category>paloalto</category>
+    </item>
+    <item>
+      <title>[HIGH] MuddyWater hackers use Chaos ransomware as a decoy in attacks</title>
+      <link>https://www.bleepingcomputer.com/news/security/muddywater-hackers-use-chaos-ransomware-as-a-decoy-in-attacks/</link>
+      <guid isPermaLink="false">cf63682fb2776f178ab16fcb7690b5d3</guid>
+      <pubDate>Wed, 06 May 2026 13:02:52 +0000</pubDate>
+      <description>The MuddyWater Iranian hackers disguised their operations as a Chaos ransomware attack, relying on  Microsoft Teams social engineering to gain access and establish persistence. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>ransomware</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[CRIT] Palo Alto Networks warns of firewall RCE zero-day exploited in attacks</title>
+      <link>https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-actively-exploited-firewall-zero-day/</link>
+      <guid isPermaLink="false">cd5c56dfddf88737f5b22a8d84a9e63f</guid>
+      <pubDate>Wed, 06 May 2026 09:18:16 +0000</pubDate>
+      <description>Palo Alto Networks warned customers today that a critical-severity unpatched vulnerability in the PAN-OS User-ID Authentication Portal is being exploited in attacks. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>critical</category>
+      <category>paloalto</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>0day</category>
+      <category>paloalto</category>
+    </item>
+    <item>
+      <title>[CRIT] Palo Alto PAN-OS Flaw Under Active Exploitation Enables Remote Code Execution</title>
+      <link>https://thehackernews.com/2026/05/palo-alto-pan-os-flaw-under-active.html</link>
+      <guid isPermaLink="false">e4bffeb513b34af22383287aa00349c7</guid>
+      <pubDate>Wed, 06 May 2026 06:14:00 +0000</pubDate>
+      <description>Palo Alto Networks has released an advisory warning that a critical buffer overflow vulnerability in its PAN-OS software has been exploited in the wild. The vulnerability, tracked as CVE-2026-0300, has been described as a case of unauthenticated remote code execution. It carries a CVSS score of 9.3 if the User-ID Authentication Portal is configured to enable access from the internet or any</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>critical</category>
+      <category>paloalto</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
+      <category>paloalto</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-0300 — Palo Alto Networks PAN-OS: Palo Alto Networks PAN-OS Out-of-bounds Write Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0300</link>
+      <guid isPermaLink="false">75edbdf3e235fa98157da5b4c7d42f15</guid>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <description>Palo Alto Networks PAN-OS contains an out-of-bounds write vulnerability in the User-ID Authentication Portal (aka Captive Portal) service that can allow an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.    Until the vendor releases an official fix, the following workaround should be implemented:  - Restrict User-ID Authentication Portal access to only trusted zones.  - Disable User-ID Authentication Portal if not required.&#xA;Due: 2026-05-09</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>paloalto</category>
+      <category>watch</category>
+      <category>palo</category>
+      <category>paloalto</category>
+    </item>
     <item>
       <title>[HIGH] Weaver E-cology RCE Flaw CVE-2026-22679 Actively Exploited via Debug API</title>
       <link>https://thehackernews.com/2026/05/weaver-e-cology-rce-flaw-cve-2026-22679.html</link>
@@ -798,49 +867,6 @@
       <category>high</category>
       <category>rce</category>
       <category>openclaw</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-24178 — NVIDIA NVFlare Dashboard contains a vulnerability in the user management and aut…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-24178</link>
-      <guid isPermaLink="false">f5cdfdbf761baf7b8d88833171bb1459</guid>
-      <pubDate>Tue, 28 Apr 2026 19:36:45 +0000</pubDate>
-      <description>NVIDIA NVFlare Dashboard contains a vulnerability in the user management and authentication system where an unauthenticated attacker may cause authorization bypass through user-controlled key. A successful exploit of this vulnerability may lead to privilege escalation, data tampering, information disclosure, code execution, and denial of service.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>lpe</category>
-      <category>watch</category>
-      <category>nvidia</category>
-      <category>apple</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.3 HIGH] CVE-2026-7324 — Memory safety bugs present in Thunderbird 150.0.0. Some of these bugs showed evi…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7324</link>
-      <guid isPermaLink="false">4b08361d5986797f8e3938e016a472f4</guid>
-      <pubDate>Tue, 28 Apr 2026 15:16:37 +0000</pubDate>
-      <description>Memory safety bugs present in Thunderbird 150.0.0. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 150.0.1 and Thunderbird 150.0.1.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>firefox</category>
-      <category>watch</category>
-      <category>mozilla</category>
-      <category>firefox</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.3 HIGH] CVE-2026-7322 — Memory safety bugs present in Thunderbird ESR 140.10.0 and Thunderbird 150.0.0. …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7322</link>
-      <guid isPermaLink="false">27a0193817c657f3ffcae643ec3f6305</guid>
-      <pubDate>Tue, 28 Apr 2026 15:16:37 +0000</pubDate>
-      <description>Memory safety bugs present in Thunderbird ESR 140.10.0 and Thunderbird 150.0.0. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 150.0.1, Firefox ESR 140.10.1, Firefox ESR 115.35.1, Thunderbird 150.0.1, and Thunderbird 140.10.1.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>firefox</category>
-      <category>watch</category>
-      <category>mozilla</category>
-      <category>firefox</category>
     </item>
   </channel>
 </rss>

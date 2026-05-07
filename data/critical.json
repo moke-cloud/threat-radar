@@ -1,5 +1,120 @@
 [
   {
+    "id": "2c95055423241ea8c5828b155b195e14",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "When prompts become shells: RCE vulnerabilities in AI agent frameworks",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
+    "summary": "New research exposes how prompt injection in AI agent frameworks can lead to remote code execution. Learn how these vulnerabilities work, what’s impacted, and how to secure your agents. The post When prompts become shells: RCE vulnerabilities in AI agent frameworks appeared first on Microsoft Security Blog.",
+    "published": "2026-05-07T20:22:39Z",
+    "fetched": "2026-05-07T22:35:41.618324871Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 76,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "0ab737518ab38829e9b5f9b47ed2f3ef",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Ivanti EPMM CVE-2026-6973 RCE Under Active Exploitation Grants Admin-Level Access",
+    "url": "https://thehackernews.com/2026/05/ivanti-epmm-cve-2026-6973-rce-under.html",
+    "summary": "Ivanti is warning that a new security flaw impacting Endpoint Manager Mobile (EPMM) has been explored in limited attacks in the wild. The high-severity vulnerability, CVE-2026-6973 (CVSS score: 7.2), is a case of improper input validation affecting EPMM before versions 12.6.1.1, 12.7.0.1, and 12.8.0.1. It allows \"a remotely authenticated user with administrative access to achieve remote code",
+    "published": "2026-05-07T17:55:00Z",
+    "fetched": "2026-05-07T22:35:41.618324871Z",
+    "tags": [
+      "ivanti",
+      "watch",
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 88,
+    "vendors": [
+      "ivanti"
+    ],
+    "cves": [
+      "CVE-2026-6973"
+    ]
+  },
+  {
+    "id": "23eebcf3cd3204ab3b3e6b5c5807f469",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Ivanti warns of new EPMM flaw exploited in zero-day attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-new-epmm-flaw-exploited-in-zero-day-attacks/",
+    "summary": "Ivanti warned customers today to patch a high-severity remote code execution vulnerability in Endpoint Manager Mobile (EPMM) exploited in zero-day attacks. [...]",
+    "published": "2026-05-07T15:20:51Z",
+    "fetched": "2026-05-07T22:35:41.618324871Z",
+    "tags": [
+      "ivanti",
+      "watch",
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 97,
+    "vendors": [
+      "ivanti"
+    ]
+  },
+  {
+    "id": "a5dfee36c350d699df643700c31bb10c",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Palo Alto Networks firewall zero-day exploited for nearly a month",
+    "url": "https://www.bleepingcomputer.com/news/security/pan-os-firewall-rce-zero-day-exploited-in-attacks-since-april-9/",
+    "summary": "Palo Alto Networks warned customers that suspected state-sponsored hackers have been exploiting a critical-severity PAN-OS firewall zero-day vulnerability for nearly a month. [...]",
+    "published": "2026-05-07T10:57:59Z",
+    "fetched": "2026-05-07T22:35:41.618324871Z",
+    "tags": [
+      "paloalto",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "paloalto"
+    ]
+  },
+  {
+    "id": "b2c30ccef26c99d66f17d1e75d6e104f",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-6973 — Ivanti Endpoint Manager Mobile (EPMM): Ivanti Endpoint Manager Mobile (EPMM) Improper Input Validation Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6973",
+    "summary": "Ivanti Endpoint Manager Mobile (EPMM) contains an improper input validation vulnerability that allows a remotely authenticated user with administrative access to achieve remote code execution.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-10",
+    "published": "2026-05-07T00:00:00Z",
+    "fetched": "2026-05-07T22:35:41.618324871Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "ivanti",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "ivanti"
+    ],
+    "cves": [
+      "CVE-2026-6973"
+    ]
+  },
+  {
     "id": "a92e3ba3d57540896939238928eee11f",
     "source": "rapid7",
     "source_name": "Rapid7 Blog",
@@ -1215,6 +1330,34 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41940",
     "summary": "WebPros cPanel & WHM (WebHost Manager) and WP2 (WordPress Squared) contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-03",
     "published": "2026-04-30T00:00:00Z",
+    "fetched": "2026-05-07T22:35:41.618324871Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "ransomware",
+      "wordpress",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "webpros",
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-41940"
+    ]
+  },
+  {
+    "id": "57dcabb55431823988e3b8b585c7608b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-41940 — WebPros cPanel & WHM and WP2 (WordPress Squared): WebPros cPanel & WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41940",
+    "summary": "WebPros cPanel & WHM (WebHost Manager) and WP2 (WordPress Squared) contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-03",
+    "published": "2026-04-30T00:00:00Z",
     "fetched": "2026-04-30T22:28:47.81451706Z",
     "tags": [
       "kev",
@@ -1345,248 +1488,6 @@
     ],
     "cves": [
       "CVE-2026-41940"
-    ]
-  },
-  {
-    "id": "c2deeb781d503683943bc49c933bea51",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-5140 — Improper neutralization of CRLF sequences ('CRLF injection') vulnerability in TU…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5140",
-    "summary": "Improper neutralization of CRLF sequences ('CRLF injection') vulnerability in TUBITAK BILGEM Software Technologies Research Institute Pardus Update allows Authentication Bypass.\n\nThis issue affects Pardus Update: from 0.6.3 before 0.6.4.",
-    "published": "2026-04-29T14:16:19.777Z",
-    "fetched": "2026-05-04T22:32:50.858159454Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-5140"
-    ]
-  },
-  {
-    "id": "4eccaab3a10b857e4551e357eab9e4e7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.0 CRITICAL] CVE-2026-42523 — Jenkins GitHub Plugin 1.46.0 and earlier improperly processes the current job UR…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42523",
-    "summary": "Jenkins GitHub Plugin 1.46.0 and earlier improperly processes the current job URL as part of JavaScript implementing validation of the feature \"GitHub hook trigger for GITScm polling\", resulting in a stored cross-site scripting (XSS) vulnerability exploitable by non-anonymous attackers with Overall/Read permission.",
-    "published": "2026-04-29T14:16:19.36Z",
-    "fetched": "2026-05-05T22:31:04.141476737Z",
-    "tags": [
-      "critical-cvss",
-      "xss",
-      "jenkins",
-      "github",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 63,
-    "vendors": [
-      "jenkins",
-      "github"
-    ],
-    "cves": [
-      "CVE-2026-42523"
-    ]
-  },
-  {
-    "id": "dd91837169bf70de70d15e4c6d6271ed",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 3.1 LOW] CVE-2026-22741 — Spring MVC and WebFlux applications are vulnerable to cache poisoning when resol…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22741",
-    "summary": "Spring MVC and WebFlux applications are vulnerable to cache poisoning when resolving static resources.\n\n\nMore precisely, an application can be vulnerable when all the following are true:\n\n  *  the application is using Spring MVC or Spring WebFlux\n  *  the application is configuring the  resource chain support https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-config/static-resources.html#page-title  with caching enabled\n  *  the application adds support for encoded resources resolution\n  *  the resource cache must be empty when the attacker has access to the application\n\n\nWhen all the conditions above are met, the attacker can send malicious requests and poison the resource cache with resources using the wrong encoding. This can cause a denial of service by breaking the front-end application for clients.",
-    "published": "2026-04-29T12:16:18.487Z",
-    "fetched": "2026-05-04T22:32:50.858159454Z",
-    "tags": [
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "vmware"
-    ],
-    "cves": [
-      "CVE-2026-22741"
-    ]
-  },
-  {
-    "id": "d9ddc54ec1c3fbb35ec57c076587b920",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA orders feds to patch Windows flaw exploited as zero-day",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-windows-flaw-exploited-in-zero-day-attacks/",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has ordered federal agencies to secure their Windows systems against a vulnerability exploited in zero-day attacks. [...]",
-    "published": "2026-04-29T10:29:31Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "370c3dbd54ff4607acb068fff0f3f3cf",
-    "source": "schneier",
-    "source_name": "Schneier on Security",
-    "category": "analysis",
-    "title": "Claude Mythos Has Found 271 Zero-Days in Firefox",
-    "url": "https://www.schneier.com/blog/archives/2026/04/claude-mythos-has-found-271-zero-days-in-firefox.html",
-    "summary": "That&#8217;s a lot. No, it&#8217;s an extraordinary number: Since February, the Firefox team has been working around the clock using frontier AI models to find and fix latent security vulnerabilities in the browser. We wrote previously about our collaboration with Anthropic to scan Firefox with Opus 4.6, which led to fixes for 22 security-sensitive bugs in Firefox 148. As part of our continued collaboration with Anthropic, we had the opportunity to apply an early version of Claude Mythos Preview to Firefox. This week&#8217;s release of Firefox 150 includes fixes for 271 vulnerabilities identif...",
-    "published": "2026-04-29T10:12:17Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "firefox",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "firefox"
-    ]
-  },
-  {
-    "id": "d6d1928e2a29020c87a8ee2d335efafe",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "CISA Adds Actively Exploited ConnectWise and Windows Flaws to KEV",
-    "url": "https://thehackernews.com/2026/04/cisa-adds-actively-exploited.html",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added two security flaws impacting ConnectWise ScreenConnect and Microsoft Windows to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation. The vulnerabilities are listed below - CVE-2024-1708 (CVSS score: 8.4) - A path traversal vulnerability in ConnectWise ScreenConnect",
-    "published": "2026-04-29T08:46:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "path-traversal",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2024-1708"
-    ]
-  },
-  {
-    "id": "8739702ee21022a54ac48adbb1911db2",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "LiteLLM CVE-2026-42208 SQL Injection Exploited within 36 Hours of Disclosure",
-    "url": "https://thehackernews.com/2026/04/litellm-cve-2026-42208-sql-injection.html",
-    "summary": "In yet another instance of threat actors quickly jumping on the exploitation bandwagon, a newly disclosed critical security flaw in BerriAI's LiteLLM Python package has come under active exploitation in the wild within 36 hours of the bug becoming public knowledge. The vulnerability, tracked as CVE-2026-42208 (CVSS score: 9.3), is an SQL injection that could be exploited to modify the underlying",
-    "published": "2026-04-29T05:34:00Z",
-    "fetched": "2026-04-30T04:44:55.287443Z",
-    "tags": [
-      "sqli",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 66,
-    "cves": [
-      "CVE-2026-42208"
-    ]
-  },
-  {
-    "id": "fc7e9e33e047f04ad4b4d06dc15ffcd5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-42167 — mod_sql in ProFTPD before 1.3.9a allows remote attackers to execute arbitrary co…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42167",
-    "summary": "mod_sql in ProFTPD before 1.3.9a allows remote attackers to execute arbitrary code via a username, in scenarios where there is logging of USER requests with an expansion such as %U, and the SQL backend allows commands (e.g., COPY TO PROGRAM).",
-    "published": "2026-04-28T23:16:20.61Z",
-    "fetched": "2026-05-02T22:06:42.171922058Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-42167"
-    ]
-  },
-  {
-    "id": "ba11bacf51e8108fdafb1ca12f0c32e0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-41378 — OpenClaw before 2026.3.31 contains a privilege escalation vulnerability allowing…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41378",
-    "summary": "OpenClaw before 2026.3.31 contains a privilege escalation vulnerability allowing paired nodes with role=node to dispatch node.event agent requests with unrestricted gateway-side tool access. Attackers with trusted paired node credentials can escalate privileges by leveraging unrestricted agent.request dispatch to achieve remote code execution on the gateway.",
-    "published": "2026-04-28T19:37:40.687Z",
-    "fetched": "2026-05-02T22:06:42.171922058Z",
-    "tags": [
-      "rce",
-      "lpe"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "openclaw"
-    ],
-    "cves": [
-      "CVE-2026-41378"
-    ]
-  },
-  {
-    "id": "7f24b162164e1b3e9c5a6ecea95fcb64",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-41375 — OpenClaw before 2026.3.28 contains an authorization bypass vulnerability in the …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41375",
-    "summary": "OpenClaw before 2026.3.28 contains an authorization bypass vulnerability in the /phone arm and /phone disarm endpoints that fails to properly enforce operator.admin scope checks for external channels. Attackers can bypass authentication restrictions to arm or disarm phone channels without proper administrative privileges.",
-    "published": "2026-04-28T19:37:40.28Z",
-    "fetched": "2026-05-02T22:06:42.171922058Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "openclaw"
-    ],
-    "cves": [
-      "CVE-2026-41375"
-    ]
-  },
-  {
-    "id": "4de472fa929c70c5803ab76b71e4b312",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.1 MEDIUM] CVE-2026-41373 — OpenClaw before 2026.3.31 contains an incomplete host-env-security-policy.json t…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41373",
-    "summary": "OpenClaw before 2026.3.31 contains an incomplete host-env-security-policy.json that fails to restrict compiler binary environment variables, allowing untrusted models to substitute CC, CXX, CARGO_BUILD_RUSTC, and CMAKE_C_COMPILER via environment overrides. Attackers with approved host-exec requests can override compiler binaries to execute arbitrary code during build processes.",
-    "published": "2026-04-28T19:37:39.993Z",
-    "fetched": "2026-05-02T22:06:42.171922058Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "openclaw"
-    ],
-    "cves": [
-      "CVE-2026-41373"
     ]
   }
 ]

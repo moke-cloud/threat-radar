@@ -1,5 +1,108 @@
 [
   {
+    "id": "25a78d9dac1fcf30a570732deff5caaa",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "NVIDIA confirms GeForce NOW data breach affecting Armenian users",
+    "url": "https://www.bleepingcomputer.com/news/security/nvidia-confirms-geforce-now-data-breach-affecting-armenian-users/",
+    "summary": "NVIDIA has confirmed in a statement for BleepingComputer that GeForce NOW user information has been exposed in a data breach. [...]",
+    "published": "2026-05-08T16:18:31Z",
+    "fetched": "2026-05-08T22:30:43.706170303Z",
+    "tags": [
+      "rce",
+      "breach"
+    ],
+    "severity": "high",
+    "score": 72
+  },
+  {
+    "id": "3322278f4e6f473898dd37b1012149e3",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA gives feds four days to patch Ivanti flaw exploited as zero-day",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-gives-feds-four-days-to-patch-ivanti-flaw-exploited-as-zero-day/",
+    "summary": "CISA has given U.S. federal agencies four days to secure their networks against a high-severity vulnerability in Ivanti Endpoint Manager Mobile (EPMM) exploited in zero-day attacks. [...]",
+    "published": "2026-05-08T12:16:32Z",
+    "fetched": "2026-05-08T22:30:43.706170303Z",
+    "tags": [
+      "ivanti",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "ivanti"
+    ]
+  },
+  {
+    "id": "39c011724d83a782c71baca5bef41746",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "New Linux 'Dirty Frag' zero-day gives root on all major distros",
+    "url": "https://www.bleepingcomputer.com/news/security/new-linux-dirty-frag-zero-day-with-poc-exploit-gives-root-privileges/",
+    "summary": "A new Linux zero-day exploit, named Dirty Frag, allows local attackers to gain root privileges on most major Linux distributions with a single command. [...]",
+    "published": "2026-05-08T07:45:24Z",
+    "fetched": "2026-05-08T22:30:43.706170303Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "7906db24d9f6f865cb5b330ea5ab98e3",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Linux Kernel Dirty Frag LPE Exploit Enables Root Access Across Major Distributions",
+    "url": "https://thehackernews.com/2026/05/linux-kernel-dirty-frag-lpe-exploit.html",
+    "summary": "Details have emerged about a new, unpatched local privilege escalation (LPE) vulnerability impacting the Linux kernel. Dubbed Dirty Frag, it has been described as a successor to Copy Fail (CVE-2026-31431, CVSS score: 7.8), a recently disclosed LPE flaw impacting the Linux kernel that has since come under active exploitation in the wild. The vulnerability was reported to Linux kernel maintainers",
+    "published": "2026-05-08T05:12:00Z",
+    "fetched": "2026-05-08T22:30:43.706170303Z",
+    "tags": [
+      "linux",
+      "watch",
+      "lpe",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 76,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-31431"
+    ]
+  },
+  {
+    "id": "d0e164916d4b979d2310335a12f828f2",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-42208 — BerriAI LiteLLM: BerriAI LiteLLM SQL Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42208",
+    "summary": "BerriAI LiteLLM contains a SQL injection vulnerability that allows an attacker to read data from the proxy's database and potentially modify it, leading to unauthorised access to the proxy and the credentials it manages.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-11",
+    "published": "2026-05-08T00:00:00Z",
+    "fetched": "2026-05-08T22:30:43.706170303Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "sqli"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "berriai"
+    ],
+    "cves": [
+      "CVE-2026-42208"
+    ]
+  },
+  {
     "id": "2c95055423241ea8c5828b155b195e14",
     "source": "msrc",
     "source_name": "Microsoft Security Blog",
@@ -931,6 +1034,33 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31431",
     "summary": "Linux Kernel contains an incorrect resource transfer between spheres vulnerability that could allow for privilege escalation.\nRequired: \"Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-15",
     "published": "2026-05-01T00:00:00Z",
+    "fetched": "2026-05-08T22:30:43.706170303Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "linux",
+      "watch",
+      "rce",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-31431"
+    ]
+  },
+  {
+    "id": "71df044fb556919968febea59900c6be",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-31431 — Linux Kernel: Linux Kernel Incorrect Resource Transfer Between Spheres Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31431",
+    "summary": "Linux Kernel contains an incorrect resource transfer between spheres vulnerability that could allow for privilege escalation.\nRequired: \"Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-15",
+    "published": "2026-05-01T00:00:00Z",
     "fetched": "2026-05-01T22:12:53.445088758Z",
     "tags": [
       "kev",
@@ -1371,120 +1501,6 @@
     "vendors": [
       "webpros",
       "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-41940"
-    ]
-  },
-  {
-    "id": "23e843a75180830f7dc8e1ae4388c89c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-7422 — Insufficient packet validation in FreeRTOS-Plus-TCP before V4.2.6 and V4.4.1 all…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7422",
-    "summary": "Insufficient packet validation in FreeRTOS-Plus-TCP before V4.2.6 and V4.4.1 allows an adjacent network actor to bypass all checksum and minimum-size validation by spoofing the Ethernet source MAC address to match one of the device's own registered endpoints, because the loopback detection mechanism skips all input validation for packets whose source MAC matches a local endpoint.\n\n\n\nTo mitigate this issue, users should upgrade to the fixed version when available.",
-    "published": "2026-04-29T19:16:26.487Z",
-    "fetched": "2026-05-04T22:32:50.858159454Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "amazon"
-    ],
-    "cves": [
-      "CVE-2026-7422"
-    ]
-  },
-  {
-    "id": "7d2be9c2bd9187b47e07d895e64bba75",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-41499 — Wazuh is a free and open source platform used for threat prevention, detection, …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41499",
-    "summary": "Wazuh is a free and open source platform used for threat prevention, detection, and response. From version 4.0.0 to before version 4.14.4, multiple heap-based out-of-bounds WRITE vulnerabilities exist in parse_uname_string() (remoted_op.c). This function processes OS identification data from agents and contains a dangerous code pattern that appears in 4 locations within the same function: writing to strlen(ptr) - 1 without checking for empty strings. When the string is empty, strlen() returns 0, and 0 - 1 wraps to SIZE_MAX due to unsigned integer underflow. Due to pointer arithmetic wrapping, SIZE_MAX effectively becomes -1, causing a write exactly 1 byte before the allocated buffer. This corrupts heap metadata (e.g., the chunk size field in glibc malloc), leading to heap corruption. This issue has been patched in version 4.14.4.",
-    "published": "2026-04-29T19:16:23.78Z",
-    "fetched": "2026-05-02T22:06:42.171922058Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "wazuh"
-    ],
-    "cves": [
-      "CVE-2026-41499"
-    ]
-  },
-  {
-    "id": "ed3d58e204c07037a8a6832dd81f1942",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-26015 — DocsGPT is a GPT-powered chat for documentation. From version 0.15.0 to before v…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26015",
-    "summary": "DocsGPT is a GPT-powered chat for documentation. From version 0.15.0 to before version 0.16.0, an attacker accessing both the official DocsGPT website or any local and public deployment, can craft a malicious payload bypassing the \"MCP test\" behavior to achieve arbitrary remote code execution (RCE). This issue has been patched in version 0.16.0.",
-    "published": "2026-04-29T18:16:03.817Z",
-    "fetched": "2026-05-02T22:06:42.171922058Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "arc53"
-    ],
-    "cves": [
-      "CVE-2026-26015"
-    ]
-  },
-  {
-    "id": "d6871ec7116d38e8cac66fa77a6b16a6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-42198 — pgjdbc is an open source postgresql JDBC Driver. From version 42.2.0 to before v…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42198",
-    "summary": "pgjdbc is an open source postgresql JDBC Driver. From version 42.2.0 to before version 42.7.11, pgjdbc is vulnerable to a client-side denial of service during SCRAM-SHA-256 authentication. A malicious server can instruct the driver to perform SCRAM authentication with a very large iteration count. With a large enough value, the client spends an unbounded amount of CPU time inside PBKDF2 before authentication can fail. A single attempt ties up a CPU core. Repeated or concurrent attempts exhaust client CPU and can wedge connection pools. In affected versions, loginTimeout did not fully mitigate this problem. When loginTimeout expired, the caller could stop waiting, but the worker thread performing the connection attempt could continue running and burning CPU inside the SCRAM PBKDF2 computation. This issue has been patched in version 42.7.11.",
-    "published": "2026-04-29T16:16:25.427Z",
-    "fetched": "2026-05-02T22:06:42.171922058Z",
-    "tags": [
-      "postgres",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "postgresql",
-      "postgres"
-    ],
-    "cves": [
-      "CVE-2026-42198"
-    ]
-  },
-  {
-    "id": "f4639405e7b4ce7bc3e6f0c6c5e99c41",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-41940 — cPanel and WHM versions after 11.40 contain an authentication bypass vulnerabili…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41940",
-    "summary": "cPanel and WHM versions after 11.40 contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel.",
-    "published": "2026-04-29T16:16:25.037Z",
-    "fetched": "2026-05-04T22:32:50.858159454Z",
-    "tags": [
-      "critical-cvss",
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "cpanel"
     ],
     "cves": [
       "CVE-2026-41940"

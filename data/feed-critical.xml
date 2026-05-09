@@ -5,7 +5,7 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 08 May 2026 22:30:43 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 22:07:34 +0000</lastBuildDate>
     <item>
       <title>[HIGH] NVIDIA confirms GeForce NOW data breach affecting Armenian users</title>
       <link>https://www.bleepingcomputer.com/news/security/nvidia-confirms-geforce-now-data-breach-affecting-armenian-users/</link>
@@ -163,6 +163,71 @@
       <category>microsoft</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-43260 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;bnxt_en: Fi…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43260</link>
+      <guid isPermaLink="false">f7de3bbe192eb150934770957cd24def</guid>
+      <pubDate>Wed, 06 May 2026 12:16:46 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;bnxt_en: Fix RSS context delete logic&#xA;&#xA;We need to free the corresponding RSS context VNIC&#xA;in FW everytime an RSS context is deleted in driver.&#xA;Commit 667ac333dbb7 added a check to delete the VNIC&#xA;in FW only when netif_running() is true to help delete&#xA;RSS contexts with interface down.&#xA;&#xA;Having that condition will make the driver leak VNICs&#xA;in FW whenever close() happens with active RSS contexts.&#xA;On the subsequent open(), as part of RSS context restoration,&#xA;we will end up trying to create extra VNICs for which we&#xA;did not make any reservation. FW can fail this request,&#xA;thereby making us lose active RSS contexts.&#xA;&#xA;Suppose an RSS context is deleted already and we try to&#xA;process a delete request again, then the HWRM functions&#xA;will check for validity of the request and they simply&#xA;return if the resource is already freed. So, even for&#xA;delete-when-down cases, netif_running() check is not&#xA;necessary.&#xA;&#xA;Remove the netif_running() condition check when deleting&#xA;an RSS context.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.5 MEDIUM] CVE-2026-43227 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;clocksource…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43227</link>
+      <guid isPermaLink="false">cedc3d72666a26e5b42bd55ead5179e3</guid>
+      <pubDate>Wed, 06 May 2026 12:16:42 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;clocksource/drivers/sh_tmu: Always leave device running after probe&#xA;&#xA;The TMU device can be used as both a clocksource and a clockevent&#xA;provider. The driver tries to be smart and power itself on and off, as&#xA;well as enabling and disabling its clock when it&#39;s not in operation.&#xA;This behavior is slightly altered if the TMU is used as an early&#xA;platform device in which case the device is left powered on after probe,&#xA;but the clock is still enabled and disabled at runtime.&#xA;&#xA;This has worked for a long time, but recent improvements in PREEMPT_RT&#xA;and PROVE_LOCKING have highlighted an issue. As the TMU registers itself&#xA;as a clockevent provider, clockevents_register_device(), it needs to use&#xA;raw spinlocks internally as this is the context of which the clockevent&#xA;framework interacts with the TMU driver. However in the context of&#xA;holding a raw spinlock the TMU driver can&#39;t really manage its power&#xA;state or clock with calls to pm_runtime_*() and clk_*() as these calls&#xA;end up in other platform drivers using regular spinlocks to control&#xA;power and clocks.&#xA;&#xA;This mix of spinlock contexts trips a lockdep warning.&#xA;&#xA;    =============================&#xA;    [ BUG: Invalid wait context ]&#xA;    6.18.0-arm64-renesas-09926-gee959e7c5e34 #1 Not tainted&#xA;    -----------------------------&#xA;    swapper/0/0 is trying to lock:&#xA;    ffff000008c9e180 (&amp;dev-&gt;power.lock){-...}-{3:3}, at: __pm_runtime_resume+0x38/0x88&#xA;    other info that might help us debug this:&#xA;    context-{5:5}&#xA;    1 lock held by swapper/0/0:&#xA;    ccree e6601000.crypto: ARM CryptoCell 630P Driver: HW version 0xAF400001/0xDCC63000, Driver version 5.0&#xA;     #0: ffff8000817ec298&#xA;    ccree e6601000.crypto: ARM ccree device initialized&#xA;     (tick_broadcast_lock){-...}-{2:2}, at: __tick_broadcast_oneshot_control+0xa4/0x3a8&#xA;    stack backtrace:&#xA;    CPU: 0 UID: 0 PID: 0 Comm: swapper/0 Not tainted 6.18.0-arm64-renesas-09926-gee959e7c5e34 #1 PREEMPT&#xA;    Hardware name: Renesas Salvator-X 2nd version board based on r8a77965 (DT)&#xA;    Call trace:&#xA;     show_stack+0x14/0x1c (C)&#xA;     dump_stack_lvl+0x6c/0x90&#xA;     dump_stack+0x14/0x1c&#xA;     __lock_acquire+0x904/0x1584&#xA;     lock_acquire+0x220/0x34c&#xA;     _raw_spin_lock_irqsave+0x58/0x80&#xA;     __pm_runtime_resume+0x38/0x88&#xA;     sh_tmu_clock_event_set_oneshot+0x84/0xd4&#xA;     clockevents_switch_state+0xfc/0x13c&#xA;     tick_broadcast_set_event+0x30/0xa4&#xA;     __tick_broadcast_oneshot_control+0x1e0/0x3a8&#xA;     tick_broadcast_oneshot_control+0x30/0x40&#xA;     cpuidle_enter_state+0x40c/0x680&#xA;     cpuidle_enter+0x30/0x40&#xA;     do_idle+0x1f4/0x280&#xA;     cpu_startup_entry+0x34/0x40&#xA;     kernel_init+0x0/0x130&#xA;     do_one_initcall+0x0/0x230&#xA;     __primary_switched+0x88/0x90&#xA;&#xA;For non-PREEMPT_RT builds this is not really an issue, but for&#xA;PREEMPT_RT builds where normal spinlocks can sleep this might be an&#xA;issue. Be cautious and always leave the power and clock running after&#xA;probe.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-43207 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;media: mtk-…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43207</link>
+      <guid isPermaLink="false">e37b47aa24d192dd838f57e1542f60d9</guid>
+      <pubDate>Wed, 06 May 2026 12:16:40 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;media: mtk-mdp: Fix error handling in probe function&#xA;&#xA;Add mtk_mdp_unregister_m2m_device() on the error handling path to prevent&#xA;resource leak.&#xA;&#xA;Add check for the return value of vpu_get_plat_device() to prevent null&#xA;pointer dereference. And vpu_get_plat_device() increases the reference&#xA;count of the returned platform device. Add platform_device_put() to&#xA;prevent reference leak.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-43194 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;net: consum…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43194</link>
+      <guid isPermaLink="false">631aa2e7f71cc4101380d81ee2f3dca8</guid>
+      <pubDate>Wed, 06 May 2026 12:16:38 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;net: consume xmit errors of GSO frames&#xA;&#xA;udpgro_frglist.sh and udpgro_bench.sh are the flakiest tests&#xA;currently in NIPA. They fail in the same exact way, TCP GRO&#xA;test stalls occasionally and the test gets killed after 10min.&#xA;&#xA;These tests use veth to simulate GRO. They attach a trivial&#xA;(&#34;return XDP_PASS;&#34;) XDP program to the veth to force TSO off&#xA;and NAPI on.&#xA;&#xA;Digging into the failure mode we can see that the connection&#xA;is completely stuck after a burst of drops. The sender&#39;s snd_nxt&#xA;is at sequence number N [1], but the receiver claims to have&#xA;received (rcv_nxt) up to N + 3 * MSS [2]. Last piece of the puzzle&#xA;is that senders rtx queue is not empty (let&#39;s say the block in&#xA;the rtx queue is at sequence number N - 4 * MSS [3]).&#xA;&#xA;In this state, sender sends a retransmission from the rtx queue&#xA;with a single segment, and sequence numbers N-4*MSS:N-3*MSS [3].&#xA;Receiver sees it and responds with an ACK all the way up to&#xA;N + 3 * MSS [2]. But sender will reject this ack as TCP_ACK_UNSENT_DATA&#xA;because it has no recollection of ever sending data that far out [1].&#xA;And we are stuck.&#xA;&#xA;The root cause is the mess of the xmit return codes. veth returns&#xA;an error when it can&#39;t xmit a frame. We end up with a loss event&#xA;like this:&#xA;&#xA;  -------------------------------------------------&#xA;  |   GSO super frame 1   |   GSO super frame 2   |&#xA;  |-----------------------------------------------|&#xA;  | seg | seg | seg | seg | seg | seg | seg | seg |&#xA;  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |&#xA;  -------------------------------------------------&#xA;     x    ok    ok    &lt;ok&gt;|  ok    ok    ok   &lt;x&gt;&#xA;                          \\&#xA;&#x9;&#x9;&#x9;   snd_nxt&#xA;&#xA;&#34;x&#34; means packet lost by veth, and &#34;ok&#34; means it went thru.&#xA;Since veth has TSO disabled in this test it sees individual segments.&#xA;Segment 1 is on the retransmit queue and will be resent.&#xA;&#xA;So why did the sender not advance snd_nxt even tho it clearly did&#xA;send up to seg 8? tcp_write_xmit() interprets the return code&#xA;from the core to mean that data has not been sent at all. Since&#xA;TCP deals with GSO super frames, not individual segment the crux&#xA;of the problem is that loss of a single segment can be interpreted&#xA;as loss of all. TCP only sees the last return code for the last&#xA;segment of the GSO frame (in &lt;&gt; brackets in the diagram above).&#xA;&#xA;Of course for the problem to occur we need a setup or a device&#xA;without a Qdisc. Otherwise Qdisc layer disconnects the protocol&#xA;layer from the device errors completely.&#xA;&#xA;We have multiple ways to fix this.&#xA;&#xA; 1) make veth not return an error when it lost a packet.&#xA;    While this is what I think we did in the past, the issue keeps&#xA;    reappearing and it&#39;s annoying to debug. The game of whack&#xA;    a mole is not great.&#xA;&#xA; 2) fix the damn return codes&#xA;    We only talk about NETDEV_TX_OK and NETDEV_TX_BUSY in the&#xA;    documentation, so maybe we should make the return code from&#xA;    ndo_start_xmit() a boolean. I like that the most, but perhaps&#xA;    some ancient, not-really-networking protocol would suffer.&#xA;&#xA; 3) make TCP ignore the errors&#xA;    It is not entirely clear to me what benefit TCP gets from&#xA;    interpreting the result of ip_queue_xmit()? Specifically once&#xA;    the connection is established and we&#39;re pushing data - packet&#xA;    loss is just packet loss?&#xA;&#xA; 4) this fix&#xA;    Ignore the rc in the Qdisc-less+GSO case, since it&#39;s unreliable.&#xA;    We already always return OK in the TCQ_F_CAN_BYPASS case.&#xA;    In the Qdisc-less case let&#39;s be a bit more conservative and only&#xA;    mask the GSO errors. This path is taken by non-IP-&#34;networks&#34;&#xA;    like CAN, MCTP etc, so we could regress some ancient thing.&#xA;    This is the simplest, but also maybe the hackiest fix?&#xA;&#xA;Similar fix has been proposed by Eric in the past but never committed&#xA;because original reporter was working with an OOT driver and wasn&#39;t&#xA;providing feedback (see Link).</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.6 HIGH] CVE-2026-43139 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;xfrm6: fix …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43139</link>
+      <guid isPermaLink="false">23103c050344a5a8b5aa2a5f1620b270</guid>
+      <pubDate>Wed, 06 May 2026 12:16:31 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;xfrm6: fix uninitialized saddr in xfrm6_get_saddr()&#xA;&#xA;xfrm6_get_saddr() does not check the return value of&#xA;ipv6_dev_get_saddr(). When ipv6_dev_get_saddr() fails to find a suitable&#xA;source address (returns -EADDRNOTAVAIL), saddr-&gt;in6 is left&#xA;uninitialized, but xfrm6_get_saddr() still returns 0 (success).&#xA;&#xA;This causes the caller xfrm_tmpl_resolve_one() to use the uninitialized&#xA;address in xfrm_state_find(), triggering KMSAN warning:&#xA;&#xA;=====================================================&#xA;BUG: KMSAN: uninit-value in xfrm_state_find+0x2424/0xa940&#xA; xfrm_state_find+0x2424/0xa940&#xA; xfrm_resolve_and_create_bundle+0x906/0x5a20&#xA; xfrm_lookup_with_ifid+0xcc0/0x3770&#xA; xfrm_lookup_route+0x63/0x2b0&#xA; ip_route_output_flow+0x1ce/0x270&#xA; udp_sendmsg+0x2ce1/0x3400&#xA; inet_sendmsg+0x1ef/0x2a0&#xA; __sock_sendmsg+0x278/0x3d0&#xA; __sys_sendto+0x593/0x720&#xA; __x64_sys_sendto+0x130/0x200&#xA; x64_sys_call+0x332b/0x3e70&#xA; do_syscall_64+0xd3/0xf80&#xA; entry_SYSCALL_64_after_hwframe+0x77/0x7f&#xA;&#xA;Local variable tmp.i.i created at:&#xA; xfrm_resolve_and_create_bundle+0x3e3/0x5a20&#xA; xfrm_lookup_with_ifid+0xcc0/0x3770&#xA;=====================================================&#xA;&#xA;Fix by checking the return value of ipv6_dev_get_saddr() and propagating&#xA;the error.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
+    </item>
+    <item>
       <title>[CRIT] Palo Alto Networks warns of firewall RCE zero-day exploited in attacks</title>
       <link>https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-actively-exploited-firewall-zero-day/</link>
       <guid isPermaLink="false">cd5c56dfddf88737f5b22a8d84a9e63f</guid>
@@ -206,6 +271,103 @@
       <category>paloalto</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-39383 — Gotenberg is an API-based document conversion tool. In version 8.29.1, an unauth…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-39383</link>
+      <guid isPermaLink="false">d8948cdbe91e702c616a807ce6f23fac</guid>
+      <pubDate>Tue, 05 May 2026 21:16:22 +0000</pubDate>
+      <description>Gotenberg is an API-based document conversion tool. In version 8.29.1, an unauthenticated attacker with network access can force the server to make outbound HTTP POST requests to arbitrary internal or external destinations by supplying a crafted URL in the Gotenberg-Webhook-Url request header. The FilterDeadline function in filter.go is intended to gate outbound URLs, but when both the allow-list and deny-list are empty (the default configuration), it returns nil unconditionally and permits any URL. &#xA;&#xA;This is a blind SSRF: Gotenberg POSTs the converted document to the webhook URL and only checks whether the response status code is an error, but never returns the target&#39;s response body to the attacker. An attacker can use this to probe internal network infrastructure by observing whether the error callback is invoked, force POST requests against internal services that perform side effects, and confirm reachability of cloud metadata endpoints. The retryable HTTP client issues up to 4 automatic retries per request, amplifying each probe.&#xA;&#xA;This issue has been fixed in version 8.31.0. As a workaround, configure the GOTENBERG_API_WEBHOOK_ALLOW_LIST environment variable to restrict webhook URLs to known receivers, or set GOTENBERG_API_WEBHOOK_DENY_LIST to block RFC-1918 and link-local address ranges.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>thecodingmachine</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-34527 — Sandboxie-Plus is an open source sandbox-based isolation software for Windows. I…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-34527</link>
+      <guid isPermaLink="false">21c7fa351813fbb4f8cee4197a835ab6</guid>
+      <pubDate>Tue, 05 May 2026 20:16:37 +0000</pubDate>
+      <description>Sandboxie-Plus is an open source sandbox-based isolation software for Windows. In versions 1.17.2 and earlier, SbieIniServer::HashPassword converts a SHA-1 digest to hexadecimal incorrectly. The high nibble of each byte is shifted right by 8 instead of 4, which always produces zero for an 8-bit value. As a result, the stored EditPassword hash only preserves the low nibble of each digest byte, reducing the effective entropy from 160 bits to 80 bits. This is layered on top of an unsalted SHA-1 scheme. The reduced entropy makes leaked or backed-up password hashes materially easier to brute-force.&#xA;&#xA;This issue has been fixed in version 1.17.3.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>sandboxie-plus</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-34084 — PhpSpreadsheet is a library for reading and writing spreadsheet files. In versio…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-34084</link>
+      <guid isPermaLink="false">dde4064f1deaa2c25e78e3017e7beb0d</guid>
+      <pubDate>Tue, 05 May 2026 20:16:37 +0000</pubDate>
+      <description>PhpSpreadsheet is a library for reading and writing spreadsheet files. In versions 1.30.2 and earlier, 2.0.0 through 2.1.14, 2.2.0 through 2.4.3, 3.3.0 through 3.10.3, and 4.0.0 through 5.5.0, when the filename argument to IOFactory::load() is user-controlled, an attacker can supply a PHP stream wrapper path (such as phar://, ftp://, or ssh2.sftp://) that passes the is_file() check in File::assertFile(). The phar:// wrapper triggers deserialization of the PHAR metadata, which can lead to remote code execution if a suitable gadget chain is available in the application. The ftp:// and ssh2.sftp:// wrappers can be used for server-side request forgery. This issue has been fixed in versions 1.30.3, 2.1.15, 2.4.4, 3.10.4, and 5.6.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>deserialization</category>
+      <category>phpoffice</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-33324 — SQLBot is an intelligent Text-to-SQL system based on large language models and R…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33324</link>
+      <guid isPermaLink="false">9cda83a0de86db11a4c5d9f8cb5f7e8a</guid>
+      <pubDate>Tue, 05 May 2026 20:16:36 +0000</pubDate>
+      <description>SQLBot is an intelligent Text-to-SQL system based on large language models and RAG. In versions 1.7.0 and earlier, the Text2SQL chat interface is vulnerable to prompt injection. The user-provided question parameter is directly concatenated into the LLM prompt without filtering or escaping, and the SQL extracted from the LLM response is executed against the database without validation or sanitization. An authenticated attacker can craft a malicious question to manipulate the LLM into generating and executing arbitrary SQL statements. When connected to a PostgreSQL data source, this can lead to remote code execution via COPY FROM PROGRAM. This issue has been fixed in version 1.7.1.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>postgres</category>
+      <category>fit2cloud</category>
+      <category>postgres</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-32936 — CoreDNS is a DNS server that chains plugins. In versions prior to 1.14.3, the DN…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-32936</link>
+      <guid isPermaLink="false">4ff84af40f5e42314d0543c0639b7078</guid>
+      <pubDate>Tue, 05 May 2026 20:16:36 +0000</pubDate>
+      <description>CoreDNS is a DNS server that chains plugins. In versions prior to 1.14.3, the DNS-over-HTTPS (DoH) GET path accepts oversized dns= query parameter values and performs URL query parsing, base64 decoding, and DNS message unpacking before rejecting the request. Unlike the POST path, which applies a bounded read via http.MaxBytesReader limited to 65536 bytes, the GET path has no equivalent size validation before expensive processing. A remote, unauthenticated attacker can repeatedly send oversized DoH GET requests to force high CPU usage, large transient memory allocations, and elevated garbage-collection pressure, leading to denial of service. This issue has been fixed in version 1.14.3.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>adobe</category>
+      <category>rce</category>
+      <category>coredns.io</category>
+      <category>adobe</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.4 MEDIUM] CVE-2026-27694 — Traccar is an open source GPS tracking system. In org.traccar:traccar versions s…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-27694</link>
+      <guid isPermaLink="false">bd49cd3b087f6638e24147710daeaf61</guid>
+      <pubDate>Tue, 05 May 2026 13:16:28 +0000</pubDate>
+      <description>Traccar is an open source GPS tracking system. In org.traccar:traccar versions starting at 6.11.1 before 6.13.0, the email notification templates insert user-controlled device, geofence, and driver names into HTML email output without proper escaping. An attacker with low privileges can store crafted HTML in these fields, which is then rendered in notification emails sent to other users with access to the affected devices. This can lead to phishing or spoofed email content. This issue is fixed in version 6.13.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>traccar</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.4 MEDIUM] CVE-2026-27693 — Traccar is an open source GPS tracking system. In org.traccar:traccar versions s…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-27693</link>
+      <guid isPermaLink="false">f5a22a621ea2c9ec78229c3317124871</guid>
+      <pubDate>Tue, 05 May 2026 13:16:28 +0000</pubDate>
+      <description>Traccar is an open source GPS tracking system. In org.traccar:traccar versions starting at 6.11.1 before 6.13.0, the KML and GPX export functionality writes device names to XML output without proper escaping. An attacker with low privileges can create a device with a crafted name that injects XML content into exported files. If another user exports and opens the affected KML or GPX file, this can corrupt the file structure and spoof exported location data. This issue is fixed in version 6.13.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>traccar</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-27644 — Traccar is an open source GPS tracking system. In versions between 6.11.1 and 6.…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-27644</link>
+      <guid isPermaLink="false">9548abd3fef426fa64ff0fa9b0b5809b</guid>
+      <pubDate>Tue, 05 May 2026 13:16:27 +0000</pubDate>
+      <description>Traccar is an open source GPS tracking system. In versions between 6.11.1 and 6.13.0, the CSV export functionality writes position data, including user-controlled device and computed attributes, to CSV output without proper escaping. An attacker can inject spreadsheet formulas through exported fields. When a manager or administrator opens the exported CSV file in spreadsheet software, this can cause formula execution and lead to command execution or data exfiltration. This has been patched in version 6.13.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>traccar</category>
+    </item>
+    <item>
       <title>[HIGH] Weaver E-cology RCE Flaw CVE-2026-22679 Actively Exploited via Debug API</title>
       <link>https://thehackernews.com/2026/05/weaver-e-cology-rce-flaw-cve-2026-22679.html</link>
       <guid isPermaLink="false">6a68d43e28336f1af58712172a7c0a01</guid>
@@ -215,6 +377,64 @@
       <category>high</category>
       <category>rce</category>
       <category>actively-exploited</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-44028 — An issue was discovered in Nix before 2.34.7 and Lix before 2.95.2. Unbounded re…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44028</link>
+      <guid isPermaLink="false">fab8d6c01e0ab1ff169baece268ff14d</guid>
+      <pubDate>Tue, 05 May 2026 01:16:06 +0000</pubDate>
+      <description>An issue was discovered in Nix before 2.34.7 and Lix before 2.95.2. Unbounded recursion in the NAR (Nix Archive) parser could lead to a stack-to-heap overflow when the parser is run on a coroutine stack. The stack is allocated without a guard page, which means that a stack overflow could overwrite memory on the heap and could allow arbitrary code execution as the Nix daemon (run as root in multi-user installations) if ASLR hardening is bypassed. This can be exploited by all users able to connect to the daemon (e.g., in Nix, this is configurable via the allowed-users setting, defaulting to all users). The fixed versions are 2.34.7, 2.33.6, 2.32.8, 2.31.5, 2.30.5, 2.29.4, and 2.28.7 for Nix (introduced in 2.24.4); and 2.95.2, 2.94.2, and 2.93.4 for Lix (introduced in 2.93.0).</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-26956 — vm2 is an open source vm/sandbox for Node.js. In version 3.10.4, vm2 is vulnerab…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-26956</link>
+      <guid isPermaLink="false">b9a95ad9c99770485bec93eb1824d8d6</guid>
+      <pubDate>Mon, 04 May 2026 17:16:22 +0000</pubDate>
+      <description>vm2 is an open source vm/sandbox for Node.js. In version 3.10.4, vm2 is vulnerable to full sandbox escape with arbitrary code execution. Attacker code inside VM.run() obtains host process object and runs host commands with zero host cooperation. This issue has been patched in version 3.10.5.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>vm2_project</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-24781 — vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, VM2 suffe…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-24781</link>
+      <guid isPermaLink="false">8574f825e1c2baea83d75415404282ad</guid>
+      <pubDate>Mon, 04 May 2026 17:16:21 +0000</pubDate>
+      <description>vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, VM2 suffers from a sandbox breakout vulnerability through the inspect function. This allows attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This issue has been patched in version 3.11.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>vm2_project</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-24120 — vm2 is an open source vm/sandbox for Node.js. Prior to version 3.10.5, the fix f…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-24120</link>
+      <guid isPermaLink="false">c8cd89f134cfe685adfc9d0a314fede0</guid>
+      <pubDate>Mon, 04 May 2026 17:16:21 +0000</pubDate>
+      <description>vm2 is an open source vm/sandbox for Node.js. Prior to version 3.10.5, the fix for CVE-2023-37466 is insufficient and can be circumvented allowing attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This issue has been patched in version 3.10.5.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>vm2_project</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-24118 — vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, VM2 suffe…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-24118</link>
+      <guid isPermaLink="false">e118cf94e216428cfa6eba405b853793</guid>
+      <pubDate>Mon, 04 May 2026 17:16:21 +0000</pubDate>
+      <description>vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, VM2 suffers from a sandbox breakout vulnerability. This allows attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This issue has been patched in version 3.11.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>vm2_project</category>
     </item>
     <item>
       <title>[HIGH] Trellix discloses data breach after source code repository hack</title>
@@ -501,6 +721,22 @@
       <description>A high-severity Linux vulnerability, “Copy Fail” (CVE-2026-31431), enables root privilege escalation across cloud environments and Kubernetes workloads. With a working exploit already in the wild, organizations should act quickly to detect, mitigate, and reduce risk. The post CVE-2026-31431: Copy Fail vulnerability enables Linux root privilege escalation across cloud environments appeared first on Microsoft Security Blog.</description>
       <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
       <category>critical</category>
+      <category>microsoft</category>
+      <category>kubernetes</category>
+      <category>watch</category>
+      <category>lpe</category>
+      <category>actively-exploited</category>
+      <category>microsoft</category>
+      <category>kubernetes</category>
+    </item>
+    <item>
+      <title>[CRIT] CVE-2026-31431: Copy Fail vulnerability enables Linux root privilege escalation across cloud environments</title>
+      <link>https://www.microsoft.com/en-us/security/blog/2026/05/01/cve-2026-31431-copy-fail-vulnerability-enables-linux-root-privilege-escalation/</link>
+      <guid isPermaLink="false">6cba27feb58c9b3472ed53d3d45bd4bf</guid>
+      <pubDate>Sat, 02 May 2026 03:06:08 +0000</pubDate>
+      <description>A high-severity Linux vulnerability, “Copy Fail” (CVE-2026-31431), enables root privilege escalation across cloud environments and Kubernetes workloads. With a working exploit already in the wild, organizations should act quickly to detect, mitigate, and reduce risk. The post CVE-2026-31431: Copy Fail vulnerability enables Linux root privilege escalation across cloud environments appeared first on Microsoft Security Blog.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
+      <category>critical</category>
       <category>kubernetes</category>
       <category>microsoft</category>
       <category>watch</category>
@@ -555,289 +791,6 @@
       <category>watch</category>
       <category>sap</category>
       <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-7584 — The LabOne Q serialization framework uses a class-loading mechanism (import_cls)…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7584</link>
-      <guid isPermaLink="false">395ab6f12561b21e2bb823f84b5a0f79</guid>
-      <pubDate>Fri, 01 May 2026 08:16:01 +0000</pubDate>
-      <description>The LabOne Q serialization framework uses a class-loading mechanism (import_cls) to dynamically import and instantiate Python classes during deserialization. Prior to the fix, this mechanism accepted arbitrary fully-qualified class names from the serialized data without any validation of the target class or restriction on which modules could be imported. An attacker can craft a serialized experiment file that causes the deserialization engine to import and instantiate arbitrary Python classes with attacker-controlled constructor arguments, resulting in arbitrary code execution in the context of the user running the Python process. Exploitation requires the victim to load a malicious file using LabOne Q&#39;s deserialization functions, for example a compromised experiment file shared for collaboration or support purposes.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>deserialization</category>
-      <category>zhinst</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-42994 — Bitwarden CLI 2026.4.0 from 2026-04-22T21:57Z to 2026-04-22T23:30Z, when obtaine…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42994</link>
-      <guid isPermaLink="false">b87a78b0b246a4d4305cb64e2f9a7cb8</guid>
-      <pubDate>Fri, 01 May 2026 05:16:01 +0000</pubDate>
-      <description>Bitwarden CLI 2026.4.0 from 2026-04-22T21:57Z to 2026-04-22T23:30Z, when obtained from npm, had embedded malicious code. This is related to a Checkmarx supply chain incident.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>supply-chain</category>
-      <category>bitwarden</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-31431 — Linux Kernel: Linux Kernel Incorrect Resource Transfer Between Spheres Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-31431</link>
-      <guid isPermaLink="false">71df044fb556919968febea59900c6be</guid>
-      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
-      <description>Linux Kernel contains an incorrect resource transfer between spheres vulnerability that could allow for privilege escalation.&#xA;Required: &#34;Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-15</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>lpe</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-31431 — Linux Kernel: Linux Kernel Incorrect Resource Transfer Between Spheres Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-31431</link>
-      <guid isPermaLink="false">71df044fb556919968febea59900c6be</guid>
-      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
-      <description>Linux Kernel contains an incorrect resource transfer between spheres vulnerability that could allow for privilege escalation.&#xA;Required: &#34;Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-15</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>lpe</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-7551 — HKUDS OpenHarness contains a remote code execution vulnerability in the /bridge …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7551</link>
-      <guid isPermaLink="false">95c5cb84c7ec752302103dccd050e83d</guid>
-      <pubDate>Thu, 30 Apr 2026 22:16:27 +0000</pubDate>
-      <description>HKUDS OpenHarness contains a remote code execution vulnerability in the /bridge slash command that allows remote senders accepted by configuration to execute arbitrary operating system commands. Attackers can invoke the /bridge spawn command with attacker-controlled command text that is forwarded to the bridge session manager and executed through the shared shell subprocess helper, allowing them to spawn shell sessions as the OpenHarness process user and access local files, credentials, workspace state, and repository contents.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>hkuds</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-7435 — SSCMS v7.4.0 contains a SQL injection vulnerability in the stl:sqlContent tag wh…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7435</link>
-      <guid isPermaLink="false">0b9bcb1d4970c3bfe0f4b2e400da1ee7</guid>
-      <pubDate>Thu, 30 Apr 2026 21:16:34 +0000</pubDate>
-      <description>SSCMS v7.4.0 contains a SQL injection vulnerability in the stl:sqlContent tag where the queryString attribute is passed directly to database execution without parameterization or sanitization. Attackers can craft encrypted payloads submitted to the /api/stl/actions/dynamic endpoint to execute arbitrary SQL statements, leading to unauthorized database access, data disclosure, authentication bypass, data modification, or complete database compromise.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>sqli</category>
-      <category>auth-bypass</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.2 HIGH] CVE-2026-40912 — Traefik is an HTTP reverse proxy and load balancer. Prior to versions 2.11.43, 3…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40912</link>
-      <guid isPermaLink="false">edfccafaf61be7c30dea0f8d77cfdaf4</guid>
-      <pubDate>Thu, 30 Apr 2026 21:16:32 +0000</pubDate>
-      <description>Traefik is an HTTP reverse proxy and load balancer. Prior to versions 2.11.43, 3.6.14, and 3.7.0-rc.2, there is a high severity authentication bypass vulnerability in Traefik&#39;s StripPrefixRegex middleware when used in combination with ForwardAuth, BasicAuth, or DigestAuth. The middleware matches the regex against the decoded URL path but uses the resulting byte length to slice the percent-encoded raw path. When a dot (or multiple dots) appears in the prefix portion of the URL, the raw path after stripping becomes a dot-segment (e.g. /./admin/secret). ForwardAuth receives this dot-segment path in X-Forwarded-Uri, which does not match the protected path patterns and therefore allows the request through. The backend then normalizes the dot-segment to the real path per RFC 3986 and serves the protected content An unauthenticated attacker can exploit this against any backend that performs dot-segment normalization. This issue has been patched in versions 2.11.43, 3.6.14, and 3.7.0-rc.2.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>auth-bypass</category>
-      <category>traefik</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 10.0 CRITICAL] CVE-2026-39858 — Traefik is an HTTP reverse proxy and load balancer. Prior to versions 2.11.43, 3…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-39858</link>
-      <guid isPermaLink="false">690cbfd206da2527400d21e32cad9116</guid>
-      <pubDate>Thu, 30 Apr 2026 21:16:32 +0000</pubDate>
-      <description>Traefik is an HTTP reverse proxy and load balancer. Prior to versions 2.11.43, 3.6.14, and 3.7.0-rc.2, there is a high severity authentication bypass vulnerability in Traefik&#39;s ForwardAuth and snippet-based authentication middleware. Traefik&#39;s forwarded-header sanitization logic targets only canonical header names (e.g., X-Forwarded-Proto) and does not strip or normalize alias variants that use underscores instead of dashes (e.g., X_Forwarded_Proto). These unsanitized alias headers are forwarded intact to the authentication backend. When the backend normalizes underscore and dash header forms equivalently, an attacker can inject spoofed trust context — such as a trusted scheme or host — through the alias headers and bypass authentication on protected routes without valid credentials. This issue has been patched in versions 2.11.43, 3.6.14, and 3.7.0-rc.2.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>auth-bypass</category>
-      <category>traefik</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 10.0 CRITICAL] CVE-2026-35051 — Traefik is an HTTP reverse proxy and load balancer. Prior to versions 2.11.43, 3…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35051</link>
-      <guid isPermaLink="false">952b108ddb9904bb5bd3373a94373bd4</guid>
-      <pubDate>Thu, 30 Apr 2026 21:16:32 +0000</pubDate>
-      <description>Traefik is an HTTP reverse proxy and load balancer. Prior to versions 2.11.43, 3.6.14, and 3.7.0-rc.2, there is an authentication bypass vulnerability in Traefik&#39;s ForwardAuth middleware when trustForwardHeader=false is configured and Traefik is deployed behind a trusted upstream proxy. This issue has been patched in versions 2.11.43, 3.6.14, and 3.7.0-rc.2.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>auth-bypass</category>
-      <category>traefik</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-33448 — CVE-2026-33448 is a format string vulnerability in the logging subsystem&#xA; of Secure Access client fo…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33448</link>
-      <guid isPermaLink="false">1d94ead6e67160b91320353110d44bbe</guid>
-      <pubDate>Thu, 30 Apr 2026 20:16:24 +0000</pubDate>
-      <description>CVE-2026-33448 is a format string vulnerability in the logging subsystem&#xA; of Secure Access client for MacOS prior to 14.50. Attackers with &#xA;control of a modified server can force the client to dump the contents &#xA;of a small portion of memory to the log files potentially revealing &#xA;secrets.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.1 HIGH] CVE-2026-40904 — Chartbrew is an open-source web application that can connect directly to databas…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40904</link>
-      <guid isPermaLink="false">62a777e984d191b4239546c650928724</guid>
-      <pubDate>Thu, 30 Apr 2026 19:16:10 +0000</pubDate>
-      <description>Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In version 4.9.0, Chartbrew exposes multiple dataset and dataRequest endpoints that authorize low-privileged project members at the team level instead of binding the requested dataset_id, dataRequest id, and connection_id to the caller&#39;s allowed projects. An authenticated attacker who only has access to one project inside a team can read, execute, create, update, and delete datasets and data requests that belong to other projects in the same team. The issue is exploitable remotely with ordinary project-level credentials and leads to cross-project data disclosure and unauthorized use of victim-side database or API connections. This issue has been patched in version 5.0.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-40603 — Chartbrew is an open-source web application that can connect directly to databas…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40603</link>
-      <guid isPermaLink="false">f03988eb2470701e868c2d57e5b85399</guid>
-      <pubDate>Thu, 30 Apr 2026 19:16:10 +0000</pubDate>
-      <description>Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In version 4.9.0, Chartbrew exposes a legacy dashboard route that returns a project&#39;s report data to any authenticated member of the same team, even when that user does not have access to the specific project. The route bypasses project-level authorization and returns the raw project object. As a result, a low-privileged same-team user can read another project&#39;s dashboard data and recover the project&#39;s stored report password from the response. This issue has been patched in version 5.0.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-40601 — Chartbrew is an open-source web application that can connect directly to databas…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40601</link>
-      <guid isPermaLink="false">19e7023be21fa7caf1c231b30cf18d17</guid>
-      <pubDate>Thu, 30 Apr 2026 19:16:10 +0000</pubDate>
-      <description>Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In version 4.9.0, Chartbrew exposes POST /api/chart/:chart_id/query without authentication. The endpoint only checks team.allowReportRefresh and does not verify that the target chart belongs to a public report, that the project is public, or that sharing policy allows the operation. An unauthenticated attacker who knows a chart identifier can trigger a data refresh and retrieve the current data of private charts. This issue has been patched in version 5.0.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.1 HIGH] CVE-2026-40600 — Chartbrew is an open-source web application that can connect directly to databas…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40600</link>
-      <guid isPermaLink="false">5c44d8a4d7966663201e7690fb97b8ad</guid>
-      <pubDate>Thu, 30 Apr 2026 19:16:09 +0000</pubDate>
-      <description>Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In version 4.9.0, Chartbrew allows authenticated users with access to one project to update or delete a SharePolicy record that belongs to a different project. The affected routes authorize the caller against the project in the URL path, but they never verify that policy_id belongs to that project. This permits cross-project modification of dashboard sharing rules, including visibility, password requirements, allowed parameters, and expiration settings. This issue has been patched in version 5.0.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-40595 — Chartbrew is an open-source web application that can connect directly to databas…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40595</link>
-      <guid isPermaLink="false">135c2d138bcbab396fdefe9b188a4483</guid>
-      <pubDate>Thu, 30 Apr 2026 19:16:09 +0000</pubDate>
-      <description>Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In version 4.9.0, Chartbrew exposes public chart retrieval and export routes that only verify project-level public access and, for exports, a team-level export toggle. The routes do not verify whether the target chart is actually allowed on the public report or whether the governing SharePolicy permits public access. An unauthenticated attacker who knows a chart identifier in a public project can read or export chart data for charts that were intentionally hidden from the report. This issue has been patched in version 5.0.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-35514 — Chartbrew is an open-source web application that can connect directly to databas…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35514</link>
-      <guid isPermaLink="false">2fd595fb092c4de3ba920c02fe589d4a</guid>
-      <pubDate>Thu, 30 Apr 2026 19:16:09 +0000</pubDate>
-      <description>Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In version 4.9.0, the endpoint POST /user/invited does not validate any invite token, authentication header, or session. Any unauthenticated attacker can call this endpoint directly to create a fully active account and receive a valid JWT — even when the instance has existing users and signupRestricted is enabled. This bypass is distinct from the normal registration endpoint (POST /user) which enforces signupRestricted and sets active: false pending verification. This issue has been patched in version 5.0.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-36765 — An XML external entity (XXE) vulnerability in the /designer/loadReport endpoint …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-36765</link>
-      <guid isPermaLink="false">83b6e37323aa804dda1b11f6223e725c</guid>
-      <pubDate>Thu, 30 Apr 2026 18:16:29 +0000</pubDate>
-      <description>An XML external entity (XXE) vulnerability in the /designer/loadReport endpoint of SpringBlade v4.8.0 allows authenticated attackers to execute arbitrary code via injecting a crafted payload.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-4670 — Authentication bypass by primary weakness vulnerability in Progress Software MOV…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-4670</link>
-      <guid isPermaLink="false">b27b48c8e7fd3849e598ce0c8632f6b7</guid>
-      <pubDate>Thu, 30 Apr 2026 16:16:44 +0000</pubDate>
-      <description>Authentication bypass by primary weakness vulnerability in Progress Software MOVEit Automation allows Authentication Bypass.&#xA;&#xA;This issue affects MOVEit Automation: from 2025.0.0 before 2025.0.9, from 2024.0.0 before 2024.1.8, versions prior to 2024.0.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>auth-bypass</category>
-      <category>progress</category>
-    </item>
-    <item>
-      <title>[CRIT] Critical cPanel and WHM bug exploited as a zero-day, PoC now available</title>
-      <link>https://www.bleepingcomputer.com/news/security/critical-cpanel-and-whm-bug-exploited-as-a-zero-day-poc-now-available/</link>
-      <guid isPermaLink="false">9d966f61c42576e4e408f85f96fd422a</guid>
-      <pubDate>Thu, 30 Apr 2026 11:40:31 +0000</pubDate>
-      <description>The critical CVE-2026-41940 authentication bypass vulnerability in cPanel, WHM, and WP Squared is being actively exploited in the wild and has been leveraged in attempts since late February. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>critical</category>
-      <category>auth-bypass</category>
-      <category>actively-exploited</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.1 HIGH] CVE-2026-42512 — As dhclient is building an environment to pass to dhclient-script, it may need t…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42512</link>
-      <guid isPermaLink="false">1a99e8e251d516e933319c92e8d38e72</guid>
-      <pubDate>Thu, 30 Apr 2026 09:16:03 +0000</pubDate>
-      <description>As dhclient is building an environment to pass to dhclient-script, it may need to resize the array of string pointers.  The code which expands the array incorrectly calculates its new size when requesting memory, resulting in a heap buffer overrun.&#xA;&#xA;A specially crafted packet can cause dhclient to overrun its buffer of environment entries.  This can result in a crash, but it may be possible to leverage this bug to achieve remote code execution.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>freebsd</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-39457 — When exchanging data over a socket, libnv uses select(2) to wait for data to arr…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-39457</link>
-      <guid isPermaLink="false">9aa9958d333847f7102b7d01c01cb62f</guid>
-      <pubDate>Thu, 30 Apr 2026 09:16:03 +0000</pubDate>
-      <description>When exchanging data over a socket, libnv uses select(2) to wait for data to arrive.  However, it does not verify whether the provided socket descriptor fits in select(2)&#39;s file descriptor set size limit of FD_SETSIZE (1024).&#xA;&#xA;An attacker who is able to force a libnv application to allocate large file descriptors, e.g., by opening many descriptors and executing a program which is not careful to close them upon startup, can trigger stack corruption.  If the target application is setuid-root, then this could be used to elevate local privileges.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>freebsd</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.1 HIGH] CVE-2025-13030 — All versions of the package django-mdeditor are vulnerable to Missing Authentica…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-13030</link>
-      <guid isPermaLink="false">9de434a3a72f46d243198b8dad82dc9f</guid>
-      <pubDate>Thu, 30 Apr 2026 06:16:14 +0000</pubDate>
-      <description>All versions of the package django-mdeditor are vulnerable to Missing Authentication for Critical Function in the image upload endpoint. An attacker can upload malicious files and achieve arbitrary code execution since this endpoint lacks authentication protection and proper sanitisation of file names.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>pylixm</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-41940 — WebPros cPanel &amp; WHM and WP2 (WordPress Squared): WebPros cPanel &amp; WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-41940</link>
-      <guid isPermaLink="false">57dcabb55431823988e3b8b585c7608b</guid>
-      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
-      <description>WebPros cPanel &amp; WHM (WebHost Manager) and WP2 (WordPress Squared) contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-03</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>ransomware</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>webpros</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-41940 — WebPros cPanel &amp; WHM and WP2 (WordPress Squared): WebPros cPanel &amp; WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-41940</link>
-      <guid isPermaLink="false">57dcabb55431823988e3b8b585c7608b</guid>
-      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
-      <description>WebPros cPanel &amp; WHM (WebHost Manager) and WP2 (WordPress Squared) contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-03</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>webpros</category>
-      <category>wordpress</category>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,22 @@
 [
   {
+    "id": "047febbd0709c072f676f569cf2f1374",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Google: Hackers used AI to develop zero-day exploit for web admin tool",
+    "url": "https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/",
+    "summary": "Researchers at Google Threat Intelligence Group (GTIG) say that a zero-day exploit targeting a popular open-source web administration tool was likely generated using AI. [...]",
+    "published": "2026-05-11T13:02:30Z",
+    "fetched": "2026-05-11T22:33:27.485301872Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 87
+  },
+  {
     "id": "e2c33de1e806ae17631f878efe3d522a",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -1324,6 +1341,30 @@
     ]
   },
   {
+    "id": "ec10ff017661839c6e79852dc581ccac",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.5 MEDIUM] CVE-2026-43183 — In the Linux kernel, the following vulnerability has been resolved:\n\nmedia: cx25…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43183",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmedia: cx25821: Fix a resource leak in cx25821_dev_setup()\n\nAdd release_mem_region() if ioremap() fails to release the memory\nregion obtained by cx25821_get_resources().",
+    "published": "2026-05-06T12:16:36.92Z",
+    "fetched": "2026-05-11T22:33:27.485301872Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-43183"
+    ]
+  },
+  {
     "id": "23103c050344a5a8b5aa2a5f1620b270",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -1886,358 +1927,6 @@
     "score": 60,
     "cves": [
       "CVE-2026-7687"
-    ]
-  },
-  {
-    "id": "1c543e661b044b13585738184240473d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-7683 — A weakness has been identified in Edimax BR-6428nC up to 1.16. This affects an u…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7683",
-    "summary": "A weakness has been identified in Edimax BR-6428nC up to 1.16. This affects an unknown function of the file /goform/setWAN of the component Web Interface. This manipulation of the argument pppUserName/pptpUserName causes command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-05-03T07:16:25.01Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7683"
-    ]
-  },
-  {
-    "id": "5df6fda2711126d20b7f6695ce5bf0eb",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-7682 — A security flaw has been discovered in Edimax BR-6208AC 1.02. The impacted eleme…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7682",
-    "summary": "A security flaw has been discovered in Edimax BR-6208AC 1.02. The impacted element is the function setWAN of the file /goform/setWAN of the component L2TP Mode. The manipulation of the argument L2TPUserName results in command injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-05-03T07:16:24.807Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7682"
-    ]
-  },
-  {
-    "id": "8313981a1cc3bb729e2d0e6d6c00cc99",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV",
-    "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added a recently disclosed security flaw impacting various Linux distributions to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation in the wild. The vulnerability, tracked as CVE-2026-31431 (CVSS score: 7.8), is a case of local privilege escalation (LPE) flaw that could allow an",
-    "published": "2026-05-03T06:26:00Z",
-    "fetched": "2026-05-10T22:10:43.945531428Z",
-    "tags": [
-      "lpe",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 66,
-    "cves": [
-      "CVE-2026-31431"
-    ]
-  },
-  {
-    "id": "8313981a1cc3bb729e2d0e6d6c00cc99",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV",
-    "url": "https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added a recently disclosed security flaw impacting various Linux distributions to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation in the wild. The vulnerability, tracked as CVE-2026-31431 (CVSS score: 7.8), is a case of local privilege escalation (LPE) flaw that could allow an",
-    "published": "2026-05-03T06:26:00Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "lpe",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 66,
-    "cves": [
-      "CVE-2026-31431"
-    ]
-  },
-  {
-    "id": "47bf693af253e565b171e6a5a16e9930",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-7653 — A security flaw has been discovered in r-huijts mcp-server-rijksmuseum up to 1.0…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7653",
-    "summary": "A security flaw has been discovered in r-huijts mcp-server-rijksmuseum up to 1.0.4. Affected is the function open_image_in_browser of the file src/index.ts of the component MCP Interface. Performing a manipulation of the argument imageUrl results in os command injection. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.",
-    "published": "2026-05-02T16:16:16.033Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7653"
-    ]
-  },
-  {
-    "id": "15cc3f40b371222cfd7ddac2a1b0d698",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-7642 — A vulnerability was detected in pskill9 website-downloader up to 0.1.0. This aff…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7642",
-    "summary": "A vulnerability was detected in pskill9 website-downloader up to 0.1.0. This affects the function download_website of the file src/index.ts of the component MCP Interface. Performing a manipulation of the argument outputPath results in os command injection. The attack may be initiated remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
-    "published": "2026-05-02T15:16:14.047Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7642"
-    ]
-  },
-  {
-    "id": "df128504a9f3de70aa0241bccf479885",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.3 HIGH] CVE-2026-7630 — A vulnerability has been found in innocommerce InnoShop up to 0.7.8. The affecte…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7630",
-    "summary": "A vulnerability has been found in innocommerce InnoShop up to 0.7.8. The affected element is the function InstallServiceProvider::boot of the file innopacks/install/src/InstallServiceProvider.php of the component Installation Endpoint. The manipulation leads to improper authentication. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used. The identifier of the patch is 45758e4ec22451ab944ae2ae826b1e70f6450dc9. It is recommended to apply a patch to fix this issue.",
-    "published": "2026-05-02T14:16:18.16Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7630"
-    ]
-  },
-  {
-    "id": "4e8960d6cca97f5790ff6d4d443ffa67",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-7629 — A flaw has been found in kleneway awesome-cursor-mpc-server up to 2.0.1. Impacte…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7629",
-    "summary": "A flaw has been found in kleneway awesome-cursor-mpc-server up to 2.0.1. Impacted is the function runCodeReviewTool of the file src/tools/codeReview.ts of the component Ccode-Review Tool. Executing a manipulation can lead to command injection. The attack may be launched remotely. The exploit has been published and may be used. The project was informed of the problem early through a pull request but has not reacted yet.",
-    "published": "2026-05-02T14:16:17.99Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7629"
-    ]
-  },
-  {
-    "id": "5488a5b5c4a02dae05a76276fa159226",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.3 MEDIUM] CVE-2026-3504 — The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution plugin for Wo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3504",
-    "summary": "The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 4.3.1 via the '/dokan/v1/stores/{id}/reviews' REST API endpoint. This is due to the 'prepare_reviews_for_response' method including reviewer email addresses, usernames, and user IDs in the API response. This makes it possible for unauthenticated attackers to extract email addresses, usernames, and user IDs of all customers who left reviews on any vendor's store. The Pro version of the plugin must be installed and activated, with store reviews enabled, in order to exploit the vulnerability.",
-    "published": "2026-05-02T14:16:17.847Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-3504"
-    ]
-  },
-  {
-    "id": "391f6f356ffce0e338dece3d7c004084",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-2554 — The WCFM – Frontend Manager for WooCommerce along with Bookings Subscription L…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2554",
-    "summary": "The WCFM – Frontend Manager for WooCommerce along with Bookings Subscription Listings Compatible plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 6.7.25 via the 'wcfm_delete_wcfm_customer' due to missing validation on the 'customerid' user controlled key. This makes it possible for authenticated attackers, with Vendor-level access and above, to delete arbitrary users, including Administrators.",
-    "published": "2026-05-02T14:16:17.707Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-2554"
-    ]
-  },
-  {
-    "id": "0866cb0577356a2638702590f834faf8",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.4 MEDIUM] CVE-2026-0703 — The NextMove Lite – Thank You Page for WooCommerce plugin for WordPress is vul…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0703",
-    "summary": "The NextMove Lite – Thank You Page for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'xlwcty_current_date' shortcode in all versions up to, and including, 2.23.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
-    "published": "2026-05-02T14:16:17.04Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "xss",
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 78,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-0703"
-    ]
-  },
-  {
-    "id": "91b2f9c805e186fafad60f3b07c97b0f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-7628 — A vulnerability was detected in crazyrabbitLTC mcp-code-review-server up to 0.1.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7628",
-    "summary": "A vulnerability was detected in crazyrabbitLTC mcp-code-review-server up to 0.1.0. This issue affects the function executeRepomix of the file src/repomix.ts of the component RepoMix Command Handler. Performing a manipulation results in command injection. The attack may be initiated remotely. The exploit is now public and may be used. The project was informed of the problem early through a pull request but has not reacted yet.",
-    "published": "2026-05-02T12:16:17.163Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7628"
-    ]
-  },
-  {
-    "id": "64616823ca1816ff6aa3ac39fc4a19fd",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-7609 — A flaw has been found in TRENDnet TEW-821DAP up to 1.12B01. The impacted element…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7609",
-    "summary": "A flaw has been found in TRENDnet TEW-821DAP up to 1.12B01. The impacted element is the function tools_diagnostic of the file /tmp/diagnostic of the component Firmware Udpate. This manipulation causes os command injection. Remote exploitation of the attack is possible. The exploit has been published and may be used. The vendor explains: \"That firmware version will only work on our hardware version v1.xR. We have already EOL that product 8 years ago and are no longer selling\". This vulnerability only affects products that are no longer supported by the maintainer.",
-    "published": "2026-05-02T10:16:19.257Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7609"
-    ]
-  },
-  {
-    "id": "bb524c1748d9d7ce2b658c91f53991d9",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.2 HIGH] CVE-2026-7490 — CTMS and CPAS developed by Sunnet has an Arbitrary File Upload vulnerability, al…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7490",
-    "summary": "CTMS and CPAS developed by Sunnet has an Arbitrary File Upload vulnerability, allowing privileged remote attackers to upload and execute web shell backdoors, thereby enabling arbitrary code execution on the server.",
-    "published": "2026-05-02T10:16:18.963Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7490"
-    ]
-  },
-  {
-    "id": "92c418e4350c195dfba93dc4c73483e8",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.5 MEDIUM] CVE-2026-7608 — A vulnerability was detected in TRENDnet TEW-821DAP up to 1.12B01. The affected …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7608",
-    "summary": "A vulnerability was detected in TRENDnet TEW-821DAP up to 1.12B01. The affected element is the function tools_diagnostic. The manipulation results in os command injection. The exploit is now public and may be used. The vendor explains: \"That firmware version will only work on our hardware version v1.xR. We have already EOL that product 8 years ago and are no longer selling\". This vulnerability only affects products that are no longer supported by the maintainer.",
-    "published": "2026-05-02T09:16:22.657Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7608"
-    ]
-  },
-  {
-    "id": "94a7517c65900d7d654cb863d76bd7e8",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-2052 — The Widget Options – Advanced Conditional Visibility for Gutenberg Blocks & Cl…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2052",
-    "summary": "The Widget Options – Advanced Conditional Visibility for Gutenberg Blocks & Classic Widgets plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 4.2.2 via the Display Logic feature. This is due to the plugin using eval() on user-supplied Display Logic expressions with an insufficient blocklist/allowlist that can be bypassed using array_map with string concatenation, combined with a lack of authorization enforcement on the extended_widget_opts_block attribute. This makes it possible for authenticated attackers, with Contributor-level access and above, to execute code on the server. The vulnerability was partially patched in version 4.2.0.",
-    "published": "2026-05-02T08:16:27.123Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-2052"
-    ]
-  },
-  {
-    "id": "a8ccd4045fdc4dbeb3e5d577b0656b11",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 4.4 MEDIUM] CVE-2026-6447 — The Call for Price for WooCommerce plugin for WordPress is vulnerable to Stored …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6447",
-    "summary": "The Call for Price for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 4.2.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled.",
-    "published": "2026-05-02T06:16:04.173Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "xss",
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 78,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-6447"
     ]
   }
 ]

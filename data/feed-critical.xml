@@ -5,7 +5,18 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 10 May 2026 22:10:44 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 22:33:27 +0000</lastBuildDate>
+    <item>
+      <title>[CRIT] Google: Hackers used AI to develop zero-day exploit for web admin tool</title>
+      <link>https://www.bleepingcomputer.com/news/security/google-hackers-used-ai-to-develop-zero-day-exploit-for-web-admin-tool/</link>
+      <guid isPermaLink="false">047febbd0709c072f676f569cf2f1374</guid>
+      <pubDate>Mon, 11 May 2026 13:02:30 +0000</pubDate>
+      <description>Researchers at Google Threat Intelligence Group (GTIG) say that a zero-day exploit targeting a popular open-source web administration tool was likely generated using AI. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>critical</category>
+      <category>rce</category>
+      <category>0day</category>
+    </item>
     <item>
       <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-8192 — A security flaw has been discovered in Wavlink NU516U1 M16U1_V240425. This vulne…</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8192</link>
@@ -733,6 +744,19 @@
       <category>linux</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 5.5 MEDIUM] CVE-2026-43183 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;media: cx25…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43183</link>
+      <guid isPermaLink="false">ec10ff017661839c6e79852dc581ccac</guid>
+      <pubDate>Wed, 06 May 2026 12:16:36 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;media: cx25821: Fix a resource leak in cx25821_dev_setup()&#xA;&#xA;Add release_mem_region() if ioremap() fails to release the memory&#xA;region obtained by cx25821_get_resources().</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
+    </item>
+    <item>
       <title>[HIGH] [CVSS 8.6 HIGH] CVE-2026-43139 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;xfrm6: fix …</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43139</link>
       <guid isPermaLink="false">23103c050344a5a8b5aa2a5f1620b270</guid>
@@ -1036,128 +1060,6 @@
       <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>high</category>
       <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-7683 — A weakness has been identified in Edimax BR-6428nC up to 1.16. This affects an u…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7683</link>
-      <guid isPermaLink="false">1c543e661b044b13585738184240473d</guid>
-      <pubDate>Sun, 03 May 2026 07:16:25 +0000</pubDate>
-      <description>A weakness has been identified in Edimax BR-6428nC up to 1.16. This affects an unknown function of the file /goform/setWAN of the component Web Interface. This manipulation of the argument pppUserName/pptpUserName causes command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-7682 — A security flaw has been discovered in Edimax BR-6208AC 1.02. The impacted eleme…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7682</link>
-      <guid isPermaLink="false">5df6fda2711126d20b7f6695ce5bf0eb</guid>
-      <pubDate>Sun, 03 May 2026 07:16:24 +0000</pubDate>
-      <description>A security flaw has been discovered in Edimax BR-6208AC 1.02. The impacted element is the function setWAN of the file /goform/setWAN of the component L2TP Mode. The manipulation of the argument L2TPUserName results in command injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV</title>
-      <link>https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html</link>
-      <guid isPermaLink="false">8313981a1cc3bb729e2d0e6d6c00cc99</guid>
-      <pubDate>Sun, 03 May 2026 06:26:00 +0000</pubDate>
-      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added a recently disclosed security flaw impacting various Linux distributions to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation in the wild. The vulnerability, tracked as CVE-2026-31431 (CVSS score: 7.8), is a case of local privilege escalation (LPE) flaw that could allow an</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>lpe</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[HIGH] CISA Adds Actively Exploited Linux Root Access Bug CVE-2026-31431 to KEV</title>
-      <link>https://thehackernews.com/2026/05/cisa-adds-actively-exploited-linux-root.html</link>
-      <guid isPermaLink="false">8313981a1cc3bb729e2d0e6d6c00cc99</guid>
-      <pubDate>Sun, 03 May 2026 06:26:00 +0000</pubDate>
-      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added a recently disclosed security flaw impacting various Linux distributions to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation in the wild. The vulnerability, tracked as CVE-2026-31431 (CVSS score: 7.8), is a case of local privilege escalation (LPE) flaw that could allow an</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>lpe</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-7653 — A security flaw has been discovered in r-huijts mcp-server-rijksmuseum up to 1.0…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7653</link>
-      <guid isPermaLink="false">47bf693af253e565b171e6a5a16e9930</guid>
-      <pubDate>Sat, 02 May 2026 16:16:16 +0000</pubDate>
-      <description>A security flaw has been discovered in r-huijts mcp-server-rijksmuseum up to 1.0.4. Affected is the function open_image_in_browser of the file src/index.ts of the component MCP Interface. Performing a manipulation of the argument imageUrl results in os command injection. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-7642 — A vulnerability was detected in pskill9 website-downloader up to 0.1.0. This aff…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7642</link>
-      <guid isPermaLink="false">15cc3f40b371222cfd7ddac2a1b0d698</guid>
-      <pubDate>Sat, 02 May 2026 15:16:14 +0000</pubDate>
-      <description>A vulnerability was detected in pskill9 website-downloader up to 0.1.0. This affects the function download_website of the file src/index.ts of the component MCP Interface. Performing a manipulation of the argument outputPath results in os command injection. The attack may be initiated remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.3 HIGH] CVE-2026-7630 — A vulnerability has been found in innocommerce InnoShop up to 0.7.8. The affecte…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7630</link>
-      <guid isPermaLink="false">df128504a9f3de70aa0241bccf479885</guid>
-      <pubDate>Sat, 02 May 2026 14:16:18 +0000</pubDate>
-      <description>A vulnerability has been found in innocommerce InnoShop up to 0.7.8. The affected element is the function InstallServiceProvider::boot of the file innopacks/install/src/InstallServiceProvider.php of the component Installation Endpoint. The manipulation leads to improper authentication. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used. The identifier of the patch is 45758e4ec22451ab944ae2ae826b1e70f6450dc9. It is recommended to apply a patch to fix this issue.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-7629 — A flaw has been found in kleneway awesome-cursor-mpc-server up to 2.0.1. Impacte…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7629</link>
-      <guid isPermaLink="false">4e8960d6cca97f5790ff6d4d443ffa67</guid>
-      <pubDate>Sat, 02 May 2026 14:16:17 +0000</pubDate>
-      <description>A flaw has been found in kleneway awesome-cursor-mpc-server up to 2.0.1. Impacted is the function runCodeReviewTool of the file src/tools/codeReview.ts of the component Ccode-Review Tool. Executing a manipulation can lead to command injection. The attack may be launched remotely. The exploit has been published and may be used. The project was informed of the problem early through a pull request but has not reacted yet.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-3504 — The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution plugin for Wo…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-3504</link>
-      <guid isPermaLink="false">5488a5b5c4a02dae05a76276fa159226</guid>
-      <pubDate>Sat, 02 May 2026 14:16:17 +0000</pubDate>
-      <description>The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 4.3.1 via the &#39;/dokan/v1/stores/{id}/reviews&#39; REST API endpoint. This is due to the &#39;prepare_reviews_for_response&#39; method including reviewer email addresses, usernames, and user IDs in the API response. This makes it possible for unauthenticated attackers to extract email addresses, usernames, and user IDs of all customers who left reviews on any vendor&#39;s store. The Pro version of the plugin must be installed and activated, with store reviews enabled, in order to exploit the vulnerability.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.1 HIGH] CVE-2026-2554 — The WCFM – Frontend Manager for WooCommerce along with Bookings Subscription L…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-2554</link>
-      <guid isPermaLink="false">391f6f356ffce0e338dece3d7c004084</guid>
-      <pubDate>Sat, 02 May 2026 14:16:17 +0000</pubDate>
-      <description>The WCFM – Frontend Manager for WooCommerce along with Bookings Subscription Listings Compatible plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 6.7.25 via the &#39;wcfm_delete_wcfm_customer&#39; due to missing validation on the &#39;customerid&#39; user controlled key. This makes it possible for authenticated attackers, with Vendor-level access and above, to delete arbitrary users, including Administrators.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.4 MEDIUM] CVE-2026-0703 — The NextMove Lite – Thank You Page for WooCommerce plugin for WordPress is vul…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0703</link>
-      <guid isPermaLink="false">0866cb0577356a2638702590f834faf8</guid>
-      <pubDate>Sat, 02 May 2026 14:16:17 +0000</pubDate>
-      <description>The NextMove Lite – Thank You Page for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin&#39;s &#39;xlwcty_current_date&#39; shortcode in all versions up to, and including, 2.23.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>xss</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
     </item>
   </channel>
 </rss>

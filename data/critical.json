@@ -1,5 +1,47 @@
 [
   {
+    "id": "73c488bd549cf316c594e596a8cebab7",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Fortinet warns of critical RCE flaws in FortiSandbox and FortiAuthenticator",
+    "url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-rce-flaws-in-fortisandbox-and-fortiauthenticator/",
+    "summary": "Fortinet has released security patches for two critical vulnerabilities in FortiSandbox and FortiAuthenticator that could enable attackers to run commands or arbitrary code. [...]",
+    "published": "2026-05-12T18:23:09Z",
+    "fetched": "2026-05-12T22:41:15.972370858Z",
+    "tags": [
+      "fortinet",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "fortinet"
+    ]
+  },
+  {
+    "id": "878cd98881ae83d8a99a33c11208dde0",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Microsoft May 2026 Patch Tuesday fixes 120 flaws, no zero-days",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-may-2026-patch-tuesday-fixes-120-flaws-no-zero-days/",
+    "summary": "Today is Microsoft's May 2026 Patch Tuesday, with security updates for 120 flaws and no zero-days disclosed this month. [...]",
+    "published": "2026-05-12T18:08:06Z",
+    "fetched": "2026-05-12T22:41:15.972370858Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
     "id": "047febbd0709c072f676f569cf2f1374",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1678,6 +1720,26 @@
     "url": "https://thehackernews.com/2026/05/weaver-e-cology-rce-flaw-cve-2026-22679.html",
     "summary": "A critical security vulnerability in Weaver (Fanwei) E-cology, an enterprise office automation (OA) and collaboration platform, has come under active exploitation in the wild. The vulnerability (CVE-2026-22679, CVSS score: 9.8) relates to a case of unauthenticated remote code execution affecting Weaver E-cology 10.0 versions prior to 20260312. The issue resides in the \"/papi/esearch/data/devops/",
     "published": "2026-05-05T07:37:00Z",
+    "fetched": "2026-05-12T22:41:15.972370858Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-22679"
+    ]
+  },
+  {
+    "id": "6a68d43e28336f1af58712172a7c0a01",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Weaver E-cology RCE Flaw CVE-2026-22679 Actively Exploited via Debug API",
+    "url": "https://thehackernews.com/2026/05/weaver-e-cology-rce-flaw-cve-2026-22679.html",
+    "summary": "A critical security vulnerability in Weaver (Fanwei) E-cology, an enterprise office automation (OA) and collaboration platform, has come under active exploitation in the wild. The vulnerability (CVE-2026-22679, CVSS score: 9.8) relates to a case of unauthenticated remote code execution affecting Weaver E-cology 10.0 versions prior to 20260312. The issue resides in the \"/papi/esearch/data/devops/",
+    "published": "2026-05-05T07:37:00Z",
     "fetched": "2026-05-05T22:31:04.141476737Z",
     "tags": [
       "rce",
@@ -1706,227 +1768,6 @@
     "score": 60,
     "cves": [
       "CVE-2026-44028"
-    ]
-  },
-  {
-    "id": "b9a95ad9c99770485bec93eb1824d8d6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-26956 — vm2 is an open source vm/sandbox for Node.js. In version 3.10.4, vm2 is vulnerab…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26956",
-    "summary": "vm2 is an open source vm/sandbox for Node.js. In version 3.10.4, vm2 is vulnerable to full sandbox escape with arbitrary code execution. Attacker code inside VM.run() obtains host process object and runs host commands with zero host cooperation. This issue has been patched in version 3.10.5.",
-    "published": "2026-05-04T17:16:22.553Z",
-    "fetched": "2026-05-09T22:07:33.891601359Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "vm2_project"
-    ],
-    "cves": [
-      "CVE-2026-26956"
-    ]
-  },
-  {
-    "id": "8574f825e1c2baea83d75415404282ad",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-24781 — vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, VM2 suffe…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24781",
-    "summary": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, VM2 suffers from a sandbox breakout vulnerability through the inspect function. This allows attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This issue has been patched in version 3.11.0.",
-    "published": "2026-05-04T17:16:21.96Z",
-    "fetched": "2026-05-09T22:07:33.891601359Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "vm2_project"
-    ],
-    "cves": [
-      "CVE-2026-24781"
-    ]
-  },
-  {
-    "id": "c8cd89f134cfe685adfc9d0a314fede0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-24120 — vm2 is an open source vm/sandbox for Node.js. Prior to version 3.10.5, the fix f…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24120",
-    "summary": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.10.5, the fix for CVE-2023-37466 is insufficient and can be circumvented allowing attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This issue has been patched in version 3.10.5.",
-    "published": "2026-05-04T17:16:21.813Z",
-    "fetched": "2026-05-09T22:07:33.891601359Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "vm2_project"
-    ],
-    "cves": [
-      "CVE-2026-24120",
-      "CVE-2023-37466"
-    ]
-  },
-  {
-    "id": "e118cf94e216428cfa6eba405b853793",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-24118 — vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, VM2 suffe…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24118",
-    "summary": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, VM2 suffers from a sandbox breakout vulnerability. This allows attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This issue has been patched in version 3.11.0.",
-    "published": "2026-05-04T17:16:21.643Z",
-    "fetched": "2026-05-09T22:07:33.891601359Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "vm2_project"
-    ],
-    "cves": [
-      "CVE-2026-24118"
-    ]
-  },
-  {
-    "id": "d4f077fda2ac45cf635264c786afe497",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Trellix discloses data breach after source code repository hack",
-    "url": "https://www.bleepingcomputer.com/news/security/trellix-discloses-data-breach-after-source-code-repository-hack/",
-    "summary": "Cybersecurity firm Trellix disclosed a data breach after attackers gained access to \"a portion\" of its source code repository. [...]",
-    "published": "2026-05-04T16:25:07Z",
-    "fetched": "2026-05-04T22:32:50.858159454Z",
-    "tags": [
-      "rce",
-      "breach"
-    ],
-    "severity": "high",
-    "score": 72
-  },
-  {
-    "id": "073f83c89b3f7075f86773bfee4e1cc7",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA says ‘Copy Fail’ flaw now exploited to root Linux systems",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-says-copy-fail-flaw-now-exploited-to-root-linux-systems/",
-    "summary": "CISA has warned that threat actors have started exploiting the \"Copy Fail\" Linux security vulnerability in the wild, one day after Theori researchers disclosed it and shared a proof-of-concept (PoC) exploit. [...]",
-    "published": "2026-05-04T11:28:15Z",
-    "fetched": "2026-05-04T22:32:50.858159454Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 67
-  },
-  {
-    "id": "211ffaf6cd300c6570cbd6a5cf26ae07",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.3 HIGH] CVE-2026-7698 — A vulnerability was identified in Tiandy Easy7 Integrated Management Platform 7.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7698",
-    "summary": "A vulnerability was identified in Tiandy Easy7 Integrated Management Platform 7.17.0. Affected by this vulnerability is an unknown functionality of the file /Easy7/rest/systemInfo/updateDbBackupInfo. Such manipulation of the argument week leads to os command injection. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-05-03T14:16:27.107Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7698"
-    ]
-  },
-  {
-    "id": "799f105063adc0d65d55444e4194c969",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-7692 — A vulnerability was detected in Wavlink WL-WN570HA1 R70HA1 V1410_221110. The aff…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7692",
-    "summary": "A vulnerability was detected in Wavlink WL-WN570HA1 R70HA1 V1410_221110. The affected element is the function ping_ddns of the file /cgi-bin/adm.cgi. Performing a manipulation of the argument DDNS results in command injection. The attack can be initiated remotely. The exploit is now public and may be used. Once again the vendors acted very professional and confirms, \"that the WN570HA1 firmware version R70HA1 V1410_221110 has been removed from our website.\" This vulnerability only affects products that are no longer supported by the maintainer.",
-    "published": "2026-05-03T11:16:13.927Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7692"
-    ]
-  },
-  {
-    "id": "1a3f0bccee58d16810cf4ac23bbb0c1d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-7691 — A security vulnerability has been detected in Wavlink WL-WN570HA1 R70HA1 V1410_2…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7691",
-    "summary": "A security vulnerability has been detected in Wavlink WL-WN570HA1 R70HA1 V1410_221110. Impacted is the function set_sys_cmd of the file /cgi-bin/adm.cgi. Such manipulation of the argument command leads to command injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. Once again the vendors acted very professional and confirms, \"that the WN570HA1 firmware version R70HA1 V1410_221110 has been removed from our website.\" This vulnerability only affects products that are no longer supported by the maintainer.",
-    "published": "2026-05-03T11:16:13.263Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7691"
-    ]
-  },
-  {
-    "id": "b54f6a63a9f5461586eaa62bdcfb644d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-7690 — A weakness has been identified in Wavlink WL-WN570HA1 R70HA1 V1410_221110. This …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7690",
-    "summary": "A weakness has been identified in Wavlink WL-WN570HA1 R70HA1 V1410_221110. This issue affects the function set_sys_adm of the file /cgi-bin/adm.cgi. This manipulation of the argument Username causes command injection. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. Once again the vendors acted very professional and confirms, \"that the WN570HA1 firmware version R70HA1 V1410_221110 has been removed from our website.\" This vulnerability only affects products that are no longer supported by the maintainer.",
-    "published": "2026-05-03T10:16:17.66Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7690"
-    ]
-  },
-  {
-    "id": "1aed0cb88f4b26330c8cb39c2be70fd0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-7687 — A vulnerability was determined in langflow-ai langflow up to 1.8.4. Affected by …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7687",
-    "summary": "A vulnerability was determined in langflow-ai langflow up to 1.8.4. Affected by this issue is the function CodeParser.parse_callable_details of the file src/lfx/src/lfx/custom/code_parser/code_parser.py of the component Full Builtins Module Handler. Executing a manipulation can lead to command injection. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-05-03T09:16:03.68Z",
-    "fetched": "2026-05-03T22:07:22.407137605Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-7687"
     ]
   }
 ]

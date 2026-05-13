@@ -1,5 +1,72 @@
 [
   {
+    "id": "6578267c48d69c7fb2c9044418bee2c2",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Windows BitLocker zero-day gives access to protected drives, PoC released",
+    "url": "https://www.bleepingcomputer.com/news/security/windows-bitlocker-zero-day-gives-access-to-protected-drives-poc-released/",
+    "summary": "A cybersecurity researcher has published proof-of-concept (PoC) exploits for two unpatched Microsoft Windows vulnerabilities named YellowKey and GreenPlasma, which are a BitLocker bypass and a privilege-escalation flaw. [...]",
+    "published": "2026-05-13T16:37:49Z",
+    "fetched": "2026-05-13T22:46:06.809721451Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "7e615564b47add1298873f553e5f3b34",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Microsoft Patches 138 Vulnerabilities, Including DNS and Netlogon RCE Flaws",
+    "url": "https://thehackernews.com/2026/05/microsoft-patches-138-vulnerabilities.html",
+    "summary": "Microsoft on Tuesday released patches for 138 security vulnerabilities spanning its product portfolio, although none of them have been listed as publicly known or under active attack. Of the 138 flaws, 30 are rated Critical, 104 are rated Important, three are rated Moderate, and one is rated Low in severity. As many as 61 vulnerabilities are classified as privilege escalation bugs, followed by",
+    "published": "2026-05-13T10:36:10Z",
+    "fetched": "2026-05-13T22:46:06.809721451Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce",
+      "lpe"
+    ],
+    "severity": "high",
+    "score": 66,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "00c45790234cb95d8413822d7f25f419",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Patch Tuesday - May 2026",
+    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-may-2026",
+    "summary": "Microsoft is publishing 137 vulnerabilities on May 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild or public disclosure for any of these vulnerabilities. So far this month, Microsoft has provided patches to address 133 browser vulnerabilities, which are not included in the Patch Tuesday count above.Windows Netlogon: critical RCEAnyone responsible for securing a domain controller should prioritize remediation of CVE-2026-41089, which is a critical stack-based buffer overflow in Windows Netlogon with a CVSS v3 base score of 9.8. Exploitation leads to execution in the conte...",
+    "published": "2026-05-13T00:22:19Z",
+    "fetched": "2026-05-13T22:46:06.809721451Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 71,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-41089"
+    ]
+  },
+  {
     "id": "73c488bd549cf316c594e596a8cebab7",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1250,6 +1317,30 @@
     "url": "https://www.rapid7.com/blog/post/etr-critical-buffer-overflow-in-palo-alto-networks-pan-os-user-id-authentication-portal-cve-2026-0300",
     "summary": "OverviewOn May 6, 2026, Palo Alto Networks published a security advisory for CVE-2026-0300, a critical unauthenticated buffer overflow vulnerability affecting PAN-OS PA-Series and VM-Series firewall appliances. Prisma Access, Cloud NGFW, and Panorama appliances are not affected by this vulnerability. The vulnerability carries a CVSSv4 score of 9.3 and has been confirmed as exploited in the wild by the vendor.CVE-2026-0300 is a buffer overflow (CWE-787) in the User-ID™ Authentication Portal (also known as Captive Portal), a non-default PAN-OS feature used to map IP addresses to usernames. An ...",
     "published": "2026-05-06T13:27:31Z",
+    "fetched": "2026-05-13T22:46:06.809721451Z",
+    "tags": [
+      "paloalto",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 71,
+    "vendors": [
+      "paloalto"
+    ],
+    "cves": [
+      "CVE-2026-0300"
+    ]
+  },
+  {
+    "id": "a92e3ba3d57540896939238928eee11f",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Critical Buffer Overflow in Palo Alto Networks PAN-OS User-ID Authentication Portal (CVE-2026-0300)",
+    "url": "https://www.rapid7.com/blog/post/etr-critical-buffer-overflow-in-palo-alto-networks-pan-os-user-id-authentication-portal-cve-2026-0300",
+    "summary": "OverviewOn May 6, 2026, Palo Alto Networks published a security advisory for CVE-2026-0300, a critical unauthenticated buffer overflow vulnerability affecting PAN-OS PA-Series and VM-Series firewall appliances. Prisma Access, Cloud NGFW, and Panorama appliances are not affected by this vulnerability. The vulnerability carries a CVSSv4 score of 9.3 and has been confirmed as exploited in the wild by the vendor.CVE-2026-0300 is a buffer overflow (CWE-787) in the User-ID™ Authentication Portal (also known as Captive Portal), a non-default PAN-OS feature used to map IP addresses to usernames. An ...",
+    "published": "2026-05-06T13:27:31Z",
     "fetched": "2026-05-06T22:25:00.657860489Z",
     "tags": [
       "paloalto",
@@ -1484,6 +1575,31 @@
     "url": "https://thehackernews.com/2026/05/palo-alto-pan-os-flaw-under-active.html",
     "summary": "Palo Alto Networks has released an advisory warning that a critical buffer overflow vulnerability in its PAN-OS software has been exploited in the wild. The vulnerability, tracked as CVE-2026-0300, has been described as a case of unauthenticated remote code execution. It carries a CVSS score of 9.3 if the User-ID Authentication Portal is configured to enable access from the internet or any",
     "published": "2026-05-06T06:14:00Z",
+    "fetched": "2026-05-13T22:46:06.809721451Z",
+    "tags": [
+      "paloalto",
+      "watch",
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 88,
+    "vendors": [
+      "paloalto"
+    ],
+    "cves": [
+      "CVE-2026-0300"
+    ]
+  },
+  {
+    "id": "e4bffeb513b34af22383287aa00349c7",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Palo Alto PAN-OS Flaw Under Active Exploitation Enables Remote Code Execution",
+    "url": "https://thehackernews.com/2026/05/palo-alto-pan-os-flaw-under-active.html",
+    "summary": "Palo Alto Networks has released an advisory warning that a critical buffer overflow vulnerability in its PAN-OS software has been exploited in the wild. The vulnerability, tracked as CVE-2026-0300, has been described as a case of unauthenticated remote code execution. It carries a CVSS score of 9.3 if the User-ID Authentication Portal is configured to enable access from the internet or any",
+    "published": "2026-05-06T06:14:00Z",
     "fetched": "2026-05-06T22:25:00.657860489Z",
     "tags": [
       "paloalto",
@@ -1494,6 +1610,32 @@
     "severity": "critical",
     "score": 88,
     "vendors": [
+      "paloalto"
+    ],
+    "cves": [
+      "CVE-2026-0300"
+    ]
+  },
+  {
+    "id": "75edbdf3e235fa98157da5b4c7d42f15",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-0300 — Palo Alto Networks PAN-OS: Palo Alto Networks PAN-OS Out-of-bounds Write Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0300",
+    "summary": "Palo Alto Networks PAN-OS contains an out-of-bounds write vulnerability in the User-ID Authentication Portal (aka Captive Portal) service that can allow an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable. Until the vendor releases an official fix, the following workaround should be implemented:  - Restrict User-ID Authentication Portal access to only trusted zones.  - Disable User-ID Authentication Portal if not required. 5/13/2026: Palo Alto has released a variety of patches. If these are relevant to your environment, please apply the designated patch.\nDue: 2026-05-09",
+    "published": "2026-05-06T00:00:00Z",
+    "fetched": "2026-05-13T22:46:06.809721451Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "paloalto",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "palo",
       "paloalto"
     ],
     "cves": [
@@ -1643,131 +1785,6 @@
     ],
     "cves": [
       "CVE-2026-32936"
-    ]
-  },
-  {
-    "id": "bd49cd3b087f6638e24147710daeaf61",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.4 MEDIUM] CVE-2026-27694 — Traccar is an open source GPS tracking system. In org.traccar:traccar versions s…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27694",
-    "summary": "Traccar is an open source GPS tracking system. In org.traccar:traccar versions starting at 6.11.1 before 6.13.0, the email notification templates insert user-controlled device, geofence, and driver names into HTML email output without proper escaping. An attacker with low privileges can store crafted HTML in these fields, which is then rendered in notification emails sent to other users with access to the affected devices. This can lead to phishing or spoofed email content. This issue is fixed in version 6.13.0.",
-    "published": "2026-05-05T13:16:28.513Z",
-    "fetched": "2026-05-09T22:07:33.891601359Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "traccar"
-    ],
-    "cves": [
-      "CVE-2026-27694"
-    ]
-  },
-  {
-    "id": "f5a22a621ea2c9ec78229c3317124871",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.4 MEDIUM] CVE-2026-27693 — Traccar is an open source GPS tracking system. In org.traccar:traccar versions s…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27693",
-    "summary": "Traccar is an open source GPS tracking system. In org.traccar:traccar versions starting at 6.11.1 before 6.13.0, the KML and GPX export functionality writes device names to XML output without proper escaping. An attacker with low privileges can create a device with a crafted name that injects XML content into exported files. If another user exports and opens the affected KML or GPX file, this can corrupt the file structure and spoof exported location data. This issue is fixed in version 6.13.0.",
-    "published": "2026-05-05T13:16:28.367Z",
-    "fetched": "2026-05-09T22:07:33.891601359Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "traccar"
-    ],
-    "cves": [
-      "CVE-2026-27693"
-    ]
-  },
-  {
-    "id": "9548abd3fef426fa64ff0fa9b0b5809b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-27644 — Traccar is an open source GPS tracking system. In versions between 6.11.1 and 6.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27644",
-    "summary": "Traccar is an open source GPS tracking system. In versions between 6.11.1 and 6.13.0, the CSV export functionality writes position data, including user-controlled device and computed attributes, to CSV output without proper escaping. An attacker can inject spreadsheet formulas through exported fields. When a manager or administrator opens the exported CSV file in spreadsheet software, this can cause formula execution and lead to command execution or data exfiltration. This has been patched in version 6.13.0.",
-    "published": "2026-05-05T13:16:27.807Z",
-    "fetched": "2026-05-09T22:07:33.891601359Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "traccar"
-    ],
-    "cves": [
-      "CVE-2026-27644"
-    ]
-  },
-  {
-    "id": "6a68d43e28336f1af58712172a7c0a01",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Weaver E-cology RCE Flaw CVE-2026-22679 Actively Exploited via Debug API",
-    "url": "https://thehackernews.com/2026/05/weaver-e-cology-rce-flaw-cve-2026-22679.html",
-    "summary": "A critical security vulnerability in Weaver (Fanwei) E-cology, an enterprise office automation (OA) and collaboration platform, has come under active exploitation in the wild. The vulnerability (CVE-2026-22679, CVSS score: 9.8) relates to a case of unauthenticated remote code execution affecting Weaver E-cology 10.0 versions prior to 20260312. The issue resides in the \"/papi/esearch/data/devops/",
-    "published": "2026-05-05T07:37:00Z",
-    "fetched": "2026-05-12T22:41:15.972370858Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 78,
-    "cves": [
-      "CVE-2026-22679"
-    ]
-  },
-  {
-    "id": "6a68d43e28336f1af58712172a7c0a01",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Weaver E-cology RCE Flaw CVE-2026-22679 Actively Exploited via Debug API",
-    "url": "https://thehackernews.com/2026/05/weaver-e-cology-rce-flaw-cve-2026-22679.html",
-    "summary": "A critical security vulnerability in Weaver (Fanwei) E-cology, an enterprise office automation (OA) and collaboration platform, has come under active exploitation in the wild. The vulnerability (CVE-2026-22679, CVSS score: 9.8) relates to a case of unauthenticated remote code execution affecting Weaver E-cology 10.0 versions prior to 20260312. The issue resides in the \"/papi/esearch/data/devops/",
-    "published": "2026-05-05T07:37:00Z",
-    "fetched": "2026-05-05T22:31:04.141476737Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 78,
-    "cves": [
-      "CVE-2026-22679"
-    ]
-  },
-  {
-    "id": "fab8d6c01e0ab1ff169baece268ff14d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-44028 — An issue was discovered in Nix before 2.34.7 and Lix before 2.95.2. Unbounded re…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44028",
-    "summary": "An issue was discovered in Nix before 2.34.7 and Lix before 2.95.2. Unbounded recursion in the NAR (Nix Archive) parser could lead to a stack-to-heap overflow when the parser is run on a coroutine stack. The stack is allocated without a guard page, which means that a stack overflow could overwrite memory on the heap and could allow arbitrary code execution as the Nix daemon (run as root in multi-user installations) if ASLR hardening is bypassed. This can be exploited by all users able to connect to the daemon (e.g., in Nix, this is configurable via the allowed-users setting, defaulting to all users). The fixed versions are 2.34.7, 2.33.6, 2.32.8, 2.31.5, 2.30.5, 2.29.4, and 2.28.7 for Nix (introduced in 2.24.4); and 2.95.2, 2.94.2, and 2.93.4 for Lix (introduced in 2.93.0).",
-    "published": "2026-05-05T01:16:06.983Z",
-    "fetched": "2026-05-09T22:07:33.891601359Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-44028"
     ]
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "id": "28cf83400d8e02e62de1c8c4ba01ef47",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checkout Skimming",
+    "url": "https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html",
+    "summary": "A critical security vulnerability impacting the Funnel Builder plugin for WordPress has come under active exploitation in the wild to inject malicious JavaScript code into WooCommerce checkout pages with the goal of stealing payment data. Details of the activity were published by Sansec this week. The vulnerability currently does not have an official CVE identifier. It",
+    "published": "2026-05-16T15:20:48Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 88,
+    "vendors": [
+      "wordpress"
+    ]
+  },
+  {
     "id": "90e9af4f50fe500055f99e6526121ecc",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -418,6 +440,96 @@
     ]
   },
   {
+    "id": "085510dc7eda55b503075ba00a65575c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-43891 — changedetection.io is a free open source web page change detection tool. Prior t…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43891",
+    "summary": "changedetection.io is a free open source web page change detection tool. Prior to 0.55.1, the vulnerability is caused by trusting attacker-controlled snapshot paths restored from backup files. The vulnerable flow starts in the backup restore logic. When a backup ZIP is restored, the application extracts the archive and copies each restored watch UUID directory directly into the live datastore using shutil.copytree(entry.path, dst_dir). This preserves attacker-controlled files inside the restored watch directory, including history.txt. After restore, the application parses history.txt in the watch history property and  returns the contents of the targeted local file. This vulnerability is fixed in 0.55.1.",
+    "published": "2026-05-12T18:17:28.493Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "webtechnologies"
+    ],
+    "cves": [
+      "CVE-2026-43891"
+    ]
+  },
+  {
+    "id": "476fb731870072a4353ad626d1170b5b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-31231 — Cognee thru v0.4.0 contains a critical remote code execution vulnerability in it…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31231",
+    "summary": "Cognee thru v0.4.0 contains a critical remote code execution vulnerability in its notebook cell execution API endpoint. The endpoint is designed to execute arbitrary Python code provided by the user, but it does so using the unsafe exec() function without any sandboxing, validation, or security controls. An attacker can exploit this by sending a specially crafted POST request containing malicious Python code to the execution endpoint. This leads to arbitrary code execution on the Cognee server with the privileges of the server process, allowing complete compromise of the system.",
+    "published": "2026-05-12T18:16:51.387Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-31231"
+    ]
+  },
+  {
+    "id": "d822a4cf3f0a0538e7732d50a35a29e2",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.7 MEDIUM] CVE-2025-53870 — An improper neutralization of special elements used in an os command ('os comman…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53870",
+    "summary": "An improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet FortiAP 7.6.0 through 7.6.2, FortiAP 7.4.0 through 7.4.5, FortiAP 7.2 all versions, FortiAP 7.0 all versions, FortiAP 6.4 all versions, FortiAP-W2 7.4.0 through 7.4.4, FortiAP-W2 7.2 all versions, FortiAP-W2 7.0 all versions may allow  an authenticated attacker to execute unauthorized code or commands via a specifically crafted cli command.",
+    "published": "2026-05-12T18:16:36.14Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce",
+      "fortinet",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "fortinet"
+    ],
+    "cves": [
+      "CVE-2025-53870"
+    ]
+  },
+  {
+    "id": "3f967fc9d719dba886deefb4e871737a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.7 MEDIUM] CVE-2025-53680 — An improper neutralization of special elements used in an OS command (\"OS Comman…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53680",
+    "summary": "An improper neutralization of special elements used in an OS command (\"OS Command Injection\") vulnerability [CWE-78] vulnerability in Fortinet FortiAP 7.6.0 through 7.6.2, FortiAP 7.4.0 through 7.4.5, FortiAP 7.2 all versions, FortiAP 7.0 all versions, FortiAP 6.4 all versions, FortiAP-U 7.0.0 through 7.0.5, FortiAP-U 6.2 all versions, FortiAP-W2 7.4.0 through 7.4.4, FortiAP-W2 7.2 all versions, FortiAP-W2 7.0 all versions allows an authenticated privileged attacker to execute unauthorized code or commands via crafted CLI requests.",
+    "published": "2026-05-12T18:16:35.687Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce",
+      "fortinet",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "fortinet"
+    ],
+    "cves": [
+      "CVE-2025-53680"
+    ]
+  },
+  {
     "id": "878cd98881ae83d8a99a33c11208dde0",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -439,6 +551,386 @@
     ]
   },
   {
+    "id": "13b6441c3a92debba13c2604f37b137f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-43512 — DEPRECATED: Authentication Bypass Issues vulnerability in digest authentication …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43512",
+    "summary": "DEPRECATED: Authentication Bypass Issues vulnerability in digest authentication in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.21, from 10.1.0-M1 through 10.1.54, from 9.0.0.M1 through 9.0.117, from 8.5.0 through 8.5.100, from before 7.0.0.\nOlder unsupported versions any also be affect\n\nUsers are recommended to upgrade to version 11.0.22, 10.1.55 or 9.0.118 which fix the issue.",
+    "published": "2026-05-12T16:16:17.99Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass",
+      "apache",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-43512"
+    ]
+  },
+  {
+    "id": "2c127ab561320d00cff13ee8b5c674a4",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-31223 — The snorkel library thru v0.10.0 contains a critical insecure deserialization vu…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31223",
+    "summary": "The snorkel library thru v0.10.0 contains a critical insecure deserialization vulnerability (CWE-502) in the BaseLabeler.load() method of the BaseLabeler class. The method loads serialized labeler models using the unsafe pickle.load() function on user-supplied file paths without any validation or security controls. Python's pickle module is inherently dangerous for deserializing untrusted data, as it can execute arbitrary code during the deserialization process. A remote attacker can exploit this by providing a maliciously crafted pickle file, leading to arbitrary code execution on the victim's system when the file is loaded via the vulnerable method.",
+    "published": "2026-05-12T16:16:14.223Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce",
+      "deserialization"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "snorkel"
+    ],
+    "cves": [
+      "CVE-2026-31223"
+    ]
+  },
+  {
+    "id": "ad2c2f4e0902808e5c465051cf83e195",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-31222 — The snorkel library thru v0.10.0 contains an insecure deserialization vulnerabil…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31222",
+    "summary": "The snorkel library thru v0.10.0 contains an insecure deserialization vulnerability (CWE-502) in the Trainer.load() method of the Trainer class. The method loads model checkpoint files using torch.load() without enabling the security-restrictive weights_only=True parameter. This default behavior allows the deserialization of arbitrary Python objects via the Pickle module. A remote attacker can exploit this by providing a maliciously crafted model file, leading to arbitrary code execution on the victim's system when the file is loaded via the vulnerable method.",
+    "published": "2026-05-12T16:16:14.12Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce",
+      "deserialization"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "snorkel"
+    ],
+    "cves": [
+      "CVE-2026-31222"
+    ]
+  },
+  {
+    "id": "b513b3ce5ce1964e990e6d15e51002b0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-31221 — PyTorch-Lightning versions 2.6.0 and earlier contain an insecure deserialization…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31221",
+    "summary": "PyTorch-Lightning versions 2.6.0 and earlier contain an insecure deserialization vulnerability (CWE-502) in the checkpoint loading mechanism. The LightningModule.load_from_checkpoint() method, which is commonly used to load saved model states, internally calls torch.load() without setting the security-restrictive weights_only=True parameter. This default behavior allows the deserialization of arbitrary Python objects via the Pickle module. A remote attacker can exploit this by providing a maliciously crafted checkpoint file, leading to arbitrary code execution on the victim's system when the file is loaded.",
+    "published": "2026-05-12T16:16:14.02Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce",
+      "deserialization"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "lightningai"
+    ],
+    "cves": [
+      "CVE-2026-31221"
+    ]
+  },
+  {
+    "id": "68849ce38221acf3ddf97caecfea3f1b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-31220 — PySyft (Syft Datasite/Server) versions 0.9.5 and earlier are vulnerable to remot…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31220",
+    "summary": "PySyft (Syft Datasite/Server) versions 0.9.5 and earlier are vulnerable to remote code execution due to insufficient validation and sandboxing of user-submitted code. The system allows low-privileged users to submit Python functions (via @sy.syft_function()) for remote execution on the server. While a code approval mechanism exists, the submitted code undergoes no security checks for dangerous operations (e.g., file access, command execution). Once approved, the code is executed within the server process using exec() and eval() functions without proper isolation. A remote attacker can leverage this to execute arbitrary Python code on the server, leading to complete compromise of the server environment.",
+    "published": "2026-05-12T16:16:13.913Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-31220"
+    ]
+  },
+  {
+    "id": "d3b4449b0cb7abb289b53234b8970c73",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-31219 — The _load_model() function in the neural_magic_training.py script of the optimat…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31219",
+    "summary": "The _load_model() function in the neural_magic_training.py script of the optimate project in commit a6d302f912b481c94370811af6b11402f51d377f (2024-07-21) is vulnerable to insecure deserialization (CWE-502). When a user provides a single model file path (e.g., .pt or .pth) via the --model command-line argument, the function loads the file using torch.load() without enabling the weights_only=True security parameter. This allows the deserialization of arbitrary Python objects through the Pickle module. A remote attacker can exploit this by providing a maliciously crafted model file, leading to arbitrary code execution during deserialization on the victim's system.",
+    "published": "2026-05-12T16:16:13.813Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce",
+      "deserialization"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-31219"
+    ]
+  },
+  {
+    "id": "9beb73b7bbfc4ac7d614e6ad50eb5599",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-31218 — The _load_model() function in the neural_magic_training.py script of the optimat…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31218",
+    "summary": "The _load_model() function in the neural_magic_training.py script of the optimate project in commit a6d302f912b481c94370811af6b11402f51d377f (2024-07-21) is vulnerable to insecure deserialization (CWE-502). When loading a model state dictionary from a state_dict.pt file via torch.load(), the function does not enable the weights_only=True security parameter. This allows the deserialization of arbitrary Python objects through the Pickle module. A remote attacker can exploit this by providing a maliciously crafted state_dict.pt file within a directory specified via the --model argument, leading to arbitrary code execution during the deserialization process on the victim's system.",
+    "published": "2026-05-12T16:16:13.71Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce",
+      "deserialization"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-31218"
+    ]
+  },
+  {
+    "id": "a1d080fd0c9c6ae0d623fe8dc4f1a2ef",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.2 HIGH] CVE-2026-8051 — OS command injection in Ivanti Virtual Traffic Manager before version 22.9r4 all…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8051",
+    "summary": "OS command injection in Ivanti Virtual Traffic Manager before version 22.9r4 allows a remote authenticated attacker with admin privileges to achieve remote code execution.",
+    "published": "2026-05-12T15:16:17.267Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce",
+      "ivanti",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "ivanti"
+    ],
+    "cves": [
+      "CVE-2026-8051"
+    ]
+  },
+  {
+    "id": "96ab0f88029e7d46db801665530437fd",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-7256 — ** UNSUPPORTED WHEN ASSIGNED ** A command injection vulnerability in the CGI pro…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7256",
+    "summary": "** UNSUPPORTED WHEN ASSIGNED ** A command injection vulnerability in the CGI program of Zyxel WRE6505 v2 firmware version V1.00(ABDV.3)C0 could allow an adjacent attacker on the LAN to execute operating system (OS) commands on a vulnerable device by sending a crafted HTTP request.",
+    "published": "2026-05-12T04:16:29.36Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "zyxel"
+    ],
+    "cves": [
+      "CVE-2026-7256"
+    ]
+  },
+  {
+    "id": "eab8df698c577b15cdf5b55ad002a169",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.6 CRITICAL] CVE-2026-34263 — Due to improper Spring Security configuration, SAP Commerce Cloud allows an unau…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34263",
+    "summary": "Due to improper Spring Security configuration, SAP Commerce Cloud allows an unauthenticated user to perform malicious input injection, resulting in arbitrary server-side code execution, leading to high impact on Confidentiality, Integrity, and Availability of the application.",
+    "published": "2026-05-12T03:16:11.65Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "critical-cvss",
+      "sap",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "vendors": [
+      "sap"
+    ],
+    "cves": [
+      "CVE-2026-34263"
+    ]
+  },
+  {
+    "id": "dd5a646f7db1433e65f3d3faee7ec577",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.7 HIGH] CVE-2026-43912 — Vaultwarden is a Bitwarden-compatible server written in Rust. Prior to 1.35.5, V…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43912",
+    "summary": "Vaultwarden is a Bitwarden-compatible server written in Rust. Prior to 1.35.5, Vaultwarden does not enforce that a groups_users.users_organizations_uuid entry belongs to the same organization as groups.groups_uuid, or a collections_groups.collections_uuid entry belongs to the same organization as collections_groups.groups_uuid. Multiple organization group-management endpoints accept arbitrary MembershipId and CollectionId values and persist them directly without verifying org consistency. This lets an attacker who is Admin in Organization A, and only a low-privileged member in Organization B bind their Org B membership UUID into an Org A group, then use that foreign group relationship to gain unauthorized access to Org B vault data. With an accessAll=true Org A group, the attacker can make /api/sync and /api/ciphers enumerate Org B ciphers. Once those unauthorized sync results reveal Org B collection IDs, the attacker can also bind those foreign collection IDs to the Org A group and turn the same flaw into write access over Org B items. This vulnerability is fixed in 1.35.5.",
+    "published": "2026-05-11T23:20:21.98Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "dani-garcia"
+    ],
+    "cves": [
+      "CVE-2026-43912"
+    ]
+  },
+  {
+    "id": "8ea727873b95ec9fa1e41b7c2450b612",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-43885 — WWBN AVideo is an open source video platform. In versions up to and including 29.0, an unauthenticat…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43885",
+    "summary": "WWBN AVideo is an open source video platform. In versions up to and including 29.0, an unauthenticated user can read APISecret from objects/plugins.json.php and use it to call protected API endpoints (e.g. users_list) without logging in. Commit 1c36f229d0a103528fb9f64d0a1cc0e1e8f5999b contains an updated fix.",
+    "published": "2026-05-11T22:22:13.213Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-43885"
+    ]
+  },
+  {
+    "id": "694fd043cdded0515a85add19de4b090",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.4 MEDIUM] CVE-2026-43879 — WWBN AVideo is an open source video platform. In versions up to and including 29…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43879",
+    "summary": "WWBN AVideo is an open source video platform. In versions up to and including 29.0, an authenticated user can configure their own donation-notification webhook URL to point at internal/loopback/metadata hosts (e.g. http://127.0.0.1:8080/..., http://169.254.169.254/latest/..., RFC1918 addresses). When any other user (including a second account owned by the same attacker) donates even a trivial amount via plugin/CustomizeUser/donate.json.php, the AVideo server issues a curl POST to the attacker-supplied URL, resulting in a blind SSRF. The handler uses only isValidURL() (which is a format check) and does not call the codebase's own isSSRFSafeURL() helper. Additionally, CURLOPT_FOLLOWLOCATION is enabled with no per-hop revalidation, so even if the stored URL were validated, an HTTP 307 from an attacker-controlled host could redirect the POST to internal targets. Commit aaacd48f29f1ff71d1eb5fc81d37605f593cefa9 contains an updated fix.",
+    "published": "2026-05-11T22:22:12.39Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-43879"
+    ]
+  },
+  {
+    "id": "339999e093524f593d65066ecc53e6a9",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-42315 — pyLoad is a free and open-source download manager written in Python. Prior to 0.…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42315",
+    "summary": "pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev100, when passing a folder name in the set_package_data() API function call inside the data object with key \"_folder\", there is no sanitization at all, allowing a user with Perms.MODIFY to specify arbitrary directories as download locations for a package. This vulnerability is fixed in 0.5.0b3.dev100.",
+    "published": "2026-05-11T18:16:35.26Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "pyload-ng_project"
+    ],
+    "cves": [
+      "CVE-2026-42315"
+    ]
+  },
+  {
+    "id": "43e69df336abc9435f864e97ec89f03c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.5 MEDIUM] CVE-2026-42314 — pyLoad is a free and open-source download manager written in Python. Prior to 0.…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42314",
+    "summary": "pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev100, package folder names are sanitized using insufficient string replacement. The pattern ....// becomes .._ after replacement (partial removal), leaving .. which can be exploited when the path is later resolved by the OS. This vulnerability is fixed in 0.5.0b3.dev100.",
+    "published": "2026-05-11T18:16:35.123Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "pyload-ng_project"
+    ],
+    "cves": [
+      "CVE-2026-42314"
+    ]
+  },
+  {
+    "id": "7b15826caf360079bc999d38af76486b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.3 HIGH] CVE-2026-42313 — pyLoad is a free and open-source download manager written in Python. Prior to 0.…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42313",
+    "summary": "pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev100, the set_config_value() API method (@permission(Perms.SETTINGS)) in src/pyload/core/api/__init__.py gates security-sensitive options behind a hand-maintained allowlist ADMIN_ONLY_CORE_OPTIONS. The allowlist contains (\"proxy\", \"username\") and (\"proxy\", \"password\") — which protect the proxy credentials — but it does not include (\"proxy\", \"enabled\"), (\"proxy\", \"host\"), (\"proxy\", \"port\"), or (\"proxy\", \"type\"). Any authenticated user with the non-admin SETTINGS permission can enable proxying and point pyload at any host they control. From that point, every outbound download, captcha fetch, update check, and plugin HTTP call is transparently routed through the attacker. This is a direct continuation of the fix family CVE-2026-33509 / CVE-2026-35463 / CVE-2026-35464 / CVE-2026-35586, each of which patched a different missed option in the same allowlist. This vulnerability is fixed in 0.5.0b3.dev100.",
+    "published": "2026-05-11T18:16:34.98Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "pyload-ng_project"
+    ],
+    "cves": [
+      "CVE-2026-42313",
+      "CVE-2026-33509",
+      "CVE-2026-35463",
+      "CVE-2026-35464",
+      "CVE-2026-35586"
+    ]
+  },
+  {
+    "id": "97c4bf3101b51f32bbdc92088ff11127",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.8 MEDIUM] CVE-2026-42312 — pyLoad is a free and open-source download manager written in Python. Prior to 0.…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42312",
+    "summary": "pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev100, the set_config_value() API method (@permission(Perms.SETTINGS)) in src/pyload/core/api/__init__.py gates security-sensitive options behind a hand-maintained allowlist ADMIN_ONLY_CORE_OPTIONS. The option (\"general\", \"ssl_verify\") is not on that allowlist. Any authenticated user with the non-admin SETTINGS permission can set general.ssl_verify = off, and every subsequent outbound pycurl request is made with SSL_VERIFYPEER=0 and SSL_VERIFYHOST=0 — TLS peer and hostname verification are fully disabled. An on-path attacker can then present forged certificates for any hostname pyload fetches. This is a direct continuation of the fix family CVE-2026-33509 / CVE-2026-35463 / CVE-2026-35464 / CVE-2026-35586, each of which patched a different missed option in the same allowlist. This vulnerability is fixed in 0.5.0b3.dev100.",
+    "published": "2026-05-11T18:16:34.833Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "pyload-ng_project"
+    ],
+    "cves": [
+      "CVE-2026-42312",
+      "CVE-2026-33509",
+      "CVE-2026-35463",
+      "CVE-2026-35464",
+      "CVE-2026-35586"
+    ]
+  },
+  {
     "id": "047febbd0709c072f676f569cf2f1374",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -454,6 +946,28 @@
     ],
     "severity": "critical",
     "score": 87
+  },
+  {
+    "id": "eb13b2a07f273546e840fd1370392094",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.6 MEDIUM] CVE-2025-43992 — Dell ECS versions 3.8.1.0 through 3.8.1.7 and Dell ObjectScale versions prior to…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-43992",
+    "summary": "Dell ECS versions 3.8.1.0 through 3.8.1.7 and Dell ObjectScale versions prior to 4.3.0.0, contains an authentication bypass by assumed-immutable data vulnerability in Geo replication. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to unauthorized access to data in transit.",
+    "published": "2026-05-11T10:16:12.727Z",
+    "fetched": "2026-05-16T22:12:07.310622301Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "dell"
+    ],
+    "cves": [
+      "CVE-2025-43992"
+    ]
   },
   {
     "id": "07173cbf2632d4201f73e3bd0f3c157c",
@@ -1403,421 +1917,6 @@
     ],
     "cves": [
       "CVE-2025-69233"
-    ]
-  },
-  {
-    "id": "3322278f4e6f473898dd37b1012149e3",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA gives feds four days to patch Ivanti flaw exploited as zero-day",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-gives-feds-four-days-to-patch-ivanti-flaw-exploited-as-zero-day/",
-    "summary": "CISA has given U.S. federal agencies four days to secure their networks against a high-severity vulnerability in Ivanti Endpoint Manager Mobile (EPMM) exploited in zero-day attacks. [...]",
-    "published": "2026-05-08T12:16:32Z",
-    "fetched": "2026-05-08T22:30:43.706170303Z",
-    "tags": [
-      "ivanti",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "ivanti"
-    ]
-  },
-  {
-    "id": "39c011724d83a782c71baca5bef41746",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "New Linux 'Dirty Frag' zero-day gives root on all major distros",
-    "url": "https://www.bleepingcomputer.com/news/security/new-linux-dirty-frag-zero-day-with-poc-exploit-gives-root-privileges/",
-    "summary": "A new Linux zero-day exploit, named Dirty Frag, allows local attackers to gain root privileges on most major Linux distributions with a single command. [...]",
-    "published": "2026-05-08T07:45:24Z",
-    "fetched": "2026-05-08T22:30:43.706170303Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67
-  },
-  {
-    "id": "ad33de0aa93b0545826405d3481275e3",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-42277 — Onyx is an open-source AI platform. Prior to versions 3.0.9, 3.1.6, and 3.2.6, t…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42277",
-    "summary": "Onyx is an open-source AI platform. Prior to versions 3.0.9, 3.1.6, and 3.2.6, the GET /chat/file/{file_id} endpoint allows any authenticated user to download any other user's uploaded files by providing the file UUID. The endpoint verifies the caller is authenticated but never checks that the file belongs to them. An attacker who knows or obtains a file UUID can access confidential documents, chat attachments, and other files uploaded by any user in the system. This issue has been patched in versions 3.0.9, 3.1.6, and 3.2.6.",
-    "published": "2026-05-08T05:16:10.74Z",
-    "fetched": "2026-05-10T22:10:43.945531428Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-42277"
-    ]
-  },
-  {
-    "id": "7906db24d9f6f865cb5b330ea5ab98e3",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Linux Kernel Dirty Frag LPE Exploit Enables Root Access Across Major Distributions",
-    "url": "https://thehackernews.com/2026/05/linux-kernel-dirty-frag-lpe-exploit.html",
-    "summary": "Details have emerged about a new, unpatched local privilege escalation (LPE) vulnerability impacting the Linux kernel. Dubbed Dirty Frag, it has been described as a successor to Copy Fail (CVE-2026-31431, CVSS score: 7.8), a recently disclosed LPE flaw impacting the Linux kernel that has since come under active exploitation in the wild. The vulnerability was reported to Linux kernel maintainers",
-    "published": "2026-05-08T05:12:00Z",
-    "fetched": "2026-05-15T22:30:20.630110031Z",
-    "tags": [
-      "linux",
-      "watch",
-      "lpe",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "linux"
-    ],
-    "cves": [
-      "CVE-2026-31431"
-    ]
-  },
-  {
-    "id": "7906db24d9f6f865cb5b330ea5ab98e3",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Linux Kernel Dirty Frag LPE Exploit Enables Root Access Across Major Distributions",
-    "url": "https://thehackernews.com/2026/05/linux-kernel-dirty-frag-lpe-exploit.html",
-    "summary": "Details have emerged about a new, unpatched local privilege escalation (LPE) vulnerability impacting the Linux kernel. Dubbed Dirty Frag, it has been described as a successor to Copy Fail (CVE-2026-31431, CVSS score: 7.8), a recently disclosed LPE flaw impacting the Linux kernel that has since come under active exploitation in the wild. The vulnerability was reported to Linux kernel maintainers",
-    "published": "2026-05-08T05:12:00Z",
-    "fetched": "2026-05-08T22:30:43.706170303Z",
-    "tags": [
-      "linux",
-      "watch",
-      "lpe",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "linux"
-    ],
-    "cves": [
-      "CVE-2026-31431"
-    ]
-  },
-  {
-    "id": "51277357ba4958ec29db6910178f339a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 3.3 LOW] CVE-2026-41498 — Kimai is an open-source time tracking application. Prior to version 2.54.0, the …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41498",
-    "summary": "Kimai is an open-source time tracking application. Prior to version 2.54.0, the Team API endpoints use #[IsGranted('edit_team')] instead of #[IsGranted('edit', 'team')], causing Symfony TeamVoter to abstain from voting. This removes entity-level ownership checks on team operations, allowing any user with the edit_team permission to modify any team, not just teams they are authorized to manage. This issue has been patched in version 2.54.0.",
-    "published": "2026-05-08T04:16:14.617Z",
-    "fetched": "2026-05-10T22:10:43.945531428Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-41498"
-    ]
-  },
-  {
-    "id": "d0e164916d4b979d2310335a12f828f2",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-42208 — BerriAI LiteLLM: BerriAI LiteLLM SQL Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42208",
-    "summary": "BerriAI LiteLLM contains a SQL injection vulnerability that allows an attacker to read data from the proxy's database and potentially modify it, leading to unauthorized access to the proxy and the credentials it manages.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-11",
-    "published": "2026-05-08T00:00:00Z",
-    "fetched": "2026-05-15T22:30:20.630110031Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "sqli"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "berriai"
-    ],
-    "cves": [
-      "CVE-2026-42208"
-    ]
-  },
-  {
-    "id": "d0e164916d4b979d2310335a12f828f2",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-42208 — BerriAI LiteLLM: BerriAI LiteLLM SQL Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42208",
-    "summary": "BerriAI LiteLLM contains a SQL injection vulnerability that allows an attacker to read data from the proxy's database and potentially modify it, leading to unauthorised access to the proxy and the credentials it manages.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-11",
-    "published": "2026-05-08T00:00:00Z",
-    "fetched": "2026-05-08T22:30:43.706170303Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "sqli"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "berriai"
-    ],
-    "cves": [
-      "CVE-2026-42208"
-    ]
-  },
-  {
-    "id": "2c95055423241ea8c5828b155b195e14",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "When prompts become shells: RCE vulnerabilities in AI agent frameworks",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
-    "summary": "New research exposes how prompt injection in AI agent frameworks can lead to remote code execution. Learn how these vulnerabilities work, what’s impacted, and how to secure your agents. The post When prompts become shells: RCE vulnerabilities in AI agent frameworks appeared first on Microsoft Security Blog.",
-    "published": "2026-05-07T20:22:39Z",
-    "fetched": "2026-05-14T22:37:07.007804901Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "2c95055423241ea8c5828b155b195e14",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "When prompts become shells: RCE vulnerabilities in AI agent frameworks",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
-    "summary": "New research exposes how prompt injection in AI agent frameworks can lead to remote code execution. Learn how these vulnerabilities work, what’s impacted, and how to secure your agents. The post When prompts become shells: RCE vulnerabilities in AI agent frameworks appeared first on Microsoft Security Blog.",
-    "published": "2026-05-07T20:22:39Z",
-    "fetched": "2026-05-07T22:35:41.618324871Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "9908ad5d897c939b1fa2e92979711a30",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.2 HIGH] CVE-2026-44742 — Postorius through 1.3.13 does not escape HTML in the message subject when render…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44742",
-    "summary": "Postorius through 1.3.13 does not escape HTML in the message subject when rendering it in the Held messages pop-up, as exploited in the wild in May 2026.",
-    "published": "2026-05-07T19:16:02.5Z",
-    "fetched": "2026-05-15T22:30:20.630110031Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "postorius_project"
-    ],
-    "cves": [
-      "CVE-2026-44742"
-    ]
-  },
-  {
-    "id": "0ab737518ab38829e9b5f9b47ed2f3ef",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Ivanti EPMM CVE-2026-6973 RCE Under Active Exploitation Grants Admin-Level Access",
-    "url": "https://thehackernews.com/2026/05/ivanti-epmm-cve-2026-6973-rce-under.html",
-    "summary": "Ivanti is warning that a new security flaw impacting Endpoint Manager Mobile (EPMM) has been explored in limited attacks in the wild. The high-severity vulnerability, CVE-2026-6973 (CVSS score: 7.2), is a case of improper input validation affecting EPMM before versions 12.6.1.1, 12.7.0.1, and 12.8.0.1. It allows \"a remotely authenticated user with administrative access to achieve remote code",
-    "published": "2026-05-07T17:55:00Z",
-    "fetched": "2026-05-14T22:37:07.007804901Z",
-    "tags": [
-      "ivanti",
-      "watch",
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 88,
-    "vendors": [
-      "ivanti"
-    ],
-    "cves": [
-      "CVE-2026-6973"
-    ]
-  },
-  {
-    "id": "0ab737518ab38829e9b5f9b47ed2f3ef",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Ivanti EPMM CVE-2026-6973 RCE Under Active Exploitation Grants Admin-Level Access",
-    "url": "https://thehackernews.com/2026/05/ivanti-epmm-cve-2026-6973-rce-under.html",
-    "summary": "Ivanti is warning that a new security flaw impacting Endpoint Manager Mobile (EPMM) has been explored in limited attacks in the wild. The high-severity vulnerability, CVE-2026-6973 (CVSS score: 7.2), is a case of improper input validation affecting EPMM before versions 12.6.1.1, 12.7.0.1, and 12.8.0.1. It allows \"a remotely authenticated user with administrative access to achieve remote code",
-    "published": "2026-05-07T17:55:00Z",
-    "fetched": "2026-05-07T22:35:41.618324871Z",
-    "tags": [
-      "ivanti",
-      "watch",
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 88,
-    "vendors": [
-      "ivanti"
-    ],
-    "cves": [
-      "CVE-2026-6973"
-    ]
-  },
-  {
-    "id": "23eebcf3cd3204ab3b3e6b5c5807f469",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Ivanti warns of new EPMM flaw exploited in zero-day attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-new-epmm-flaw-exploited-in-zero-day-attacks/",
-    "summary": "Ivanti warned customers today to patch a high-severity remote code execution vulnerability in Endpoint Manager Mobile (EPMM) exploited in zero-day attacks. [...]",
-    "published": "2026-05-07T15:20:51Z",
-    "fetched": "2026-05-07T22:35:41.618324871Z",
-    "tags": [
-      "ivanti",
-      "watch",
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 97,
-    "vendors": [
-      "ivanti"
-    ]
-  },
-  {
-    "id": "e443cdb962ef248353a08fdbaa89a8cd",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-32686 — Uncontrolled Resource Consumption vulnerability in ericmj decimal allows unauthenticated remote Deni…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32686",
-    "summary": "Uncontrolled Resource Consumption vulnerability in ericmj decimal allows unauthenticated remote Denial of Service.\n\nThe decimal library does not bound the exponent on parsed input. Storing a decimal with a very large exponent (e.g. Decimal.new(\"1e1000000000\")) is accepted without error. Subsequent calls to arithmetic functions (Decimal.add/2, Decimal.sub/2, Decimal.div/2), Decimal.to_string/2 with :normal or :xsd format, Decimal.to_integer/1, Decimal.round/3, or Decimal.compare/3 with a threshold allocate memory proportional to the exponent value, which can exhaust available memory and crash the BEAM VM.\n\nAny application that accepts user-supplied decimal input and subsequently performs arithmetic, rounding, conversion to integer, or string formatting on it is exposed. A single malicious request is sufficient to cause an out-of-memory crash.\n\nThis issue affects decimal: from 0.1.0 before 3.0.0.",
-    "published": "2026-05-07T15:16:05.37Z",
-    "fetched": "2026-05-10T22:10:43.945531428Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-32686"
-    ]
-  },
-  {
-    "id": "06166e9dcda6534427dd365d6155daeb",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.1 MEDIUM] CVE-2025-67202 — Sidekiq-cron thru 2.3.1, an open-source scheduling add-on for Sidekiq, is vulner…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67202",
-    "summary": "Sidekiq-cron thru 2.3.1, an open-source scheduling add-on for Sidekiq, is vulnerable to a cross-site scripting (xss) vulnerability via crafted URL being rended from cron.erb.",
-    "published": "2026-05-07T15:16:04.947Z",
-    "fetched": "2026-05-10T22:10:43.945531428Z",
-    "tags": [
-      "xss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2025-67202"
-    ]
-  },
-  {
-    "id": "80a1607f42bd0bdcd93ff28ecc8e596b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2025-63706 — NPM package next-npm-version1.0.1 is vulnerable to Command injection.",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-63706",
-    "summary": "NPM package next-npm-version1.0.1 is vulnerable to Command injection.",
-    "published": "2026-05-07T15:16:04.82Z",
-    "fetched": "2026-05-10T22:10:43.945531428Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2025-63706"
-    ]
-  },
-  {
-    "id": "a5dfee36c350d699df643700c31bb10c",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Palo Alto Networks firewall zero-day exploited for nearly a month",
-    "url": "https://www.bleepingcomputer.com/news/security/pan-os-firewall-rce-zero-day-exploited-in-attacks-since-april-9/",
-    "summary": "Palo Alto Networks warned customers that suspected state-sponsored hackers have been exploiting a critical-severity PAN-OS firewall zero-day vulnerability for nearly a month. [...]",
-    "published": "2026-05-07T10:57:59Z",
-    "fetched": "2026-05-07T22:35:41.618324871Z",
-    "tags": [
-      "paloalto",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "paloalto"
-    ]
-  },
-  {
-    "id": "b2c30ccef26c99d66f17d1e75d6e104f",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-6973 — Ivanti Endpoint Manager Mobile (EPMM): Ivanti Endpoint Manager Mobile (EPMM) Improper Input Validation Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6973",
-    "summary": "Ivanti Endpoint Manager Mobile (EPMM) contains an improper input validation vulnerability that allows a remotely authenticated user with administrative access to achieve remote code execution.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-10",
-    "published": "2026-05-07T00:00:00Z",
-    "fetched": "2026-05-14T22:37:07.007804901Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "ivanti",
-      "watch",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "ivanti"
-    ],
-    "cves": [
-      "CVE-2026-6973"
     ]
   }
 ]

@@ -5,7 +5,629 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Auto-curated cybersecurity intel from CISA KEV / NVD / JPCERT and major news sources. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 16 May 2026 22:12:07 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 22:25:42 +0000</lastBuildDate>
+    <item>
+      <title>[MED] [CVSS 7.2 HIGH] CVE-2026-8764 — A security vulnerability has been detected in H3C Magic B3 up to 100R002. This a…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8764</link>
+      <guid isPermaLink="false">ab07636289febb2bba9e45c97957d9c3</guid>
+      <pubDate>Sun, 17 May 2026 22:16:21 +0000</pubDate>
+      <description>A security vulnerability has been detected in H3C Magic B3 up to 100R002. This affects the function UpdateWanParams of the file /goform/aspForm. Such manipulation of the argument param leads to buffer overflow. The attack may be performed from remote. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] CVE-2026-8721 — Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl truncates passwords with embedded NULLs.&#xA;&#xA;Pass…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8721</link>
+      <guid isPermaLink="false">db04659687d1642a6b3cc8c653128a78</guid>
+      <pubDate>Sun, 17 May 2026 19:16:25 +0000</pubDate>
+      <description>Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl truncates passwords with embedded NULLs.&#xA;&#xA;Password parameters in PKCS12.xs are declared char *, which routes through Perl&#39;s default typemap to SvPV_nolen.  The Perl length is discarded.&#xA;&#xA;The C code (or OpenSSL internally) calls strlen() on the buffer.  Any password byte at or after the first NULL is silently dropped. Binary / KDF-derived / HMAC-derived passwords lose entropy without any warnings.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>openssl</category>
+      <category>watch</category>
+      <category>openssl</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-8507 — Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out of bound (OOB) write flaws.&#xA;&#xA;When par…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8507</link>
+      <guid isPermaLink="false">0d62097966dc7ea39f4eb04d63485c30</guid>
+      <pubDate>Sun, 17 May 2026 19:16:24 +0000</pubDate>
+      <description>Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out of bound (OOB) write flaws.&#xA;&#xA;When parsing a PKCS12 file, with a &gt;= 1 GiB OCTET STRING (or BIT STRING) attribute on a SAFEBAG, via info() or info_as_hash(), a heap-OOB-WRITE would be triggered which could have Remote Code Execution (RCE) potential.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>openssl</category>
+      <category>watch</category>
+      <category>openssl</category>
+    </item>
+    <item>
+      <title>[MED] CVE-2026-46720 — Net::Statsd::Tiny versions before 0.3.8 for Perl allowed metric injections.&#xA;&#xA;The metric names and se…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46720</link>
+      <guid isPermaLink="false">c66cd98e7551daec12b49ed1eb26486a</guid>
+      <pubDate>Sun, 17 May 2026 18:16:27 +0000</pubDate>
+      <description>Net::Statsd::Tiny versions before 0.3.8 for Perl allowed metric injections.&#xA;&#xA;The metric names and set values were not checked for newlines, colons or pipes. Metrics generated from untrusted sources could inject additional statsd metrics.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.3 HIGH] CVE-2026-8759 — A vulnerability was identified in xiandafu beetl up to 3.20.2. Affected is an un…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8759</link>
+      <guid isPermaLink="false">3af6d9767b7ee47df30195ebbc2e85b2</guid>
+      <pubDate>Sun, 17 May 2026 15:16:20 +0000</pubDate>
+      <description>A vulnerability was identified in xiandafu beetl up to 3.20.2. Affected is an unknown function of the file beetl-classic-integration/beetl-spring-classic/src/main/java/org/beetl/ext/spring/SpELFunction.java of the component SpELFunction. The manipulation leads to improper neutralization of special elements used in an expression language statement. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] Tycoon2FA hijacks Microsoft 365 accounts via device-code phishing</title>
+      <link>https://www.bleepingcomputer.com/news/security/tycoon2fa-hijacks-microsoft-365-accounts-via-device-code-phishing/</link>
+      <guid isPermaLink="false">9b01ad61464013e2da5429222d0c3ffd</guid>
+      <pubDate>Sun, 17 May 2026 14:43:10 +0000</pubDate>
+      <description>The Tycoon2FA phishing kit now supports device-code phishing attacks and abuses Trustifi click-tracking URLs to hijack Microsoft 365 accounts. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>medium</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>phishing</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.3 HIGH] CVE-2026-8758 — A vulnerability was determined in Metasoft 美特软件 MetaCRM up to 6.4.0 Beta…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8758</link>
+      <guid isPermaLink="false">0fba266c9056cb43f88347e130ae50ce</guid>
+      <pubDate>Sun, 17 May 2026 14:16:22 +0000</pubDate>
+      <description>A vulnerability was determined in Metasoft 美特软件 MetaCRM up to 6.4.0 Beta06. This impacts an unknown function of the file /common/jsp/upload3.jsp. Executing a manipulation of the argument File can lead to unrestricted upload. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.3 HIGH] CVE-2026-8757 — A vulnerability was found in adenhq hive up to 0.11.0. This affects the function…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8757</link>
+      <guid isPermaLink="false">a696bfe88f4bbb462efc2b31f196fb2c</guid>
+      <pubDate>Sun, 17 May 2026 14:16:21 +0000</pubDate>
+      <description>A vulnerability was found in adenhq hive up to 0.11.0. This affects the function _read_events_tail of the file core/framework/server/routes_sessions.py of the component Delete Request Handler. Performing a manipulation results in path traversal. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>path-traversal</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.3 HIGH] CVE-2026-8756 — A vulnerability has been found in fishaudio Bert-VITS2 up to 8f7fbd8c4770965225d…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8756</link>
+      <guid isPermaLink="false">51dde71c6ea75135a5f4ae20eae609fd</guid>
+      <pubDate>Sun, 17 May 2026 13:16:46 +0000</pubDate>
+      <description>A vulnerability has been found in fishaudio Bert-VITS2 up to 8f7fbd8c4770965225d258db548da27dc8dd934c. The impacted element is the function generate_config of the file webui_preprocess.py of the component Gradio Interface. Such manipulation of the argument data_dir leads to path traversal. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>path-traversal</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.3 HIGH] CVE-2026-8755 — A flaw has been found in fishaudio Bert-VITS2 up to 8f7fbd8c4770965225d258db548d…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8755</link>
+      <guid isPermaLink="false">3dd93a21dd6e0995c51f9ab725e21efe</guid>
+      <pubDate>Sun, 17 May 2026 13:16:46 +0000</pubDate>
+      <description>A flaw has been found in fishaudio Bert-VITS2 up to 8f7fbd8c4770965225d258db548da27dc8dd934c. The affected element is the function _get_all_models of the file hiyoriUI.py of the component Model Handler. This manipulation causes path traversal. The attack can be initiated remotely. The exploit has been published and may be used. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>path-traversal</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.3 MEDIUM] CVE-2026-8754 — A vulnerability was detected in AstrBotDevs AstrBot up to 4.23.5. Impacted is th…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8754</link>
+      <guid isPermaLink="false">cf5962d95ae515af0759e2d691deb5ab</guid>
+      <pubDate>Sun, 17 May 2026 13:16:46 +0000</pubDate>
+      <description>A vulnerability was detected in AstrBotDevs AstrBot up to 4.23.5. Impacted is the function post_file of the file astrbot/dashboard/routes/chat.py of the component File Upload Handler. The manipulation of the argument filename results in path traversal. It is possible to launch the attack remotely. The exploit is now public and may be used. Upgrading to version 4.23.6 is recommended to address this issue. The patch is identified as aaec41e5054569ceaa1113593a34da7568e2d211. You should upgrade the affected component.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>path-traversal</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-8753 — A security vulnerability has been detected in kalcaddle Kodbox up to 1.64. This …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8753</link>
+      <guid isPermaLink="false">71c32504e53e5dbfbcf791f12720c426</guid>
+      <pubDate>Sun, 17 May 2026 13:16:45 +0000</pubDate>
+      <description>A security vulnerability has been detected in kalcaddle Kodbox up to 1.64. This issue affects the function parseVideoInfo of the file /workspace/source-code/plugins/fileThumb/lib/VideoResize.class.php of the component fileThumb Plugin. The manipulation of the argument ffmpegBin leads to command injection. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.2 HIGH] CVE-2018-25339 — Zechat 1.5 contains a SQL injection vulnerability in the v parameter that allows…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25339</link>
+      <guid isPermaLink="false">ec87216adcc84921a3f99cf8355d3adb</guid>
+      <pubDate>Sun, 17 May 2026 13:16:45 +0000</pubDate>
+      <description>Zechat 1.5 contains a SQL injection vulnerability in the v parameter that allows unauthenticated attackers to extract database information using time-based blind techniques. Attackers can exploit the v parameter with sleep-based blind injection to confirm vulnerability and extract data.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.2 HIGH] CVE-2018-25338 — Zechat 1.5 contains a SQL injection vulnerability in the hashtag parameter that …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25338</link>
+      <guid isPermaLink="false">202ebf789a3112162200bb9a08f33a18</guid>
+      <pubDate>Sun, 17 May 2026 13:16:45 +0000</pubDate>
+      <description>Zechat 1.5 contains a SQL injection vulnerability in the hashtag parameter that allows unauthenticated attackers to extract database information using union-based techniques. Attackers can exploit the hashtag parameter with union-based payloads to retrieve table and column names.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.3 MEDIUM] CVE-2018-25337 — Joomla JoomOCShop 1.0 contains a cross-site request forgery vulnerability that a…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25337</link>
+      <guid isPermaLink="false">5c4ad0ee2e47231c4676e42c38cbbbc5</guid>
+      <pubDate>Sun, 17 May 2026 13:16:45 +0000</pubDate>
+      <description>Joomla JoomOCShop 1.0 contains a cross-site request forgery vulnerability that allows attackers to perform unauthorized actions on behalf of authenticated users. Attackers can craft malicious HTML forms targeting account endpoints like /joomoc2/?route=account/edit and to modify user information or reset passwords without user consent.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.3 MEDIUM] CVE-2018-25336 — Joomla jCart for OpenCart 2.3.0.2 contains a cross-site request forgery vulnerab…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25336</link>
+      <guid isPermaLink="false">45772729f0eb52b200cc259255def158</guid>
+      <pubDate>Sun, 17 May 2026 13:16:45 +0000</pubDate>
+      <description>Joomla jCart for OpenCart 2.3.0.2 contains a cross-site request forgery vulnerability that allows attackers to modify user account information without authentication. Attackers can craft malicious HTML forms targeting endpoints , and to change user credentials, passwords, and affiliate account details when victims visit the attacker-controlled page.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 9.8 CRITICAL] CVE-2018-25335 — WordPress Plugin Peugeot Music 1.0 contains an arbitrary file upload vulnerabili…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25335</link>
+      <guid isPermaLink="false">f433556f4f2b3b2c8bdd566825a84ad5</guid>
+      <pubDate>Sun, 17 May 2026 13:16:45 +0000</pubDate>
+      <description>WordPress Plugin Peugeot Music 1.0 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicious files by sending POST requests to the upload.php endpoint. Attackers can upload files with arbitrary extensions by manipulating the &#39;name&#39; parameter to execute code from the uploads directory.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>critical-cvss</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.4 MEDIUM] CVE-2018-25334 — Zechat 1.5 contains a Cross-Site Request Forgery (CSRF) vulnerability that allow…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25334</link>
+      <guid isPermaLink="false">2e5573089ef5c2ce30d3fb3fa5c9028c</guid>
+      <pubDate>Sun, 17 May 2026 13:16:45 +0000</pubDate>
+      <description>Zechat 1.5 contains a Cross-Site Request Forgery (CSRF) vulnerability that allows an attacker to change a user&#39;s information by bypassing anti-CSRF protections. The application uses a CSRF token, but an attacker can use the hashtag parameter to inject an encoded payload and bypass the CSRF protection, allowing for unauthorized changes to user data. This can be exploited by tricking a user into submitting a crafted form or by using a script to obtain and set the CSRF token.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.2 HIGH] CVE-2018-25333 — Nordex N149/4.0-4.5 Wind Turbine Web Server 4.0 contains an SQL injection vulner…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25333</link>
+      <guid isPermaLink="false">934a6735385bc641f9cc682a89a27d5e</guid>
+      <pubDate>Sun, 17 May 2026 13:16:44 +0000</pubDate>
+      <description>Nordex N149/4.0-4.5 Wind Turbine Web Server 4.0 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the login parameter in login.php. Attackers can submit crafted POST requests with SQL injection payloads in the login field to extract sensitive database information and bypass authentication mechanisms.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2018-25332 — GitBucket 4.23.1 contains an unauthenticated remote code execution vulnerability…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25332</link>
+      <guid isPermaLink="false">6445cb8aff4201ffd518c13a66e47e81</guid>
+      <pubDate>Sun, 17 May 2026 13:16:44 +0000</pubDate>
+      <description>GitBucket 4.23.1 contains an unauthenticated remote code execution vulnerability that allows attackers to execute arbitrary commands by exploiting weak secret token generation and insecure file upload functionality. Attackers can brute-force the Blowfish encryption key, upload a malicious JAR plugin via the git-lfs endpoint, and execute system commands through an exposed exploit endpoint.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.1 MEDIUM] CVE-2018-25331 — Zenar Content Management System contains a cross-site scripting vulnerability th…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25331</link>
+      <guid isPermaLink="false">719578319a5e8f6566ca90964c4b91f0</guid>
+      <pubDate>Sun, 17 May 2026 13:16:44 +0000</pubDate>
+      <description>Zenar Content Management System contains a cross-site scripting vulnerability that allows unauthenticated attackers to inject malicious scripts by manipulating form parameters in POST requests. Attackers can inject script tags through the current_page parameter sent to the ajax.php endpoint, which reflects unsanitized user input in the response HTML to execute arbitrary JavaScript in victim browsers.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.2 HIGH] CVE-2018-25330 — Joomla! extension EkRishta 2.10 contains persistent cross-site scripting and SQL…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25330</link>
+      <guid isPermaLink="false">a2872bf90fbe6bf21925cf31d4b2e69b</guid>
+      <pubDate>Sun, 17 May 2026 13:16:44 +0000</pubDate>
+      <description>Joomla! extension EkRishta 2.10 contains persistent cross-site scripting and SQL injection vulnerabilities that allow attackers to inject malicious code through profile fields and POST parameters. Attackers can inject script payloads in profile information fields like Address that execute when users visit the profile, or submit SQL injection payloads via the phone_no parameter to the user_setting endpoint to manipulate database queries.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+      <category>xss</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.5 HIGH] CVE-2018-25329 — WordPress Plugin WP with Spritz 1.0 contains a remote file inclusion vulnerabili…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25329</link>
+      <guid isPermaLink="false">ae51db763fc6a08341ca9afbb48752d3</guid>
+      <pubDate>Sun, 17 May 2026 13:16:44 +0000</pubDate>
+      <description>WordPress Plugin WP with Spritz 1.0 contains a remote file inclusion vulnerability that allows unauthenticated attackers to read arbitrary files by injecting file paths into the url parameter. Attackers can send GET requests to wp.spritz.content.filter.php with malicious url values to access sensitive files like system configuration and credentials.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.4 HIGH] CVE-2018-25328 — VX Search 10.6.18 contains a local buffer overflow vulnerability that allows att…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25328</link>
+      <guid isPermaLink="false">7cb1252d75b2d260b657cec8abce6bcb</guid>
+      <pubDate>Sun, 17 May 2026 13:16:44 +0000</pubDate>
+      <description>VX Search 10.6.18 contains a local buffer overflow vulnerability that allows attackers to overwrite the instruction pointer by supplying an oversized string in the directory field. Attackers can craft a malicious input file containing 271 bytes of junk data followed by a return address to execute arbitrary code with application privileges.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.3 MEDIUM] CVE-2018-25327 — Joomla! Component Js Jobs 1.2.0 contains a cross-site request forgery vulnerabil…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25327</link>
+      <guid isPermaLink="false">3bbdc32ce040739e74bde27b12daadaa</guid>
+      <pubDate>Sun, 17 May 2026 13:16:44 +0000</pubDate>
+      <description>Joomla! Component Js Jobs 1.2.0 contains a cross-site request forgery vulnerability that allows attackers to perform state-changing actions without token validation. Attackers can craft malicious HTML forms targeting administrative endpoints like job.jobenforcedelete to delete job entries or modify component settings when administrators visit attacker-controlled pages.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.5 HIGH] CVE-2018-25326 — Google Drive for WordPress 2.2 contains a path traversal vulnerability that allo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25326</link>
+      <guid isPermaLink="false">f1f86724ac1341a33ff253a03c7fa1c2</guid>
+      <pubDate>Sun, 17 May 2026 13:16:44 +0000</pubDate>
+      <description>Google Drive for WordPress 2.2 contains a path traversal vulnerability that allows unauthenticated attackers to read arbitrary files by injecting directory traversal sequences in the file_name parameter. Attackers can send POST requests to gdrive-ajaxs.php with the ajaxstype parameter set to del_fl_bkp and file_name containing traversal sequences ../../wp-config.php to access sensitive configuration files.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>path-traversal</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2018-25325 — Woocommerce CSV Importer 3.3.6 contains a path traversal vulnerability that allo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25325</link>
+      <guid isPermaLink="false">537d26d22ff33b04add66581b95fa5e5</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>Woocommerce CSV Importer 3.3.6 contains a path traversal vulnerability that allows any registered user to delete arbitrary files by submitting unescaped filenames through the delete_export_file AJAX action. Attackers can craft POST requests with directory traversal sequences in the filename parameter to delete sensitive files like wp-config.php outside the intended export directory.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>path-traversal</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.2 MEDIUM] CVE-2018-25324 — Simple Fields 0.2 through 0.3.5 WordPress Plugin contains a local file inclusion…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25324</link>
+      <guid isPermaLink="false">1ff7e534ea1084acfe37f8e040a7256e</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>Simple Fields 0.2 through 0.3.5 WordPress Plugin contains a local file inclusion vulnerability that allows unauthenticated attackers to read arbitrary files by injecting null bytes into the wp_abspath parameter on PHP versions before 5.3.4. Attackers can supply malicious wp_abspath values to simple_fields.php to include files like /etc/passwd or inject PHP code into Apache logs for remote code execution when allow_url_include is enabled.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>apache</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>apache</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.4 HIGH] CVE-2018-25323 — Allok AVI DivX MPEG to DVD Converter 2.6.1217 contains a structured exception ha…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25323</link>
+      <guid isPermaLink="false">30b92e6d49b45d5abdb98305171a6842</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>Allok AVI DivX MPEG to DVD Converter 2.6.1217 contains a structured exception handler buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious payload. Attackers can craft a text file with a specially crafted buffer containing shellcode and SEH chain overwrite values, then paste the contents into the License Name field to trigger code execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.4 HIGH] CVE-2018-25322 — Allok Fast AVI MPEG Splitter 1.2 contains a stack based buffer overflow vulnerab…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25322</link>
+      <guid isPermaLink="false">cb4da271d926d35870685b167d49c2b0</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>Allok Fast AVI MPEG Splitter 1.2 contains a stack based buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious license name string. Attackers can craft a payload with 780 bytes of junk data followed by structured shellcode and place it in the License Name field to trigger the overflow and execute code with application privileges.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.3 MEDIUM] CVE-2018-25321 — TP-Link TL-WR720N wireless router contains a cross-site request forgery vulnerab…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25321</link>
+      <guid isPermaLink="false">274573329aa86b5b251a8db8cdda8b7c</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>TP-Link TL-WR720N wireless router contains a cross-site request forgery vulnerability that allows attackers to perform unauthorized administrative actions by crafting malicious web requests. Attackers can modify port forwarding rules via VirtualServerRpm.htm or change WiFi security settings via WlanSecurityRpm.htm by tricking authenticated users into visiting attacker-controlled pages.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2018-25320 — ACL Analytics versions 11.x through 13.0.0.579 contain an arbitrary code executi…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25320</link>
+      <guid isPermaLink="false">470eb64be64f4ef573976075d10d1205</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>ACL Analytics versions 11.x through 13.0.0.579 contain an arbitrary code execution vulnerability that allows attackers to execute arbitrary commands by leveraging the EXECUTE function. Attackers can use bitsadmin to download malicious PowerShell scripts and execute them with system privileges to establish reverse shells and gain complete system control.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.1 HIGH] CVE-2018-25319 — Redaxo CMS Addon MyEvents 2.2.1 contains an SQL injection vulnerability that all…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25319</link>
+      <guid isPermaLink="false">2f80e07a578ebef88bb3a0f4724b882a</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>Redaxo CMS Addon MyEvents 2.2.1 contains an SQL injection vulnerability that allows authenticated attackers to manipulate database queries by injecting SQL code through the myevents_id parameter. Attackers can send GET requests to the event_add.php page with malicious myevents_id values to extract or modify sensitive database information.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.3 MEDIUM] CVE-2026-8752 — A weakness has been identified in h2oai h2o-3 up to 7402. This vulnerability aff…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8752</link>
+      <guid isPermaLink="false">284813c216c840c69f2ce2f2923cbe46</guid>
+      <pubDate>Sun, 17 May 2026 12:16:43 +0000</pubDate>
+      <description>A weakness has been identified in h2oai h2o-3 up to 7402. This vulnerability affects the function exec of the file h2o-core/src/main/java/water/rapids/ast/prims/misc/AstSetProperty.java of the component Rapids setproperty Primitive Handler. Executing a manipulation can lead to improper access controls. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.3 HIGH] CVE-2026-8751 — A security flaw has been discovered in h2oai h2o-3 up to 7402. This affects the …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8751</link>
+      <guid isPermaLink="false">f53fa8deb406c848ea50d8c7db117304</guid>
+      <pubDate>Sun, 17 May 2026 12:16:42 +0000</pubDate>
+      <description>A security flaw has been discovered in h2oai h2o-3 up to 7402. This affects the function importBinaryModel of the file h2o-core/src/main/java/hex/Model.java of the component JAR Handler. Performing a manipulation results in deserialization. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>deserialization</category>
+    </item>
+    <item>
+      <title>[HIGH] NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE</title>
+      <link>https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html</link>
+      <guid isPermaLink="false">79fecd0de8285e9b26ef791b06c4a142</guid>
+      <pubDate>Sun, 17 May 2026 11:57:53 +0000</pubDate>
+      <description>A newly disclosed security flaw impacting NGINX Plus and NGINX Open has come under active exploitation in the wild, days after its public disclosure, according to VulnCheck. The vulnerability, tracked as CVE-2026-42945 (CVSS score: 9.2), is a heap buffer overflow in ngx_http_rewrite_module affecting NGINX versions 0.6.27 through 1.30.0. According to AI-native security company depthfirst, the</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.3 MEDIUM] CVE-2026-8750 — A vulnerability was identified in h2oai h2o-3 up to 7402. Affected by this issue…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8750</link>
+      <guid isPermaLink="false">87669f0825e28ddb79e38c34355bf5c0</guid>
+      <pubDate>Sun, 17 May 2026 11:16:35 +0000</pubDate>
+      <description>A vulnerability was identified in h2oai h2o-3 up to 7402. Affected by this issue is the function importFiles of the file h2o-core/src/main/java/water/persist/PersistNFS.java of the component ImportFile API. Such manipulation leads to information disclosure. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.3 MEDIUM] CVE-2026-8747 — A weakness has been identified in Z-BlogPHP 1.7.4.3430. This affects the functio…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8747</link>
+      <guid isPermaLink="false">e5429ac0b75c3ab4b374f4f819f94864</guid>
+      <pubDate>Sun, 17 May 2026 11:16:35 +0000</pubDate>
+      <description>A weakness has been identified in Z-BlogPHP 1.7.4.3430. This affects the function CheckComment of the file zb_system/function/c_system_event.php of the component Commend Approval Handler. This manipulation causes improper authorization. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.3 MEDIUM] CVE-2026-8746 — A security flaw has been discovered in Open5GS up to 2.7.7. Affected by this iss…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8746</link>
+      <guid isPermaLink="false">93ff642e2d4489746baaab689a32944a</guid>
+      <pubDate>Sun, 17 May 2026 11:16:35 +0000</pubDate>
+      <description>A security flaw has been discovered in Open5GS up to 2.7.7. Affected by this issue is the function discover_handler in the library /lib/sbi/nghttp2-server.c of the component NRF. The manipulation results in use after free. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.3 MEDIUM] CVE-2026-8745 — A vulnerability was identified in Open5GS up to 2.7.7. Affected by this vulnerab…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8745</link>
+      <guid isPermaLink="false">580b9d9768fce09f24e5a65fbf6305af</guid>
+      <pubDate>Sun, 17 May 2026 10:16:36 +0000</pubDate>
+      <description>A vulnerability was identified in Open5GS up to 2.7.7. Affected by this vulnerability is the function ogs_timer_add in the library /src/ausf/nausf-handler.c of the component AUSF. The manipulation leads to denial of service. The attack can be initiated remotely. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.3 MEDIUM] CVE-2026-8744 — A vulnerability was determined in Open5GS up to 2.7.7. Affected is the function …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8744</link>
+      <guid isPermaLink="false">babb0ff498dcdae0afebcfac0b9604d3</guid>
+      <pubDate>Sun, 17 May 2026 10:16:36 +0000</pubDate>
+      <description>A vulnerability was determined in Open5GS up to 2.7.7. Affected is the function ogs_sbi_subscription_data_add/ogs_sbi_nf_service_add in the library /lib/sbi/context.c of the component NRF. Executing a manipulation can lead to denial of service. It is possible to launch the attack remotely. The exploit has been publicly disclosed and may be utilized. This patch is called 819db11a08b9736a3576c4f99ceb28f7eb99523a. A patch should be applied to remediate this issue.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.3 MEDIUM] CVE-2026-8743 — A vulnerability was found in Open5GS up to 2.7.6. This impacts the function ran_…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8743</link>
+      <guid isPermaLink="false">0fc55466e5e7726b0c8364f33951314e</guid>
+      <pubDate>Sun, 17 May 2026 10:16:35 +0000</pubDate>
+      <description>A vulnerability was found in Open5GS up to 2.7.6. This impacts the function ran_ue_find_by_amf_ue_ngap_id of the file src/amf/context.c of the component AMF/MME. Performing a manipulation results in improper authorization. It is possible to initiate the attack remotely. The exploit has been made public and could be used. The patch is named 5746b8576cfceec18ed87eb7d8cf11b1fb4cd8b1. It is suggested to install a patch to address this issue.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 3.1 LOW] CVE-2026-8741 — A vulnerability has been found in EMQX up to 6.2.0. This affects an unknown func…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8741</link>
+      <guid isPermaLink="false">20f707956258de35299ae51834da5fa3</guid>
+      <pubDate>Sun, 17 May 2026 09:16:35 +0000</pubDate>
+      <description>A vulnerability has been found in EMQX up to 6.2.0. This affects an unknown function of the file apps/emqx/src/emqx_persistent_session_ds.erl of the component QoS 2 PUBLISH Packet Handler. Such manipulation leads to race condition. The attack may be performed from remote. A high complexity level is associated with this attack. The exploitability is reported as difficult. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.3 MEDIUM] CVE-2026-8740 — A flaw has been found in Sanluan PublicCMS 5.202506.d. The impacted element is t…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8740</link>
+      <guid isPermaLink="false">3805b80db24552c5e61bcd605a2589b0</guid>
+      <pubDate>Sun, 17 May 2026 09:16:34 +0000</pubDate>
+      <description>A flaw has been found in Sanluan PublicCMS 5.202506.d. The impacted element is the function execute of the file publiccms-core/src/main/java/com/publiccms/views/directive/tools/TemplateResultDirective.java of the component templateResult API. This manipulation of the argument templateContent causes improper neutralization of special elements used in a template engine. The attack is possible to be carried out remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.3 MEDIUM] CVE-2026-8739 — A vulnerability was detected in Sanluan PublicCMS 5.202506.d. The affected eleme…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8739</link>
+      <guid isPermaLink="false">6a7d0a3ee291f8a541b4ef5d19bf2ff1</guid>
+      <pubDate>Sun, 17 May 2026 08:16:23 +0000</pubDate>
+      <description>A vulnerability was detected in Sanluan PublicCMS 5.202506.d. The affected element is the function getSignKey of the file publiccms-core/src/main/java/com/publiccms/logic/component/config/SafeConfigComponent.java. The manipulation of the argument privatefile_key results in use of hard-coded cryptographic key&#xD; . The attack can be executed remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-8738 — A security vulnerability has been detected in Sanluan PublicCMS 5.202506.d. Impa…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8738</link>
+      <guid isPermaLink="false">b85287038e77651232d1d51906715a37</guid>
+      <pubDate>Sun, 17 May 2026 08:16:22 +0000</pubDate>
+      <description>A security vulnerability has been detected in Sanluan PublicCMS 5.202506.d. Impacted is the function TradeOrderController.pay/TradePaymentController.pay/AccountGatewayComponent.pay of the file publiccms-trade/src/main/java/com/publiccms/controller/web/trade/TradeOrderController.java of the component Trade Payment Flow. The manipulation leads to business logic errors. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.3 MEDIUM] CVE-2026-8737 — A weakness has been identified in Sanluan PublicCMS 5.202506.d. This issue affec…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8737</link>
+      <guid isPermaLink="false">e85329d69ac6eb37a75868c89f2a0796</guid>
+      <pubDate>Sun, 17 May 2026 07:16:17 +0000</pubDate>
+      <description>A weakness has been identified in Sanluan PublicCMS 5.202506.d. This issue affects the function execute of the file publiccms-trade/src/main/java/com/publiccms/views/directive/trade/TradeAddressListDirective.java of the component Trade Address Query Handler. Executing a manipulation of the argument userId/id can lead to missing authentication. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.1 MEDIUM] CVE-2026-8736 — A security flaw has been discovered in Oinone Pamirs up to 7.2.0. This vulnerabi…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8736</link>
+      <guid isPermaLink="false">26db0a319b57b023baf9286ef8665f94</guid>
+      <pubDate>Sun, 17 May 2026 07:16:17 +0000</pubDate>
+      <description>A security flaw has been discovered in Oinone Pamirs up to 7.2.0. This vulnerability affects the function request.getParameter of the file LocalFileClient.java of the component RestController. Performing a manipulation of the argument uniqueFileName results in path traversal. The attack may be carried out on the physical device. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>path-traversal</category>
+    </item>
+    <item>
+      <title>[LOW] Grafana GitHub Token Breach Led to Codebase Download and Extortion Attempt</title>
+      <link>https://thehackernews.com/2026/05/grafana-github-token-breach-led-to.html</link>
+      <guid isPermaLink="false">c96b3954e726c03ce5fcbde80bee7b65</guid>
+      <pubDate>Sun, 17 May 2026 07:13:33 +0000</pubDate>
+      <description>Grafana has disclosed that an &#34;unauthorized party&#34; obtained a token that granted them the ability to access the company&#39;s GitHub environment and download its codebase. &#34;Our investigation has determined that no customer data or personal information was accessed during this incident, and we have found no evidence of impact to customer systems or operations,&#34; Grafana said in a series of</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>low</category>
+      <category>github</category>
+      <category>github</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.3 MEDIUM] CVE-2026-8735 — A vulnerability was identified in Oinone Pamirs up to 7.2.0. This affects the fu…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8735</link>
+      <guid isPermaLink="false">17affcf6b38410455401cea713d0350c</guid>
+      <pubDate>Sun, 17 May 2026 06:16:20 +0000</pubDate>
+      <description>A vulnerability was identified in Oinone Pamirs up to 7.2.0. This affects the function JsonUtils.parseMap of the file PamirsParserConfig.java of the component appConfigQuery Interface. Such manipulation leads to deserialization. The attack can be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>deserialization</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.3 HIGH] CVE-2026-8734 — A vulnerability was determined in Oinone Pamirs up to 7.2.0. Affected by this is…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8734</link>
+      <guid isPermaLink="false">ae7838ff223e9c2e6c21fc3de7009f87</guid>
+      <pubDate>Sun, 17 May 2026 06:16:19 +0000</pubDate>
+      <description>A vulnerability was determined in Oinone Pamirs up to 7.2.0. Affected by this issue is the function RSQLToSQLNodeConnector.makeVariable of the component queryListByWrapper Interface. This manipulation causes sql injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.3 MEDIUM] CVE-2026-8733 — A vulnerability was found in Investintech SlimPDFReader up to 2.0.13. Affected b…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8733</link>
+      <guid isPermaLink="false">9e483976fc42e230d866d1e8ac1c0529</guid>
+      <pubDate>Sun, 17 May 2026 05:16:16 +0000</pubDate>
+      <description>A vulnerability was found in Investintech SlimPDFReader up to 2.0.13. Affected by this vulnerability is the function sub_3B4610 of the file SlimPDFReader.exe. The manipulation results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been made public and could be used. The vendor responded to the initial vulnerability report by the researcher with a note that the product is discontinued. This vulnerability only affects products that are no longer supported by the maintainer.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>adobe</category>
+      <category>adobe</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.3 MEDIUM] CVE-2026-8731 — A vulnerability has been found in Open5GS up to 2.7.7. Affected is the function …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8731</link>
+      <guid isPermaLink="false">b7c8da4b43bcaa563d425bc9f4361d37</guid>
+      <pubDate>Sun, 17 May 2026 05:16:16 +0000</pubDate>
+      <description>A vulnerability has been found in Open5GS up to 2.7.7. Affected is the function ogs_sbi_client_add in the library /lib/sbi/client.c of the component NRF. The manipulation of the argument client_pool leads to denial of service. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.3 MEDIUM] CVE-2026-8730 — A flaw has been found in Open5GS up to 2.7.6. This impacts the function ogs_sbi_…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8730</link>
+      <guid isPermaLink="false">a5acff05046c63a4b0e05a45d007ec05</guid>
+      <pubDate>Sun, 17 May 2026 05:16:16 +0000</pubDate>
+      <description>A flaw has been found in Open5GS up to 2.7.6. This impacts the function ogs_sbi_nf_instance_set_id in the library /lib/sbi/context.c of the component NRF. Executing a manipulation of the argument nfInstanceId can lead to denial of service. The attack may be performed from remote. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.3 MEDIUM] CVE-2026-8729 — A vulnerability was detected in Open5GS up to 2.7.7. This affects an unknown fun…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8729</link>
+      <guid isPermaLink="false">62bb462c1ee15af688e8e8dd10c4f602</guid>
+      <pubDate>Sun, 17 May 2026 05:16:16 +0000</pubDate>
+      <description>A vulnerability was detected in Open5GS up to 2.7.7. This affects an unknown function in the library /lib/sbi/message.c of the component NRF. Performing a manipulation of the argument service-names/snssais results in denial of service. The attack is possible to be carried out remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.3 MEDIUM] CVE-2026-8728 — A security vulnerability has been detected in Open5GS up to 2.7.7. The impacted …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8728</link>
+      <guid isPermaLink="false">09e1b46da9797e56dff5d3d4144e077b</guid>
+      <pubDate>Sun, 17 May 2026 04:16:58 +0000</pubDate>
+      <description>A security vulnerability has been detected in Open5GS up to 2.7.7. The impacted element is the function ogs_sbi_discovery_option_parse_plmn_list in the library /lib/sbi/conv.c of the component NRF. Such manipulation of the argument target-plmn-list leads to denial of service. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.8 HIGH] CVE-2026-8719 — The AI Engine – The Chatbot, AI Framework &amp; MCP for WordPress plugin for WordP…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8719</link>
+      <guid isPermaLink="false">92012b71cb19f8e54faa3b5f0b687bd5</guid>
+      <pubDate>Sun, 17 May 2026 04:16:42 +0000</pubDate>
+      <description>The AI Engine – The Chatbot, AI Framework &amp; MCP for WordPress plugin for WordPress is vulnerable to Privilege Escalation in version 3.4.9. This is due to missing WordPress capability enforcement in the MCP OAuth bearer-token authorization path, where any valid OAuth token causes MCP access to be granted without verifying administrator privileges. This makes it possible for authenticated (Subscriber+) attackers to invoke admin-level MCP tools and escalate privileges to Administrator.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>lpe</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.3 HIGH] CVE-2026-8725 — A weakness has been identified in CoreWorxLab CAAL up to 1.6.0. The affected ele…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8725</link>
+      <guid isPermaLink="false">0a480db6b6ee1a50d9f7e1c4eba93943</guid>
+      <pubDate>Sun, 17 May 2026 02:16:45 +0000</pubDate>
+      <description>A weakness has been identified in CoreWorxLab CAAL up to 1.6.0. The affected element is an unknown function of the file src/caal/webhooks.py of the component test-hass Endpoint. This manipulation causes server-side request forgery. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.7 MEDIUM] CVE-2026-8724 — A security flaw has been discovered in Dataease 2.10.20. Impacted is the functio…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8724</link>
+      <guid isPermaLink="false">4f366cd838b12ba71c02a7d8103c0cb6</guid>
+      <pubDate>Sun, 17 May 2026 02:16:45 +0000</pubDate>
+      <description>A security flaw has been discovered in Dataease 2.10.20. Impacted is the function SqlparserUtils.transFilter of the file SqlparserUtils.java of the component Data Dashboard. The manipulation results in sql injection. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.3 MEDIUM] CVE-2026-8723 — ### Summary&#xA;&#xA;&#xA;&#xA;`qs.stringify` throws `TypeError` when called with `arrayFormat: …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8723</link>
+      <guid isPermaLink="false">351fc127a1274fd09528a72091a14dc6</guid>
+      <pubDate>Sun, 17 May 2026 00:16:21 +0000</pubDate>
+      <description>### Summary&#xA;&#xA;&#xA;&#xA;`qs.stringify` throws `TypeError` when called with `arrayFormat: &#39;comma&#39;` and `encodeValuesOnly: true` on an array containing `null` or `undefined`. The throw is synchronous and not handled by any of qs&#39;s null-related options (`skipNulls`, `strictNullHandling`).&#xA;&#xA;&#xA;&#xA;### Details&#xA;&#xA;&#xA;&#xA;In the comma + `encodeValuesOnly` branch, `lib/stringify.js:145` mapped the array through the raw encoder before joining:&#xA;&#xA;&#xA;&#xA;```js&#xA;&#xA;&#xA;&#xA;obj = utils.maybeMap(obj, encoder);&#xA;&#xA;&#xA;&#xA;```&#xA;&#xA;&#xA;&#xA;`utils.encode` (`lib/utils.js:195`) reads `str.length` with no null guard, so a `null` or `undefined` element throws `TypeError`. `skipNulls` and `strictNullHandling` are both checked in the per-element loop below this line and never get a chance to run.&#xA;&#xA;&#xA;&#xA;Same class of bug as the filter-array path fixed in 0c180a4. The vulnerable shape of the comma + `encodeValuesOnly` branch was introduced in 4c4b23d (&#34;encode comma values more consistently&#34;, PR #463, 2023-01-19), first released in v6.11.1.&#xA;&#xA;&#xA;&#xA;#### PoC&#xA;&#xA;&#xA;&#xA;```js&#xA;&#xA;&#xA;&#xA;const qs = require(&#39;qs&#39;);&#xA;&#xA;&#xA;&#xA;qs.stringify({ a: [null, &#39;b&#39;] },      { arrayFormat: &#39;comma&#39;, encodeValuesOnly: true });&#xA;&#xA;&#xA;&#xA;qs.stringify({ a: [undefined, &#39;b&#39;] }, { arrayFormat: &#39;comma&#39;, encodeValuesOnly: true });&#xA;&#xA;&#xA;&#xA;qs.stringify({ a: [null] },           { arrayFormat: &#39;comma&#39;, encodeValuesOnly: true });&#xA;&#xA;&#xA;&#xA;// TypeError: Cannot read properties of null (reading &#39;length&#39;)&#xA;&#xA;&#xA;&#xA;//     at encode (lib/utils.js:195:13)&#xA;&#xA;&#xA;&#xA;//     at Object.maybeMap (lib/utils.js:322:37)&#xA;&#xA;&#xA;&#xA;//     at stringify (lib/stringify.js:145:25)&#xA;&#xA;&#xA;&#xA;```&#xA;&#xA;&#xA;&#xA;#### Fix&#xA;&#xA;&#xA;&#xA;`lib/stringify.js:145`, applied in 21f80b3 on `main` and released as v6.15.2:&#xA;&#xA;&#xA;&#xA;```diff&#xA;&#xA;&#xA;&#xA;- obj = utils.maybeMap(obj, encoder);&#xA;&#xA;&#xA;&#xA;+ obj = utils.maybeMap(obj, function (v) {&#xA;&#xA;&#xA;&#xA;+     return v == null ? v : encoder(v);&#xA;&#xA;&#xA;&#xA;+ });&#xA;&#xA;&#xA;&#xA;```&#xA;&#xA;&#xA;&#xA;`null` and `undefined` now pass through `maybeMap` unchanged and reach the `join(&#39;,&#39;)` step as-is. For `{ a: [null, &#39;b&#39;] }` this produces `a=,b`, matching the non-`encodeValuesOnly` comma path (which already joins before encoding and produces `a=%2Cb` for the same input). Single-element `[null]` arrays still collapse via the existing `obj.join(&#39;,&#39;) || null` and remain subject to `skipNulls` / `strictNullHandling` in the main loop.&#xA;&#xA;&#xA;&#xA;### Affected versions&#xA;&#xA;&#xA;&#xA;`&gt;=6.11.1 &lt;6.15.2` — fixed in v6.15.2.&#xA;&#xA;&#xA;&#xA;The vulnerable code shape was introduced in 4c4b23d and first shipped in v6.11.1. Earlier versions — including all of 6.7.x, 6.8.x, 6.9.x, 6.10.x, and 6.11.0 — implemented the comma + `encodeValuesOnly` path differently (joining before encoding) and are not affected. Empirically verified across released versions.&#xA;&#xA;&#xA;&#xA;### Impact&#xA;&#xA;&#xA;&#xA;Application code that calls `qs.stringify` with both `arrayFormat: &#39;comma&#39;` and `encodeValuesOnly: true` (both non-default) on input that may contain a `null` or `undefined` array element will throw synchronously instead of producing a query string. In a typical Node.js HTTP framework (Express, Fastify, Koa, hapi) the sync throw is caught by the framework&#39;s error boundary and the affected request returns a 500; the worker process does not exit and subsequent requests are unaffected. The &#34;kills the worker process&#34; framing applies only to call sites outside a request-handler error boundary (background jobs, startup paths, stream pipelines) or to deployments with framework error handling explicitly disabled.&#xA;&#xA;&#xA;&#xA;The vulnerable input is a `null` or `undefined` entry inside an array; this is reachable from JSON request bodies or from application code constructing arrays from user input, but not from standard HTML form submissions (which produce strings or omitted fields, not literal `null`).</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] CVE-2026-6050 — Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-6050</link>
+      <guid isPermaLink="false">bbc3ea169e1c5baf02763f4c6fee5562</guid>
+      <pubDate>Sat, 16 May 2026 23:16:50 +0000</pubDate>
+      <description>Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.2 HIGH] CVE-2026-46728 — Das U-Boot before 2026.04 allows FIT (Flat Image Tree) signature verification by…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46728</link>
+      <guid isPermaLink="false">e33607d0d5563270e61e5af1088d4457</guid>
+      <pubDate>Sat, 16 May 2026 22:16:13 +0000</pubDate>
+      <description>Das U-Boot before 2026.04 allows FIT (Flat Image Tree) signature verification bypass because hashed-nodes is omitted from a hash.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
     <item>
       <title>[MED] Microsoft rejects critical Azure vulnerability report, no CVE issued</title>
       <link>https://www.bleepingcomputer.com/news/security/microsoft-rejects-critical-azure-vulnerability-report-no-cve-issued/</link>
@@ -19,1093 +641,388 @@
       <category>microsoft</category>
     </item>
     <item>
-      <title>[CRIT] Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checkout Skimming</title>
-      <link>https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html</link>
-      <guid isPermaLink="false">28cf83400d8e02e62de1c8c4ba01ef47</guid>
-      <pubDate>Sat, 16 May 2026 15:20:48 +0000</pubDate>
-      <description>A critical security vulnerability impacting the Funnel Builder plugin for WordPress has come under active exploitation in the wild to inject malicious JavaScript code into WooCommerce checkout pages with the goal of stealing payment data. Details of the activity were published by Sansec this week. The vulnerability currently does not have an official CVE identifier. It</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>critical</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>actively-exploited</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[LOW] Russian hackers turn Kazuar backdoor into modular P2P botnet</title>
-      <link>https://www.bleepingcomputer.com/news/security/russian-hackers-turn-kazuar-backdoor-into-modular-p2p-botnet/</link>
-      <guid isPermaLink="false">1ebd59a25ebce202e4c46e2ab2f27e1c</guid>
-      <pubDate>Sat, 16 May 2026 14:15:37 +0000</pubDate>
-      <description>The Russian hacker group Secret Blizzard has developed its long-running Kazuar backdoor into a modular peer-to-peer (P2P) botnet designed for long-term persistence, stealth, and data collection. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] Friday Squid Blogging: Bigfin Squid</title>
-      <link>https://www.schneier.com/blog/archives/2026/05/friday-squid-blogging-bigfin-squid.html</link>
-      <guid isPermaLink="false">5d355e245fbf7c9c9cbaf972e9cdc15f</guid>
-      <pubDate>Sat, 16 May 2026 01:03:31 +0000</pubDate>
-      <description>Article about the bigfin squid. As usual, you can also use this squid post to talk about the security stories in the news that I haven&amp;#8217;t covered. Blog moderation policy.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Schneier on Security</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[CRIT] Funnel Builder WordPress plugin bug exploited to steal credit cards</title>
-      <link>https://www.bleepingcomputer.com/news/security/funnel-builder-wordpress-plugin-bug-exploited-to-steal-credit-cards/</link>
-      <guid isPermaLink="false">90e9af4f50fe500055f99e6526121ecc</guid>
-      <pubDate>Fri, 15 May 2026 19:30:33 +0000</pubDate>
-      <description>A critical vulnerability in the Funnel Builder plugin for WordPress is being actively exploited to inject malicious JavaScript snippets into WooCommerce checkout pages. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>critical</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>actively-exploited</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[LOW] Metasploit Wrap-Up 05/15/2026</title>
-      <link>https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-15-2026</link>
-      <guid isPermaLink="false">d412571534577e4b7568ad5298761040</guid>
-      <pubDate>Fri, 15 May 2026 18:54:25 +0000</pubDate>
-      <description>Weaponizing a text editor for fun and profitGather round, dear readers, because today, we (by we, we mean @h00die) dropped the ultimate persistence mechanism: Vim plugin persistence. And honestly, calling it &#34;persistence&#34; feels redundant — Vim is already the most persistent thing ever. Somewhere, somehow, there will still be a Vim session open since 2011, because no one has figured out how to close it. So we are not so much establishing a foothold here as we are joining an existing hostage situation.Elsewhere this week, Marvell&#39;s QConvergeConsole has been caught handing arbitrary files to un...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>low</category>
-      <category>adobe</category>
-      <category>adobe</category>
-    </item>
-    <item>
-      <title>[HIGH] Microsoft Exchange, Windows 11 hacked on second day of Pwn2Own</title>
-      <link>https://www.bleepingcomputer.com/news/security/pwn2own-day-two-hackers-demo-microsoft-exchange-windows-11-red-had-enterprise-linux-zero-days/</link>
-      <guid isPermaLink="false">0fd33a8b44df4e31dd9ba7a411792177</guid>
-      <pubDate>Fri, 15 May 2026 17:47:25 +0000</pubDate>
-      <description>​During the second day of Pwn2Own Berlin 2026, competitors collected $385,750 in cash awards after exploiting 15 unique zero-day vulnerabilities in multiple products, including Windows 11, Microsoft Exchange, and Red Hat Enterprise Linux for Workstations. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] Popular node-ipc npm package compromised to steal credentials</title>
-      <link>https://www.bleepingcomputer.com/news/security/popular-node-ipc-npm-package-compromised-to-steal-credentials/</link>
-      <guid isPermaLink="false">67203241871b5523ceb878db0b7ed0c2</guid>
-      <pubDate>Fri, 15 May 2026 17:10:42 +0000</pubDate>
-      <description>Hackers have injected credential-stealing malware into newly published versions of node-ipc, a popular inter-process communication package, in a new supply chain attack targeting npm. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>supply-chain</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[LOW] Turla Turns Kazuar Backdoor Into Modular P2P Botnet for Persistent Access</title>
-      <link>https://thehackernews.com/2026/05/turla-turns-kazuar-backdoor-into.html</link>
-      <guid isPermaLink="false">d57ad28b7abf320e3649198b9a61f811</guid>
-      <pubDate>Fri, 15 May 2026 17:10:25 +0000</pubDate>
-      <description>The Russian state-sponsored hacking group known as Turla has transformed its custom backdoor Kazuar into a modular peer-to-peer (P2P) botnet that&#39;s engineered for stealth and persistent access to compromised hosts. Turla, per the U.S. Cybersecurity and Infrastructure Security Agency (CISA), is assessed to be affiliated with Center 16 of Russia&#39;s Federal Security Service (FSB)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Avada Builder WordPress plugin flaws allow site credential theft</title>
-      <link>https://www.bleepingcomputer.com/news/security/avada-builder-wordpress-plugin-flaws-allow-site-credential-theft/</link>
-      <guid isPermaLink="false">5382af90d23f22460b54646b0db40dd6</guid>
-      <pubDate>Fri, 15 May 2026 15:56:56 +0000</pubDate>
-      <description>Two vulnerabilities in the Avada Builder plugin for WordPress, with an estimated one million active installations, allow hackers to read arbitrary files and extract sensitive information from the database. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[MED] Microsoft backpedals: Edge to stop loading passwords into memory</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-edge-to-stop-loading-cleartext-passwords-in-memory-on-startup/</link>
-      <guid isPermaLink="false">4fdcb61e33765dbd1c351c390099fc7c</guid>
-      <pubDate>Fri, 15 May 2026 14:49:39 +0000</pubDate>
-      <description>Microsoft is updating the Edge web browser to ensure it no longer loads saved passwords into process memory in clear text at startup after previously stating it was &#34;by design.&#34; [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] Inside the REMUS Infostealer: Session Theft, MaaS, and Rapid Evolution</title>
-      <link>https://www.bleepingcomputer.com/news/security/inside-the-remus-infostealer-session-theft-maas-and-rapid-evolution/</link>
-      <guid isPermaLink="false">a9e3d83a047c7876235c2be9dee5fbf4</guid>
-      <pubDate>Fri, 15 May 2026 14:02:12 +0000</pubDate>
-      <description>Stolen browser sessions and authentication tokens are becoming more valuable than stolen passwords. Flare explains how the REMUS infostealer evolved around session theft and operational scalability. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[MED] Welcome to BlackFile: Inside a Vishing Extortion Operation</title>
-      <link>https://cloud.google.com/blog/topics/threat-intelligence/blackfile-vishing-extortion-operation/</link>
-      <guid isPermaLink="false">dbd4ff44ca17230c60c80fc9afb67bca</guid>
-      <pubDate>Fri, 15 May 2026 14:00:00 +0000</pubDate>
-      <description>Written by: Austin Larsen, Tyler McLellan, Genevieve Stark, Dan Ebreo Introduction  Google Threat Intelligence Group (GTIG) has continued to track an expansive extortion campaign by UNC6671, a threat actor operating under the &#34;BlackFile&#34; brand, that targets organizations via sophisticated voice phishing (vishing) and single sign-on (SSO) compromise. By leveraging adversary-in-the-middle (AiTM) techniques to bypass traditional perimeter defenses and multi-factor authentication (MFA), UNC6671 gains deep access to cloud environments. The group primarily targets Microsoft 365 and Okta infrastruct...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Google Threat Intelligence (Mandiant)</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] Four OpenClaw Flaws Enable Data Theft, Privilege Escalation, and Persistence</title>
-      <link>https://thehackernews.com/2026/05/four-openclaw-flaws-enable-data-theft.html</link>
-      <guid isPermaLink="false">a3ca7b7fc04cc4d6581703ed0131d582</guid>
-      <pubDate>Fri, 15 May 2026 13:35:04 +0000</pubDate>
-      <description>Cybersecurity researchers have disclosed a set of four security flaws in OpenClaw that could be chained to achieve data theft, privilege escalation, and persistence. The vulnerabilities, collectively dubbed Claw Chain by Cyera, can permit an attacker to establish a foothold, expose sensitive data, and plant backdoors. A brief description of the flaws is below -</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>lpe</category>
-    </item>
-    <item>
-      <title>[MED] Microsoft to automatically roll back faulty Windows drivers</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-to-automatically-roll-back-faulty-windows-drivers/</link>
-      <guid isPermaLink="false">5feb7caf42fb09396a1ac305c42c6156</guid>
-      <pubDate>Fri, 15 May 2026 12:29:48 +0000</pubDate>
-      <description>Microsoft is introducing a new capability that will allow it to remotely roll back problematic Windows drivers delivered through Windows Update. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] Bypassing On-Camera Age-Verification Checks</title>
-      <link>https://www.schneier.com/blog/archives/2026/05/bypassing-on-camera-age-verification-checks.html</link>
-      <guid isPermaLink="false">12bf95f6715dbfef884470cce4cfbfcb</guid>
-      <pubDate>Fri, 15 May 2026 11:06:32 +0000</pubDate>
-      <description>Some AI-based video age-verification checks can be fooled with a fake mustache.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Schneier on Security</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] What 45 Days of Watching Your Own Tools Will Tell You About Your Real Attack Surface</title>
-      <link>https://thehackernews.com/2026/05/what-45-days-of-watching-your-own-tools.html</link>
-      <guid isPermaLink="false">63ee61aaa38c6d9306ec6db6910a6741</guid>
-      <pubDate>Fri, 15 May 2026 11:00:00 +0000</pubDate>
-      <description>In Your Biggest Security Risk Isn&#39;t Malware — It&#39;s What You Already Trust, we made a simple argument: the most dangerous activity inside most organizations no longer looks like an attack. It looks like administration. PowerShell, WMIC, netsh, Certutil, MSBuild — the same trusted utilities your IT team uses every day are also the preferred toolkit of modern threat actors. Bitdefender&#39;s analysis</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[MED] TanStack Supply Chain Attack Hits Two OpenAI Employee Devices, Forces macOS Updates</title>
-      <link>https://thehackernews.com/2026/05/tanstack-supply-chain-attack-hits-two.html</link>
-      <guid isPermaLink="false">ae84fd48e7090d4c3552f9a474527af8</guid>
-      <pubDate>Fri, 15 May 2026 10:54:44 +0000</pubDate>
-      <description>OpenAI has disclosed that two of its employee devices in its corporate environment were impacted via the Mini Shai-Hulud supply chain attack on TanStack, but noted that no user data, production systems, or intellectual property were compromised or modified in an unauthorized manner. &#34;Upon identification of the malicious activity, we worked quickly to investigate, contain, and take steps to</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>medium</category>
-      <category>supply-chain</category>
-    </item>
-    <item>
-      <title>[CRIT] Microsoft warns of Exchange zero-day flaw exploited in attacks</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-exchange-zero-day-flaw-exploited-in-attacks/</link>
-      <guid isPermaLink="false">2aa1ad008b9842bde94d817e53a0453d</guid>
-      <pubDate>Fri, 15 May 2026 09:40:42 +0000</pubDate>
-      <description>On Thursday, Microsoft shared mitigations for a high-severity Exchange Server vulnerability exploited in attacks that allow threat actors to execute arbitrary code via cross-site scripting (XSS) while targeting Outlook on the web users. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>critical</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>xss</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] &amp;#x5b;Guest Diary&amp;#x5d; New Malware Libraries means New Signatures, (Fri, May 15th)</title>
-      <link>https://isc.sans.edu/diary/rss/32986</link>
-      <guid isPermaLink="false">f2c229e849572f3af2938f36c16d2b3c</guid>
-      <pubDate>Fri, 15 May 2026 06:38:33 +0000</pubDate>
-      <description></description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>medium</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[HIGH] On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email</title>
-      <link>https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html</link>
-      <guid isPermaLink="false">c2c6193c0b0bace861aaa9f20107cc9b</guid>
-      <pubDate>Fri, 15 May 2026 06:19:04 +0000</pubDate>
-      <description>Microsoft has disclosed a new security vulnerability impacting on-premise versions of Exchange Server that it said has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-42897 (CVSS score: 8.1), has been described as a spoofing bug stemming from a cross-site scripting flaw. An anonymous researcher has been credited with discovering and reporting the issue. &#34;</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>xss</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] CISA Adds Cisco SD-WAN CVE-2026-20182 to KEV After Admin Access Exploits</title>
-      <link>https://thehackernews.com/2026/05/cisa-adds-cisco-sd-wan-cve-2026-20182.html</link>
-      <guid isPermaLink="false">3a8ac16f93793944146be31ba320264e</guid>
-      <pubDate>Fri, 15 May 2026 05:28:03 +0000</pubDate>
-      <description>The U.S.Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added a newly disclosed vulnerability impacting Cisco Catalyst SD-WAN Controller to its Known Exploited Vulnerabilities (KEV) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to remediate the issue by May 17, 2026. The vulnerability is a critical authentication bypass tracked as CVE-2026-20182. It&#39;s</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>medium</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[MED] ISC Stormcast For Friday, May 15th, 2026 https://isc.sans.edu/podcastdetail/9934, (Fri, May 15th)</title>
-      <link>https://isc.sans.edu/diary/rss/32992</link>
-      <guid isPermaLink="false">1cd835504ce30f92b4ca3928ad7fdddb</guid>
-      <pubDate>Fri, 15 May 2026 04:10:13 +0000</pubDate>
-      <description></description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>medium</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: Musetheque V4 情報公開 for IPKNOWLEDGEにおける複数の脆弱性</title>
-      <link>https://jvn.jp/jp/JVN69128376/</link>
-      <guid isPermaLink="false">cfe2fe0673d788e92b48bacde2f329df</guid>
-      <pubDate>Fri, 15 May 2026 03:00:00 +0000</pubDate>
-      <description>富士通Japan株式会社が提供するMusetheque V4 情報公開 for IPKNOWLEDGEには、複数の脆弱性が存在します。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-42897 — Microsoft Microsoft: Microsoft Exchange Server Cross-Site Scripting Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42897</link>
-      <guid isPermaLink="false">42b950f52f79d3e44d7a8ae0755cba8f</guid>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <description>Microsoft Exchange Server contains a cross-site scripting vulnerability during web page generation in Outlook Web Access and when certain interaction conditions are met, arbitrary JavaScript can be executed in the browser context.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-29</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>xss</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: CISA ICS Advisory / ICS Medical Advisory（2026年05月14日）</title>
-      <link>https://jvn.jp/vu/JVNVU94687621/</link>
-      <guid isPermaLink="false">0d070f3cb1d9e99529ec6d213ca6f92f</guid>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <description>2026年05月14日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] TeamPCP hackers advertise Mistral AI code repos for sale</title>
-      <link>https://www.bleepingcomputer.com/news/security/teampcp-hackers-advertise-mistral-ai-code-repos-for-sale/</link>
-      <guid isPermaLink="false">c1ff24e07d9982fc3d1afb7e99a645b1</guid>
-      <pubDate>Thu, 14 May 2026 22:50:36 +0000</pubDate>
-      <description>The TeamPCP hacker group is threatening to leak source code from the Mistral AI project unless a buyer is found for the data. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] Hackers exploit auth bypass flaw in Burst Statistics WordPress plugin</title>
-      <link>https://www.bleepingcomputer.com/news/security/hackers-exploit-auth-bypass-flaw-in-burst-statistics-wordpress-plugin/</link>
-      <guid isPermaLink="false">4d3d238c03d0193a14f1e56b9247ec42</guid>
-      <pubDate>Thu, 14 May 2026 21:07:17 +0000</pubDate>
-      <description>Hackers are leveraging a critical authentication bypass vulnerability in the WordPress plugin Burst Statistics to obtain admin-level access to websites. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[CRIT] Cisco warns of new critical SD-WAN flaw exploited in zero-day attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-critical-sd-wan-flaw-exploited-in-zero-day-attacks/</link>
-      <guid isPermaLink="false">304c6c1d3da2f64edbfed0bd3572627e</guid>
-      <pubDate>Thu, 14 May 2026 20:09:56 +0000</pubDate>
-      <description>Cisco is warning that a critical Catalyst SD-WAN Controller authentication bypass flaw, tracked as CVE-2026-20182, was actively exploited in zero-day attacks that allowed attackers to gain administrative privileges on compromised devices. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>critical</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>actively-exploited</category>
-      <category>0day</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-0265: Authentication Bypass in Palo Alto Networks PAN-OS</title>
-      <link>https://www.rapid7.com/blog/post/etr-cve-2026-0265-authentication-bypass-in-palo-alto-networks-pan-os</link>
-      <guid isPermaLink="false">b60278119c1e5f3a8e712a10bfc59ea3</guid>
-      <pubDate>Thu, 14 May 2026 19:15:49 +0000</pubDate>
-      <description>OverviewOn May 13, 2026, Palo Alto Networks published a security advisory for CVE-2026-0265, a signature verification vulnerability that facilitates authentication bypass on PAN-OS, the operating system that most Palo Alto Networks firewalls run. This vulnerability allows a remote unauthenticated attacker with network access to bypass authentication when Cloud Authentication Service (CAS) is enabled and attached to a login interface; the vulnerable configuration is non-default but common. CVE-2026-0265 affects PAN-OS on PA-Series and VM-Series firewalls, as well as Panorama (virtual and M-Seri...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>paloalto</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>paloalto</category>
-    </item>
-    <item>
-      <title>[MED] OpenAI confirms security breach in TanStack supply chain attack</title>
-      <link>https://www.bleepingcomputer.com/news/security/openai-confirms-security-breach-in-tanstack-supply-chain-attack/</link>
-      <guid isPermaLink="false">93cdca1ef82dbdc65a774a0f758c12e2</guid>
-      <pubDate>Thu, 14 May 2026 19:07:24 +0000</pubDate>
-      <description>OpenAI says two employees&#39; devices were breached in the recent TanStack supply chain attack that impacted hundreds of npm and PyPI packages, causing the company to rotate code-signing certificates for its applications as a precaution. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>supply-chain</category>
-    </item>
-    <item>
-      <title>[HIGH] Windows 11 and Microsoft Edge hacked at Pwn2Own Berlin 2026</title>
-      <link>https://www.bleepingcomputer.com/news/security/windows-11-and-microsoft-edge-hacked-on-first-day-of-pwn2own-berlin-2026/</link>
-      <guid isPermaLink="false">a2a749c871bcd5b6a0339055bd09f7fb</guid>
-      <pubDate>Thu, 14 May 2026 18:53:50 +0000</pubDate>
-      <description>On the first day of Pwn2Own Berlin 2026, security researchers collected $523,000 in cash awards after exploiting 24 unique zero-days. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[CRIT] Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Access</title>
-      <link>https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html</link>
-      <guid isPermaLink="false">e886555638fc750c91d954e386775c4f</guid>
-      <pubDate>Thu, 14 May 2026 17:45:20 +0000</pubDate>
-      <description>Cisco has released updates to address a maximum-severity authentication bypass flaw in Catalyst SD-WAN Controller that it said has been exploited in limited attacks. The vulnerability, tracked as CVE-2026-20182, carries a CVSS score of 10.0. &#34;A vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>critical</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>actively-exploited</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[LOW] Stealer Backdoor Found in 3 Node-IPC Versions Targeting Developer Secrets</title>
-      <link>https://thehackernews.com/2026/05/stealer-backdoor-found-in-3-node-ipc.html</link>
-      <guid isPermaLink="false">b9039f55b4b847cc1c2436f0dadc32f9</guid>
-      <pubDate>Thu, 14 May 2026 17:22:43 +0000</pubDate>
-      <description>Cybersecurity researchers are sounding the alarm about what has been described as &#34;malicious activity&#34; in newly published versions of node-ipc. According to Socket and StepSecurity, three different versions of the npm package have been confirmed as malicious - node-ipc@9.1.6 node-ipc@9.2.3 node-ipc@12.0.1 &#34;Early analysis indicates that node-ipc@9.1.6, node-ipc@9.2.3, and node-ipc@12.0.1</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] ThreatsDay Bulletin: PAN-OS RCE, Mythos cURL Bug, AI Tokenizer Attacks, and 10+ Stories</title>
-      <link>https://thehackernews.com/2026/05/threatsday-bulletin-pan-os-rce-mythos.html</link>
-      <guid isPermaLink="false">3970479a85212a74c433fb760b9b7899</guid>
-      <pubDate>Thu, 14 May 2026 16:07:46 +0000</pubDate>
-      <description>Everything is still on fire. This week feels dumb in the worst way — bad links, weak checks, fake help desks, shady forum posts, and people turning supply chain attacks into some cursed little game for clout and cash. Half of it feels new. Half of it feels like crap we should have fixed years ago. The mess keeps getting louder: users get tricked, boxes get popped, tools meant for normal work</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>medium</category>
-      <category>paloalto</category>
-      <category>watch</category>
-      <category>supply-chain</category>
-      <category>paloalto</category>
-    </item>
-    <item>
-      <title>[LOW] Upcoming Speaking Engagements</title>
-      <link>https://www.schneier.com/blog/archives/2026/05/upcoming-speaking-engagements-56.html</link>
-      <guid isPermaLink="false">8bad61d7bb9d0622bb6f78a4537e0a1b</guid>
-      <pubDate>Thu, 14 May 2026 16:01:06 +0000</pubDate>
-      <description>This is a current list of where and when I am scheduled to speak: I’m giving a virtual talk on “The Security of Trust in the Age of AI,” hosted by the Financial Women’s Association of New York, at 6:00 PM ET on May 21, 2026. I’m speaking at the Potsdam Conference on National Cybersecurity at the Hasso Plattner Institut in Potsdam, Germany. The event runs June 24–25, 2026, and my talk will be the evening of June 24. I’m speaking at the Digital Humanism Conference in Vienna, Austria, on Tuesday, June 26, 2026. I’m speaking at the ...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Schneier on Security</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Defense in depth for autonomous AI agents</title>
-      <link>https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/</link>
-      <guid isPermaLink="false">db7e7e12be0755e118f9bd33b9ab81a6</guid>
-      <pubDate>Thu, 14 May 2026 16:00:00 +0000</pubDate>
-      <description>As AI agents gain autonomy, defense in depth must evolve, with application-layer design, identity, and human oversight at the center. The post Defense in depth for autonomous AI agents appeared first on Microsoft Security Blog.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-20182: Critical authentication bypass in Cisco Catalyst SD-WAN Controller (FIXED)</title>
-      <link>https://www.rapid7.com/blog/post/ve-cve-2026-20182-critical-authentication-bypass-cisco-catalyst-sd-wan-controller-fixed</link>
-      <guid isPermaLink="false">fbe56c2b16feb81e427af63fb3bef1e6</guid>
-      <pubDate>Thu, 14 May 2026 16:00:00 +0000</pubDate>
-      <description>OverviewWhile researching a critical authentication bypass vulnerability, CVE-2026-20127, which was exploited in-the-wild, Rapid7 Labs discovered a new authentication bypass vulnerability affecting Cisco Catalyst SD-WAN Controller (formerly known as vSmart), CVE-2026-20182.This new authentication bypass vulnerability affects the “vdaemon” service over DTLS (UDP port 12346), which is the same service that was vulnerable to CVE-2026-20127. The new vulnerability is not a patch bypass of CVE-2026-20127. It is a different issue located in a similar part of the “vdaemon” networking stack.Thi...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[LOW] The Dark Side of Efficiency: When Network Controllers Become &#34;God Mode&#34; for Attackers</title>
-      <link>https://www.rapid7.com/blog/post/tr-efficiencys-dark-side-network-controllers-in-god-mode-attackers-sd-wan</link>
-      <guid isPermaLink="false">d00e75484e583c72faa39bcd1dbb36c5</guid>
-      <pubDate>Thu, 14 May 2026 16:00:00 +0000</pubDate>
-      <description>Imagine you build a massive corporate campus with every security control money can buy. Blast resistant doors. Biometric scanners. Guards at every entrance. Maybe something similar to the infamous Death Star. On paper, it looks fantastic. Then, somewhere along the way, somebody decides the maintenance team needs a universal key that opens every door in the building without setting off any alarms.That certainly makes operations easier, but it also means one mistake, one compromise (like a well placed photon torpedo), or one very bad decision can unravel the whole thing.That is basically the pro...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] 18-year-old NGINX vulnerability allows DoS, potential RCE</title>
-      <link>https://www.bleepingcomputer.com/news/security/18-year-old-nginx-vulnerability-allows-dos-potential-rce/</link>
-      <guid isPermaLink="false">dfc05508222435b93f0906e3405d823f</guid>
-      <pubDate>Thu, 14 May 2026 15:43:41 +0000</pubDate>
-      <description>An 18-year-old flaw in the NGINX open-source web server, discovered using an autonomous scanning system, can be exploited for denial of service and, under certain conditions, remote code execution. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[LOW] Cyber-Enabled Cargo Crime: How Cybercrime Tradecraft is Used to Steal Freight</title>
-      <link>https://www.bleepingcomputer.com/news/security/cyber-enabled-cargo-crime-how-cybercrime-tradecraft-is-used-to-steal-freight/</link>
-      <guid isPermaLink="false">f8dc44a3076b866802d052b2a6ebbc4b</guid>
-      <pubDate>Thu, 14 May 2026 15:21:32 +0000</pubDate>
-      <description>Cargo theft now starts with phishing emails and stolen credentials, not hijackings, to reroute and steal freight from supply chains. NMFTA outlines how cyber-enabled cargo crime is changing transportation security. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Kazuar: Anatomy of a nation-state botnet</title>
-      <link>https://www.microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet/</link>
-      <guid isPermaLink="false">50bae7b8538c31698e243cf8e904a564</guid>
-      <pubDate>Thu, 14 May 2026 15:00:00 +0000</pubDate>
-      <description>Kazuar, a sophisticated malware family attributed to the Russian state actor Secret Blizzard, has been under constant development for years and continues to evolve in support of espionage-focused operations. Over time, Kazuar has expanded from a relatively traditional backdoor into a highly modular peer-to-peer (P2P) botnet ecosystem designed to enable persistent, covert access to target environments. The post Kazuar: Anatomy of a nation-state botnet appeared first on Microsoft Security Blog.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>malware</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[CRIT] When configuration becomes a vulnerability: Exploitable misconfigurations in AI apps</title>
-      <link>https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/</link>
-      <guid isPermaLink="false">31329c889af06184d29b39f9e551fba8</guid>
-      <pubDate>Thu, 14 May 2026 14:20:55 +0000</pubDate>
-      <description>Exposed UIs, weak authentication, and risky defaults could turn cloud-native AI apps on Kubernetes into potential targets by threat actors. Learn how exploitable misconfigurations lead to RCE and data leaks. The post When configuration becomes a vulnerability: Exploitable misconfigurations in AI apps appeared first on Microsoft Security Blog.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
-      <category>critical</category>
-      <category>kubernetes</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>breach</category>
-      <category>kubernetes</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] Ghostwriter Targets Ukrainian Government With Geofenced PDF Phishing, Cobalt Strike</title>
-      <link>https://thehackernews.com/2026/05/ghostwriter-targets-ukrainian.html</link>
-      <guid isPermaLink="false">51583188c84165f9fd294686024c0419</guid>
-      <pubDate>Thu, 14 May 2026 14:00:37 +0000</pubDate>
-      <description>The Belarus-aligned threat group known as Ghostwriter has been attributed to a fresh set of attacks targeting governmental organizations in Ukraine. Active since at least 2016, Ghostwriter has been linked to both cyber espionage and influence operations targeting neighboring countries, particularly Ukraine. It&#39;s also tracked under the monikers FrostyNeighbor, PUSHCHA, Storm-0257, TA445, UAC‑0057</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] KongTuke hackers now use Microsoft Teams for corporate breaches</title>
-      <link>https://www.bleepingcomputer.com/news/security/kongtuke-hackers-now-use-microsoft-teams-for-corporate-breaches/</link>
-      <guid isPermaLink="false">a10a5414419047fffb9c450b5ab8533f</guid>
-      <pubDate>Thu, 14 May 2026 12:12:40 +0000</pubDate>
-      <description>Initial access broker KongTuke has moved to Microsoft Teams for social engineering attacks, taking as little as five minutes to gain persistent access to corporate networks. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] PraisonAI CVE-2026-44338 Auth Bypass Targeted Within Hours of Disclosure</title>
-      <link>https://thehackernews.com/2026/05/praisonai-cve-2026-44338-auth-bypass.html</link>
-      <guid isPermaLink="false">426e750eee7798e8a4ed7cc51ab5b396</guid>
-      <pubDate>Thu, 14 May 2026 11:40:14 +0000</pubDate>
-      <description>Threat actors have been observed attempting to exploit a recently disclosed security vulnerability in PraisonAI, an open-source multi-agent orchestration framework, within four hours of public disclosure. The vulnerability in question is CVE-2026-44338 (CVSS score: 7.3), a case of missing authentication that exposes sensitive endpoints to anyone, potentially allowing an attacker to invoke the</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>medium</category>
-      <category>rce</category>
-      <category>auth-bypass</category>
-    </item>
-    <item>
-      <title>[LOW] How AI Hallucinations Are Creating Real Security Risks</title>
-      <link>https://thehackernews.com/2026/05/how-ai-hallucinations-are-creating-real.html</link>
-      <guid isPermaLink="false">7867cb1e3ee3a76473fac6fe3fdc7eb7</guid>
-      <pubDate>Thu, 14 May 2026 11:30:00 +0000</pubDate>
-      <description>AI hallucinations are introducing serious security risks into critical infrastructure decision-making by exploiting human trust through highly confident yet incorrect outputs. When an AI model lacks certainty, it doesn’t have a mechanism to recognize that. Instead, it generates the most probable response based on patterns in its training data, even if that response is inaccurate. These outputs</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] How Dangerous Is Anthropic’s Mythos AI?</title>
-      <link>https://www.schneier.com/blog/archives/2026/05/how-dangerous-is-anthropics-mythos-ai.html</link>
-      <guid isPermaLink="false">fb25277b758f96ca4c46a124a0fe8806</guid>
-      <pubDate>Thu, 14 May 2026 11:04:27 +0000</pubDate>
-      <description>Last month, Anthropic made a remarkable announcement about its new model, Claude Mythos Preview: it was so good at finding security vulnerabilities in software that the company would not release it to the general public. Instead, it would only be available to a select group of companies to scan and fix their own software. The announcement requires context&amp;#8212;but it contained an essential truth. While Anthropic&amp;#8217;s model is really good at finding software vulnerabilities, so are other models. The UK&amp;#8217;s AI Security Institute found that OpenAI&amp;#8217;s GPT-5.5, already generally availa...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Schneier on Security</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Dell confirms its SupportAssist software causes Windows BSOD crashes</title>
-      <link>https://www.bleepingcomputer.com/news/software/dell-confirms-its-supportassist-software-causes-windows-bsod-crashes/</link>
-      <guid isPermaLink="false">9d6011a5e516499ddbe0d8c73f76b0b7</guid>
-      <pubDate>Thu, 14 May 2026 10:03:39 +0000</pubDate>
-      <description>Dell confirmed that its SupportAssist software is causing blue-screen crashes on some Windows systems following a wave of user reports about random reboots affecting Dell devices since Friday. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Windows Zero-Days Expose BitLocker Bypasses And CTFMON Privilege Escalation</title>
-      <link>https://thehackernews.com/2026/05/windows-zero-days-expose-bitlocker.html</link>
-      <guid isPermaLink="false">f5ecd63b38effde848d55ff6127de743</guid>
-      <pubDate>Thu, 14 May 2026 09:25:50 +0000</pubDate>
-      <description>An anonymous cybersecurity researcher who disclosed three Microsoft Defender vulnerabilities has returned with two more zero-days involving a BitLocker bypass and a privilege escalation impacting Windows Collaborative Translation Framework (CTFMON). The security defects have been codenamed YellowKey and GreenPlasma, respectively, by the researcher, who goes by the online aliases Chaotic Eclipse</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>lpe</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] US charges suspected Dream Market admin arrested in Germany</title>
-      <link>https://www.bleepingcomputer.com/news/security/us-charges-suspected-dream-market-admin-arrested-in-germany/</link>
-      <guid isPermaLink="false">bc4f80296b8885e0b2727da753fe0532</guid>
-      <pubDate>Thu, 14 May 2026 08:55:46 +0000</pubDate>
-      <description>The alleged main administrator of Dream Market Incognito Market, one of the largest dark web marketplaces before its shutdown, has been indicted in the United States on money laundering charges. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] New Fragnesia Linux flaw lets attackers gain root privileges</title>
-      <link>https://www.bleepingcomputer.com/news/security/new-fragnesia-linux-flaw-lets-attackers-gain-root-privileges/</link>
-      <guid isPermaLink="false">cbb18d43074e88af8561d60088cda80c</guid>
-      <pubDate>Thu, 14 May 2026 07:34:19 +0000</pubDate>
-      <description>Linux distros are rolling out patches for a new high-severity kernel privilege escalation vulnerability (known as Fragnasia and tracked as CVE-2026-46300) that allows attackers to run malicious code as root. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>lpe</category>
-    </item>
-    <item>
-      <title>[MED] New Fragnesia Linux Kernel LPE Grants Root Access via Page Cache Corruption</title>
-      <link>https://thehackernews.com/2026/05/new-fragnesia-linux-kernel-lpe-grants.html</link>
-      <guid isPermaLink="false">3f78634f4bcd1c410db8c7cc933a470a</guid>
-      <pubDate>Thu, 14 May 2026 07:06:15 +0000</pubDate>
-      <description>Details have emerged about a new variant of the recent Dirty Frag Linux local privilege escalation (LPE) vulnerability that allows local attackers to gain root access, making it the third such bug to be identified in the kernel within a span of two weeks. Codenamed Fragnesia, the security vulnerability is tracked as CVE-2026-46300 (CVSS score: 7.8) and is rooted in the Linux kernel&#39;s XFRM</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>medium</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>lpe</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[MED] Simple bypass of the link preview function in Outlook Junk folder, (Thu, May 14th)</title>
-      <link>https://isc.sans.edu/diary/rss/32990</link>
-      <guid isPermaLink="false">b5f3f8ebeeac7f74b7326c37158ba539</guid>
-      <pubDate>Thu, 14 May 2026 06:08:25 +0000</pubDate>
-      <description>Besides serving as a place where Microsoft Outlook places suspected spam, the Outlook Junk folder has one additional function that can be quite helpful when it comes to identifying malicious messages. Any e-mail placed in this folder is stripped of all formatting, and destinations of all links included in the message become visible to the user, as you can see in the following images which show the same e-mail when it is placed in the inbox, and when it is placed in the Junk folder.&amp;#xd;</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] 18-Year-Old NGINX Rewrite Module Flaw Enables Unauthenticated RCE</title>
-      <link>https://thehackernews.com/2026/05/18-year-old-nginx-rewrite-module-flaw.html</link>
-      <guid isPermaLink="false">7863b3f77c8b4d4cb3e4cef1e09b67df</guid>
-      <pubDate>Thu, 14 May 2026 06:00:09 +0000</pubDate>
-      <description>Cybersecurity researchers have disclosed multiple security vulnerabilities impacting NGINX Plus and NGINX Open, including a critical flaw that remained undetected for 18 years. The vulnerability, discovered by depthfirst, is a heap buffer overflow issue impacting ngx_http_rewrite_module (CVE-2026-42945, CVSS v4 score: 9.2) that could allow an attacker to achieve remote code execution or cause a</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>medium</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[MED] ISC Stormcast For Thursday, May 14th, 2026 https://isc.sans.edu/podcastdetail/9932, (Thu, May 14th)</title>
-      <link>https://isc.sans.edu/diary/rss/32988</link>
-      <guid isPermaLink="false">f0542c76d3e737bee9d16e318f879644</guid>
-      <pubDate>Thu, 14 May 2026 04:20:11 +0000</pubDate>
-      <description></description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>medium</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: WPS Officeで使用される名前付きパイプに対するアクセス制御不備の脆弱性</title>
-      <link>https://jvn.jp/jp/JVN14434132/</link>
-      <guid isPermaLink="false">406be72dd1f95f25874240539acb3989</guid>
-      <pubDate>Thu, 14 May 2026 03:00:00 +0000</pubDate>
-      <description>WPS株式会社が提供するWPS Officeは、内部で使用している名前付きパイプに対するアクセス制御が不十分です。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-20182 — Cisco Catalyst SD-WAN: Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-20182</link>
-      <guid isPermaLink="false">3b06fc1429005e6fd312c304a30841cb</guid>
-      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
-      <description>Cisco Catalyst SD-WAN Controller &amp; Manager contain an authentication bypass vulnerability that allows an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.&#xA;Required: Please adhere to CISA’s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlined in CISA’s Emergency Directive 26-03 (URL listed below in Notes) and CISA’s Hunt &amp; Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.&#xA;Due: 2026-05-17</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[LOW] West Pharmaceutical says hackers stole data, encrypted systems</title>
-      <link>https://www.bleepingcomputer.com/news/security/west-pharmaceutical-says-hackers-stole-data-encrypted-systems/</link>
-      <guid isPermaLink="false">3fb68e6cce88a97a99e8226cceb351c3</guid>
-      <pubDate>Wed, 13 May 2026 22:23:31 +0000</pubDate>
-      <description>West Pharmaceutical Services disclosed that it was the target of a cyberattack that resulted in data exfiltration and system encryption. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] Iranian hackers targeted major South Korean electronics maker</title>
-      <link>https://www.bleepingcomputer.com/news/security/iranian-hackers-targeted-major-south-korean-electronics-maker/</link>
-      <guid isPermaLink="false">aefa329f5095b8e4d6eebbb247fca24f</guid>
-      <pubDate>Wed, 13 May 2026 21:59:33 +0000</pubDate>
-      <description>The Iran-linked hacking group MuddyWater (a.k.a. Seedworm, Static Kitten) launched a broad cyber-espionage campaign targeting at least nine high-profile organizations across multiple sectors and countries. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] New critical Exim mailer flaw allows remote code execution</title>
-      <link>https://www.bleepingcomputer.com/news/security/new-critical-exim-mailer-flaw-allows-remote-code-execution/</link>
-      <guid isPermaLink="false">b71d86c482737e70dd6499a89c8297a2</guid>
-      <pubDate>Wed, 13 May 2026 20:23:50 +0000</pubDate>
-      <description>A critical vulnerability affecting certain configurations of the Exim open-source mail transfer agent could be exploited by an unauthenticated remote attacker to execute arbitrary code. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] Windows BitLocker zero-day gives access to protected drives, PoC released</title>
-      <link>https://www.bleepingcomputer.com/news/security/windows-bitlocker-zero-day-gives-access-to-protected-drives-poc-released/</link>
-      <guid isPermaLink="false">6578267c48d69c7fb2c9044418bee2c2</guid>
-      <pubDate>Wed, 13 May 2026 16:37:49 +0000</pubDate>
-      <description>A cybersecurity researcher has published proof-of-concept (PoC) exploits for two unpatched Microsoft Windows vulnerabilities named YellowKey and GreenPlasma, which are a BitLocker bypass and a privilege-escalation flaw. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] Webinar tomorrow: Why security alone won&#39;t stop modern attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/webinar-tomorrow-why-security-alone-wont-stop-modern-attacks/</link>
-      <guid isPermaLink="false">bfe6b6b1e38a2124f58836731b84a1e3</guid>
-      <pubDate>Wed, 13 May 2026 15:45:56 +0000</pubDate>
-      <description>Tomorrow&#39;s webinar examines why prevention alone is no longer enough against modern cyberattacks. The session explores how organizations combine security, backups, and recovery planning to improve cyber resilience after attacks. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Microsoft fixes BitLocker recovery issue only for Windows 11 users</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bitlocker-recovery-issue-only-for-windows-11-users/</link>
-      <guid isPermaLink="false">2492a8aa82df43a8d7302066551695b9</guid>
-      <pubDate>Wed, 13 May 2026 15:42:46 +0000</pubDate>
-      <description>Microsoft has addressed a known issue causing some Windows 11 systems to boot into BitLocker recovery after installing the April 2026 Windows security updates. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] When IT Support Calls: Dissecting a ModeloRAT Campaign from Teams to Domain Compromise</title>
-      <link>https://www.rapid7.com/blog/post/tr-it-support-dissecting-modelorat-campaign-microsoft-teams-compromise</link>
-      <guid isPermaLink="false">6cabff428419a7640c34f0db8ea8d785</guid>
-      <pubDate>Wed, 13 May 2026 14:44:02 +0000</pubDate>
-      <description>OverviewAttackers do not need to break into the front door when they can convince employees to open it for them through the tools they already trust.In April 2026, Rapid7 investigated an enterprise intrusion that began with a Microsoft Teams message from a fake “IT Support” account and quickly escalated into a full compromise chain involving malware deployment, privilege escalation, credential theft, lateral movement, and exfiltration. The incident illustrates a critical risk for modern enterprises: Collaboration platforms have become part of the attack surface, and when combined with iden...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>lpe</category>
-      <category>malware</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] Microsoft fixes Windows Autopatch bug installing restricted drivers</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-windows-autopatch-bug-installing-restricted-drivers/</link>
-      <guid isPermaLink="false">ec7999e2a3193bb8d8ad7420e0571c84</guid>
-      <pubDate>Wed, 13 May 2026 14:36:09 +0000</pubDate>
-      <description>Microsoft has fixed a Windows Autopatch bug that caused driver updates restricted by administrative policies to be deployed on some Autopatch-managed Windows devices in the European Union. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] Rapid7 Partner Academy: Driving Impact with Gold Stevie Award-Winning Partner Services Certifications</title>
-      <link>https://www.rapid7.com/blog/post/c-gold-stevie-award-winning-partner-services-certifications-academy</link>
-      <guid isPermaLink="false">c943428d7d6bc3863fb09637bd96b545</guid>
-      <pubDate>Wed, 13 May 2026 13:54:10 +0000</pubDate>
-      <description>At Rapid7, our commitment to our partners is built on the foundation of the PACT (Partnering with Accountability, Consistency, and Transparency) program. Central to this mission is the Rapid7 Partner Academy, which was recently honored with a Gold Stevie Award in the 2026 American Business Awards® for Achievement in Collaboration and Partnership. This recognition underscores our dedication to providing world-class training that translates directly into partner success and customer resilience.A new era of partner-led servicesTo meet the evolving needs of the cybersecurity landscape, Rapid7 Par...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] Microsoft&#39;s MDASH AI System Finds 16 Windows Flaws Fixed in Patch Tuesday</title>
-      <link>https://thehackernews.com/2026/05/microsofts-mdash-ai-system-finds-16.html</link>
-      <guid isPermaLink="false">388b2cb53dcb052aeafc699d0b2c4440</guid>
-      <pubDate>Wed, 13 May 2026 13:46:02 +0000</pubDate>
-      <description>Microsoft has unveiled a new multi-model artificial intelligence (AI)-driven system called MDASH to facilitate vulnerability discovery and remediation at scale, adding that it&#39;s being tested by some customers as part of a limited private preview. MDASH, short for multi-model agentic scanning harness, is designed as a model-agnostic system that uses bespoke AI agents for different vulnerability</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] Azerbaijani Energy Firm Hit by Repeated Microsoft Exchange Exploitation</title>
-      <link>https://thehackernews.com/2026/05/azerbaijani-energy-firm-hit-by-repeated.html</link>
-      <guid isPermaLink="false">71217be0757e75a615caf7ce6aaf1d58</guid>
-      <pubDate>Wed, 13 May 2026 13:00:00 +0000</pubDate>
-      <description>A threat actor with affiliations to China has been linked to a &#34;multi-wave intrusion&#34; targeting an unnamed Azerbaijani oil and gas company between late December 2025 and late February 2026, marking an expansion of its targeting. The activity has been attributed by Bitdefender with moderate-to-high confidence to a hacking group known as FamousSparrow (aka UAT-9244), which shares some level of</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] Foxconn confirms cyberattack claimed by Nitrogen ransomware gang</title>
-      <link>https://www.bleepingcomputer.com/news/security/electronics-giant-foxconn-confirms-cyberattack-on-north-american-factories/</link>
-      <guid isPermaLink="false">e59cea6ecec9131569b6b4861b0ff191</guid>
-      <pubDate>Wed, 13 May 2026 12:49:54 +0000</pubDate>
-      <description>Foxconn, the world&#39;s largest electronics manufacturer, says some of its North American factories are now working to resume normal operations after a cyberattack. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>ransomware</category>
-    </item>
-    <item>
-      <title>[LOW] 73 Seconds to Breach, 24 Hours to Patch: The Case for Autonomous Validation</title>
-      <link>https://www.bleepingcomputer.com/news/security/73-seconds-to-breach-24-hours-to-patch-the-case-for-autonomous-validation/</link>
-      <guid isPermaLink="false">36645c722f7764146e42b702b12caaaf</guid>
-      <pubDate>Wed, 13 May 2026 12:30:38 +0000</pubDate>
-      <description>Attackers can compromise systems in minutes while patching and response still take hours or days. Picus Security breaks down why autonomous validation is becoming critical for modern defense strategies. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Microsoft says some users can&#39;t install Office on Windows 365 devices</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-says-some-users-cant-install-office-on-windows-365-devices/</link>
-      <guid isPermaLink="false">2e714329d0c58ad40fefcb04cbe5e7a1</guid>
-      <pubDate>Wed, 13 May 2026 11:53:54 +0000</pubDate>
-      <description>Microsoft says some customers are experiencing issues downloading and installing Office on their Windows 365 devices. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] [Webinar] How Modern Attack Paths Cross Code, Pipelines, and Cloud</title>
-      <link>https://thehackernews.com/2026/05/webinar-why-your-appsec-tools-miss.html</link>
-      <guid isPermaLink="false">239ab31eebf9cbdc3aedd3e94b694544</guid>
-      <pubDate>Wed, 13 May 2026 11:52:43 +0000</pubDate>
-      <description>TL;DR: Stop chasing thousands of &#34;toast&#34; alerts. Join experts from Wiz to learn how hackers connect tiny flaws to build a &#34;Lethal Chain&#34; to your data—and how to break it. Register for the Strategic Briefing Here. Most security tools work like a smoke alarm that goes off every time you burn a piece of toast. You get so many alerts that you eventually start to ignore them. The real danger? While</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] Most Remediation Programs Never Confirm the Fix Actually Worked</title>
-      <link>https://thehackernews.com/2026/05/most-remediation-programs-never-confirm.html</link>
-      <guid isPermaLink="false">6a5a5b3122c41f85bb56774a8cef67b6</guid>
-      <pubDate>Wed, 13 May 2026 11:30:00 +0000</pubDate>
-      <description>Security teams have never had better visibility into their environments and never been worse at confirming what they fix stays fixed. Mandiant&#39;s M-Trends 2026 report puts the mean time to exploit at an estimated negative seven days. The Verizon 2025 DBIR puts median time to remediate edge device vulnerabilities at 32 days. These numbers have understandably driven the industry toward a clear</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] OpenAI’s GPT-5.5 is as Good as Mythos at Finding Security Vulnerabilities</title>
-      <link>https://www.schneier.com/blog/archives/2026/05/openais-gpt-5-5-is-as-good-as-mythos-at-finding-security-vulnerabilities.html</link>
-      <guid isPermaLink="false">321ca1b47e59d5472ac287966d88c427</guid>
-      <pubDate>Wed, 13 May 2026 11:03:03 +0000</pubDate>
-      <description>The UK&amp;#8217;s AI Security Institute evaluated GPT-5.5&amp;#8217;s ability to find security vulnerabilities, and found that it is comparable to Claude Mythos. Note that the OpenAI model is generally available. Here is the Institute&amp;#8217;s evaluation of Mythos. And here is an analysis of a smaller, cheaper model. It requires more scaffolding from the prompter, but it is also just as good.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Schneier on Security</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[HIGH] Microsoft Patches 138 Vulnerabilities, Including DNS and Netlogon RCE Flaws</title>
-      <link>https://thehackernews.com/2026/05/microsoft-patches-138-vulnerabilities.html</link>
-      <guid isPermaLink="false">7e615564b47add1298873f553e5f3b34</guid>
-      <pubDate>Wed, 13 May 2026 10:36:10 +0000</pubDate>
-      <description>Microsoft on Tuesday released patches for 138 security vulnerabilities spanning its product portfolio, although none of them have been listed as publicly known or under active attack. Of the 138 flaws, 30 are rated Critical, 104 are rated Important, three are rated Moderate, and one is rated Low in severity. As many as 61 vulnerabilities are classified as privilege escalation bugs, followed by</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>lpe</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] GemStuffer Abuses 150+ RubyGems to Exfiltrate Scraped U.K. Council Portal Data</title>
-      <link>https://thehackernews.com/2026/05/gemstuffer-abuses-150-rubygems-to.html</link>
-      <guid isPermaLink="false">0b3cb7af8e9722788e314d822e3c1436</guid>
-      <pubDate>Wed, 13 May 2026 08:08:54 +0000</pubDate>
-      <description>Cybersecurity researchers are calling attention to a new campaign dubbed GemStuffer that has targeted the RubyGems repository with more than 150 gems that use the registry as a data exfiltration channel rather than for malware distribution. &#34;The packages do not appear designed for mass developer compromise,&#34; Socket said. &#34;Many have little or no download activity, and the payloads are repetitive,</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: GUARDIANWALL MailSuiteにおけるスタックベースのバッファオーバーフローの脆弱性</title>
-      <link>https://jvn.jp/jp/JVN35567473/</link>
-      <guid isPermaLink="false">3c95bca6d4207416411f88b821e46935</guid>
-      <pubDate>Wed, 13 May 2026 07:15:00 +0000</pubDate>
-      <description>キヤノンマーケティングジャパン株式会社が提供するGUARDIANWALL MailSuiteには、スタックベースのバッファオーバーフローの脆弱性が存在します。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] A 0-click exploit chain for the Pixel 10: When a Door Closes, a Window Opens</title>
-      <link>https://projectzero.google/2026/05/pixel-10-exploit.html</link>
-      <guid isPermaLink="false">627a3cc7d0458bd988b6fb26431c017c</guid>
-      <pubDate>Wed, 13 May 2026 07:00:00 +0000</pubDate>
-      <description>We recently published an exploit chain for the Google Pixel 9 that demonstrated it was possible to go from a zero-click context to root on Android in just two exploits. The Dolby 0-click vulnerability existed across all of Android, until it was patched in January 2026. While we had an exploit chain for the Pixel 9, we wanted to see if it was possible to write a similar exploit chain for Pixel 10. Updating the Dolby Exploit Altering our exploit for CVE-2025-54957 was fairly straightforward. The majority of needed changes involved updating offsets calculated for the specific version of the libra...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Google Project Zero</source>
-      <category>medium</category>
-    </item>
-    <item>
-      <title>[LOW] Android Adds Intrusion Logging for Sophisticated Spyware Forensics</title>
-      <link>https://thehackernews.com/2026/05/android-adds-intrusion-logging-for.html</link>
-      <guid isPermaLink="false">691d4435e00c0b5891d91fd8c13b7a80</guid>
-      <pubDate>Wed, 13 May 2026 06:55:42 +0000</pubDate>
-      <description>Google on Tuesday unveiled a new opt-in Android feature called Intrusion Logging for storing forensic logs to better analyze sophisticated spyware attacks. Intrusion Logging, available as part of Advanced Protection Mode, enables &#34;persistent and privacy-preserving forensics logging to allow for investigation of devices in the event of a suspected compromise,&#34; the company said. The feature, it</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] &amp;#x5b;GUEST DIARY&amp;#x5d; Tearing apart website fraud to see how it works., (Wed, May 13th)</title>
-      <link>https://isc.sans.edu/diary/rss/32958</link>
-      <guid isPermaLink="false">b46f072d5388e14cdd6a74c8a5dd44c8</guid>
-      <pubDate>Wed, 13 May 2026 06:29:07 +0000</pubDate>
-      <description>&amp;&amp;#x23&amp;#x3b;x26&amp;#x3b;&amp;#x23&amp;#x3b;x5b&amp;#x3b;This is a Guest Diary by Joshua Nikolson, an ISC Intern and part of the SANS.edu Bachelor&amp;&amp;#x23&amp;#x3b;x26&amp;#x3b;&amp;#x23&amp;#x3b;39&amp;#x3b;s degree in Applied Cybersecurity (BACS) program.&amp;#x5d;&amp;#xd;</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>medium</category>
-    </item>
-    <item>
-      <title>[MED] ISC Stormcast For Wednesday, May 13th, 2026 https://isc.sans.edu/podcastdetail/9930, (Wed, May 13th)</title>
-      <link>https://isc.sans.edu/diary/rss/32984</link>
-      <guid isPermaLink="false">229a34e3b5255637b18936c85ed8e8b6</guid>
-      <pubDate>Wed, 13 May 2026 03:05:02 +0000</pubDate>
-      <description></description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>medium</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: Androidアプリ「あんしんフィルター for au」における重要情報の平文送信の脆弱性</title>
-      <link>https://jvn.jp/jp/JVN24167657/</link>
-      <guid isPermaLink="false">82184ce2c9a818a97e0b223097e266a6</guid>
-      <pubDate>Wed, 13 May 2026 03:00:15 +0000</pubDate>
-      <description>ＫＤＤＩ株式会社が提供するAndroidアプリ「あんしんフィルター for au」には、重要情報の平文送信の脆弱性が存在します。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: Bytello Share（Windows版）のEXE形式インストーラにおけるDLL読み込みに関する脆弱性</title>
-      <link>https://jvn.jp/jp/JVN98871848/</link>
-      <guid isPermaLink="false">7a3c1d8915e85f441c7e25dd44a3ee55</guid>
-      <pubDate>Wed, 13 May 2026 03:00:00 +0000</pubDate>
-      <description>Bytelloが提供するBytello Share（Windows版）のEXE形式インストーラにはDLL読み込みに関する脆弱性が存在します。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: Intel製品に対するアップデート（2026年5月）</title>
-      <link>https://jvn.jp/vu/JVNVU96777324/</link>
-      <guid isPermaLink="false">5566c224308b3730968a1851ef02f162</guid>
-      <pubDate>Wed, 13 May 2026 02:15:00 +0000</pubDate>
-      <description>Intelから各製品向けのアドバイザリが公表されました。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Proxying the Unproxyable&amp;#x3f; Sending EXE traffic to a Proxy, (Wed, May 13th)</title>
-      <link>https://isc.sans.edu/diary/rss/32982</link>
-      <guid isPermaLink="false">ec5cc6000c80cd42a9bd38cabd1f44ad</guid>
-      <pubDate>Wed, 13 May 2026 01:20:35 +0000</pubDate>
-      <description>.. if &amp;#xe2;&amp;#x80;&amp;#x9c;unproxyable&amp;#xe2;&amp;#x80;&amp;#x9d; is a word that is ..&amp;#xd;</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>medium</category>
-    </item>
-    <item>
-      <title>[HIGH] Patch Tuesday - May 2026</title>
-      <link>https://www.rapid7.com/blog/post/em-patch-tuesday-may-2026</link>
-      <guid isPermaLink="false">00c45790234cb95d8413822d7f25f419</guid>
-      <pubDate>Wed, 13 May 2026 00:22:19 +0000</pubDate>
-      <description>Microsoft is publishing 137 vulnerabilities on May 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild or public disclosure for any of these vulnerabilities. So far this month, Microsoft has provided patches to address 133 browser vulnerabilities, which are not included in the Patch Tuesday count above.Windows Netlogon: critical RCEAnyone responsible for securing a domain controller should prioritize remediation of CVE-2026-41089, which is a critical stack-based buffer overflow in Windows Netlogon with a CVSS v3 base score of 9.8. Exploitation leads to execution in the conte...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: Siemens製品に対するアップデート（2026年5月）</title>
-      <link>https://jvn.jp/vu/JVNVU99296478/</link>
-      <guid isPermaLink="false">e4bfdc8e6aad0f381e9473aa87590da0</guid>
-      <pubDate>Wed, 13 May 2026 00:15:15 +0000</pubDate>
-      <description>Siemensから各製品向けのアドバイザリが公表されました。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: CISA ICS Advisory / ICS Medical Advisory（2026年05月12日）</title>
-      <link>https://jvn.jp/vu/JVNVU97068023/</link>
-      <guid isPermaLink="false">cb09c68e22e04605d31d88203b13dfa7</guid>
-      <pubDate>Wed, 13 May 2026 00:15:00 +0000</pubDate>
-      <description>2026年05月12日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] US govt seeks Instructure testimony on massive Canvas cyberattack</title>
-      <link>https://www.bleepingcomputer.com/news/security/us-govt-seeks-instructure-testimony-on-massive-canvas-cyberattack/</link>
-      <guid isPermaLink="false">689f36384932a9dd6bf8f71117bd0988</guid>
-      <pubDate>Tue, 12 May 2026 23:09:55 +0000</pubDate>
-      <description>The U.S. House Committee on Homeland Security is calling on Instructure executives to testify about two cyberattacks by the ShinyHunters extortion group that targeted the company&#39;s Canvas platform, allowing threat actors to steal student data and disrupt schools during final exams. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Accelerating detection engineering using AI-assisted synthetic attack logs generation</title>
-      <link>https://www.microsoft.com/en-us/security/blog/2026/05/12/accelerating-detection-engineering-using-ai-assisted-synthetic-attack-logs-generation/</link>
-      <guid isPermaLink="false">f1f8c4f71283dae7833ce3264f392c0c</guid>
-      <pubDate>Tue, 12 May 2026 22:53:09 +0000</pubDate>
-      <description>What if you could generate realistic attack telemetry on demand? Explore research methods that translate attacker behaviors (TTPs) into synthetic logs that can trigger detections at scale and without sensitive data. The post Accelerating detection engineering using AI-assisted synthetic attack logs generation appeared first on Microsoft Security Blog.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] Defense at AI speed: Microsoft’s new multi-model agentic security system tops leading industry benchmark</title>
-      <link>https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/</link>
-      <guid isPermaLink="false">c6a6bc0419b40c2ebbc63afc65a1cb78</guid>
-      <pubDate>Tue, 12 May 2026 22:00:00 +0000</pubDate>
-      <description>Today Microsoft is announcing a major step forward in AI-powered cyber defense: a new multi-model agentic scanning harness (codenamed MDASH). The post Defense at AI speed: Microsoft’s new multi-model agentic security system tops leading industry benchmark appeared first on Microsoft Security Blog.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] Patch Tuesday, May 2026 Edition</title>
-      <link>https://krebsonsecurity.com/2026/05/patch-tuesday-may-2026-edition/</link>
-      <guid isPermaLink="false">3c54c07bbb48a20fff0e90021b135edd</guid>
-      <pubDate>Tue, 12 May 2026 21:46:45 +0000</pubDate>
-      <description>Artificial intelligence platforms may be just as susceptible to social engineering as human beings, but they are proving remarkably good at finding security vulnerabilities in human-made computer code. That reality is on full display this month with some of the more widely-used software makers -- including Apple, Google, Microsoft, Mozilla and Oracle -- fixing near record volumes of security bugs, and/or quickening the tempo of their patch releases.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Krebs on Security</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>firefox</category>
-      <category>oracle</category>
-      <category>watch</category>
-      <category>microsoft</category>
-      <category>firefox</category>
-      <category>oracle</category>
-    </item>
-    <item>
-      <title>[LOW] UK fines water supplier $1.3M for exposing data of 664k customers</title>
-      <link>https://www.bleepingcomputer.com/news/security/uk-fines-water-supplier-13m-for-exposing-data-of-664k-customers/</link>
-      <guid isPermaLink="false">4d868c6eabd83e797cd072644fc77b8e</guid>
-      <pubDate>Tue, 12 May 2026 20:17:19 +0000</pubDate>
-      <description>The Information Commissioner&#39;s Office has fined South Staffordshire Water Plc and parent company South Staffordshire Plc £963,900 ($1.3 million) over a cyberattack that exposed the personal data of 663,887 customers and employees. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] Webinar: Fixing the gaps in network incident response</title>
-      <link>https://www.bleepingcomputer.com/news/security/webinar-fixing-the-gaps-in-network-incident-response/</link>
-      <guid isPermaLink="false">872f351ef68db79c1ba883504a6f4080</guid>
-      <pubDate>Tue, 12 May 2026 19:46:04 +0000</pubDate>
-      <description>IT teams often struggle to quickly coordinate responses across disparate systems during network incidents. This upcoming webinar explores how automation and AI-assisted workflows can reduce response times and help prevent outages. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] Signal adds security warnings for social engineering, phishing attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/signal-adds-security-warnings-for-social-engineering-phishing-attacks/</link>
-      <guid isPermaLink="false">80272b8e3be4441cf9a7808d5acbd084</guid>
-      <pubDate>Tue, 12 May 2026 19:40:31 +0000</pubDate>
-      <description>Signal has introduced new in-app confirmations and warning messages as additional safeguards against phishing and social engineering attempts that could lead to various forms of fraud. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Microsoft releases Windows 10 KB5087544 extended security update</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-10-kb5087544-extended-security-update/</link>
-      <guid isPermaLink="false">7e12b9a968bdf1f8c59b06731ecf4188</guid>
-      <pubDate>Tue, 12 May 2026 18:58:34 +0000</pubDate>
-      <description>Microsoft has released the Windows 10 KB5087544 extended security update to fix the May 2026 Patch Tuesday vulnerabilities and resolve an issue with the new Remote Desktop warnings. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] Microsoft May 2026 Patch Tuesday, (Tue, May 12th)</title>
-      <link>https://isc.sans.edu/diary/rss/32980</link>
-      <guid isPermaLink="false">d15921d8a849468d0c385e9f5f7dec90</guid>
-      <pubDate>Tue, 12 May 2026 18:29:36 +0000</pubDate>
-      <description>Today&amp;&amp;#x23&amp;#x3b;x26&amp;#x3b;&amp;#x23&amp;#x3b;39&amp;#x3b;s Microsoft patch Tuesday fixes 137 different vulnerabilities. In addition, the update addresses 137 Chromium-related issues affecting Microsoft Edge.&amp;#xd;</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>microsoft</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] Fortinet warns of critical RCE flaws in FortiSandbox and FortiAuthenticator</title>
-      <link>https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-rce-flaws-in-fortisandbox-and-fortiauthenticator/</link>
-      <guid isPermaLink="false">73c488bd549cf316c594e596a8cebab7</guid>
-      <pubDate>Tue, 12 May 2026 18:23:09 +0000</pubDate>
-      <description>Fortinet has released security patches for two critical vulnerabilities in FortiSandbox and FortiAuthenticator that could enable attackers to run commands or arbitrary code. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[MED] [CVSS 5.5 MEDIUM] CVE-2026-44279 — A improper export of android application components vulnerability in Fortinet Fo…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44279</link>
-      <guid isPermaLink="false">836cf2f4d9feab412668cc6eeebf04d8</guid>
-      <pubDate>Tue, 12 May 2026 18:17:30 +0000</pubDate>
-      <description>A improper export of android application components vulnerability in Fortinet FortiTokenAndroid 6.2 all versions, FortiTokenAndroid 6.1 all versions, FortiTokenAndroid 5.2 all versions may allow attacker to improper access control via &lt;insert attack vector here&gt;</description>
+      <title>[MED] [CVSS 5.4 MEDIUM] CVE-2021-47981 — Quick.CMS 6.7 contains a cross-site scripting vulnerability in the sliders form …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47981</link>
+      <guid isPermaLink="false">341637aef4ffa264588d230029652ec5</guid>
+      <pubDate>Sat, 16 May 2026 16:16:23 +0000</pubDate>
+      <description>Quick.CMS 6.7 contains a cross-site scripting vulnerability in the sliders form that allows authenticated attackers to inject malicious scripts by submitting XSS payloads through the sDescription parameter. Attackers can craft CSRF forms targeting the admin.php?p=sliders-form endpoint to execute arbitrary JavaScript in victim browsers when the form is submitted.</description>
       <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>medium</category>
-      <category>fortinet</category>
+      <category>xss</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.1 HIGH] CVE-2021-47980 — Fuel CMS 1.4.13 contains a blind SQL injection vulnerability that allows authent…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47980</link>
+      <guid isPermaLink="false">cbc26e934600baddb7002d0fc6d814ed</guid>
+      <pubDate>Sat, 16 May 2026 16:16:23 +0000</pubDate>
+      <description>Fuel CMS 1.4.13 contains a blind SQL injection vulnerability that allows authenticated attackers to manipulate database queries by injecting SQL code through the &#39;col&#39; parameter in the Activity Log interface. Attackers can send requests to the logs endpoint with malicious SQL payloads in the &#39;col&#39; parameter to extract database information based on response time delays.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.8 HIGH] CVE-2021-47979 — WordPress Plugin Backup and Restore 1.0.3 contains an arbitrary file deletion vu…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47979</link>
+      <guid isPermaLink="false">583118ef7452a67fe3a169d2ac1e116c</guid>
+      <pubDate>Sat, 16 May 2026 16:16:23 +0000</pubDate>
+      <description>WordPress Plugin Backup and Restore 1.0.3 contains an arbitrary file deletion vulnerability that allows authenticated attackers to delete files by manipulating parameters in AJAX requests. Attackers can send POST requests to admin-ajax.php with crafted file_name and folder_name parameters to delete arbitrary files from the WordPress installation directory.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>wordpress</category>
       <category>watch</category>
-      <category>fortinet</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.2 MEDIUM] CVE-2021-47978 — ProcessMaker 3.5.4 contains a local file inclusion vulnerability that allows una…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47978</link>
+      <guid isPermaLink="false">e18313aa4f050732be859d6742748c98</guid>
+      <pubDate>Sat, 16 May 2026 16:16:23 +0000</pubDate>
+      <description>ProcessMaker 3.5.4 contains a local file inclusion vulnerability that allows unauthenticated attackers to read arbitrary files by exploiting improper path traversal validation. Attackers can send requests with directory traversal sequences to access sensitive system files like /etc/passwd without authentication.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>path-traversal</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2021-47977 — WordPress Plugin Anti-Malware Security and Bruteforce Firewall 4.20.59 contains …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47977</link>
+      <guid isPermaLink="false">6acc7300504d17fe40c8dc7d74a0927f</guid>
+      <pubDate>Sat, 16 May 2026 16:16:23 +0000</pubDate>
+      <description>WordPress Plugin Anti-Malware Security and Bruteforce Firewall 4.20.59 contains a directory traversal vulnerability that allows unauthenticated attackers to read arbitrary files by manipulating the file parameter. Attackers can send requests to the duplicator_download action via admin-ajax.php with path traversal sequences to access sensitive system files outside the intended directory.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>path-traversal</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>malware</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2021-47976 — TextPattern CMS 4.9.0-dev contains a remote code execution vulnerability that al…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47976</link>
+      <guid isPermaLink="false">a5aada3bc8c78079e1aaec01e992b202</guid>
+      <pubDate>Sat, 16 May 2026 16:16:23 +0000</pubDate>
+      <description>TextPattern CMS 4.9.0-dev contains a remote code execution vulnerability that allows authenticated attackers to upload arbitrary PHP files by exploiting the plugin upload functionality. Attackers can authenticate, retrieve a CSRF token from the plugin event page, and upload malicious PHP files to the textpattern/tmp/ directory for code execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.2 HIGH] CVE-2021-47975 — WP Learn Manager 1.1.2 contains a stored cross-site scripting vulnerability that…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47975</link>
+      <guid isPermaLink="false">911f62f49f56c897b696150452bc13da</guid>
+      <pubDate>Sat, 16 May 2026 16:16:22 +0000</pubDate>
+      <description>WP Learn Manager 1.1.2 contains a stored cross-site scripting vulnerability that allows unauthenticated attackers to inject malicious scripts through the fieldtitle parameter. Attackers can submit POST requests to the jslm_fieldordering page with XSS payloads in the fieldtitle field to execute arbitrary JavaScript when administrators view the field ordering interface.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2021-47974 — VX Search 13.5.28 contains an unquoted service path vulnerability in both VX Sea…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47974</link>
+      <guid isPermaLink="false">30d4b45d45350cecd1fde419e475c5d5</guid>
+      <pubDate>Sat, 16 May 2026 16:16:22 +0000</pubDate>
+      <description>VX Search 13.5.28 contains an unquoted service path vulnerability in both VX Search Server and VX Search Enterprise services that allows local attackers to escalate privileges. Attackers can place malicious executables in unquoted path directories like C:\Program Files\VX Search to execute arbitrary code with LocalSystem privileges when services restart.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.5 HIGH] CVE-2021-47973 — Sticky Notes Widget 3.0.6 contains a denial of service vulnerability that allows…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47973</link>
+      <guid isPermaLink="false">2d1f164cb53bcbeaaae8b8f3f0bfbf17</guid>
+      <pubDate>Sat, 16 May 2026 16:16:22 +0000</pubDate>
+      <description>Sticky Notes Widget 3.0.6 contains a denial of service vulnerability that allows attackers to crash the application by pasting excessively long character strings into note fields. Attackers can generate a payload containing 350000 repeated characters and paste it twice into a new note to trigger an application crash on iOS devices.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.5 HIGH] CVE-2021-47972 — Sticky Notes &amp; Color Widgets 1.4.2 contains a denial of service vulnerability th…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47972</link>
+      <guid isPermaLink="false">2ca22880e8b030d4f1ca3876e4736e06</guid>
+      <pubDate>Sat, 16 May 2026 16:16:22 +0000</pubDate>
+      <description>Sticky Notes &amp; Color Widgets 1.4.2 contains a denial of service vulnerability that allows attackers to crash the application by creating notes with excessively long character strings. Attackers can paste large payloads of repeated characters into note fields to trigger application crashes and make the application stop responding.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.5 HIGH] CVE-2021-47971 — My Notes Safe 5.3 contains a denial of service vulnerability that allows attacke…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47971</link>
+      <guid isPermaLink="false">4465dede91741f5b6b25ba48f6bbf4fa</guid>
+      <pubDate>Sat, 16 May 2026 16:16:22 +0000</pubDate>
+      <description>My Notes Safe 5.3 contains a denial of service vulnerability that allows attackers to crash the application by pasting excessively long character strings into note fields. Attackers can generate a payload containing 350000 repeated characters and paste it twice into a new note to trigger an application crash.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.5 HIGH] CVE-2021-47970 — Macaron Notes 5.5 contains a denial of service vulnerability that allows attacke…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47970</link>
+      <guid isPermaLink="false">062a02c320be95cf507de8d6dc5c470b</guid>
+      <pubDate>Sat, 16 May 2026 16:16:22 +0000</pubDate>
+      <description>Macaron Notes 5.5 contains a denial of service vulnerability that allows attackers to crash the application by creating notes with excessively long character strings. Attackers can generate a payload containing 350000 repeated characters and paste it into a note field to trigger application crash and stop functionality.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.5 HIGH] CVE-2021-47969 — Color Notes 1.4 contains a denial of service vulnerability that allows attackers…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47969</link>
+      <guid isPermaLink="false">1c7abd0f4ebddf3fccb14672dcb60e5f</guid>
+      <pubDate>Sat, 16 May 2026 16:16:22 +0000</pubDate>
+      <description>Color Notes 1.4 contains a denial of service vulnerability that allows attackers to crash the application by pasting excessively long character strings into note fields. Attackers can generate a payload containing 350,000 repeated characters and paste it twice into a new note to cause the application to stop responding.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.4 MEDIUM] CVE-2021-47957 — Cookie Law Bar 1.2.1 contains a stored cross-site scripting vulnerability that a…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47957</link>
+      <guid isPermaLink="false">5d1e40c0b37bed2609b69f08104edabe</guid>
+      <pubDate>Sat, 16 May 2026 16:16:22 +0000</pubDate>
+      <description>Cookie Law Bar 1.2.1 contains a stored cross-site scripting vulnerability that allows authenticated attackers to inject malicious scripts by submitting unsanitized input to the Bar Message field. Attackers can inject script payloads through the plugin settings page that execute in the browsers of all WordPress users viewing the site, enabling cookie theft and sensitive data exfiltration.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.2 HIGH] CVE-2021-47956 — EgavilanMedia PHPCRUD 1.0 contains an SQL injection vulnerability that allows un…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47956</link>
+      <guid isPermaLink="false">a13afe091cb9b1b86f69d9e684a52582</guid>
+      <pubDate>Sat, 16 May 2026 16:16:21 +0000</pubDate>
+      <description>EgavilanMedia PHPCRUD 1.0 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the firstname parameter. Attackers can send POST requests to insert.php with malicious firstname values to extract sensitive database information.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.4 MEDIUM] CVE-2021-47955 — CouchCMS 2.2.1 contains a cross-site scripting vulnerability that allows authent…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47955</link>
+      <guid isPermaLink="false">dcf5a1f588d5277c28ebe5e17871ddb3</guid>
+      <pubDate>Sat, 16 May 2026 16:16:21 +0000</pubDate>
+      <description>CouchCMS 2.2.1 contains a cross-site scripting vulnerability that allows authenticated attackers to execute arbitrary JavaScript by uploading malicious SVG files through the file upload functionality. Attackers can upload SVG files containing embedded script tags to the browse.php endpoint, which are then executed in users&#39; browsers when the files are accessed or previewed.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.2 HIGH] CVE-2021-47954 — LayerBB 1.1.4 contains an SQL injection vulnerability that allows unauthenticate…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47954</link>
+      <guid isPermaLink="false">047b1db6efcbc2e3cf052b5e71061e5a</guid>
+      <pubDate>Sat, 16 May 2026 16:16:21 +0000</pubDate>
+      <description>LayerBB 1.1.4 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the search_query parameter. Attackers can send POST requests to /search.php with malicious search_query values using CASE WHEN statements to extract sensitive database information.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2021-47952 — python jsonpickle 2.0.0 contains a remote code execution vulnerability that allo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47952</link>
+      <guid isPermaLink="false">b4b603debe7c7b6be81b5953411ff1fa</guid>
+      <pubDate>Sat, 16 May 2026 16:16:21 +0000</pubDate>
+      <description>python jsonpickle 2.0.0 contains a remote code execution vulnerability that allows attackers to execute arbitrary Python commands by deserializing malicious JSON payloads containing py/repr objects. Attackers can craft JSON strings with py/repr directives that invoke the eval function during deserialization to execute system commands and arbitrary code.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>deserialization</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.5 HIGH] CVE-2021-47942 — Home Assistant Community Store (HACS) 1.10.0 contains a path traversal vulnerabi…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47942</link>
+      <guid isPermaLink="false">2c7c1b39dc0c312e5c6172cf53b3c1ca</guid>
+      <pubDate>Sat, 16 May 2026 16:16:21 +0000</pubDate>
+      <description>Home Assistant Community Store (HACS) 1.10.0 contains a path traversal vulnerability that allows unauthenticated attackers to read sensitive files by traversing directories via the /hacsfiles/ endpoint. Attackers can retrieve the .storage/auth file containing user credentials and refresh tokens, then craft valid JWT tokens to gain administrative access to Home Assistant instances.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>path-traversal</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.3 MEDIUM] CVE-2021-47934 — MyBB Timeline Plugin 1.0 contains cross-site scripting vulnerabilities that allo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47934</link>
+      <guid isPermaLink="false">78a6c9b916d4ce9563aff9de4b8ae8f4</guid>
+      <pubDate>Sat, 16 May 2026 16:16:21 +0000</pubDate>
+      <description>MyBB Timeline Plugin 1.0 contains cross-site scripting vulnerabilities that allow attackers to inject malicious scripts through thread titles, post content, and user profile fields like Location and Bio. Attackers can also exploit a cross-site request forgery vulnerability in the timeline.php profile action to change a user&#39;s cover picture by crafting malicious forms that execute when victims visit affected profiles.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.8 HIGH] CVE-2020-37247 — Kite 4.2.0.1 U1 contains an unquoted service path vulnerability in the KiteServi…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37247</link>
+      <guid isPermaLink="false">78f6361f049e3d52b9c21a34578c31ab</guid>
+      <pubDate>Sat, 16 May 2026 16:16:21 +0000</pubDate>
+      <description>Kite 4.2.0.1 U1 contains an unquoted service path vulnerability in the KiteService Windows service that allows local attackers to escalate privileges by exploiting the service binary path. Attackers can place a malicious executable in the Program Files directory to be executed with LocalSystem privileges when the service starts.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.2 MEDIUM] CVE-2020-37246 — Supsystic Backup 2.3.9 contains a local file inclusion vulnerability that allows…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37246</link>
+      <guid isPermaLink="false">e9e6a91c41a53188b47c2ebca725f19e</guid>
+      <pubDate>Sat, 16 May 2026 16:16:20 +0000</pubDate>
+      <description>Supsystic Backup 2.3.9 contains a local file inclusion vulnerability that allows unauthenticated attackers to read and delete arbitrary files by manipulating the download path parameter. Attackers can modify the download parameter in admin.php requests with directory traversal sequences to access sensitive files like /etc/passwd or delete files via the removeAction parameter.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>path-traversal</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.5 HIGH] CVE-2020-37245 — Supsystic Digital Publications 1.6.9 contains a path traversal vulnerability in …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37245</link>
+      <guid isPermaLink="false">cd95666153971ff49af3d6230dc19cfd</guid>
+      <pubDate>Sat, 16 May 2026 16:16:20 +0000</pubDate>
+      <description>Supsystic Digital Publications 1.6.9 contains a path traversal vulnerability in the Folder input field that allows attackers to access files outside the web root by injecting directory traversal sequences. Additionally, the plugin fails to sanitize input fields in publication settings, allowing stored cross-site scripting attacks through script injection in parameters like Area Width and Publication Width that execute when publications are viewed or edited.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+      <category>path-traversal</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.2 HIGH] CVE-2020-37244 — Supsystic Membership 1.4.7 contains an SQL injection vulnerability that allows u…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37244</link>
+      <guid isPermaLink="false">7ed4f56b99f03077fd821872f04c1249</guid>
+      <pubDate>Sat, 16 May 2026 16:16:20 +0000</pubDate>
+      <description>Supsystic Membership 1.4.7 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the &#39;search&#39; and &#39;sidx&#39; parameters. Attackers can send GET requests to the badges module with crafted payloads to extract sensitive database information using time-based blind or UNION-based SQL injection techniques.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.2 HIGH] CVE-2020-37243 — Supsystic Pricing Table 1.8.7 contains an SQL injection vulnerability in the &#39;si…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37243</link>
+      <guid isPermaLink="false">7d056221c40d81b41d4b55e489843cfc</guid>
+      <pubDate>Sat, 16 May 2026 16:16:20 +0000</pubDate>
+      <description>Supsystic Pricing Table 1.8.7 contains an SQL injection vulnerability in the &#39;sidx&#39; GET parameter that allows unauthenticated attackers to execute arbitrary SQL queries through the getListForTbl action. The plugin also contains stored cross-site scripting vulnerabilities in the &#39;Edit name&#39; and &#39;Edit HTML&#39; fields that execute malicious scripts when viewing pricing tables.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+      <category>xss</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.2 HIGH] CVE-2020-37242 — Supsystic Ultimate Maps 1.1.12 contains an SQL injection vulnerability that allo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37242</link>
+      <guid isPermaLink="false">d28bcaf85824709d4fea366766f59cf3</guid>
+      <pubDate>Sat, 16 May 2026 16:16:20 +0000</pubDate>
+      <description>Supsystic Ultimate Maps 1.1.12 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the &#39;sidx&#39; GET parameter. Attackers can send crafted requests to the getListForTbl action with boolean-based blind or time-based blind SQL injection payloads to extract sensitive database information.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.3 MEDIUM] CVE-2020-37241 — bloofoxCMS 0.5.2.1 contains a cross-site request forgery vulnerability that allo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37241</link>
+      <guid isPermaLink="false">9707ac15a648a8d4e399de66a54b251c</guid>
+      <pubDate>Sat, 16 May 2026 16:16:20 +0000</pubDate>
+      <description>bloofoxCMS 0.5.2.1 contains a cross-site request forgery vulnerability that allows attackers to perform administrative actions by tricking logged-in users into visiting malicious pages. Attackers can craft hidden forms targeting the admin user creation endpoint to add new administrative accounts with arbitrary credentials without requiring explicit user consent.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.4 MEDIUM] CVE-2020-37240 — Queue Management System 4.0.0 contains a stored cross-site scripting vulnerabili…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37240</link>
+      <guid isPermaLink="false">75eb7276ca5c90b876110e62cc843d65</guid>
+      <pubDate>Sat, 16 May 2026 16:16:20 +0000</pubDate>
+      <description>Queue Management System 4.0.0 contains a stored cross-site scripting vulnerability that allows authenticated administrators to inject malicious scripts through user creation fields. Attackers can insert JavaScript payloads in the First Name, Last Name, and Email fields during user creation, which execute when viewing the User List page.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 9.8 CRITICAL] CVE-2020-37239 — libbabl 0.1.62 contains a broken double free detection vulnerability that allows…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37239</link>
+      <guid isPermaLink="false">b33fcdf3bb1aab1ed56a3e104c488171</guid>
+      <pubDate>Sat, 16 May 2026 16:16:20 +0000</pubDate>
+      <description>libbabl 0.1.62 contains a broken double free detection vulnerability that allows attackers to bypass memory safety checks by exploiting signature overwriting in freed chunks. Attackers can call babl_free() twice on the same pointer without triggering detection, as libc&#39;s malloc metadata overwrites babl&#39;s signature field upon freeing, enabling potential memory corruption and code execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>critical-cvss</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.4 MEDIUM] CVE-2020-37238 — CMS Made Simple 2.2.15 contains a stored cross-site scripting vulnerability that…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37238</link>
+      <guid isPermaLink="false">5c632afd5510822477834f5b51c1592c</guid>
+      <pubDate>Sat, 16 May 2026 16:16:19 +0000</pubDate>
+      <description>CMS Made Simple 2.2.15 contains a stored cross-site scripting vulnerability that allows authenticated users with Content Manager access to inject malicious scripts through SVG file uploads. Attackers can upload SVG files containing embedded JavaScript to the file manager, which executes when other authenticated users access the uploaded file, enabling cookie theft and session hijacking.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.4 MEDIUM] CVE-2020-37237 — Composr CMS 10.0.34 contains a persistent cross-site scripting vulnerability tha…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37237</link>
+      <guid isPermaLink="false">7a89f142c07449bb41f6d75c31d5ef6a</guid>
+      <pubDate>Sat, 16 May 2026 16:16:19 +0000</pubDate>
+      <description>Composr CMS 10.0.34 contains a persistent cross-site scripting vulnerability that allows authenticated administrators to inject malicious scripts through the banner management interface. Attackers with admin credentials can inject XSS payloads in the Description field of the Add banner functionality, which execute for all website visitors when they access the home page.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.4 MEDIUM] CVE-2020-37236 — NewsLister contains an authenticated persistent cross-site scripting vulnerabili…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37236</link>
+      <guid isPermaLink="false">d86cb17e68e52c4152042df72e92d510</guid>
+      <pubDate>Sat, 16 May 2026 16:16:19 +0000</pubDate>
+      <description>NewsLister contains an authenticated persistent cross-site scripting vulnerability that allows authenticated administrators to inject malicious scripts through the title parameter in the news addition interface. Attackers can inject JavaScript payloads via the title field in the admin panel that execute when news items are viewed by other users.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.4 MEDIUM] CVE-2020-37235 — WordPress Theme Wibar 1.1.8 contains a stored cross-site scripting vulnerability…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37235</link>
+      <guid isPermaLink="false">8d8148862beb8bd3fc38f0918d8c07b1</guid>
+      <pubDate>Sat, 16 May 2026 16:16:19 +0000</pubDate>
+      <description>WordPress Theme Wibar 1.1.8 contains a stored cross-site scripting vulnerability in the Brand component that allows authenticated users to inject malicious scripts by manipulating the Logo URL parameter. Attackers with editor, administrator, contributor, or author privileges can inject base64-encoded script payloads through the ftc_brand_url input field to execute arbitrary JavaScript when users visit the brand page.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.2 MEDIUM] CVE-2020-37234 — Internet Download Manager 6.38.12 contains a buffer overflow vulnerability in th…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37234</link>
+      <guid isPermaLink="false">3bccf086e4123f1adb5fe70c69de5e60</guid>
+      <pubDate>Sat, 16 May 2026 16:16:19 +0000</pubDate>
+      <description>Internet Download Manager 6.38.12 contains a buffer overflow vulnerability in the Scheduler component that allows local attackers to crash the application by supplying oversized input. Attackers can paste malicious data exceeding 5000 bytes into the &#39;Open the following file when done&#39; field to trigger a denial of service condition.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.4 MEDIUM] CVE-2020-37233 — WordPress Plugin Buddypress 6.2.0 contains a persistent cross-site scripting vul…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37233</link>
+      <guid isPermaLink="false">92b7ea261a7a18ba705602d4ce9c5ec3</guid>
+      <pubDate>Sat, 16 May 2026 16:16:19 +0000</pubDate>
+      <description>WordPress Plugin Buddypress 6.2.0 contains a persistent cross-site scripting vulnerability that allows authenticated attackers with moderator privileges to inject malicious script code through the figure parameter in wp:html blocks. Attackers can inject iframe elements with event handlers like onload that execute when administrators or privileged users preview or view the affected page content, enabling session hijacking and persistent phishing attacks.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>xss</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.8 HIGH] CVE-2020-37232 — Advanced System Care Service 13.0.0.157 contains an unquoted service path vulner…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37232</link>
+      <guid isPermaLink="false">b34fa0617eda23ff98581c2ff118440c</guid>
+      <pubDate>Sat, 16 May 2026 16:16:19 +0000</pubDate>
+      <description>Advanced System Care Service 13.0.0.157 contains an unquoted service path vulnerability in the AdvancedSystemCareService13 service binary path that allows local attackers to escalate privileges. Attackers can place malicious executables in the system root path that will be executed with LocalSystem privileges during service startup or system reboot.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2020-37231 — Privacy Drive 3.17.0 contains an unquoted service path vulnerability in the pdsv…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37231</link>
+      <guid isPermaLink="false">7dfdda1f2ee3854cf08572d6801cf471</guid>
+      <pubDate>Sat, 16 May 2026 16:16:19 +0000</pubDate>
+      <description>Privacy Drive 3.17.0 contains an unquoted service path vulnerability in the pdsvc.exe service binary that allows local attackers to escalate privileges by exploiting the service startup process. Attackers can place malicious executables in the unquoted path directories to execute arbitrary code with LocalSystem privileges during service startup or system reboot.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
     </item>
   </channel>
 </rss>

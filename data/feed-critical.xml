@@ -5,7 +5,197 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 16 May 2026 22:12:07 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 22:25:42 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] CVE-2026-8507 — Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out of bound (OOB) write flaws.&#xA;&#xA;When par…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8507</link>
+      <guid isPermaLink="false">0d62097966dc7ea39f4eb04d63485c30</guid>
+      <pubDate>Sun, 17 May 2026 19:16:24 +0000</pubDate>
+      <description>Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out of bound (OOB) write flaws.&#xA;&#xA;When parsing a PKCS12 file, with a &gt;= 1 GiB OCTET STRING (or BIT STRING) attribute on a SAFEBAG, via info() or info_as_hash(), a heap-OOB-WRITE would be triggered which could have Remote Code Execution (RCE) potential.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>openssl</category>
+      <category>watch</category>
+      <category>openssl</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-8753 — A security vulnerability has been detected in kalcaddle Kodbox up to 1.64. This …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8753</link>
+      <guid isPermaLink="false">71c32504e53e5dbfbcf791f12720c426</guid>
+      <pubDate>Sun, 17 May 2026 13:16:45 +0000</pubDate>
+      <description>A security vulnerability has been detected in kalcaddle Kodbox up to 1.64. This issue affects the function parseVideoInfo of the file /workspace/source-code/plugins/fileThumb/lib/VideoResize.class.php of the component fileThumb Plugin. The manipulation of the argument ffmpegBin leads to command injection. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2018-25332 — GitBucket 4.23.1 contains an unauthenticated remote code execution vulnerability…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25332</link>
+      <guid isPermaLink="false">6445cb8aff4201ffd518c13a66e47e81</guid>
+      <pubDate>Sun, 17 May 2026 13:16:44 +0000</pubDate>
+      <description>GitBucket 4.23.1 contains an unauthenticated remote code execution vulnerability that allows attackers to execute arbitrary commands by exploiting weak secret token generation and insecure file upload functionality. Attackers can brute-force the Blowfish encryption key, upload a malicious JAR plugin via the git-lfs endpoint, and execute system commands through an exposed exploit endpoint.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.4 HIGH] CVE-2018-25328 — VX Search 10.6.18 contains a local buffer overflow vulnerability that allows att…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25328</link>
+      <guid isPermaLink="false">7cb1252d75b2d260b657cec8abce6bcb</guid>
+      <pubDate>Sun, 17 May 2026 13:16:44 +0000</pubDate>
+      <description>VX Search 10.6.18 contains a local buffer overflow vulnerability that allows attackers to overwrite the instruction pointer by supplying an oversized string in the directory field. Attackers can craft a malicious input file containing 271 bytes of junk data followed by a return address to execute arbitrary code with application privileges.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2018-25325 — Woocommerce CSV Importer 3.3.6 contains a path traversal vulnerability that allo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25325</link>
+      <guid isPermaLink="false">537d26d22ff33b04add66581b95fa5e5</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>Woocommerce CSV Importer 3.3.6 contains a path traversal vulnerability that allows any registered user to delete arbitrary files by submitting unescaped filenames through the delete_export_file AJAX action. Attackers can craft POST requests with directory traversal sequences in the filename parameter to delete sensitive files like wp-config.php outside the intended export directory.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>path-traversal</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.2 MEDIUM] CVE-2018-25324 — Simple Fields 0.2 through 0.3.5 WordPress Plugin contains a local file inclusion…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25324</link>
+      <guid isPermaLink="false">1ff7e534ea1084acfe37f8e040a7256e</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>Simple Fields 0.2 through 0.3.5 WordPress Plugin contains a local file inclusion vulnerability that allows unauthenticated attackers to read arbitrary files by injecting null bytes into the wp_abspath parameter on PHP versions before 5.3.4. Attackers can supply malicious wp_abspath values to simple_fields.php to include files like /etc/passwd or inject PHP code into Apache logs for remote code execution when allow_url_include is enabled.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>apache</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>apache</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.4 HIGH] CVE-2018-25323 — Allok AVI DivX MPEG to DVD Converter 2.6.1217 contains a structured exception ha…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25323</link>
+      <guid isPermaLink="false">30b92e6d49b45d5abdb98305171a6842</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>Allok AVI DivX MPEG to DVD Converter 2.6.1217 contains a structured exception handler buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious payload. Attackers can craft a text file with a specially crafted buffer containing shellcode and SEH chain overwrite values, then paste the contents into the License Name field to trigger code execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.4 HIGH] CVE-2018-25322 — Allok Fast AVI MPEG Splitter 1.2 contains a stack based buffer overflow vulnerab…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25322</link>
+      <guid isPermaLink="false">cb4da271d926d35870685b167d49c2b0</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>Allok Fast AVI MPEG Splitter 1.2 contains a stack based buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious license name string. Attackers can craft a payload with 780 bytes of junk data followed by structured shellcode and place it in the License Name field to trigger the overflow and execute code with application privileges.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2018-25320 — ACL Analytics versions 11.x through 13.0.0.579 contain an arbitrary code executi…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2018-25320</link>
+      <guid isPermaLink="false">470eb64be64f4ef573976075d10d1205</guid>
+      <pubDate>Sun, 17 May 2026 13:16:43 +0000</pubDate>
+      <description>ACL Analytics versions 11.x through 13.0.0.579 contain an arbitrary code execution vulnerability that allows attackers to execute arbitrary commands by leveraging the EXECUTE function. Attackers can use bitsadmin to download malicious PowerShell scripts and execute them with system privileges to establish reverse shells and gain complete system control.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE</title>
+      <link>https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html</link>
+      <guid isPermaLink="false">79fecd0de8285e9b26ef791b06c4a142</guid>
+      <pubDate>Sun, 17 May 2026 11:57:53 +0000</pubDate>
+      <description>A newly disclosed security flaw impacting NGINX Plus and NGINX Open has come under active exploitation in the wild, days after its public disclosure, according to VulnCheck. The vulnerability, tracked as CVE-2026-42945 (CVSS score: 9.2), is a heap buffer overflow in ngx_http_rewrite_module affecting NGINX versions 0.6.27 through 1.30.0. According to AI-native security company depthfirst, the</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2021-47977 — WordPress Plugin Anti-Malware Security and Bruteforce Firewall 4.20.59 contains …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47977</link>
+      <guid isPermaLink="false">6acc7300504d17fe40c8dc7d74a0927f</guid>
+      <pubDate>Sat, 16 May 2026 16:16:23 +0000</pubDate>
+      <description>WordPress Plugin Anti-Malware Security and Bruteforce Firewall 4.20.59 contains a directory traversal vulnerability that allows unauthenticated attackers to read arbitrary files by manipulating the file parameter. Attackers can send requests to the duplicator_download action via admin-ajax.php with path traversal sequences to access sensitive system files outside the intended directory.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>path-traversal</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>malware</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2021-47976 — TextPattern CMS 4.9.0-dev contains a remote code execution vulnerability that al…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47976</link>
+      <guid isPermaLink="false">a5aada3bc8c78079e1aaec01e992b202</guid>
+      <pubDate>Sat, 16 May 2026 16:16:23 +0000</pubDate>
+      <description>TextPattern CMS 4.9.0-dev contains a remote code execution vulnerability that allows authenticated attackers to upload arbitrary PHP files by exploiting the plugin upload functionality. Attackers can authenticate, retrieve a CSRF token from the plugin event page, and upload malicious PHP files to the textpattern/tmp/ directory for code execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2021-47974 — VX Search 13.5.28 contains an unquoted service path vulnerability in both VX Sea…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47974</link>
+      <guid isPermaLink="false">30d4b45d45350cecd1fde419e475c5d5</guid>
+      <pubDate>Sat, 16 May 2026 16:16:22 +0000</pubDate>
+      <description>VX Search 13.5.28 contains an unquoted service path vulnerability in both VX Search Server and VX Search Enterprise services that allows local attackers to escalate privileges. Attackers can place malicious executables in unquoted path directories like C:\Program Files\VX Search to execute arbitrary code with LocalSystem privileges when services restart.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2021-47952 — python jsonpickle 2.0.0 contains a remote code execution vulnerability that allo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-47952</link>
+      <guid isPermaLink="false">b4b603debe7c7b6be81b5953411ff1fa</guid>
+      <pubDate>Sat, 16 May 2026 16:16:21 +0000</pubDate>
+      <description>python jsonpickle 2.0.0 contains a remote code execution vulnerability that allows attackers to execute arbitrary Python commands by deserializing malicious JSON payloads containing py/repr objects. Attackers can craft JSON strings with py/repr directives that invoke the eval function during deserialization to execute system commands and arbitrary code.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>deserialization</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2020-37231 — Privacy Drive 3.17.0 contains an unquoted service path vulnerability in the pdsv…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37231</link>
+      <guid isPermaLink="false">7dfdda1f2ee3854cf08572d6801cf471</guid>
+      <pubDate>Sat, 16 May 2026 16:16:19 +0000</pubDate>
+      <description>Privacy Drive 3.17.0 contains an unquoted service path vulnerability in the pdsvc.exe service binary that allows local attackers to escalate privileges by exploiting the service startup process. Attackers can place malicious executables in the unquoted path directories to execute arbitrary code with LocalSystem privileges during service startup or system reboot.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2020-37228 — iDS6 DSSPro Digital Signage System 6.2 contains a CAPTCHA security bypass vulner…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37228</link>
+      <guid isPermaLink="false">762422cee83ce3f2ba5125b0488184b5</guid>
+      <pubDate>Sat, 16 May 2026 16:16:18 +0000</pubDate>
+      <description>iDS6 DSSPro Digital Signage System 6.2 contains a CAPTCHA security bypass vulnerability that allows attackers to bypass authentication by requesting the autoLoginVerifyCode object. Attackers can retrieve valid CAPTCHA codes via the login endpoint and use them to perform brute-force attacks against user accounts.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2020-37227 — HS Brand Logo Slider 2.1 contains an unrestricted file upload vulnerability that…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2020-37227</link>
+      <guid isPermaLink="false">5e50df4d598f5b8bfdfa9cc597123e32</guid>
+      <pubDate>Sat, 16 May 2026 16:16:17 +0000</pubDate>
+      <description>HS Brand Logo Slider 2.1 contains an unrestricted file upload vulnerability that allows authenticated users to bypass client-side file extension validation by uploading arbitrary files. Attackers can intercept upload requests to the logoupload parameter in the admin interface and rename files to executable extensions .php to achieve remote code execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
     <item>
       <title>[CRIT] Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checkout Skimming</title>
       <link>https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html</link>
@@ -19,6 +209,39 @@
       <category>rce</category>
       <category>actively-exploited</category>
       <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-8681 — The Essential Chat Support plugin for WordPress is vulnerable to authorization b…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8681</link>
+      <guid isPermaLink="false">6a4ad5da952ea0e4ae5acf1b54a008cf</guid>
+      <pubDate>Sat, 16 May 2026 03:16:21 +0000</pubDate>
+      <description>The Essential Chat Support plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.0.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to reset all plugin configuration settings — including general settings, display rules, custom CSS, and WooCommerce tab settings — to their defaults by sending a POST request with ecs_reset_settings=1.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.7 HIGH] CVE-2026-45338 — Open WebUI is a self-hosted artificial intelligence platform designed to operate…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45338</link>
+      <guid isPermaLink="false">c19090f531dccd7a752c9081a50e42e2</guid>
+      <pubDate>Fri, 15 May 2026 22:16:54 +0000</pubDate>
+      <description>Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, a Server-Side Request Forgery (SSRF) vulnerability exists in _process_picture_url() in backend/open_webui/utils/oauth.py (line ~1338). The function fetches arbitrary URLs from OAuth picture claims without applying validate_url(), allowing an attacker to force the server to make HTTP requests to internal resources and exfiltrate the full response. This vulnerability is fixed in 0.9.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.1 HIGH] CVE-2026-45402 — Open WebUI is a self-hosted artificial intelligence platform designed to operate…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45402</link>
+      <guid isPermaLink="false">94c72b5d68ebf48e604c890eb24ce51b</guid>
+      <pubDate>Fri, 15 May 2026 21:16:38 +0000</pubDate>
+      <description>Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.5, multiple endpoints accept a user-supplied file_id and attach the referenced file to a resource the caller controls (folder knowledge, knowledge-base contents) without verifying that the caller owns or has been granted access to the file. The file&#39;s content then becomes reachable through the downstream RAG / file-content paths, allowing any authenticated user to exfiltrate any other user&#39;s private file — and on the knowledge-base path, also to overwrite it — given knowledge of the file&#39;s UUID. This affects backend/open_webui/routers/folders.py (POST /api/v1/folders/{id}/update), backend/open_webui/routers/knowledge.py (add_file_to_knowledge_by_id), and backend/open_webui/routers/knowledge.py (add_files_to_knowledge_by_id_batch). This vulnerability is fixed in 0.9.5.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
     </item>
     <item>
       <title>[CRIT] Funnel Builder WordPress plugin bug exploited to steal credit cards</title>
@@ -35,6 +258,50 @@
       <category>wordpress</category>
     </item>
     <item>
+      <title>[HIGH] CVE-2026-45800 — Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stor…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45800</link>
+      <guid isPermaLink="false">0cc326824c729ce8ef09ed39fc9e4623</guid>
+      <pubDate>Fri, 15 May 2026 19:17:02 +0000</pubDate>
+      <description>Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.3, there is an authenticated SQL injection issue in the frontend user order history page in Vvveb CMS. A normal frontend user can log in and access /user/orders. The order_by and direction request parameters are accepted from the URL, propagated through the Orders component, and directly concatenated into the SQL ORDER BY clause in OrderSQL::getAll(). Because of this, attacker-controlled input reaches SQL structure without a whitelist or safe query construction step. This vulnerability is fixed in 1.0.8.3.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>sqli</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-45622 — Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stor…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45622</link>
+      <guid isPermaLink="false">105104269ac572e8e8a99dbc1c5a4a9f</guid>
+      <pubDate>Fri, 15 May 2026 19:17:02 +0000</pubDate>
+      <description>Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.3, there is an unauthenticated reflected cross-site scripting (XSS) issue in the public product return form in Vvveb CMS. The customer_order_id POST parameter is inserted into the Order %s not found! error message when the order lookup fails, and that message is rendered in the frontend template without HTML escaping. As a result, attacker-controlled HTML/JavaScript executes in the submitting user&#39;s browser. This vulnerability is fixed in 1.0.8.3.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>xss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.1 CRITICAL] CVE-2026-45010 — phpMyFAQ before 4.1.2 contains an improper restriction of excessive authenticati…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45010</link>
+      <guid isPermaLink="false">0dda0c20506c0817b9564024f9c87f8c</guid>
+      <pubDate>Fri, 15 May 2026 19:17:01 +0000</pubDate>
+      <description>phpMyFAQ before 4.1.2 contains an improper restriction of excessive authentication attempts vulnerability in the /admin/check endpoint, which accepts arbitrary user-id parameters without session binding or rate limiting. Unauthenticated attackers can brute-force any user&#39;s six-digit TOTP code by submitting POST requests with sequential token values, bypassing two-factor authentication to gain full administrative access.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.1 MEDIUM] CVE-2026-44366 — Vvveb is a powerful and easy to use CMS with page builder to build websites, blo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44366</link>
+      <guid isPermaLink="false">ae726bbce638869c33fe4dccd2b1a9e7</guid>
+      <pubDate>Fri, 15 May 2026 19:16:59 +0000</pubDate>
+      <description>Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.1, a Stored Cross-Site Scripting (XSS) vulnerability exists in the Vvveb CMS comment submission flow. The author field is submitted by an unauthenticated user on any public post page, stored without sanitization, and later rendered unsanitized in two distinct sinks: This vulnerability is fixed in 1.0.8.1.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>xss</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[HIGH] Microsoft Exchange, Windows 11 hacked on second day of Pwn2Own</title>
       <link>https://www.bleepingcomputer.com/news/security/pwn2own-day-two-hackers-demo-microsoft-exchange-windows-11-red-had-enterprise-linux-zero-days/</link>
       <guid isPermaLink="false">0fd33a8b44df4e31dd9ba7a411792177</guid>
@@ -46,6 +313,16 @@
       <category>watch</category>
       <category>0day</category>
       <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 4.4 MEDIUM] CVE-2026-45736 — ws is an open source WebSocket client and server for Node.js. Prior to 8.20.1, t…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45736</link>
+      <guid isPermaLink="false">70848069aa2413d7eac5e024cd6dffc1</guid>
+      <pubDate>Fri, 15 May 2026 15:16:54 +0000</pubDate>
+      <description>ws is an open source WebSocket client and server for Node.js. Prior to 8.20.1, the websocket.close() implementation is vulnerable to uninitialized memory disclosure when a TypedArray is passed as the reason argument. This vulnerability is fixed in 8.20.1.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
     </item>
     <item>
       <title>[CRIT] Microsoft warns of Exchange zero-day flaw exploited in attacks</title>
@@ -91,6 +368,17 @@
       <category>microsoft</category>
     </item>
     <item>
+      <title>[HIGH] CVE-2026-42847 — ClipBucket v5 is an open source video sharing platform. Prior to 5.5.3 - #122, there is a critical S…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42847</link>
+      <guid isPermaLink="false">732f9ef14adc3b4a77d17c07b1b8e3c0</guid>
+      <pubDate>Thu, 14 May 2026 21:16:46 +0000</pubDate>
+      <description>ClipBucket v5 is an open source video sharing platform. Prior to 5.5.3 - #122, there is a critical SQL Injection (SQLi) vulnerability in ClipBucket, exploitable through the type parameter on the authenticated admin endpoint admin_area/action_logs.php. The endpoint admin_area/action_logs.php reads $_GET[&#39;type&#39;], stores it in $result_array[&#39;type&#39;], and forwards it into fetch_action_logs(), where the value is concatenated directly into a SQL WHERE condition on action_type without parameterization. This allows UNION-based SQL injection and direct data exfiltration from the database. This vulnerability is fixed in 5.5.3 - #122.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>sqli</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[HIGH] Hackers exploit auth bypass flaw in Burst Statistics WordPress plugin</title>
       <link>https://www.bleepingcomputer.com/news/security/hackers-exploit-auth-bypass-flaw-in-burst-statistics-wordpress-plugin/</link>
       <guid isPermaLink="false">4d3d238c03d0193a14f1e56b9247ec42</guid>
@@ -102,6 +390,20 @@
       <category>watch</category>
       <category>auth-bypass</category>
       <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-8581 — Use after free in GPU in Google Chrome prior to 148.0.7778.168 allowed a remote …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8581</link>
+      <guid isPermaLink="false">e15f1d6b7e7ac28d0d4048bccde9d06c</guid>
+      <pubDate>Thu, 14 May 2026 20:17:20 +0000</pubDate>
+      <description>Use after free in GPU in Google Chrome prior to 148.0.7778.168 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
     </item>
     <item>
       <title>[CRIT] Cisco warns of new critical SD-WAN flaw exploited in zero-day attacks</title>
@@ -117,6 +419,74 @@
       <category>actively-exploited</category>
       <category>0day</category>
       <category>cisco</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.0 CRITICAL] CVE-2026-45375 — SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, S…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45375</link>
+      <guid isPermaLink="false">4f402072c146cecf61d4af03f12e310f</guid>
+      <pubDate>Thu, 14 May 2026 19:16:39 +0000</pubDate>
+      <description>SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, SiYuan&#39;s Bazaar (community marketplace) renders the name and version fields of a package&#39;s plugin.json (and the equivalent theme.json / template.json / widget.json / icon.json) into the Settings → Marketplace UI without HTML escaping. The kernel-side helper sanitizePackageDisplayStrings in kernel/bazaar/package.go HTML-escapes only Author, DisplayName, and Description — Name and Version flow through to the renderer raw. The frontend at app/src/config/bazaar.ts substitutes them into HTML template strings via ${item.preferredName} / ${data.name} / v${data.version} and assigns the result to innerHTML. As a consequence, malicious HTML in either field is parsed and executed when a user opens the marketplace tab. This vulnerability is fixed in 3.7.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-27886 — Strapi is an open source headless content management system. Strapi versions sta…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-27886</link>
+      <guid isPermaLink="false">d481bbb0d0d41dcce0972b139c7085e8</guid>
+      <pubDate>Thu, 14 May 2026 19:16:31 +0000</pubDate>
+      <description>Strapi is an open source headless content management system. Strapi versions starting in 4.0.0 and prior to 5.37.0 did not sufficiently sanitize query parameters when filtering content via relational fields. An unauthenticated attacker could use the `where` query parameter on any publicly-accessible content-type with an `updatedBy` (or other admin-relation) field to perform a boolean-oracle attack against private fields on the joined `admin_users` table, including the `resetPasswordToken` field. Extracting an admin reset token via this oracle made full administrative account takeover possible without authentication. When a filter such as `where[updatedBy][resetPasswordToken][$startsWith]=a` was applied to a public Content API endpoint, the underlying query generation performed a `LEFT JOIN` against the `admin_users` table and emitted a `WHERE` clause referencing the joined column. The query parameter sanitization layer did not block operator chains that traversed into relational target schemas the caller had no read permission on, allowing the response count to be used as a one-bit oracle on any admin-table field. The patch in version 5.37.0 introduces explicit query-parameter sanitization at the controller and service boundary via three new primitives: `strictParam`, `addQueryParams`, and `addBodyParams`. Operator chains that traverse into restricted relational targets are now rejected before reaching the database.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>oracle</category>
+      <category>rce</category>
+      <category>strapi</category>
+      <category>oracle</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.4 MEDIUM] CVE-2026-22707 — Strapi is an open source headless content management system. In Strapi versions …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-22707</link>
+      <guid isPermaLink="false">81fd131d18b60d5b511450f59f8e74b4</guid>
+      <pubDate>Thu, 14 May 2026 19:16:30 +0000</pubDate>
+      <description>Strapi is an open source headless content management system. In Strapi versions prior to 5.33.3, the Upload plugin&#39;s Content API endpoints did not enforce the administrator-configured MIME type restrictions (`plugin.upload.security.allowedTypes` and `deniedTypes`). The same restrictions were correctly enforced on the Admin Panel upload path. The upload plugin&#39;s `enforceUploadSecurity` security check was invoked in the admin upload controller but was missing from the Content API controller. The Content API handlers `uploadFiles` and `replaceFile` (and the `upload` wrapper that dispatches to them) called the underlying upload service directly, bypassing both the magic-byte MIME detection and the configured allow/deny lists. An authenticated user with the Content API upload permission could therefore upload file types the administrator had explicitly disallowed, including HTML and SVG content. In deployments serving uploaded files from the same origin as the admin panel (default), an attacker could upload an HTML or SVG file that, when opened directly by an admin, executed JavaScript in the admin origin, enabling admin-session hijack and authenticated administrative actions against the admin API. The patch in version 5.33.3 introduces a shared `prepareUploadRequest` helper that wraps `enforceUploadSecurity` and is called from both the Content API and admin upload controllers, ensuring identical security policy enforcement on every upload entry point.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>strapi</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-22706 — Strapi is an open source headless content management system. In Strapi versions …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-22706</link>
+      <guid isPermaLink="false">5a8ae403e524fd8f93d1629f75fa0b53</guid>
+      <pubDate>Thu, 14 May 2026 19:16:30 +0000</pubDate>
+      <description>Strapi is an open source headless content management system. In Strapi versions prior to 5.33.3, changing or resetting a user&#39;s password did not invalidate the user&#39;s existing refresh-token sessions by default. The refresh-token invalidation step in the users-permissions and admin authentication controllers was conditional on a caller-supplied `deviceId`. When a password change or reset request did not include a `deviceId`, no refresh tokens were revoked, leaving every prior session active. An attacker who had previously obtained a refresh token could continue minting new access tokens after the legitimate user reset their password, allowing persistent unauthorized access for the lifetime of the refresh token (up to 30 days by default). Rotating credentials no longer terminated an active attacker session, defeating password reset as a containment measure. The patch in version 5.33.3 invalidates all refresh tokens associated with the user on every password change and password reset, regardless of whether a `deviceId` is supplied. A new device-scoped session is then issued to the caller as part of the response.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>strapi</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-22599 — Strapi is an open source headless content management system. In versions on the …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-22599</link>
+      <guid isPermaLink="false">f81d4c80ead664bdafc32ea1637cfdef</guid>
+      <pubDate>Thu, 14 May 2026 19:16:29 +0000</pubDate>
+      <description>Strapi is an open source headless content management system. In versions on the 4.x branch prior to 4.26.1 and on the 5.x branch prior to 5.33.2, a database-query injection vulnerability existed in the Strapi Content-Type Builder write API. An authenticated administrator could inject arbitrary database statements through the `column.defaultTo` attribute when creating or modifying a content type. Setting `defaultTo` as a tuple `[value, { isRaw: true }]` caused the value to be passed directly into Knex&#39;s `db.connection.raw()` during schema migration without sanitization, allowing arbitrary statement execution at the database layer. Depending on the database engine, this enabled arbitrary file read via database utility functions, denial of service via forced server crash on schema-migration error, and on engines that permit external program execution, remote code execution against the database server. The patch in versions 4.26.1 and 5.33.2 addresses this by restricting all Content-Type Builder write APIs to development mode only. Production deployments running v5.33.2 or later return 404 for requests against `/content-type-builder/content-types` and related endpoints, removing the network-reachable attack surface entirely.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>strapi</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2025-64526 — Strapi is an open source headless content management system. In Strapi versions …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-64526</link>
+      <guid isPermaLink="false">a38f219e4e7b69209b1177556753dbd0</guid>
+      <pubDate>Thu, 14 May 2026 19:16:29 +0000</pubDate>
+      <description>Strapi is an open source headless content management system. In Strapi versions prior to 5.45.0, the rate-limit middleware in the users-permissions plugin derived its rate-limit key in part from `ctx.request.body.email`, including on routes whose body schema does not contain an `email` field (`/auth/local`, `/auth/reset-password`, `/auth/change-password`). An unauthenticated attacker could include an arbitrary `email` value in the request body to obtain a fresh rate-limit key per request, effectively bypassing per-IP throttling on those routes and enabling high-volume credential brute-force, password-reset code brute-force, and credential-stuffing attempts. The rate-limit key was constructed as `${userIdentifier}:${requestPath}:${ctx.request.ip}`, where `userIdentifier = ctx.request.body.email`. On routes that legitimately use email as their identifier (e.g. `/auth/forgot-password`, `/auth/local/register`), this scoping is correct. On routes that use a different identifier (`identifier` for login, `code` for password reset, `currentPassword` for password change), the email field was not part of the route contract, but the middleware still incorporated it into the key, allowing a caller to rotate the value and obtain a unique key on every request. The patch in version 5.45.0 maintains an allow-list of routes that legitimately key on the email field and excludes that key component on every other route the middleware is mounted on. OAuth callback paths (`/connect/*`) are treated identifier-less. On routes outside the allow-list, the middleware now falls back to a fixed identifier-less key, ensuring per-IP throttling remains effective even when the request body is attacker-controlled.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>strapi</category>
     </item>
     <item>
       <title>[HIGH] CVE-2026-0265: Authentication Bypass in Palo Alto Networks PAN-OS</title>
@@ -157,6 +527,30 @@
       <category>auth-bypass</category>
       <category>actively-exploited</category>
       <category>cisco</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-44501 — DataHub is an open-source metadata platform. Prior to 1.5.0.3, The DataHub front…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44501</link>
+      <guid isPermaLink="false">5432f37711e8e1e29f30d90a334ef6d6</guid>
+      <pubDate>Thu, 14 May 2026 16:16:24 +0000</pubDate>
+      <description>DataHub is an open-source metadata platform. Prior to 1.5.0.3, The DataHub frontend (datahub-frontend-react) deserializes attacker-controlled Java objects from the REDIRECT_URL HTTP cookie during the OIDC callback flow, with no integrity protection (no HMAC, no encryption). This is a Deserialization of Untrusted Data vulnerability (CWE-502) affecting the GET /callback/oidc endpoint. Successful exploitation requires a valid user account in the configured OIDC identity provider This vulnerability is fixed in 1.5.0.3.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>deserialization</category>
+      <category>rce</category>
+      <category>datahub</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-42594 — Gotenberg is a Docker-powered stateless API for PDF files. Prior to 8.32.0, the …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42594</link>
+      <guid isPermaLink="false">532ec86fece5690e0470638cb676a3f9</guid>
+      <pubDate>Thu, 14 May 2026 16:16:22 +0000</pubDate>
+      <description>Gotenberg is a Docker-powered stateless API for PDF files. Prior to 8.32.0, the webhook middleware spawns a goroutine that holds a reference to the request&#39;s echo.Context after the synchronous handler returns ErrAsyncProcess and Echo recycles the context back to its sync.Pool. When a concurrent request claims the recycled context, c.Reset() clears the store. If the webhook goroutine reaches hardTimeoutMiddleware at that moment, an unchecked type assertion on a nil store entry panics outside any recover() scope, crashing the Gotenberg process. Any anonymous caller reaches the webhook path (default webhook-deny-list filters only the webhook destination, not the submitter). A single-source stress of ~24 webhook requests plus ~60 GET /version requests crashes the process in about two seconds. This vulnerability is fixed in 8.32.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>docker</category>
+      <category>rce</category>
+      <category>docker</category>
     </item>
     <item>
       <title>[HIGH] CVE-2026-20182: Critical authentication bypass in Cisco Catalyst SD-WAN Controller (FIXED)</title>
@@ -788,273 +1182,6 @@
       <category>high</category>
       <category>critical-cvss</category>
       <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-42455 — Linkwarden is a self-hosted, open-source collaborative bookmark manager to collect, organize and arc…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42455</link>
-      <guid isPermaLink="false">17165b5ccf24e52d7707699c8ab49d15</guid>
-      <pubDate>Sat, 09 May 2026 00:16:29 +0000</pubDate>
-      <description>Linkwarden is a self-hosted, open-source collaborative bookmark manager to collect, organize and archive webpages. In versions 2.14.0 and prior, the archive upload endpoint (POST /api/v1/archives/[linkId]?format=4) accepts HTML files (text/html) without sanitizing JavaScript content. When the archive is later accessed via GET /api/v1/archives/[linkId]?format=4, the HTML is served with Content-Type: text/html from the Linkwarden origin, without any Content-Security-Policy header. This allows arbitrary JavaScript execution in the context of the authenticated Linkwarden sessio. At time of publication, there are no publicly available patches.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-44656 — Vim is an open source, command line text editor. Prior to version 9.2.0435, an OS command injection …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44656</link>
-      <guid isPermaLink="false">475961ae783bef126a20cd2c48fc8b89</guid>
-      <pubDate>Fri, 08 May 2026 23:16:39 +0000</pubDate>
-      <description>Vim is an open source, command line text editor. Prior to version 9.2.0435, an OS command injection vulnerability exists in Vim&#39;s :find command-line completion. When the path option contains backtick-enclosed shell commands, those commands are executed during file name completion. Because the path option lacks the P_SECURE flag, it can be set from a modeline, allowing an attacker who controls the contents of a file to execute arbitrary shell commands when the user opens that file in Vim and triggers :find completion. This issue has been patched in version 9.2.0435.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-42456 — AnythingLLM is an application that turns pieces of content into context that any…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42456</link>
-      <guid isPermaLink="false">608b843dd339b2310bf564107b8f2bfa</guid>
-      <pubDate>Fri, 08 May 2026 23:16:39 +0000</pubDate>
-      <description>AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. Prior to version 1.12.1, GET /api/workspace/:slug/tts/:chatId in AnythingLLM returns the text-to-speech audio for another user&#39;s chat response within the same workspace because the route validates workspace membership but does not enforce ownership of the targeted chat row. As a result, an authenticated user can access another user&#39;s private assistant response in audio form if the chatId is known or guessed. This constitutes an insecure direct object reference (IDOR) affecting private chat response content exposed through the TTS endpoint. This issue has been patched in version 1.12.1.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.9 CRITICAL] CVE-2026-42454 — Termix is a web-based server management platform with SSH terminal, tunneling, a…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42454</link>
-      <guid isPermaLink="false">4bf63e99fe0f687010735326b1db3440</guid>
-      <pubDate>Fri, 08 May 2026 23:16:39 +0000</pubDate>
-      <description>Termix is a web-based server management platform with SSH terminal, tunneling, and file editing capabilities. Prior to version 2.1.0, all Docker container management endpoints in Termix interpolate the containerId URL path parameter and WebSocket message field directly into shell commands executed via ssh2.Client.exec() on remote managed servers without any sanitization or validation. An authenticated attacker can inject arbitrary OS commands by crafting a malicious container ID, achieving Remote Code Execution on any managed server. This issue has been patched in version 2.1.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-      <category>docker</category>
-      <category>docker</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-42453 — Termix is a web-based server management platform with SSH terminal, tunneling, and file editing capa…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42453</link>
-      <guid isPermaLink="false">27462e21c9934058924e5a7059252be2</guid>
-      <pubDate>Fri, 08 May 2026 23:16:38 +0000</pubDate>
-      <description>Termix is a web-based server management platform with SSH terminal, tunneling, and file editing capabilities. Prior to version 2.1.0, the extractArchive and compressFiles endpoints in file-manager.ts use double-quoted strings for shell command construction, unlike all other file manager operations which use single-quote escaping. Double quotes allow $(command) substitution, enabling command injection on the remote SSH host. This issue has been patched in version 2.1.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-42351 — pygeoapi is a Python server implementation of the OGC API suite of standards. Fr…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42351</link>
-      <guid isPermaLink="false">a0e17e11d433e20769fd7810c1306201</guid>
-      <pubDate>Fri, 08 May 2026 23:16:38 +0000</pubDate>
-      <description>pygeoapi is a Python server implementation of the OGC API suite of standards. From version 0.23.0 to before version 0.23.3, a raw string path concatenation vulnerability in pygeoapi&#39;s STAC FileSystemProvider plugin can allow for requests to STAC collection based collections to expose directories without authentication. The issue manifests when pygeoapi is deployed without a proxy or web front end that would normalize URLs with .. values, along with a resource of type stac-collection defined in configuration. This issue has been patched in version 0.23.3.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-42343 — FastGPT is an AI Agent building platform. In versions 4.14.13 and prior, the code-sandbox component …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42343</link>
-      <guid isPermaLink="false">6d3cf5268750c0be47f0d9f5a54cf92f</guid>
-      <pubDate>Fri, 08 May 2026 23:16:37 +0000</pubDate>
-      <description>FastGPT is an AI Agent building platform. In versions 4.14.13 and prior, the code-sandbox component suffers from insufficient resource isolation and uncontrolled resource consumption. The service relies solely on an application-level soft limit (a 500ms polling interval) for memory management and lacks strict OS-level constraints such as cgroups or kernel-level namespaces. This architectural weakness allows attackers to easily bypass memory checks via time-window attacks, or exhaust the entire JavaScript worker pool via concurrent CPU-intensive requests, resulting in a complete Denial of Service (DoS) for legitimate users. At time of publication, there are no publicly available patches.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 4.4 MEDIUM] CVE-2026-42307 — Vim is an open source, command line text editor. Prior to version 9.2.0383, an O…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42307</link>
-      <guid isPermaLink="false">636549c9c59540f32f96a6c9acf5cb10</guid>
-      <pubDate>Fri, 08 May 2026 23:16:36 +0000</pubDate>
-      <description>Vim is an open source, command line text editor. Prior to version 9.2.0383, an OS command injection vulnerability exists in the netrw standard plugin bundled with Vim. By inducing a user to open a crafted URL (e.g., using the sftp:// or file:// protocol handlers), an attacker can execute arbitrary shell commands with the privileges of the Vim process. This issue has been patched in version 9.2.0383.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-42302 — FastGPT is an AI Agent building platform. From version 4.14.10 to before version…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42302</link>
-      <guid isPermaLink="false">5b7e44d2d92867bcf214a8bb2a4208e3</guid>
-      <pubDate>Fri, 08 May 2026 23:16:36 +0000</pubDate>
-      <description>FastGPT is an AI Agent building platform. From version 4.14.10 to before version 4.14.13, the agent-sandbox component of FastGPT is vulnerable to unauthenticated Remote Code Execution (RCE). The startup script entrypoint.sh initializes code-server with the --auth none flag and binds the service to all network interfaces (0.0.0.0:8080). This configuration allows any user with network access to the port to bypass authentication and gain full control over the sandbox environment. This issue has been patched in version 4.14.13.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 10.0 CRITICAL] CVE-2026-42298 — Postiz is an AI social media scheduling tool. Prior to commit da44801, a &#34;Pwn Re…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42298</link>
-      <guid isPermaLink="false">834d1e6877649c2cf20264c7bceb1cb4</guid>
-      <pubDate>Fri, 08 May 2026 23:16:36 +0000</pubDate>
-      <description>Postiz is an AI social media scheduling tool. Prior to commit da44801, a &#34;Pwn Request&#34; vulnerability in the Build and Publish PR Docker Image workflow (.github/workflows/pr-docker-build.yml) allows any unauthenticated user to execute arbitrary code during the Docker build process and exfiltrate a highly privileged GITHUB_TOKEN (write-all permissions). This can be achieved simply by opening a Pull Request from a fork with a maliciously modified Dockerfile.dev. This issue has been patched via commit da44801.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-      <category>github</category>
-      <category>docker</category>
-      <category>github</category>
-      <category>docker</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-42287 — Emlog is an open source website building system. Prior to version 2.6.11, direct SQL injection in ar…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42287</link>
-      <guid isPermaLink="false">bea803665ae575c0b5d9af6dfef579c4</guid>
-      <pubDate>Fri, 08 May 2026 22:16:33 +0000</pubDate>
-      <description>Emlog is an open source website building system. Prior to version 2.6.11, direct SQL injection in article creation and update functions allows attackers to execute arbitrary SQL commands, potentially leading to complete database compromise, data theft, or system destruction. This issue has been patched in version 2.6.11.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>sqli</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-42286 — Emlog is an open source website building system. Prior to version 2.6.11, missing CSRF protection in…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42286</link>
-      <guid isPermaLink="false">1b7f2cfd8d6ed01b4b4474fa48b4d299</guid>
-      <pubDate>Fri, 08 May 2026 22:16:32 +0000</pubDate>
-      <description>Emlog is an open source website building system. Prior to version 2.6.11, missing CSRF protection in critical admin functions allows attackers to trick authenticated administrators into performing unauthorized actions like system registration, plugin management, and configuration changes. This issue has been patched in version 2.6.11.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-42202 — nova-toggle-5 enables fliping booleans in the index. Prior to version 1.3.0, the…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42202</link>
-      <guid isPermaLink="false">f98b8836633e918fe32fc825010bb6a3</guid>
-      <pubDate>Fri, 08 May 2026 22:16:31 +0000</pubDate>
-      <description>nova-toggle-5 enables fliping booleans in the index. Prior to version 1.3.0, the toggle endpoint (POST/nova-vendor/nova-toggle/toggle/{resource}/{resourceId}) was protected only by web + auth:&lt;guard&gt; middleware. Any user authenticated on the configured guard could call the endpoint and flip boolean attributes on any Nova resource — including users who do not have access to Nova itself (for example, frontend customers sharing the web guard with the Nova admin area). The endpoint also accepted an arbitrary attribute parameter, which meant a valid caller could toggle any boolean column on the underlying model — not just columns exposed as Toggle fields on the resource. This issue has been patched in version 1.3.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.1 CRITICAL] CVE-2026-42193 — Plunk is an open-source email platform built on top of AWS SES. Prior to version…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42193</link>
-      <guid isPermaLink="false">2bd31207afb5fec39b9bbd7fdde4a334</guid>
-      <pubDate>Fri, 08 May 2026 22:16:31 +0000</pubDate>
-      <description>Plunk is an open-source email platform built on top of AWS SES. Prior to version 0.9.0, the /webhooks/sns endpoint accepts Amazon SNS notification payloads from unauthenticated requests without verifying the SNS signature, certificate, or topic ARN, meaning anyone can forge a valid-looking webhook request. This allows an unauthenticated attacker to spoof SNS events to trigger workflow automations, unsubscribe contacts, manipulate email delivery metrics, and potentially exhaust billing credits. This issue has been patched in version 0.9.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.4 MEDIUM] CVE-2026-42192 — Plunk is an open-source email platform built on top of AWS SES. Prior to version…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42192</link>
-      <guid isPermaLink="false">97fc1ac0b97544566a9169f5241ba34a</guid>
-      <pubDate>Fri, 08 May 2026 22:16:31 +0000</pubDate>
-      <description>Plunk is an open-source email platform built on top of AWS SES. Prior to version 0.9.0, a stored cross-site scripting (XSS) vulnerability exists in the campaign management feature, where the email body content created by authenticated project members is stored and later rendered in the admin dashboard using React&#39;s dangerouslySetInnerHTML without any HTML sanitization. This allows a lower-privileged member to embed malicious scripts in a campaign&#39;s email body that execute in the context of any admin or other member who views the campaign, potentially enabling session hijacking or unauthorized actions on their behalf. This issue has been patched in version 0.9.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>xss</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-41517 — Emlog is an open source website building system. Prior to version 2.6.11, insecure plugin upload fun…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-41517</link>
-      <guid isPermaLink="false">932dfbb75efe5fbe366c5c340500e319</guid>
-      <pubDate>Fri, 08 May 2026 22:16:30 +0000</pubDate>
-      <description>Emlog is an open source website building system. Prior to version 2.6.11, insecure plugin upload functionality allows attackers to upload and execute arbitrary PHP code, leading to complete server compromise and persistent backdoor installation. This issue has been patched in version 2.6.11.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-41486 — Ray is an AI compute engine. From version 2.54.0 to before version 2.55.0, Ray Data registers custom…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-41486</link>
-      <guid isPermaLink="false">18fed5a2dd314b94a1dfc863aa0d52a7</guid>
-      <pubDate>Fri, 08 May 2026 22:16:29 +0000</pubDate>
-      <description>Ray is an AI compute engine. From version 2.54.0 to before version 2.55.0, Ray Data registers custom Arrow extension types (ray.data.arrow_tensor, ray.data.arrow_tensor_v2, ray.data.arrow_variable_shaped_tensor) globally in PyArrow. When PyArrow reads a Parquet file containing one of these extension types, it calls __arrow_ext_deserialize__ on the field&#39;s metadata bytes. Ray&#39;s implementation passes these bytes directly to cloudpickle.loads(), achieving arbitrary code execution during schema parsing, before any row data is read. This issue has been patched in version 2.55.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] NVIDIA confirms GeForce NOW data breach affecting Armenian users</title>
-      <link>https://www.bleepingcomputer.com/news/security/nvidia-confirms-geforce-now-data-breach-affecting-armenian-users/</link>
-      <guid isPermaLink="false">25a78d9dac1fcf30a570732deff5caaa</guid>
-      <pubDate>Fri, 08 May 2026 16:18:31 +0000</pubDate>
-      <description>NVIDIA has confirmed in a statement for BleepingComputer that GeForce NOW user information has been exposed in a data breach. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>breach</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-43473 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;scsi: mpi3mr: Add NULL checks w…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43473</link>
-      <guid isPermaLink="false">14025157a949b6a4eba7310b0d7e3e06</guid>
-      <pubDate>Fri, 08 May 2026 15:17:00 +0000</pubDate>
-      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;scsi: mpi3mr: Add NULL checks when resetting request and reply queues&#xA;&#xA;The driver encountered a crash during resource cleanup when the reply and&#xA;request queues were NULL due to freed memory.  This issue occurred when the&#xA;creation of reply or request queues failed, and the driver freed the memory&#xA;first, but attempted to mem set the content of the freed memory, leading to&#xA;a system crash.&#xA;&#xA;Add NULL pointer checks for reply and request queues before accessing the&#xA;reply/request memory during cleanup</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.7 HIGH] CVE-2026-41524 — Brave CMS is an open-source CMS. Prior to commit 6c56603, page and article body …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-41524</link>
-      <guid isPermaLink="false">bb90f98a4ea4d4a6dedb087e4e9de4b1</guid>
-      <pubDate>Fri, 08 May 2026 15:16:40 +0000</pubDate>
-      <description>Brave CMS is an open-source CMS. Prior to commit 6c56603, page and article body content entered through the CKEditor rich-text editor is stored verbatim in the database and subsequently rendered with Laravel Blade&#39;s unescaped output directive {!! !!}. Any JavaScript or HTML injected by an editor-role user is permanently stored and executed in every visitor&#39;s browser upon page load. This issue has been patched via commit 6c56603.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-43304 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;libceph: de…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43304</link>
-      <guid isPermaLink="false">5530c6d2384f0176a5abbece8b0261b7</guid>
-      <pubDate>Fri, 08 May 2026 14:16:37 +0000</pubDate>
-      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;libceph: define and enforce CEPH_MAX_KEY_LEN&#xA;&#xA;When decoding the key, verify that the key material would fit into&#xA;a fixed-size buffer in process_auth_done() and generally has a sane&#xA;length.&#xA;&#xA;The new CEPH_MAX_KEY_LEN check replaces the existing check for a key&#xA;with no key material which is a) not universal since CEPH_CRYPTO_NONE&#xA;has to be excluded and b) doesn&#39;t provide much value since a smaller&#xA;than needed key is just as invalid as no key -- this has to be handled&#xA;elsewhere anyway.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.9 CRITICAL] CVE-2026-41512 — ai-scanner is an AI model safety scanner built on NVIDIA garak. From version 1.0…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-41512</link>
-      <guid isPermaLink="false">fccf839f611cab265c6f25b5aeccd9db</guid>
-      <pubDate>Fri, 08 May 2026 14:16:34 +0000</pubDate>
-      <description>ai-scanner is an AI model safety scanner built on NVIDIA garak. From version 1.0.0 to before version 1.4.1, there is a remote code execution vulnerability via JavaScript injection in `BrowserAutomation::PlaywrightService`. This issue has been patched in version 1.4.1.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-25077 — Account users are allowed by default to register templates to be downloaded dire…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-25077</link>
-      <guid isPermaLink="false">451a10a2963adbe310613035c83c953c</guid>
-      <pubDate>Fri, 08 May 2026 13:16:36 +0000</pubDate>
-      <description>Account users are allowed by default to register templates to be downloaded directly to the primary storage for deploying instances using the KVM hypervisor. Due to missing file name sanitization, an attacker can register malicious templates to execute arbitrary code on the KVM hosts. This can result in the compromise of resource integrity and confidentiality, data loss, denial of service, and availability of the KVM-based infrastructure managed by CloudStack.&#xA;&#xA;&#xA;Users are recommended to upgrade to Apache CloudStack versions 4.20.3.0 or 4.22.0.1, or later, which fixes this issue.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>apache</category>
-      <category>watch</category>
-      <category>apache</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2025-69233 — Due to multiple time-of-check time-of-use race conditions in the resource count …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-69233</link>
-      <guid isPermaLink="false">c0e4db189c701e30c6f721df815191fa</guid>
-      <pubDate>Fri, 08 May 2026 13:16:35 +0000</pubDate>
-      <description>Due to multiple time-of-check time-of-use race conditions in the resource count check and increment logic, as well as missing validations, users of the platform are able to exceed the allocation limits configured for their accounts/domains. This can be used by an attacker to degrade the infrastructure&#39;s resources and lead to denial of service conditions.&#xA;&#xA;Users are recommended to upgrade to Apache CloudStack versions 4.20.3.0 or 4.22.0.1, or later, which fixes this issue.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>apache</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>apache</category>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,49 @@
 [
   {
+    "id": "268ac24f11cad926b6b0174e4a8d8e3a",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Cybercrime service disrupted for abusing Microsoft platform to sign malware",
+    "url": "https://www.bleepingcomputer.com/news/security/cybercrime-service-disrupted-for-abusing-microsoft-platform-to-sign-malware/",
+    "summary": "Microsoft says it has disrupted a malware-signing-as-a-service (MSaaS) operation that abused the company's Artifact Signing service to generate fraudulent code-signing certificates used by ransomware gangs and other cybercriminals. [...]",
+    "published": "2026-05-19T21:47:31Z",
+    "fetched": "2026-05-19T22:45:01.848143594Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "ransomware",
+      "malware"
+    ],
+    "severity": "high",
+    "score": 62,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "2fa84540c3e088e3d8057efe7c9a3b63",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "Exposing Fox Tempest: A malware-signing service operation",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/",
+    "summary": "Fox Tempest is a financially motivated threat actor operating a malware‑signing‑as‑a‑service (MSaaS) used by other cybercriminals, including Vanilla Tempest and Storm groups, to more effectively distribute malicious code, including ransomware. The post Exposing Fox Tempest: A malware-signing service operation appeared first on Microsoft Security Blog.",
+    "published": "2026-05-19T15:07:01Z",
+    "fetched": "2026-05-19T22:45:01.848143594Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "ransomware",
+      "malware"
+    ],
+    "severity": "high",
+    "score": 71,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
     "id": "e875e046866526ce61267de2e79264b6",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -2095,208 +2139,6 @@
     ],
     "cves": [
       "CVE-2026-6402"
-    ]
-  },
-  {
-    "id": "96ab0f88029e7d46db801665530437fd",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-7256 — ** UNSUPPORTED WHEN ASSIGNED ** A command injection vulnerability in the CGI pro…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7256",
-    "summary": "** UNSUPPORTED WHEN ASSIGNED ** A command injection vulnerability in the CGI program of Zyxel WRE6505 v2 firmware version V1.00(ABDV.3)C0 could allow an adjacent attacker on the LAN to execute operating system (OS) commands on a vulnerable device by sending a crafted HTTP request.",
-    "published": "2026-05-12T04:16:29.36Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "zyxel"
-    ],
-    "cves": [
-      "CVE-2026-7256"
-    ]
-  },
-  {
-    "id": "eab8df698c577b15cdf5b55ad002a169",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-34263 — Due to improper Spring Security configuration, SAP Commerce Cloud allows an unau…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34263",
-    "summary": "Due to improper Spring Security configuration, SAP Commerce Cloud allows an unauthenticated user to perform malicious input injection, resulting in arbitrary server-side code execution, leading to high impact on Confidentiality, Integrity, and Availability of the application.",
-    "published": "2026-05-12T03:16:11.65Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "critical-cvss",
-      "sap",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "sap"
-    ],
-    "cves": [
-      "CVE-2026-34263"
-    ]
-  },
-  {
-    "id": "dd5a646f7db1433e65f3d3faee7ec577",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.7 HIGH] CVE-2026-43912 — Vaultwarden is a Bitwarden-compatible server written in Rust. Prior to 1.35.5, V…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43912",
-    "summary": "Vaultwarden is a Bitwarden-compatible server written in Rust. Prior to 1.35.5, Vaultwarden does not enforce that a groups_users.users_organizations_uuid entry belongs to the same organization as groups.groups_uuid, or a collections_groups.collections_uuid entry belongs to the same organization as collections_groups.groups_uuid. Multiple organization group-management endpoints accept arbitrary MembershipId and CollectionId values and persist them directly without verifying org consistency. This lets an attacker who is Admin in Organization A, and only a low-privileged member in Organization B bind their Org B membership UUID into an Org A group, then use that foreign group relationship to gain unauthorized access to Org B vault data. With an accessAll=true Org A group, the attacker can make /api/sync and /api/ciphers enumerate Org B ciphers. Once those unauthorized sync results reveal Org B collection IDs, the attacker can also bind those foreign collection IDs to the Org A group and turn the same flaw into write access over Org B items. This vulnerability is fixed in 1.35.5.",
-    "published": "2026-05-11T23:20:21.98Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "dani-garcia"
-    ],
-    "cves": [
-      "CVE-2026-43912"
-    ]
-  },
-  {
-    "id": "8ea727873b95ec9fa1e41b7c2450b612",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-43885 — WWBN AVideo is an open source video platform. In versions up to and including 29.0, an unauthenticat…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43885",
-    "summary": "WWBN AVideo is an open source video platform. In versions up to and including 29.0, an unauthenticated user can read APISecret from objects/plugins.json.php and use it to call protected API endpoints (e.g. users_list) without logging in. Commit 1c36f229d0a103528fb9f64d0a1cc0e1e8f5999b contains an updated fix.",
-    "published": "2026-05-11T22:22:13.213Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-43885"
-    ]
-  },
-  {
-    "id": "694fd043cdded0515a85add19de4b090",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.4 MEDIUM] CVE-2026-43879 — WWBN AVideo is an open source video platform. In versions up to and including 29…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43879",
-    "summary": "WWBN AVideo is an open source video platform. In versions up to and including 29.0, an authenticated user can configure their own donation-notification webhook URL to point at internal/loopback/metadata hosts (e.g. http://127.0.0.1:8080/..., http://169.254.169.254/latest/..., RFC1918 addresses). When any other user (including a second account owned by the same attacker) donates even a trivial amount via plugin/CustomizeUser/donate.json.php, the AVideo server issues a curl POST to the attacker-supplied URL, resulting in a blind SSRF. The handler uses only isValidURL() (which is a format check) and does not call the codebase's own isSSRFSafeURL() helper. Additionally, CURLOPT_FOLLOWLOCATION is enabled with no per-hop revalidation, so even if the stored URL were validated, an HTTP 307 from an attacker-controlled host could redirect the POST to internal targets. Commit aaacd48f29f1ff71d1eb5fc81d37605f593cefa9 contains an updated fix.",
-    "published": "2026-05-11T22:22:12.39Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-43879"
-    ]
-  },
-  {
-    "id": "339999e093524f593d65066ecc53e6a9",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-42315 — pyLoad is a free and open-source download manager written in Python. Prior to 0.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42315",
-    "summary": "pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev100, when passing a folder name in the set_package_data() API function call inside the data object with key \"_folder\", there is no sanitization at all, allowing a user with Perms.MODIFY to specify arbitrary directories as download locations for a package. This vulnerability is fixed in 0.5.0b3.dev100.",
-    "published": "2026-05-11T18:16:35.26Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "pyload-ng_project"
-    ],
-    "cves": [
-      "CVE-2026-42315"
-    ]
-  },
-  {
-    "id": "43e69df336abc9435f864e97ec89f03c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-42314 — pyLoad is a free and open-source download manager written in Python. Prior to 0.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42314",
-    "summary": "pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev100, package folder names are sanitized using insufficient string replacement. The pattern ....// becomes .._ after replacement (partial removal), leaving .. which can be exploited when the path is later resolved by the OS. This vulnerability is fixed in 0.5.0b3.dev100.",
-    "published": "2026-05-11T18:16:35.123Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "pyload-ng_project"
-    ],
-    "cves": [
-      "CVE-2026-42314"
-    ]
-  },
-  {
-    "id": "7b15826caf360079bc999d38af76486b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.3 HIGH] CVE-2026-42313 — pyLoad is a free and open-source download manager written in Python. Prior to 0.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42313",
-    "summary": "pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev100, the set_config_value() API method (@permission(Perms.SETTINGS)) in src/pyload/core/api/__init__.py gates security-sensitive options behind a hand-maintained allowlist ADMIN_ONLY_CORE_OPTIONS. The allowlist contains (\"proxy\", \"username\") and (\"proxy\", \"password\") — which protect the proxy credentials — but it does not include (\"proxy\", \"enabled\"), (\"proxy\", \"host\"), (\"proxy\", \"port\"), or (\"proxy\", \"type\"). Any authenticated user with the non-admin SETTINGS permission can enable proxying and point pyload at any host they control. From that point, every outbound download, captcha fetch, update check, and plugin HTTP call is transparently routed through the attacker. This is a direct continuation of the fix family CVE-2026-33509 / CVE-2026-35463 / CVE-2026-35464 / CVE-2026-35586, each of which patched a different missed option in the same allowlist. This vulnerability is fixed in 0.5.0b3.dev100.",
-    "published": "2026-05-11T18:16:34.98Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "pyload-ng_project"
-    ],
-    "cves": [
-      "CVE-2026-42313",
-      "CVE-2026-33509",
-      "CVE-2026-35463",
-      "CVE-2026-35464",
-      "CVE-2026-35586"
-    ]
-  },
-  {
-    "id": "97c4bf3101b51f32bbdc92088ff11127",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.8 MEDIUM] CVE-2026-42312 — pyLoad is a free and open-source download manager written in Python. Prior to 0.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42312",
-    "summary": "pyLoad is a free and open-source download manager written in Python. Prior to 0.5.0b3.dev100, the set_config_value() API method (@permission(Perms.SETTINGS)) in src/pyload/core/api/__init__.py gates security-sensitive options behind a hand-maintained allowlist ADMIN_ONLY_CORE_OPTIONS. The option (\"general\", \"ssl_verify\") is not on that allowlist. Any authenticated user with the non-admin SETTINGS permission can set general.ssl_verify = off, and every subsequent outbound pycurl request is made with SSL_VERIFYPEER=0 and SSL_VERIFYHOST=0 — TLS peer and hostname verification are fully disabled. An on-path attacker can then present forged certificates for any hostname pyload fetches. This is a direct continuation of the fix family CVE-2026-33509 / CVE-2026-35463 / CVE-2026-35464 / CVE-2026-35586, each of which patched a different missed option in the same allowlist. This vulnerability is fixed in 0.5.0b3.dev100.",
-    "published": "2026-05-11T18:16:34.833Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "pyload-ng_project"
-    ],
-    "cves": [
-      "CVE-2026-42312",
-      "CVE-2026-33509",
-      "CVE-2026-35463",
-      "CVE-2026-35464",
-      "CVE-2026-35586"
     ]
   }
 ]

@@ -1,5 +1,245 @@
 [
   {
+    "id": "cf3e7396a1fc14b4ff7c6eba8eb99f5b",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "Introducing RAMPART and Clarity: Open source tools to bring safety into Agent development workflow",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/20/introducing-rampart-and-clarity-open-source-tools-to-bring-safety-into-agent-development-workflow/",
+    "summary": "The AI systems shipping inside enterprises today are fundamentally different from the ones we were building even two years ago, because they have moved well past answering questions and into accessing your email, retrieving records from your CRM, writing and executing code, and taking actions on your behalf across dozens of connected systems. The post Introducing RAMPART and Clarity: Open source tools to bring safety into Agent development workflow appeared first on Microsoft Security Blog.",
+    "published": "2026-05-20T15:00:00Z",
+    "fetched": "2026-05-20T22:53:01.54329895Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 76,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "1f2a8cf14398010e6d3bf667e2939c80",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Microsoft Releases Mitigation for YellowKey BitLocker Bypass CVE-2026-45585 Exploit",
+    "url": "https://thehackernews.com/2026/05/microsoft-releases-mitigation-for.html",
+    "summary": "Microsoft on Tuesday released a mitigation for a BitLocker bypass vulnerability named YellowKey following its public disclosure last week. The zero-day flaw, now tracked as CVE-2026-45585, carries a CVSS score of 6.8. It has been described as a BitLocker security feature bypass. \"Microsoft is aware of a security feature bypass vulnerability in Windows publicly referred to as 'YellowKey,'\" the",
+    "published": "2026-05-20T08:28:26Z",
+    "fetched": "2026-05-20T22:53:01.54329895Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-45585"
+    ]
+  },
+  {
+    "id": "83761ccc07e652f53b585e60c555ef77",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Microsoft shares mitigation for YellowKey Windows zero-day",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-mitigation-for-yellowkey-windows-zero-day/",
+    "summary": "Microsoft has shared mitigations for YellowKey, a recently disclosed Windows BitLocker zero-day vulnerability that grants access to protected drives. [...]",
+    "published": "2026-05-20T07:31:15Z",
+    "fetched": "2026-05-20T22:53:01.54329895Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "889d15bb38410bf05a0ccad77227afc6",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2008-4250 — Microsoft Windows: Microsoft Windows Buffer Overflow Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4250",
+    "summary": "Microsoft Windows contains a buffer overflow vulnerability in the Windows Server Service that allows remote attackers to execute arbitrary code via a crafted RPC request that triggers an overflow during path canonicalization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-20T22:53:01.54329895Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2008-4250"
+    ]
+  },
+  {
+    "id": "1b270e62027458d58d1fe53a855af1dc",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2009-1537 — Microsoft DirectX: Microsoft DirectX NULL Byte Overwrite Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-1537",
+    "summary": "Microsoft DirectX contains a NULL byte overwrite vulnerability in the QuickTime Movie Parser Filter in quartz.dll in DirectShow which could allow remote attackers to execute arbitrary code via a crafted QuickTime media file.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-20T22:53:01.54329895Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2009-1537"
+    ]
+  },
+  {
+    "id": "e6b4c10cbfa9d90cc0b8eaae6cfed5cd",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2009-3459 — Adobe Acrobat and Reader: Adobe Acrobat and Reader Heap-Based Buffer Overflow Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3459",
+    "summary": "Adobe Acrobat and Reader contain a heap-based buffer overflow vulnerability which could allow remote attackers to execute arbitrary code via a crafted PDF file that triggers memory corruption.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-20T22:53:01.54329895Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "adobe"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "adobe"
+    ],
+    "cves": [
+      "CVE-2009-3459"
+    ]
+  },
+  {
+    "id": "4a42a55f8c0f8bc1d485787717b55f26",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2010-0249 — Microsoft Internet Explorer: Microsoft Internet Explorer Use-After-Free Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0249",
+    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code by accessing a pointer associated with a deleted object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-20T22:53:01.54329895Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2010-0249"
+    ]
+  },
+  {
+    "id": "0ba47a783a5fc1bcf1c7e565e5c12f96",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2010-0806 — Microsoft Internet Explorer: Microsoft Internet Explorer Use-After-Free Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0806",
+    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code via vectors involving access to an invalid pointer after the deletion of an object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-20T22:53:01.54329895Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2010-0806"
+    ]
+  },
+  {
+    "id": "2791de08c3fed98e349944c6d44a61a6",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-41091 — Microsoft Defender: Microsoft Defender Link Following Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41091",
+    "summary": "Microsoft Defender contains a link following vulnerability that allows an authorized attacker to elevate privileges locally.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-20T22:53:01.54329895Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-41091"
+    ]
+  },
+  {
+    "id": "28baa25ce42659f2f08fcb1749eea5a1",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-45498 — Microsoft Defender: Microsoft Defender Denial of Service Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45498",
+    "summary": "Microsoft Defender contains an unspecified vulnerability that allows for denial of service.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-20T22:53:01.54329895Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-45498"
+    ]
+  },
+  {
     "id": "268ac24f11cad926b6b0174e4a8d8e3a",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1616,6 +1856,30 @@
     "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-may-2026",
     "summary": "Microsoft is publishing 137 vulnerabilities on May 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild or public disclosure for any of these vulnerabilities. So far this month, Microsoft has provided patches to address 133 browser vulnerabilities, which are not included in the Patch Tuesday count above.Windows Netlogon: critical RCEAnyone responsible for securing a domain controller should prioritize remediation of CVE-2026-41089, which is a critical stack-based buffer overflow in Windows Netlogon with a CVSS v3 base score of 9.8. Exploitation leads to execution in the conte...",
     "published": "2026-05-13T00:22:19Z",
+    "fetched": "2026-05-20T22:53:01.54329895Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 71,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-41089"
+    ]
+  },
+  {
+    "id": "00c45790234cb95d8413822d7f25f419",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Patch Tuesday - May 2026",
+    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-may-2026",
+    "summary": "Microsoft is publishing 137 vulnerabilities on May 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild or public disclosure for any of these vulnerabilities. So far this month, Microsoft has provided patches to address 133 browser vulnerabilities, which are not included in the Patch Tuesday count above.Windows Netlogon: critical RCEAnyone responsible for securing a domain controller should prioritize remediation of CVE-2026-41089, which is a critical stack-based buffer overflow in Windows Netlogon with a CVSS v3 base score of 9.8. Exploitation leads to execution in the conte...",
+    "published": "2026-05-13T00:22:19Z",
     "fetched": "2026-05-13T22:46:06.809721451Z",
     "tags": [
       "microsoft",
@@ -2114,31 +2378,6 @@
     ],
     "cves": [
       "CVE-2026-8051"
-    ]
-  },
-  {
-    "id": "84613d52531489f7d84e75f6ad7cc7ab",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.3 MEDIUM] CVE-2026-6402 — webpack-dev-server versions up to and including 5.2.3 are vulnerable to cross-or…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6402",
-    "summary": "webpack-dev-server versions up to and including 5.2.3 are vulnerable to cross-origin source code exposure when serving over a non-potentially trustworthy origin such as plain HTTP. The previous fix relied on the Sec-Fetch-Mode and Sec-Fetch-Site request headers, which browsers omit for non-trustworthy origins, allowing a malicious site to load the bundled source as a script and read it across origins. Impact: an attacker controlling a website visited by a developer running webpack-dev-server can recover the application source code when the dev server runs over HTTP at a guessable host and port. Chromium based browsers from Chrome 142 onward are not affected due to local network access restrictions. Upgrade to webpack-dev-server 5.2.4 or later, which sets Cross-Origin-Resource-Policy: same-origin on responses.",
-    "published": "2026-05-12T09:16:55.64Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "chrome",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "webpack.js",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-6402"
     ]
   }
 ]

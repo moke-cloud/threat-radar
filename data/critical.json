@@ -1,5 +1,119 @@
 [
   {
+    "id": "6b80a4f0b7b950ba86c030b4985b0ea2",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Google accidentally exposed details of unfixed Chromium flaw",
+    "url": "https://www.bleepingcomputer.com/news/security/google-accidentally-exposed-details-of-unfixed-chromium-flaw/",
+    "summary": "Google has accidentally leaked details about an unfixed issue in Chromium that keeps JavaScript running in the background even when the browser is closed, allowing remote code execution on the device. [...]",
+    "published": "2026-05-21T18:13:50Z",
+    "fetched": "2026-05-21T22:49:38.688059887Z",
+    "tags": [
+      "chrome",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "chrome"
+    ]
+  },
+  {
+    "id": "7ad314e8b35cd1fc8268f794076df529",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Microsoft Warns of Two Actively Exploited Defender Vulnerabilities",
+    "url": "https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html",
+    "summary": "Microsoft has disclosed that a privilege escalation and a denial-of-service flaw in Defender has come under active exploitation in the wild. The former, tracked as CVE-2026-41091, is rated 7.8 on the CVSS scoring system. Successful exploitation of the flaw could allow an attacker to gain SYSTEM privileges. \"Improper link resolution before file access ('link following') in Microsoft Defender",
+    "published": "2026-05-21T10:55:57Z",
+    "fetched": "2026-05-21T22:49:38.688059887Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "lpe",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 76,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-41091"
+    ]
+  },
+  {
+    "id": "7f8d594016d70c67f7de301f85c02286",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Microsoft warns of new Defender zero-days exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/microsoft-warns-of-new-defender-zero-days-exploited-in-attacks/",
+    "summary": "On Wednesday, Microsoft started rolling out security patches for two Defender vulnerabilities that have been exploited in zero-day attacks. [...]",
+    "published": "2026-05-21T07:49:48Z",
+    "fetched": "2026-05-21T22:49:38.688059887Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "29a6efc28289a24e082df5e53e44f279",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2025-34291 — Langflow Langflow: Langflow Origin Validation Error Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34291",
+    "summary": "Langflow contains an origin validation error vulnerability in which an overly permissive CORS configuration combined with a refresh token cookie configured as SameSite=None allows a malicious webpage to perform cross-origin requests that include credentials and successfully call the refresh endpoint. This could allow the attacker to execute arbitrary code and achieve full system compromise via obtained tokens that permit access to authenticated endpoints.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-04",
+    "published": "2026-05-21T00:00:00Z",
+    "fetched": "2026-05-21T22:49:38.688059887Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "langflow"
+    ],
+    "cves": [
+      "CVE-2025-34291"
+    ]
+  },
+  {
+    "id": "8aa0b67e209150eef18b55401a91134a",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-34926 — Trend Micro Apex One: Trend Micro Apex One (On-Premise) Directory Traversal Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34926",
+    "summary": "Trend Micro Apex One (on-premise) contains a directory traversal vulnerability that could allow a pre-authenticated local attacker to modify a key table on the server to inject malicious code to deploy to agents on affected installations.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-04",
+    "published": "2026-05-21T00:00:00Z",
+    "fetched": "2026-05-21T22:49:38.688059887Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "trend"
+    ],
+    "cves": [
+      "CVE-2026-34926"
+    ]
+  },
+  {
     "id": "cf3e7396a1fc14b4ff7c6eba8eb99f5b",
     "source": "msrc",
     "source_name": "Microsoft Security Blog",
@@ -1383,6 +1497,31 @@
     "url": "https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html",
     "summary": "Cisco has released updates to address a maximum-severity authentication bypass flaw in Catalyst SD-WAN Controller that it said has been exploited in limited attacks. The vulnerability, tracked as CVE-2026-20182, carries a CVSS score of 10.0. \"A vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly",
     "published": "2026-05-14T17:45:20Z",
+    "fetched": "2026-05-21T22:49:38.688059887Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "auth-bypass",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 88,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20182"
+    ]
+  },
+  {
+    "id": "e886555638fc750c91d954e386775c4f",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Access",
+    "url": "https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html",
+    "summary": "Cisco has released updates to address a maximum-severity authentication bypass flaw in Catalyst SD-WAN Controller that it said has been exploited in limited attacks. The vulnerability, tracked as CVE-2026-20182, carries a CVSS score of 10.0. \"A vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly",
+    "published": "2026-05-14T17:45:20Z",
     "fetched": "2026-05-14T22:37:07.007804901Z",
     "tags": [
       "cisco",
@@ -1580,6 +1719,30 @@
     "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/",
     "summary": "Exposed UIs, weak authentication, and risky defaults could turn cloud-native AI apps on Kubernetes into potential targets by threat actors. Learn how exploitable misconfigurations lead to RCE and data leaks. The post When configuration becomes a vulnerability: Exploitable misconfigurations in AI apps appeared first on Microsoft Security Blog.",
     "published": "2026-05-14T14:20:55Z",
+    "fetched": "2026-05-21T22:49:38.688059887Z",
+    "tags": [
+      "microsoft",
+      "kubernetes",
+      "watch",
+      "rce",
+      "breach"
+    ],
+    "severity": "high",
+    "score": 76,
+    "vendors": [
+      "microsoft",
+      "kubernetes"
+    ]
+  },
+  {
+    "id": "31329c889af06184d29b39f9e551fba8",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "When configuration becomes a vulnerability: Exploitable misconfigurations in AI apps",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/",
+    "summary": "Exposed UIs, weak authentication, and risky defaults could turn cloud-native AI apps on Kubernetes into potential targets by threat actors. Learn how exploitable misconfigurations lead to RCE and data leaks. The post When configuration becomes a vulnerability: Exploitable misconfigurations in AI apps appeared first on Microsoft Security Blog.",
+    "published": "2026-05-14T14:20:55Z",
     "fetched": "2026-05-14T22:37:07.007804901Z",
     "tags": [
       "kubernetes",
@@ -1653,6 +1816,28 @@
     "url": "https://thehackernews.com/2026/05/windows-zero-days-expose-bitlocker.html",
     "summary": "An anonymous cybersecurity researcher who disclosed three Microsoft Defender vulnerabilities has returned with two more zero-days involving a BitLocker bypass and a privilege escalation impacting Windows Collaborative Translation Framework (CTFMON). The security defects have been codenamed YellowKey and GreenPlasma, respectively, by the researcher, who goes by the online aliases Chaotic Eclipse",
     "published": "2026-05-14T09:25:50Z",
+    "fetched": "2026-05-21T22:49:38.688059887Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "lpe",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "f5ecd63b38effde848d55ff6127de743",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Windows Zero-Days Expose BitLocker Bypasses And CTFMON Privilege Escalation",
+    "url": "https://thehackernews.com/2026/05/windows-zero-days-expose-bitlocker.html",
+    "summary": "An anonymous cybersecurity researcher who disclosed three Microsoft Defender vulnerabilities has returned with two more zero-days involving a BitLocker bypass and a privilege escalation impacting Windows Collaborative Translation Framework (CTFMON). The security defects have been codenamed YellowKey and GreenPlasma, respectively, by the researcher, who goes by the online aliases Chaotic Eclipse",
+    "published": "2026-05-14T09:25:50Z",
     "fetched": "2026-05-14T22:37:07.007804901Z",
     "tags": [
       "microsoft",
@@ -1664,6 +1849,32 @@
     "score": 76,
     "vendors": [
       "microsoft"
+    ]
+  },
+  {
+    "id": "3b06fc1429005e6fd312c304a30841cb",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-20182 — Cisco Catalyst SD-WAN: Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182",
+    "summary": "Cisco Catalyst SD-WAN Controller & Manager contain an authentication bypass vulnerability that allows an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.\nRequired: Please adhere to CISA’s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlined in CISA’s Emergency Directive 26-03 (URL listed below in Notes) and CISA’s Hunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.\nDue: 2026-05-17",
+    "published": "2026-05-14T00:00:00Z",
+    "fetched": "2026-05-21T22:49:38.688059887Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "cisco",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20182"
     ]
   },
   {
@@ -2111,273 +2322,6 @@
     ],
     "cves": [
       "CVE-2026-43891"
-    ]
-  },
-  {
-    "id": "476fb731870072a4353ad626d1170b5b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-31231 — Cognee thru v0.4.0 contains a critical remote code execution vulnerability in it…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31231",
-    "summary": "Cognee thru v0.4.0 contains a critical remote code execution vulnerability in its notebook cell execution API endpoint. The endpoint is designed to execute arbitrary Python code provided by the user, but it does so using the unsafe exec() function without any sandboxing, validation, or security controls. An attacker can exploit this by sending a specially crafted POST request containing malicious Python code to the execution endpoint. This leads to arbitrary code execution on the Cognee server with the privileges of the server process, allowing complete compromise of the system.",
-    "published": "2026-05-12T18:16:51.387Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-31231"
-    ]
-  },
-  {
-    "id": "d822a4cf3f0a0538e7732d50a35a29e2",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.7 MEDIUM] CVE-2025-53870 — An improper neutralization of special elements used in an os command ('os comman…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53870",
-    "summary": "An improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet FortiAP 7.6.0 through 7.6.2, FortiAP 7.4.0 through 7.4.5, FortiAP 7.2 all versions, FortiAP 7.0 all versions, FortiAP 6.4 all versions, FortiAP-W2 7.4.0 through 7.4.4, FortiAP-W2 7.2 all versions, FortiAP-W2 7.0 all versions may allow  an authenticated attacker to execute unauthorized code or commands via a specifically crafted cli command.",
-    "published": "2026-05-12T18:16:36.14Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce",
-      "fortinet",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "fortinet"
-    ],
-    "cves": [
-      "CVE-2025-53870"
-    ]
-  },
-  {
-    "id": "3f967fc9d719dba886deefb4e871737a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.7 MEDIUM] CVE-2025-53680 — An improper neutralization of special elements used in an OS command (\"OS Comman…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53680",
-    "summary": "An improper neutralization of special elements used in an OS command (\"OS Command Injection\") vulnerability [CWE-78] vulnerability in Fortinet FortiAP 7.6.0 through 7.6.2, FortiAP 7.4.0 through 7.4.5, FortiAP 7.2 all versions, FortiAP 7.0 all versions, FortiAP 6.4 all versions, FortiAP-U 7.0.0 through 7.0.5, FortiAP-U 6.2 all versions, FortiAP-W2 7.4.0 through 7.4.4, FortiAP-W2 7.2 all versions, FortiAP-W2 7.0 all versions allows an authenticated privileged attacker to execute unauthorized code or commands via crafted CLI requests.",
-    "published": "2026-05-12T18:16:35.687Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce",
-      "fortinet",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "fortinet"
-    ],
-    "cves": [
-      "CVE-2025-53680"
-    ]
-  },
-  {
-    "id": "878cd98881ae83d8a99a33c11208dde0",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Microsoft May 2026 Patch Tuesday fixes 120 flaws, no zero-days",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-may-2026-patch-tuesday-fixes-120-flaws-no-zero-days/",
-    "summary": "Today is Microsoft's May 2026 Patch Tuesday, with security updates for 120 flaws and no zero-days disclosed this month. [...]",
-    "published": "2026-05-12T18:08:06Z",
-    "fetched": "2026-05-12T22:41:15.972370858Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "13b6441c3a92debba13c2604f37b137f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-43512 — DEPRECATED: Authentication Bypass Issues vulnerability in digest authentication …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43512",
-    "summary": "DEPRECATED: Authentication Bypass Issues vulnerability in digest authentication in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.21, from 10.1.0-M1 through 10.1.54, from 9.0.0.M1 through 9.0.117, from 8.5.0 through 8.5.100, from before 7.0.0.\nOlder unsupported versions any also be affect\n\nUsers are recommended to upgrade to version 11.0.22, 10.1.55 or 9.0.118 which fix the issue.",
-    "published": "2026-05-12T16:16:17.99Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "critical-cvss",
-      "auth-bypass",
-      "apache",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2026-43512"
-    ]
-  },
-  {
-    "id": "2c127ab561320d00cff13ee8b5c674a4",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-31223 — The snorkel library thru v0.10.0 contains a critical insecure deserialization vu…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31223",
-    "summary": "The snorkel library thru v0.10.0 contains a critical insecure deserialization vulnerability (CWE-502) in the BaseLabeler.load() method of the BaseLabeler class. The method loads serialized labeler models using the unsafe pickle.load() function on user-supplied file paths without any validation or security controls. Python's pickle module is inherently dangerous for deserializing untrusted data, as it can execute arbitrary code during the deserialization process. A remote attacker can exploit this by providing a maliciously crafted pickle file, leading to arbitrary code execution on the victim's system when the file is loaded via the vulnerable method.",
-    "published": "2026-05-12T16:16:14.223Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce",
-      "deserialization"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "snorkel"
-    ],
-    "cves": [
-      "CVE-2026-31223"
-    ]
-  },
-  {
-    "id": "ad2c2f4e0902808e5c465051cf83e195",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-31222 — The snorkel library thru v0.10.0 contains an insecure deserialization vulnerabil…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31222",
-    "summary": "The snorkel library thru v0.10.0 contains an insecure deserialization vulnerability (CWE-502) in the Trainer.load() method of the Trainer class. The method loads model checkpoint files using torch.load() without enabling the security-restrictive weights_only=True parameter. This default behavior allows the deserialization of arbitrary Python objects via the Pickle module. A remote attacker can exploit this by providing a maliciously crafted model file, leading to arbitrary code execution on the victim's system when the file is loaded via the vulnerable method.",
-    "published": "2026-05-12T16:16:14.12Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce",
-      "deserialization"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "snorkel"
-    ],
-    "cves": [
-      "CVE-2026-31222"
-    ]
-  },
-  {
-    "id": "b513b3ce5ce1964e990e6d15e51002b0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-31221 — PyTorch-Lightning versions 2.6.0 and earlier contain an insecure deserialization…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31221",
-    "summary": "PyTorch-Lightning versions 2.6.0 and earlier contain an insecure deserialization vulnerability (CWE-502) in the checkpoint loading mechanism. The LightningModule.load_from_checkpoint() method, which is commonly used to load saved model states, internally calls torch.load() without setting the security-restrictive weights_only=True parameter. This default behavior allows the deserialization of arbitrary Python objects via the Pickle module. A remote attacker can exploit this by providing a maliciously crafted checkpoint file, leading to arbitrary code execution on the victim's system when the file is loaded.",
-    "published": "2026-05-12T16:16:14.02Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce",
-      "deserialization"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "lightningai"
-    ],
-    "cves": [
-      "CVE-2026-31221"
-    ]
-  },
-  {
-    "id": "68849ce38221acf3ddf97caecfea3f1b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-31220 — PySyft (Syft Datasite/Server) versions 0.9.5 and earlier are vulnerable to remot…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31220",
-    "summary": "PySyft (Syft Datasite/Server) versions 0.9.5 and earlier are vulnerable to remote code execution due to insufficient validation and sandboxing of user-submitted code. The system allows low-privileged users to submit Python functions (via @sy.syft_function()) for remote execution on the server. While a code approval mechanism exists, the submitted code undergoes no security checks for dangerous operations (e.g., file access, command execution). Once approved, the code is executed within the server process using exec() and eval() functions without proper isolation. A remote attacker can leverage this to execute arbitrary Python code on the server, leading to complete compromise of the server environment.",
-    "published": "2026-05-12T16:16:13.913Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-31220"
-    ]
-  },
-  {
-    "id": "d3b4449b0cb7abb289b53234b8970c73",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-31219 — The _load_model() function in the neural_magic_training.py script of the optimat…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31219",
-    "summary": "The _load_model() function in the neural_magic_training.py script of the optimate project in commit a6d302f912b481c94370811af6b11402f51d377f (2024-07-21) is vulnerable to insecure deserialization (CWE-502). When a user provides a single model file path (e.g., .pt or .pth) via the --model command-line argument, the function loads the file using torch.load() without enabling the weights_only=True security parameter. This allows the deserialization of arbitrary Python objects through the Pickle module. A remote attacker can exploit this by providing a maliciously crafted model file, leading to arbitrary code execution during deserialization on the victim's system.",
-    "published": "2026-05-12T16:16:13.813Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce",
-      "deserialization"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-31219"
-    ]
-  },
-  {
-    "id": "9beb73b7bbfc4ac7d614e6ad50eb5599",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-31218 — The _load_model() function in the neural_magic_training.py script of the optimat…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31218",
-    "summary": "The _load_model() function in the neural_magic_training.py script of the optimate project in commit a6d302f912b481c94370811af6b11402f51d377f (2024-07-21) is vulnerable to insecure deserialization (CWE-502). When loading a model state dictionary from a state_dict.pt file via torch.load(), the function does not enable the weights_only=True security parameter. This allows the deserialization of arbitrary Python objects through the Pickle module. A remote attacker can exploit this by providing a maliciously crafted state_dict.pt file within a directory specified via the --model argument, leading to arbitrary code execution during the deserialization process on the victim's system.",
-    "published": "2026-05-12T16:16:13.71Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce",
-      "deserialization"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-31218"
-    ]
-  },
-  {
-    "id": "a1d080fd0c9c6ae0d623fe8dc4f1a2ef",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.2 HIGH] CVE-2026-8051 — OS command injection in Ivanti Virtual Traffic Manager before version 22.9r4 all…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8051",
-    "summary": "OS command injection in Ivanti Virtual Traffic Manager before version 22.9r4 allows a remote authenticated attacker with admin privileges to achieve remote code execution.",
-    "published": "2026-05-12T15:16:17.267Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce",
-      "ivanti",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "ivanti"
-    ],
-    "cves": [
-      "CVE-2026-8051"
     ]
   }
 ]

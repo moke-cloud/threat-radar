@@ -5,7 +5,72 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 20 May 2026 22:53:01 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 22:49:38 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Google accidentally exposed details of unfixed Chromium flaw</title>
+      <link>https://www.bleepingcomputer.com/news/security/google-accidentally-exposed-details-of-unfixed-chromium-flaw/</link>
+      <guid isPermaLink="false">6b80a4f0b7b950ba86c030b4985b0ea2</guid>
+      <pubDate>Thu, 21 May 2026 18:13:50 +0000</pubDate>
+      <description>Google has accidentally leaked details about an unfixed issue in Chromium that keeps JavaScript running in the background even when the browser is closed, allowing remote code execution on the device. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] Microsoft Warns of Two Actively Exploited Defender Vulnerabilities</title>
+      <link>https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html</link>
+      <guid isPermaLink="false">7ad314e8b35cd1fc8268f794076df529</guid>
+      <pubDate>Thu, 21 May 2026 10:55:57 +0000</pubDate>
+      <description>Microsoft has disclosed that a privilege escalation and a denial-of-service flaw in Defender has come under active exploitation in the wild. The former, tracked as CVE-2026-41091, is rated 7.8 on the CVSS scoring system. Successful exploitation of the flaw could allow an attacker to gain SYSTEM privileges. &#34;Improper link resolution before file access (&#39;link following&#39;) in Microsoft Defender</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>lpe</category>
+      <category>actively-exploited</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] Microsoft warns of new Defender zero-days exploited in attacks</title>
+      <link>https://www.bleepingcomputer.com/news/security/microsoft-warns-of-new-defender-zero-days-exploited-in-attacks/</link>
+      <guid isPermaLink="false">7f8d594016d70c67f7de301f85c02286</guid>
+      <pubDate>Thu, 21 May 2026 07:49:48 +0000</pubDate>
+      <description>On Wednesday, Microsoft started rolling out security patches for two Defender vulnerabilities that have been exploited in zero-day attacks. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>0day</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2025-34291 — Langflow Langflow: Langflow Origin Validation Error Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-34291</link>
+      <guid isPermaLink="false">29a6efc28289a24e082df5e53e44f279</guid>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <description>Langflow contains an origin validation error vulnerability in which an overly permissive CORS configuration combined with a refresh token cookie configured as SameSite=None allows a malicious webpage to perform cross-origin requests that include credentials and successfully call the refresh endpoint. This could allow the attacker to execute arbitrary code and achieve full system compromise via obtained tokens that permit access to authenticated endpoints.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-06-04</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>langflow</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-34926 — Trend Micro Apex One: Trend Micro Apex One (On-Premise) Directory Traversal Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-34926</link>
+      <guid isPermaLink="false">8aa0b67e209150eef18b55401a91134a</guid>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <description>Trend Micro Apex One (on-premise) contains a directory traversal vulnerability that could allow a pre-authenticated local attacker to modify a key table on the server to inject malicious code to deploy to agents on affected installations.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-06-04</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>path-traversal</category>
+      <category>trend</category>
+    </item>
     <item>
       <title>[HIGH] Introducing RAMPART and Clarity: Open source tools to bring safety into Agent development workflow</title>
       <link>https://www.microsoft.com/en-us/security/blog/2026/05/20/introducing-rampart-and-clarity-open-source-tools-to-bring-safety-into-agent-development-workflow/</link>
@@ -796,6 +861,20 @@
       <category>cisco</category>
     </item>
     <item>
+      <title>[CRIT] Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Access</title>
+      <link>https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html</link>
+      <guid isPermaLink="false">e886555638fc750c91d954e386775c4f</guid>
+      <pubDate>Thu, 14 May 2026 17:45:20 +0000</pubDate>
+      <description>Cisco has released updates to address a maximum-severity authentication bypass flaw in Catalyst SD-WAN Controller that it said has been exploited in limited attacks. The vulnerability, tracked as CVE-2026-20182, carries a CVSS score of 10.0. &#34;A vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>critical</category>
+      <category>cisco</category>
+      <category>watch</category>
+      <category>auth-bypass</category>
+      <category>actively-exploited</category>
+      <category>cisco</category>
+    </item>
+    <item>
       <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-44501 — DataHub is an open-source metadata platform. Prior to 1.5.0.3, The DataHub front…</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44501</link>
       <guid isPermaLink="false">5432f37711e8e1e29f30d90a334ef6d6</guid>
@@ -890,6 +969,22 @@
       <category>openbao</category>
     </item>
     <item>
+      <title>[HIGH] When configuration becomes a vulnerability: Exploitable misconfigurations in AI apps</title>
+      <link>https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/</link>
+      <guid isPermaLink="false">31329c889af06184d29b39f9e551fba8</guid>
+      <pubDate>Thu, 14 May 2026 14:20:55 +0000</pubDate>
+      <description>Exposed UIs, weak authentication, and risky defaults could turn cloud-native AI apps on Kubernetes into potential targets by threat actors. Learn how exploitable misconfigurations lead to RCE and data leaks. The post When configuration becomes a vulnerability: Exploitable misconfigurations in AI apps appeared first on Microsoft Security Blog.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>kubernetes</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>breach</category>
+      <category>microsoft</category>
+      <category>kubernetes</category>
+    </item>
+    <item>
       <title>[CRIT] When configuration becomes a vulnerability: Exploitable misconfigurations in AI apps</title>
       <link>https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/</link>
       <guid isPermaLink="false">31329c889af06184d29b39f9e551fba8</guid>
@@ -945,6 +1040,35 @@
       <category>lpe</category>
       <category>0day</category>
       <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] Windows Zero-Days Expose BitLocker Bypasses And CTFMON Privilege Escalation</title>
+      <link>https://thehackernews.com/2026/05/windows-zero-days-expose-bitlocker.html</link>
+      <guid isPermaLink="false">f5ecd63b38effde848d55ff6127de743</guid>
+      <pubDate>Thu, 14 May 2026 09:25:50 +0000</pubDate>
+      <description>An anonymous cybersecurity researcher who disclosed three Microsoft Defender vulnerabilities has returned with two more zero-days involving a BitLocker bypass and a privilege escalation impacting Windows Collaborative Translation Framework (CTFMON). The security defects have been codenamed YellowKey and GreenPlasma, respectively, by the researcher, who goes by the online aliases Chaotic Eclipse</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>lpe</category>
+      <category>0day</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-20182 — Cisco Catalyst SD-WAN: Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-20182</link>
+      <guid isPermaLink="false">3b06fc1429005e6fd312c304a30841cb</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+      <description>Cisco Catalyst SD-WAN Controller &amp; Manager contain an authentication bypass vulnerability that allows an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.&#xA;Required: Please adhere to CISA’s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlined in CISA’s Emergency Directive 26-03 (URL listed below in Notes) and CISA’s Hunt &amp; Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.&#xA;Due: 2026-05-17</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>cisco</category>
+      <category>watch</category>
+      <category>auth-bypass</category>
+      <category>cisco</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2026-20182 — Cisco Catalyst SD-WAN: Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability</title>
@@ -1137,116 +1261,6 @@
       <category>high</category>
       <category>rce</category>
       <category>m2team</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 3.3 LOW] CVE-2026-42442 — NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, a …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42442</link>
-      <guid isPermaLink="false">2f50b9949a94afd4fb1bb1c162d4a738</guid>
-      <pubDate>Tue, 12 May 2026 20:16:41 +0000</pubDate>
-      <description>NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, a null-pointer dereference exists in the UFS/UFS2 filesystem image parser in NanaZip. The vulnerability is triggered when opening a crafted UFS image where the root inode (inode 2) is set to IFLNK (symlink) instead of IFDIR (directory). The parser unconditionally treats the root inode as a directory without checking its type, and when the symlink has an embedded target (small di_size), the directory data buffer is zero-length, causing a null-pointer dereference on the first read. This vulnerability is fixed in 6.0.1698.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>m2team</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 3.3 LOW] CVE-2026-42355 — NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, an…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42355</link>
-      <guid isPermaLink="false">ecf93fd93129bbb63955b065cfdbfb79</guid>
-      <pubDate>Tue, 12 May 2026 20:16:41 +0000</pubDate>
-      <description>NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, an uncontrolled recursion vulnerability exists in the Electron Archive (ASAR) parser in NanaZip. When opening a crafted .asar file with deeply nested JSON in the header, both nlohmann::json::parse and the handler&#39;s GetAllPaths function recurse without depth limits, exhausting the thread stack and crashing the NanaZip process. This vulnerability is fixed in 6.0.1698.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>m2team</category>
-    </item>
-    <item>
-      <title>[HIGH] Fortinet warns of critical RCE flaws in FortiSandbox and FortiAuthenticator</title>
-      <link>https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-rce-flaws-in-fortisandbox-and-fortiauthenticator/</link>
-      <guid isPermaLink="false">73c488bd549cf316c594e596a8cebab7</guid>
-      <pubDate>Tue, 12 May 2026 18:23:09 +0000</pubDate>
-      <description>Fortinet has released security patches for two critical vulnerabilities in FortiSandbox and FortiAuthenticator that could enable attackers to run commands or arbitrary code. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-43891 — changedetection.io is a free open source web page change detection tool. Prior t…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43891</link>
-      <guid isPermaLink="false">085510dc7eda55b503075ba00a65575c</guid>
-      <pubDate>Tue, 12 May 2026 18:17:28 +0000</pubDate>
-      <description>changedetection.io is a free open source web page change detection tool. Prior to 0.55.1, the vulnerability is caused by trusting attacker-controlled snapshot paths restored from backup files. The vulnerable flow starts in the backup restore logic. When a backup ZIP is restored, the application extracts the archive and copies each restored watch UUID directory directly into the live datastore using shutil.copytree(entry.path, dst_dir). This preserves attacker-controlled files inside the restored watch directory, including history.txt. After restore, the application parses history.txt in the watch history property and  returns the contents of the targeted local file. This vulnerability is fixed in 0.55.1.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>webtechnologies</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-31231 — Cognee thru v0.4.0 contains a critical remote code execution vulnerability in it…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-31231</link>
-      <guid isPermaLink="false">476fb731870072a4353ad626d1170b5b</guid>
-      <pubDate>Tue, 12 May 2026 18:16:51 +0000</pubDate>
-      <description>Cognee thru v0.4.0 contains a critical remote code execution vulnerability in its notebook cell execution API endpoint. The endpoint is designed to execute arbitrary Python code provided by the user, but it does so using the unsafe exec() function without any sandboxing, validation, or security controls. An attacker can exploit this by sending a specially crafted POST request containing malicious Python code to the execution endpoint. This leads to arbitrary code execution on the Cognee server with the privileges of the server process, allowing complete compromise of the system.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.7 MEDIUM] CVE-2025-53870 — An improper neutralization of special elements used in an os command (&#39;os comman…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-53870</link>
-      <guid isPermaLink="false">d822a4cf3f0a0538e7732d50a35a29e2</guid>
-      <pubDate>Tue, 12 May 2026 18:16:36 +0000</pubDate>
-      <description>An improper neutralization of special elements used in an os command (&#39;os command injection&#39;) vulnerability in Fortinet FortiAP 7.6.0 through 7.6.2, FortiAP 7.4.0 through 7.4.5, FortiAP 7.2 all versions, FortiAP 7.0 all versions, FortiAP 6.4 all versions, FortiAP-W2 7.4.0 through 7.4.4, FortiAP-W2 7.2 all versions, FortiAP-W2 7.0 all versions may allow  an authenticated attacker to execute unauthorized code or commands via a specifically crafted cli command.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.7 MEDIUM] CVE-2025-53680 — An improper neutralization of special elements used in an OS command (&#34;OS Comman…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-53680</link>
-      <guid isPermaLink="false">3f967fc9d719dba886deefb4e871737a</guid>
-      <pubDate>Tue, 12 May 2026 18:16:35 +0000</pubDate>
-      <description>An improper neutralization of special elements used in an OS command (&#34;OS Command Injection&#34;) vulnerability [CWE-78] vulnerability in Fortinet FortiAP 7.6.0 through 7.6.2, FortiAP 7.4.0 through 7.4.5, FortiAP 7.2 all versions, FortiAP 7.0 all versions, FortiAP 6.4 all versions, FortiAP-U 7.0.0 through 7.0.5, FortiAP-U 6.2 all versions, FortiAP-W2 7.4.0 through 7.4.4, FortiAP-W2 7.2 all versions, FortiAP-W2 7.0 all versions allows an authenticated privileged attacker to execute unauthorized code or commands via crafted CLI requests.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[HIGH] Microsoft May 2026 Patch Tuesday fixes 120 flaws, no zero-days</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-may-2026-patch-tuesday-fixes-120-flaws-no-zero-days/</link>
-      <guid isPermaLink="false">878cd98881ae83d8a99a33c11208dde0</guid>
-      <pubDate>Tue, 12 May 2026 18:08:06 +0000</pubDate>
-      <description>Today is Microsoft&#39;s May 2026 Patch Tuesday, with security updates for 120 flaws and no zero-days disclosed this month. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[CRIT] [CVSS 9.8 CRITICAL] CVE-2026-43512 — DEPRECATED: Authentication Bypass Issues vulnerability in digest authentication …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43512</link>
-      <guid isPermaLink="false">13b6441c3a92debba13c2604f37b137f</guid>
-      <pubDate>Tue, 12 May 2026 16:16:17 +0000</pubDate>
-      <description>DEPRECATED: Authentication Bypass Issues vulnerability in digest authentication in Apache Tomcat.&#xA;&#xA;This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.21, from 10.1.0-M1 through 10.1.54, from 9.0.0.M1 through 9.0.117, from 8.5.0 through 8.5.100, from before 7.0.0.&#xA;Older unsupported versions any also be affect&#xA;&#xA;Users are recommended to upgrade to version 11.0.22, 10.1.55 or 9.0.118 which fix the issue.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>critical</category>
-      <category>critical-cvss</category>
-      <category>auth-bypass</category>
-      <category>apache</category>
-      <category>watch</category>
-      <category>apache</category>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,98 @@
 [
   {
+    "id": "af93eae71762b7e759c8f3d7dae8b18a",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Metasploit Wrap Up 05/22/2026",
+    "url": "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-22-2026",
+    "summary": "Another week, another authentication bypassOur humble Metasploit weekly(ish) blog has been blessed with a new network component vulnerability. The dynamic duo of @sfewer-r7 and @jburgess-r7 have discovered and authored the admin/networking/cisco_sdwan_vhub_auth_bypass module for CVE-2026-20182, a vulnerability gracing the Cisco Catalyst SD-WAN Controller. The devices, whose purpose is to control a software-defined (SD) wide-area-network (WAN) was unfortunately missing an extra A for authentication. An oversight that Cisco has duly patched.Elsewhere this week, the HUSTOJ online judge platform...",
+    "published": "2026-05-22T19:10:05Z",
+    "fetched": "2026-05-22T22:34:43.420831657Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20182"
+    ]
+  },
+  {
+    "id": "436f53320d764079a22e086325779e5c",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/22/microsoft-recognized-as-a-leader-in-the-forrester-wave-for-workforce-identity-security-platforms/",
+    "summary": "Microsoft has been recognized as a Leader in The Forrester Wave™: Workforce Identity Security Platforms, Q2 2026, receiving the highest scores in both the current offering and strategy categories. The post Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms appeared first on Microsoft Security Blog.",
+    "published": "2026-05-22T17:00:00Z",
+    "fetched": "2026-05-22T22:34:43.420831657Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 76,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "59103c3f178ca8a01e62a06f6f23e695",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Trend Micro warns of Apex One zero-day exploited in the wild",
+    "url": "https://www.bleepingcomputer.com/news/security/trend-micro-warns-of-apex-one-zero-day-exploited-in-attacks/",
+    "summary": "Japanese cybersecurity software company Trend Micro has addressed an Apex One zero-day vulnerability exploited in attacks targeting Windows systems. [...]",
+    "published": "2026-05-22T13:39:19Z",
+    "fetched": "2026-05-22T22:34:43.420831657Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "0573c5c4a4d398521c2592e1629de1d0",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-9082 — Drupal Core: Drupal Core SQL Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9082",
+    "summary": "Drupal Core contains a SQL injection vulnerability that could allow for privilege escalation and remote code execution via specially crafted requests sent with the database abstraction API.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-27",
+    "published": "2026-05-22T00:00:00Z",
+    "fetched": "2026-05-22T22:34:43.420831657Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce",
+      "lpe",
+      "sqli"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "drupal"
+    ],
+    "cves": [
+      "CVE-2026-9082"
+    ]
+  },
+  {
     "id": "6b80a4f0b7b950ba86c030b4985b0ea2",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1105,6 +1198,31 @@
     "url": "https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html",
     "summary": "Microsoft has disclosed a new security vulnerability impacting on-premise versions of Exchange Server that it said has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-42897 (CVSS score: 8.1), has been described as a spoofing bug stemming from a cross-site scripting flaw. An anonymous researcher has been credited with discovering and reporting the issue. \"",
     "published": "2026-05-15T06:19:04Z",
+    "fetched": "2026-05-22T22:34:43.420831657Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "xss",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 76,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-42897"
+    ]
+  },
+  {
+    "id": "c2c6193c0b0bace861aaa9f20107cc9b",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email",
+    "url": "https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html",
+    "summary": "Microsoft has disclosed a new security vulnerability impacting on-premise versions of Exchange Server that it said has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-42897 (CVSS score: 8.1), has been described as a spoofing bug stemming from a cross-site scripting flaw. An anonymous researcher has been credited with discovering and reporting the issue. \"",
+    "published": "2026-05-15T06:19:04Z",
     "fetched": "2026-05-15T22:30:20.630110031Z",
     "tags": [
       "microsoft",
@@ -1114,6 +1232,32 @@
     ],
     "severity": "high",
     "score": 76,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-42897"
+    ]
+  },
+  {
+    "id": "42b950f52f79d3e44d7a8ae0755cba8f",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-42897 — Microsoft Microsoft: Microsoft Exchange Server Cross-Site Scripting Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42897",
+    "summary": "Microsoft Exchange Server contains a cross-site scripting vulnerability during web page generation in Outlook Web Access and when certain interaction conditions are met, arbitrary JavaScript can be executed in the browser context.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-29",
+    "published": "2026-05-15T00:00:00Z",
+    "fetched": "2026-05-22T22:34:43.420831657Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch",
+      "xss"
+    ],
+    "severity": "critical",
+    "score": 100,
     "vendors": [
       "microsoft"
     ],
@@ -2300,28 +2444,6 @@
     "score": 67,
     "vendors": [
       "fortinet"
-    ]
-  },
-  {
-    "id": "085510dc7eda55b503075ba00a65575c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-43891 — changedetection.io is a free open source web page change detection tool. Prior t…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43891",
-    "summary": "changedetection.io is a free open source web page change detection tool. Prior to 0.55.1, the vulnerability is caused by trusting attacker-controlled snapshot paths restored from backup files. The vulnerable flow starts in the backup restore logic. When a backup ZIP is restored, the application extracts the archive and copies each restored watch UUID directory directly into the live datastore using shutil.copytree(entry.path, dst_dir). This preserves attacker-controlled files inside the restored watch directory, including history.txt. After restore, the application parses history.txt in the watch history property and  returns the contents of the targeted local file. This vulnerability is fixed in 0.55.1.",
-    "published": "2026-05-12T18:17:28.493Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "webtechnologies"
-    ],
-    "cves": [
-      "CVE-2026-43891"
     ]
   }
 ]

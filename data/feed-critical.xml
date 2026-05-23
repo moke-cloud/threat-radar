@@ -5,7 +5,18 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 22 May 2026 22:34:43 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 22:26:24 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV</title>
+      <link>https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html</link>
+      <guid isPermaLink="false">42c7ce1559cc21ad515df1c533592a82</guid>
+      <pubDate>Sat, 23 May 2026 07:23:48 +0000</pubDate>
+      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a recently patched critical security flaw impacting Drupal Core to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation. The vulnerability in question is CVE-2026-9082 (CVSS score: 6.5), an SQL injection vulnerability affecting all supported versions of Drupal Core. &#34;Drupal Core</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>sqli</category>
+      <category>actively-exploited</category>
+    </item>
     <item>
       <title>[HIGH] Metasploit Wrap Up 05/22/2026</title>
       <link>https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-22-2026</link>
@@ -277,6 +288,16 @@
       <category>microsoft</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-33633 — Kitty is a cross-platform GPU based terminal. Versions 0.46.2 and below contain …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33633</link>
+      <guid isPermaLink="false">9296549949493a9808b2629fd8cacfd6</guid>
+      <pubDate>Tue, 19 May 2026 18:16:21 +0000</pubDate>
+      <description>Kitty is a cross-platform GPU based terminal. Versions 0.46.2 and below contain a heap buffer overflow in load_image_data() that allows any process which can write to the terminal&#39;s stdin to crash kitty immediately. The vulnerability is triggered by a single APC graphics protocol command with a PNG format declaration (f=100) whose payload exceeds twice the initial buffer capacity. The overflow is attacker-controlled in both length and content, causing DoS and potentially escalation to RCE itself. This issue has been fixed in version 0.47.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[HIGH] Exposing Fox Tempest: A malware-signing service operation</title>
       <link>https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/</link>
       <guid isPermaLink="false">2fa84540c3e088e3d8057efe7c9a3b63</guid>
@@ -543,6 +564,20 @@
       <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>high</category>
       <category>rce</category>
+    </item>
+    <item>
+      <title>[CRIT] Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checkout Skimming</title>
+      <link>https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html</link>
+      <guid isPermaLink="false">28cf83400d8e02e62de1c8c4ba01ef47</guid>
+      <pubDate>Sat, 16 May 2026 15:20:48 +0000</pubDate>
+      <description>A critical security vulnerability impacting the Funnel Builder plugin for WordPress has come under active exploitation in the wild to inject malicious JavaScript code into WooCommerce checkout pages with the goal of stealing payment data. Details of the activity were published by Sansec this week. The vulnerability currently does not have an official CVE identifier. It</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>critical</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
+      <category>wordpress</category>
     </item>
     <item>
       <title>[CRIT] Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checkout Skimming</title>
@@ -1238,44 +1273,6 @@
       <category>watch</category>
       <category>rce</category>
       <category>lpe</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-8053 — An issue in MongoDB Server&#39;s time-series collection implementation allows an aut…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8053</link>
-      <guid isPermaLink="false">b6fc6650f3e24d7843666a522888225b</guid>
-      <pubDate>Wed, 13 May 2026 04:17:41 +0000</pubDate>
-      <description>An issue in MongoDB Server&#39;s time-series collection implementation allows an authenticated user with database write privileges to trigger an out-of-bounds memory write in the mongod process. The issue results from an inconsistency in the internal field-name-to-index mapping within the time-series bucket catalog. Under certain conditions this can result in arbitrary code execution.&#xA;&#xA;This issue impacts MongoDB Server v5.0 versions prior to 5.0.33, v6.0 versions prior to 6.0.28, v7.0 versions prior to 7.0.34, v8.0 versions prior to 8.0.23, v8.2 versions prior to 8.2.9 and v8.3 versions prior to 8.3.2.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>mongodb</category>
-      <category>mongodb</category>
-    </item>
-    <item>
-      <title>[HIGH] Patch Tuesday - May 2026</title>
-      <link>https://www.rapid7.com/blog/post/em-patch-tuesday-may-2026</link>
-      <guid isPermaLink="false">00c45790234cb95d8413822d7f25f419</guid>
-      <pubDate>Wed, 13 May 2026 00:22:19 +0000</pubDate>
-      <description>Microsoft is publishing 137 vulnerabilities on May 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild or public disclosure for any of these vulnerabilities. So far this month, Microsoft has provided patches to address 133 browser vulnerabilities, which are not included in the Patch Tuesday count above.Windows Netlogon: critical RCEAnyone responsible for securing a domain controller should prioritize remediation of CVE-2026-41089, which is a critical stack-based buffer overflow in Windows Netlogon with a CVSS v3 base score of 9.8. Exploitation leads to execution in the conte...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Patch Tuesday - May 2026</title>
-      <link>https://www.rapid7.com/blog/post/em-patch-tuesday-may-2026</link>
-      <guid isPermaLink="false">00c45790234cb95d8413822d7f25f419</guid>
-      <pubDate>Wed, 13 May 2026 00:22:19 +0000</pubDate>
-      <description>Microsoft is publishing 137 vulnerabilities on May 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild or public disclosure for any of these vulnerabilities. So far this month, Microsoft has provided patches to address 133 browser vulnerabilities, which are not included in the Patch Tuesday count above.Windows Netlogon: critical RCEAnyone responsible for securing a domain controller should prioritize remediation of CVE-2026-41089, which is a critical stack-based buffer overflow in Windows Netlogon with a CVSS v3 base score of 9.8. Exploitation leads to execution in the conte...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
       <category>microsoft</category>
     </item>
   </channel>

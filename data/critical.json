@@ -1,5 +1,25 @@
 [
   {
+    "id": "42c7ce1559cc21ad515df1c533592a82",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV",
+    "url": "https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a recently patched critical security flaw impacting Drupal Core to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation. The vulnerability in question is CVE-2026-9082 (CVSS score: 6.5), an SQL injection vulnerability affecting all supported versions of Drupal Core. \"Drupal Core",
+    "published": "2026-05-23T07:23:48Z",
+    "fetched": "2026-05-23T22:26:24.20595341Z",
+    "tags": [
+      "sqli",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 66,
+    "cves": [
+      "CVE-2026-9082"
+    ]
+  },
+  {
     "id": "af93eae71762b7e759c8f3d7dae8b18a",
     "source": "rapid7",
     "source_name": "Rapid7 Blog",
@@ -466,6 +486,25 @@
     "score": 62,
     "vendors": [
       "microsoft"
+    ]
+  },
+  {
+    "id": "9296549949493a9808b2629fd8cacfd6",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-33633 — Kitty is a cross-platform GPU based terminal. Versions 0.46.2 and below contain …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33633",
+    "summary": "Kitty is a cross-platform GPU based terminal. Versions 0.46.2 and below contain a heap buffer overflow in load_image_data() that allows any process which can write to the terminal's stdin to crash kitty immediately. The vulnerability is triggered by a single APC graphics protocol command with a PNG format declaration (f=100) whose payload exceeds twice the initial buffer capacity. The overflow is attacker-controlled in both length and content, causing DoS and potentially escalation to RCE itself. This issue has been fixed in version 0.47.0.",
+    "published": "2026-05-19T18:16:21.343Z",
+    "fetched": "2026-05-23T22:26:24.20595341Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-33633"
     ]
   },
   {
@@ -939,6 +978,28 @@
     "score": 60,
     "cves": [
       "CVE-2020-37227"
+    ]
+  },
+  {
+    "id": "28cf83400d8e02e62de1c8c4ba01ef47",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checkout Skimming",
+    "url": "https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html",
+    "summary": "A critical security vulnerability impacting the Funnel Builder plugin for WordPress has come under active exploitation in the wild to inject malicious JavaScript code into WooCommerce checkout pages with the goal of stealing payment data. Details of the activity were published by Sansec this week. The vulnerability currently does not have an official CVE identifier. It",
+    "published": "2026-05-16T15:20:48Z",
+    "fetched": "2026-05-23T22:26:24.20595341Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 88,
+    "vendors": [
+      "wordpress"
     ]
   },
   {
@@ -2200,250 +2261,6 @@
     ],
     "cves": [
       "CVE-2026-8053"
-    ]
-  },
-  {
-    "id": "00c45790234cb95d8413822d7f25f419",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Patch Tuesday - May 2026",
-    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-may-2026",
-    "summary": "Microsoft is publishing 137 vulnerabilities on May 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild or public disclosure for any of these vulnerabilities. So far this month, Microsoft has provided patches to address 133 browser vulnerabilities, which are not included in the Patch Tuesday count above.Windows Netlogon: critical RCEAnyone responsible for securing a domain controller should prioritize remediation of CVE-2026-41089, which is a critical stack-based buffer overflow in Windows Netlogon with a CVSS v3 base score of 9.8. Exploitation leads to execution in the conte...",
-    "published": "2026-05-13T00:22:19Z",
-    "fetched": "2026-05-20T22:53:01.54329895Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-41089"
-    ]
-  },
-  {
-    "id": "00c45790234cb95d8413822d7f25f419",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Patch Tuesday - May 2026",
-    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-may-2026",
-    "summary": "Microsoft is publishing 137 vulnerabilities on May 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild or public disclosure for any of these vulnerabilities. So far this month, Microsoft has provided patches to address 133 browser vulnerabilities, which are not included in the Patch Tuesday count above.Windows Netlogon: critical RCEAnyone responsible for securing a domain controller should prioritize remediation of CVE-2026-41089, which is a critical stack-based buffer overflow in Windows Netlogon with a CVSS v3 base score of 9.8. Exploitation leads to execution in the conte...",
-    "published": "2026-05-13T00:22:19Z",
-    "fetched": "2026-05-13T22:46:06.809721451Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-41089"
-    ]
-  },
-  {
-    "id": "728bb9095ef28fc00c78efb046250e3e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 10.0 CRITICAL] CVE-2026-42288 — ChurchCRM is an open-source church management system. Prior to 7.3.2, The fix fo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42288",
-    "summary": "ChurchCRM is an open-source church management system. Prior to 7.3.2, The fix for CVE-2026-39337 is incomplete. The pre-authentication remote code execution vulnerability in ChurchCRM's setup wizard via unsanitized DB_PASSWORD remains fully exploitable This vulnerability is fixed in 7.3.2.",
-    "published": "2026-05-12T23:16:17.6Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-42288",
-      "CVE-2026-39337"
-    ]
-  },
-  {
-    "id": "2e7f1eceb544582c05fd789624c6f9a9",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-42157 — Flowsint is an open-source OSINT graph exploration tool designed for cybersecurity investigation, tr…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42157",
-    "summary": "Flowsint is an open-source OSINT graph exploration tool designed for cybersecurity investigation, transparency, and verification. Prior to 1.2.3, a remote attacker can create a map node with a malicious label that contains arbitrary HTML. When the map tab is selected and a map node marker is selected, it will render the arbitrary HTML, potentially triggering stored XSS. This vulnerability is fixed in 1.2.3.",
-    "published": "2026-05-12T23:16:17.343Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce",
-      "xss"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-42157"
-    ]
-  },
-  {
-    "id": "0af05b012c6a018db6bb7a5703dc0b08",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-42854 — arduino-esp32 is an Arduino core for the ESP32, ESP32-S2, ESP32-S3, ESP32-C3, ES…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42854",
-    "summary": "arduino-esp32 is an Arduino core for the ESP32, ESP32-S2, ESP32-S3, ESP32-C3, ESP32-C6 and ESP32-H2 microcontrollers. Prior to 3.3.8, the WebServer multipart form parser in arduino-esp32 allocates a Variable Length Array (VLA) on the stack whose size is derived from an attacker-controlled HTTP header field (Content-Type: multipart/form-data; boundary=...) without enforcing any length limit. Sending a boundary string longer than ~8000 characters overflows the 8192-byte task stack of the loopTask, causing a crash and potential remote code execution. This vulnerability is fixed in 3.3.8.",
-    "published": "2026-05-12T22:16:34.93Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "espressif"
-    ],
-    "cves": [
-      "CVE-2026-42854"
-    ]
-  },
-  {
-    "id": "22a79cfb61b1222a28e3637a212d5c4d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.0 MEDIUM] CVE-2026-41195 — mosparo is the modern solution to protect your online forms from spam. Prior to …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41195",
-    "summary": "mosparo is the modern solution to protect your online forms from spam. Prior to 1.4.13, the automatic rule package source URL feature allows a project member with the editor role to store an attacker-controlled URL that the server later fetches. Because the server follows http/https redirects and does not restrict private or loopback destinations, this becomes a stored SSRF primitive that can be turned into an internal HTTP probing oracle. This vulnerability is fixed in 1.4.13.",
-    "published": "2026-05-12T22:16:34.05Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "oracle",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-41195"
-    ]
-  },
-  {
-    "id": "a7c8d3d384c766fac02c934551c1d949",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 3.3 LOW] CVE-2026-42444 — NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, a …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42444",
-    "summary": "NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, a denial-of-service vulnerability exists in the littlefs filesystem image parser in NanaZip. The handler's Open method reads BlockCount directly from the attacker-controlled superblock without any validation against the actual file size or any upper-bound ceiling, then iterates BlockCount times, allocating a file-path entry per iteration. A crafted 44-byte littlefs image with BlockCount = 0xFFFFFFFF causes ~4 billion heap allocations, exhausting available memory. This vulnerability is fixed in 6.0.1698.0.",
-    "published": "2026-05-12T20:16:41.653Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "m2team"
-    ],
-    "cves": [
-      "CVE-2026-42444"
-    ]
-  },
-  {
-    "id": "c53af58f6c1195d0992a6e2c045ad784",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 3.3 LOW] CVE-2026-42443 — NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, an…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42443",
-    "summary": "NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, an integer divide-by-zero exists in the UFS/UFS2 filesystem image parser in NanaZip. The vulnerability is triggered when opening a crafted UFS image where the superblock field fs_ipg (inodes per cylinder group) is set to zero. The parser uses this attacker-controlled value as a divisor without validation, causing an immediate hardware trap and process crash. This vulnerability is fixed in 6.0.1698.0.",
-    "published": "2026-05-12T20:16:41.52Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "m2team"
-    ],
-    "cves": [
-      "CVE-2026-42443"
-    ]
-  },
-  {
-    "id": "2f50b9949a94afd4fb1bb1c162d4a738",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 3.3 LOW] CVE-2026-42442 — NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, a …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42442",
-    "summary": "NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, a null-pointer dereference exists in the UFS/UFS2 filesystem image parser in NanaZip. The vulnerability is triggered when opening a crafted UFS image where the root inode (inode 2) is set to IFLNK (symlink) instead of IFDIR (directory). The parser unconditionally treats the root inode as a directory without checking its type, and when the symlink has an embedded target (small di_size), the directory data buffer is zero-length, causing a null-pointer dereference on the first read. This vulnerability is fixed in 6.0.1698.0.",
-    "published": "2026-05-12T20:16:41.393Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "m2team"
-    ],
-    "cves": [
-      "CVE-2026-42442"
-    ]
-  },
-  {
-    "id": "ecf93fd93129bbb63955b065cfdbfb79",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 3.3 LOW] CVE-2026-42355 — NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, an…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42355",
-    "summary": "NanaZip is an open source file archive. From 5.0.1252.0 to before 6.0.1698.0, an uncontrolled recursion vulnerability exists in the Electron Archive (ASAR) parser in NanaZip. When opening a crafted .asar file with deeply nested JSON in the header, both nlohmann::json::parse and the handler's GetAllPaths function recurse without depth limits, exhausting the thread stack and crashing the NanaZip process. This vulnerability is fixed in 6.0.1698.0.",
-    "published": "2026-05-12T20:16:41.26Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "m2team"
-    ],
-    "cves": [
-      "CVE-2026-42355"
-    ]
-  },
-  {
-    "id": "73c488bd549cf316c594e596a8cebab7",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Fortinet warns of critical RCE flaws in FortiSandbox and FortiAuthenticator",
-    "url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-rce-flaws-in-fortisandbox-and-fortiauthenticator/",
-    "summary": "Fortinet has released security patches for two critical vulnerabilities in FortiSandbox and FortiAuthenticator that could enable attackers to run commands or arbitrary code. [...]",
-    "published": "2026-05-12T18:23:09Z",
-    "fetched": "2026-05-12T22:41:15.972370858Z",
-    "tags": [
-      "fortinet",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "fortinet"
     ]
   }
 ]

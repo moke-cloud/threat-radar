@@ -5,7 +5,7 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 23 May 2026 22:26:24 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 22:30:34 +0000</lastBuildDate>
     <item>
       <title>[HIGH] Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV</title>
       <link>https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html</link>
@@ -84,6 +84,21 @@
       <category>watch</category>
       <category>rce</category>
       <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-45760 — (Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through Use…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45760</link>
+      <guid isPermaLink="false">d82405ca3e1078f78a127b2ec88cd446</guid>
+      <pubDate>Thu, 21 May 2026 13:16:19 +0000</pubDate>
+      <description>(Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through User-Controlled Key) vulnerability in Apache Camel K. Authorized users in a Kubernetes namespace can create a Build resource, controlling the Pod generation in a namespace of their choice, including the operator namespace.&#xA;&#xA;This issue affects Apache Camel K: from 2.0.0 before 2.8.1, from 2.9.0 before 2.9.2, from 2.10.0 before 2.10.1.&#xA;&#xA;Users are recommended to upgrade to version 2.10.1 (or 2.8.1 or 2.9.2), which fixes the issue.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>apache</category>
+      <category>kubernetes</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>apache</category>
+      <category>kubernetes</category>
     </item>
     <item>
       <title>[HIGH] Microsoft Warns of Two Actively Exploited Defender Vulnerabilities</title>
@@ -475,6 +490,17 @@
       <category>high</category>
       <category>critical-cvss</category>
       <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE</title>
+      <link>https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html</link>
+      <guid isPermaLink="false">79fecd0de8285e9b26ef791b06c4a142</guid>
+      <pubDate>Sun, 17 May 2026 11:57:53 +0000</pubDate>
+      <description>A newly disclosed security flaw impacting NGINX Plus and NGINX Open has come under active exploitation in the wild, days after its public disclosure, according to VulnCheck. The vulnerability, tracked as CVE-2026-42945 (CVSS score: 9.2), is a heap buffer overflow in ngx_http_rewrite_module affecting NGINX versions 0.6.27 through 1.30.0. According to AI-native security company depthfirst, the</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
     </item>
     <item>
       <title>[HIGH] NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE</title>
@@ -1247,33 +1273,6 @@
       <category>high</category>
       <category>rce</category>
       <category>vm2_project</category>
-    </item>
-    <item>
-      <title>[HIGH] Windows BitLocker zero-day gives access to protected drives, PoC released</title>
-      <link>https://www.bleepingcomputer.com/news/security/windows-bitlocker-zero-day-gives-access-to-protected-drives-poc-released/</link>
-      <guid isPermaLink="false">6578267c48d69c7fb2c9044418bee2c2</guid>
-      <pubDate>Wed, 13 May 2026 16:37:49 +0000</pubDate>
-      <description>A cybersecurity researcher has published proof-of-concept (PoC) exploits for two unpatched Microsoft Windows vulnerabilities named YellowKey and GreenPlasma, which are a BitLocker bypass and a privilege-escalation flaw. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Microsoft Patches 138 Vulnerabilities, Including DNS and Netlogon RCE Flaws</title>
-      <link>https://thehackernews.com/2026/05/microsoft-patches-138-vulnerabilities.html</link>
-      <guid isPermaLink="false">7e615564b47add1298873f553e5f3b34</guid>
-      <pubDate>Wed, 13 May 2026 10:36:10 +0000</pubDate>
-      <description>Microsoft on Tuesday released patches for 138 security vulnerabilities spanning its product portfolio, although none of them have been listed as publicly known or under active attack. Of the 138 flaws, 30 are rated Critical, 104 are rated Important, three are rated Moderate, and one is rated Low in severity. As many as 61 vulnerabilities are classified as privilege escalation bugs, followed by</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>lpe</category>
-      <category>microsoft</category>
     </item>
   </channel>
 </rss>

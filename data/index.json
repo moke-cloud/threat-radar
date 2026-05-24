@@ -1,5 +1,37 @@
 [
   {
+    "id": "aadc5d79f947f34198aee26fd23857f8",
+    "source": "sans-isc",
+    "source_name": "SANS Internet Storm Center",
+    "category": "news",
+    "title": "Wireshark 4.6.6 Released, (Sun, May 24th)",
+    "url": "https://isc.sans.edu/diary/rss/33010",
+    "summary": "Wireshark release 4.6.6 fixes 1 vulnerability and 11 bugs.&#xd;",
+    "published": "2026-05-24T16:38:21Z",
+    "fetched": "2026-05-24T22:30:34.203129558Z",
+    "severity": "medium",
+    "score": 30
+  },
+  {
+    "id": "4ce4cf81cb829b8a8704a2f60c031dff",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Ghost CMS SQL injection flaw exploited in large-scale ClickFix campaign",
+    "url": "https://www.bleepingcomputer.com/news/security/ghost-cms-sql-injection-flaw-exploited-in-large-scale-clickfix-campaign/",
+    "summary": "A large-scale campaign is exploiting a critical SQL injection vulnerability (CVE-2026-26980) in Ghost CMS to inject malicious JavaScript code that triggers ClickFix attack flows. [...]",
+    "published": "2026-05-24T14:12:32Z",
+    "fetched": "2026-05-24T22:30:34.203129558Z",
+    "tags": [
+      "sqli"
+    ],
+    "severity": "medium",
+    "score": 35,
+    "cves": [
+      "CVE-2026-26980"
+    ]
+  },
+  {
     "id": "4e3124b50e96eb7fde8570795eec7fb7",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -784,6 +816,32 @@
     ]
   },
   {
+    "id": "d82405ca3e1078f78a127b2ec88cd446",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-45760 — (Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through Use…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45760",
+    "summary": "(Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through User-Controlled Key) vulnerability in Apache Camel K. Authorized users in a Kubernetes namespace can create a Build resource, controlling the Pod generation in a namespace of their choice, including the operator namespace.\n\nThis issue affects Apache Camel K: from 2.0.0 before 2.8.1, from 2.9.0 before 2.9.2, from 2.10.0 before 2.10.1.\n\nUsers are recommended to upgrade to version 2.10.1 (or 2.8.1 or 2.9.2), which fixes the issue.",
+    "published": "2026-05-21T13:16:19.84Z",
+    "fetched": "2026-05-24T22:30:34.203129558Z",
+    "tags": [
+      "apache",
+      "kubernetes",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "apache",
+      "kubernetes"
+    ],
+    "cves": [
+      "CVE-2026-45760"
+    ]
+  },
+  {
     "id": "862e5e123af7555bf1c2da67fded4786",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -814,6 +872,29 @@
     ],
     "severity": "medium",
     "score": 46
+  },
+  {
+    "id": "cd8aca80cc58ad62b7caef6995d262fd",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-43494 — In the Linux kernel, the following vulnerability has been resolved:\n\nnet/rds: reset op_nents when ze…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43494",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/rds: reset op_nents when zerocopy page pin fails\n\nWhen iov_iter_get_pages2() fails in rds_message_zcopy_from_user(),\nthe pinned pages are released with put_page(), and\nrm->data.op_mmp_znotifier is cleared.  But we fail to properly\nclear rm->data.op_nents.\n\nLater when rds_message_purge() is called from rds_sendmsg() the\ncleanup loop iterates over the incorrectly non zero number of\nop_nents and frees them again.\n\nFix this by properly resetting op_nents when it should be in\nrds_message_zcopy_from_user().",
+    "published": "2026-05-21T12:16:19.957Z",
+    "fetched": "2026-05-24T22:30:34.203129558Z",
+    "tags": [
+      "linux",
+      "watch"
+    ],
+    "severity": "medium",
+    "score": 40,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-43494"
+    ]
   },
   {
     "id": "f9137cd57cb16557f3f15e6b18dfb946",
@@ -1558,6 +1639,29 @@
     "fetched": "2026-05-20T22:53:01.54329895Z",
     "severity": "low",
     "score": 18
+  },
+  {
+    "id": "53e953a55bf7b24c5d9a5bf7aae331b7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.8 MEDIUM] CVE-2026-45585 — Microsoft is aware of a security feature bypass vulnerability in Windows publicl…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45585",
+    "summary": "Microsoft is aware of a security feature bypass vulnerability in Windows publicly referred to as &quot;YellowKey&quot;. The proof of concept for this vulnerability has been made public violating coordinated vulnerability best practices.\nWe are issuing this CVE to provide mitigation guidance that can be implemented to protect against this vulnerability until the security update is made available.",
+    "published": "2026-05-20T00:16:44.38Z",
+    "fetched": "2026-05-24T22:30:34.203129558Z",
+    "tags": [
+      "microsoft",
+      "watch"
+    ],
+    "severity": "medium",
+    "score": 40,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-45585"
+    ]
   },
   {
     "id": "889d15bb38410bf05a0ccad77227afc6",
@@ -2544,6 +2648,22 @@
     ]
   },
   {
+    "id": "b514082324f93a286552cab09829dea7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-42009 — A flaw was found in gnutls. A remote attacker could exploit an issue in the Data…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42009",
+    "summary": "A flaw was found in gnutls. A remote attacker could exploit an issue in the Datagram Transport Layer Security (DTLS) packet reordering logic. The comparator function, responsible for ordering DTLS packets by sequence numbers, did not correctly handle packets with duplicate sequence numbers. This could lead to unstable packet ordering or undefined behavior, resulting in a denial of service.",
+    "published": "2026-05-18T13:16:32.707Z",
+    "fetched": "2026-05-24T22:30:34.203129558Z",
+    "severity": "medium",
+    "score": 30,
+    "cves": [
+      "CVE-2026-42009"
+    ]
+  },
+  {
     "id": "852793f3c2e089f1696c2459fcce84ff",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -3461,6 +3581,26 @@
     "url": "https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html",
     "summary": "A newly disclosed security flaw impacting NGINX Plus and NGINX Open has come under active exploitation in the wild, days after its public disclosure, according to VulnCheck. The vulnerability, tracked as CVE-2026-42945 (CVSS score: 9.2), is a heap buffer overflow in ngx_http_rewrite_module affecting NGINX versions 0.6.27 through 1.30.0. According to AI-native security company depthfirst, the",
     "published": "2026-05-17T11:57:53Z",
+    "fetched": "2026-05-24T22:30:34.203129558Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-42945"
+    ]
+  },
+  {
+    "id": "79fecd0de8285e9b26ef791b06c4a142",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE",
+    "url": "https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html",
+    "summary": "A newly disclosed security flaw impacting NGINX Plus and NGINX Open has come under active exploitation in the wild, days after its public disclosure, according to VulnCheck. The vulnerability, tracked as CVE-2026-42945 (CVSS score: 9.2), is a heap buffer overflow in ngx_http_rewrite_module affecting NGINX versions 0.6.27 through 1.30.0. According to AI-native security company depthfirst, the",
+    "published": "2026-05-17T11:57:53Z",
     "fetched": "2026-05-17T22:25:42.116119862Z",
     "tags": [
       "rce",
@@ -3665,6 +3805,25 @@
     "score": 38,
     "cves": [
       "CVE-2026-8736"
+    ]
+  },
+  {
+    "id": "c96b3954e726c03ce5fcbde80bee7b65",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Grafana GitHub Token Breach Led to Codebase Download and Extortion Attempt",
+    "url": "https://thehackernews.com/2026/05/grafana-github-token-breach-led-to.html",
+    "summary": "Grafana has disclosed that an \"unauthorized party\" obtained a token that granted them the ability to access the company's GitHub environment and download its codebase. \"Our investigation has determined that no customer data or personal information was accessed during this incident, and we have found no evidence of impact to customer systems or operations,\" Grafana said in a series of",
+    "published": "2026-05-17T07:13:33Z",
+    "fetched": "2026-05-24T22:30:34.203129558Z",
+    "tags": [
+      "github"
+    ],
+    "severity": "info",
+    "score": 3,
+    "vendors": [
+      "github"
     ]
   },
   {
@@ -9330,146 +9489,5 @@
     "fetched": "2026-05-20T22:53:01.54329895Z",
     "severity": "low",
     "score": 15
-  },
-  {
-    "id": "b46f072d5388e14cdd6a74c8a5dd44c8",
-    "source": "sans-isc",
-    "source_name": "SANS Internet Storm Center",
-    "category": "news",
-    "title": "&#x5b;GUEST DIARY&#x5d; Tearing apart website fraud to see how it works., (Wed, May 13th)",
-    "url": "https://isc.sans.edu/diary/rss/32958",
-    "summary": "&&#x23&#x3b;x26&#x3b;&#x23&#x3b;x5b&#x3b;This is a Guest Diary by Joshua Nikolson, an ISC Intern and part of the SANS.edu Bachelor&&#x23&#x3b;x26&#x3b;&#x23&#x3b;39&#x3b;s degree in Applied Cybersecurity (BACS) program.&#x5d;&#xd;",
-    "published": "2026-05-13T06:29:07Z",
-    "fetched": "2026-05-13T22:46:06.809721451Z",
-    "severity": "medium",
-    "score": 30
-  },
-  {
-    "id": "99d76964f41caf2e3b25092af638fd7b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-8336 — After invoking $_internalJsEmit, which is not intended to be directly accessible…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8336",
-    "summary": "After invoking $_internalJsEmit, which is not intended to be directly accessible, or mapreduce command’s map function in a certain way, an authenticated user can subsequently crash mongod when the server-side JavaScript engine (through $where, $function, mapreduce reduce stage, etc.) is used also in a specific way, resulting in a post-authentication denial-of-service.\n\nThis issue impacts MongoDB Server v8.2 versions prior to 8.2.9 and v8.3 versions prior to 8.3.2.",
-    "published": "2026-05-13T04:17:42.197Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "mongodb"
-    ],
-    "severity": "medium",
-    "score": 30,
-    "vendors": [
-      "mongodb"
-    ],
-    "cves": [
-      "CVE-2026-8336"
-    ]
-  },
-  {
-    "id": "6ebde122bb397bcc1c4bb2dcd907c227",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 4.3 MEDIUM] CVE-2026-8202 — Using a densely populated chars mask and a large input string in the MongoDB agg…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8202",
-    "summary": "Using a densely populated chars mask and a large input string in the MongoDB aggregation operators $trim, $ltrim, and $rtrim, an authenticated user with aggregation permissions can pin CPU utilization at 100% for an extended period of time.\n\nThis issue impacts MongoDB Server v7.0 versions prior to 7.0.34, v8.0 versions prior to 8.0.23, v8.2 versions prior to 8.2.9 and v8.3 versions prior to 8.3.2.",
-    "published": "2026-05-13T04:17:42.037Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "mongodb"
-    ],
-    "severity": "medium",
-    "score": 30,
-    "vendors": [
-      "mongodb"
-    ],
-    "cves": [
-      "CVE-2026-8202"
-    ]
-  },
-  {
-    "id": "e2cddef4e6e9eb0c749cbc5ae4aa2af0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 2.7 LOW] CVE-2026-8200 — When schema validation is enabled on a collection and an update or insert would …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8200",
-    "summary": "When schema validation is enabled on a collection and an update or insert would violate the collection's schema, the local server log message generated may not have all user data redacted. \n\n\nThis issue impacts MongoDB Server v7.0 versions prior to 7.0.34, v8.0 versions prior to 8.0.23, v8.2 versions prior to 8.2.9 and v8.3 versions prior to 8.3.2.",
-    "published": "2026-05-13T04:17:41.7Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "mongodb"
-    ],
-    "severity": "medium",
-    "score": 30,
-    "vendors": [
-      "mongodb"
-    ],
-    "cves": [
-      "CVE-2026-8200"
-    ]
-  },
-  {
-    "id": "b6fc6650f3e24d7843666a522888225b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-8053 — An issue in MongoDB Server's time-series collection implementation allows an aut…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8053",
-    "summary": "An issue in MongoDB Server's time-series collection implementation allows an authenticated user with database write privileges to trigger an out-of-bounds memory write in the mongod process. The issue results from an inconsistency in the internal field-name-to-index mapping within the time-series bucket catalog. Under certain conditions this can result in arbitrary code execution.\n\nThis issue impacts MongoDB Server v5.0 versions prior to 5.0.33, v6.0 versions prior to 6.0.28, v7.0 versions prior to 7.0.34, v8.0 versions prior to 8.0.23, v8.2 versions prior to 8.2.9 and v8.3 versions prior to 8.3.2.",
-    "published": "2026-05-13T04:17:41.287Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce",
-      "mongodb"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "mongodb"
-    ],
-    "cves": [
-      "CVE-2026-8053"
-    ]
-  },
-  {
-    "id": "229a34e3b5255637b18936c85ed8e8b6",
-    "source": "sans-isc",
-    "source_name": "SANS Internet Storm Center",
-    "category": "news",
-    "title": "ISC Stormcast For Wednesday, May 13th, 2026 https://isc.sans.edu/podcastdetail/9930, (Wed, May 13th)",
-    "url": "https://isc.sans.edu/diary/rss/32984",
-    "summary": "",
-    "published": "2026-05-13T03:05:02Z",
-    "fetched": "2026-05-20T22:53:01.54329895Z",
-    "severity": "low",
-    "score": 15
-  },
-  {
-    "id": "229a34e3b5255637b18936c85ed8e8b6",
-    "source": "sans-isc",
-    "source_name": "SANS Internet Storm Center",
-    "category": "news",
-    "title": "ISC Stormcast For Wednesday, May 13th, 2026 https://isc.sans.edu/podcastdetail/9930, (Wed, May 13th)",
-    "url": "https://isc.sans.edu/diary/rss/32984",
-    "summary": "",
-    "published": "2026-05-13T03:05:02Z",
-    "fetched": "2026-05-13T22:46:06.809721451Z",
-    "severity": "medium",
-    "score": 30
-  },
-  {
-    "id": "82184ce2c9a818a97e0b223097e266a6",
-    "source": "jpcert-wr",
-    "source_name": "JPCERT/CC 全フィード",
-    "category": "advisory",
-    "title": "JVN: Androidアプリ「あんしんフィルター for au」における重要情報の平文送信の脆弱性",
-    "url": "https://jvn.jp/jp/JVN24167657/",
-    "summary": "ＫＤＤＩ株式会社が提供するAndroidアプリ「あんしんフィルター for au」には、重要情報の平文送信の脆弱性が存在します。",
-    "published": "2026-05-13T03:00:15Z",
-    "fetched": "2026-05-13T22:46:06.809721451Z",
-    "severity": "low",
-    "score": 18
   }
 ]

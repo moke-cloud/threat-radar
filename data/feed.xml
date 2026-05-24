@@ -5,7 +5,26 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Auto-curated cybersecurity intel from CISA KEV / NVD / JPCERT and major news sources. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 23 May 2026 22:26:24 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2026 22:30:34 +0000</lastBuildDate>
+    <item>
+      <title>[MED] Wireshark 4.6.6 Released, (Sun, May 24th)</title>
+      <link>https://isc.sans.edu/diary/rss/33010</link>
+      <guid isPermaLink="false">aadc5d79f947f34198aee26fd23857f8</guid>
+      <pubDate>Sun, 24 May 2026 16:38:21 +0000</pubDate>
+      <description>Wireshark release 4.6.6 fixes 1 vulnerability and 11 bugs.&amp;#xd;</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
+      <category>medium</category>
+    </item>
+    <item>
+      <title>[MED] Ghost CMS SQL injection flaw exploited in large-scale ClickFix campaign</title>
+      <link>https://www.bleepingcomputer.com/news/security/ghost-cms-sql-injection-flaw-exploited-in-large-scale-clickfix-campaign/</link>
+      <guid isPermaLink="false">4ce4cf81cb829b8a8704a2f60c031dff</guid>
+      <pubDate>Sun, 24 May 2026 14:12:32 +0000</pubDate>
+      <description>A large-scale campaign is exploiting a critical SQL injection vulnerability (CVE-2026-26980) in Ghost CMS to inject malicious JavaScript code that triggers ClickFix attack flows. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>medium</category>
+      <category>sqli</category>
+    </item>
     <item>
       <title>[MED] Laravel Lang packages hijacked to deploy credential-stealing malware</title>
       <link>https://www.bleepingcomputer.com/news/security/laravel-lang-packages-hijacked-to-deploy-credential-stealing-malware/</link>
@@ -495,6 +514,21 @@
       <category>microsoft</category>
     </item>
     <item>
+      <title>[HIGH] CVE-2026-45760 — (Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through Use…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45760</link>
+      <guid isPermaLink="false">d82405ca3e1078f78a127b2ec88cd446</guid>
+      <pubDate>Thu, 21 May 2026 13:16:19 +0000</pubDate>
+      <description>(Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through User-Controlled Key) vulnerability in Apache Camel K. Authorized users in a Kubernetes namespace can create a Build resource, controlling the Pod generation in a namespace of their choice, including the operator namespace.&#xA;&#xA;This issue affects Apache Camel K: from 2.0.0 before 2.8.1, from 2.9.0 before 2.9.2, from 2.10.0 before 2.10.1.&#xA;&#xA;Users are recommended to upgrade to version 2.10.1 (or 2.8.1 or 2.9.2), which fixes the issue.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>apache</category>
+      <category>kubernetes</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>apache</category>
+      <category>kubernetes</category>
+    </item>
+    <item>
       <title>[MED] Police seize “First VPN” service used in ransomware, data theft attacks</title>
       <link>https://www.bleepingcomputer.com/news/security/police-seize-first-vpn-service-used-in-ransomware-data-theft-attacks/</link>
       <guid isPermaLink="false">862e5e123af7555bf1c2da67fded4786</guid>
@@ -513,6 +547,18 @@
       <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
       <category>medium</category>
       <category>ransomware</category>
+    </item>
+    <item>
+      <title>[MED] CVE-2026-43494 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;net/rds: reset op_nents when ze…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43494</link>
+      <guid isPermaLink="false">cd8aca80cc58ad62b7caef6995d262fd</guid>
+      <pubDate>Thu, 21 May 2026 12:16:19 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;net/rds: reset op_nents when zerocopy page pin fails&#xA;&#xA;When iov_iter_get_pages2() fails in rds_message_zcopy_from_user(),&#xA;the pinned pages are released with put_page(), and&#xA;rm-&gt;data.op_mmp_znotifier is cleared.  But we fail to properly&#xA;clear rm-&gt;data.op_nents.&#xA;&#xA;Later when rds_message_purge() is called from rds_sendmsg() the&#xA;cleanup loop iterates over the incorrectly non zero number of&#xA;op_nents and frees them again.&#xA;&#xA;Fix this by properly resetting op_nents when it should be in&#xA;rds_message_zcopy_from_user().</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>linux</category>
     </item>
     <item>
       <title>[MED] ThreatsDay Bulletin: Linux Rootkits, Router 0-Day, AI Intrusions, Scam Kits and 25 New Stories</title>
@@ -971,6 +1017,18 @@
       <category>low</category>
     </item>
     <item>
+      <title>[MED] [CVSS 6.8 MEDIUM] CVE-2026-45585 — Microsoft is aware of a security feature bypass vulnerability in Windows publicl…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45585</link>
+      <guid isPermaLink="false">53e953a55bf7b24c5d9a5bf7aae331b7</guid>
+      <pubDate>Wed, 20 May 2026 00:16:44 +0000</pubDate>
+      <description>Microsoft is aware of a security feature bypass vulnerability in Windows publicly referred to as &amp;quot;YellowKey&amp;quot;. The proof of concept for this vulnerability has been made public violating coordinated vulnerability best practices.&#xA;We are issuing this CVE to provide mitigation guidance that can be implemented to protect against this vulnerability until the security update is made available.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>microsoft</category>
+    </item>
+    <item>
       <title>[CRIT] [KEV] CVE-2008-4250 — Microsoft Windows: Microsoft Windows Buffer Overflow Vulnerability</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2008-4250</link>
       <guid isPermaLink="false">889d15bb38410bf05a0ccad77227afc6</guid>
@@ -1066,56 +1124,6 @@
       <category>microsoft</category>
       <category>watch</category>
       <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: CISA ICS Advisory / ICS Medical Advisory（2026年05月19日）</title>
-      <link>https://jvn.jp/vu/JVNVU93294524/</link>
-      <guid isPermaLink="false">a480ed5c83710580f3ed6c7cecd6dc31</guid>
-      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
-      <description>2026年05月19日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] Max-severity flaw in ChromaDB for AI apps allows server hijacking</title>
-      <link>https://www.bleepingcomputer.com/news/security/max-severity-flaw-in-chromadb-for-ai-apps-allows-server-hijacking/</link>
-      <guid isPermaLink="false">2d2df9d15fe65ab3e4a5bd949d0f425f</guid>
-      <pubDate>Tue, 19 May 2026 22:25:49 +0000</pubDate>
-      <description>A max-severity vulnerability in the latest Python FastAPI version of the ChromaDB project allows unauthenticated attackers to run arbitrary code on exposed servers. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[HIGH] Cybercrime service disrupted for abusing Microsoft platform to sign malware</title>
-      <link>https://www.bleepingcomputer.com/news/security/cybercrime-service-disrupted-for-abusing-microsoft-platform-to-sign-malware/</link>
-      <guid isPermaLink="false">268ac24f11cad926b6b0174e4a8d8e3a</guid>
-      <pubDate>Tue, 19 May 2026 21:47:31 +0000</pubDate>
-      <description>Microsoft says it has disrupted a malware-signing-as-a-service (MSaaS) operation that abused the company&#39;s Artifact Signing service to generate fraudulent code-signing certificates used by ransomware gangs and other cybercriminals. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>ransomware</category>
-      <category>malware</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] Discord rolls out end-to-end encryption on voice, video calls</title>
-      <link>https://www.bleepingcomputer.com/news/security/discord-rolls-out-end-to-end-encryption-on-voice-video-calls/</link>
-      <guid isPermaLink="false">47790bd00d6a3867a45e532901f40e6e</guid>
-      <pubDate>Tue, 19 May 2026 20:37:45 +0000</pubDate>
-      <description>Discord announced that all voice and video calls through the communication platform are now protected by default with end-to-end encryption (E2EE). [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] FBI: Americans lost over $388 million to scams using crypto ATMs in 2025</title>
-      <link>https://www.bleepingcomputer.com/news/security/fbi-americans-lost-over-388-million-to-scams-using-crypto-atms-in-2025/</link>
-      <guid isPermaLink="false">6fa1350f3afe53d8756cac8892f061dd</guid>
-      <pubDate>Tue, 19 May 2026 19:45:39 +0000</pubDate>
-      <description>The FBI says Americans have lost over $388 million last year to scams using cryptocurrency kiosks, also known as crypto ATMs or Bitcoin ATMs. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
     </item>
   </channel>
 </rss>

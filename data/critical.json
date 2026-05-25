@@ -206,6 +206,26 @@
     ]
   },
   {
+    "id": "85dead58e242deeb3631f2f8e62bbea3",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-48172 — LiteSpeed User-End cPanel Plugin before 2.4.5 allows privilege escalation (possibly to root), as exp…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48172",
+    "summary": "LiteSpeed User-End cPanel Plugin before 2.4.5 allows privilege escalation (possibly to root), as exploited in the wild in May 2026. Detection is best done via a command line of grep -rE \"cpanel_jsonapi_func=redisAble\" /var/cpanel/logs /usr/local/cpanel/logs/ 2>/dev/null in Bash. If you get no output, you have not been hit with exploitation of the vulnerability. If there is output, we recommend you examine the IP addresses in the list, determine if they are valid IP addresses, and if not, block them. To determine damage done, examine the system logs for use by the detected IP addresses. The issue is related to mishandling of Redis enable/disable features. The recommended minimum version is 2.4.7.",
+    "published": "2026-05-21T02:16:33.76Z",
+    "fetched": "2026-05-25T22:34:39.504968145Z",
+    "tags": [
+      "lpe",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-48172"
+    ]
+  },
+  {
     "id": "29a6efc28289a24e082df5e53e44f279",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -593,6 +613,28 @@
     ],
     "severity": "high",
     "score": 68,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "3f79763810219481aeabacab52d97898",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "MiniPlasma Windows 0-Day Enables SYSTEM Privilege Escalation on Fully Patched Systems",
+    "url": "https://thehackernews.com/2026/05/miniplasma-windows-0-day-enables-system.html",
+    "summary": "Chaotic Eclipse, the security researcher behind the recently disclosed Windows flaws, YellowKey and GreenPlasma, has released a proof-of-concept (PoC) for a Windows privilege escalation zero-day flaw that grants attackers SYSTEM privileges on fully patched Windows systems. Codenamed MiniPlasma, the vulnerability impacts \"cldflt.sys,\" which refers to the Windows Cloud Files Mini Filter Driver,",
+    "published": "2026-05-18T08:57:34Z",
+    "fetched": "2026-05-25T22:34:39.504968145Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "lpe",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 61,
     "vendors": [
       "microsoft"
     ]
@@ -2260,28 +2302,6 @@
     ],
     "severity": "high",
     "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "7e615564b47add1298873f553e5f3b34",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Microsoft Patches 138 Vulnerabilities, Including DNS and Netlogon RCE Flaws",
-    "url": "https://thehackernews.com/2026/05/microsoft-patches-138-vulnerabilities.html",
-    "summary": "Microsoft on Tuesday released patches for 138 security vulnerabilities spanning its product portfolio, although none of them have been listed as publicly known or under active attack. Of the 138 flaws, 30 are rated Critical, 104 are rated Important, three are rated Moderate, and one is rated Low in severity. As many as 61 vulnerabilities are classified as privilege escalation bugs, followed by",
-    "published": "2026-05-13T10:36:10Z",
-    "fetched": "2026-05-13T22:46:06.809721451Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce",
-      "lpe"
-    ],
-    "severity": "high",
-    "score": 66,
     "vendors": [
       "microsoft"
     ]

@@ -5,7 +5,7 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 24 May 2026 22:30:34 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 22:34:39 +0000</lastBuildDate>
     <item>
       <title>[HIGH] Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV</title>
       <link>https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html</link>
@@ -126,6 +126,17 @@
       <category>watch</category>
       <category>0day</category>
       <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-48172 — LiteSpeed User-End cPanel Plugin before 2.4.5 allows privilege escalation (possibly to root), as exp…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48172</link>
+      <guid isPermaLink="false">85dead58e242deeb3631f2f8e62bbea3</guid>
+      <pubDate>Thu, 21 May 2026 02:16:33 +0000</pubDate>
+      <description>LiteSpeed User-End cPanel Plugin before 2.4.5 allows privilege escalation (possibly to root), as exploited in the wild in May 2026. Detection is best done via a command line of grep -rE &#34;cpanel_jsonapi_func=redisAble&#34; /var/cpanel/logs /usr/local/cpanel/logs/ 2&gt;/dev/null in Bash. If you get no output, you have not been hit with exploitation of the vulnerability. If there is output, we recommend you examine the IP addresses in the list, determine if they are valid IP addresses, and if not, block them. To determine damage done, examine the system logs for use by the detected IP addresses. The issue is related to mishandling of Redis enable/disable features. The recommended minimum version is 2.4.7.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>lpe</category>
+      <category>actively-exploited</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2025-34291 — Langflow Langflow: Langflow Origin Validation Error Vulnerability</title>
@@ -349,6 +360,20 @@
       <category>high</category>
       <category>microsoft</category>
       <category>watch</category>
+      <category>0day</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] MiniPlasma Windows 0-Day Enables SYSTEM Privilege Escalation on Fully Patched Systems</title>
+      <link>https://thehackernews.com/2026/05/miniplasma-windows-0-day-enables-system.html</link>
+      <guid isPermaLink="false">3f79763810219481aeabacab52d97898</guid>
+      <pubDate>Mon, 18 May 2026 08:57:34 +0000</pubDate>
+      <description>Chaotic Eclipse, the security researcher behind the recently disclosed Windows flaws, YellowKey and GreenPlasma, has released a proof-of-concept (PoC) for a Windows privilege escalation zero-day flaw that grants attackers SYSTEM privileges on fully patched Windows systems. Codenamed MiniPlasma, the vulnerability impacts &#34;cldflt.sys,&#34; which refers to the Windows Cloud Files Mini Filter Driver,</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>lpe</category>
       <category>0day</category>
       <category>microsoft</category>
     </item>
@@ -1251,28 +1276,6 @@
       <category>high</category>
       <category>rce</category>
       <category>netty</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-42579 — Netty is an asynchronous, event-driven network application framework. Prior to 4…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42579</link>
-      <guid isPermaLink="false">950a5f152b95752381eb1ffd3ad7b67c</guid>
-      <pubDate>Wed, 13 May 2026 19:17:23 +0000</pubDate>
-      <description>Netty is an asynchronous, event-driven network application framework. Prior to 4.2.13.Final and 4.1.133.Final, Netty&#39;s DNS codec does not enforce RFC 1035 domain name constraints during either encoding or decoding. This creates a bidirectional attack surface: malicious DNS responses can exploit the decoder, and user-influenced hostnames can exploit the encoder. This vulnerability is fixed in 4.2.13.Final and 4.1.133.Final.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>netty</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.6 HIGH] CVE-2026-44001 — vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, a sandbox escape …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44001</link>
-      <guid isPermaLink="false">12703085e6c5f0063008f0d98e7c5730</guid>
-      <pubDate>Wed, 13 May 2026 18:16:16 +0000</pubDate>
-      <description>vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, a sandbox escape vulnerability in vm2 v3.10.5 allows any sandboxed code to crash the host Node.js process via a single Promise constructor that triggers an unhandled rejection propagating to the host. The fix for CVE-2026-22709 (v3.10.2) only sanitized the onRejected callback in .then() and .catch() overrides and did not address the executor-to-unhandledRejection path. This vulnerability is fixed in 3.11.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>vm2_project</category>
     </item>
   </channel>
 </rss>

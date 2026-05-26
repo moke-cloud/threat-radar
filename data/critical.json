@@ -1,5 +1,62 @@
 [
   {
+    "id": "04b852ce5b2bffd0d89a676f0adcb99b",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "KnowledgeDeliver flaw exploited as a zero-day to install web shells",
+    "url": "https://www.bleepingcomputer.com/news/security/knowledgedeliver-flaw-exploited-as-a-zero-day-to-install-web-shells/",
+    "summary": "Hackers exploited a critical zero-day vulnerability in a server running the KnowledgeDeliver learning management system (LMS) to deploy the Godzilla web shell. [...]",
+    "published": "2026-05-26T20:07:31Z",
+    "fetched": "2026-05-26T22:49:10.657109462Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "7f90b9d42ef914526b5cf98b86949965",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA orders feds to patch actively exploited Drupal vulnerability",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-drupal-vulnerability/",
+    "summary": "CISA has given U.S. government agencies until Wednesday evening to secure their servers against an SQL injection vulnerability in the Drupal content management system (CMS) that it flagged as actively exploited. [...]",
+    "published": "2026-05-26T08:46:45Z",
+    "fetched": "2026-05-26T22:49:10.657109462Z",
+    "tags": [
+      "sqli",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 75
+  },
+  {
+    "id": "2f87976e755a4ad3a617fbf7f5d47cfc",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48172 — LiteSpeed cPanel Plugin: LiteSpeed cPanel Plugin Privilege Escalation Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48172",
+    "summary": "LiteSpeed cPanel Plugin contains privilege escalation vulnerability that is exposed via the user-end cPanel plugin, which can be abused by any cPanel user account to execute arbitrary scripts with root privileges.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-29",
+    "published": "2026-05-26T00:00:00Z",
+    "fetched": "2026-05-26T22:49:10.657109462Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "litespeed"
+    ],
+    "cves": [
+      "CVE-2026-48172"
+    ]
+  },
+  {
     "id": "42c7ce1559cc21ad515df1c533592a82",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -987,6 +1044,27 @@
     "score": 60,
     "cves": [
       "CVE-2021-47974"
+    ]
+  },
+  {
+    "id": "b4b603debe7c7b6be81b5953411ff1fa",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2021-47952 — python jsonpickle 2.0.0 contains a remote code execution vulnerability that allo…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47952",
+    "summary": "python jsonpickle 2.0.0 contains a remote code execution vulnerability that allows attackers to execute arbitrary Python commands by deserializing malicious JSON payloads containing py/repr objects. Attackers can craft JSON strings with py/repr directives that invoke the eval function during deserialization to execute arbitrary code.",
+    "published": "2026-05-16T16:16:21.52Z",
+    "fetched": "2026-05-26T22:49:10.657109462Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "deserialization"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2021-47952"
     ]
   },
   {
@@ -2140,168 +2218,6 @@
     ],
     "severity": "high",
     "score": 76,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "3b06fc1429005e6fd312c304a30841cb",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-20182 — Cisco Catalyst SD-WAN: Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182",
-    "summary": "Cisco Catalyst SD-WAN Controller & Manager contain an authentication bypass vulnerability that allows an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.\nRequired: Please adhere to CISA’s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlined in CISA’s Emergency Directive 26-03 (URL listed below in Notes) and CISA’s Hunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.\nDue: 2026-05-17",
-    "published": "2026-05-14T00:00:00Z",
-    "fetched": "2026-05-21T22:49:38.688059887Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch",
-      "auth-bypass"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20182"
-    ]
-  },
-  {
-    "id": "3b06fc1429005e6fd312c304a30841cb",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-20182 — Cisco Catalyst SD-WAN: Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20182",
-    "summary": "Cisco Catalyst SD-WAN Controller & Manager contain an authentication bypass vulnerability that allows an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.\nRequired: Please adhere to CISA’s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlined in CISA’s Emergency Directive 26-03 (URL listed below in Notes) and CISA’s Hunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.\nDue: 2026-05-17",
-    "published": "2026-05-14T00:00:00Z",
-    "fetched": "2026-05-14T22:37:07.007804901Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch",
-      "auth-bypass"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20182"
-    ]
-  },
-  {
-    "id": "aed6c4209cbd76d51a93285982cc6c50",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.3 MEDIUM] CVE-2026-44248 — Netty is an asynchronous, event-driven network application framework. Prior to 4…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44248",
-    "summary": "Netty is an asynchronous, event-driven network application framework. Prior to 4.2.13.Final and 4.1.133.Final, the MQTT 5 header Properties section is parsed and buffered before any message size limit is applied. Specifically, in MqttDecoder, the decodeVariableHeader() method is called before the bytesRemainingBeforeVariableHeader > maxBytesInMessage check. The decodeVariableHeader() can call other methods which will call decodeProperties(). Effectively, Netty does not apply any limits to the size of the properties being decoded. Additionally, because MqttDecoder extends ReplayingDecoder, Netty will repeatedly re-parse the enormous Properties sections and buffer the bytes in memory, until the entire thing parses to completion. This can cause high resource usage in both CPU and memory. This vulnerability is fixed in 4.2.13.Final and 4.1.133.Final.",
-    "published": "2026-05-13T19:17:27.143Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "netty"
-    ],
-    "cves": [
-      "CVE-2026-44248"
-    ]
-  },
-  {
-    "id": "e7b66ff8353e3680b7da3e344a7adfc5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-42583 — Netty is an asynchronous, event-driven network application framework. Prior to 4…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42583",
-    "summary": "Netty is an asynchronous, event-driven network application framework. Prior to 4.2.13.Final and 4.1.133.Final, Lz4FrameDecoder allocates a ByteBuf of size decompressedLength (up to 32 MB per block) before LZ4 runs. A peer only needs a 21-byte header plus compressedLength payload bytes - 22 bytes if compressedLength == 1 - to force that allocation. This vulnerability is fixed in 4.2.13.Final and 4.1.133.Final.",
-    "published": "2026-05-13T19:17:23.903Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "netty"
-    ],
-    "cves": [
-      "CVE-2026-42583"
-    ]
-  },
-  {
-    "id": "950a5f152b95752381eb1ffd3ad7b67c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-42579 — Netty is an asynchronous, event-driven network application framework. Prior to 4…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42579",
-    "summary": "Netty is an asynchronous, event-driven network application framework. Prior to 4.2.13.Final and 4.1.133.Final, Netty's DNS codec does not enforce RFC 1035 domain name constraints during either encoding or decoding. This creates a bidirectional attack surface: malicious DNS responses can exploit the decoder, and user-influenced hostnames can exploit the encoder. This vulnerability is fixed in 4.2.13.Final and 4.1.133.Final.",
-    "published": "2026-05-13T19:17:23.353Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "netty"
-    ],
-    "cves": [
-      "CVE-2026-42579"
-    ]
-  },
-  {
-    "id": "12703085e6c5f0063008f0d98e7c5730",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.6 HIGH] CVE-2026-44001 — vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, a sandbox escape …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44001",
-    "summary": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, a sandbox escape vulnerability in vm2 v3.10.5 allows any sandboxed code to crash the host Node.js process via a single Promise constructor that triggers an unhandled rejection propagating to the host. The fix for CVE-2026-22709 (v3.10.2) only sanitized the onRejected callback in .then() and .catch() overrides and did not address the executor-to-unhandledRejection path. This vulnerability is fixed in 3.11.0.",
-    "published": "2026-05-13T18:16:16.72Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "vm2_project"
-    ],
-    "cves": [
-      "CVE-2026-44001",
-      "CVE-2026-22709"
-    ]
-  },
-  {
-    "id": "6578267c48d69c7fb2c9044418bee2c2",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Windows BitLocker zero-day gives access to protected drives, PoC released",
-    "url": "https://www.bleepingcomputer.com/news/security/windows-bitlocker-zero-day-gives-access-to-protected-drives-poc-released/",
-    "summary": "A cybersecurity researcher has published proof-of-concept (PoC) exploits for two unpatched Microsoft Windows vulnerabilities named YellowKey and GreenPlasma, which are a BitLocker bypass and a privilege-escalation flaw. [...]",
-    "published": "2026-05-13T16:37:49Z",
-    "fetched": "2026-05-13T22:46:06.809721451Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
     "vendors": [
       "microsoft"
     ]

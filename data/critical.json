@@ -1,5 +1,112 @@
 [
   {
+    "id": "2d572a471e06b0aba2897cd9eb6cef25",
+    "source": "sans-isc",
+    "source_name": "SANS Internet Storm Center",
+    "category": "news",
+    "title": "Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, (Wed, May 27th)",
+    "url": "https://isc.sans.edu/diary/rss/33024",
+    "summary": "Most Akira write-ups focus on the ransom note or the encryption routine. By the time those show up the interesting forensic work is over. The questions that matter to defenders sit earlier. How did they get in. When did they get domain admin. What did they touch before the binary fired. Those answers live in the days before impact. They sit in two log sources that almost never get joined. The perimeter firewall and the Windows event channel.&#xd;",
+    "published": "2026-05-27T21:14:03Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "ransomware"
+    ],
+    "severity": "high",
+    "score": 65,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "867b8abb9f05fae180af480d8494ed41",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA gives feds 4 days to patch actively exploited cPanel plugin flaw",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-gives-feds-4-days-to-patch-actively-exploited-cpanel-plugin-flaw/",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has given U.S. federal agencies four days to secure their servers against a critical vulnerability in the LiteSpeed cPanel user-end plugin, which is actively being exploited in attacks. [...]",
+    "published": "2026-05-27T10:06:17Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "ae25e47687850961c7c5c78676a40f3c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48027 — Nx Nx Console: Nx Console Embedded Malicious Code Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48027",
+    "summary": "Nx Console contains an embedded malicious code vulnerability that allowed a malicious version of Nx Console to be published. The compromised extension fetched an obfuscated payload that could harvested credentials from multiple sources on disk and in memory.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-10",
+    "published": "2026-05-27T00:00:00Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "nx"
+    ],
+    "cves": [
+      "CVE-2026-48027"
+    ]
+  },
+  {
+    "id": "8f949879a279a6e47abad0967e45848b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-45321 — TanStack TanStack: TanStack Unspecified Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45321",
+    "summary": "TanStack contains an unspecified vulnerability that allowed malicious versions of the product to be published to the npm registry to publish credential-stealing malware under a trusted identity.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-10",
+    "published": "2026-05-27T00:00:00Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "malware"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "tanstack"
+    ],
+    "cves": [
+      "CVE-2026-45321"
+    ]
+  },
+  {
+    "id": "68fc84d229ffd2d76951f8c1996d32d8",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-8398 — Daemon Daemon Tools Lite: Daemon Tools Lite Embedded Malicious Code Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8398",
+    "summary": "Daemon Tools contains an unspecified vulnerability that has a high impact on confidentiality, integrity, and availability.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-30",
+    "published": "2026-05-27T00:00:00Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "daemon"
+    ],
+    "cves": [
+      "CVE-2026-8398"
+    ]
+  },
+  {
     "id": "04b852ce5b2bffd0d89a676f0adcb99b",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -338,6 +445,27 @@
     "url": "https://www.microsoft.com/en-us/security/blog/2026/05/20/introducing-rampart-and-clarity-open-source-tools-to-bring-safety-into-agent-development-workflow/",
     "summary": "The AI systems shipping inside enterprises today are fundamentally different from the ones we were building even two years ago, because they have moved well past answering questions and into accessing your email, retrieving records from your CRM, writing and executing code, and taking actions on your behalf across dozens of connected systems. The post Introducing RAMPART and Clarity: Open source tools to bring safety into Agent development workflow appeared first on Microsoft Security Blog.",
     "published": "2026-05-20T15:00:00Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "cf3e7396a1fc14b4ff7c6eba8eb99f5b",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "Introducing RAMPART and Clarity: Open source tools to bring safety into Agent development workflow",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/20/introducing-rampart-and-clarity-open-source-tools-to-bring-safety-into-agent-development-workflow/",
+    "summary": "The AI systems shipping inside enterprises today are fundamentally different from the ones we were building even two years ago, because they have moved well past answering questions and into accessing your email, retrieving records from your CRM, writing and executing code, and taking actions on your behalf across dozens of connected systems. The post Introducing RAMPART and Clarity: Open source tools to bring safety into Agent development workflow appeared first on Microsoft Security Blog.",
+    "published": "2026-05-20T15:00:00Z",
     "fetched": "2026-05-20T22:53:01.54329895Z",
     "tags": [
       "microsoft",
@@ -393,6 +521,180 @@
     "score": 77,
     "vendors": [
       "microsoft"
+    ]
+  },
+  {
+    "id": "889d15bb38410bf05a0ccad77227afc6",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2008-4250 — Microsoft Windows: Microsoft Windows Buffer Overflow Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4250",
+    "summary": "Microsoft Windows contains a buffer overflow vulnerability in the Windows Server Service that allows remote attackers to execute arbitrary code via a crafted RPC request that triggers an overflow during path canonicalization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2008-4250"
+    ]
+  },
+  {
+    "id": "1b270e62027458d58d1fe53a855af1dc",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2009-1537 — Microsoft DirectX: Microsoft DirectX NULL Byte Overwrite Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-1537",
+    "summary": "Microsoft DirectX contains a NULL byte overwrite vulnerability in the QuickTime Movie Parser Filter in quartz.dll in DirectShow which could allow remote attackers to execute arbitrary code via a crafted QuickTime media file.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2009-1537"
+    ]
+  },
+  {
+    "id": "e6b4c10cbfa9d90cc0b8eaae6cfed5cd",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2009-3459 — Adobe Acrobat and Reader: Adobe Acrobat and Reader Heap-Based Buffer Overflow Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3459",
+    "summary": "Adobe Acrobat and Reader contain a heap-based buffer overflow vulnerability which could allow remote attackers to execute arbitrary code via a crafted PDF file that triggers memory corruption.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "adobe"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "adobe"
+    ],
+    "cves": [
+      "CVE-2009-3459"
+    ]
+  },
+  {
+    "id": "4a42a55f8c0f8bc1d485787717b55f26",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2010-0249 — Microsoft Internet Explorer: Microsoft Internet Explorer Use-After-Free Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0249",
+    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code by accessing a pointer associated with a deleted object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2010-0249"
+    ]
+  },
+  {
+    "id": "0ba47a783a5fc1bcf1c7e565e5c12f96",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2010-0806 — Microsoft Internet Explorer: Microsoft Internet Explorer Use-After-Free Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0806",
+    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code via vectors involving access to an invalid pointer after the deletion of an object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2010-0806"
+    ]
+  },
+  {
+    "id": "2791de08c3fed98e349944c6d44a61a6",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-41091 — Microsoft Defender: Microsoft Defender Link Following Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41091",
+    "summary": "Microsoft Defender contains a link following vulnerability that allows an authorized attacker to elevate privileges locally.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-41091"
+    ]
+  },
+  {
+    "id": "28baa25ce42659f2f08fcb1749eea5a1",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-45498 — Microsoft Defender: Microsoft Defender Denial of Service Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45498",
+    "summary": "Microsoft Defender contains an unspecified vulnerability that allows for denial of service.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
+    "published": "2026-05-20T00:00:00Z",
+    "fetched": "2026-05-27T22:56:37.231562821Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-45498"
     ]
   },
   {
@@ -2152,74 +2454,6 @@
     ],
     "cves": [
       "CVE-2026-6637"
-    ]
-  },
-  {
-    "id": "df2ee45e128ad56f61be2f3ce6cbaa4c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-6473 — Integer wraparound in multiple PostgreSQL server features allows an unprivileged…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6473",
-    "summary": "Integer wraparound in multiple PostgreSQL server features allows an unprivileged database user to cause the server to undersize an allocation and write out-of-bounds.  This may execute arbitrary code as the operating system user running the database.  In applications that pass gigabyte-scale user inputs to the relevant database functions, the application input provider may achieve a segmentation fault.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
-    "published": "2026-05-14T14:16:24.883Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce",
-      "postgres"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "postgresql",
-      "postgres"
-    ],
-    "cves": [
-      "CVE-2026-6473"
-    ]
-  },
-  {
-    "id": "f5ecd63b38effde848d55ff6127de743",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Windows Zero-Days Expose BitLocker Bypasses And CTFMON Privilege Escalation",
-    "url": "https://thehackernews.com/2026/05/windows-zero-days-expose-bitlocker.html",
-    "summary": "An anonymous cybersecurity researcher who disclosed three Microsoft Defender vulnerabilities has returned with two more zero-days involving a BitLocker bypass and a privilege escalation impacting Windows Collaborative Translation Framework (CTFMON). The security defects have been codenamed YellowKey and GreenPlasma, respectively, by the researcher, who goes by the online aliases Chaotic Eclipse",
-    "published": "2026-05-14T09:25:50Z",
-    "fetched": "2026-05-21T22:49:38.688059887Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "lpe",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "f5ecd63b38effde848d55ff6127de743",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Windows Zero-Days Expose BitLocker Bypasses And CTFMON Privilege Escalation",
-    "url": "https://thehackernews.com/2026/05/windows-zero-days-expose-bitlocker.html",
-    "summary": "An anonymous cybersecurity researcher who disclosed three Microsoft Defender vulnerabilities has returned with two more zero-days involving a BitLocker bypass and a privilege escalation impacting Windows Collaborative Translation Framework (CTFMON). The security defects have been codenamed YellowKey and GreenPlasma, respectively, by the researcher, who goes by the online aliases Chaotic Eclipse",
-    "published": "2026-05-14T09:25:50Z",
-    "fetched": "2026-05-14T22:37:07.007804901Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "lpe",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "microsoft"
     ]
   }
 ]

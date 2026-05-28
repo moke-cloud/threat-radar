@@ -5,7 +5,46 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 27 May 2026 22:56:37 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 22:53:11 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] The Gentlemen ransomware: Dissecting a self-propagating Go encryptor</title>
+      <link>https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/</link>
+      <guid isPermaLink="false">0384232078275727189ce770c97bf206</guid>
+      <pubDate>Thu, 28 May 2026 15:00:00 +0000</pubDate>
+      <description>Microsoft Threat Intelligence presents a comprehensive analysis of The Gentlemen, a Go-based ransomware deployed by affiliates of Storm-2697 that combines per-file ephemeral key encryption with an aggressive self-propagation module to deploy itself across an entire network using series of simultaneous lateral movement techniques per target. The post The Gentlemen ransomware: Dissecting a self-propagating Go encryptor appeared first on Microsoft Security Blog.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>ransomware</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[CRIT] New Gogs zero-day flaw lets hackers get remote code execution</title>
+      <link>https://www.bleepingcomputer.com/news/security/new-gogs-zero-day-flaw-lets-hackers-get-remote-code-execution/</link>
+      <guid isPermaLink="false">12123459c6133f7230c3d3561732bb50</guid>
+      <pubDate>Thu, 28 May 2026 14:25:43 +0000</pubDate>
+      <description>An unpatched zero-day vulnerability in the Gogs self-hosted Git service can allow attackers to gain remote code execution (RCE) on Internet-facing instances. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>critical</category>
+      <category>rce</category>
+      <category>0day</category>
+    </item>
+    <item>
+      <title>[HIGH] Microsoft Slams Public Zero-Day Disclosures Amid GitHub Researcher Account Removal</title>
+      <link>https://thehackernews.com/2026/05/microsoft-slams-public-zero-day.html</link>
+      <guid isPermaLink="false">95620ff725019856bb606cb65bd9da59</guid>
+      <pubDate>Thu, 28 May 2026 13:53:52 +0000</pubDate>
+      <description>Microsoft has come out strongly in favor of Coordinated Vulnerability Disclosure (CVD), urging the research community to share their findings and give affected vendors an opportunity to better understand the impact and address them before they are publicly disclosed. The development comes after a researcher named Chaotic Eclipse (aka Nightmare-Eclipse) disclosed details of multiple zero-day</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>github</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>0day</category>
+      <category>github</category>
+      <category>microsoft</category>
+    </item>
     <item>
       <title>[HIGH] Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, (Wed, May 27th)</title>
       <link>https://isc.sans.edu/diary/rss/33024</link>
@@ -209,6 +248,20 @@
       <category>microsoft</category>
     </item>
     <item>
+      <title>[HIGH] Microsoft Warns of Two Actively Exploited Defender Vulnerabilities</title>
+      <link>https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html</link>
+      <guid isPermaLink="false">7ad314e8b35cd1fc8268f794076df529</guid>
+      <pubDate>Thu, 21 May 2026 10:55:57 +0000</pubDate>
+      <description>Microsoft has disclosed that a privilege escalation and a denial-of-service flaw in Defender has come under active exploitation in the wild. The former, tracked as CVE-2026-41091, is rated 7.8 on the CVSS scoring system. Successful exploitation of the flaw could allow an attacker to gain SYSTEM privileges. &#34;Improper link resolution before file access (&#39;link following&#39;) in Microsoft Defender</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>lpe</category>
+      <category>actively-exploited</category>
+      <category>microsoft</category>
+    </item>
+    <item>
       <title>[HIGH] Microsoft warns of new Defender zero-days exploited in attacks</title>
       <link>https://www.bleepingcomputer.com/news/security/microsoft-warns-of-new-defender-zero-days-exploited-in-attacks/</link>
       <guid isPermaLink="false">7f8d594016d70c67f7de301f85c02286</guid>
@@ -231,6 +284,31 @@
       <category>high</category>
       <category>lpe</category>
       <category>actively-exploited</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2025-34291 — Langflow Langflow: Langflow Origin Validation Error Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-34291</link>
+      <guid isPermaLink="false">29a6efc28289a24e082df5e53e44f279</guid>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <description>Langflow contains an origin validation error vulnerability in which an overly permissive CORS configuration combined with a refresh token cookie configured as SameSite=None allows a malicious webpage to perform cross-origin requests that include credentials and successfully call the refresh endpoint. This could allow the attacker to execute arbitrary code and achieve full system compromise via obtained tokens that permit access to authenticated endpoints.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-06-04</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>langflow</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-34926 — Trend Micro Apex One: Trend Micro Apex One (On-Premise) Directory Traversal Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-34926</link>
+      <guid isPermaLink="false">8aa0b67e209150eef18b55401a91134a</guid>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <description>Trend Micro Apex One (on-premise) contains a directory traversal vulnerability that could allow a pre-authenticated local attacker to modify a key table on the server to inject malicious code to deploy to agents on affected installations.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-06-04</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>path-traversal</category>
+      <category>trend</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2025-34291 — Langflow Langflow: Langflow Origin Validation Error Vulnerability</title>
@@ -1058,19 +1136,6 @@
       <category>rce</category>
     </item>
     <item>
-      <title>[HIGH] Hackers exploit auth bypass flaw in Burst Statistics WordPress plugin</title>
-      <link>https://www.bleepingcomputer.com/news/security/hackers-exploit-auth-bypass-flaw-in-burst-statistics-wordpress-plugin/</link>
-      <guid isPermaLink="false">4d3d238c03d0193a14f1e56b9247ec42</guid>
-      <pubDate>Thu, 14 May 2026 21:07:17 +0000</pubDate>
-      <description>Hackers are leveraging a critical authentication bypass vulnerability in the WordPress plugin Burst Statistics to obtain admin-level access to websites. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>wordpress</category>
-    </item>
-    <item>
       <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-8581 — Use after free in GPU in Google Chrome prior to 148.0.7778.168 allowed a remote …</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8581</link>
       <guid isPermaLink="false">e15f1d6b7e7ac28d0d4048bccde9d06c</guid>
@@ -1122,21 +1187,6 @@
       <category>lpe</category>
       <category>rce</category>
       <category>fleetdm</category>
-    </item>
-    <item>
-      <title>[CRIT] Cisco warns of new critical SD-WAN flaw exploited in zero-day attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-critical-sd-wan-flaw-exploited-in-zero-day-attacks/</link>
-      <guid isPermaLink="false">304c6c1d3da2f64edbfed0bd3572627e</guid>
-      <pubDate>Thu, 14 May 2026 20:09:56 +0000</pubDate>
-      <description>Cisco is warning that a critical Catalyst SD-WAN Controller authentication bypass flaw, tracked as CVE-2026-20182, was actively exploited in zero-day attacks that allowed attackers to gain administrative privileges on compromised devices. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>critical</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>actively-exploited</category>
-      <category>0day</category>
-      <category>cisco</category>
     </item>
     <item>
       <title>[HIGH] [CVSS 9.0 CRITICAL] CVE-2026-45375 — SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, S…</title>
@@ -1205,60 +1255,6 @@
       <category>high</category>
       <category>rce</category>
       <category>strapi</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-0265: Authentication Bypass in Palo Alto Networks PAN-OS</title>
-      <link>https://www.rapid7.com/blog/post/etr-cve-2026-0265-authentication-bypass-in-palo-alto-networks-pan-os</link>
-      <guid isPermaLink="false">b60278119c1e5f3a8e712a10bfc59ea3</guid>
-      <pubDate>Thu, 14 May 2026 19:15:49 +0000</pubDate>
-      <description>OverviewOn May 13, 2026, Palo Alto Networks published a security advisory for CVE-2026-0265, a signature verification vulnerability that facilitates authentication bypass on PAN-OS, the operating system that most Palo Alto Networks firewalls run. This vulnerability allows a remote unauthenticated attacker with network access to bypass authentication when Cloud Authentication Service (CAS) is enabled and attached to a login interface; the vulnerable configuration is non-default but common. CVE-2026-0265 affects PAN-OS on PA-Series and VM-Series firewalls, as well as Panorama (virtual and M-Seri...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>paloalto</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>paloalto</category>
-    </item>
-    <item>
-      <title>[HIGH] Windows 11 and Microsoft Edge hacked at Pwn2Own Berlin 2026</title>
-      <link>https://www.bleepingcomputer.com/news/security/windows-11-and-microsoft-edge-hacked-on-first-day-of-pwn2own-berlin-2026/</link>
-      <guid isPermaLink="false">a2a749c871bcd5b6a0339055bd09f7fb</guid>
-      <pubDate>Thu, 14 May 2026 18:53:50 +0000</pubDate>
-      <description>On the first day of Pwn2Own Berlin 2026, security researchers collected $523,000 in cash awards after exploiting 24 unique zero-days. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[CRIT] Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Access</title>
-      <link>https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html</link>
-      <guid isPermaLink="false">e886555638fc750c91d954e386775c4f</guid>
-      <pubDate>Thu, 14 May 2026 17:45:20 +0000</pubDate>
-      <description>Cisco has released updates to address a maximum-severity authentication bypass flaw in Catalyst SD-WAN Controller that it said has been exploited in limited attacks. The vulnerability, tracked as CVE-2026-20182, carries a CVSS score of 10.0. &#34;A vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>critical</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>actively-exploited</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[CRIT] Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Access</title>
-      <link>https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html</link>
-      <guid isPermaLink="false">e886555638fc750c91d954e386775c4f</guid>
-      <pubDate>Thu, 14 May 2026 17:45:20 +0000</pubDate>
-      <description>Cisco has released updates to address a maximum-severity authentication bypass flaw in Catalyst SD-WAN Controller that it said has been exploited in limited attacks. The vulnerability, tracked as CVE-2026-20182, carries a CVSS score of 10.0. &#34;A vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>critical</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>actively-exploited</category>
-      <category>cisco</category>
     </item>
   </channel>
 </rss>

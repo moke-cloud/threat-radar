@@ -1,5 +1,56 @@
 [
   {
+    "id": "6ede9bc483cdff19d5932ab2ded6981b",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Rapid7 Observed Exploitation of PAN-OS GlobalProtect Authentication Bypass Vulnerability (CVE-2026-0257)",
+    "url": "https://www.rapid7.com/blog/post/etr-rapid7-observed-exploitation-of-pan-os-globalprotect-authentication-bypass-vulnerability-cve-2026-0257",
+    "summary": "OverviewOn May 13, 2026, Palo Alto Networks published a security advisory for CVE-2026-0257, a medium severity authentication bypass affecting PAN-OS and Prisma Access when a specific configuration is present. Successful exploitation of this vulnerability allows a remote unauthenticated attacker to successfully establish a VPN connection through the GlobalProtect gateway of an affected appliance.Rapid7 MDR identified successful exploitation across numerous customers, however we did not observe any indication of successful lateral movement from the devices. The earliest date for observed exploi...",
+    "published": "2026-05-29T16:49:40Z",
+    "fetched": "2026-05-29T22:51:36.180574564Z",
+    "tags": [
+      "paloalto",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "paloalto"
+    ],
+    "cves": [
+      "CVE-2026-0257"
+    ]
+  },
+  {
+    "id": "91ca54c048d3fe4d3d8287bd25655dd9",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-0257 — Palo Alto Networks PAN-OS: Palo Alto Networks PAN-OS Authentication Bypass Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0257",
+    "summary": "Palo Alto Networks PAN-OS contains an authentication bypass vulnerability that allows attackers to bypass security restrictions and establish an unauthorized VPN connection.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-01",
+    "published": "2026-05-29T00:00:00Z",
+    "fetched": "2026-05-29T22:51:36.180574564Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "paloalto",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "palo",
+      "paloalto"
+    ],
+    "cves": [
+      "CVE-2026-0257"
+    ]
+  },
+  {
     "id": "0384232078275727189ce770c97bf206",
     "source": "msrc",
     "source_name": "Microsoft Security Blog",
@@ -277,6 +328,27 @@
     "url": "https://www.microsoft.com/en-us/security/blog/2026/05/22/microsoft-recognized-as-a-leader-in-the-forrester-wave-for-workforce-identity-security-platforms/",
     "summary": "Microsoft has been recognized as a Leader in The Forrester Wave™: Workforce Identity Security Platforms, Q2 2026, receiving the highest scores in both the current offering and strategy categories. The post Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms appeared first on Microsoft Security Blog.",
     "published": "2026-05-22T17:00:00Z",
+    "fetched": "2026-05-29T22:51:36.180574564Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "436f53320d764079a22e086325779e5c",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/22/microsoft-recognized-as-a-leader-in-the-forrester-wave-for-workforce-identity-security-platforms/",
+    "summary": "Microsoft has been recognized as a Leader in The Forrester Wave™: Workforce Identity Security Platforms, Q2 2026, receiving the highest scores in both the current offering and strategy categories. The post Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms appeared first on Microsoft Security Blog.",
+    "published": "2026-05-22T17:00:00Z",
     "fetched": "2026-05-22T22:34:43.420831657Z",
     "tags": [
       "microsoft",
@@ -309,6 +381,32 @@
     "score": 77,
     "vendors": [
       "microsoft"
+    ]
+  },
+  {
+    "id": "0573c5c4a4d398521c2592e1629de1d0",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-9082 — Drupal Core: Drupal Core SQL Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9082",
+    "summary": "Drupal Core contains a SQL injection vulnerability that could allow for privilege escalation and remote code execution via specially crafted requests sent with the database abstraction API.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-27",
+    "published": "2026-05-22T00:00:00Z",
+    "fetched": "2026-05-29T22:51:36.180574564Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce",
+      "lpe",
+      "sqli"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "drupal"
+    ],
+    "cves": [
+      "CVE-2026-9082"
     ]
   },
   {
@@ -1688,28 +1786,6 @@
     ]
   },
   {
-    "id": "90e9af4f50fe500055f99e6526121ecc",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Funnel Builder WordPress plugin bug exploited to steal credit cards",
-    "url": "https://www.bleepingcomputer.com/news/security/funnel-builder-wordpress-plugin-bug-exploited-to-steal-credit-cards/",
-    "summary": "A critical vulnerability in the Funnel Builder plugin for WordPress is being actively exploited to inject malicious JavaScript snippets into WooCommerce checkout pages. [...]",
-    "published": "2026-05-15T19:30:33Z",
-    "fetched": "2026-05-15T22:30:20.630110031Z",
-    "tags": [
-      "wordpress",
-      "watch",
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 97,
-    "vendors": [
-      "wordpress"
-    ]
-  },
-  {
     "id": "0cc326824c729ce8ef09ed39fc9e4623",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -1790,27 +1866,6 @@
     ]
   },
   {
-    "id": "0fd33a8b44df4e31dd9ba7a411792177",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Microsoft Exchange, Windows 11 hacked on second day of Pwn2Own",
-    "url": "https://www.bleepingcomputer.com/news/security/pwn2own-day-two-hackers-demo-microsoft-exchange-windows-11-red-had-enterprise-linux-zero-days/",
-    "summary": "​During the second day of Pwn2Own Berlin 2026, competitors collected $385,750 in cash awards after exploiting 15 unique zero-day vulnerabilities in multiple products, including Windows 11, Microsoft Exchange, and Red Hat Enterprise Linux for Workstations. [...]",
-    "published": "2026-05-15T17:47:25Z",
-    "fetched": "2026-05-15T22:30:20.630110031Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
     "id": "70848069aa2413d7eac5e024cd6dffc1",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -1830,28 +1885,6 @@
     ]
   },
   {
-    "id": "2aa1ad008b9842bde94d817e53a0453d",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Microsoft warns of Exchange zero-day flaw exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-exchange-zero-day-flaw-exploited-in-attacks/",
-    "summary": "On Thursday, Microsoft shared mitigations for a high-severity Exchange Server vulnerability exploited in attacks that allow threat actors to execute arbitrary code via cross-site scripting (XSS) while targeting Outlook on the web users. [...]",
-    "published": "2026-05-15T09:40:42Z",
-    "fetched": "2026-05-15T22:30:20.630110031Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "xss",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
     "id": "c2c6193c0b0bace861aaa9f20107cc9b",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -1874,357 +1907,6 @@
     ],
     "cves": [
       "CVE-2026-42897"
-    ]
-  },
-  {
-    "id": "c2c6193c0b0bace861aaa9f20107cc9b",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email",
-    "url": "https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html",
-    "summary": "Microsoft has disclosed a new security vulnerability impacting on-premise versions of Exchange Server that it said has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-42897 (CVSS score: 8.1), has been described as a spoofing bug stemming from a cross-site scripting flaw. An anonymous researcher has been credited with discovering and reporting the issue. \"",
-    "published": "2026-05-15T06:19:04Z",
-    "fetched": "2026-05-15T22:30:20.630110031Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "xss",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-42897"
-    ]
-  },
-  {
-    "id": "42b950f52f79d3e44d7a8ae0755cba8f",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-42897 — Microsoft Microsoft: Microsoft Exchange Server Cross-Site Scripting Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42897",
-    "summary": "Microsoft Exchange Server contains a cross-site scripting vulnerability during web page generation in Outlook Web Access and when certain interaction conditions are met, arbitrary JavaScript can be executed in the browser context.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-29",
-    "published": "2026-05-15T00:00:00Z",
-    "fetched": "2026-05-22T22:34:43.420831657Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch",
-      "xss"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-42897"
-    ]
-  },
-  {
-    "id": "42b950f52f79d3e44d7a8ae0755cba8f",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-42897 — Microsoft Microsoft: Microsoft Exchange Server Cross-Site Scripting Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42897",
-    "summary": "Microsoft Exchange Server contains a cross-site scripting vulnerability during web page generation in Outlook Web Access and when certain interaction conditions are met, arbitrary JavaScript can be executed in the browser context.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-29",
-    "published": "2026-05-15T00:00:00Z",
-    "fetched": "2026-05-15T22:30:20.630110031Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch",
-      "xss"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-42897"
-    ]
-  },
-  {
-    "id": "732f9ef14adc3b4a77d17c07b1b8e3c0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-42847 — ClipBucket v5 is an open source video sharing platform. Prior to 5.5.3 - #122, there is a critical S…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42847",
-    "summary": "ClipBucket v5 is an open source video sharing platform. Prior to 5.5.3 - #122, there is a critical SQL Injection (SQLi) vulnerability in ClipBucket, exploitable through the type parameter on the authenticated admin endpoint admin_area/action_logs.php. The endpoint admin_area/action_logs.php reads $_GET['type'], stores it in $result_array['type'], and forwards it into fetch_action_logs(), where the value is concatenated directly into a SQL WHERE condition on action_type without parameterization. This allows UNION-based SQL injection and direct data exfiltration from the database. This vulnerability is fixed in 5.5.3 - #122.",
-    "published": "2026-05-14T21:16:46.393Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "sqli",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-42847"
-    ]
-  },
-  {
-    "id": "e15f1d6b7e7ac28d0d4048bccde9d06c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-8581 — Use after free in GPU in Google Chrome prior to 148.0.7778.168 allowed a remote …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8581",
-    "summary": "Use after free in GPU in Google Chrome prior to 148.0.7778.168 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-05-14T20:17:20.47Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-8581"
-    ]
-  },
-  {
-    "id": "df5f284b6ae67b95228170db68fb5a51",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-46356 — Fleet is open source device management software. Prior to version 4.80.1, a vuln…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46356",
-    "summary": "Fleet is open source device management software. Prior to version 4.80.1, a vulnerability in Fleet's IP extraction logic allows unauthenticated attackers to bypass API rate limiting by spoofing client IP headers. This may allow brute-force login attempts or other abuse against Fleet instances exposed to the public internet. Fleet extracted client IP addresses from request headers (`True-Client-IP`, `X-Real-IP`, `X-Forwarded-For`) without validating that those headers originate from a trusted proxy. The extracted IP is used as the key for rate limiting and IP ban decisions. As a result, an attacker could rotate the value of these headers on each request, causing Fleet to treat each attempt as coming from a different client. This effectively bypasses per-IP rate limits on sensitive endpoints such as the login API, enabling unrestricted brute-force or credential stuffing attacks. This issue primarily affects Fleet instances that are directly exposed to the internet without a reverse proxy that overwrites forwarded-IP headers. Instances behind a properly configured proxy or WAF are less affected. Version 4.80.1 contains a patch. If an immediate upgrade is not possible, administrators should ensure Fleet is deployed behind a reverse proxy (e.g., nginx, Cloudflare, AWS ALB) that overwrites `X-Forwarded-For` with the true client IP, and apply rate limiting at the proxy or WAF layer.",
-    "published": "2026-05-14T20:17:09.54Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "fleetdm"
-    ],
-    "cves": [
-      "CVE-2026-46356"
-    ]
-  },
-  {
-    "id": "ef5d359b6715ad3db6b019794c5dd5df",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-26191 — Fleet is open source device management software. Prior to version 4.81.0, a vuln…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26191",
-    "summary": "Fleet is open source device management software. Prior to version 4.81.0, a vulnerability in Fleet's software installer pipeline could allow a crafted software package to execute arbitrary commands as root (macOS/Linux) or SYSTEM (Windows) on managed endpoints when an uninstall is triggered. When a software package (.pkg, .deb, .rpm, .exe, or .msi) is uploaded to Fleet, metadata is extracted from the package binary and used to generate uninstall scripts. In affected versions, this metadata is not properly sanitized before being included in the generated scripts. A specially crafted package containing malicious values in its metadata fields could result in unintended command execution when the uninstall script runs on managed endpoints. Version 4.81.0 contains a patch. If an immediate upgrade is not possible, administrators should avoid uploading software packages obtained from untrusted or unverified sources. Additionally, administrators can manually inspect and edit auto-generated uninstall scripts before deployment.",
-    "published": "2026-05-14T20:17:02.173Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "critical-cvss",
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "fleetdm",
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-26191"
-    ]
-  },
-  {
-    "id": "57a485a964d3bbe299758dd5f05df7d1",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-26062 — Fleet is open source device management software. Prior to version 4.81.0, Fleet …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26062",
-    "summary": "Fleet is open source device management software. Prior to version 4.81.0, Fleet contained a denial-of-service (DoS) issue in the gRPC Launcher `PublishLogs` endpoint. In affected versions, certain unexpected input values were not handled gracefully, which could cause the Fleet server process to terminate while processing an authenticated request from an enrolled Launcher host. An authenticated attacker with access to any enrolled Launcher node key could cause an immediate and complete denial of service by sending a single gRPC request to the `PublishLogs` endpoint. This vulnerability impacts availability only. There is no exposure of sensitive data, no authentication bypass, no privilege escalation, and no integrity impact. Version 4.81.0 contains a patch. If upgrading immediately is not possible, the following mitigations can reduce exposure.  Restrict network access to the Fleet gRPC endpoint where feasible (for example, limiting inbound access to known host IP ranges); deploy Fleet behind infrastructure that terminates or filters gRPC traffic if Launcher log ingestion is not required; and/or monitor for repeated Fleet process crashes or unexpected restarts indicating potential exploitation.",
-    "published": "2026-05-14T20:17:02.02Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "auth-bypass",
-      "lpe",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "fleetdm"
-    ],
-    "cves": [
-      "CVE-2026-26062"
-    ]
-  },
-  {
-    "id": "4f402072c146cecf61d4af03f12e310f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.0 CRITICAL] CVE-2026-45375 — SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, S…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45375",
-    "summary": "SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, SiYuan's Bazaar (community marketplace) renders the name and version fields of a package's plugin.json (and the equivalent theme.json / template.json / widget.json / icon.json) into the Settings → Marketplace UI without HTML escaping. The kernel-side helper sanitizePackageDisplayStrings in kernel/bazaar/package.go HTML-escapes only Author, DisplayName, and Description — Name and Version flow through to the renderer raw. The frontend at app/src/config/bazaar.ts substitutes them into HTML template strings via ${item.preferredName} / ${data.name} / v${data.version} and assigns the result to innerHTML. As a consequence, malicious HTML in either field is parsed and executed when a user opens the marketplace tab. This vulnerability is fixed in 3.7.0.",
-    "published": "2026-05-14T19:16:39.03Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-45375"
-    ]
-  },
-  {
-    "id": "d481bbb0d0d41dcce0972b139c7085e8",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-27886 — Strapi is an open source headless content management system. Strapi versions sta…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27886",
-    "summary": "Strapi is an open source headless content management system. Strapi versions starting in 4.0.0 and prior to 5.37.0 did not sufficiently sanitize query parameters when filtering content via relational fields. An unauthenticated attacker could use the `where` query parameter on any publicly-accessible content-type with an `updatedBy` (or other admin-relation) field to perform a boolean-oracle attack against private fields on the joined `admin_users` table, including the `resetPasswordToken` field. Extracting an admin reset token via this oracle made full administrative account takeover possible without authentication. When a filter such as `where[updatedBy][resetPasswordToken][$startsWith]=a` was applied to a public Content API endpoint, the underlying query generation performed a `LEFT JOIN` against the `admin_users` table and emitted a `WHERE` clause referencing the joined column. The query parameter sanitization layer did not block operator chains that traversed into relational target schemas the caller had no read permission on, allowing the response count to be used as a one-bit oracle on any admin-table field. The patch in version 5.37.0 introduces explicit query-parameter sanitization at the controller and service boundary via three new primitives: `strictParam`, `addQueryParams`, and `addBodyParams`. Operator chains that traverse into restricted relational targets are now rejected before reaching the database.",
-    "published": "2026-05-14T19:16:31.58Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "oracle",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "strapi",
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-27886"
-    ]
-  },
-  {
-    "id": "81fd131d18b60d5b511450f59f8e74b4",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.4 MEDIUM] CVE-2026-22707 — Strapi is an open source headless content management system. In Strapi versions …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22707",
-    "summary": "Strapi is an open source headless content management system. In Strapi versions prior to 5.33.3, the Upload plugin's Content API endpoints did not enforce the administrator-configured MIME type restrictions (`plugin.upload.security.allowedTypes` and `deniedTypes`). The same restrictions were correctly enforced on the Admin Panel upload path. The upload plugin's `enforceUploadSecurity` security check was invoked in the admin upload controller but was missing from the Content API controller. The Content API handlers `uploadFiles` and `replaceFile` (and the `upload` wrapper that dispatches to them) called the underlying upload service directly, bypassing both the magic-byte MIME detection and the configured allow/deny lists. An authenticated user with the Content API upload permission could therefore upload file types the administrator had explicitly disallowed, including HTML and SVG content. In deployments serving uploaded files from the same origin as the admin panel (default), an attacker could upload an HTML or SVG file that, when opened directly by an admin, executed JavaScript in the admin origin, enabling admin-session hijack and authenticated administrative actions against the admin API. The patch in version 5.33.3 introduces a shared `prepareUploadRequest` helper that wraps `enforceUploadSecurity` and is called from both the Content API and admin upload controllers, ensuring identical security policy enforcement on every upload entry point.",
-    "published": "2026-05-14T19:16:30.837Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "strapi"
-    ],
-    "cves": [
-      "CVE-2026-22707"
-    ]
-  },
-  {
-    "id": "5a8ae403e524fd8f93d1629f75fa0b53",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-22706 — Strapi is an open source headless content management system. In Strapi versions …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22706",
-    "summary": "Strapi is an open source headless content management system. In Strapi versions prior to 5.33.3, changing or resetting a user's password did not invalidate the user's existing refresh-token sessions by default. The refresh-token invalidation step in the users-permissions and admin authentication controllers was conditional on a caller-supplied `deviceId`. When a password change or reset request did not include a `deviceId`, no refresh tokens were revoked, leaving every prior session active. An attacker who had previously obtained a refresh token could continue minting new access tokens after the legitimate user reset their password, allowing persistent unauthorized access for the lifetime of the refresh token (up to 30 days by default). Rotating credentials no longer terminated an active attacker session, defeating password reset as a containment measure. The patch in version 5.33.3 invalidates all refresh tokens associated with the user on every password change and password reset, regardless of whether a `deviceId` is supplied. A new device-scoped session is then issued to the caller as part of the response.",
-    "published": "2026-05-14T19:16:30.7Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "strapi"
-    ],
-    "cves": [
-      "CVE-2026-22706"
-    ]
-  },
-  {
-    "id": "f81d4c80ead664bdafc32ea1637cfdef",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.2 HIGH] CVE-2026-22599 — Strapi is an open source headless content management system. In versions on the …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22599",
-    "summary": "Strapi is an open source headless content management system. In versions on the 4.x branch prior to 4.26.1 and on the 5.x branch prior to 5.33.2, a database-query injection vulnerability existed in the Strapi Content-Type Builder write API. An authenticated administrator could inject arbitrary database statements through the `column.defaultTo` attribute when creating or modifying a content type. Setting `defaultTo` as a tuple `[value, { isRaw: true }]` caused the value to be passed directly into Knex's `db.connection.raw()` during schema migration without sanitization, allowing arbitrary statement execution at the database layer. Depending on the database engine, this enabled arbitrary file read via database utility functions, denial of service via forced server crash on schema-migration error, and on engines that permit external program execution, remote code execution against the database server. The patch in versions 4.26.1 and 5.33.2 addresses this by restricting all Content-Type Builder write APIs to development mode only. Production deployments running v5.33.2 or later return 404 for requests against `/content-type-builder/content-types` and related endpoints, removing the network-reachable attack surface entirely.",
-    "published": "2026-05-14T19:16:29.65Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "strapi"
-    ],
-    "cves": [
-      "CVE-2026-22599"
-    ]
-  },
-  {
-    "id": "a38f219e4e7b69209b1177556753dbd0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.3 MEDIUM] CVE-2025-64526 — Strapi is an open source headless content management system. In Strapi versions …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64526",
-    "summary": "Strapi is an open source headless content management system. In Strapi versions prior to 5.45.0, the rate-limit middleware in the users-permissions plugin derived its rate-limit key in part from `ctx.request.body.email`, including on routes whose body schema does not contain an `email` field (`/auth/local`, `/auth/reset-password`, `/auth/change-password`). An unauthenticated attacker could include an arbitrary `email` value in the request body to obtain a fresh rate-limit key per request, effectively bypassing per-IP throttling on those routes and enabling high-volume credential brute-force, password-reset code brute-force, and credential-stuffing attempts. The rate-limit key was constructed as `${userIdentifier}:${requestPath}:${ctx.request.ip}`, where `userIdentifier = ctx.request.body.email`. On routes that legitimately use email as their identifier (e.g. `/auth/forgot-password`, `/auth/local/register`), this scoping is correct. On routes that use a different identifier (`identifier` for login, `code` for password reset, `currentPassword` for password change), the email field was not part of the route contract, but the middleware still incorporated it into the key, allowing a caller to rotate the value and obtain a unique key on every request. The patch in version 5.45.0 maintains an allow-list of routes that legitimately key on the email field and excludes that key component on every other route the middleware is mounted on. OAuth callback paths (`/connect/*`) are treated identifier-less. On routes outside the allow-list, the middleware now falls back to a fixed identifier-less key, ensuring per-IP throttling remains effective even when the request body is attacker-controlled.",
-    "published": "2026-05-14T19:16:29.233Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "strapi"
-    ],
-    "cves": [
-      "CVE-2025-64526"
-    ]
-  },
-  {
-    "id": "e886555638fc750c91d954e386775c4f",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Cisco Catalyst SD-WAN Controller Auth Bypass Actively Exploited to Gain Admin Access",
-    "url": "https://thehackernews.com/2026/05/cisco-catalyst-sd-wan-controller-auth.html",
-    "summary": "Cisco has released updates to address a maximum-severity authentication bypass flaw in Catalyst SD-WAN Controller that it said has been exploited in limited attacks. The vulnerability, tracked as CVE-2026-20182, carries a CVSS score of 10.0. \"A vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly",
-    "published": "2026-05-14T17:45:20Z",
-    "fetched": "2026-05-21T22:49:38.688059887Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "auth-bypass",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 88,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20182"
     ]
   }
 ]

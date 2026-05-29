@@ -5,7 +5,36 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 28 May 2026 22:53:11 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 22:51:36 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Rapid7 Observed Exploitation of PAN-OS GlobalProtect Authentication Bypass Vulnerability (CVE-2026-0257)</title>
+      <link>https://www.rapid7.com/blog/post/etr-rapid7-observed-exploitation-of-pan-os-globalprotect-authentication-bypass-vulnerability-cve-2026-0257</link>
+      <guid isPermaLink="false">6ede9bc483cdff19d5932ab2ded6981b</guid>
+      <pubDate>Fri, 29 May 2026 16:49:40 +0000</pubDate>
+      <description>OverviewOn May 13, 2026, Palo Alto Networks published a security advisory for CVE-2026-0257, a medium severity authentication bypass affecting PAN-OS and Prisma Access when a specific configuration is present. Successful exploitation of this vulnerability allows a remote unauthenticated attacker to successfully establish a VPN connection through the GlobalProtect gateway of an affected appliance.Rapid7 MDR identified successful exploitation across numerous customers, however we did not observe any indication of successful lateral movement from the devices. The earliest date for observed exploi...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
+      <category>high</category>
+      <category>paloalto</category>
+      <category>watch</category>
+      <category>auth-bypass</category>
+      <category>paloalto</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-0257 — Palo Alto Networks PAN-OS: Palo Alto Networks PAN-OS Authentication Bypass Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0257</link>
+      <guid isPermaLink="false">91ca54c048d3fe4d3d8287bd25655dd9</guid>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <description>Palo Alto Networks PAN-OS contains an authentication bypass vulnerability that allows attackers to bypass security restrictions and establish an unauthorized VPN connection.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-06-01</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>paloalto</category>
+      <category>watch</category>
+      <category>auth-bypass</category>
+      <category>palo</category>
+      <category>paloalto</category>
+    </item>
     <item>
       <title>[HIGH] The Gentlemen ransomware: Dissecting a self-propagating Go encryptor</title>
       <link>https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/</link>
@@ -177,6 +206,19 @@
       <category>microsoft</category>
     </item>
     <item>
+      <title>[HIGH] Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms</title>
+      <link>https://www.microsoft.com/en-us/security/blog/2026/05/22/microsoft-recognized-as-a-leader-in-the-forrester-wave-for-workforce-identity-security-platforms/</link>
+      <guid isPermaLink="false">436f53320d764079a22e086325779e5c</guid>
+      <pubDate>Fri, 22 May 2026 17:00:00 +0000</pubDate>
+      <description>Microsoft has been recognized as a Leader in The Forrester Wave™: Workforce Identity Security Platforms, Q2 2026, receiving the highest scores in both the current offering and strategy categories. The post Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms appeared first on Microsoft Security Blog.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>microsoft</category>
+    </item>
+    <item>
       <title>[HIGH] Trend Micro warns of Apex One zero-day exploited in the wild</title>
       <link>https://www.bleepingcomputer.com/news/security/trend-micro-warns-of-apex-one-zero-day-exploited-in-attacks/</link>
       <guid isPermaLink="false">59103c3f178ca8a01e62a06f6f23e695</guid>
@@ -189,6 +231,21 @@
       <category>actively-exploited</category>
       <category>0day</category>
       <category>microsoft</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-9082 — Drupal Core: Drupal Core SQL Injection Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9082</link>
+      <guid isPermaLink="false">0573c5c4a4d398521c2592e1629de1d0</guid>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <description>Drupal Core contains a SQL injection vulnerability that could allow for privilege escalation and remote code execution via specially crafted requests sent with the database abstraction API.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-27</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>rce</category>
+      <category>lpe</category>
+      <category>sqli</category>
+      <category>drupal</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2026-9082 — Drupal Core: Drupal Core SQL Injection Vulnerability</title>
@@ -972,20 +1029,6 @@
       <category>rce</category>
     </item>
     <item>
-      <title>[CRIT] Funnel Builder WordPress plugin bug exploited to steal credit cards</title>
-      <link>https://www.bleepingcomputer.com/news/security/funnel-builder-wordpress-plugin-bug-exploited-to-steal-credit-cards/</link>
-      <guid isPermaLink="false">90e9af4f50fe500055f99e6526121ecc</guid>
-      <pubDate>Fri, 15 May 2026 19:30:33 +0000</pubDate>
-      <description>A critical vulnerability in the Funnel Builder plugin for WordPress is being actively exploited to inject malicious JavaScript snippets into WooCommerce checkout pages. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>critical</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>actively-exploited</category>
-      <category>wordpress</category>
-    </item>
-    <item>
       <title>[HIGH] CVE-2026-45800 — Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stor…</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45800</link>
       <guid isPermaLink="false">0cc326824c729ce8ef09ed39fc9e4623</guid>
@@ -1030,19 +1073,6 @@
       <category>rce</category>
     </item>
     <item>
-      <title>[HIGH] Microsoft Exchange, Windows 11 hacked on second day of Pwn2Own</title>
-      <link>https://www.bleepingcomputer.com/news/security/pwn2own-day-two-hackers-demo-microsoft-exchange-windows-11-red-had-enterprise-linux-zero-days/</link>
-      <guid isPermaLink="false">0fd33a8b44df4e31dd9ba7a411792177</guid>
-      <pubDate>Fri, 15 May 2026 17:47:25 +0000</pubDate>
-      <description>​During the second day of Pwn2Own Berlin 2026, competitors collected $385,750 in cash awards after exploiting 15 unique zero-day vulnerabilities in multiple products, including Windows 11, Microsoft Exchange, and Red Hat Enterprise Linux for Workstations. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
       <title>[HIGH] [CVSS 4.4 MEDIUM] CVE-2026-45736 — ws is an open source WebSocket client and server for Node.js. Prior to 8.20.1, t…</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45736</link>
       <guid isPermaLink="false">70848069aa2413d7eac5e024cd6dffc1</guid>
@@ -1053,20 +1083,6 @@
       <category>rce</category>
     </item>
     <item>
-      <title>[CRIT] Microsoft warns of Exchange zero-day flaw exploited in attacks</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-exchange-zero-day-flaw-exploited-in-attacks/</link>
-      <guid isPermaLink="false">2aa1ad008b9842bde94d817e53a0453d</guid>
-      <pubDate>Fri, 15 May 2026 09:40:42 +0000</pubDate>
-      <description>On Thursday, Microsoft shared mitigations for a high-severity Exchange Server vulnerability exploited in attacks that allow threat actors to execute arbitrary code via cross-site scripting (XSS) while targeting Outlook on the web users. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>critical</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>xss</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
       <title>[HIGH] On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email</title>
       <link>https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html</link>
       <guid isPermaLink="false">c2c6193c0b0bace861aaa9f20107cc9b</guid>
@@ -1079,182 +1095,6 @@
       <category>xss</category>
       <category>actively-exploited</category>
       <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email</title>
-      <link>https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html</link>
-      <guid isPermaLink="false">c2c6193c0b0bace861aaa9f20107cc9b</guid>
-      <pubDate>Fri, 15 May 2026 06:19:04 +0000</pubDate>
-      <description>Microsoft has disclosed a new security vulnerability impacting on-premise versions of Exchange Server that it said has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-42897 (CVSS score: 8.1), has been described as a spoofing bug stemming from a cross-site scripting flaw. An anonymous researcher has been credited with discovering and reporting the issue. &#34;</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>xss</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-42897 — Microsoft Microsoft: Microsoft Exchange Server Cross-Site Scripting Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42897</link>
-      <guid isPermaLink="false">42b950f52f79d3e44d7a8ae0755cba8f</guid>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <description>Microsoft Exchange Server contains a cross-site scripting vulnerability during web page generation in Outlook Web Access and when certain interaction conditions are met, arbitrary JavaScript can be executed in the browser context.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-29</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>xss</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-42897 — Microsoft Microsoft: Microsoft Exchange Server Cross-Site Scripting Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42897</link>
-      <guid isPermaLink="false">42b950f52f79d3e44d7a8ae0755cba8f</guid>
-      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <description>Microsoft Exchange Server contains a cross-site scripting vulnerability during web page generation in Outlook Web Access and when certain interaction conditions are met, arbitrary JavaScript can be executed in the browser context.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-29</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>xss</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-42847 — ClipBucket v5 is an open source video sharing platform. Prior to 5.5.3 - #122, there is a critical S…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42847</link>
-      <guid isPermaLink="false">732f9ef14adc3b4a77d17c07b1b8e3c0</guid>
-      <pubDate>Thu, 14 May 2026 21:16:46 +0000</pubDate>
-      <description>ClipBucket v5 is an open source video sharing platform. Prior to 5.5.3 - #122, there is a critical SQL Injection (SQLi) vulnerability in ClipBucket, exploitable through the type parameter on the authenticated admin endpoint admin_area/action_logs.php. The endpoint admin_area/action_logs.php reads $_GET[&#39;type&#39;], stores it in $result_array[&#39;type&#39;], and forwards it into fetch_action_logs(), where the value is concatenated directly into a SQL WHERE condition on action_type without parameterization. This allows UNION-based SQL injection and direct data exfiltration from the database. This vulnerability is fixed in 5.5.3 - #122.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>sqli</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-8581 — Use after free in GPU in Google Chrome prior to 148.0.7778.168 allowed a remote …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8581</link>
-      <guid isPermaLink="false">e15f1d6b7e7ac28d0d4048bccde9d06c</guid>
-      <pubDate>Thu, 14 May 2026 20:17:20 +0000</pubDate>
-      <description>Use after free in GPU in Google Chrome prior to 148.0.7778.168 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-46356 — Fleet is open source device management software. Prior to version 4.80.1, a vuln…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46356</link>
-      <guid isPermaLink="false">df5f284b6ae67b95228170db68fb5a51</guid>
-      <pubDate>Thu, 14 May 2026 20:17:09 +0000</pubDate>
-      <description>Fleet is open source device management software. Prior to version 4.80.1, a vulnerability in Fleet&#39;s IP extraction logic allows unauthenticated attackers to bypass API rate limiting by spoofing client IP headers. This may allow brute-force login attempts or other abuse against Fleet instances exposed to the public internet. Fleet extracted client IP addresses from request headers (`True-Client-IP`, `X-Real-IP`, `X-Forwarded-For`) without validating that those headers originate from a trusted proxy. The extracted IP is used as the key for rate limiting and IP ban decisions. As a result, an attacker could rotate the value of these headers on each request, causing Fleet to treat each attempt as coming from a different client. This effectively bypasses per-IP rate limits on sensitive endpoints such as the login API, enabling unrestricted brute-force or credential stuffing attacks. This issue primarily affects Fleet instances that are directly exposed to the internet without a reverse proxy that overwrites forwarded-IP headers. Instances behind a properly configured proxy or WAF are less affected. Version 4.80.1 contains a patch. If an immediate upgrade is not possible, administrators should ensure Fleet is deployed behind a reverse proxy (e.g., nginx, Cloudflare, AWS ALB) that overwrites `X-Forwarded-For` with the true client IP, and apply rate limiting at the proxy or WAF layer.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>fleetdm</category>
-    </item>
-    <item>
-      <title>[CRIT] [CVSS 9.8 CRITICAL] CVE-2026-26191 — Fleet is open source device management software. Prior to version 4.81.0, a vuln…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-26191</link>
-      <guid isPermaLink="false">ef5d359b6715ad3db6b019794c5dd5df</guid>
-      <pubDate>Thu, 14 May 2026 20:17:02 +0000</pubDate>
-      <description>Fleet is open source device management software. Prior to version 4.81.0, a vulnerability in Fleet&#39;s software installer pipeline could allow a crafted software package to execute arbitrary commands as root (macOS/Linux) or SYSTEM (Windows) on managed endpoints when an uninstall is triggered. When a software package (.pkg, .deb, .rpm, .exe, or .msi) is uploaded to Fleet, metadata is extracted from the package binary and used to generate uninstall scripts. In affected versions, this metadata is not properly sanitized before being included in the generated scripts. A specially crafted package containing malicious values in its metadata fields could result in unintended command execution when the uninstall script runs on managed endpoints. Version 4.81.0 contains a patch. If an immediate upgrade is not possible, administrators should avoid uploading software packages obtained from untrusted or unverified sources. Additionally, administrators can manually inspect and edit auto-generated uninstall scripts before deployment.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>critical</category>
-      <category>critical-cvss</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>fleetdm</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-26062 — Fleet is open source device management software. Prior to version 4.81.0, Fleet …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-26062</link>
-      <guid isPermaLink="false">57a485a964d3bbe299758dd5f05df7d1</guid>
-      <pubDate>Thu, 14 May 2026 20:17:02 +0000</pubDate>
-      <description>Fleet is open source device management software. Prior to version 4.81.0, Fleet contained a denial-of-service (DoS) issue in the gRPC Launcher `PublishLogs` endpoint. In affected versions, certain unexpected input values were not handled gracefully, which could cause the Fleet server process to terminate while processing an authenticated request from an enrolled Launcher host. An authenticated attacker with access to any enrolled Launcher node key could cause an immediate and complete denial of service by sending a single gRPC request to the `PublishLogs` endpoint. This vulnerability impacts availability only. There is no exposure of sensitive data, no authentication bypass, no privilege escalation, and no integrity impact. Version 4.81.0 contains a patch. If upgrading immediately is not possible, the following mitigations can reduce exposure.  Restrict network access to the Fleet gRPC endpoint where feasible (for example, limiting inbound access to known host IP ranges); deploy Fleet behind infrastructure that terminates or filters gRPC traffic if Launcher log ingestion is not required; and/or monitor for repeated Fleet process crashes or unexpected restarts indicating potential exploitation.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>auth-bypass</category>
-      <category>lpe</category>
-      <category>rce</category>
-      <category>fleetdm</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.0 CRITICAL] CVE-2026-45375 — SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, S…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45375</link>
-      <guid isPermaLink="false">4f402072c146cecf61d4af03f12e310f</guid>
-      <pubDate>Thu, 14 May 2026 19:16:39 +0000</pubDate>
-      <description>SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, SiYuan&#39;s Bazaar (community marketplace) renders the name and version fields of a package&#39;s plugin.json (and the equivalent theme.json / template.json / widget.json / icon.json) into the Settings → Marketplace UI without HTML escaping. The kernel-side helper sanitizePackageDisplayStrings in kernel/bazaar/package.go HTML-escapes only Author, DisplayName, and Description — Name and Version flow through to the renderer raw. The frontend at app/src/config/bazaar.ts substitutes them into HTML template strings via ${item.preferredName} / ${data.name} / v${data.version} and assigns the result to innerHTML. As a consequence, malicious HTML in either field is parsed and executed when a user opens the marketplace tab. This vulnerability is fixed in 3.7.0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-27886 — Strapi is an open source headless content management system. Strapi versions sta…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-27886</link>
-      <guid isPermaLink="false">d481bbb0d0d41dcce0972b139c7085e8</guid>
-      <pubDate>Thu, 14 May 2026 19:16:31 +0000</pubDate>
-      <description>Strapi is an open source headless content management system. Strapi versions starting in 4.0.0 and prior to 5.37.0 did not sufficiently sanitize query parameters when filtering content via relational fields. An unauthenticated attacker could use the `where` query parameter on any publicly-accessible content-type with an `updatedBy` (or other admin-relation) field to perform a boolean-oracle attack against private fields on the joined `admin_users` table, including the `resetPasswordToken` field. Extracting an admin reset token via this oracle made full administrative account takeover possible without authentication. When a filter such as `where[updatedBy][resetPasswordToken][$startsWith]=a` was applied to a public Content API endpoint, the underlying query generation performed a `LEFT JOIN` against the `admin_users` table and emitted a `WHERE` clause referencing the joined column. The query parameter sanitization layer did not block operator chains that traversed into relational target schemas the caller had no read permission on, allowing the response count to be used as a one-bit oracle on any admin-table field. The patch in version 5.37.0 introduces explicit query-parameter sanitization at the controller and service boundary via three new primitives: `strictParam`, `addQueryParams`, and `addBodyParams`. Operator chains that traverse into restricted relational targets are now rejected before reaching the database.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>oracle</category>
-      <category>rce</category>
-      <category>strapi</category>
-      <category>oracle</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.4 MEDIUM] CVE-2026-22707 — Strapi is an open source headless content management system. In Strapi versions …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-22707</link>
-      <guid isPermaLink="false">81fd131d18b60d5b511450f59f8e74b4</guid>
-      <pubDate>Thu, 14 May 2026 19:16:30 +0000</pubDate>
-      <description>Strapi is an open source headless content management system. In Strapi versions prior to 5.33.3, the Upload plugin&#39;s Content API endpoints did not enforce the administrator-configured MIME type restrictions (`plugin.upload.security.allowedTypes` and `deniedTypes`). The same restrictions were correctly enforced on the Admin Panel upload path. The upload plugin&#39;s `enforceUploadSecurity` security check was invoked in the admin upload controller but was missing from the Content API controller. The Content API handlers `uploadFiles` and `replaceFile` (and the `upload` wrapper that dispatches to them) called the underlying upload service directly, bypassing both the magic-byte MIME detection and the configured allow/deny lists. An authenticated user with the Content API upload permission could therefore upload file types the administrator had explicitly disallowed, including HTML and SVG content. In deployments serving uploaded files from the same origin as the admin panel (default), an attacker could upload an HTML or SVG file that, when opened directly by an admin, executed JavaScript in the admin origin, enabling admin-session hijack and authenticated administrative actions against the admin API. The patch in version 5.33.3 introduces a shared `prepareUploadRequest` helper that wraps `enforceUploadSecurity` and is called from both the Content API and admin upload controllers, ensuring identical security policy enforcement on every upload entry point.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>strapi</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-22706 — Strapi is an open source headless content management system. In Strapi versions …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-22706</link>
-      <guid isPermaLink="false">5a8ae403e524fd8f93d1629f75fa0b53</guid>
-      <pubDate>Thu, 14 May 2026 19:16:30 +0000</pubDate>
-      <description>Strapi is an open source headless content management system. In Strapi versions prior to 5.33.3, changing or resetting a user&#39;s password did not invalidate the user&#39;s existing refresh-token sessions by default. The refresh-token invalidation step in the users-permissions and admin authentication controllers was conditional on a caller-supplied `deviceId`. When a password change or reset request did not include a `deviceId`, no refresh tokens were revoked, leaving every prior session active. An attacker who had previously obtained a refresh token could continue minting new access tokens after the legitimate user reset their password, allowing persistent unauthorized access for the lifetime of the refresh token (up to 30 days by default). Rotating credentials no longer terminated an active attacker session, defeating password reset as a containment measure. The patch in version 5.33.3 invalidates all refresh tokens associated with the user on every password change and password reset, regardless of whether a `deviceId` is supplied. A new device-scoped session is then issued to the caller as part of the response.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>strapi</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-22599 — Strapi is an open source headless content management system. In versions on the …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-22599</link>
-      <guid isPermaLink="false">f81d4c80ead664bdafc32ea1637cfdef</guid>
-      <pubDate>Thu, 14 May 2026 19:16:29 +0000</pubDate>
-      <description>Strapi is an open source headless content management system. In versions on the 4.x branch prior to 4.26.1 and on the 5.x branch prior to 5.33.2, a database-query injection vulnerability existed in the Strapi Content-Type Builder write API. An authenticated administrator could inject arbitrary database statements through the `column.defaultTo` attribute when creating or modifying a content type. Setting `defaultTo` as a tuple `[value, { isRaw: true }]` caused the value to be passed directly into Knex&#39;s `db.connection.raw()` during schema migration without sanitization, allowing arbitrary statement execution at the database layer. Depending on the database engine, this enabled arbitrary file read via database utility functions, denial of service via forced server crash on schema-migration error, and on engines that permit external program execution, remote code execution against the database server. The patch in versions 4.26.1 and 5.33.2 addresses this by restricting all Content-Type Builder write APIs to development mode only. Production deployments running v5.33.2 or later return 404 for requests against `/content-type-builder/content-types` and related endpoints, removing the network-reachable attack surface entirely.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>strapi</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2025-64526 — Strapi is an open source headless content management system. In Strapi versions …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-64526</link>
-      <guid isPermaLink="false">a38f219e4e7b69209b1177556753dbd0</guid>
-      <pubDate>Thu, 14 May 2026 19:16:29 +0000</pubDate>
-      <description>Strapi is an open source headless content management system. In Strapi versions prior to 5.45.0, the rate-limit middleware in the users-permissions plugin derived its rate-limit key in part from `ctx.request.body.email`, including on routes whose body schema does not contain an `email` field (`/auth/local`, `/auth/reset-password`, `/auth/change-password`). An unauthenticated attacker could include an arbitrary `email` value in the request body to obtain a fresh rate-limit key per request, effectively bypassing per-IP throttling on those routes and enabling high-volume credential brute-force, password-reset code brute-force, and credential-stuffing attempts. The rate-limit key was constructed as `${userIdentifier}:${requestPath}:${ctx.request.ip}`, where `userIdentifier = ctx.request.body.email`. On routes that legitimately use email as their identifier (e.g. `/auth/forgot-password`, `/auth/local/register`), this scoping is correct. On routes that use a different identifier (`identifier` for login, `code` for password reset, `currentPassword` for password change), the email field was not part of the route contract, but the middleware still incorporated it into the key, allowing a caller to rotate the value and obtain a unique key on every request. The patch in version 5.45.0 maintains an allow-list of routes that legitimately key on the email field and excludes that key component on every other route the middleware is mounted on. OAuth callback paths (`/connect/*`) are treated identifier-less. On routes outside the allow-list, the middleware now falls back to a fixed identifier-less key, ensuring per-IP throttling remains effective even when the request body is attacker-controlled.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>strapi</category>
     </item>
   </channel>
 </rss>

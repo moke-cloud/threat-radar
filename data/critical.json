@@ -1,5 +1,54 @@
 [
   {
+    "id": "1c72a74bffb31bdb302a0b5aad16a3a8",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Palo Alto GlobalProtect VPN auth bypass flaw now exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/palo-alto-globalprotect-vpn-auth-bypass-flaw-now-exploited-in-attacks/",
+    "summary": "Palo Alto Networks is warning that hackers are now exploiting a PAN-OS GlobalProtect authentication bypass flaw, tracked as CVE-2026-0257, in attacks attempting to breach corporate networks. [...]",
+    "published": "2026-05-30T18:02:51Z",
+    "fetched": "2026-05-30T22:30:51.650700769Z",
+    "tags": [
+      "paloalto",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "paloalto"
+    ],
+    "cves": [
+      "CVE-2026-0257"
+    ]
+  },
+  {
+    "id": "3437893cc2021dc1ff68002d9375ad7f",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "PAN-OS GlobalProtect Authentication Bypass (CVE-2026-0257) Under Active Exploitation",
+    "url": "https://thehackernews.com/2026/05/pan-os-globalprotect-authentication.html",
+    "summary": "Palo Alto Networks has warned that a recently disclosed medium-severity security flaw impacting PAN-OS and Prisma Access has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-0257 (CVSS score: 7.8), refers to a case of authentication bypass that could be exploited by bad actors to set up VPN connections. \"Authentication bypass vulnerabilities in the",
+    "published": "2026-05-30T06:41:26Z",
+    "fetched": "2026-05-30T22:30:51.650700769Z",
+    "tags": [
+      "paloalto",
+      "watch",
+      "auth-bypass",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 88,
+    "vendors": [
+      "paloalto"
+    ],
+    "cves": [
+      "CVE-2026-0257"
+    ]
+  },
+  {
     "id": "6ede9bc483cdff19d5932ab2ded6981b",
     "source": "rapid7",
     "source_name": "Rapid7 Blog",
@@ -133,6 +182,25 @@
     ]
   },
   {
+    "id": "dfc78a0b563edcaa6f9de6019f1a5e87",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-36044 — @pensar/apex <= 0.0.58 is vulnerable to OS command injection via the smart_enume…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36044",
+    "summary": "@pensar/apex <= 0.0.58 is vulnerable to OS command injection via the smart_enumerate tool. The createSmartEnumerateTool() function in src/core/agent/tools.ts constructs a shell command by concatenating unsanitized values from the extensions array and url parameter into a string passed to Node.js child_process.exec(). Because exec() spawns a shell, shell metacharacters in those values are interpreted by the host shell, resulting in arbitrary OS command execution with the privileges of the running process.",
+    "published": "2026-05-27T14:16:45.143Z",
+    "fetched": "2026-05-30T22:30:51.650700769Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-36044"
+    ]
+  },
+  {
     "id": "867b8abb9f05fae180af480d8494ed41",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -147,6 +215,50 @@
     ],
     "severity": "high",
     "score": 67
+  },
+  {
+    "id": "62879e857797cf19451288a22ed11287",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2023-52945 — Uncontrolled search path element vulnerability in OpenSSL DLL component in Synol…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-52945",
+    "summary": "Uncontrolled search path element vulnerability in OpenSSL DLL component in Synology BeeDrive for desktop before 1.3.2-13814 allows local users to execute arbitrary code via unspecified vectors.",
+    "published": "2026-05-27T09:16:24.777Z",
+    "fetched": "2026-05-30T22:30:51.650700769Z",
+    "tags": [
+      "rce",
+      "openssl",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "synology",
+      "openssl"
+    ],
+    "cves": [
+      "CVE-2023-52945"
+    ]
+  },
+  {
+    "id": "0603daf1480af3e5c5ea86c6f120b07b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.4 HIGH] CVE-2026-49014 — In GDAL 3.1.0 through 3.13.0, scanForGeometryContainers in the netCDF driver all…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49014",
+    "summary": "In GDAL 3.1.0 through 3.13.0, scanForGeometryContainers in the netCDF driver allows code execution via a stack-based buffer overflow. It reads a geometry attribute into a fixed-size stack buffer without validating the attribute length. The attacker embeds the exploit as an oversized geometry attribute in a crafted NetCDF file. This achieves arbitrary code execution on the server running GDAL. This is in frmts/netcdf/netcdfsg.cpp.",
+    "published": "2026-05-27T02:16:34.18Z",
+    "fetched": "2026-05-30T22:30:51.650700769Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-49014"
+    ]
   },
   {
     "id": "ae25e47687850961c7c5c78676a40f3c",
@@ -219,6 +331,44 @@
     ]
   },
   {
+    "id": "655f493849ca3e7a8a023ef6cf356f6d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-44903 — Prometheus is an open-source monitoring system and time series database. From 2.49.0 to before 3.5.3…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44903",
+    "summary": "Prometheus is an open-source monitoring system and time series database. From 2.49.0 to before 3.5.3 and 3.11.3, in the Prometheus server's legacy web UI (enabled via the command-line flag --enable-feature=old-ui), the histogram heatmap chart view does not escape le label values when inserting them into the HTML for use as axis tick mark labels. An attacker who can inject crafted metrics can execute JavaScript in the browser of any Prometheus user who views the metric in the heatmap chart UI. This vulnerability is fixed in 3.5.3 and 3.11.3.",
+    "published": "2026-05-26T22:16:43.01Z",
+    "fetched": "2026-05-30T22:30:51.650700769Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-44903"
+    ]
+  },
+  {
+    "id": "adb9cbaf5e851493471937251a23e8c5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-44209 — Banks generates meaningful LLM prompts using a template language that makes sens…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44209",
+    "summary": "Banks generates meaningful LLM prompts using a template language that makes sense. Prior to 2.4.2, banks uses jinja2.Environment() (unsandboxed) to render prompt templates. Applications that pass user-supplied strings as the template argument to Prompt() are vulnerable to Server-Side Template Injection (SSTI), which can lead to Remote Code Execution (RCE) on the host system. This vulnerability is fixed in 2.4.2.",
+    "published": "2026-05-26T21:16:37.62Z",
+    "fetched": "2026-05-30T22:30:51.650700769Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-44209"
+    ]
+  },
+  {
     "id": "04b852ce5b2bffd0d89a676f0adcb99b",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -273,6 +423,26 @@
     ],
     "cves": [
       "CVE-2026-48172"
+    ]
+  },
+  {
+    "id": "42c7ce1559cc21ad515df1c533592a82",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV",
+    "url": "https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a recently patched critical security flaw impacting Drupal Core to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation. The vulnerability in question is CVE-2026-9082 (CVSS score: 6.5), an SQL injection vulnerability affecting all supported versions of Drupal Core. \"Drupal Core",
+    "published": "2026-05-23T07:23:48Z",
+    "fetched": "2026-05-30T22:30:51.650700769Z",
+    "tags": [
+      "sqli",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 66,
+    "cves": [
+      "CVE-2026-9082"
     ]
   },
   {
@@ -480,6 +650,31 @@
     ],
     "cves": [
       "CVE-2026-45760"
+    ]
+  },
+  {
+    "id": "bec65fed76e13987823ff7afe2c5d190",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-43501 — In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: rpl: …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43501",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: rpl: reserve mac_len headroom when recompressed SRH grows\n\nipv6_rpl_srh_rcv() decompresses an RFC 6554 Source Routing Header, swaps\nthe next segment into ipv6_hdr->daddr, recompresses, then pulls the old\nheader and pushes the new one plus the IPv6 header back.  The\nrecompressed header can be larger than the received one when the swap\nreduces the common-prefix length the segments share with daddr (CmprI=0,\nCmprE>0, seg[0][0] != daddr[0] gives the maximum +8 bytes).\n\npskb_expand_head() was gated on segments_left == 0, so on earlier\nsegments the push consumed unchecked headroom.  Once skb_push() leaves\nfewer than skb->mac_len bytes in front of data,\nskb_mac_header_rebuild()'s call to:\n\n\tskb_set_mac_header(skb, -skb->mac_len);\n\nwill store (data - head) - mac_len into the u16 mac_header field, which\nwraps to ~65530, and the following memmove() writes mac_len bytes ~64KiB\npast skb->head.\n\nA single AF_INET6/SOCK_RAW/IPV6_HDRINCL packet over lo with a two\nsegment type-3 SRH (CmprI=0, CmprE=15) reaches headroom 8 after one\npass; KASAN reports a 14-byte OOB write in ipv6_rthdr_rcv.\n\nFix this by expanding the head whenever the remaining room is less than\nthe push size plus mac_len, and request that much extra so the rebuilt\nMAC header fits afterwards.",
+    "published": "2026-05-21T13:16:19.41Z",
+    "fetched": "2026-05-30T22:30:51.650700769Z",
+    "tags": [
+      "critical-cvss",
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-43501"
     ]
   },
   {
@@ -1619,294 +1814,6 @@
     "score": 75,
     "cves": [
       "CVE-2021-47952"
-    ]
-  },
-  {
-    "id": "7dfdda1f2ee3854cf08572d6801cf471",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2020-37231 — Privacy Drive 3.17.0 contains an unquoted service path vulnerability in the pdsv…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-37231",
-    "summary": "Privacy Drive 3.17.0 contains an unquoted service path vulnerability in the pdsvc.exe service binary that allows local attackers to escalate privileges by exploiting the service startup process. Attackers can place malicious executables in the unquoted path directories to execute arbitrary code with LocalSystem privileges during service startup or system reboot.",
-    "published": "2026-05-16T16:16:19.05Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2020-37231"
-    ]
-  },
-  {
-    "id": "762422cee83ce3f2ba5125b0488184b5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2020-37228 — iDS6 DSSPro Digital Signage System 6.2 contains a CAPTCHA security bypass vulner…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-37228",
-    "summary": "iDS6 DSSPro Digital Signage System 6.2 contains a CAPTCHA security bypass vulnerability that allows attackers to bypass authentication by requesting the autoLoginVerifyCode object. Attackers can retrieve valid CAPTCHA codes via the login endpoint and use them to perform brute-force attacks against user accounts.",
-    "published": "2026-05-16T16:16:18.667Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2020-37228"
-    ]
-  },
-  {
-    "id": "5e50df4d598f5b8bfdfa9cc597123e32",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2020-37227 — HS Brand Logo Slider 2.1 contains an unrestricted file upload vulnerability that…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-37227",
-    "summary": "HS Brand Logo Slider 2.1 contains an unrestricted file upload vulnerability that allows authenticated users to bypass client-side file extension validation by uploading arbitrary files. Attackers can intercept upload requests to the logoupload parameter in the admin interface and rename files to executable extensions .php to achieve remote code execution.",
-    "published": "2026-05-16T16:16:17.713Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2020-37227"
-    ]
-  },
-  {
-    "id": "28cf83400d8e02e62de1c8c4ba01ef47",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checkout Skimming",
-    "url": "https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html",
-    "summary": "A critical security vulnerability impacting the Funnel Builder plugin for WordPress has come under active exploitation in the wild to inject malicious JavaScript code into WooCommerce checkout pages with the goal of stealing payment data. Details of the activity were published by Sansec this week. The vulnerability currently does not have an official CVE identifier. It",
-    "published": "2026-05-16T15:20:48Z",
-    "fetched": "2026-05-23T22:26:24.20595341Z",
-    "tags": [
-      "wordpress",
-      "watch",
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 88,
-    "vendors": [
-      "wordpress"
-    ]
-  },
-  {
-    "id": "28cf83400d8e02e62de1c8c4ba01ef47",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checkout Skimming",
-    "url": "https://thehackernews.com/2026/05/funnel-builder-flaw-under-active.html",
-    "summary": "A critical security vulnerability impacting the Funnel Builder plugin for WordPress has come under active exploitation in the wild to inject malicious JavaScript code into WooCommerce checkout pages with the goal of stealing payment data. Details of the activity were published by Sansec this week. The vulnerability currently does not have an official CVE identifier. It",
-    "published": "2026-05-16T15:20:48Z",
-    "fetched": "2026-05-16T22:12:07.310622301Z",
-    "tags": [
-      "wordpress",
-      "watch",
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 88,
-    "vendors": [
-      "wordpress"
-    ]
-  },
-  {
-    "id": "6a4ad5da952ea0e4ae5acf1b54a008cf",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.3 MEDIUM] CVE-2026-8681 — The Essential Chat Support plugin for WordPress is vulnerable to authorization b…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8681",
-    "summary": "The Essential Chat Support plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.0.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to reset all plugin configuration settings — including general settings, display rules, custom CSS, and WooCommerce tab settings — to their defaults by sending a POST request with ecs_reset_settings=1.",
-    "published": "2026-05-16T03:16:21.007Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-8681"
-    ]
-  },
-  {
-    "id": "c19090f531dccd7a752c9081a50e42e2",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.7 HIGH] CVE-2026-45338 — Open WebUI is a self-hosted artificial intelligence platform designed to operate…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45338",
-    "summary": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.0, a Server-Side Request Forgery (SSRF) vulnerability exists in _process_picture_url() in backend/open_webui/utils/oauth.py (line ~1338). The function fetches arbitrary URLs from OAuth picture claims without applying validate_url(), allowing an attacker to force the server to make HTTP requests to internal resources and exfiltrate the full response. This vulnerability is fixed in 0.9.0.",
-    "published": "2026-05-15T22:16:54.79Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-45338"
-    ]
-  },
-  {
-    "id": "94c72b5d68ebf48e604c890eb24ce51b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-45402 — Open WebUI is a self-hosted artificial intelligence platform designed to operate…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45402",
-    "summary": "Open WebUI is a self-hosted artificial intelligence platform designed to operate entirely offline. Prior to 0.9.5, multiple endpoints accept a user-supplied file_id and attach the referenced file to a resource the caller controls (folder knowledge, knowledge-base contents) without verifying that the caller owns or has been granted access to the file. The file's content then becomes reachable through the downstream RAG / file-content paths, allowing any authenticated user to exfiltrate any other user's private file — and on the knowledge-base path, also to overwrite it — given knowledge of the file's UUID. This affects backend/open_webui/routers/folders.py (POST /api/v1/folders/{id}/update), backend/open_webui/routers/knowledge.py (add_file_to_knowledge_by_id), and backend/open_webui/routers/knowledge.py (add_files_to_knowledge_by_id_batch). This vulnerability is fixed in 0.9.5.",
-    "published": "2026-05-15T21:16:38.273Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-45402"
-    ]
-  },
-  {
-    "id": "0cc326824c729ce8ef09ed39fc9e4623",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-45800 — Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stor…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45800",
-    "summary": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.3, there is an authenticated SQL injection issue in the frontend user order history page in Vvveb CMS. A normal frontend user can log in and access /user/orders. The order_by and direction request parameters are accepted from the URL, propagated through the Orders component, and directly concatenated into the SQL ORDER BY clause in OrderSQL::getAll(). Because of this, attacker-controlled input reaches SQL structure without a whitelist or safe query construction step. This vulnerability is fixed in 1.0.8.3.",
-    "published": "2026-05-15T19:17:02.247Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "sqli",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-45800"
-    ]
-  },
-  {
-    "id": "105104269ac572e8e8a99dbc1c5a4a9f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-45622 — Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stor…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45622",
-    "summary": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.3, there is an unauthenticated reflected cross-site scripting (XSS) issue in the public product return form in Vvveb CMS. The customer_order_id POST parameter is inserted into the Order %s not found! error message when the order lookup fails, and that message is rendered in the frontend template without HTML escaping. As a result, attacker-controlled HTML/JavaScript executes in the submitting user's browser. This vulnerability is fixed in 1.0.8.3.",
-    "published": "2026-05-15T19:17:02.023Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "xss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-45622"
-    ]
-  },
-  {
-    "id": "0dda0c20506c0817b9564024f9c87f8c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-45010 — phpMyFAQ before 4.1.2 contains an improper restriction of excessive authenticati…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45010",
-    "summary": "phpMyFAQ before 4.1.2 contains an improper restriction of excessive authentication attempts vulnerability in the /admin/check endpoint, which accepts arbitrary user-id parameters without session binding or rate limiting. Unauthenticated attackers can brute-force any user's six-digit TOTP code by submitting POST requests with sequential token values, bypassing two-factor authentication to gain full administrative access.",
-    "published": "2026-05-15T19:17:01.45Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-45010"
-    ]
-  },
-  {
-    "id": "ae726bbce638869c33fe4dccd2b1a9e7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.1 MEDIUM] CVE-2026-44366 — Vvveb is a powerful and easy to use CMS with page builder to build websites, blo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44366",
-    "summary": "Vvveb is a powerful and easy to use CMS with page builder to build websites, blogs or ecommerce stores. Prior to 1.0.8.1, a Stored Cross-Site Scripting (XSS) vulnerability exists in the Vvveb CMS comment submission flow. The author field is submitted by an unauthenticated user on any public post page, stored without sanitization, and later rendered unsanitized in two distinct sinks: This vulnerability is fixed in 1.0.8.1.",
-    "published": "2026-05-15T19:16:59.34Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "xss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-44366"
-    ]
-  },
-  {
-    "id": "70848069aa2413d7eac5e024cd6dffc1",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 4.4 MEDIUM] CVE-2026-45736 — ws is an open source WebSocket client and server for Node.js. Prior to 8.20.1, t…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45736",
-    "summary": "ws is an open source WebSocket client and server for Node.js. Prior to 8.20.1, the websocket.close() implementation is vulnerable to uninitialized memory disclosure when a TypedArray is passed as the reason argument. This vulnerability is fixed in 8.20.1.",
-    "published": "2026-05-15T15:16:54.103Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-45736"
-    ]
-  },
-  {
-    "id": "c2c6193c0b0bace861aaa9f20107cc9b",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "On-Prem Microsoft Exchange Server CVE-2026-42897 Exploited via Crafted Email",
-    "url": "https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html",
-    "summary": "Microsoft has disclosed a new security vulnerability impacting on-premise versions of Exchange Server that it said has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-42897 (CVSS score: 8.1), has been described as a spoofing bug stemming from a cross-site scripting flaw. An anonymous researcher has been credited with discovering and reporting the issue. \"",
-    "published": "2026-05-15T06:19:04Z",
-    "fetched": "2026-05-22T22:34:43.420831657Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "xss",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-42897"
     ]
   }
 ]

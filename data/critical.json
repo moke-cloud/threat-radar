@@ -1,5 +1,24 @@
 [
   {
+    "id": "75b0d94ae14ab5c03de603ce128a6c43",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 4.3 MEDIUM] CVE-2026-10156 — A vulnerability was determined in Open5GS up to 2.7.7. This affects the function…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10156",
+    "summary": "A vulnerability was determined in Open5GS up to 2.7.7. This affects the function handle_amf_info in the library /lib/sbi/nnrf-handler.c of the component nf-instances Endpoint. Executing a manipulation of the argument nf_info_pool can lead to resource consumption. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. Applying a patch is advised to resolve this issue. The issue report is flagged as already-fixed.",
+    "published": "2026-05-31T00:16:33.91Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-10156"
+    ]
+  },
+  {
     "id": "1c72a74bffb31bdb302a0b5aad16a3a8",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -21,6 +40,132 @@
     ],
     "cves": [
       "CVE-2026-0257"
+    ]
+  },
+  {
+    "id": "8a54184268e8dca2d2fec971df3f3783",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.3 MEDIUM] CVE-2026-10127 — A weakness has been identified in Edimax BR-6478AC 1.23. This affects the functi…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10127",
+    "summary": "A weakness has been identified in Edimax BR-6478AC 1.23. This affects the function formStaDrvSetup of the file /goform/formStaDrvSetup of the component POST Request Handler. This manipulation of the argument rootAPmac causes command injection. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks.",
+    "published": "2026-05-30T17:16:22.013Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-10127"
+    ]
+  },
+  {
+    "id": "ff465fb42b28419afc36f95728ac1c08",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-8594 — Text::LineFold versions through 2019.001 for Perl duplicate the output based on the number of specia…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8594",
+    "summary": "Text::LineFold versions through 2019.001 for Perl duplicate the output based on the number of special break characters.\n\nText::LineFold splits the input string by specific line break characters (such as VT, FF and others) into segments, but applies the break function to the entire string, not just the segment.\n\nA side effect of this is that the full input can be duplicated for each segment.  Besides being incorrect, this can lead to unexpected resource consumption and possible denial of service.\n\nNote that Text::LineFold is part of the Unicode-LineBreak distribution, which may have a higher version number than the module.",
+    "published": "2026-05-30T16:17:05.067Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-8594"
+    ]
+  },
+  {
+    "id": "6702ab33abeb870b75688a341cb35acb",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2018-25412 — Delta Sql 1.8.2 contains an arbitrary file upload vulnerability that allows unau…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25412",
+    "summary": "Delta Sql 1.8.2 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicious files by sending POST requests to docs_upload.php with crafted multipart form data. Attackers can upload PHP files with arbitrary content to the upload directory and execute them on the server for remote code execution.",
+    "published": "2026-05-30T16:17:01.99Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2018-25412"
+    ]
+  },
+  {
+    "id": "bb5dc3173d07302974e02bc4436f0e39",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2018-25411 — MGB OpenSource Guestbook 0.7.0.2 contains an SQL injection vulnerability that al…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25411",
+    "summary": "MGB OpenSource Guestbook 0.7.0.2 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the 'id' parameter. Attackers can send GET requests to email.php with crafted SQL payloads in the 'id' parameter to extract sensitive database information including table and column names.",
+    "published": "2026-05-30T16:17:01.853Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "sqli",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2018-25411"
+    ]
+  },
+  {
+    "id": "8c592076ff1403e3a705fdbd82c6c762",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-7465 — The Spectra Gutenberg Blocks – Website Builder for the Block Editor plugin for…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7465",
+    "summary": "The Spectra Gutenberg Blocks – Website Builder for the Block Editor plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 2.19.25. This makes it possible for authenticated attackers, with Contributor-level access and above, to execute code on the server. Exploitation requires a two-block payload embedded in post content: the first block registers a fake uagb/-prefixed block type with an attacker-specified render_callback, and the second block of the same fake type triggers invocation of that callback via call_user_func() during sequential block rendering in the same page request.",
+    "published": "2026-05-30T10:16:23.86Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-7465"
+    ]
+  },
+  {
+    "id": "7fd115b39c9dfd1045bffa18b22b3f02",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-7459 — The Simple History – Track, Log, and Audit WordPress Changes plugin for WordPr…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7459",
+    "summary": "The Simple History – Track, Log, and Audit WordPress Changes plugin for WordPress is vulnerable to authenticated (Subscriber+) account takeover in all versions up to, and including, 5.26.0 via the event reaction endpoints (react_to_event() / unreact_to_event()). The endpoints register get_items_permissions_check() as their permission_callback, which only verifies the requester is logged in and does not enforce the per-logger capability checks normally applied by Log_Query. As a result, a Subscriber-level user can POST to /wp-json/simple-history/v1/events/<id>/react with the _fields=context query parameter and read the full context of any Simple History event — including SimpleUserLogger entries that record the full password-reset email body (reset URL with the reset key) for any user. The attacker triggers a password reset for an administrator via the lost-password form, brute-forces recent event IDs through the reaction endpoint to read the resulting user_requested_password_reset_link event, extracts the reset key from context.message, and completes the password reset to take over the administrator account. Exploitation requires an administrator to have first enabled the experimental features option (simple_history_experimental_features_enabled), which is not the default.",
+    "published": "2026-05-30T10:16:22.61Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-7459"
     ]
   },
   {
@@ -70,6 +215,26 @@
     ],
     "cves": [
       "CVE-2026-0257"
+    ]
+  },
+  {
+    "id": "fedf3b59c069594255529dd6a4d807ee",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.4 MEDIUM] CVE-2026-47694 — WWBN AVideo is an open source video platform. In 29.0 and earlier, AVideo stores…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47694",
+    "summary": "WWBN AVideo is an open source video platform. In 29.0 and earlier, AVideo stores category descriptions from user input and later renders category_description as raw HTML in the Gallery view. A user who can create or edit categories can store JavaScript in a category description, which executes when another user views the affected Gallery/category page. This is a stored XSS in the category description field, separate from previously fixed XSS issues in video titles or comments.",
+    "published": "2026-05-29T14:16:31.997Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "rce",
+      "xss"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-47694"
     ]
   },
   {
@@ -161,6 +326,81 @@
     ]
   },
   {
+    "id": "a3d226685933c3591de51a8387cab781",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-46178 — In the Linux kernel, the following vulnerability has been resolved:\n\nRDMA/mlx4: …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46178",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nRDMA/mlx4: Fix resource leak on error in mlx4_ib_create_srq()\n\nSashiko points out that mlx4_srq_alloc() was not undone during error\nunwind, add the missing call to mlx4_srq_free().",
+    "published": "2026-05-28T10:16:33.423Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-46178"
+    ]
+  },
+  {
+    "id": "f2f5a32fa999e95bbd98105f2ac55807",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.1 HIGH] CVE-2026-46149 — In the Linux kernel, the following vulnerability has been resolved:\n\nscsi: targe…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46149",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nscsi: target: configfs: Bound snprintf() return in tg_pt_gp_members_show()\n\ntarget_tg_pt_gp_members_show() formats LUN paths with snprintf() into a\n256-byte stack buffer, then will memcpy() cur_len bytes from that\nbuffer.  snprintf() returns the length the output would have had, which\ncan exceed the buffer size when the fabric WWN is long because iSCSI IQN\nnames can be up to 223 bytes.  The check at the memcpy() site only\nguards the destination page write, not the source read, so memcpy() will\nread past the stack buffer and copy adjacent stack contents to the sysfs\nreader, which when CONFIG_FORTIFY_SOURCE is enabled, fortify_panic()\nwill be triggered.\n\nCommit 27e06650a5ea (\"scsi: target: target_core_configfs: Add length\ncheck to avoid buffer overflow\") added the same bound to the\ntarget_lu_gp_members_show() but the tg_pt_gp variant was missed so\nresolve that here.",
+    "published": "2026-05-28T10:16:30.513Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "adobe",
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-46149"
+    ]
+  },
+  {
+    "id": "7f288d1dd876bd2a504a0f192a818f94",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-46402 — Microsoft UFO open-source framework for intelligent automation across devices an…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46402",
+    "summary": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO uses the user-controlled task_name value directly when constructing session log paths. An authenticated client can supply path traversal sequences in task_name and cause UFO to create log directories and log files outside the intended logs/ directory.",
+    "published": "2026-05-27T23:16:47.7Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "path-traversal",
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 78,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-46402"
+    ]
+  },
+  {
     "id": "2d572a471e06b0aba2897cd9eb6cef25",
     "source": "sans-isc",
     "source_name": "SANS Internet Storm Center",
@@ -179,6 +419,93 @@
     "score": 65,
     "vendors": [
       "microsoft"
+    ]
+  },
+  {
+    "id": "ce1209d6093a8ec854e965cac6ea3090",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-45102 — OneUptime is an open-source monitoring and observability platform. Prior to 10.0…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45102",
+    "summary": "OneUptime is an open-source monitoring and observability platform. Prior to 10.0.98, OneUptime uses the Node.js' vm module as an isolation primitive. This API was not designed for that and can be escaped via error objects and infinite recursion. This vulnerability is fixed in 10.0.98.",
+    "published": "2026-05-27T20:16:38.25Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-45102"
+    ]
+  },
+  {
+    "id": "21c3b15a3aebd0562d1e7b76e23550f2",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-44724 — systeminformation is a System and OS information library for node.js. From 4.17.…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44724",
+    "summary": "systeminformation is a System and OS information library for node.js. From 4.17.0 to 5.31.5, on Linux, systeminformation is vulnerable to command injection in networkInterfaces() when an active NetworkManager connection profile name contains shell metacharacters. The vulnerable value is obtained internally from real nmcli device status output. The library sanitizes the network interface name before using it in shell commands, but it does not apply equivalent sanitization to the parsed NetworkManager connection profile name. That unsanitized connectionName is then interpolated into three shell command strings executed through execSync(). This vulnerability is fixed in 5.31.6.",
+    "published": "2026-05-27T20:16:37.617Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-44724"
+    ]
+  },
+  {
+    "id": "6c9e58e7bdac94051429823ee6beb26a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-46099 — In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ipv6: …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46099",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ipv6: fix NOREF dst use in seg6 and rpl lwtunnels\n\nseg6_input_core() and rpl_input() call ip6_route_input() which sets a\nNOREF dst on the skb, then pass it to dst_cache_set_ip6() invoking\ndst_hold() unconditionally.\nOn PREEMPT_RT, ksoftirqd is preemptible and a higher-priority task can\nrelease the underlying pcpu_rt between the lookup and the caching\nthrough a concurrent FIB lookup on a shared nexthop.\nSimplified race sequence:\n\n  ksoftirqd/X                       higher-prio task (same CPU X)\n  -----------                       --------------------------------\n  seg6_input_core(,skb)/rpl_input(skb)\n    dst_cache_get()\n      -> miss\n    ip6_route_input(skb)\n      -> ip6_pol_route(,skb,flags)\n         [RT6_LOOKUP_F_DST_NOREF in flags]\n        -> FIB lookup resolves fib6_nh\n           [nhid=N route]\n        -> rt6_make_pcpu_route()\n           [creates pcpu_rt, refcount=1]\n             pcpu_rt->sernum = fib6_sernum\n             [fib6_sernum=W]\n           -> cmpxchg(fib6_nh.rt6i_pcpu,\n                      NULL, pcpu_rt)\n              [slot was empty, store succeeds]\n      -> skb_dst_set_noref(skb, dst)\n         [dst is pcpu_rt, refcount still 1]\n\n                                    rt_genid_bump_ipv6()\n                                      -> bumps fib6_sernum\n                                         [fib6_sernum from W to Z]\n                                    ip6_route_output()\n                                      -> ip6_pol_route()\n                                        -> FIB lookup resolves fib6_nh\n                                           [nhid=N]\n                                        -> rt6_get_pcpu_route()\n                                             pcpu_rt->sernum != fib6_sernum\n                                             [W <> Z, stale]\n                                          -> prev = xchg(rt6i_pcpu, NULL)\n                                          -> dst_release(prev)\n                                             [prev is pcpu_rt,\n                                              refcount 1->0, dead]\n\n    dst = skb_dst(skb)\n    [dst is the dead pcpu_rt]\n    dst_cache_set_ip6(dst)\n      -> dst_hold() on dead dst\n      -> WARN / use-after-free\n\nFor the race to occur, ksoftirqd must be preemptible (PREEMPT_RT without\nPREEMPT_RT_NEEDS_BH_LOCK) and a concurrent task must be able to release\nthe pcpu_rt. Shared nexthop objects provide such a path, as two routes\npointing to the same nhid share the same fib6_nh and its rt6i_pcpu\nentry.\n\nFix seg6_input_core() and rpl_input() by calling skb_dst_force() after\nip6_route_input() to force the NOREF dst into a refcounted one before\ncaching.\nThe output path is not affected as ip6_route_output() already returns a\nrefcounted dst.",
+    "published": "2026-05-27T14:17:31.557Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-46099"
+    ]
+  },
+  {
+    "id": "66a716bd2e99587fecbc70f6da13db80",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.1 HIGH] CVE-2026-46054 — In the Linux kernel, the following vulnerability has been resolved:\n\nselinux: fi…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46054",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nselinux: fix overlayfs mmap() and mprotect() access checks\n\nThe existing SELinux security model for overlayfs is to allow access if\nthe current task is able to access the top level file (the \"user\" file)\nand the mounter's credentials are sufficient to access the lower\nlevel file (the \"backing\" file).  Unfortunately, the current code does\nnot properly enforce these access controls for both mmap() and mprotect()\noperations on overlayfs filesystems.\n\nThis patch makes use of the newly created security_mmap_backing_file()\nLSM hook to provide the missing backing file enforcement for mmap()\noperations, and leverages the backing file API and new LSM blob to\nprovide the necessary information to properly enforce the mprotect()\naccess controls.",
+    "published": "2026-05-27T14:17:25.043Z",
+    "fetched": "2026-05-31T22:32:15.949500975Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-46054"
     ]
   },
   {
@@ -947,873 +1274,6 @@
     "score": 77,
     "vendors": [
       "microsoft"
-    ]
-  },
-  {
-    "id": "889d15bb38410bf05a0ccad77227afc6",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2008-4250 — Microsoft Windows: Microsoft Windows Buffer Overflow Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4250",
-    "summary": "Microsoft Windows contains a buffer overflow vulnerability in the Windows Server Service that allows remote attackers to execute arbitrary code via a crafted RPC request that triggers an overflow during path canonicalization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2008-4250"
-    ]
-  },
-  {
-    "id": "1b270e62027458d58d1fe53a855af1dc",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2009-1537 — Microsoft DirectX: Microsoft DirectX NULL Byte Overwrite Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-1537",
-    "summary": "Microsoft DirectX contains a NULL byte overwrite vulnerability in the QuickTime Movie Parser Filter in quartz.dll in DirectShow which could allow remote attackers to execute arbitrary code via a crafted QuickTime media file.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2009-1537"
-    ]
-  },
-  {
-    "id": "e6b4c10cbfa9d90cc0b8eaae6cfed5cd",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2009-3459 — Adobe Acrobat and Reader: Adobe Acrobat and Reader Heap-Based Buffer Overflow Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3459",
-    "summary": "Adobe Acrobat and Reader contain a heap-based buffer overflow vulnerability which could allow remote attackers to execute arbitrary code via a crafted PDF file that triggers memory corruption.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "adobe"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2009-3459"
-    ]
-  },
-  {
-    "id": "4a42a55f8c0f8bc1d485787717b55f26",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2010-0249 — Microsoft Internet Explorer: Microsoft Internet Explorer Use-After-Free Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0249",
-    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code by accessing a pointer associated with a deleted object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2010-0249"
-    ]
-  },
-  {
-    "id": "0ba47a783a5fc1bcf1c7e565e5c12f96",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2010-0806 — Microsoft Internet Explorer: Microsoft Internet Explorer Use-After-Free Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0806",
-    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code via vectors involving access to an invalid pointer after the deletion of an object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2010-0806"
-    ]
-  },
-  {
-    "id": "2791de08c3fed98e349944c6d44a61a6",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-41091 — Microsoft Defender: Microsoft Defender Link Following Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41091",
-    "summary": "Microsoft Defender contains a link following vulnerability that allows an authorized attacker to elevate privileges locally.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-41091"
-    ]
-  },
-  {
-    "id": "28baa25ce42659f2f08fcb1749eea5a1",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-45498 — Microsoft Defender: Microsoft Defender Denial of Service Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45498",
-    "summary": "Microsoft Defender contains an unspecified vulnerability that allows for denial of service.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-45498"
-    ]
-  },
-  {
-    "id": "889d15bb38410bf05a0ccad77227afc6",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2008-4250 — Microsoft Windows: Microsoft Windows Buffer Overflow Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4250",
-    "summary": "Microsoft Windows contains a buffer overflow vulnerability in the Windows Server Service that allows remote attackers to execute arbitrary code via a crafted RPC request that triggers an overflow during path canonicalization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-20T22:53:01.54329895Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2008-4250"
-    ]
-  },
-  {
-    "id": "1b270e62027458d58d1fe53a855af1dc",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2009-1537 — Microsoft DirectX: Microsoft DirectX NULL Byte Overwrite Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-1537",
-    "summary": "Microsoft DirectX contains a NULL byte overwrite vulnerability in the QuickTime Movie Parser Filter in quartz.dll in DirectShow which could allow remote attackers to execute arbitrary code via a crafted QuickTime media file.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-20T22:53:01.54329895Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2009-1537"
-    ]
-  },
-  {
-    "id": "e6b4c10cbfa9d90cc0b8eaae6cfed5cd",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2009-3459 — Adobe Acrobat and Reader: Adobe Acrobat and Reader Heap-Based Buffer Overflow Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3459",
-    "summary": "Adobe Acrobat and Reader contain a heap-based buffer overflow vulnerability which could allow remote attackers to execute arbitrary code via a crafted PDF file that triggers memory corruption.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-20T22:53:01.54329895Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "adobe"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2009-3459"
-    ]
-  },
-  {
-    "id": "4a42a55f8c0f8bc1d485787717b55f26",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2010-0249 — Microsoft Internet Explorer: Microsoft Internet Explorer Use-After-Free Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0249",
-    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code by accessing a pointer associated with a deleted object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-20T22:53:01.54329895Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2010-0249"
-    ]
-  },
-  {
-    "id": "0ba47a783a5fc1bcf1c7e565e5c12f96",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2010-0806 — Microsoft Internet Explorer: Microsoft Internet Explorer Use-After-Free Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0806",
-    "summary": "Microsoft Internet Explorer contains an use-after-free vulnerability that could allow remote attackers to execute arbitrary code via vectors involving access to an invalid pointer after the deletion of an object. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-20T22:53:01.54329895Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2010-0806"
-    ]
-  },
-  {
-    "id": "2791de08c3fed98e349944c6d44a61a6",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-41091 — Microsoft Defender: Microsoft Defender Link Following Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41091",
-    "summary": "Microsoft Defender contains a link following vulnerability that allows an authorized attacker to elevate privileges locally.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-20T22:53:01.54329895Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-41091"
-    ]
-  },
-  {
-    "id": "28baa25ce42659f2f08fcb1749eea5a1",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-45498 — Microsoft Defender: Microsoft Defender Denial of Service Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45498",
-    "summary": "Microsoft Defender contains an unspecified vulnerability that allows for denial of service.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-03",
-    "published": "2026-05-20T00:00:00Z",
-    "fetched": "2026-05-20T22:53:01.54329895Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-45498"
-    ]
-  },
-  {
-    "id": "268ac24f11cad926b6b0174e4a8d8e3a",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Cybercrime service disrupted for abusing Microsoft platform to sign malware",
-    "url": "https://www.bleepingcomputer.com/news/security/cybercrime-service-disrupted-for-abusing-microsoft-platform-to-sign-malware/",
-    "summary": "Microsoft says it has disrupted a malware-signing-as-a-service (MSaaS) operation that abused the company's Artifact Signing service to generate fraudulent code-signing certificates used by ransomware gangs and other cybercriminals. [...]",
-    "published": "2026-05-19T21:47:31Z",
-    "fetched": "2026-05-19T22:45:01.848143594Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "ransomware",
-      "malware"
-    ],
-    "severity": "high",
-    "score": 62,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "9296549949493a9808b2629fd8cacfd6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-33633 — Kitty is a cross-platform GPU based terminal. Versions 0.46.2 and below contain …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33633",
-    "summary": "Kitty is a cross-platform GPU based terminal. Versions 0.46.2 and below contain a heap buffer overflow in load_image_data() that allows any process which can write to the terminal's stdin to crash kitty immediately. The vulnerability is triggered by a single APC graphics protocol command with a PNG format declaration (f=100) whose payload exceeds twice the initial buffer capacity. The overflow is attacker-controlled in both length and content, causing DoS and potentially escalation to RCE itself. This issue has been fixed in version 0.47.0.",
-    "published": "2026-05-19T18:16:21.343Z",
-    "fetched": "2026-05-23T22:26:24.20595341Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-33633"
-    ]
-  },
-  {
-    "id": "2fa84540c3e088e3d8057efe7c9a3b63",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "Exposing Fox Tempest: A malware-signing service operation",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/",
-    "summary": "Fox Tempest is a financially motivated threat actor operating a malware‑signing‑as‑a‑service (MSaaS) used by other cybercriminals, including Vanilla Tempest and Storm groups, to more effectively distribute malicious code, including ransomware. The post Exposing Fox Tempest: A malware-signing service operation appeared first on Microsoft Security Blog.",
-    "published": "2026-05-19T15:07:01Z",
-    "fetched": "2026-05-19T22:45:01.848143594Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "ransomware",
-      "malware"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "e875e046866526ce61267de2e79264b6",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "⚡ Weekly Recap: Exchange 0-Day, npm Worm, Fake AI Repo, Cisco Exploit and More",
-    "url": "https://thehackernews.com/2026/05/weekly-recap-exchange-0-day-npm-worm.html",
-    "summary": "Monday opens with a trust problem. A mail server flaw is under active use. A network control system was targeted. Trusted packages were poisoned. A fake model page pushed a stealer. Then came the familiar ransom claim: the data was returned and deleted. The pattern is clear. One weak dependency can leak keys. One leaked key can open cloud access. One cloud foothold can become a production",
-    "published": "2026-05-18T13:50:17Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "cisco"
-    ]
-  },
-  {
-    "id": "ccaa6ef259b3d9e8ec77f305975ac236",
-    "source": "schneier",
-    "source_name": "Schneier on Security",
-    "category": "analysis",
-    "title": "Zero-Day Exploit Against Windows BitLocker",
-    "url": "https://www.schneier.com/blog/archives/2026/05/zero-day-exploit-against-windows-bitlocker.html",
-    "summary": "It&#8217;s nasty, but it requires physical access to the computer: The exploit, named YellowKey, was published earlier this week by a researcher who goes by the alias Nightmare-Eclipse. It reliably bypasses default Windows 11 deployments of BitLocker, the full-volume encryption protection Microsoft provides to make disk contents off-limits to anyone without the decryption key, which is stored in a secured piece of hardware known as a trusted platform module (TPM). BitLocker is a mandatory protection for many organizations, including those that contract with governments...",
-    "published": "2026-05-18T11:08:13Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "3f79763810219481aeabacab52d97898",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "MiniPlasma Windows 0-Day Enables SYSTEM Privilege Escalation on Fully Patched Systems",
-    "url": "https://thehackernews.com/2026/05/miniplasma-windows-0-day-enables-system.html",
-    "summary": "Chaotic Eclipse, the security researcher behind the recently disclosed Windows flaws, YellowKey and GreenPlasma, has released a proof-of-concept (PoC) for a Windows privilege escalation zero-day flaw that grants attackers SYSTEM privileges on fully patched Windows systems. Codenamed MiniPlasma, the vulnerability impacts \"cldflt.sys,\" which refers to the Windows Cloud Files Mini Filter Driver,",
-    "published": "2026-05-18T08:57:34Z",
-    "fetched": "2026-05-25T22:34:39.504968145Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "lpe",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "3f79763810219481aeabacab52d97898",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "MiniPlasma Windows 0-Day Enables SYSTEM Privilege Escalation on Fully Patched Systems",
-    "url": "https://thehackernews.com/2026/05/miniplasma-windows-0-day-enables-system.html",
-    "summary": "Chaotic Eclipse, the security researcher behind the recently disclosed Windows flaws, YellowKey and GreenPlasma, has released a proof-of-concept (PoC) for a Windows privilege escalation zero-day flaw that grants attackers SYSTEM privileges on fully patched Windows systems. Codenamed MiniPlasma, the vulnerability impacts \"cldflt.sys,\" which refers to the Windows Cloud Files Mini Filter Driver,",
-    "published": "2026-05-18T08:57:34Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "lpe",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "1e544ef7238e6495c35690b32bb9c711",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Hackers earn $1,298,250 for 47 zero-days at Pwn2Own Berlin 2026",
-    "url": "https://www.bleepingcomputer.com/news/security/hackers-earn-1-298-250-for-47-zero-days-at-pwn2own-berlin-2026/",
-    "summary": "The Pwn2Own Berlin 2026 hacking contest has concluded, with security researchers collecting $1,298,250 in rewards after exploiting 47 zero-day flaws. [...]",
-    "published": "2026-05-18T05:33:20Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67
-  },
-  {
-    "id": "151d3d3b34eb07c8bf0cc0ea06ab88c2",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "New Windows 'MiniPlasma' zero-day exploit gives SYSTEM access, PoC released",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/",
-    "summary": "A cybersecurity researcher has released a proof-of-concept exploit for a Windows privilege escalation zero-day dubbed \"MiniPlasma\" that lets attackers gain SYSTEM privileges on fully patched Windows systems.  [...]",
-    "published": "2026-05-17T22:30:08Z",
-    "fetched": "2026-05-18T22:32:27.081957304Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "lpe",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "0d62097966dc7ea39f4eb04d63485c30",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-8507 — Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out of bound (OOB) write flaws.\n\nWhen par…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8507",
-    "summary": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out of bound (OOB) write flaws.\n\nWhen parsing a PKCS12 file, with a >= 1 GiB OCTET STRING (or BIT STRING) attribute on a SAFEBAG, via info() or info_as_hash(), a heap-OOB-WRITE would be triggered which could have Remote Code Execution (RCE) potential.",
-    "published": "2026-05-17T19:16:24.59Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce",
-      "openssl",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "openssl"
-    ],
-    "cves": [
-      "CVE-2026-8507"
-    ]
-  },
-  {
-    "id": "71c32504e53e5dbfbcf791f12720c426",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-8753 — A security vulnerability has been detected in kalcaddle Kodbox up to 1.64. This …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8753",
-    "summary": "A security vulnerability has been detected in kalcaddle Kodbox up to 1.64. This issue affects the function parseVideoInfo of the file /workspace/source-code/plugins/fileThumb/lib/VideoResize.class.php of the component fileThumb Plugin. The manipulation of the argument ffmpegBin leads to command injection. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-05-17T13:16:45.94Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-8753"
-    ]
-  },
-  {
-    "id": "6445cb8aff4201ffd518c13a66e47e81",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2018-25332 — GitBucket 4.23.1 contains an unauthenticated remote code execution vulnerability…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25332",
-    "summary": "GitBucket 4.23.1 contains an unauthenticated remote code execution vulnerability that allows attackers to execute arbitrary commands by exploiting weak secret token generation and insecure file upload functionality. Attackers can brute-force the Blowfish encryption key, upload a malicious JAR plugin via the git-lfs endpoint, and execute system commands through an exposed exploit endpoint.",
-    "published": "2026-05-17T13:16:44.84Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2018-25332"
-    ]
-  },
-  {
-    "id": "7cb1252d75b2d260b657cec8abce6bcb",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.4 HIGH] CVE-2018-25328 — VX Search 10.6.18 contains a local buffer overflow vulnerability that allows att…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25328",
-    "summary": "VX Search 10.6.18 contains a local buffer overflow vulnerability that allows attackers to overwrite the instruction pointer by supplying an oversized string in the directory field. Attackers can craft a malicious input file containing 271 bytes of junk data followed by a return address to execute arbitrary code with application privileges.",
-    "published": "2026-05-17T13:16:44.31Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2018-25328"
-    ]
-  },
-  {
-    "id": "537d26d22ff33b04add66581b95fa5e5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2018-25325 — Woocommerce CSV Importer 3.3.6 contains a path traversal vulnerability that allo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25325",
-    "summary": "Woocommerce CSV Importer 3.3.6 contains a path traversal vulnerability that allows any registered user to delete arbitrary files by submitting unescaped filenames through the delete_export_file AJAX action. Attackers can craft POST requests with directory traversal sequences in the filename parameter to delete sensitive files like wp-config.php outside the intended export directory.",
-    "published": "2026-05-17T13:16:43.923Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "path-traversal",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2018-25325"
-    ]
-  },
-  {
-    "id": "1ff7e534ea1084acfe37f8e040a7256e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.2 MEDIUM] CVE-2018-25324 — Simple Fields 0.2 through 0.3.5 WordPress Plugin contains a local file inclusion…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25324",
-    "summary": "Simple Fields 0.2 through 0.3.5 WordPress Plugin contains a local file inclusion vulnerability that allows unauthenticated attackers to read arbitrary files by injecting null bytes into the wp_abspath parameter on PHP versions before 5.3.4. Attackers can supply malicious wp_abspath values to simple_fields.php to include files like /etc/passwd or inject PHP code into Apache logs for remote code execution when allow_url_include is enabled.",
-    "published": "2026-05-17T13:16:43.787Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce",
-      "apache",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "apache",
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2018-25324"
-    ]
-  },
-  {
-    "id": "30b92e6d49b45d5abdb98305171a6842",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.4 HIGH] CVE-2018-25323 — Allok AVI DivX MPEG to DVD Converter 2.6.1217 contains a structured exception ha…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25323",
-    "summary": "Allok AVI DivX MPEG to DVD Converter 2.6.1217 contains a structured exception handler buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious payload. Attackers can craft a text file with a specially crafted buffer containing shellcode and SEH chain overwrite values, then paste the contents into the License Name field to trigger code execution.",
-    "published": "2026-05-17T13:16:43.663Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2018-25323"
-    ]
-  },
-  {
-    "id": "cb4da271d926d35870685b167d49c2b0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.4 HIGH] CVE-2018-25322 — Allok Fast AVI MPEG Splitter 1.2 contains a stack based buffer overflow vulnerab…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25322",
-    "summary": "Allok Fast AVI MPEG Splitter 1.2 contains a stack based buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious license name string. Attackers can craft a payload with 780 bytes of junk data followed by structured shellcode and place it in the License Name field to trigger the overflow and execute code with application privileges.",
-    "published": "2026-05-17T13:16:43.537Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2018-25322"
-    ]
-  },
-  {
-    "id": "470eb64be64f4ef573976075d10d1205",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2018-25320 — ACL Analytics versions 11.x through 13.0.0.579 contain an arbitrary code executi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25320",
-    "summary": "ACL Analytics versions 11.x through 13.0.0.579 contain an arbitrary code execution vulnerability that allows attackers to execute arbitrary commands by leveraging the EXECUTE function. Attackers can use bitsadmin to download malicious PowerShell scripts and execute them with system privileges to establish reverse shells and gain complete system control.",
-    "published": "2026-05-17T13:16:43.27Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2018-25320"
-    ]
-  },
-  {
-    "id": "79fecd0de8285e9b26ef791b06c4a142",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE",
-    "url": "https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html",
-    "summary": "A newly disclosed security flaw impacting NGINX Plus and NGINX Open has come under active exploitation in the wild, days after its public disclosure, according to VulnCheck. The vulnerability, tracked as CVE-2026-42945 (CVSS score: 9.2), is a heap buffer overflow in ngx_http_rewrite_module affecting NGINX versions 0.6.27 through 1.30.0. According to AI-native security company depthfirst, the",
-    "published": "2026-05-17T11:57:53Z",
-    "fetched": "2026-05-24T22:30:34.203129558Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 78,
-    "cves": [
-      "CVE-2026-42945"
-    ]
-  },
-  {
-    "id": "79fecd0de8285e9b26ef791b06c4a142",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "NGINX CVE-2026-42945 Exploited in the Wild, Causing Worker Crashes and Possible RCE",
-    "url": "https://thehackernews.com/2026/05/nginx-cve-2026-42945-exploited-in-wild.html",
-    "summary": "A newly disclosed security flaw impacting NGINX Plus and NGINX Open has come under active exploitation in the wild, days after its public disclosure, according to VulnCheck. The vulnerability, tracked as CVE-2026-42945 (CVSS score: 9.2), is a heap buffer overflow in ngx_http_rewrite_module affecting NGINX versions 0.6.27 through 1.30.0. According to AI-native security company depthfirst, the",
-    "published": "2026-05-17T11:57:53Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 78,
-    "cves": [
-      "CVE-2026-42945"
-    ]
-  },
-  {
-    "id": "6acc7300504d17fe40c8dc7d74a0927f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2021-47977 — WordPress Plugin Anti-Malware Security and Bruteforce Firewall 4.20.59 contains …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47977",
-    "summary": "WordPress Plugin Anti-Malware Security and Bruteforce Firewall 4.20.59 contains a directory traversal vulnerability that allows unauthenticated attackers to read arbitrary files by manipulating the file parameter. Attackers can send requests to the duplicator_download action via admin-ajax.php with path traversal sequences to access sensitive system files outside the intended directory.",
-    "published": "2026-05-16T16:16:23.233Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "path-traversal",
-      "wordpress",
-      "watch",
-      "rce",
-      "malware"
-    ],
-    "severity": "high",
-    "score": 78,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2021-47977"
-    ]
-  },
-  {
-    "id": "a5aada3bc8c78079e1aaec01e992b202",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2021-47976 — TextPattern CMS 4.9.0-dev contains a remote code execution vulnerability that al…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47976",
-    "summary": "TextPattern CMS 4.9.0-dev contains a remote code execution vulnerability that allows authenticated attackers to upload arbitrary PHP files by exploiting the plugin upload functionality. Attackers can authenticate, retrieve a CSRF token from the plugin event page, and upload malicious PHP files to the textpattern/tmp/ directory for code execution.",
-    "published": "2026-05-16T16:16:23.107Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2021-47976"
-    ]
-  },
-  {
-    "id": "30d4b45d45350cecd1fde419e475c5d5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2021-47974 — VX Search 13.5.28 contains an unquoted service path vulnerability in both VX Sea…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47974",
-    "summary": "VX Search 13.5.28 contains an unquoted service path vulnerability in both VX Search Server and VX Search Enterprise services that allows local attackers to escalate privileges. Attackers can place malicious executables in unquoted path directories like C:\\Program Files\\VX Search to execute arbitrary code with LocalSystem privileges when services restart.",
-    "published": "2026-05-16T16:16:22.843Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2021-47974"
-    ]
-  },
-  {
-    "id": "b4b603debe7c7b6be81b5953411ff1fa",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2021-47952 — python jsonpickle 2.0.0 contains a remote code execution vulnerability that allo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47952",
-    "summary": "python jsonpickle 2.0.0 contains a remote code execution vulnerability that allows attackers to execute arbitrary Python commands by deserializing malicious JSON payloads containing py/repr objects. Attackers can craft JSON strings with py/repr directives that invoke the eval function during deserialization to execute arbitrary code.",
-    "published": "2026-05-16T16:16:21.52Z",
-    "fetched": "2026-05-26T22:49:10.657109462Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "deserialization"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2021-47952"
-    ]
-  },
-  {
-    "id": "b4b603debe7c7b6be81b5953411ff1fa",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2021-47952 — python jsonpickle 2.0.0 contains a remote code execution vulnerability that allo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47952",
-    "summary": "python jsonpickle 2.0.0 contains a remote code execution vulnerability that allows attackers to execute arbitrary Python commands by deserializing malicious JSON payloads containing py/repr objects. Attackers can craft JSON strings with py/repr directives that invoke the eval function during deserialization to execute system commands and arbitrary code.",
-    "published": "2026-05-16T16:16:21.52Z",
-    "fetched": "2026-05-17T22:25:42.116119862Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "deserialization"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2021-47952"
     ]
   }
 ]

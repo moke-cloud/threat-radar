@@ -1,5 +1,112 @@
 [
   {
+    "id": "d23fa9698e240ba3713d1ab845ee15a4",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Google June 2026 Android Update Patches 124 Flaws, One Actively Exploited",
+    "url": "https://thehackernews.com/2026/06/google-june-2026-android-update-patches.html",
+    "summary": "Google on Monday released patches for 124 security vulnerabilities impacting its Android operating system for the month of June 2026, including one high-severity flaw in the Framework component that has come under active exploitation. Tracked as CVE-2025-48595 (CVSS score: 8.4), the security flaw has been described as a case of privilege escalation without requiring any user interaction. The",
+    "published": "2026-06-02T18:46:00Z",
+    "fetched": "2026-06-02T23:15:46.820406232Z",
+    "tags": [
+      "lpe",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 66,
+    "cves": [
+      "CVE-2025-48595"
+    ]
+  },
+  {
+    "id": "4123802b5e7f992825ea1d95924c9826",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA flags two-year-old Oracle flaw as actively exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-weblogic-flaw/",
+    "summary": "CISA has ordered government agencies to secure their systems against a high-severity Oracle WebLogic Server vulnerability that was patched two years ago and is now actively exploited in attacks. [...]",
+    "published": "2026-06-02T12:40:33Z",
+    "fetched": "2026-06-02T23:15:46.820406232Z",
+    "tags": [
+      "oracle",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "oracle"
+    ]
+  },
+  {
+    "id": "bb2e7207bd9a38b0b3412e7bd510e21c",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Google fixes one actively exploited Android zero-day, 124 flaws",
+    "url": "https://www.bleepingcomputer.com/news/security/google-fixes-one-actively-exploited-android-zero-day-124-flaws/",
+    "summary": "Google has released the June 2026 Android security patches to address 124 vulnerabilities, including one zero-day flaw exploited in targeted attacks. [...]",
+    "published": "2026-06-02T11:10:15Z",
+    "fetched": "2026-06-02T23:15:46.820406232Z",
+    "tags": [
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "b536770c62708bfb0370cf536fa29ef5",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2022-0492 — Linux Kernel: Linux Kernel Improper Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0492",
+    "summary": "Linux Kernel contains an improper authentication vulnerability which could allow for privilege escalation via the cgroups v1 release_agent feature.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-05",
+    "published": "2026-06-02T00:00:00Z",
+    "fetched": "2026-06-02T23:15:46.820406232Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "linux",
+      "watch",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2022-0492"
+    ]
+  },
+  {
+    "id": "0d47965ad590ad2ecb6995484148e1ac",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2025-48595 — Android Framework: Android Framework Integer Overflow Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48595",
+    "summary": "Android Framework contains an integer overflow vulnerability that allows for code execution that could allow for local privilege escalation.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-05",
+    "published": "2026-06-02T00:00:00Z",
+    "fetched": "2026-06-02T23:15:46.820406232Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "android"
+    ],
+    "cves": [
+      "CVE-2025-48595"
+    ]
+  },
+  {
     "id": "4cf3f95e2230704d0f10072ec4a333f1",
     "source": "krebs",
     "source_name": "Krebs on Security",
@@ -861,6 +968,30 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48172",
     "summary": "LiteSpeed cPanel Plugin contains privilege escalation vulnerability that is exposed via the user-end cPanel plugin, which can be abused by any cPanel user account to execute arbitrary scripts with root privileges.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-29",
     "published": "2026-05-26T00:00:00Z",
+    "fetched": "2026-06-02T23:15:46.820406232Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "litespeed"
+    ],
+    "cves": [
+      "CVE-2026-48172"
+    ]
+  },
+  {
+    "id": "2f87976e755a4ad3a617fbf7f5d47cfc",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48172 — LiteSpeed cPanel Plugin: LiteSpeed cPanel Plugin Privilege Escalation Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48172",
+    "summary": "LiteSpeed cPanel Plugin contains privilege escalation vulnerability that is exposed via the user-end cPanel plugin, which can be abused by any cPanel user account to execute arbitrary scripts with root privileges.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-29",
+    "published": "2026-05-26T00:00:00Z",
     "fetched": "2026-05-26T22:49:10.657109462Z",
     "tags": [
       "kev",
@@ -1126,191 +1257,6 @@
     ],
     "cves": [
       "CVE-2026-43501"
-    ]
-  },
-  {
-    "id": "7ad314e8b35cd1fc8268f794076df529",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Microsoft Warns of Two Actively Exploited Defender Vulnerabilities",
-    "url": "https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html",
-    "summary": "Microsoft has disclosed that a privilege escalation and a denial-of-service flaw in Defender has come under active exploitation in the wild. The former, tracked as CVE-2026-41091, is rated 7.8 on the CVSS scoring system. Successful exploitation of the flaw could allow an attacker to gain SYSTEM privileges. \"Improper link resolution before file access ('link following') in Microsoft Defender",
-    "published": "2026-05-21T10:55:57Z",
-    "fetched": "2026-05-28T22:53:11.656891474Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "lpe",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-41091"
-    ]
-  },
-  {
-    "id": "7ad314e8b35cd1fc8268f794076df529",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Microsoft Warns of Two Actively Exploited Defender Vulnerabilities",
-    "url": "https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html",
-    "summary": "Microsoft has disclosed that a privilege escalation and a denial-of-service flaw in Defender has come under active exploitation in the wild. The former, tracked as CVE-2026-41091, is rated 7.8 on the CVSS scoring system. Successful exploitation of the flaw could allow an attacker to gain SYSTEM privileges. \"Improper link resolution before file access ('link following') in Microsoft Defender",
-    "published": "2026-05-21T10:55:57Z",
-    "fetched": "2026-05-21T22:49:38.688059887Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "lpe",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-41091"
-    ]
-  },
-  {
-    "id": "7f8d594016d70c67f7de301f85c02286",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Microsoft warns of new Defender zero-days exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/microsoft-warns-of-new-defender-zero-days-exploited-in-attacks/",
-    "summary": "On Wednesday, Microsoft started rolling out security patches for two Defender vulnerabilities that have been exploited in zero-day attacks. [...]",
-    "published": "2026-05-21T07:49:48Z",
-    "fetched": "2026-05-21T22:49:38.688059887Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "85dead58e242deeb3631f2f8e62bbea3",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-48172 — LiteSpeed User-End cPanel Plugin before 2.4.5 allows privilege escalation (possibly to root), as exp…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48172",
-    "summary": "LiteSpeed User-End cPanel Plugin before 2.4.5 allows privilege escalation (possibly to root), as exploited in the wild in May 2026. Detection is best done via a command line of grep -rE \"cpanel_jsonapi_func=redisAble\" /var/cpanel/logs /usr/local/cpanel/logs/ 2>/dev/null in Bash. If you get no output, you have not been hit with exploitation of the vulnerability. If there is output, we recommend you examine the IP addresses in the list, determine if they are valid IP addresses, and if not, block them. To determine damage done, examine the system logs for use by the detected IP addresses. The issue is related to mishandling of Redis enable/disable features. The recommended minimum version is 2.4.7.",
-    "published": "2026-05-21T02:16:33.76Z",
-    "fetched": "2026-05-25T22:34:39.504968145Z",
-    "tags": [
-      "lpe",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 78,
-    "cves": [
-      "CVE-2026-48172"
-    ]
-  },
-  {
-    "id": "29a6efc28289a24e082df5e53e44f279",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2025-34291 — Langflow Langflow: Langflow Origin Validation Error Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34291",
-    "summary": "Langflow contains an origin validation error vulnerability in which an overly permissive CORS configuration combined with a refresh token cookie configured as SameSite=None allows a malicious webpage to perform cross-origin requests that include credentials and successfully call the refresh endpoint. This could allow the attacker to execute arbitrary code and achieve full system compromise via obtained tokens that permit access to authenticated endpoints.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-04",
-    "published": "2026-05-21T00:00:00Z",
-    "fetched": "2026-05-28T22:53:11.656891474Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "langflow"
-    ],
-    "cves": [
-      "CVE-2025-34291"
-    ]
-  },
-  {
-    "id": "8aa0b67e209150eef18b55401a91134a",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-34926 — Trend Micro Apex One: Trend Micro Apex One (On-Premise) Directory Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34926",
-    "summary": "Trend Micro Apex One (on-premise) contains a directory traversal vulnerability that could allow a pre-authenticated local attacker to modify a key table on the server to inject malicious code to deploy to agents on affected installations.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-04",
-    "published": "2026-05-21T00:00:00Z",
-    "fetched": "2026-05-28T22:53:11.656891474Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "trend"
-    ],
-    "cves": [
-      "CVE-2026-34926"
-    ]
-  },
-  {
-    "id": "29a6efc28289a24e082df5e53e44f279",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2025-34291 — Langflow Langflow: Langflow Origin Validation Error Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34291",
-    "summary": "Langflow contains an origin validation error vulnerability in which an overly permissive CORS configuration combined with a refresh token cookie configured as SameSite=None allows a malicious webpage to perform cross-origin requests that include credentials and successfully call the refresh endpoint. This could allow the attacker to execute arbitrary code and achieve full system compromise via obtained tokens that permit access to authenticated endpoints.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-04",
-    "published": "2026-05-21T00:00:00Z",
-    "fetched": "2026-05-21T22:49:38.688059887Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "langflow"
-    ],
-    "cves": [
-      "CVE-2025-34291"
-    ]
-  },
-  {
-    "id": "8aa0b67e209150eef18b55401a91134a",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-34926 — Trend Micro Apex One: Trend Micro Apex One (On-Premise) Directory Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34926",
-    "summary": "Trend Micro Apex One (on-premise) contains a directory traversal vulnerability that could allow a pre-authenticated local attacker to modify a key table on the server to inject malicious code to deploy to agents on affected installations.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-04",
-    "published": "2026-05-21T00:00:00Z",
-    "fetched": "2026-05-21T22:49:38.688059887Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "trend"
-    ],
-    "cves": [
-      "CVE-2026-34926"
     ]
   }
 ]

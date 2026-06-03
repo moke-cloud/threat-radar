@@ -1,5 +1,88 @@
 [
   {
+    "id": "fad755f29eeec5d782ac5ae46adf4855",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Acer working to patch max severity zero-days in Wave 7 routers",
+    "url": "https://www.bleepingcomputer.com/news/security/acer-warns-of-max-severity-zero-days-affecting-wave-7-routers/",
+    "summary": "Acer is working to address two maximum-severity zero-day vulnerabilities affecting its Wave 7 mesh routers. [...]",
+    "published": "2026-06-03T11:35:47Z",
+    "fetched": "2026-06-03T23:17:25.281550817Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "a369cf2de70095cc37e9159c2c4f155d",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "VS Code zero-day lets hackers steal GitHub tokens in one click",
+    "url": "https://www.bleepingcomputer.com/news/security/vs-code-zero-day-lets-hackers-steal-github-tokens-in-one-click/",
+    "summary": "A security researcher has released exploit code for a Visual Studio Code (VS Code) zero-day vulnerability that allows attackers to steal GitHub authentication tokens by tricking users into clicking a link. [...]",
+    "published": "2026-06-03T06:50:30Z",
+    "fetched": "2026-06-03T23:17:25.281550817Z",
+    "tags": [
+      "github",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "github"
+    ]
+  },
+  {
+    "id": "8335e31d85a07bfeeb1f069a8cd895f2",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "Preinstall to persistence: Inside the Red Hat npm Miasma credential-stealing campaign",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/02/preinstall-persistence-inside-red-hat-npm-miasma-credential-stealing-campaign/",
+    "summary": "A large-scale npm supply chain attack compromised over 90 versions of @redhat-cloud-services packages, silently infecting CI/CD environments and developer systems. The malicious code steals credentials from GitHub, cloud platforms, and local machines, then spreads like a worm by republishing trusted packages. Discover how the attack works, what data is at risk, and the steps you can take to protect your organization. The post Preinstall to persistence: Inside the Red Hat npm Miasma credential-stealing campaign appeared first on Microsoft Security Blog.",
+    "published": "2026-06-03T04:45:06Z",
+    "fetched": "2026-06-03T23:17:25.281550817Z",
+    "tags": [
+      "github",
+      "microsoft",
+      "watch",
+      "supply-chain"
+    ],
+    "severity": "high",
+    "score": 76,
+    "vendors": [
+      "github",
+      "microsoft"
+    ]
+  },
+  {
+    "id": "7d51fc61e6e9079a054b659382d24e3d",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-45247 — Mirasvit Mirasvit Full Page Cache Warmer: Mirasvit Full Page Cache Warmer Deserialization of Untrusted Data Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45247",
+    "summary": "Mirasvit Full Page Cache Warmer contains a deserialization of untrusted data vulnerability that could allow unauthenticated attackers to achieve remote code execution by supplying a crafted serialized PHP object in the CacheWarmer cookie.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-06",
+    "published": "2026-06-03T00:00:00Z",
+    "fetched": "2026-06-03T23:17:25.281550817Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "mirasvit"
+    ],
+    "cves": [
+      "CVE-2026-45247"
+    ]
+  },
+  {
     "id": "d23fa9698e240ba3713d1ab845ee15a4",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -827,6 +910,78 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48027",
     "summary": "Nx Console contains an embedded malicious code vulnerability that allowed a malicious version of Nx Console to be published. The compromised extension fetched an obfuscated payload that could harvested credentials from multiple sources on disk and in memory.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-10",
     "published": "2026-05-27T00:00:00Z",
+    "fetched": "2026-06-03T23:17:25.281550817Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "ransomware"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "nx"
+    ],
+    "cves": [
+      "CVE-2026-48027"
+    ]
+  },
+  {
+    "id": "8f949879a279a6e47abad0967e45848b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-45321 — TanStack TanStack: TanStack Unspecified Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45321",
+    "summary": "TanStack contains an unspecified vulnerability that allowed malicious versions of the product to be published to the npm registry to publish credential-stealing malware under a trusted identity.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-10",
+    "published": "2026-05-27T00:00:00Z",
+    "fetched": "2026-06-03T23:17:25.281550817Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "ransomware",
+      "malware"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "tanstack"
+    ],
+    "cves": [
+      "CVE-2026-45321"
+    ]
+  },
+  {
+    "id": "68fc84d229ffd2d76951f8c1996d32d8",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-8398 — Daemon Daemon Tools Lite: Daemon Tools Lite Embedded Malicious Code Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8398",
+    "summary": "Daemon Tools contains an unspecified vulnerability that has a high impact on confidentiality, integrity, and availability.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-30",
+    "published": "2026-05-27T00:00:00Z",
+    "fetched": "2026-06-03T23:17:25.281550817Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "daemon"
+    ],
+    "cves": [
+      "CVE-2026-8398"
+    ]
+  },
+  {
+    "id": "ae25e47687850961c7c5c78676a40f3c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48027 — Nx Nx Console: Nx Console Embedded Malicious Code Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48027",
+    "summary": "Nx Console contains an embedded malicious code vulnerability that allowed a malicious version of Nx Console to be published. The compromised extension fetched an obfuscated payload that could harvested credentials from multiple sources on disk and in memory.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-10",
+    "published": "2026-05-27T00:00:00Z",
     "fetched": "2026-05-27T22:56:37.231562821Z",
     "tags": [
       "kev",
@@ -1111,152 +1266,6 @@
     "score": 76,
     "vendors": [
       "microsoft"
-    ]
-  },
-  {
-    "id": "59103c3f178ca8a01e62a06f6f23e695",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Trend Micro warns of Apex One zero-day exploited in the wild",
-    "url": "https://www.bleepingcomputer.com/news/security/trend-micro-warns-of-apex-one-zero-day-exploited-in-attacks/",
-    "summary": "Japanese cybersecurity software company Trend Micro has addressed an Apex One zero-day vulnerability exploited in attacks targeting Windows systems. [...]",
-    "published": "2026-05-22T13:39:19Z",
-    "fetched": "2026-05-22T22:34:43.420831657Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "0573c5c4a4d398521c2592e1629de1d0",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-9082 — Drupal Core: Drupal Core SQL Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9082",
-    "summary": "Drupal Core contains a SQL injection vulnerability that could allow for privilege escalation and remote code execution via specially crafted requests sent with the database abstraction API.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-27",
-    "published": "2026-05-22T00:00:00Z",
-    "fetched": "2026-05-29T22:51:36.180574564Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce",
-      "lpe",
-      "sqli"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "drupal"
-    ],
-    "cves": [
-      "CVE-2026-9082"
-    ]
-  },
-  {
-    "id": "0573c5c4a4d398521c2592e1629de1d0",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-9082 — Drupal Core: Drupal Core SQL Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9082",
-    "summary": "Drupal Core contains a SQL injection vulnerability that could allow for privilege escalation and remote code execution via specially crafted requests sent with the database abstraction API.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-27",
-    "published": "2026-05-22T00:00:00Z",
-    "fetched": "2026-05-22T22:34:43.420831657Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce",
-      "lpe",
-      "sqli"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "drupal"
-    ],
-    "cves": [
-      "CVE-2026-9082"
-    ]
-  },
-  {
-    "id": "6b80a4f0b7b950ba86c030b4985b0ea2",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Google accidentally exposed details of unfixed Chromium flaw",
-    "url": "https://www.bleepingcomputer.com/news/security/google-accidentally-exposed-details-of-unfixed-chromium-flaw/",
-    "summary": "Google has accidentally leaked details about an unfixed issue in Chromium that keeps JavaScript running in the background even when the browser is closed, allowing remote code execution on the device. [...]",
-    "published": "2026-05-21T18:13:50Z",
-    "fetched": "2026-05-21T22:49:38.688059887Z",
-    "tags": [
-      "chrome",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "chrome"
-    ]
-  },
-  {
-    "id": "d82405ca3e1078f78a127b2ec88cd446",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-45760 — (Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through Use…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45760",
-    "summary": "(Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through User-Controlled Key) vulnerability in Apache Camel K. Authorized users in a Kubernetes namespace can create a Build resource, controlling the Pod generation in a namespace of their choice, including the operator namespace.\n\nThis issue affects Apache Camel K: from 2.0.0 before 2.8.1, from 2.9.0 before 2.9.2, from 2.10.0 before 2.10.1.\n\nUsers are recommended to upgrade to version 2.10.1 (or 2.8.1 or 2.9.2), which fixes the issue.",
-    "published": "2026-05-21T13:16:19.84Z",
-    "fetched": "2026-05-24T22:30:34.203129558Z",
-    "tags": [
-      "apache",
-      "kubernetes",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "apache",
-      "kubernetes"
-    ],
-    "cves": [
-      "CVE-2026-45760"
-    ]
-  },
-  {
-    "id": "bec65fed76e13987823ff7afe2c5d190",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-43501 — In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: rpl: …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43501",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: rpl: reserve mac_len headroom when recompressed SRH grows\n\nipv6_rpl_srh_rcv() decompresses an RFC 6554 Source Routing Header, swaps\nthe next segment into ipv6_hdr->daddr, recompresses, then pulls the old\nheader and pushes the new one plus the IPv6 header back.  The\nrecompressed header can be larger than the received one when the swap\nreduces the common-prefix length the segments share with daddr (CmprI=0,\nCmprE>0, seg[0][0] != daddr[0] gives the maximum +8 bytes).\n\npskb_expand_head() was gated on segments_left == 0, so on earlier\nsegments the push consumed unchecked headroom.  Once skb_push() leaves\nfewer than skb->mac_len bytes in front of data,\nskb_mac_header_rebuild()'s call to:\n\n\tskb_set_mac_header(skb, -skb->mac_len);\n\nwill store (data - head) - mac_len into the u16 mac_header field, which\nwraps to ~65530, and the following memmove() writes mac_len bytes ~64KiB\npast skb->head.\n\nA single AF_INET6/SOCK_RAW/IPV6_HDRINCL packet over lo with a two\nsegment type-3 SRH (CmprI=0, CmprE=15) reaches headroom 8 after one\npass; KASAN reports a 14-byte OOB write in ipv6_rthdr_rcv.\n\nFix this by expanding the head whenever the remaining room is less than\nthe push size plus mac_len, and request that much extra so the rebuilt\nMAC header fits afterwards.",
-    "published": "2026-05-21T13:16:19.41Z",
-    "fetched": "2026-05-30T22:30:51.650700769Z",
-    "tags": [
-      "critical-cvss",
-      "linux",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "linux"
-    ],
-    "cves": [
-      "CVE-2026-43501"
     ]
   }
 ]

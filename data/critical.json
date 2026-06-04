@@ -1,5 +1,71 @@
 [
   {
+    "id": "a95073a62a7399522fd23a66272adf40",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Hola Browser for Windows compromised to deliver cryptominer",
+    "url": "https://www.bleepingcomputer.com/news/security/hola-browser-for-windows-compromised-to-deliver-cryptominer/",
+    "summary": "The Windows version of the Hola Browser has been compromised in a supply chain attack that delivered an undeclared executable identified by researchers as a cryptocurrency miner. [...]",
+    "published": "2026-06-04T21:27:25Z",
+    "fetched": "2026-06-04T22:53:06.464314209Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "supply-chain"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "5c4c7d84dd7cb943dafaa990f882611d",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-331: (Pwn2Own) Microsoft Edge Feedback Log File Handling Directory Traversal Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-331/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft Edge. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-45495.",
+    "published": "2026-06-04T05:00:00Z",
+    "fetched": "2026-06-04T22:53:06.464314209Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce",
+      "path-traversal"
+    ],
+    "severity": "high",
+    "score": 69,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-45495"
+    ]
+  },
+  {
+    "id": "9e5e87792c716d4206b10793b28d043f",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "CISA Adds Exploited Magento RCE Flaw CVE-2026-45247 to KEV Catalog",
+    "url": "https://thehackernews.com/2026/06/cisa-adds-exploited-magento-rce-flaw.html",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a critical flaw impacting Mirasvit Cache Warmer, a popular Magento full-page cache extension, to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitation in the wild. The vulnerability, tracked as CVE-2026-45247 (CVSS score: 9.8), is a case of deserialization of untrusted",
+    "published": "2026-06-03T16:30:00Z",
+    "fetched": "2026-06-04T22:53:06.464314209Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-45247"
+    ]
+  },
+  {
     "id": "fad755f29eeec5d782ac5ae46adf4855",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1160,112 +1226,6 @@
     ],
     "cves": [
       "CVE-2026-48172"
-    ]
-  },
-  {
-    "id": "42c7ce1559cc21ad515df1c533592a82",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV",
-    "url": "https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a recently patched critical security flaw impacting Drupal Core to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation. The vulnerability in question is CVE-2026-9082 (CVSS score: 6.5), an SQL injection vulnerability affecting all supported versions of Drupal Core. \"Drupal Core",
-    "published": "2026-05-23T07:23:48Z",
-    "fetched": "2026-05-30T22:30:51.650700769Z",
-    "tags": [
-      "sqli",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 66,
-    "cves": [
-      "CVE-2026-9082"
-    ]
-  },
-  {
-    "id": "42c7ce1559cc21ad515df1c533592a82",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Drupal Core SQL Injection Bug Actively Exploited, Added to CISA KEV",
-    "url": "https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a recently patched critical security flaw impacting Drupal Core to its Known Exploited Vulnerabilities (KEV) catalog, based on evidence of active exploitation. The vulnerability in question is CVE-2026-9082 (CVSS score: 6.5), an SQL injection vulnerability affecting all supported versions of Drupal Core. \"Drupal Core",
-    "published": "2026-05-23T07:23:48Z",
-    "fetched": "2026-05-23T22:26:24.20595341Z",
-    "tags": [
-      "sqli",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 66,
-    "cves": [
-      "CVE-2026-9082"
-    ]
-  },
-  {
-    "id": "af93eae71762b7e759c8f3d7dae8b18a",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Metasploit Wrap Up 05/22/2026",
-    "url": "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-22-2026",
-    "summary": "Another week, another authentication bypassOur humble Metasploit weekly(ish) blog has been blessed with a new network component vulnerability. The dynamic duo of @sfewer-r7 and @jburgess-r7 have discovered and authored the admin/networking/cisco_sdwan_vhub_auth_bypass module for CVE-2026-20182, a vulnerability gracing the Cisco Catalyst SD-WAN Controller. The devices, whose purpose is to control a software-defined (SD) wide-area-network (WAN) was unfortunately missing an extra A for authentication. An oversight that Cisco has duly patched.Elsewhere this week, the HUSTOJ online judge platform...",
-    "published": "2026-05-22T19:10:05Z",
-    "fetched": "2026-05-22T22:34:43.420831657Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20182"
-    ]
-  },
-  {
-    "id": "436f53320d764079a22e086325779e5c",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/22/microsoft-recognized-as-a-leader-in-the-forrester-wave-for-workforce-identity-security-platforms/",
-    "summary": "Microsoft has been recognized as a Leader in The Forrester Wave™: Workforce Identity Security Platforms, Q2 2026, receiving the highest scores in both the current offering and strategy categories. The post Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms appeared first on Microsoft Security Blog.",
-    "published": "2026-05-22T17:00:00Z",
-    "fetched": "2026-05-29T22:51:36.180574564Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "436f53320d764079a22e086325779e5c",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/22/microsoft-recognized-as-a-leader-in-the-forrester-wave-for-workforce-identity-security-platforms/",
-    "summary": "Microsoft has been recognized as a Leader in The Forrester Wave™: Workforce Identity Security Platforms, Q2 2026, receiving the highest scores in both the current offering and strategy categories. The post Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms appeared first on Microsoft Security Blog.",
-    "published": "2026-05-22T17:00:00Z",
-    "fetched": "2026-05-22T22:34:43.420831657Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "microsoft"
     ]
   }
 ]

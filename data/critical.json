@@ -1,5 +1,54 @@
 [
   {
+    "id": "e0a7f1bca9361161788489f151c08814",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Cisco warns of unpatched SD-WAN zero-day exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/new-cisco-sd-wan-flaw-exploited-in-zero-day-attacks-to-gain-root/",
+    "summary": "On Thursday, Cisco warned of a high-severity, unpatched zero-day in the Cisco Catalyst SD-WAN Manager (tracked as CVE-2026-20245) actively exploited in attacks enabling root privilege escalation. [...]",
+    "published": "2026-06-05T06:24:20Z",
+    "fetched": "2026-06-05T22:42:34.00956939Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "lpe",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20245"
+    ]
+  },
+  {
+    "id": "1585100a6a654caeeb39cedd5f3c6fdc",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-28318 — SolarWinds Serv-U: SolarWinds Serv-U Uncontrolled Resource Consumption Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28318",
+    "summary": "SolarWinds Serv-U contains an uncontrolled resource consumption vulnerability that allows specially crafted POST requests using the Content-Encoding: deflate header to crash the Serv-U service without authentication.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-19",
+    "published": "2026-06-05T00:00:00Z",
+    "fetched": "2026-06-05T22:42:34.00956939Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "solarwinds"
+    ],
+    "cves": [
+      "CVE-2026-28318"
+    ]
+  },
+  {
     "id": "a95073a62a7399522fd23a66272adf40",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -626,6 +675,33 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0257",
     "summary": "Palo Alto Networks PAN-OS contains an authentication bypass vulnerability that allows attackers to bypass security restrictions and establish an unauthorized VPN connection.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-01",
     "published": "2026-05-29T00:00:00Z",
+    "fetched": "2026-06-05T22:42:34.00956939Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "paloalto",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "palo",
+      "paloalto"
+    ],
+    "cves": [
+      "CVE-2026-0257"
+    ]
+  },
+  {
+    "id": "91ca54c048d3fe4d3d8287bd25655dd9",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-0257 — Palo Alto Networks PAN-OS: Palo Alto Networks PAN-OS Authentication Bypass Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0257",
+    "summary": "Palo Alto Networks PAN-OS contains an authentication bypass vulnerability that allows attackers to bypass security restrictions and establish an unauthorized VPN connection.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-01",
+    "published": "2026-05-29T00:00:00Z",
     "fetched": "2026-05-29T22:51:36.180574564Z",
     "tags": [
       "kev",
@@ -1179,53 +1255,5 @@
     ],
     "severity": "high",
     "score": 75
-  },
-  {
-    "id": "2f87976e755a4ad3a617fbf7f5d47cfc",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-48172 — LiteSpeed cPanel Plugin: LiteSpeed cPanel Plugin Privilege Escalation Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48172",
-    "summary": "LiteSpeed cPanel Plugin contains privilege escalation vulnerability that is exposed via the user-end cPanel plugin, which can be abused by any cPanel user account to execute arbitrary scripts with root privileges.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-29",
-    "published": "2026-05-26T00:00:00Z",
-    "fetched": "2026-06-02T23:15:46.820406232Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "lpe"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "litespeed"
-    ],
-    "cves": [
-      "CVE-2026-48172"
-    ]
-  },
-  {
-    "id": "2f87976e755a4ad3a617fbf7f5d47cfc",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-48172 — LiteSpeed cPanel Plugin: LiteSpeed cPanel Plugin Privilege Escalation Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48172",
-    "summary": "LiteSpeed cPanel Plugin contains privilege escalation vulnerability that is exposed via the user-end cPanel plugin, which can be abused by any cPanel user account to execute arbitrary scripts with root privileges.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-29",
-    "published": "2026-05-26T00:00:00Z",
-    "fetched": "2026-05-26T22:49:10.657109462Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "lpe"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "litespeed"
-    ],
-    "cves": [
-      "CVE-2026-48172"
-    ]
   }
 ]

@@ -5,7 +5,7 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Jun 2026 22:36:30 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 22:38:06 +0000</lastBuildDate>
     <item>
       <title>[HIGH] AI Agent Uncovers 21 Zero-Days in FFmpeg; Chrome Patches Record 429 Bugs</title>
       <link>https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html</link>
@@ -31,6 +31,16 @@
       <category>watch</category>
       <category>actively-exploited</category>
       <category>cisco</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-45409 — Internationalized Domain Names in Applications (IDNA) for Python provides support for Internationali…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45409</link>
+      <guid isPermaLink="false">352efcfa358c58e2dc6ecc85d14a91d7</guid>
+      <pubDate>Fri, 05 Jun 2026 23:16:43 +0000</pubDate>
+      <description>Internationalized Domain Names in Applications (IDNA) for Python provides support for Internationalized Domain Names in Applications (IDNA) and Unicode IDNA Compatibility Processing. In versions prior to 3.15, payloads such as `&#34;\u0660&#34; * N` or `&#34;\u30fb&#34; * N + &#34;\u6f22&#34;` utilize the `valid_contexto` function prior to length rejection, and for high values of `N` will take a long time to process. This is the same issue as CVE-2024-3651, however the original remediation in 2024 was not a complete fix. A specially crafted argument to the `idna.encode()` function could consume significant resources. This may lead to a denial-of-service. Starting in version 3.14, the function rejects long inputs as soon as practicable prior to any further processing to minimize resource consumption. In version 3.15, this approach was extended to lesser used alternate functions (i.e. per-label conversions and codec support). A workaround is available. Domain names cannot exceed 253 characters in length. If this length limit is enforced prior to passing the domain to the `idna.encode()` function, it should no longer consume significant resources. This is triggered by arbitrarily large inputs that would not occur in normal usage, but may be passed to the library assuming there is no preliminary input validation by the higher-level application.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
     </item>
     <item>
       <title>[HIGH] Weekly Metasploit Update: Apache ActiveMQ RCE, Gogs Rebase RCE, and Windows Kernel Pointer Enum</title>
@@ -76,6 +86,482 @@
       <category>solarwinds</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11211 — Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11211</link>
+      <guid isPermaLink="false">5d7a7f5e304fde7b782c013e73da0117</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:28 +0000</pubDate>
+      <description>Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11201 — Use after free in ServiceWorker in Google Chrome prior to 149.0.7827.53 allowed …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11201</link>
+      <guid isPermaLink="false">ca99daae13cf6aa64adb684f5d7977c9</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:27 +0000</pubDate>
+      <description>Use after free in ServiceWorker in Google Chrome prior to 149.0.7827.53 allowed an attacker who convinced a user to install a malicious extension to execute arbitrary code via a crafted Chrome Extension. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11144 — Use after free in Media in Google Chrome prior to 149.0.7827.53 allowed a remote…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11144</link>
+      <guid isPermaLink="false">3373aa9dc50de5a714381de865bae34c</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:20 +0000</pubDate>
+      <description>Use after free in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted video file. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11116 — Use after free in Chromoting in Google Chrome prior to 149.0.7827.53 allowed a r…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11116</link>
+      <guid isPermaLink="false">5e6919c0e225f572036a21f5a9a40c40</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:17 +0000</pubDate>
+      <description>Use after free in Chromoting in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via malicious network traffic. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11102 — Inappropriate implementation in Isolated Web Apps in Google Chrome prior to 149.…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11102</link>
+      <guid isPermaLink="false">61bcbef1e661bc57f898820cff34bc3a</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:15 +0000</pubDate>
+      <description>Inappropriate implementation in Isolated Web Apps in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a malicious file. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11086 — Inappropriate implementation in Dawn in Google Chrome prior to 149.0.7827.53 all…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11086</link>
+      <guid isPermaLink="false">1b07825df2cd9dd000c0a0cfbaa22312</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:13 +0000</pubDate>
+      <description>Inappropriate implementation in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11077 — Bad cast in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attack…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11077</link>
+      <guid isPermaLink="false">e7967d2e4a00108bbbd94b082166b649</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:12 +0000</pubDate>
+      <description>Bad cast in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11076 — Type Confusion in CSS in Google Chrome prior to 149.0.7827.53 allowed a remote a…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11076</link>
+      <guid isPermaLink="false">441948b9cd0da2058f39d159d82c10f0</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:12 +0000</pubDate>
+      <description>Type Confusion in CSS in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11074 — Use after free in WebRTC in Google Chrome on Linux prior to 149.0.7827.53 allowe…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11074</link>
+      <guid isPermaLink="false">a0888f1b75832b291d480ba655751f4f</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:12 +0000</pubDate>
+      <description>Use after free in WebRTC in Google Chrome on Linux prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>linux</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-11072 — Use after free in WebView in Google Chrome on Android prior to 149.0.7827.53 all…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11072</link>
+      <guid isPermaLink="false">001bde937a8f1d0a3f9fe187ae08e1c7</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:11 +0000</pubDate>
+      <description>Use after free in WebView in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to execute arbitrary code via a malicious file. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11068 — Use after free in WebSockets in Google Chrome prior to 149.0.7827.53 allowed a r…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11068</link>
+      <guid isPermaLink="false">d190427f88db1a9999a35d9835ea461a</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:11 +0000</pubDate>
+      <description>Use after free in WebSockets in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11060 — Use after free in Media in Google Chrome on Windows prior to 149.0.7827.53 allow…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11060</link>
+      <guid isPermaLink="false">585c4ed8de9cfa53b6a5b304613e1275</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:10 +0000</pubDate>
+      <description>Use after free in Media in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11059 — Use after free in Blink in Google Chrome prior to 149.0.7827.53 allowed a remote…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11059</link>
+      <guid isPermaLink="false">a9060d28efb21842f3551c7dffa22fbf</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:10 +0000</pubDate>
+      <description>Use after free in Blink in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11055 — Use after free in ANGLE in Google Chrome on Windows prior to 149.0.7827.53 allow…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11055</link>
+      <guid isPermaLink="false">711e2a377ac6a196e89548f87e9d25a9</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:09 +0000</pubDate>
+      <description>Use after free in ANGLE in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11054 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11054</link>
+      <guid isPermaLink="false">6d1714e9a140e00377db446aec228023</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:09 +0000</pubDate>
+      <description>Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11050 — Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote at…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11050</link>
+      <guid isPermaLink="false">2076afba788cfba153abd39a34ddff6c</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:09 +0000</pubDate>
+      <description>Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11049 — Use after free in Password Manager in Google Chrome prior to 149.0.7827.53 allow…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11049</link>
+      <guid isPermaLink="false">86a10acb34aad03390b1c788c540bc75</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:09 +0000</pubDate>
+      <description>Use after free in Password Manager in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11046 — Insufficient validation of untrusted input in Media in Google Chrome prior to 14…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11046</link>
+      <guid isPermaLink="false">862e8c5d7fde8785a5f0fccebfc0ced3</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:09 +0000</pubDate>
+      <description>Insufficient validation of untrusted input in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11028 — Use after free in Media in Google Chrome on Linux and ChromeOS prior to 149.0.78…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11028</link>
+      <guid isPermaLink="false">27621d3374405ef22df01ed0389340cd</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:06 +0000</pubDate>
+      <description>Use after free in Media in Google Chrome on Linux and ChromeOS prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>linux</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11003 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11003</link>
+      <guid isPermaLink="false">9d061aa4d184930a4ee5b2af80210252</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:04 +0000</pubDate>
+      <description>Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-10991 — Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote at…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10991</link>
+      <guid isPermaLink="false">57a3645324e526f5e27c2ca18e06e78e</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:02 +0000</pubDate>
+      <description>Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-10987 — Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10987</link>
+      <guid isPermaLink="false">3efb8c0dc0e6bd63b8306dc001dd70fc</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:02 +0000</pubDate>
+      <description>Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-10986 — Integer overflow in Media in Google Chrome prior to 149.0.7827.53 allowed a remo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10986</link>
+      <guid isPermaLink="false">8ea3c5f141036766e308fc714813bea0</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:01 +0000</pubDate>
+      <description>Integer overflow in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a malicious file. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-10982 — Use after free in WebXR in Google Chrome prior to 149.0.7827.53 allowed a remote…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10982</link>
+      <guid isPermaLink="false">ff514cf14a97c116148220d85456fdd6</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:01 +0000</pubDate>
+      <description>Use after free in WebXR in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-10978 — Use after free in Chromoting in Google Chrome on Windows prior to 149.0.7827.53 …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10978</link>
+      <guid isPermaLink="false">08e29e405b36ae82b03268b775af56c2</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:01 +0000</pubDate>
+      <description>Use after free in Chromoting in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via malicious network traffic. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-10975 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10975</link>
+      <guid isPermaLink="false">3eda4d0fa375d5410ecd6fe547dae2c0</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:00 +0000</pubDate>
+      <description>Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-10959 — Use after free in Input in Google Chrome on Android prior to 149.0.7827.53 allow…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10959</link>
+      <guid isPermaLink="false">250cd7cda66e0a5c32d45c19d72b58fe</guid>
+      <pubDate>Thu, 04 Jun 2026 23:16:58 +0000</pubDate>
+      <description>Use after free in Input in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-10958 — Use after free in Chrome for iOS in Google Chrome on iOS prior to 149.0.7827.53 …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10958</link>
+      <guid isPermaLink="false">3c596fdd8ac2de2673c3190c01613d67</guid>
+      <pubDate>Thu, 04 Jun 2026 23:16:58 +0000</pubDate>
+      <description>Use after free in Chrome for iOS in Google Chrome on iOS prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-10939 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10939</link>
+      <guid isPermaLink="false">f087697f9d1cd0f634a7b63d53d8b440</guid>
+      <pubDate>Thu, 04 Jun 2026 23:16:56 +0000</pubDate>
+      <description>Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-10923 — Use after free in WebAppInstalls in Google Chrome on Android prior to 149.0.7827…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10923</link>
+      <guid isPermaLink="false">87913a3bab26e904524967391c058cee</guid>
+      <pubDate>Thu, 04 Jun 2026 23:16:54 +0000</pubDate>
+      <description>Use after free in WebAppInstalls in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to execute arbitrary code via a malicious file. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
       <title>[HIGH] Hola Browser for Windows compromised to deliver cryptominer</title>
       <link>https://www.bleepingcomputer.com/news/security/hola-browser-for-windows-compromised-to-deliver-cryptominer/</link>
       <guid isPermaLink="false">a95073a62a7399522fd23a66272adf40</guid>
@@ -87,6 +573,16 @@
       <category>watch</category>
       <category>supply-chain</category>
       <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-36499 — A missing upper-bound check in the udpif_set_threads() function of Open vSwitch …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-36499</link>
+      <guid isPermaLink="false">f1ccc13c0512224c96aa9209e552ffcb</guid>
+      <pubDate>Thu, 04 Jun 2026 19:16:28 +0000</pubDate>
+      <description>A missing upper-bound check in the udpif_set_threads() function of Open vSwitch v3.6.90 allows an attacker with OVSDB write access to request an excessive number of handler or revalidation threads. This can cause a denial of service (DoS) via resource exhaustion.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
     </item>
     <item>
       <title>[HIGH] ZDI-26-331: (Pwn2Own) Microsoft Edge Feedback Log File Handling Directory Traversal Remote Code Execution Vulnerability</title>
@@ -588,182 +1084,6 @@
       <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>high</category>
       <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.1 HIGH] CVE-2026-46099 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;net: ipv6: …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46099</link>
-      <guid isPermaLink="false">6c9e58e7bdac94051429823ee6beb26a</guid>
-      <pubDate>Wed, 27 May 2026 14:17:31 +0000</pubDate>
-      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;net: ipv6: fix NOREF dst use in seg6 and rpl lwtunnels&#xA;&#xA;seg6_input_core() and rpl_input() call ip6_route_input() which sets a&#xA;NOREF dst on the skb, then pass it to dst_cache_set_ip6() invoking&#xA;dst_hold() unconditionally.&#xA;On PREEMPT_RT, ksoftirqd is preemptible and a higher-priority task can&#xA;release the underlying pcpu_rt between the lookup and the caching&#xA;through a concurrent FIB lookup on a shared nexthop.&#xA;Simplified race sequence:&#xA;&#xA;  ksoftirqd/X                       higher-prio task (same CPU X)&#xA;  -----------                       --------------------------------&#xA;  seg6_input_core(,skb)/rpl_input(skb)&#xA;    dst_cache_get()&#xA;      -&gt; miss&#xA;    ip6_route_input(skb)&#xA;      -&gt; ip6_pol_route(,skb,flags)&#xA;         [RT6_LOOKUP_F_DST_NOREF in flags]&#xA;        -&gt; FIB lookup resolves fib6_nh&#xA;           [nhid=N route]&#xA;        -&gt; rt6_make_pcpu_route()&#xA;           [creates pcpu_rt, refcount=1]&#xA;             pcpu_rt-&gt;sernum = fib6_sernum&#xA;             [fib6_sernum=W]&#xA;           -&gt; cmpxchg(fib6_nh.rt6i_pcpu,&#xA;                      NULL, pcpu_rt)&#xA;              [slot was empty, store succeeds]&#xA;      -&gt; skb_dst_set_noref(skb, dst)&#xA;         [dst is pcpu_rt, refcount still 1]&#xA;&#xA;                                    rt_genid_bump_ipv6()&#xA;                                      -&gt; bumps fib6_sernum&#xA;                                         [fib6_sernum from W to Z]&#xA;                                    ip6_route_output()&#xA;                                      -&gt; ip6_pol_route()&#xA;                                        -&gt; FIB lookup resolves fib6_nh&#xA;                                           [nhid=N]&#xA;                                        -&gt; rt6_get_pcpu_route()&#xA;                                             pcpu_rt-&gt;sernum != fib6_sernum&#xA;                                             [W &lt;&gt; Z, stale]&#xA;                                          -&gt; prev = xchg(rt6i_pcpu, NULL)&#xA;                                          -&gt; dst_release(prev)&#xA;                                             [prev is pcpu_rt,&#xA;                                              refcount 1-&gt;0, dead]&#xA;&#xA;    dst = skb_dst(skb)&#xA;    [dst is the dead pcpu_rt]&#xA;    dst_cache_set_ip6(dst)&#xA;      -&gt; dst_hold() on dead dst&#xA;      -&gt; WARN / use-after-free&#xA;&#xA;For the race to occur, ksoftirqd must be preemptible (PREEMPT_RT without&#xA;PREEMPT_RT_NEEDS_BH_LOCK) and a concurrent task must be able to release&#xA;the pcpu_rt. Shared nexthop objects provide such a path, as two routes&#xA;pointing to the same nhid share the same fib6_nh and its rt6i_pcpu&#xA;entry.&#xA;&#xA;Fix seg6_input_core() and rpl_input() by calling skb_dst_force() after&#xA;ip6_route_input() to force the NOREF dst into a refcounted one before&#xA;caching.&#xA;The output path is not affected as ip6_route_output() already returns a&#xA;refcounted dst.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.1 HIGH] CVE-2026-46054 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;selinux: fi…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46054</link>
-      <guid isPermaLink="false">66a716bd2e99587fecbc70f6da13db80</guid>
-      <pubDate>Wed, 27 May 2026 14:17:25 +0000</pubDate>
-      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;selinux: fix overlayfs mmap() and mprotect() access checks&#xA;&#xA;The existing SELinux security model for overlayfs is to allow access if&#xA;the current task is able to access the top level file (the &#34;user&#34; file)&#xA;and the mounter&#39;s credentials are sufficient to access the lower&#xA;level file (the &#34;backing&#34; file).  Unfortunately, the current code does&#xA;not properly enforce these access controls for both mmap() and mprotect()&#xA;operations on overlayfs filesystems.&#xA;&#xA;This patch makes use of the newly created security_mmap_backing_file()&#xA;LSM hook to provide the missing backing file enforcement for mmap()&#xA;operations, and leverages the backing file API and new LSM blob to&#xA;provide the necessary information to properly enforce the mprotect()&#xA;access controls.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-36044 — @pensar/apex &lt;= 0.0.58 is vulnerable to OS command injection via the smart_enume…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-36044</link>
-      <guid isPermaLink="false">dfc78a0b563edcaa6f9de6019f1a5e87</guid>
-      <pubDate>Wed, 27 May 2026 14:16:45 +0000</pubDate>
-      <description>@pensar/apex &lt;= 0.0.58 is vulnerable to OS command injection via the smart_enumerate tool. The createSmartEnumerateTool() function in src/core/agent/tools.ts constructs a shell command by concatenating unsanitized values from the extensions array and url parameter into a string passed to Node.js child_process.exec(). Because exec() spawns a shell, shell metacharacters in those values are interpreted by the host shell, resulting in arbitrary OS command execution with the privileges of the running process.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CISA gives feds 4 days to patch actively exploited cPanel plugin flaw</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-gives-feds-4-days-to-patch-actively-exploited-cpanel-plugin-flaw/</link>
-      <guid isPermaLink="false">867b8abb9f05fae180af480d8494ed41</guid>
-      <pubDate>Wed, 27 May 2026 10:06:17 +0000</pubDate>
-      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has given U.S. federal agencies four days to secure their servers against a critical vulnerability in the LiteSpeed cPanel user-end plugin, which is actively being exploited in attacks. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2023-52945 — Uncontrolled search path element vulnerability in OpenSSL DLL component in Synol…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2023-52945</link>
-      <guid isPermaLink="false">62879e857797cf19451288a22ed11287</guid>
-      <pubDate>Wed, 27 May 2026 09:16:24 +0000</pubDate>
-      <description>Uncontrolled search path element vulnerability in OpenSSL DLL component in Synology BeeDrive for desktop before 1.3.2-13814 allows local users to execute arbitrary code via unspecified vectors.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>openssl</category>
-      <category>watch</category>
-      <category>synology</category>
-      <category>openssl</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.4 HIGH] CVE-2026-49014 — In GDAL 3.1.0 through 3.13.0, scanForGeometryContainers in the netCDF driver all…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49014</link>
-      <guid isPermaLink="false">0603daf1480af3e5c5ea86c6f120b07b</guid>
-      <pubDate>Wed, 27 May 2026 02:16:34 +0000</pubDate>
-      <description>In GDAL 3.1.0 through 3.13.0, scanForGeometryContainers in the netCDF driver allows code execution via a stack-based buffer overflow. It reads a geometry attribute into a fixed-size stack buffer without validating the attribute length. The attacker embeds the exploit as an oversized geometry attribute in a crafted NetCDF file. This achieves arbitrary code execution on the server running GDAL. This is in frmts/netcdf/netcdfsg.cpp.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-48027 — Nx Nx Console: Nx Console Embedded Malicious Code Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48027</link>
-      <guid isPermaLink="false">ae25e47687850961c7c5c78676a40f3c</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <description>Nx Console contains an embedded malicious code vulnerability that allowed a malicious version of Nx Console to be published. The compromised extension fetched an obfuscated payload that could harvested credentials from multiple sources on disk and in memory.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-06-10</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>ransomware</category>
-      <category>nx</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-45321 — TanStack TanStack: TanStack Unspecified Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45321</link>
-      <guid isPermaLink="false">8f949879a279a6e47abad0967e45848b</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <description>TanStack contains an unspecified vulnerability that allowed malicious versions of the product to be published to the npm registry to publish credential-stealing malware under a trusted identity.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-06-10</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>ransomware</category>
-      <category>malware</category>
-      <category>tanstack</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-8398 — Daemon Daemon Tools Lite: Daemon Tools Lite Embedded Malicious Code Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8398</link>
-      <guid isPermaLink="false">68fc84d229ffd2d76951f8c1996d32d8</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <description>Daemon Tools contains an unspecified vulnerability that has a high impact on confidentiality, integrity, and availability.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-30</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>daemon</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-48027 — Nx Nx Console: Nx Console Embedded Malicious Code Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48027</link>
-      <guid isPermaLink="false">ae25e47687850961c7c5c78676a40f3c</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <description>Nx Console contains an embedded malicious code vulnerability that allowed a malicious version of Nx Console to be published. The compromised extension fetched an obfuscated payload that could harvested credentials from multiple sources on disk and in memory.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-06-10</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>nx</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-45321 — TanStack TanStack: TanStack Unspecified Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45321</link>
-      <guid isPermaLink="false">8f949879a279a6e47abad0967e45848b</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <description>TanStack contains an unspecified vulnerability that allowed malicious versions of the product to be published to the npm registry to publish credential-stealing malware under a trusted identity.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-06-10</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>malware</category>
-      <category>tanstack</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-8398 — Daemon Daemon Tools Lite: Daemon Tools Lite Embedded Malicious Code Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8398</link>
-      <guid isPermaLink="false">68fc84d229ffd2d76951f8c1996d32d8</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <description>Daemon Tools contains an unspecified vulnerability that has a high impact on confidentiality, integrity, and availability.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-05-30</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>daemon</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-44903 — Prometheus is an open-source monitoring system and time series database. From 2.49.0 to before 3.5.3…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44903</link>
-      <guid isPermaLink="false">655f493849ca3e7a8a023ef6cf356f6d</guid>
-      <pubDate>Tue, 26 May 2026 22:16:43 +0000</pubDate>
-      <description>Prometheus is an open-source monitoring system and time series database. From 2.49.0 to before 3.5.3 and 3.11.3, in the Prometheus server&#39;s legacy web UI (enabled via the command-line flag --enable-feature=old-ui), the histogram heatmap chart view does not escape le label values when inserting them into the HTML for use as axis tick mark labels. An attacker who can inject crafted metrics can execute JavaScript in the browser of any Prometheus user who views the metric in the heatmap chart UI. This vulnerability is fixed in 3.5.3 and 3.11.3.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-44209 — Banks generates meaningful LLM prompts using a template language that makes sens…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44209</link>
-      <guid isPermaLink="false">adb9cbaf5e851493471937251a23e8c5</guid>
-      <pubDate>Tue, 26 May 2026 21:16:37 +0000</pubDate>
-      <description>Banks generates meaningful LLM prompts using a template language that makes sense. Prior to 2.4.2, banks uses jinja2.Environment() (unsandboxed) to render prompt templates. Applications that pass user-supplied strings as the template argument to Prompt() are vulnerable to Server-Side Template Injection (SSTI), which can lead to Remote Code Execution (RCE) on the host system. This vulnerability is fixed in 2.4.2.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] KnowledgeDeliver flaw exploited as a zero-day to install web shells</title>
-      <link>https://www.bleepingcomputer.com/news/security/knowledgedeliver-flaw-exploited-as-a-zero-day-to-install-web-shells/</link>
-      <guid isPermaLink="false">04b852ce5b2bffd0d89a676f0adcb99b</guid>
-      <pubDate>Tue, 26 May 2026 20:07:31 +0000</pubDate>
-      <description>Hackers exploited a critical zero-day vulnerability in a server running the KnowledgeDeliver learning management system (LMS) to deploy the Godzilla web shell. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>0day</category>
     </item>
   </channel>
 </rss>

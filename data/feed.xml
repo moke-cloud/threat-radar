@@ -5,7 +5,26 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Auto-curated cybersecurity intel from CISA KEV / NVD / JPCERT and major news sources. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Jun 2026 22:36:30 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 22:38:06 +0000</lastBuildDate>
+    <item>
+      <title>[LOW] C0XMO botnet spreads via DD-WRT router flaw, kills rival malware</title>
+      <link>https://www.bleepingcomputer.com/news/security/c0xmo-botnet-spreads-via-dd-wrt-router-flaw-kills-rival-malware/</link>
+      <guid isPermaLink="false">cb59f7f85c122ed1a69697c32ff1476f</guid>
+      <pubDate>Sun, 07 Jun 2026 14:17:46 +0000</pubDate>
+      <description>A new variant of the Gafgyt botnet called C0XMO is targeting DD-WRT router firmware and can move to other device types with various CPU architectures. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>low</category>
+      <category>malware</category>
+    </item>
+    <item>
+      <title>[LOW] Silent Ransom Group targets law firms with fake IT support calls</title>
+      <link>https://www.bleepingcomputer.com/news/security/silent-ransom-group-targets-law-firms-with-fake-it-support-calls/</link>
+      <guid isPermaLink="false">231e0fda670885e43c4772a79ca699c4</guid>
+      <pubDate>Sun, 07 Jun 2026 14:09:19 +0000</pubDate>
+      <description>The Silent Ransom Group extortion gang is actively targeting U.S. law firms and professional services organizations in social engineering attacks that often lead to data theft within hours of initial contact, according to a new report by cybersecurity firm Mandiant. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>low</category>
+    </item>
     <item>
       <title>[MED] Critical Everest Forms Pro flaw exploited to take over WordPress sites</title>
       <link>https://www.bleepingcomputer.com/news/security/critical-everest-forms-pro-flaw-exploited-to-take-over-wordpress-sites/</link>
@@ -89,6 +108,16 @@
       <category>cisco</category>
     </item>
     <item>
+      <title>[HIGH] CVE-2026-45409 — Internationalized Domain Names in Applications (IDNA) for Python provides support for Internationali…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45409</link>
+      <guid isPermaLink="false">352efcfa358c58e2dc6ecc85d14a91d7</guid>
+      <pubDate>Fri, 05 Jun 2026 23:16:43 +0000</pubDate>
+      <description>Internationalized Domain Names in Applications (IDNA) for Python provides support for Internationalized Domain Names in Applications (IDNA) and Unicode IDNA Compatibility Processing. In versions prior to 3.15, payloads such as `&#34;\u0660&#34; * N` or `&#34;\u30fb&#34; * N + &#34;\u6f22&#34;` utilize the `valid_contexto` function prior to length rejection, and for high values of `N` will take a long time to process. This is the same issue as CVE-2024-3651, however the original remediation in 2024 was not a complete fix. A specially crafted argument to the `idna.encode()` function could consume significant resources. This may lead to a denial-of-service. Starting in version 3.14, the function rejects long inputs as soon as practicable prior to any further processing to minimize resource consumption. In version 3.15, this approach was extended to lesser used alternate functions (i.e. per-label conversions and codec support). A workaround is available. Domain names cannot exceed 253 characters in length. If this length limit is enforced prior to passing the domain to the `idna.encode()` function, it should no longer consume significant resources. This is triggered by arbitrarily large inputs that would not occur in normal usage, but may be passed to the library assuming there is no preliminary input validation by the higher-level application.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[LOW] Suspicious Polyfill login prompts pop up on Toshiba, Muji websites</title>
       <link>https://www.bleepingcomputer.com/news/security/suspicious-polyfill-login-prompts-pop-up-on-toshiba-muji-websites/</link>
       <guid isPermaLink="false">f3bb5b1ff9951cd5572c3e0ddce75483</guid>
@@ -169,6 +198,15 @@
       <category>microsoft</category>
     </item>
     <item>
+      <title>[MED] CVE-2026-10879 — DBI versions before 1.648 for Perl have a heap overflow when preparsing SQL statements with more tha…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10879</link>
+      <guid isPermaLink="false">4f557a5ee7446117df2844c655bfe854</guid>
+      <pubDate>Fri, 05 Jun 2026 15:16:46 +0000</pubDate>
+      <description>DBI versions before 1.648 for Perl have a heap overflow when preparsing SQL statements with more than 9 binders.&#xA;&#xA;The preparse method expands SQL placeholder characters to numbered binders of the form :pN, but only allocates three characters per binder in the buffer.  Placeholders 10-99 require four characters, 100-999 require five characters, et cetera.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
       <title>[LOW] Android Spyware Asin Targets Arabic Users via Fake News, PDF and War Map Apps</title>
       <link>https://thehackernews.com/2026/06/android-spyware-asin-targets-arabic.html</link>
       <guid isPermaLink="false">98a7bec9178770941e521e3c91fbe68c</guid>
@@ -234,6 +272,86 @@
       <description>Eighteen months ago, the AI SOC was a marketing line. Today it&#39;s a budget item. The category has crossed over from interesting to inevitable, with billions of dollars now flowing into AI-powered security operations platforms, agentic SOC tools, and AI co-pilots built into every layer of the security stack. The data shows SOCs are buying, deploying, and standing up AI capabilities at the fastest</description>
       <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
       <category>low</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.8 HIGH] CVE-2026-21031 — Improper authorization in AppBlock prior to SMR Jun-2026 Release 1 allows local …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21031</link>
+      <guid isPermaLink="false">0adf5702fbfe34654b99eb25ae65ebd7</guid>
+      <pubDate>Fri, 05 Jun 2026 11:16:35 +0000</pubDate>
+      <description>Improper authorization in AppBlock prior to SMR Jun-2026 Release 1 allows local attacker to launch arbitrary activity. User interaction is required for triggering this vulnerability.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>samsung</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.8 HIGH] CVE-2026-21030 — Improper access control in MediaTek Audio HAL prior to SMR Jun-2026 Release 1 al…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21030</link>
+      <guid isPermaLink="false">ed4543e5a37a755d9cf8c9f71518871e</guid>
+      <pubDate>Fri, 05 Jun 2026 11:16:35 +0000</pubDate>
+      <description>Improper access control in MediaTek Audio HAL prior to SMR Jun-2026 Release 1 allows local attackers to trigger privileged functions.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>samsung</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.8 HIGH] CVE-2026-21029 — Improper export of android application components in Galaxy Editing Service prio…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21029</link>
+      <guid isPermaLink="false">622c360f19d55edf725fb64edea12959</guid>
+      <pubDate>Fri, 05 Jun 2026 11:16:35 +0000</pubDate>
+      <description>Improper export of android application components in Galaxy Editing Service prior to SMR Jun-2026 Release 1 allows local attacker to execute privileged operations.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>samsung</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.5 MEDIUM] CVE-2026-21028 — Improper access control in AuditLogService prior to SMR Jun-2026 Release 1 allow…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21028</link>
+      <guid isPermaLink="false">c33f15059ec71fd6566fa1dd7eb710ec</guid>
+      <pubDate>Fri, 05 Jun 2026 11:16:35 +0000</pubDate>
+      <description>Improper access control in AuditLogService prior to SMR Jun-2026 Release 1 allows local attackers to access sensitive information.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>samsung</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 3.3 LOW] CVE-2026-21027 — Improper export of android application components in ImsSettings prior to SMR Ju…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21027</link>
+      <guid isPermaLink="false">cf9cdf53a7cd4b62be3eb863aecf7ec0</guid>
+      <pubDate>Fri, 05 Jun 2026 11:16:35 +0000</pubDate>
+      <description>Improper export of android application components in ImsSettings prior to SMR Jun-2026 Release 1 allows local attackers to trigger logging function.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>samsung</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.5 MEDIUM] CVE-2026-21026 — Improper export of android application components in SpriteWallpaper prior to SM…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21026</link>
+      <guid isPermaLink="false">a461285d1710ce2cf46daf109fe442da</guid>
+      <pubDate>Fri, 05 Jun 2026 11:16:35 +0000</pubDate>
+      <description>Improper export of android application components in SpriteWallpaper prior to SMR Jun-2026 Release 1 allows local attackers to access to sensitive information.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>samsung</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.5 MEDIUM] CVE-2026-21025 — Incorrect privilege assignment in Telephony prior to SMR Jun-2026 Release 1 allo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21025</link>
+      <guid isPermaLink="false">636e7ae24b853559d2a509d0f6000040</guid>
+      <pubDate>Fri, 05 Jun 2026 11:16:34 +0000</pubDate>
+      <description>Incorrect privilege assignment in Telephony prior to SMR Jun-2026 Release 1 allows local attackers to access sensitive information.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>samsung</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 5.5 MEDIUM] CVE-2026-21017 — Improper handling of insufficient privileges in SecTelephonyProvider prior to SM…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21017</link>
+      <guid isPermaLink="false">5fc8f54db48fe9552f8c3d8e52137a9c</guid>
+      <pubDate>Fri, 05 Jun 2026 11:16:34 +0000</pubDate>
+      <description>Improper handling of insufficient privileges in SecTelephonyProvider prior to SMR Jun-2026 Release 1 allows local attackers to access privileged files.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>samsung</category>
     </item>
     <item>
       <title>[MED] Hackers Exploit Critical Everest Forms Pro WordPress Plugin Flaw to Take Over Sites</title>
@@ -312,6 +430,15 @@
       <category>medium</category>
     </item>
     <item>
+      <title>[MED] [CVSS 5.3 MEDIUM] CVE-2026-50589 — In OpenStack Ironic 32 before 37.0.0, an unauthenticated malicious user could su…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-50589</link>
+      <guid isPermaLink="false">ba19886a459b065adfdd85cfaf1b0a52</guid>
+      <pubDate>Fri, 05 Jun 2026 00:17:09 +0000</pubDate>
+      <description>In OpenStack Ironic 32 before 37.0.0, an unauthenticated malicious user could submit a crafted JSON string to some endpoints on the API or JSON-RPC service and effect a service crash.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+    </item>
+    <item>
       <title>[CRIT] [KEV] CVE-2026-28318 — SolarWinds Serv-U: SolarWinds Serv-U Uncontrolled Resource Consumption Vulnerability</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-28318</link>
       <guid isPermaLink="false">1585100a6a654caeeb39cedd5f3c6fdc</guid>
@@ -334,748 +461,778 @@
       <category>low</category>
     </item>
     <item>
-      <title>[LOW] Brave Software releases Origin for a paid, bloat-free browsing experience</title>
-      <link>https://www.bleepingcomputer.com/news/software/brave-software-releases-origin-for-a-paid-bloat-free-browsing-experience/</link>
-      <guid isPermaLink="false">c5e68f8a74c5185480c7d87710a42d03</guid>
-      <pubDate>Thu, 04 Jun 2026 21:37:10 +0000</pubDate>
-      <description>Brave has announced the public release of Brave Origin, a paid minimalist version of its browser that strips out cryptocurrency, AI, rewards, and other monetization-focused features. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[HIGH] Hola Browser for Windows compromised to deliver cryptominer</title>
-      <link>https://www.bleepingcomputer.com/news/security/hola-browser-for-windows-compromised-to-deliver-cryptominer/</link>
-      <guid isPermaLink="false">a95073a62a7399522fd23a66272adf40</guid>
-      <pubDate>Thu, 04 Jun 2026 21:27:25 +0000</pubDate>
-      <description>The Windows version of the Hola Browser has been compromised in a supply chain attack that delivered an undeclared executable identified by researchers as a cryptocurrency miner. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>supply-chain</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] Credit card theft campaign abuses Stripe to host stolen payment info</title>
-      <link>https://www.bleepingcomputer.com/news/security/credit-card-theft-campaign-abuses-stripe-to-host-stolen-payment-info/</link>
-      <guid isPermaLink="false">c09704711a69746f7ab34754ff0beeb0</guid>
-      <pubDate>Thu, 04 Jun 2026 20:47:16 +0000</pubDate>
-      <description>A new Magecart campaign is using Stripe&#39;s API infrastructure to host the credit card-stealing payload and the data exfiltrated from checkout pages. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Updating the taxonomy of failure modes in agentic AI systems: What a year of red teaming taught us</title>
-      <link>https://www.microsoft.com/en-us/security/blog/2026/06/04/updating-taxonomy-failure-modes-agentic-ai-systems-year-red-teaming-taught-us/</link>
-      <guid isPermaLink="false">93b89e2f92905a78f5e7beed29b4e942</guid>
-      <pubDate>Thu, 04 Jun 2026 19:14:42 +0000</pubDate>
-      <description>A surge in real-world attacks against agentic AI systems is reshaping how we think about risk. Based on 12 months of red teaming, this update introduces seven new failure modes, from supply chain compromise to goal hijacking, and the practical mitigations teams need now. The post Updating the taxonomy of failure modes in agentic AI systems: What a year of red teaming taught us  appeared first on Microsoft Security Blog.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
+      <title>[MED] [CVSS 6.1 MEDIUM] CVE-2026-11229 — Inappropriate implementation in Enterprise in Google Chrome prior to 149.0.7827.…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11229</link>
+      <guid isPermaLink="false">7dbf52051dd0dffb636b6cf14dc95366</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:30 +0000</pubDate>
+      <description>Inappropriate implementation in Enterprise in Google Chrome prior to 149.0.7827.53 allowed a local attacker to perform privilege escalation via physical access to the device. (Chromium security severity: Low)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] DentaQuest data breach exposed info of 2.6 million accounts</title>
-      <link>https://www.bleepingcomputer.com/news/security/dentaquest-data-breach-exposed-info-of-26-million-accounts/</link>
-      <guid isPermaLink="false">f5582cd1062a9c5ebddd805efc69aa59</guid>
-      <pubDate>Thu, 04 Jun 2026 18:36:27 +0000</pubDate>
-      <description>A data breach at the dental benefits administrator DentaQuest has reportedly exposed the sensitive data of 2.6 million accounts.  [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>breach</category>
-    </item>
-    <item>
-      <title>[LOW] Cisco Patches CVE-2026-20230 in Unified CM as Exploit Code Goes Public</title>
-      <link>https://thehackernews.com/2026/06/cisco-patches-cve-2026-20230-in-unified.html</link>
-      <guid isPermaLink="false">88f6d5fbc8953aff61d4b5fa271b6b97</guid>
-      <pubDate>Thu, 04 Jun 2026 16:55:51 +0000</pubDate>
-      <description>Cisco has patched a bug in Unified Communications Manager that lets an unauthenticated attacker on the network write files to the box and, from there, climb to root. It is tracked as CVE-2026-20230, and proof-of-concept exploit code is already public. Cisco&#39;s PSIRT says it has not seen the flaw used in attacks yet. The PoC shortens that runway. The flaw is a server-side request forgery.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[LOW] UN food agency discloses breach affecting 600,000 Gaza households</title>
-      <link>https://www.bleepingcomputer.com/news/security/un-world-food-programme-breach-affects-600-000-gaza-households/</link>
-      <guid isPermaLink="false">caa6bfd7efc6f728fc2a45fd03e75a9e</guid>
-      <pubDate>Thu, 04 Jun 2026 16:38:49 +0000</pubDate>
-      <description>The United Nations&#39; World Food Programme (WFP), the world&#39;s largest humanitarian organization, revealed over the weekend that its self-registration application (SRA) for Palestine was breached. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] New IronWorm malware hits 36 packages in npm supply-chain attack</title>
-      <link>https://www.bleepingcomputer.com/news/security/new-ironworm-malware-hits-36-packages-in-npm-supply-chain-attack/</link>
-      <guid isPermaLink="false">54639ca2ef819d60471eff255d32512b</guid>
-      <pubDate>Thu, 04 Jun 2026 15:25:37 +0000</pubDate>
-      <description>A new supply-chain attack has infected 36 packages on the Node Package Manager (npm) index with infostealer malware called IronWorm. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[LOW] Claude Code GitHub Action Flaw Let One Malicious Issue Hijack Repositories</title>
-      <link>https://thehackernews.com/2026/06/claude-code-github-action-flaw-let-one.html</link>
-      <guid isPermaLink="false">c488b9570bada431ba53072bdeebafaa</guid>
-      <pubDate>Thu, 04 Jun 2026 15:15:26 +0000</pubDate>
-      <description>A security researcher found a flaw in Anthropic&#39;s Claude Code GitHub Action that let an attacker take over vulnerable public repositories running it, with nothing more than a single opened GitHub issue. Because Anthropic&#39;s own action repo used the same workflow, a working attack could have pushed malicious code into the action itself and onto the projects downstream that pull it. RyotaK of GMO</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>github</category>
-      <category>github</category>
-    </item>
-    <item>
-      <title>[LOW] Agentic AI Is Transforming Defense, But Only Secure IT Infrastructure Will Maximize It</title>
-      <link>https://thehackernews.com/2026/06/agentic-ai-is-transforming-defense-but.html</link>
-      <guid isPermaLink="false">9957c75df16b430203ed63883aecad6f</guid>
-      <pubDate>Thu, 04 Jun 2026 15:10:00 +0000</pubDate>
-      <description>Over the past several weeks, the cybersecurity community has been reminded how quickly frontier and agentic AI in defense networks can challenge our assumptions. When Anthropic&#39;s Claude Mythos model was made available to a limited set of organizations as a technical preview, it was reported that an unauthorized group claimed that it had gained access within hours. The incident, if true, was</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] Hackers Are After the Gaps in Your Vulnerability Program: Here&#39;s Their Playbook</title>
-      <link>https://www.bleepingcomputer.com/news/security/hackers-are-after-the-gaps-in-your-vulnerability-program-heres-their-playbook/</link>
-      <guid isPermaLink="false">f31e6d2ae179a579c14f9a0e81fc0a45</guid>
-      <pubDate>Thu, 04 Jun 2026 14:01:11 +0000</pubDate>
-      <description>Threat actors are actively teaching newcomers how to find, exploit, and profit from vulnerable systems. Flare explores what a popular underground hacking tutorial reveals about modern attacker workflows. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] ThreatsDay Bulletin: AI Agents Gone Wrong, Sketchy C2 Tools, ClickFix Tricks, JS Backdoors &amp; 20+ New Stories</title>
-      <link>https://thehackernews.com/2026/06/threatsday-bulletin-ai-agents-gone.html</link>
-      <guid isPermaLink="false">fa39cbd80d25547c4d024c9408e5c491</guid>
-      <pubDate>Thu, 04 Jun 2026 14:00:49 +0000</pubDate>
-      <description>It got stupid again. The internet still feels held together with tape. Bad plugins, old bugs, fake tools, trusted apps doing shady things. Same mess, new wrapper. And now the weird stuff is normal. Forums go down and come back worse. Cheap hackers get better toys. AI starts breaking real systems. Great. Read the whole thing before it ruins your week anyway. Unauthenticated</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] How the “Swiss Cheese” model can help you choose the right MDR provider</title>
-      <link>https://www.rapid7.com/blog/post/dr-swiss-cheese-model-helps-choose-mdr-providers</link>
-      <guid isPermaLink="false">e9a744805135994364e6b2ec46cbbe85</guid>
-      <pubDate>Thu, 04 Jun 2026 13:53:41 +0000</pubDate>
-      <description>Not all managed detection and response (MDR) solutions are equal. Finding the differences between vendors can be quite hard, and then understanding how those differences impact your business can be even harder. For instance, you may come across an MDR provider whose pricing is based on how much data you ingest rather than the number of assets you protect.Ingestion-based solutions have the potential to be more cost effective if you&#39;re selective about what security telemetry you ingest – but then who analyzes the impact of the logs you&#39;re leaving out until they&#39;re needed?Or, consider an MDR so...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Microsoft blames unexpected Windows driver updates on caching issue</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-blames-unexpected-windows-driver-updates-on-caching-issue/</link>
-      <guid isPermaLink="false">064c053fb12cb691a6004af657568688</guid>
-      <pubDate>Thu, 04 Jun 2026 13:41:42 +0000</pubDate>
-      <description>On Wednesday, Microsoft fixed an issue that caused some Windows devices to install driver updates without notice despite policies configured to prevent auto-updates. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] Police dismantles fake ID marketplace used by migrant smugglers</title>
-      <link>https://www.bleepingcomputer.com/news/security/police-dismantles-fake-id-marketplace-used-by-migrant-smugglers/</link>
-      <guid isPermaLink="false">445ef0e1f12013b96d627d7261ab3f8a</guid>
-      <pubDate>Thu, 04 Jun 2026 12:29:12 +0000</pubDate>
-      <description>French and Spanish authorities took down an online marketplace selling fake identity documents to migrant smuggling rings operating within the European Union. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] China-Linked TA4922 Expands Phishing Attacks to U.K., Germany, Italy, and South Africa</title>
-      <link>https://thehackernews.com/2026/06/china-linked-ta4922-expands-phishing.html</link>
-      <guid isPermaLink="false">c63f8ca755ba552c5a8a4b438c6a712c</guid>
-      <pubDate>Thu, 04 Jun 2026 12:22:25 +0000</pubDate>
-      <description>A new China-linked cybercrime group known as TA4922 has expanded its targeting focus to target European organizations in the U.K., Germany, Italy, and South Africa. These efforts have been complemented by a &#34;rapid operational tempo&#34; and a continually evolving malware arsenal comprising known families like ValleyRAT (aka Winos 4.0) and Atlas RAT (aka AtlasCross RAT), as well as previously</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[LOW] FlutterShell Backdoor Spreads to macOS via Malicious Google and YouTube Ads</title>
-      <link>https://thehackernews.com/2026/06/fluttershell-backdoor-spreads-to-macos.html</link>
-      <guid isPermaLink="false">8d8f3a477e351e7247a055fcdf56eb19</guid>
-      <pubDate>Thu, 04 Jun 2026 11:19:53 +0000</pubDate>
-      <description>Cybersecurity researchers have shed light on a macOS malvertising campaign codenamed Operation FlutterBridge that spreads a new backdoor called FlutterShell. According to Palo Alto Networks Unit 42, the campaign is said to be the next stage of a previously reported activity cluster dubbed JSCoreRunner (aka FileRipple) in late August 2025. The cybercrime group behind the two attack chains is</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>paloalto</category>
-      <category>watch</category>
-      <category>paloalto</category>
-    </item>
-    <item>
-      <title>[MED] Cisco warns of critical Unified CM flaw with PoC exploit code</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisco-warns-of-critical-unified-cm-flaw-with-poc-exploit-code/</link>
-      <guid isPermaLink="false">a672dd82f312a3e0f3eda3ab321b5265</guid>
-      <pubDate>Thu, 04 Jun 2026 11:09:50 +0000</pubDate>
-      <description>Cisco has released security updates to patch a critical-severity Unified Communications Manager (Unified CM) flaw that allows attackers to gain root privileges. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[LOW] Hacking Meta’s AI Chatbot</title>
-      <link>https://www.schneier.com/blog/archives/2026/06/hacking-metas-ai-chatbot.html</link>
-      <guid isPermaLink="false">d5844e004a729bbabcc54d9aa056927b</guid>
-      <pubDate>Thu, 04 Jun 2026 11:04:09 +0000</pubDate>
-      <description>Hackers are convincing Meta&amp;#8217;s AI support chatbot to let them take over other peoples&amp;#8217; accounts: A video posted on X showed the step-by-step process to hack someone&amp;#8217;s Instagram account. The hacker allegedly used a VPN to spoof the targets&amp;#8217; presumed location to avoid triggering Instagram&amp;#8217;s automated account protections. Then, the hacker opened a chat with Meta AI Support Assistant and asked the bot to add a new email address to the target&amp;#8217;s account. The chatbot can be seen sending a verification code to the email address provided by the hacker; the hacker then...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Schneier on Security</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Fake Sites Mimicking Open-Source Tools Rank High on Google to Deliver Malware via TDS</title>
-      <link>https://thehackernews.com/2026/06/fake-sites-mimicking-open-source-tools.html</link>
-      <guid isPermaLink="false">72b842ccb7b188f695b6f7ed97c2ea91</guid>
-      <pubDate>Thu, 04 Jun 2026 09:51:28 +0000</pubDate>
-      <description>Cybersecurity researchers have flagged a large-scale operation that impersonates open-source and freeware projects to funnel unsuspecting users through a Traffic Distribution System (TDS) and deliver malware families like Remus Stealer, AnimateClipper, and the SessionGate framework. &#34;The sites are well-designed and often look like legitimate project portals at a glance, sometimes referencing</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>medium</category>
-      <category>rce</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[LOW] Hackers Spied on a Stock Exchange Executive&#39;s Outlook Mailbox for Five Months</title>
-      <link>https://thehackernews.com/2026/06/hackers-spied-on-stock-exchange.html</link>
-      <guid isPermaLink="false">ed1dc3e74abeee460a14e32b5f76d0f9</guid>
-      <pubDate>Thu, 04 Jun 2026 09:33:57 +0000</pubDate>
-      <description>Unknown attackers spent at least five months inside the Outlook mailbox of a senior executive at a major global stock exchange, copying the inbox out in small, repeated batches and routing it through Dropbox and OneDrive so the traffic blended into normal cloud activity. Symantec and Carbon Black&#39;s Threat Hunter Team reported the campaign this week. This points to espionage, not a money grab:</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] Microsoft&#39;s Coreutils for Windows, (Thu, Jun 4th)</title>
-      <link>https://isc.sans.edu/diary/rss/33048</link>
-      <guid isPermaLink="false">d09bef4842861447e4caf0983f03bb55</guid>
-      <pubDate>Thu, 04 Jun 2026 06:10:44 +0000</pubDate>
-      <description>I&amp;&amp;#x23&amp;#x3b;x26&amp;#x3b;&amp;#x23&amp;#x3b;39&amp;#x3b;ve been using the GnuWin32 CoreUtils for Windows for many years now (it gives you many &amp;#x2a;nix core commands on Windows).&amp;#xd;</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] DoJ Disrupts Southeast Asia Crypto Fraud Networks, Freezes $3.8 Million in Assets</title>
-      <link>https://thehackernews.com/2026/06/doj-disrupts-southeast-asia-crypto.html</link>
-      <guid isPermaLink="false">791b68171c611c0f28bd312a92cb9e7e</guid>
-      <pubDate>Thu, 04 Jun 2026 06:06:25 +0000</pubDate>
-      <description>The U.S. Department of Justice (DoJ) on Wednesday announced the results of a sweeping action undertaken by government authorities and private sector companies to combat cyber-enabled and cryptocurrency fraud targeting Americans. The &#34;Disruption Week&#34; operation began May 18, 2026, leading to the takedown of millions of social media, email, and internet access accounts used by transnational</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: Securly Chrome Extensionにおける複数の脆弱性</title>
-      <link>https://jvn.jp/vu/JVNVU97035938/</link>
-      <guid isPermaLink="false">ff224b6bb874f5bb161724401a90ee7e</guid>
-      <pubDate>Thu, 04 Jun 2026 05:15:00 +0000</pubDate>
-      <description>CERT/CCから本件に関するアドバイザリが公表されました。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
+      <category>lpe</category>
       <category>chrome</category>
       <category>watch</category>
       <category>chrome</category>
     </item>
     <item>
-      <title>[HIGH] ZDI-26-331: (Pwn2Own) Microsoft Edge Feedback Log File Handling Directory Traversal Remote Code Execution Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-331/</link>
-      <guid isPermaLink="false">5c4c7d84dd7cb943dafaa990f882611d</guid>
-      <pubDate>Thu, 04 Jun 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft Edge. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-45495.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>microsoft</category>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11227 — Incorrect security UI in Tab Hover Cards in Google Chrome prior to 149.0.7827.53…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11227</link>
+      <guid isPermaLink="false">e6d1403fedd269d9e12e94575e272d4f</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:30 +0000</pubDate>
+      <description>Incorrect security UI in Tab Hover Cards in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to perform domain spoofing via a crafted domain name. (Chromium security severity: Low)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
       <category>watch</category>
-      <category>rce</category>
-      <category>path-traversal</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] ZDI-26-330: (Pwn2Own) Microsoft Edge Navigation Handling Universal Cross-Site Scripting Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-330/</link>
-      <guid isPermaLink="false">ac8a9f64b57ce5bc93fb7a42bae962e0</guid>
-      <pubDate>Thu, 04 Jun 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to execute arbitrary cross-origin script on affected installations of Microsoft Edge. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 5.0. The following CVEs are assigned: CVE-2026-45494.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>xss</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[MED] ZDI-26-329: (Pwn2Own) Microsoft Edge Origin Validation Error Security Bypass Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-329/</link>
-      <guid isPermaLink="false">563711c4f14847a195a602e553df0c15</guid>
-      <pubDate>Thu, 04 Jun 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to access restricted functionality on affected installations of Microsoft Edge. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 4.3. The following CVEs are assigned: CVE-2026-45492.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>medium</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] ZDI-26-328: ASUS Business Manager Service Client-Side Authentication Local Privilege Escalation Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-328/</link>
-      <guid isPermaLink="false">d3a451b2d1364f07d960c58ff4689f57</guid>
-      <pubDate>Thu, 04 Jun 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows local attackers to escalate privileges on affected installations of ASUS Business Manager. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-7480.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>low</category>
-      <category>lpe</category>
-    </item>
-    <item>
-      <title>[MED] ISC Stormcast For Thursday, June 4th, 2026 https://isc.sans.edu/podcastdetail/9958, (Thu, Jun 4th)</title>
-      <link>https://isc.sans.edu/diary/rss/33046</link>
-      <guid isPermaLink="false">3e27ff2c097fd1863bafa3833edddf5e</guid>
-      <pubDate>Thu, 04 Jun 2026 02:00:03 +0000</pubDate>
-      <description></description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>medium</category>
-    </item>
-    <item>
-      <title>[LOW] Chinese hackers use new Atlas RAT malware in European cyberattacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/chinese-hackers-use-new-atlas-rat-malware-in-european-cyberattacks/</link>
-      <guid isPermaLink="false">95f7bf34d0c0a64086872ee3def3991b</guid>
-      <pubDate>Wed, 03 Jun 2026 21:45:27 +0000</pubDate>
-      <description>A Chinese-speaking cybercrime group has expanded its targeting to the European space, deploying previously undocumented malware and the Atlas backdoor. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[MED] The U.S. sanctions Nobitex crypto exchange used by ransomware</title>
-      <link>https://www.bleepingcomputer.com/news/security/the-us-sanctions-nobitex-crypto-exchange-used-by-ransomware/</link>
-      <guid isPermaLink="false">76b62f1bcd59a7a4d0424788d9ac5d97</guid>
-      <pubDate>Wed, 03 Jun 2026 20:31:22 +0000</pubDate>
-      <description>The U.S. Treasury&#39;s Office of Foreign Assets Control (OFAC) has announced sanctions against Nobitex, Iran&#39;s largest cryptocurrency exchange, for facilitating payments related to terrorist activities. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>ransomware</category>
-    </item>
-    <item>
-      <title>[LOW] CISA warns of cyberattacks targeting fuel tank monitoring systems</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-warns-of-cyberattacks-targeting-fuel-tank-monitoring-systems/</link>
-      <guid isPermaLink="false">cf5044cf3132a0ba8fd0ed3376a87a15</guid>
-      <pubDate>Wed, 03 Jun 2026 20:21:56 +0000</pubDate>
-      <description>CISA, the FBI, the NSA, the Department of Energy, and other US government partners are warning that hackers are targeting internet-exposed automatic tank gauge (ATG) systems used to monitor fuel and liquid storage tanks across various critical infrastructure sectors. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] WhatsApp, Slack Notifications Could Hijack Google Gemini on Android</title>
-      <link>https://thehackernews.com/2026/06/whatsapp-slack-notifications-could.html</link>
-      <guid isPermaLink="false">ff65e96d94041a2e1d2c86ae50155040</guid>
-      <pubDate>Wed, 03 Jun 2026 19:11:15 +0000</pubDate>
-      <description>A single poisoned notification from WhatsApp, Slack, SMS, Signal, Instagram, or Messenger could have hijacked Google Gemini&#39;s voice assistant on Android and made it open a victim&#39;s connected windows, fake a message from their boss, push the phone into a Zoom call, or quietly poison its long-term memory. No malicious app on the phone is required. The assistant just had to treat a hostile</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>sap</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>sap</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] New &#39;HTTP/2 Bomb&#39; DoS attack crashes web servers in under a minute</title>
-      <link>https://www.bleepingcomputer.com/news/security/new-http-2-bomb-dos-attack-crashes-web-servers-in-under-a-minute/</link>
-      <guid isPermaLink="false">86cf7c27004c0382125fcb01dd79a921</guid>
-      <pubDate>Wed, 03 Jun 2026 19:08:19 +0000</pubDate>
-      <description>A new denial-of-service (DoS) attack dubbed HTTP/2 Bomb can be launched from a single machine to take down web servers within seconds. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[HIGH] CISA Adds Exploited Magento RCE Flaw CVE-2026-45247 to KEV Catalog</title>
-      <link>https://thehackernews.com/2026/06/cisa-adds-exploited-magento-rce-flaw.html</link>
-      <guid isPermaLink="false">9e5e87792c716d4206b10793b28d043f</guid>
-      <pubDate>Wed, 03 Jun 2026 16:30:00 +0000</pubDate>
-      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a critical flaw impacting Mirasvit Cache Warmer, a popular Magento full-page cache extension, to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitation in the wild. The vulnerability, tracked as CVE-2026-45247 (CVSS score: 9.8), is a case of deserialization of untrusted</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[LOW] Google DoubleClick Abused in New Malspam Campaign to Deliver DesckVB RAT</title>
-      <link>https://thehackernews.com/2026/06/google-doubleclick-abused-in-new.html</link>
-      <guid isPermaLink="false">6febf498aa5f7cd4c12ee6d57b4630cd</guid>
-      <pubDate>Wed, 03 Jun 2026 16:29:16 +0000</pubDate>
-      <description>Cybersecurity researchers have flagged a new malspam campaign that makes use of Google&#39;s DoubleClick domain as a way to evade detection and ultimately deliver a remote access trojan (RAT) named DesckVB RAT. &#34;Before the victim ever reaches attacker-controlled infrastructure, the lure routes through DoubleClick, a legitimate Google-owned domain that many security tools are less likely to treat as</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[LOW] A Day in the Life of an MDR Analyst: Inside the Modern SOC</title>
-      <link>https://www.rapid7.com/blog/post/it-day-in-the-life-mdr-analyst-inside-the-modern-soc</link>
-      <guid isPermaLink="false">293dd55b8d2dfa9ba05f10c50adde54f</guid>
-      <pubDate>Wed, 03 Jun 2026 16:27:08 +0000</pubDate>
-      <description>What actually happens inside a SOC when an incident unfolds? Most teams see the alerts and the outcomes, but the decision-making in between is often less visible.At the Rapid7 2026 Global Cybersecurity Summit, the signature session Inside the Modern SOC: Who Carries You Through an Incident takes a different approach. Rather than focusing on tools or dashboards, it follows a real-world incident from the perspective of the people responsible for investigating and containing it.The session walks through how modern MDR teams operate under pressure, drawing on real experience across cloud, identity...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] CISA warns of active attacks exploiting Android, Linux bugs</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-warns-of-active-attacks-exploiting-android-linux-bugs/</link>
-      <guid isPermaLink="false">d24d74b9380fc53eabf5c9f67d7d0ea1</guid>
-      <pubDate>Wed, 03 Jun 2026 15:36:16 +0000</pubDate>
-      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning that hackers are exploiting vulnerabilities in the Linux kernel and Android operating system. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
+      <category>google</category>
+      <category>apple</category>
       <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11226 — Insufficient policy enforcement in PreviewTab in Google Chrome on Android prior …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11226</link>
+      <guid isPermaLink="false">8612b1762767bfbe206b6e88538495ee</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:30 +0000</pubDate>
+      <description>Insufficient policy enforcement in PreviewTab in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to bypass same origin policy via a crafted HTML page. (Chromium security severity: Low)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
       <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11225 — Inappropriate implementation in WebUI in Google Chrome prior to 149.0.7827.53 al…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11225</link>
+      <guid isPermaLink="false">1452313dba05fac9d78e02b873cfbc53</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:30 +0000</pubDate>
+      <description>Inappropriate implementation in WebUI in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to perform domain spoofing via a crafted domain name. (Chromium security severity: Low)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
       <category>linux</category>
-    </item>
-    <item>
-      <title>[MED] Beyond the Zero-Day: See Your Network Like an Attacker | Webinar with HD Moore</title>
-      <link>https://thehackernews.com/2026/06/beyond-zero-day-see-your-network-like.html</link>
-      <guid isPermaLink="false">8ea3c0b39f2f1947d6e40286311b36ed</guid>
-      <pubDate>Wed, 03 Jun 2026 14:56:46 +0000</pubDate>
-      <description>Assume the breach. Zero-days keep shipping, AI is writing exploits faster than anyone patches, and &#34;patch everything in time&#34; stopped working years ago. Stop betting the org on winning that race. You don&#39;t control which bug lands. You control what it can reach once it does. That is a question about the shape of your network, and most teams have the shape wrong. HD Moore, creator of Metasploit</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>medium</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[LOW] Microsoft 365 Android Apps Let Any App Steal Account Tokens via Leftover Debug Flag</title>
-      <link>https://thehackernews.com/2026/06/microsoft-365-android-apps-let-any-app.html</link>
-      <guid isPermaLink="false">1eb0f0d31e653b417d2f5e37c00bd3c7</guid>
-      <pubDate>Wed, 03 Jun 2026 14:56:35 +0000</pubDate>
-      <description>A development flag left switched on in production builds of several Microsoft 365 Android apps disabled the check that limits account-token sharing to trusted Microsoft apps. Any other app on the same phone could ask for the signed-in user&#39;s token and get it, then read email, open files, browse the calendar, and send messages as that user. No password, no login screen, no permission prompt.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
       <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.3 MEDIUM] CVE-2026-11212 — Insufficient policy enforcement in DevTools in Google Chrome prior to 149.0.7827…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11212</link>
+      <guid isPermaLink="false">3827b6f5a32b64a7d6c4fbc615d06db5</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:28 +0000</pubDate>
+      <description>Insufficient policy enforcement in DevTools in Google Chrome prior to 149.0.7827.53 allowed an attacker who convinced a user to install a malicious extension to leak cross-origin data via a crafted Chrome Extension. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
       <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
       <category>microsoft</category>
+      <category>chrome</category>
     </item>
     <item>
-      <title>[LOW] What 345 Days of Untested Exposure Looks Like at a Bank</title>
-      <link>https://www.bleepingcomputer.com/news/security/what-345-days-of-untested-exposure-looks-like-at-a-bank/</link>
-      <guid isPermaLink="false">1782b5b08b4a19b9229304b2690434c1</guid>
-      <pubDate>Wed, 03 Jun 2026 14:02:12 +0000</pubDate>
-      <description>A two-week penetration test can leave roughly 345 days of real-world exposure unvalidated. Sprocket Security explores why continuous testing is becoming critical as attack surfaces constantly change. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Autonomous AI Tool Finds 2-Year-Old RCE Flaw in Redis (CVE-2026-23479)</title>
-      <link>https://thehackernews.com/2026/06/autonomous-ai-tool-finds-2-year-old-rce.html</link>
-      <guid isPermaLink="false">319163011d3de94c0b8d63668cec28ae</guid>
-      <pubDate>Wed, 03 Jun 2026 13:47:09 +0000</pubDate>
-      <description>Redis has patched a use-after-free in its blocking-client code that lets an authenticated user run arbitrary OS commands on the machine hosting the database. The flaw was found by an autonomous AI tool built to hunt bugs in large codebases. Tracked as CVE-2026-23479, the flaw was introduced in Redis 7.2.0 and remained in every stable branch until the May 5 fixes, unnoticed for over two years.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>medium</category>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11211 — Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11211</link>
+      <guid isPermaLink="false">5d7a7f5e304fde7b782c013e73da0117</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:28 +0000</pubDate>
+      <description>Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
       <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
     </item>
     <item>
-      <title>[MED] Continuing Scans for swagger.json, (Wed, Jun 3rd)</title>
-      <link>https://isc.sans.edu/diary/rss/33044</link>
-      <guid isPermaLink="false">8f14001c16938be56fc3c6a5b51203f6</guid>
-      <pubDate>Wed, 03 Jun 2026 13:40:00 +0000</pubDate>
-      <description>Enterprise applications often still use complex standards like SOAP for web services. The big advantage of SOAP is its tight and extensive standards, which enable interoperability across an enterprise governed by web services. The disadvantage of SOAP: First, while it is de facto usually used over HTTP, it does not leverage HTTP, leading to unnecessary complexity. Secondly, kids don&amp;&amp;#x23&amp;#x3b;x26&amp;#x3b;&amp;#x23&amp;#x3b;39&amp;#x3b;t RTFM, and developers these days tend not to appreciate the art of careful system design&amp;#x3b; they rather throw code at an IDE to see what sticks, if they don&amp;&amp;#x23&amp;#x3b;x26...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11210 — Inappropriate implementation in Safe Browsing in Google Chrome prior to 149.0.78…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11210</link>
+      <guid isPermaLink="false">420b8e330a6694bdafa4efcb9f7a87dd</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:28 +0000</pubDate>
+      <description>Inappropriate implementation in Safe Browsing in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass discretionary access control via a crafted RAR file. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>medium</category>
-    </item>
-    <item>
-      <title>[LOW] One-Click GitHub Dev Attack Lets Attackers Steal Full GitHub OAuth Tokens</title>
-      <link>https://thehackernews.com/2026/06/one-click-github-dev-attack-lets.html</link>
-      <guid isPermaLink="false">ee0f36576b63f421315fe472fb6e3a3c</guid>
-      <pubDate>Wed, 03 Jun 2026 12:58:22 +0000</pubDate>
-      <description>Cybersecurity researchers have disclosed a one-click attack via Microsoft Visual Studio Code (VS Code) that makes it possible to steal a user&#39;s GitHub token. &#34;Just by clicking a link, it&#39;s possible for an attacker to steal a GitHub token that can read and write to your repos, including private ones,&#34; security researcher Ammar Askar said. GitHub supports a feature called GitHub.dev that runs as</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>microsoft</category>
-      <category>github</category>
+      <category>chrome</category>
       <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
       <category>microsoft</category>
-      <category>github</category>
+      <category>chrome</category>
     </item>
     <item>
-      <title>[LOW] Shrinking the IAM Attack Surface through Identity Visibility and Intelligence Platforms (IVIP)</title>
-      <link>https://thehackernews.com/2026/06/shrinking-iam-attack-surface-through.html</link>
-      <guid isPermaLink="false">62b0420250dc8f9957680bffc7474178</guid>
-      <pubDate>Wed, 03 Jun 2026 11:58:00 +0000</pubDate>
-      <description>The Fragmented State of Modern Enterprise Identity Enterprise IAM is approaching a breaking point. As organizations scale, identity becomes increasingly fragmented across thousands of applications, decentralized teams, machine identities, and autonomous systems. The result is Identity Dark Matter: identity activity that sits outside the visibility of centralized IAM and beyond the reach of</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[HIGH] Acer working to patch max severity zero-days in Wave 7 routers</title>
-      <link>https://www.bleepingcomputer.com/news/security/acer-warns-of-max-severity-zero-days-affecting-wave-7-routers/</link>
-      <guid isPermaLink="false">fad755f29eeec5d782ac5ae46adf4855</guid>
-      <pubDate>Wed, 03 Jun 2026 11:35:47 +0000</pubDate>
-      <description>Acer is working to address two maximum-severity zero-day vulnerabilities affecting its Wave 7 mesh routers. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[LOW] AI Used to Decrypt Medieval Ciphers</title>
-      <link>https://www.schneier.com/blog/archives/2026/06/ai-used-to-decrypt-medieval-ciphers.html</link>
-      <guid isPermaLink="false">8add058c9db1ecaef7d7e68ea1bcb873</guid>
-      <pubDate>Wed, 03 Jun 2026 11:04:40 +0000</pubDate>
-      <description>Researchers are using machine learning algorithms to decrypt historical pencil-and-paper ciphers.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Schneier on Security</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] The sorry state of skill distribution</title>
-      <link>https://blog.trailofbits.com/2026/06/03/the-sorry-state-of-skill-distribution/</link>
-      <guid isPermaLink="false">fa743bdf541e1f07246d17ac07938c53</guid>
-      <pubDate>Wed, 03 Jun 2026 11:00:00 +0000</pubDate>
-      <description>Public skill marketplaces are being flooded with malicious skills that steal credentials, exfiltrate data, and hijack agents. In response, a segment of the security industry released skill scanners, a new family of tools designed to detect malicious skills before they’re installed. But we tested them, and they don’t work. We recently bypassed ClawHub’s malicious skill detector, Cisco’s agent skill scanner, and all three of the scanners integrated into skills.sh. These were not advanced attacks: it took us less than an hour to conceive and implement three of the four malicious skills in...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Trail of Bits Blog</source>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11209 — Inappropriate implementation in Passwords in Google Chrome prior to 149.0.7827.5…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11209</link>
+      <guid isPermaLink="false">f8756e27592a9a0ff8945e7430e27897</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:28 +0000</pubDate>
+      <description>Inappropriate implementation in Passwords in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>medium</category>
-      <category>cisco</category>
+      <category>chrome</category>
       <category>watch</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[LOW] Unpatched Windows Search URI Vulnerability Lets Attackers Steal NTLMv2 Hashes</title>
-      <link>https://thehackernews.com/2026/06/unpatched-windows-search-uri.html</link>
-      <guid isPermaLink="false">18beb407642bf06613dc28f437c72609</guid>
-      <pubDate>Wed, 03 Jun 2026 10:18:52 +0000</pubDate>
-      <description>Cybersecurity researchers have disclosed details of an unpatched issue that could be exploited to disclose a user&#39;s NTLMv2 hash to the attacker. Like in the case of CVE-2026-33829, which impacted the Windows Snipping Tool&#39;s ms-screensketch: URI handler, the newly flagged issue resides in the search: URI handler, per Huntress. CVE-2026-33829 refers to a spoofing vulnerability that could expose</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
       <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
+      <category>chrome</category>
     </item>
     <item>
-      <title>[LOW] Police dismantles 9 crime groups in illegal streaming crackdown</title>
-      <link>https://www.bleepingcomputer.com/news/security/police-dismantles-9-crime-groups-in-illegal-streaming-crackdown/</link>
-      <guid isPermaLink="false">09b1d1e22fa9ba837147b7cdb8060755</guid>
-      <pubDate>Wed, 03 Jun 2026 10:12:24 +0000</pubDate>
-      <description>European and international law enforcement agencies have dismantled nine organized crime groups and arrested 29 suspects in a major crackdown on illegal streaming operations. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] Google adds Android protection against AI deepfake scam calls</title>
-      <link>https://www.bleepingcomputer.com/news/security/google-adds-android-protection-against-ai-deepfake-scam-calls/</link>
-      <guid isPermaLink="false">e8d5449be57d7e8c4eb28856e94a8e4d</guid>
-      <pubDate>Wed, 03 Jun 2026 09:02:11 +0000</pubDate>
-      <description>Google is introducing a new Android security feature that will detect and flag phone calls in which scammers use artificial intelligence to impersonate a user&#39;s personal contacts. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] New HTTP/2 Bomb Vulnerability Allows Remote DoS on NGINX, Apache, IIS, Envoy &amp; Cloudflare</title>
-      <link>https://thehackernews.com/2026/06/new-http2-bomb-vulnerability-allows.html</link>
-      <guid isPermaLink="false">0488dd1151c2dc6c293bff8e93d9f59c</guid>
-      <pubDate>Wed, 03 Jun 2026 08:33:35 +0000</pubDate>
-      <description>Cybersecurity researchers have discovered a remote denial-of-service exploit that affects major web servers, including NGINX, Apache HTTPD, Microsoft IIS, Envoy, and Cloudflare Pingora. The vulnerability has been codenamed HTTP/2 Bomb by Calif. &#34;The vulnerable behavior exists in each server&#39;s default HTTP/2 configuration,&#34; the company said, adding it was discovered by OpenAI Codex by chaining</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>microsoft</category>
-      <category>apache</category>
-      <category>watch</category>
-      <category>microsoft</category>
-      <category>apache</category>
-    </item>
-    <item>
-      <title>[HIGH] VS Code zero-day lets hackers steal GitHub tokens in one click</title>
-      <link>https://www.bleepingcomputer.com/news/security/vs-code-zero-day-lets-hackers-steal-github-tokens-in-one-click/</link>
-      <guid isPermaLink="false">a369cf2de70095cc37e9159c2c4f155d</guid>
-      <pubDate>Wed, 03 Jun 2026 06:50:30 +0000</pubDate>
-      <description>A security researcher has released exploit code for a Visual Studio Code (VS Code) zero-day vulnerability that allows attackers to steal GitHub authentication tokens by tricking users into clicking a link. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>github</category>
-      <category>0day</category>
-      <category>github</category>
-    </item>
-    <item>
-      <title>[LOW] Weedhack Attacks Minecraft Users, CountLoader Hits 86K, Miners Spread via Pirated Content</title>
-      <link>https://thehackernews.com/2026/06/weedhack-attacks-minecraft-users.html</link>
-      <guid isPermaLink="false">0df25df907fae878b0de22d6c8322faa</guid>
-      <pubDate>Wed, 03 Jun 2026 06:16:54 +0000</pubDate>
-      <description>Cybersecurity researchers have flagged a new campaign targeting Minecraft players via YouTube to spread malware capable of gaining control of victims&#39; systems. The Minecraft-focused malware-as-a-service (MaaS) campaign has been codenamed Weedhack by McAfee Labs, stating the activity has been active since January 2026 and impersonates Minecraft clients and mods to infect users. In all, 3820</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>low</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: Appsmithにおけるクロスサイトスクリプティングの脆弱性</title>
-      <link>https://jvn.jp/vu/JVNVU98968214/</link>
-      <guid isPermaLink="false">cf14dbfaed8708644eacd41915ca5a34</guid>
-      <pubDate>Wed, 03 Jun 2026 05:15:15 +0000</pubDate>
-      <description>CERT/CCから本件に関するアドバイザリが公表されました。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: Collibra Platform Agentにおける複数の脆弱性</title>
-      <link>https://jvn.jp/vu/JVNVU95031413/</link>
-      <guid isPermaLink="false">2566c86829c787ce4dbac3b2b1eaabb3</guid>
-      <pubDate>Wed, 03 Jun 2026 05:15:00 +0000</pubDate>
-      <description>CERT/CCから本件に関するアドバイザリが公表されました。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[LOW] ZDI-26-327: Docker Desktop grpcfuse Kernel Module Uncontrolled Recursion Denial-of-Service Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-327/</link>
-      <guid isPermaLink="false">f42823d387e04f5bd3e363b3578fe3e8</guid>
-      <pubDate>Wed, 03 Jun 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows local attackers to create a denial-of-service condition on affected installations of Docker Desktop. An attacker must first obtain the ability to execute low-privileged code within a container on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-8936.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>low</category>
-      <category>docker</category>
-      <category>docker</category>
-    </item>
-    <item>
-      <title>[HIGH] Preinstall to persistence: Inside the Red Hat npm Miasma credential-stealing campaign</title>
-      <link>https://www.microsoft.com/en-us/security/blog/2026/06/02/preinstall-persistence-inside-red-hat-npm-miasma-credential-stealing-campaign/</link>
-      <guid isPermaLink="false">8335e31d85a07bfeeb1f069a8cd895f2</guid>
-      <pubDate>Wed, 03 Jun 2026 04:45:06 +0000</pubDate>
-      <description>A large-scale npm supply chain attack compromised over 90 versions of @redhat-cloud-services packages, silently infecting CI/CD environments and developer systems. The malicious code steals credentials from GitHub, cloud platforms, and local machines, then spreads like a worm by republishing trusted packages. Discover how the attack works, what data is at risk, and the steps you can take to protect your organization. The post Preinstall to persistence: Inside the Red Hat npm Miasma credential-stealing campaign appeared first on Microsoft Security Blog.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
-      <category>high</category>
-      <category>github</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>supply-chain</category>
-      <category>github</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[LOW] JVN: WordPress用プラグインZoho Mail for WordPressにおけるクロスサイトリクエストフォージェリの脆弱性</title>
-      <link>https://jvn.jp/jp/JVN24733221/</link>
-      <guid isPermaLink="false">23ca2489593bf7252072099f4369a755</guid>
-      <pubDate>Wed, 03 Jun 2026 03:00:00 +0000</pubDate>
-      <description>Zohoが提供するWordPress用プラグインZoho Mail for WordPressには、クロスサイトリクエストフォージェリの脆弱性が存在します。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[MED] ISC Stormcast For Wednesday, June 3rd, 2026 https://isc.sans.edu/podcastdetail/9956, (Wed, Jun 3rd)</title>
-      <link>https://isc.sans.edu/diary/rss/33042</link>
-      <guid isPermaLink="false">734a1e333e0ac2cd958c7fe06676fd29</guid>
-      <pubDate>Wed, 03 Jun 2026 02:00:02 +0000</pubDate>
-      <description></description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11208 — Use after free in Codecs in Google Chrome prior to 149.0.7827.53 allowed a remot…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11208</link>
+      <guid isPermaLink="false">3e284e663c7af9949f8ade4b2a356bf1</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:28 +0000</pubDate>
+      <description>Use after free in Codecs in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
     </item>
     <item>
-      <title>[LOW] JVN: Siemens製品に対するアップデート（2026年6月）</title>
-      <link>https://jvn.jp/vu/JVNVU93818675/</link>
-      <guid isPermaLink="false">ba986c703e9971502dc3d9b4db9dc5a8</guid>
-      <pubDate>Wed, 03 Jun 2026 00:40:15 +0000</pubDate>
-      <description>Siemensから各製品向けのアドバイザリが公表されました。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
+      <title>[MED] [CVSS 9.6 CRITICAL] CVE-2026-11207 — Insufficient validation of untrusted input in Autofill in Google Chrome prior to…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11207</link>
+      <guid isPermaLink="false">a9ec5a99f9e3eb18351cab39555e88d7</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:27 +0000</pubDate>
+      <description>Insufficient validation of untrusted input in Autofill in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via malicious network traffic. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>critical-cvss</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
     </item>
     <item>
-      <title>[LOW] JVN: CISA ICS Advisory / ICS Medical Advisory（2026年06月02日）</title>
-      <link>https://jvn.jp/vu/JVNVU95215075/</link>
-      <guid isPermaLink="false">804b33e617a848f628c2a740f64478f6</guid>
-      <pubDate>Wed, 03 Jun 2026 00:40:00 +0000</pubDate>
-      <description>2026年06月02日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">JPCERT/CC 全フィード</source>
-      <category>low</category>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11206 — Insufficient policy enforcement in ServiceWorker in Google Chrome prior to 149.0…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11206</link>
+      <guid isPermaLink="false">810654e1038d47f2f23c47733a1f688a</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:27 +0000</pubDate>
+      <description>Insufficient policy enforcement in ServiceWorker in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
     </item>
     <item>
-      <title>[CRIT] [KEV] CVE-2026-45247 — Mirasvit Mirasvit Full Page Cache Warmer: Mirasvit Full Page Cache Warmer Deserialization of Untrusted Data Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45247</link>
-      <guid isPermaLink="false">7d51fc61e6e9079a054b659382d24e3d</guid>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
-      <description>Mirasvit Full Page Cache Warmer contains a deserialization of untrusted data vulnerability that could allow unauthenticated attackers to achieve remote code execution by supplying a crafted serialized PHP object in the CacheWarmer cookie.&#xA;Required: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.&#xA;Due: 2026-06-06</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11204 — Inappropriate implementation in Signin in Google Chrome on iOS prior to 149.0.78…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11204</link>
+      <guid isPermaLink="false">7e346987f25bfac474f6b3bfacc9db50</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:27 +0000</pubDate>
+      <description>Inappropriate implementation in Signin in Google Chrome on iOS prior to 149.0.7827.53 allowed a remote attacker to bypass navigation restrictions via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11203 — Inappropriate implementation in GPU in Google Chrome on Mac prior to 149.0.7827.…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11203</link>
+      <guid isPermaLink="false">1658bc744540d19504229fc68146d04e</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:27 +0000</pubDate>
+      <description>Inappropriate implementation in GPU in Google Chrome on Mac prior to 149.0.7827.53 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.8 HIGH] CVE-2026-11202 — Inappropriate implementation in Chrome for iOS in Google Chrome on iOS prior to …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11202</link>
+      <guid isPermaLink="false">7faaee94294abff6d413b4172fb9b11f</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:27 +0000</pubDate>
+      <description>Inappropriate implementation in Chrome for iOS in Google Chrome on iOS prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11201 — Use after free in ServiceWorker in Google Chrome prior to 149.0.7827.53 allowed …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11201</link>
+      <guid isPermaLink="false">ca99daae13cf6aa64adb684f5d7977c9</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:27 +0000</pubDate>
+      <description>Use after free in ServiceWorker in Google Chrome prior to 149.0.7827.53 allowed an attacker who convinced a user to install a malicious extension to execute arbitrary code via a crafted Chrome Extension. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
       <category>rce</category>
-      <category>mirasvit</category>
-    </item>
-    <item>
-      <title>[MED] Microsoft&#39;s Coreutils project brings Linux commands to Windows</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsofts-coreutils-project-brings-linux-commands-to-windows/</link>
-      <guid isPermaLink="false">2e188ef5b33089c194026c2cce3b6ffb</guid>
-      <pubDate>Tue, 02 Jun 2026 22:52:40 +0000</pubDate>
-      <description>Microsoft announced today at its Build 2026 developer conference the release of Coreutils for Windows, bringing many commonly used Linux command-line utilities to Windows as native applications. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>medium</category>
-      <category>microsoft</category>
+      <category>chrome</category>
       <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
       <category>microsoft</category>
+      <category>chrome</category>
     </item>
     <item>
-      <title>[LOW] OpenAI upgrades GPT-5.5, as it plans to retire legacy ChatGPT models</title>
-      <link>https://www.bleepingcomputer.com/news/artificial-intelligence/openai-upgrades-gpt-55-as-it-plans-to-retire-legacy-chatgpt-models/</link>
-      <guid isPermaLink="false">d0a279d9737ebdf7d99891a952092a43</guid>
-      <pubDate>Tue, 02 Jun 2026 22:44:50 +0000</pubDate>
-      <description>OpenAI says it&#39;s rolling out a new update that improves the existing GPT-5.5 Instant model, and this move comes ahead of the scheduled retirement of multiple legacy models, including o3. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-    </item>
-    <item>
-      <title>[MED] Critical Kirki flaw exploited to hijack WordPress admin accounts</title>
-      <link>https://www.bleepingcomputer.com/news/security/critical-kirki-flaw-exploited-to-hijack-wordpress-admin-accounts/</link>
-      <guid isPermaLink="false">a9bc0dc1e12ed15581535e0a6b9a00a9</guid>
-      <pubDate>Tue, 02 Jun 2026 22:12:57 +0000</pubDate>
-      <description>Hackers are exploiting a critical privilege escalation vulnerability (CVE-2026-8206) in the Kirki plugin for WordPress to take over any user account, including those belonging to administrators. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <title>[MED] [CVSS 5.9 MEDIUM] CVE-2026-11199 — Inappropriate implementation in WebRTC in Google Chrome prior to 149.0.7827.53 a…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11199</link>
+      <guid isPermaLink="false">0616a05a593f7bfb2b6663793b835f55</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:27 +0000</pubDate>
+      <description>Inappropriate implementation in WebRTC in Google Chrome prior to 149.0.7827.53 allowed an attacker in a privileged network position to leak cross-origin data via malicious network traffic. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>medium</category>
-      <category>wordpress</category>
+      <category>chrome</category>
       <category>watch</category>
-      <category>lpe</category>
-      <category>wordpress</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
     </item>
     <item>
-      <title>[LOW] Over 116,000 Minecraft systems infected in WeedHack malware campaign</title>
-      <link>https://www.bleepingcomputer.com/news/security/over-116-000-minecraft-systems-infected-in-weedhack-malware-campaign/</link>
-      <guid isPermaLink="false">e2d8764465c536d98ddf5268398d568c</guid>
-      <pubDate>Tue, 02 Jun 2026 21:54:49 +0000</pubDate>
-      <description>A large-scale malware campaign dubbed WeedHack is targeting Minecraft players and has infected more than 116,000 systems since January. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[LOW] Over 116,000 Mincraft systems infected in WeedHack malware campaign</title>
-      <link>https://www.bleepingcomputer.com/news/security/over-116-000-mincraft-systems-infected-in-weedhack-malware-campaign/</link>
-      <guid isPermaLink="false">07c598bf2494859277e1f2fb1bada2ab</guid>
-      <pubDate>Tue, 02 Jun 2026 21:54:49 +0000</pubDate>
-      <description>A large-scale malware campaign dubbed WeedHack is targeting Minecraft players and has infected more than 116,000 systems since January. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>low</category>
-      <category>malware</category>
-    </item>
-    <item>
-      <title>[MED] AI-built ransomware toolkit automates EDR evasion, AD discovery</title>
-      <link>https://www.bleepingcomputer.com/news/security/ai-built-ransomware-toolkit-automates-edr-evasion-ad-discovery/</link>
-      <guid isPermaLink="false">7057d27e9fc162be618150cd6c9bd613</guid>
-      <pubDate>Tue, 02 Jun 2026 20:01:20 +0000</pubDate>
-      <description>A threat actor is using an AI-built ransomware attack toolkit that automates Active Directory discovery and helps evade endpoint detection and response (EDR) solutions. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <title>[MED] [CVSS 8.8 HIGH] CVE-2026-11188 — Use after free in USB in Google Chrome on Android prior to 149.0.7827.53 allowed…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11188</link>
+      <guid isPermaLink="false">00a328ecec9f00a79d84fb3342362012</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:25 +0000</pubDate>
+      <description>Use after free in USB in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>medium</category>
-      <category>ransomware</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
     </item>
     <item>
-      <title>[HIGH] Google June 2026 Android Update Patches 124 Flaws, One Actively Exploited</title>
-      <link>https://thehackernews.com/2026/06/google-june-2026-android-update-patches.html</link>
-      <guid isPermaLink="false">d23fa9698e240ba3713d1ab845ee15a4</guid>
-      <pubDate>Tue, 02 Jun 2026 18:46:00 +0000</pubDate>
-      <description>Google on Monday released patches for 124 security vulnerabilities impacting its Android operating system for the month of June 2026, including one high-severity flaw in the Framework component that has come under active exploitation. Tracked as CVE-2025-48595 (CVSS score: 8.4), the security flaw has been described as a case of privilege escalation without requiring any user interaction. The</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <title>[MED] [CVSS 6.3 MEDIUM] CVE-2026-11187 — Inappropriate implementation in Glic in Google Chrome prior to 149.0.7827.53 all…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11187</link>
+      <guid isPermaLink="false">2aa192f3a6ed0353c38ea5b8e1ff6de6</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:25 +0000</pubDate>
+      <description>Inappropriate implementation in Glic in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass navigation restrictions via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.1 MEDIUM] CVE-2026-11186 — Inappropriate implementation in CSS in Google Chrome prior to 149.0.7827.53 allo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11186</link>
+      <guid isPermaLink="false">cadc3bc259c3f3b8b2592a0535b3b77a</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:25 +0000</pubDate>
+      <description>Inappropriate implementation in CSS in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to inject arbitrary scripts or HTML (UXSS) via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.3 MEDIUM] CVE-2026-11184 — Insufficient policy enforcement in Actor in Google Chrome prior to 149.0.7827.53…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11184</link>
+      <guid isPermaLink="false">5d6bbbf48773377c504923c10cb0ae1d</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:25 +0000</pubDate>
+      <description>Insufficient policy enforcement in Actor in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass navigation restrictions via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11183 — Out of bounds read in GWP-ASan in Google Chrome prior to 149.0.7827.53 allowed a…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11183</link>
+      <guid isPermaLink="false">4cd22a72ed35bc46a942314329838400</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:25 +0000</pubDate>
+      <description>Out of bounds read in GWP-ASan in Google Chrome prior to 149.0.7827.53 allowed a local attacker to obtain potentially sensitive information from process memory via a malicious file. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>apple</category>
+      <category>linux</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.1 MEDIUM] CVE-2026-11150 — Inappropriate implementation in XML in Google Chrome prior to 149.0.7827.53 allo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11150</link>
+      <guid isPermaLink="false">4c8cf76cd8569d1f6440bcfb556a863d</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:21 +0000</pubDate>
+      <description>Inappropriate implementation in XML in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to inject arbitrary scripts or HTML (UXSS) via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11148 — Inappropriate implementation in Payments in Google Chrome on Android prior to 14…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11148</link>
+      <guid isPermaLink="false">99cc2d37634affde15bd1a7938ace7ba</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:21 +0000</pubDate>
+      <description>Inappropriate implementation in Payments in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 9.6 CRITICAL] CVE-2026-11146 — Insufficient validation of untrusted input in Chromoting in Google Chrome prior …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11146</link>
+      <guid isPermaLink="false">2c715b8afeb8418d0ed4dbd126b8b76a</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:20 +0000</pubDate>
+      <description>Insufficient validation of untrusted input in Chromoting in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>critical-cvss</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11145 — Race in Geolocation in Google Chrome on Android prior to 149.0.7827.53 allowed a…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11145</link>
+      <guid isPermaLink="false">2f121355643dfb063a93bd5ef0f0f365</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:20 +0000</pubDate>
+      <description>Race in Geolocation in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11144 — Use after free in Media in Google Chrome prior to 149.0.7827.53 allowed a remote…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11144</link>
+      <guid isPermaLink="false">3373aa9dc50de5a714381de865bae34c</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:20 +0000</pubDate>
+      <description>Use after free in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted video file. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11143 — Out of bounds read in Extensions in Google Chrome on Linux prior to 149.0.7827.5…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11143</link>
+      <guid isPermaLink="false">ee288d70a25a177f149d8beabced6aee</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:20 +0000</pubDate>
+      <description>Out of bounds read in Extensions in Google Chrome on Linux prior to 149.0.7827.53 allowed an attacker who convinced a user to install a malicious extension to obtain potentially sensitive information from process memory via a crafted Chrome Extension. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11142 — Insufficient policy enforcement in Paint in Google Chrome prior to 149.0.7827.53…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11142</link>
+      <guid isPermaLink="false">6057c0c8d5ffb18f6c3cb3e4e9a40b8f</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:20 +0000</pubDate>
+      <description>Insufficient policy enforcement in Paint in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass same origin policy via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11141 — Uninitialized Use in Audio in Google Chrome prior to 149.0.7827.53 allowed a rem…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11141</link>
+      <guid isPermaLink="false">7b306cbfe66c1b7f99a62c429d290ede</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:20 +0000</pubDate>
+      <description>Uninitialized Use in Audio in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11140 — Out of bounds read in Chromecast in Google Chrome prior to 149.0.7827.53 allowed…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11140</link>
+      <guid isPermaLink="false">c9ffad936b2be0ff0357c697c18698f8</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:20 +0000</pubDate>
+      <description>Out of bounds read in Chromecast in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11139 — Inappropriate implementation in Paint in Google Chrome prior to 149.0.7827.53 al…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11139</link>
+      <guid isPermaLink="false">da5c87e8fd020891a85e357b27f3c42a</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:20 +0000</pubDate>
+      <description>Inappropriate implementation in Paint in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11138 — Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a rem…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11138</link>
+      <guid isPermaLink="false">c5e2a074a302df8c0c2625e0de3b908b</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:19 +0000</pubDate>
+      <description>Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11137 — Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a rem…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11137</link>
+      <guid isPermaLink="false">5e66e14a2fd4b72c362b952a35da1e02</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:19 +0000</pubDate>
+      <description>Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11135 — Insufficient policy enforcement in Autofill in Google Chrome prior to 149.0.7827…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11135</link>
+      <guid isPermaLink="false">78f9594ab028a0f3b20bf900dac4d3f0</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:19 +0000</pubDate>
+      <description>Insufficient policy enforcement in Autofill in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass discretionary access control via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11134 — Inappropriate implementation in Media in Google Chrome prior to 149.0.7827.53 al…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11134</link>
+      <guid isPermaLink="false">45f82771493a1a65c232bcf81b0f708d</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:19 +0000</pubDate>
+      <description>Inappropriate implementation in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11133 — Insufficient policy enforcement in Paint in Google Chrome prior to 149.0.7827.53…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11133</link>
+      <guid isPermaLink="false">c8b39cb0fb28a1879e6e11a49020a3d2</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:19 +0000</pubDate>
+      <description>Insufficient policy enforcement in Paint in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass same origin policy via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11132 — Insufficient policy enforcement in Paint in Google Chrome prior to 149.0.7827.53…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11132</link>
+      <guid isPermaLink="false">acb7fc962a1e3cbf5d97b10cf9d59bc5</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:19 +0000</pubDate>
+      <description>Insufficient policy enforcement in Paint in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to bypass same origin policy via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 9.6 CRITICAL] CVE-2026-11131 — Use after free in Autofill in Google Chrome on Android prior to 149.0.7827.53 al…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11131</link>
+      <guid isPermaLink="false">47920372d94c9cebe135488fdd60242e</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:19 +0000</pubDate>
+      <description>Use after free in Autofill in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>critical-cvss</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11129 — Inappropriate implementation in Extensions in Google Chrome prior to 149.0.7827.…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11129</link>
+      <guid isPermaLink="false">07e8091463170452202ac8daec97844a</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:18 +0000</pubDate>
+      <description>Inappropriate implementation in Extensions in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 9.6 CRITICAL] CVE-2026-11120 — Insufficient validation of untrusted input in Enterprise Reporting in Google Chr…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11120</link>
+      <guid isPermaLink="false">4827a058c50c536a5df8fefdb1ca75ef</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:17 +0000</pubDate>
+      <description>Insufficient validation of untrusted input in Enterprise Reporting in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>critical-cvss</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 9.6 CRITICAL] CVE-2026-11119 — Inappropriate implementation in GPU in Google Chrome on Android prior to 149.0.7…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11119</link>
+      <guid isPermaLink="false">6430627b1812172a6e8411c2cf9f7cc5</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:17 +0000</pubDate>
+      <description>Inappropriate implementation in GPU in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>critical-cvss</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11116 — Use after free in Chromoting in Google Chrome prior to 149.0.7827.53 allowed a r…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11116</link>
+      <guid isPermaLink="false">5e6919c0e225f572036a21f5a9a40c40</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:17 +0000</pubDate>
+      <description>Use after free in Chromoting in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via malicious network traffic. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.3 HIGH] CVE-2026-11115 — Use after free in Updater in Google Chrome on Windows prior to 149.0.7827.53 all…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11115</link>
+      <guid isPermaLink="false">1d974f13dd4d2f913375e61acfc34e05</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:17 +0000</pubDate>
+      <description>Use after free in Updater in Google Chrome on Windows prior to 149.0.7827.53 allowed a local attacker to perform OS-level privilege escalation via a malicious file. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
       <category>lpe</category>
-      <category>actively-exploited</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 9.6 CRITICAL] CVE-2026-11114 — Use after free in Device Trust in Google Chrome on Mac prior to 149.0.7827.53 al…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11114</link>
+      <guid isPermaLink="false">f4fafb2b3e962e01e903f4e2a37c99ab</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:17 +0000</pubDate>
+      <description>Use after free in Device Trust in Google Chrome on Mac prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>critical-cvss</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 9.6 CRITICAL] CVE-2026-11113 — Insufficient validation of untrusted input in ANGLE in Google Chrome prior to 14…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11113</link>
+      <guid isPermaLink="false">84ca067b5bd2f172ee00fbedfcb7f6d8</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:16 +0000</pubDate>
+      <description>Insufficient validation of untrusted input in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>critical-cvss</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 9.6 CRITICAL] CVE-2026-11112 — Insufficient validation of untrusted input in Chromoting in Google Chrome on Lin…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11112</link>
+      <guid isPermaLink="false">93ea901bff023aec8d807e10da50e55b</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:16 +0000</pubDate>
+      <description>Insufficient validation of untrusted input in Chromoting in Google Chrome on Linux prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted Chrome Extension. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>critical-cvss</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.1 HIGH] CVE-2026-11111 — Out of bounds read in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a re…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11111</link>
+      <guid isPermaLink="false">6fede0abfb869b6f4998f170a5544ef3</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:16 +0000</pubDate>
+      <description>Out of bounds read in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to perform an out of bounds memory read via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11110 — Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a rem…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11110</link>
+      <guid isPermaLink="false">049da90f7672d525cc337199a1cfec5a</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:16 +0000</pubDate>
+      <description>Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11109 — Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a rem…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11109</link>
+      <guid isPermaLink="false">cdb6e07fb2ee84321c26b32e17d65ddb</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:16 +0000</pubDate>
+      <description>Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 8.8 HIGH] CVE-2026-11108 — Inappropriate implementation in NFC in Google Chrome on Android prior to 149.0.7…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11108</link>
+      <guid isPermaLink="false">2e5fbea4da3d35b4fd8b6b08c50b4db1</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:16 +0000</pubDate>
+      <description>Inappropriate implementation in NFC in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker to perform privilege escalation via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>lpe</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 4.3 MEDIUM] CVE-2026-11107 — Inappropriate implementation in Downloads in Google Chrome prior to 149.0.7827.5…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11107</link>
+      <guid isPermaLink="false">71213577b56c690505f2f6ec270949a1</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:16 +0000</pubDate>
+      <description>Inappropriate implementation in Downloads in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to perform UI spoofing via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11106 — Inappropriate implementation in Media in Google Chrome prior to 149.0.7827.53 al…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11106</link>
+      <guid isPermaLink="false">bd6726b8b5810a61e6033ff69d823524</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:16 +0000</pubDate>
+      <description>Inappropriate implementation in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11105 — Insufficient validation of untrusted input in WebUI in Google Chrome prior to 14…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11105</link>
+      <guid isPermaLink="false">589ad76e8d9019817a18bea19a880969</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:16 +0000</pubDate>
+      <description>Insufficient validation of untrusted input in WebUI in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11104 — Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a rem…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11104</link>
+      <guid isPermaLink="false">7899b117f908858c586f96f5a16aa63f</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:15 +0000</pubDate>
+      <description>Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 7.8 HIGH] CVE-2026-11103 — Inappropriate implementation in Installer in Google Chrome on Windows prior to 1…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11103</link>
+      <guid isPermaLink="false">f06a3d5bb9d465bd7d233658eb8f1439</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:15 +0000</pubDate>
+      <description>Inappropriate implementation in Installer in Google Chrome on Windows prior to 149.0.7827.53 allowed a local attacker to perform OS-level privilege escalation via a malicious file. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>lpe</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-11102 — Inappropriate implementation in Isolated Web Apps in Google Chrome prior to 149.…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11102</link>
+      <guid isPermaLink="false">61bcbef1e661bc57f898820cff34bc3a</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:15 +0000</pubDate>
+      <description>Inappropriate implementation in Isolated Web Apps in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a malicious file. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[MED] [CVSS 6.5 MEDIUM] CVE-2026-11101 — Uninitialized Use in Dawn in Google Chrome on Windows prior to 149.0.7827.53 all…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11101</link>
+      <guid isPermaLink="false">7adfe567f1b3f2292dfd7361143a2e06</guid>
+      <pubDate>Thu, 04 Jun 2026 23:17:15 +0000</pubDate>
+      <description>Uninitialized Use in Dawn in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: Medium)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>medium</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>microsoft</category>
+      <category>chrome</category>
     </item>
   </channel>
 </rss>

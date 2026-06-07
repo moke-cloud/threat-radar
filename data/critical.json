@@ -45,6 +45,26 @@
     ]
   },
   {
+    "id": "352efcfa358c58e2dc6ecc85d14a91d7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-45409 — Internationalized Domain Names in Applications (IDNA) for Python provides support for Internationali…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45409",
+    "summary": "Internationalized Domain Names in Applications (IDNA) for Python provides support for Internationalized Domain Names in Applications (IDNA) and Unicode IDNA Compatibility Processing. In versions prior to 3.15, payloads such as `\"\\u0660\" * N` or `\"\\u30fb\" * N + \"\\u6f22\"` utilize the `valid_contexto` function prior to length rejection, and for high values of `N` will take a long time to process. This is the same issue as CVE-2024-3651, however the original remediation in 2024 was not a complete fix. A specially crafted argument to the `idna.encode()` function could consume significant resources. This may lead to a denial-of-service. Starting in version 3.14, the function rejects long inputs as soon as practicable prior to any further processing to minimize resource consumption. In version 3.15, this approach was extended to lesser used alternate functions (i.e. per-label conversions and codec support). A workaround is available. Domain names cannot exceed 253 characters in length. If this length limit is enforced prior to passing the domain to the `idna.encode()` function, it should no longer consume significant resources. This is triggered by arbitrarily large inputs that would not occur in normal usage, but may be passed to the library assuming there is no preliminary input validation by the higher-level application.",
+    "published": "2026-06-05T23:16:43.343Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-45409",
+      "CVE-2024-3651"
+    ]
+  },
+  {
     "id": "b2ab07307dab113bd0647707115186d0",
     "source": "rapid7",
     "source_name": "Rapid7 Blog",
@@ -118,6 +138,812 @@
     ]
   },
   {
+    "id": "5d7a7f5e304fde7b782c013e73da0117",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11211 — Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11211",
+    "summary": "Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:28.447Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11211"
+    ]
+  },
+  {
+    "id": "ca99daae13cf6aa64adb684f5d7977c9",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11201 — Use after free in ServiceWorker in Google Chrome prior to 149.0.7827.53 allowed …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11201",
+    "summary": "Use after free in ServiceWorker in Google Chrome prior to 149.0.7827.53 allowed an attacker who convinced a user to install a malicious extension to execute arbitrary code via a crafted Chrome Extension. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:27.27Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11201"
+    ]
+  },
+  {
+    "id": "3373aa9dc50de5a714381de865bae34c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11144 — Use after free in Media in Google Chrome prior to 149.0.7827.53 allowed a remote…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11144",
+    "summary": "Use after free in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted video file. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:20.667Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11144"
+    ]
+  },
+  {
+    "id": "5e6919c0e225f572036a21f5a9a40c40",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11116 — Use after free in Chromoting in Google Chrome prior to 149.0.7827.53 allowed a r…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11116",
+    "summary": "Use after free in Chromoting in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via malicious network traffic. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:17.31Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11116"
+    ]
+  },
+  {
+    "id": "61bcbef1e661bc57f898820cff34bc3a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11102 — Inappropriate implementation in Isolated Web Apps in Google Chrome prior to 149.…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11102",
+    "summary": "Inappropriate implementation in Isolated Web Apps in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a malicious file. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:15.76Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11102"
+    ]
+  },
+  {
+    "id": "1b07825df2cd9dd000c0a0cfbaa22312",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11086 — Inappropriate implementation in Dawn in Google Chrome prior to 149.0.7827.53 all…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11086",
+    "summary": "Inappropriate implementation in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:13.447Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11086"
+    ]
+  },
+  {
+    "id": "e7967d2e4a00108bbbd94b082166b649",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11077 — Bad cast in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attack…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11077",
+    "summary": "Bad cast in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:12.41Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11077"
+    ]
+  },
+  {
+    "id": "441948b9cd0da2058f39d159d82c10f0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11076 — Type Confusion in CSS in Google Chrome prior to 149.0.7827.53 allowed a remote a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11076",
+    "summary": "Type Confusion in CSS in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:12.307Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11076"
+    ]
+  },
+  {
+    "id": "a0888f1b75832b291d480ba655751f4f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11074 — Use after free in WebRTC in Google Chrome on Linux prior to 149.0.7827.53 allowe…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11074",
+    "summary": "Use after free in WebRTC in Google Chrome on Linux prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:12.07Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "linux",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11074"
+    ]
+  },
+  {
+    "id": "001bde937a8f1d0a3f9fe187ae08e1c7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-11072 — Use after free in WebView in Google Chrome on Android prior to 149.0.7827.53 all…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11072",
+    "summary": "Use after free in WebView in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to execute arbitrary code via a malicious file. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:11.843Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11072"
+    ]
+  },
+  {
+    "id": "d190427f88db1a9999a35d9835ea461a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11068 — Use after free in WebSockets in Google Chrome prior to 149.0.7827.53 allowed a r…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11068",
+    "summary": "Use after free in WebSockets in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:11.353Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11068"
+    ]
+  },
+  {
+    "id": "585c4ed8de9cfa53b6a5b304613e1275",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11060 — Use after free in Media in Google Chrome on Windows prior to 149.0.7827.53 allow…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11060",
+    "summary": "Use after free in Media in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:10.477Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "microsoft",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11060"
+    ]
+  },
+  {
+    "id": "a9060d28efb21842f3551c7dffa22fbf",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11059 — Use after free in Blink in Google Chrome prior to 149.0.7827.53 allowed a remote…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11059",
+    "summary": "Use after free in Blink in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:10.36Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11059"
+    ]
+  },
+  {
+    "id": "711e2a377ac6a196e89548f87e9d25a9",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11055 — Use after free in ANGLE in Google Chrome on Windows prior to 149.0.7827.53 allow…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11055",
+    "summary": "Use after free in ANGLE in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:09.917Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11055"
+    ]
+  },
+  {
+    "id": "6d1714e9a140e00377db446aec228023",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11054 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11054",
+    "summary": "Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:09.803Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11054"
+    ]
+  },
+  {
+    "id": "2076afba788cfba153abd39a34ddff6c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11050 — Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote at…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11050",
+    "summary": "Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:09.46Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11050"
+    ]
+  },
+  {
+    "id": "86a10acb34aad03390b1c788c540bc75",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11049 — Use after free in Password Manager in Google Chrome prior to 149.0.7827.53 allow…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11049",
+    "summary": "Use after free in Password Manager in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:09.353Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11049"
+    ]
+  },
+  {
+    "id": "862e8c5d7fde8785a5f0fccebfc0ced3",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11046 — Insufficient validation of untrusted input in Media in Google Chrome prior to 14…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11046",
+    "summary": "Insufficient validation of untrusted input in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:09.02Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11046"
+    ]
+  },
+  {
+    "id": "27621d3374405ef22df01ed0389340cd",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11028 — Use after free in Media in Google Chrome on Linux and ChromeOS prior to 149.0.78…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11028",
+    "summary": "Use after free in Media in Google Chrome on Linux and ChromeOS prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:06.813Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "linux",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11028"
+    ]
+  },
+  {
+    "id": "9d061aa4d184930a4ee5b2af80210252",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11003 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11003",
+    "summary": "Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:04.053Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11003"
+    ]
+  },
+  {
+    "id": "57a3645324e526f5e27c2ca18e06e78e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-10991 — Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote at…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10991",
+    "summary": "Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "published": "2026-06-04T23:17:02.533Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-10991"
+    ]
+  },
+  {
+    "id": "3efb8c0dc0e6bd63b8306dc001dd70fc",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-10987 — Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10987",
+    "summary": "Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "published": "2026-06-04T23:17:02.097Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-10987"
+    ]
+  },
+  {
+    "id": "8ea3c5f141036766e308fc714813bea0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-10986 — Integer overflow in Media in Google Chrome prior to 149.0.7827.53 allowed a remo…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10986",
+    "summary": "Integer overflow in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a malicious file. (Chromium security severity: High)",
+    "published": "2026-06-04T23:17:01.98Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-10986"
+    ]
+  },
+  {
+    "id": "ff514cf14a97c116148220d85456fdd6",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-10982 — Use after free in WebXR in Google Chrome prior to 149.0.7827.53 allowed a remote…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10982",
+    "summary": "Use after free in WebXR in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "published": "2026-06-04T23:17:01.523Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-10982"
+    ]
+  },
+  {
+    "id": "08e29e405b36ae82b03268b775af56c2",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-10978 — Use after free in Chromoting in Google Chrome on Windows prior to 149.0.7827.53 …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10978",
+    "summary": "Use after free in Chromoting in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via malicious network traffic. (Chromium security severity: High)",
+    "published": "2026-06-04T23:17:01.06Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "microsoft",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-10978"
+    ]
+  },
+  {
+    "id": "3eda4d0fa375d5410ecd6fe547dae2c0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-10975 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10975",
+    "summary": "Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "published": "2026-06-04T23:17:00.73Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-10975"
+    ]
+  },
+  {
+    "id": "250cd7cda66e0a5c32d45c19d72b58fe",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-10959 — Use after free in Input in Google Chrome on Android prior to 149.0.7827.53 allow…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10959",
+    "summary": "Use after free in Input in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "published": "2026-06-04T23:16:58.907Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-10959"
+    ]
+  },
+  {
+    "id": "3c596fdd8ac2de2673c3190c01613d67",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-10958 — Use after free in Chrome for iOS in Google Chrome on iOS prior to 149.0.7827.53 …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10958",
+    "summary": "Use after free in Chrome for iOS in Google Chrome on iOS prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)",
+    "published": "2026-06-04T23:16:58.787Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-10958"
+    ]
+  },
+  {
+    "id": "f087697f9d1cd0f634a7b63d53d8b440",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-10939 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10939",
+    "summary": "Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "published": "2026-06-04T23:16:56.443Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-10939"
+    ]
+  },
+  {
+    "id": "87913a3bab26e904524967391c058cee",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-10923 — Use after free in WebAppInstalls in Google Chrome on Android prior to 149.0.7827…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10923",
+    "summary": "Use after free in WebAppInstalls in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to execute arbitrary code via a malicious file. (Chromium security severity: High)",
+    "published": "2026-06-04T23:16:54.637Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-10923"
+    ]
+  },
+  {
     "id": "a95073a62a7399522fd23a66272adf40",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -136,6 +962,25 @@
     "score": 67,
     "vendors": [
       "microsoft"
+    ]
+  },
+  {
+    "id": "f1ccc13c0512224c96aa9209e552ffcb",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.5 MEDIUM] CVE-2026-36499 — A missing upper-bound check in the udpif_set_threads() function of Open vSwitch …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36499",
+    "summary": "A missing upper-bound check in the udpif_set_threads() function of Open vSwitch v3.6.90 allows an attacker with OVSDB write access to request an excessive number of handler or revalidation threads. This can cause a denial of service (DoS) via resource exhaustion.",
+    "published": "2026-06-04T19:16:28.563Z",
+    "fetched": "2026-06-07T22:38:06.358219233Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-36499"
     ]
   },
   {
@@ -1009,328 +1854,5 @@
     "cves": [
       "CVE-2026-44724"
     ]
-  },
-  {
-    "id": "6c9e58e7bdac94051429823ee6beb26a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-46099 — In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ipv6: …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46099",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ipv6: fix NOREF dst use in seg6 and rpl lwtunnels\n\nseg6_input_core() and rpl_input() call ip6_route_input() which sets a\nNOREF dst on the skb, then pass it to dst_cache_set_ip6() invoking\ndst_hold() unconditionally.\nOn PREEMPT_RT, ksoftirqd is preemptible and a higher-priority task can\nrelease the underlying pcpu_rt between the lookup and the caching\nthrough a concurrent FIB lookup on a shared nexthop.\nSimplified race sequence:\n\n  ksoftirqd/X                       higher-prio task (same CPU X)\n  -----------                       --------------------------------\n  seg6_input_core(,skb)/rpl_input(skb)\n    dst_cache_get()\n      -> miss\n    ip6_route_input(skb)\n      -> ip6_pol_route(,skb,flags)\n         [RT6_LOOKUP_F_DST_NOREF in flags]\n        -> FIB lookup resolves fib6_nh\n           [nhid=N route]\n        -> rt6_make_pcpu_route()\n           [creates pcpu_rt, refcount=1]\n             pcpu_rt->sernum = fib6_sernum\n             [fib6_sernum=W]\n           -> cmpxchg(fib6_nh.rt6i_pcpu,\n                      NULL, pcpu_rt)\n              [slot was empty, store succeeds]\n      -> skb_dst_set_noref(skb, dst)\n         [dst is pcpu_rt, refcount still 1]\n\n                                    rt_genid_bump_ipv6()\n                                      -> bumps fib6_sernum\n                                         [fib6_sernum from W to Z]\n                                    ip6_route_output()\n                                      -> ip6_pol_route()\n                                        -> FIB lookup resolves fib6_nh\n                                           [nhid=N]\n                                        -> rt6_get_pcpu_route()\n                                             pcpu_rt->sernum != fib6_sernum\n                                             [W <> Z, stale]\n                                          -> prev = xchg(rt6i_pcpu, NULL)\n                                          -> dst_release(prev)\n                                             [prev is pcpu_rt,\n                                              refcount 1->0, dead]\n\n    dst = skb_dst(skb)\n    [dst is the dead pcpu_rt]\n    dst_cache_set_ip6(dst)\n      -> dst_hold() on dead dst\n      -> WARN / use-after-free\n\nFor the race to occur, ksoftirqd must be preemptible (PREEMPT_RT without\nPREEMPT_RT_NEEDS_BH_LOCK) and a concurrent task must be able to release\nthe pcpu_rt. Shared nexthop objects provide such a path, as two routes\npointing to the same nhid share the same fib6_nh and its rt6i_pcpu\nentry.\n\nFix seg6_input_core() and rpl_input() by calling skb_dst_force() after\nip6_route_input() to force the NOREF dst into a refcounted one before\ncaching.\nThe output path is not affected as ip6_route_output() already returns a\nrefcounted dst.",
-    "published": "2026-05-27T14:17:31.557Z",
-    "fetched": "2026-05-31T22:32:15.949500975Z",
-    "tags": [
-      "linux",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "linux"
-    ],
-    "cves": [
-      "CVE-2026-46099"
-    ]
-  },
-  {
-    "id": "66a716bd2e99587fecbc70f6da13db80",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.1 HIGH] CVE-2026-46054 — In the Linux kernel, the following vulnerability has been resolved:\n\nselinux: fi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46054",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nselinux: fix overlayfs mmap() and mprotect() access checks\n\nThe existing SELinux security model for overlayfs is to allow access if\nthe current task is able to access the top level file (the \"user\" file)\nand the mounter's credentials are sufficient to access the lower\nlevel file (the \"backing\" file).  Unfortunately, the current code does\nnot properly enforce these access controls for both mmap() and mprotect()\noperations on overlayfs filesystems.\n\nThis patch makes use of the newly created security_mmap_backing_file()\nLSM hook to provide the missing backing file enforcement for mmap()\noperations, and leverages the backing file API and new LSM blob to\nprovide the necessary information to properly enforce the mprotect()\naccess controls.",
-    "published": "2026-05-27T14:17:25.043Z",
-    "fetched": "2026-05-31T22:32:15.949500975Z",
-    "tags": [
-      "linux",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "linux"
-    ],
-    "cves": [
-      "CVE-2026-46054"
-    ]
-  },
-  {
-    "id": "dfc78a0b563edcaa6f9de6019f1a5e87",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-36044 — @pensar/apex <= 0.0.58 is vulnerable to OS command injection via the smart_enume…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36044",
-    "summary": "@pensar/apex <= 0.0.58 is vulnerable to OS command injection via the smart_enumerate tool. The createSmartEnumerateTool() function in src/core/agent/tools.ts constructs a shell command by concatenating unsanitized values from the extensions array and url parameter into a string passed to Node.js child_process.exec(). Because exec() spawns a shell, shell metacharacters in those values are interpreted by the host shell, resulting in arbitrary OS command execution with the privileges of the running process.",
-    "published": "2026-05-27T14:16:45.143Z",
-    "fetched": "2026-05-30T22:30:51.650700769Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-36044"
-    ]
-  },
-  {
-    "id": "867b8abb9f05fae180af480d8494ed41",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA gives feds 4 days to patch actively exploited cPanel plugin flaw",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-gives-feds-4-days-to-patch-actively-exploited-cpanel-plugin-flaw/",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has given U.S. federal agencies four days to secure their servers against a critical vulnerability in the LiteSpeed cPanel user-end plugin, which is actively being exploited in attacks. [...]",
-    "published": "2026-05-27T10:06:17Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 67
-  },
-  {
-    "id": "62879e857797cf19451288a22ed11287",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2023-52945 — Uncontrolled search path element vulnerability in OpenSSL DLL component in Synol…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-52945",
-    "summary": "Uncontrolled search path element vulnerability in OpenSSL DLL component in Synology BeeDrive for desktop before 1.3.2-13814 allows local users to execute arbitrary code via unspecified vectors.",
-    "published": "2026-05-27T09:16:24.777Z",
-    "fetched": "2026-05-30T22:30:51.650700769Z",
-    "tags": [
-      "rce",
-      "openssl",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "synology",
-      "openssl"
-    ],
-    "cves": [
-      "CVE-2023-52945"
-    ]
-  },
-  {
-    "id": "0603daf1480af3e5c5ea86c6f120b07b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.4 HIGH] CVE-2026-49014 — In GDAL 3.1.0 through 3.13.0, scanForGeometryContainers in the netCDF driver all…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49014",
-    "summary": "In GDAL 3.1.0 through 3.13.0, scanForGeometryContainers in the netCDF driver allows code execution via a stack-based buffer overflow. It reads a geometry attribute into a fixed-size stack buffer without validating the attribute length. The attacker embeds the exploit as an oversized geometry attribute in a crafted NetCDF file. This achieves arbitrary code execution on the server running GDAL. This is in frmts/netcdf/netcdfsg.cpp.",
-    "published": "2026-05-27T02:16:34.18Z",
-    "fetched": "2026-05-30T22:30:51.650700769Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-49014"
-    ]
-  },
-  {
-    "id": "ae25e47687850961c7c5c78676a40f3c",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-48027 — Nx Nx Console: Nx Console Embedded Malicious Code Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48027",
-    "summary": "Nx Console contains an embedded malicious code vulnerability that allowed a malicious version of Nx Console to be published. The compromised extension fetched an obfuscated payload that could harvested credentials from multiple sources on disk and in memory.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-10",
-    "published": "2026-05-27T00:00:00Z",
-    "fetched": "2026-06-03T23:17:25.281550817Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "ransomware"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "nx"
-    ],
-    "cves": [
-      "CVE-2026-48027"
-    ]
-  },
-  {
-    "id": "8f949879a279a6e47abad0967e45848b",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-45321 — TanStack TanStack: TanStack Unspecified Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45321",
-    "summary": "TanStack contains an unspecified vulnerability that allowed malicious versions of the product to be published to the npm registry to publish credential-stealing malware under a trusted identity.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-10",
-    "published": "2026-05-27T00:00:00Z",
-    "fetched": "2026-06-03T23:17:25.281550817Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "ransomware",
-      "malware"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "tanstack"
-    ],
-    "cves": [
-      "CVE-2026-45321"
-    ]
-  },
-  {
-    "id": "68fc84d229ffd2d76951f8c1996d32d8",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-8398 — Daemon Daemon Tools Lite: Daemon Tools Lite Embedded Malicious Code Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8398",
-    "summary": "Daemon Tools contains an unspecified vulnerability that has a high impact on confidentiality, integrity, and availability.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-30",
-    "published": "2026-05-27T00:00:00Z",
-    "fetched": "2026-06-03T23:17:25.281550817Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "daemon"
-    ],
-    "cves": [
-      "CVE-2026-8398"
-    ]
-  },
-  {
-    "id": "ae25e47687850961c7c5c78676a40f3c",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-48027 — Nx Nx Console: Nx Console Embedded Malicious Code Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48027",
-    "summary": "Nx Console contains an embedded malicious code vulnerability that allowed a malicious version of Nx Console to be published. The compromised extension fetched an obfuscated payload that could harvested credentials from multiple sources on disk and in memory.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-10",
-    "published": "2026-05-27T00:00:00Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "nx"
-    ],
-    "cves": [
-      "CVE-2026-48027"
-    ]
-  },
-  {
-    "id": "8f949879a279a6e47abad0967e45848b",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-45321 — TanStack TanStack: TanStack Unspecified Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45321",
-    "summary": "TanStack contains an unspecified vulnerability that allowed malicious versions of the product to be published to the npm registry to publish credential-stealing malware under a trusted identity.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-10",
-    "published": "2026-05-27T00:00:00Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "malware"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "tanstack"
-    ],
-    "cves": [
-      "CVE-2026-45321"
-    ]
-  },
-  {
-    "id": "68fc84d229ffd2d76951f8c1996d32d8",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-8398 — Daemon Daemon Tools Lite: Daemon Tools Lite Embedded Malicious Code Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8398",
-    "summary": "Daemon Tools contains an unspecified vulnerability that has a high impact on confidentiality, integrity, and availability.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-05-30",
-    "published": "2026-05-27T00:00:00Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "daemon"
-    ],
-    "cves": [
-      "CVE-2026-8398"
-    ]
-  },
-  {
-    "id": "655f493849ca3e7a8a023ef6cf356f6d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-44903 — Prometheus is an open-source monitoring system and time series database. From 2.49.0 to before 3.5.3…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44903",
-    "summary": "Prometheus is an open-source monitoring system and time series database. From 2.49.0 to before 3.5.3 and 3.11.3, in the Prometheus server's legacy web UI (enabled via the command-line flag --enable-feature=old-ui), the histogram heatmap chart view does not escape le label values when inserting them into the HTML for use as axis tick mark labels. An attacker who can inject crafted metrics can execute JavaScript in the browser of any Prometheus user who views the metric in the heatmap chart UI. This vulnerability is fixed in 3.5.3 and 3.11.3.",
-    "published": "2026-05-26T22:16:43.01Z",
-    "fetched": "2026-05-30T22:30:51.650700769Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-44903"
-    ]
-  },
-  {
-    "id": "adb9cbaf5e851493471937251a23e8c5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-44209 — Banks generates meaningful LLM prompts using a template language that makes sens…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44209",
-    "summary": "Banks generates meaningful LLM prompts using a template language that makes sense. Prior to 2.4.2, banks uses jinja2.Environment() (unsandboxed) to render prompt templates. Applications that pass user-supplied strings as the template argument to Prompt() are vulnerable to Server-Side Template Injection (SSTI), which can lead to Remote Code Execution (RCE) on the host system. This vulnerability is fixed in 2.4.2.",
-    "published": "2026-05-26T21:16:37.62Z",
-    "fetched": "2026-05-30T22:30:51.650700769Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-44209"
-    ]
-  },
-  {
-    "id": "04b852ce5b2bffd0d89a676f0adcb99b",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "KnowledgeDeliver flaw exploited as a zero-day to install web shells",
-    "url": "https://www.bleepingcomputer.com/news/security/knowledgedeliver-flaw-exploited-as-a-zero-day-to-install-web-shells/",
-    "summary": "Hackers exploited a critical zero-day vulnerability in a server running the KnowledgeDeliver learning management system (LMS) to deploy the Godzilla web shell. [...]",
-    "published": "2026-05-26T20:07:31Z",
-    "fetched": "2026-05-26T22:49:10.657109462Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67
   }
 ]

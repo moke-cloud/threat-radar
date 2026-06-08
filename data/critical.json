@@ -1,5 +1,127 @@
 [
   {
+    "id": "951908240664da9eecfc622e9f793e40",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Critical Check Point VPN Zero-Day Exploited in the Wild (CVE-2026-50751)",
+    "url": "https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751",
+    "summary": "OverviewOn June 8, 2026, Check Point published a security advisory for CVE-2026-50751, a critical authentication bypass vulnerability affecting Check Point Remote Access VPN, Mobile Access, and Spark Firewall products. The vulnerability affects deployments configured to use the deprecated IKEv1 key exchange protocol where gateways accept legacy Remote Access clients and do not require a machine certificate for connections.CVE-2026-50751, classified as improper authentication (CWE-287), has a CVSS score of 9.3. The vulnerability stems from a logic flow weakness in how Remote Access and Mobile A...",
+    "published": "2026-06-08T17:05:16Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "auth-bypass",
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 81,
+    "cves": [
+      "CVE-2026-50751"
+    ]
+  },
+  {
+    "id": "ad4ae9ba8057ab471f70a821de10e3e2",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Gogs patches critical zero-day enabling remote code execution",
+    "url": "https://www.bleepingcomputer.com/news/security/gogs-patches-critical-zero-day-enabling-remote-code-execution/",
+    "summary": "Gogs has patched a critical security zero-day flaw that can allow attackers to compromise Internet-facing instances and access any repositories (including private ones). [...]",
+    "published": "2026-06-08T16:18:40Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 87
+  },
+  {
+    "id": "d680efa1c8515200afb5a81437b24463",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Check Point links VPN zero-day attacks to Qilin ransomware gang",
+    "url": "https://www.bleepingcomputer.com/news/security/check-point-links-vpn-zero-day-attacks-to-qilin-ransomware-gang/",
+    "summary": "Israeli cybersecurity company Check Point has released security updates to patch a critical flaw affecting Remote Access VPN and Mobile Access deployments, which was exploited in zero-day attacks. [...]",
+    "published": "2026-06-08T13:05:16Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "0day",
+      "ransomware"
+    ],
+    "severity": "critical",
+    "score": 82
+  },
+  {
+    "id": "d67531ac35a7c2a05b82eeaa4d046db4",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-42271 — BerriAI LiteLLM: BerriAI LiteLLM Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42271",
+    "summary": "BerriAI LiteLLM contains a command injection vulnerability that could allow any authenticated user, including holders of low-privilege internal-user keys, to run arbitrary commands on the host.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-22",
+    "published": "2026-06-08T00:00:00Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "berriai"
+    ],
+    "cves": [
+      "CVE-2026-42271"
+    ]
+  },
+  {
+    "id": "7b801b233ce96465ac73b050066b91f5",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-50751 — Check Point Security Gateway: Check Point Security Gateway Improper Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50751",
+    "summary": "Check Point Security Gateway contains an improper authentication vulnerability in IKEv1 key exchange that could allow an unauthenticated remote attacker to bypass user authentication and establish a remote access VPN connection without a valid user password.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-11",
+    "published": "2026-06-08T00:00:00Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "check"
+    ],
+    "cves": [
+      "CVE-2026-50751"
+    ]
+  },
+  {
+    "id": "594fc9d21c4a691527192c72ee128cf3",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Hands on with Intelligent Terminal, an AI-powered Windows Terminal",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/hands-on-with-intelligent-terminal-an-ai-powered-windows-terminal/",
+    "summary": "Microsoft has created an open-source fork of Windows Terminal called \"Intelligent Terminal,\" and it allows you to use AI directly inside Terminal without interfering with the regular session. [...]",
+    "published": "2026-06-07T23:20:02Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
     "id": "fc9ae5e14ef12a5d4b744c784748c561",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -965,6 +1087,86 @@
     ]
   },
   {
+    "id": "2f80de4db2a9c96a26fb39c5cb662d8c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.2 HIGH] CVE-2026-10870 — A flaw has been found in Shibby Tomato 1.28.0000. This affects the function star…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10870",
+    "summary": "A flaw has been found in Shibby Tomato 1.28.0000. This affects the function start_dhcpc of the file /sbin/rc of the component Web UI. This manipulation causes os command injection. It is possible to initiate the attack remotely. The exploit has been published and may be used. This project is superseded by FreshTomato.",
+    "published": "2026-06-04T21:16:30.22Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-10870"
+    ]
+  },
+  {
+    "id": "d79faa151b61596b091978f1b64016f4",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2026-41249 — CoreShop is a Pimcore enhanced eCommerce solution. In versions 5.0.1 through 5.1…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41249",
+    "summary": "CoreShop is a Pimcore enhanced eCommerce solution. In versions 5.0.1 through 5.1.0-beta.1,, the GitHub Actions workflow (`.github/workflows/static.yml`) uses the `pull_request_target` trigger but dangerously checks out the unverified code from the pull request head (`ref: ${{ github.event.pull_request.head.ref }}`). Subsequently, it executes a script (`bin/console`) from this untrusted checkout. This allows any external attacker to achieve Remote Code Execution (RCE) on the GitHub Actions runner simply by submitting a malicious Pull Request. Also known as a \"Pwn Request\" vulnerability. As of time of publication, `pull_request_target` is still in the file.",
+    "published": "2026-06-04T20:16:57.797Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "rce",
+      "github"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "github"
+    ],
+    "cves": [
+      "CVE-2026-41249"
+    ]
+  },
+  {
+    "id": "9a56c47e9f0113c25927e4de86cb5c29",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-41236 — Froxlor is open source server administration software. Version 2.3.6 contains a …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41236",
+    "summary": "Froxlor is open source server administration software. Version 2.3.6 contains a symlink-following flaw in the root-owned SSH key synchronization path used for customer FTP users. The provisioning code appends public keys to `~/.ssh/authorized_keys` under a customer-controlled home directory without verifying that the target path is not a symbolic link. If an attacker controls a shell-enabled customer account and can modify files inside the assigned home directory, the attacker can replace `~/.ssh/authorized_keys` with a symlink to `/root/.ssh/authorized_keys`. When Froxlor's privileged cron task later synchronizes SSH keys, it appends the attacker-supplied key into root's authorized key file, resulting in root SSH access. Version 2.3.7 contains a patch.",
+    "published": "2026-06-04T19:16:29.327Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-41236"
+    ]
+  },
+  {
+    "id": "b3ba4f37e3a32d1290200108627ac048",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-41235 — Froxlor is open source server administration software. Version 2.3.6 lets administrators configure `…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41235",
+    "summary": "Froxlor is open source server administration software. Version 2.3.6 lets administrators configure `system.available_shells` as the approved shell list that customers may assign to FTP users. However, the server-side FTP account handlers do not enforce that whitelist when processing add or edit requests. As a result, an authenticated customer with shell delegation enabled can submit an arbitrary shell such as `/bin/bash` even when the panel UI only offers more restricted choices. In deployments that use the default `nssextrausers` integration, the attacker-controlled shell is then propagated into the system account database, leading to real host shell access. Version 2.3.7 fixes the issue.",
+    "published": "2026-06-04T19:16:29.153Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-41235"
+    ]
+  },
+  {
     "id": "f1ccc13c0512224c96aa9209e552ffcb",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -981,6 +1183,26 @@
     "score": 60,
     "cves": [
       "CVE-2026-36499"
+    ]
+  },
+  {
+    "id": "ddbf9bad1242c14a900d43a0214e783d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-36182 — GNCC GP5 v7.1.76 was discovered to utilize a weak hashing algorithm to protect t…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36182",
+    "summary": "GNCC GP5 v7.1.76 was discovered to utilize a weak hashing algorithm to protect the root password, possibly allowing attackers to obtain root credentials and privileges via a bruteforce attack.",
+    "published": "2026-06-04T16:16:35.763Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-36182"
     ]
   },
   {
@@ -1026,6 +1248,29 @@
     "score": 78,
     "cves": [
       "CVE-2026-45247"
+    ]
+  },
+  {
+    "id": "dc7425f6109eaf2d7197fb7e4c620c92",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-36574 — A DLL hijacking vulnerability in Wassimulator (GitHub) CactusViewer v2.3.0 allow…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36574",
+    "summary": "A DLL hijacking vulnerability in Wassimulator (GitHub) CactusViewer v2.3.0 allows attackers to escalate privileges and execute arbitrary code via a crafted DLL.",
+    "published": "2026-06-03T16:16:28.74Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "rce",
+      "github"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "github"
+    ],
+    "cves": [
+      "CVE-2026-36574"
     ]
   },
   {
@@ -1169,6 +1414,28 @@
     "score": 67
   },
   {
+    "id": "632b413cd6d68e09f68316609bc1f948",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-1784 — The Route OpenShift resource allows to define routes to make pods reachable at a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1784",
+    "summary": "The Route OpenShift resource allows to define routes to make pods reachable at a subdomain through HAProxy. It was found that the checks performed on the spec.path YAML stanza in a Route document was insufficient and could allow a controlled injection of the HAProxy configuration.",
+    "published": "2026-06-02T09:16:15.683Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "redhat"
+    ],
+    "cves": [
+      "CVE-2026-1784"
+    ]
+  },
+  {
     "id": "b536770c62708bfb0370cf536fa29ef5",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -1265,6 +1532,26 @@
     "url": "https://www.rapid7.com/blog/post/ve-cve-2026-0826-critical-unauthenticated-stack-buffer-overflow-hp-poly-vvx-trio-voip-phones-fixed",
     "summary": "OverviewRapid7 Labs conducted a zero-day research project against an HP Poly VVX 450 Voice over Internet Protocol (VoIP) phone. This research resulted in the discovery of a critical unauthenticated stack-based buffer overflow vulnerability, CVE-2026-0826. A remote attacker can leverage CVE-2026-0826 to achieve unauthenticated remote code execution (RCE) with root privileges on a target device. The vulnerability is present in the device's parsing of Session Description Protocol (SDP) attributes for Interactive Connectivity Establishment (ICE). The ICE feature, which is not enabled by default, ...",
     "published": "2026-06-01T13:00:00Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 66,
+    "cves": [
+      "CVE-2026-0826"
+    ]
+  },
+  {
+    "id": "4675231332ada5d06d8c1ef3feecbc3b",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "CVE-2026-0826: Critical unauthenticated stack buffer overflow in HP Poly VVX and Trio VoIP Phones (FIXED)",
+    "url": "https://www.rapid7.com/blog/post/ve-cve-2026-0826-critical-unauthenticated-stack-buffer-overflow-hp-poly-vvx-trio-voip-phones-fixed",
+    "summary": "OverviewRapid7 Labs conducted a zero-day research project against an HP Poly VVX 450 Voice over Internet Protocol (VoIP) phone. This research resulted in the discovery of a critical unauthenticated stack-based buffer overflow vulnerability, CVE-2026-0826. A remote attacker can leverage CVE-2026-0826 to achieve unauthenticated remote code execution (RCE) with root privileges on a target device. The vulnerability is present in the device's parsing of Session Description Protocol (SDP) attributes for Interactive Connectivity Establishment (ICE). The ICE feature, which is not enabled by default, ...",
+    "published": "2026-06-01T13:00:00Z",
     "fetched": "2026-06-01T23:13:23.868515191Z",
     "tags": [
       "rce",
@@ -1316,6 +1603,30 @@
     "score": 68,
     "vendors": [
       "wordpress"
+    ]
+  },
+  {
+    "id": "69fe65ae2bd540cd4a0f7b883e2c97cb",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2024-21182 — Oracle WebLogic Server: Oracle WebLogic Server Unspecified Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21182",
+    "summary": "Oracle WebLogic contains an unspecified vulnerability that could allow an unauthenticated attacker with network access via T3, IIOP to compromise Oracle WebLogic Server. Successful attacks of this vulnerability can result in unauthorized access to critical data or complete access to all Oracle WebLogic Server accessible data.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-04",
+    "published": "2026-06-01T00:00:00Z",
+    "fetched": "2026-06-08T22:56:49.590703608Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "oracle"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "oracle"
+    ],
+    "cves": [
+      "CVE-2024-21182"
     ]
   },
   {
@@ -1559,300 +1870,6 @@
     ],
     "cves": [
       "CVE-2026-0257"
-    ]
-  },
-  {
-    "id": "6ede9bc483cdff19d5932ab2ded6981b",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Rapid7 Observed Exploitation of PAN-OS GlobalProtect Authentication Bypass Vulnerability (CVE-2026-0257)",
-    "url": "https://www.rapid7.com/blog/post/etr-rapid7-observed-exploitation-of-pan-os-globalprotect-authentication-bypass-vulnerability-cve-2026-0257",
-    "summary": "OverviewOn May 13, 2026, Palo Alto Networks published a security advisory for CVE-2026-0257, a medium severity authentication bypass affecting PAN-OS and Prisma Access when a specific configuration is present. Successful exploitation of this vulnerability allows a remote unauthenticated attacker to successfully establish a VPN connection through the GlobalProtect gateway of an affected appliance.Rapid7 MDR identified successful exploitation across numerous customers, however we did not observe any indication of successful lateral movement from the devices. The earliest date for observed exploi...",
-    "published": "2026-05-29T16:49:40Z",
-    "fetched": "2026-05-29T22:51:36.180574564Z",
-    "tags": [
-      "paloalto",
-      "watch",
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "paloalto"
-    ],
-    "cves": [
-      "CVE-2026-0257"
-    ]
-  },
-  {
-    "id": "fedf3b59c069594255529dd6a4d807ee",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.4 MEDIUM] CVE-2026-47694 — WWBN AVideo is an open source video platform. In 29.0 and earlier, AVideo stores…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47694",
-    "summary": "WWBN AVideo is an open source video platform. In 29.0 and earlier, AVideo stores category descriptions from user input and later renders category_description as raw HTML in the Gallery view. A user who can create or edit categories can store JavaScript in a category description, which executes when another user views the affected Gallery/category page. This is a stored XSS in the category description field, separate from previously fixed XSS issues in video titles or comments.",
-    "published": "2026-05-29T14:16:31.997Z",
-    "fetched": "2026-05-31T22:32:15.949500975Z",
-    "tags": [
-      "rce",
-      "xss"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-47694"
-    ]
-  },
-  {
-    "id": "91ca54c048d3fe4d3d8287bd25655dd9",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-0257 — Palo Alto Networks PAN-OS: Palo Alto Networks PAN-OS Authentication Bypass Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0257",
-    "summary": "Palo Alto Networks PAN-OS contains an authentication bypass vulnerability that allows attackers to bypass security restrictions and establish an unauthorized VPN connection.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-01",
-    "published": "2026-05-29T00:00:00Z",
-    "fetched": "2026-06-05T22:42:34.00956939Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "paloalto",
-      "watch",
-      "auth-bypass"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "palo",
-      "paloalto"
-    ],
-    "cves": [
-      "CVE-2026-0257"
-    ]
-  },
-  {
-    "id": "91ca54c048d3fe4d3d8287bd25655dd9",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-0257 — Palo Alto Networks PAN-OS: Palo Alto Networks PAN-OS Authentication Bypass Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0257",
-    "summary": "Palo Alto Networks PAN-OS contains an authentication bypass vulnerability that allows attackers to bypass security restrictions and establish an unauthorized VPN connection.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-01",
-    "published": "2026-05-29T00:00:00Z",
-    "fetched": "2026-05-29T22:51:36.180574564Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "paloalto",
-      "watch",
-      "auth-bypass"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "palo",
-      "paloalto"
-    ],
-    "cves": [
-      "CVE-2026-0257"
-    ]
-  },
-  {
-    "id": "0384232078275727189ce770c97bf206",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "The Gentlemen ransomware: Dissecting a self-propagating Go encryptor",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/",
-    "summary": "Microsoft Threat Intelligence presents a comprehensive analysis of The Gentlemen, a Go-based ransomware deployed by affiliates of Storm-2697 that combines per-file ephemeral key encryption with an aggressive self-propagation module to deploy itself across an entire network using series of simultaneous lateral movement techniques per target. The post The Gentlemen ransomware: Dissecting a self-propagating Go encryptor appeared first on Microsoft Security Blog.",
-    "published": "2026-05-28T15:00:00Z",
-    "fetched": "2026-05-28T22:53:11.656891474Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "ransomware"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "12123459c6133f7230c3d3561732bb50",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "New Gogs zero-day flaw lets hackers get remote code execution",
-    "url": "https://www.bleepingcomputer.com/news/security/new-gogs-zero-day-flaw-lets-hackers-get-remote-code-execution/",
-    "summary": "An unpatched zero-day vulnerability in the Gogs self-hosted Git service can allow attackers to gain remote code execution (RCE) on Internet-facing instances. [...]",
-    "published": "2026-05-28T14:25:43Z",
-    "fetched": "2026-05-28T22:53:11.656891474Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 87
-  },
-  {
-    "id": "95620ff725019856bb606cb65bd9da59",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Microsoft Slams Public Zero-Day Disclosures Amid GitHub Researcher Account Removal",
-    "url": "https://thehackernews.com/2026/05/microsoft-slams-public-zero-day.html",
-    "summary": "Microsoft has come out strongly in favor of Coordinated Vulnerability Disclosure (CVD), urging the research community to share their findings and give affected vendors an opportunity to better understand the impact and address them before they are publicly disclosed. The development comes after a researcher named Chaotic Eclipse (aka Nightmare-Eclipse) disclosed details of multiple zero-day",
-    "published": "2026-05-28T13:53:52Z",
-    "fetched": "2026-05-28T22:53:11.656891474Z",
-    "tags": [
-      "github",
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "github",
-      "microsoft"
-    ]
-  },
-  {
-    "id": "a3d226685933c3591de51a8387cab781",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-46178 — In the Linux kernel, the following vulnerability has been resolved:\n\nRDMA/mlx4: …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46178",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nRDMA/mlx4: Fix resource leak on error in mlx4_ib_create_srq()\n\nSashiko points out that mlx4_srq_alloc() was not undone during error\nunwind, add the missing call to mlx4_srq_free().",
-    "published": "2026-05-28T10:16:33.423Z",
-    "fetched": "2026-05-31T22:32:15.949500975Z",
-    "tags": [
-      "linux",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "linux"
-    ],
-    "cves": [
-      "CVE-2026-46178"
-    ]
-  },
-  {
-    "id": "f2f5a32fa999e95bbd98105f2ac55807",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.1 HIGH] CVE-2026-46149 — In the Linux kernel, the following vulnerability has been resolved:\n\nscsi: targe…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46149",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nscsi: target: configfs: Bound snprintf() return in tg_pt_gp_members_show()\n\ntarget_tg_pt_gp_members_show() formats LUN paths with snprintf() into a\n256-byte stack buffer, then will memcpy() cur_len bytes from that\nbuffer.  snprintf() returns the length the output would have had, which\ncan exceed the buffer size when the fabric WWN is long because iSCSI IQN\nnames can be up to 223 bytes.  The check at the memcpy() site only\nguards the destination page write, not the source read, so memcpy() will\nread past the stack buffer and copy adjacent stack contents to the sysfs\nreader, which when CONFIG_FORTIFY_SOURCE is enabled, fortify_panic()\nwill be triggered.\n\nCommit 27e06650a5ea (\"scsi: target: target_core_configfs: Add length\ncheck to avoid buffer overflow\") added the same bound to the\ntarget_lu_gp_members_show() but the tg_pt_gp variant was missed so\nresolve that here.",
-    "published": "2026-05-28T10:16:30.513Z",
-    "fetched": "2026-05-31T22:32:15.949500975Z",
-    "tags": [
-      "adobe",
-      "linux",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "adobe",
-      "linux"
-    ],
-    "cves": [
-      "CVE-2026-46149"
-    ]
-  },
-  {
-    "id": "7f288d1dd876bd2a504a0f192a818f94",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-46402 — Microsoft UFO open-source framework for intelligent automation across devices an…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46402",
-    "summary": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO uses the user-controlled task_name value directly when constructing session log paths. An authenticated client can supply path traversal sequences in task_name and cause UFO to create log directories and log files outside the intended logs/ directory.",
-    "published": "2026-05-27T23:16:47.7Z",
-    "fetched": "2026-05-31T22:32:15.949500975Z",
-    "tags": [
-      "path-traversal",
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 78,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-46402"
-    ]
-  },
-  {
-    "id": "2d572a471e06b0aba2897cd9eb6cef25",
-    "source": "sans-isc",
-    "source_name": "SANS Internet Storm Center",
-    "category": "news",
-    "title": "Reconstructing an Akira Ransomware Kill Chain from Perimeter and Endpoint Logs, (Wed, May 27th)",
-    "url": "https://isc.sans.edu/diary/rss/33024",
-    "summary": "Most Akira write-ups focus on the ransom note or the encryption routine. By the time those show up the interesting forensic work is over. The questions that matter to defenders sit earlier. How did they get in. When did they get domain admin. What did they touch before the binary fired. Those answers live in the days before impact. They sit in two log sources that almost never get joined. The perimeter firewall and the Windows event channel.&#xd;",
-    "published": "2026-05-27T21:14:03Z",
-    "fetched": "2026-05-27T22:56:37.231562821Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "ransomware"
-    ],
-    "severity": "high",
-    "score": 65,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "ce1209d6093a8ec854e965cac6ea3090",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-45102 — OneUptime is an open-source monitoring and observability platform. Prior to 10.0…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45102",
-    "summary": "OneUptime is an open-source monitoring and observability platform. Prior to 10.0.98, OneUptime uses the Node.js' vm module as an isolation primitive. This API was not designed for that and can be escaped via error objects and infinite recursion. This vulnerability is fixed in 10.0.98.",
-    "published": "2026-05-27T20:16:38.25Z",
-    "fetched": "2026-05-31T22:32:15.949500975Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-45102"
-    ]
-  },
-  {
-    "id": "21c3b15a3aebd0562d1e7b76e23550f2",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-44724 — systeminformation is a System and OS information library for node.js. From 4.17.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44724",
-    "summary": "systeminformation is a System and OS information library for node.js. From 4.17.0 to 5.31.5, on Linux, systeminformation is vulnerable to command injection in networkInterfaces() when an active NetworkManager connection profile name contains shell metacharacters. The vulnerable value is obtained internally from real nmcli device status output. The library sanitizes the network interface name before using it in shell commands, but it does not apply equivalent sanitization to the parsed NetworkManager connection profile name. That unsanitized connectionName is then interpolated into three shell command strings executed through execSync(). This vulnerability is fixed in 5.31.6.",
-    "published": "2026-05-27T20:16:37.617Z",
-    "fetched": "2026-05-31T22:32:15.949500975Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-44724"
     ]
   }
 ]

@@ -1,5 +1,73 @@
 [
   {
+    "id": "8d0d1d1d9481852ba286dde6f1bd9561",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Oracle mitigates PeopleSoft zero-day exploited in data theft attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/oracle-mitigates-peoplesoft-zero-day-exploited-in-data-theft-attacks/",
+    "summary": "Oracle is warning about a critical PeopleSoft Suite zero-day vulnerability tracked as CVE-2026-35273 that allows unauthenticated remote code execution, with the flaw actively exploited in ShinyHunter data theft attacks. [...]",
+    "published": "2026-06-11T19:39:53Z",
+    "fetched": "2026-06-11T23:06:30.985574508Z",
+    "tags": [
+      "oracle",
+      "rce",
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 87,
+    "vendors": [
+      "oracle"
+    ],
+    "cves": [
+      "CVE-2026-35273"
+    ]
+  },
+  {
+    "id": "a37080ca3d739e1341d1b3ce5f949763",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Coupang hit with record $409 million data breach fine in Korea",
+    "url": "https://www.bleepingcomputer.com/news/security/south-korea-hits-coupang-with-record-409-million-fine-over-data-breach/",
+    "summary": "​​The Personal Information Protection Commission (PIPC), South Korea's data protection regulator, has fined e-commerce giant Coupang a record 624.6 billion won (roughly $409 million) following a massive data breach affecting more than 37 million customers [...]",
+    "published": "2026-06-11T12:52:41Z",
+    "fetched": "2026-06-11T23:06:30.985574508Z",
+    "tags": [
+      "rce",
+      "breach"
+    ],
+    "severity": "high",
+    "score": 72
+  },
+  {
+    "id": "40139fbd4011ac1502f4186c7da11cc4",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-10520 — Ivanti Sentry: Ivanti Sentry OS Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10520",
+    "summary": "Ivanti Sentry (formerly known as MobileIron Sentry) contains an OS command injection vulnerability which could allow a remote unauthenticated user to achieve root-level remote code execution. This vulnerability can be successfully exploited in cases where the Sentry appliance is in an unmanaged state with its endpoints externally reachable. The use of mTLS with EPMM or restricted HTTPS access through Neurons for MDM makes interfaces inaccessible to external actors.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-14",
+    "published": "2026-06-11T00:00:00Z",
+    "fetched": "2026-06-11T23:06:30.985574508Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "ivanti",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "ivanti"
+    ],
+    "cves": [
+      "CVE-2026-10520"
+    ]
+  },
+  {
     "id": "5170fb2401d4f3ca46c0ddc199536354",
     "source": "msrc",
     "source_name": "Microsoft Security Blog",
@@ -592,6 +660,28 @@
     ]
   },
   {
+    "id": "99b8356171c6d46a7f80dfb0a921d92a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-21837 — HCL Digital Experience is affected by an OS command injection vulnerability in t…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21837",
+    "summary": "HCL Digital Experience is affected by an OS command injection vulnerability in the Digital Asset Management API.  An attacker may execute arbitrary operating system commands, typically inheriting the privileges of the vulnerable application, which could possibly lead to a complete system takeover and data compromise.",
+    "published": "2026-06-05T07:16:30.027Z",
+    "fetched": "2026-06-11T23:06:30.985574508Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "hcltech"
+    ],
+    "cves": [
+      "CVE-2026-21837"
+    ]
+  },
+  {
     "id": "e0a7f1bca9361161788489f151c08814",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -617,6 +707,34 @@
     ]
   },
   {
+    "id": "51433f8add2f880d9242137a71811bf6",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11279 — Out of bounds read in DevTools in Google Chrome prior to 149.0.7827.53 allowed a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11279",
+    "summary": "Out of bounds read in DevTools in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
+    "published": "2026-06-05T00:17:05.14Z",
+    "fetched": "2026-06-11T23:06:30.985574508Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11279"
+    ]
+  },
+  {
     "id": "1585100a6a654caeeb39cedd5f3c6fdc",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -638,6 +756,58 @@
     ],
     "cves": [
       "CVE-2026-28318"
+    ]
+  },
+  {
+    "id": "9e4843e8edef1453a20604161a956c14",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-20245 — A vulnerability in the CLI of Cisco Catalyst SD-WAN Controller, formerly SD-WAN …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20245",
+    "summary": "A vulnerability in the CLI of Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, and Cisco Catalyst SD-WAN Validator, formerly SD-WAN vBond, could allow an authenticated, local attacker to execute arbitrary commands as root by supplying a crafted file to the affected system.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by uploading a crafted file to the affected system. A successful exploit could allow the attacker to perform command injection attacks on an affected system and elevate their privileges as the root user.&nbsp;\r\nTo exploit this vulnerability, the attacker must have netadmin privileges on the affected system. This would require valid credentials or exploitation of  or . Cisco is not aware of successful exploitation by other methods. Cisco has observed limited cases where the exploitation of this bug resulted in a configuration change pushed to edge devices.\r\nCisco recommends that customers upgrade to the fixed software that is documented in the  that was published on May 14, 2026, and verify the configuration of the edge devices.",
+    "published": "2026-06-04T23:17:31.763Z",
+    "fetched": "2026-06-11T23:06:30.985574508Z",
+    "tags": [
+      "rce",
+      "cisco",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20245"
+    ]
+  },
+  {
+    "id": "62bc0364cf1ac7bdec3f1e93601a9c6b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-11230 — Use after free in Extensions in Google Chrome prior to 149.0.7827.53 allowed a r…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11230",
+    "summary": "Use after free in Extensions in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
+    "published": "2026-06-04T23:17:30.817Z",
+    "fetched": "2026-06-11T23:06:30.985574508Z",
+    "tags": [
+      "rce",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "apple",
+      "linux",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-11230"
     ]
   },
   {
@@ -1610,235 +1780,5 @@
     "cves": [
       "CVE-2026-45495"
     ]
-  },
-  {
-    "id": "9e5e87792c716d4206b10793b28d043f",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "CISA Adds Exploited Magento RCE Flaw CVE-2026-45247 to KEV Catalog",
-    "url": "https://thehackernews.com/2026/06/cisa-adds-exploited-magento-rce-flaw.html",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a critical flaw impacting Mirasvit Cache Warmer, a popular Magento full-page cache extension, to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active exploitation in the wild. The vulnerability, tracked as CVE-2026-45247 (CVSS score: 9.8), is a case of deserialization of untrusted",
-    "published": "2026-06-03T16:30:00Z",
-    "fetched": "2026-06-04T22:53:06.464314209Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 78,
-    "cves": [
-      "CVE-2026-45247"
-    ]
-  },
-  {
-    "id": "dc7425f6109eaf2d7197fb7e4c620c92",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-36574 — A DLL hijacking vulnerability in Wassimulator (GitHub) CactusViewer v2.3.0 allow…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36574",
-    "summary": "A DLL hijacking vulnerability in Wassimulator (GitHub) CactusViewer v2.3.0 allows attackers to escalate privileges and execute arbitrary code via a crafted DLL.",
-    "published": "2026-06-03T16:16:28.74Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "rce",
-      "github"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "github"
-    ],
-    "cves": [
-      "CVE-2026-36574"
-    ]
-  },
-  {
-    "id": "fad755f29eeec5d782ac5ae46adf4855",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Acer working to patch max severity zero-days in Wave 7 routers",
-    "url": "https://www.bleepingcomputer.com/news/security/acer-warns-of-max-severity-zero-days-affecting-wave-7-routers/",
-    "summary": "Acer is working to address two maximum-severity zero-day vulnerabilities affecting its Wave 7 mesh routers. [...]",
-    "published": "2026-06-03T11:35:47Z",
-    "fetched": "2026-06-03T23:17:25.281550817Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67
-  },
-  {
-    "id": "a369cf2de70095cc37e9159c2c4f155d",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "VS Code zero-day lets hackers steal GitHub tokens in one click",
-    "url": "https://www.bleepingcomputer.com/news/security/vs-code-zero-day-lets-hackers-steal-github-tokens-in-one-click/",
-    "summary": "A security researcher has released exploit code for a Visual Studio Code (VS Code) zero-day vulnerability that allows attackers to steal GitHub authentication tokens by tricking users into clicking a link. [...]",
-    "published": "2026-06-03T06:50:30Z",
-    "fetched": "2026-06-03T23:17:25.281550817Z",
-    "tags": [
-      "github",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "github"
-    ]
-  },
-  {
-    "id": "8335e31d85a07bfeeb1f069a8cd895f2",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "Preinstall to persistence: Inside the Red Hat npm Miasma credential-stealing campaign",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/02/preinstall-persistence-inside-red-hat-npm-miasma-credential-stealing-campaign/",
-    "summary": "A large-scale npm supply chain attack compromised over 90 versions of @redhat-cloud-services packages, silently infecting CI/CD environments and developer systems. The malicious code steals credentials from GitHub, cloud platforms, and local machines, then spreads like a worm by republishing trusted packages. Discover how the attack works, what data is at risk, and the steps you can take to protect your organization. The post Preinstall to persistence: Inside the Red Hat npm Miasma credential-stealing campaign appeared first on Microsoft Security Blog.",
-    "published": "2026-06-03T04:45:06Z",
-    "fetched": "2026-06-10T23:08:19.142701137Z",
-    "tags": [
-      "github",
-      "microsoft",
-      "watch",
-      "supply-chain"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "github",
-      "microsoft"
-    ]
-  },
-  {
-    "id": "8335e31d85a07bfeeb1f069a8cd895f2",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "Preinstall to persistence: Inside the Red Hat npm Miasma credential-stealing campaign",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/02/preinstall-persistence-inside-red-hat-npm-miasma-credential-stealing-campaign/",
-    "summary": "A large-scale npm supply chain attack compromised over 90 versions of @redhat-cloud-services packages, silently infecting CI/CD environments and developer systems. The malicious code steals credentials from GitHub, cloud platforms, and local machines, then spreads like a worm by republishing trusted packages. Discover how the attack works, what data is at risk, and the steps you can take to protect your organization. The post Preinstall to persistence: Inside the Red Hat npm Miasma credential-stealing campaign appeared first on Microsoft Security Blog.",
-    "published": "2026-06-03T04:45:06Z",
-    "fetched": "2026-06-03T23:17:25.281550817Z",
-    "tags": [
-      "github",
-      "microsoft",
-      "watch",
-      "supply-chain"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "github",
-      "microsoft"
-    ]
-  },
-  {
-    "id": "7d51fc61e6e9079a054b659382d24e3d",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-45247 — Mirasvit Mirasvit Full Page Cache Warmer: Mirasvit Full Page Cache Warmer Deserialization of Untrusted Data Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45247",
-    "summary": "Mirasvit Full Page Cache Warmer contains a deserialization of untrusted data vulnerability that could allow unauthenticated attackers to achieve remote code execution by supplying a crafted serialized PHP object in the CacheWarmer cookie.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-06",
-    "published": "2026-06-03T00:00:00Z",
-    "fetched": "2026-06-10T23:08:19.142701137Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "mirasvit"
-    ],
-    "cves": [
-      "CVE-2026-45247"
-    ]
-  },
-  {
-    "id": "7d51fc61e6e9079a054b659382d24e3d",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-45247 — Mirasvit Mirasvit Full Page Cache Warmer: Mirasvit Full Page Cache Warmer Deserialization of Untrusted Data Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45247",
-    "summary": "Mirasvit Full Page Cache Warmer contains a deserialization of untrusted data vulnerability that could allow unauthenticated attackers to achieve remote code execution by supplying a crafted serialized PHP object in the CacheWarmer cookie.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-06",
-    "published": "2026-06-03T00:00:00Z",
-    "fetched": "2026-06-03T23:17:25.281550817Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "mirasvit"
-    ],
-    "cves": [
-      "CVE-2026-45247"
-    ]
-  },
-  {
-    "id": "d23fa9698e240ba3713d1ab845ee15a4",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Google June 2026 Android Update Patches 124 Flaws, One Actively Exploited",
-    "url": "https://thehackernews.com/2026/06/google-june-2026-android-update-patches.html",
-    "summary": "Google on Monday released patches for 124 security vulnerabilities impacting its Android operating system for the month of June 2026, including one high-severity flaw in the Framework component that has come under active exploitation. Tracked as CVE-2025-48595 (CVSS score: 8.4), the security flaw has been described as a case of privilege escalation without requiring any user interaction. The",
-    "published": "2026-06-02T18:46:00Z",
-    "fetched": "2026-06-02T23:15:46.820406232Z",
-    "tags": [
-      "lpe",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 66,
-    "cves": [
-      "CVE-2025-48595"
-    ]
-  },
-  {
-    "id": "4123802b5e7f992825ea1d95924c9826",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA flags two-year-old Oracle flaw as actively exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-weblogic-flaw/",
-    "summary": "CISA has ordered government agencies to secure their systems against a high-severity Oracle WebLogic Server vulnerability that was patched two years ago and is now actively exploited in attacks. [...]",
-    "published": "2026-06-02T12:40:33Z",
-    "fetched": "2026-06-02T23:15:46.820406232Z",
-    "tags": [
-      "oracle",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "oracle"
-    ]
-  },
-  {
-    "id": "bb2e7207bd9a38b0b3412e7bd510e21c",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Google fixes one actively exploited Android zero-day, 124 flaws",
-    "url": "https://www.bleepingcomputer.com/news/security/google-fixes-one-actively-exploited-android-zero-day-124-flaws/",
-    "summary": "Google has released the June 2026 Android security patches to address 124 vulnerabilities, including one zero-day flaw exploited in targeted attacks. [...]",
-    "published": "2026-06-02T11:10:15Z",
-    "fetched": "2026-06-02T23:15:46.820406232Z",
-    "tags": [
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67
   }
 ]

@@ -1,5 +1,91 @@
 [
   {
+    "id": "5f26bff3cdadd4b03c7d46eb60dc9d13",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Active Exploitation of Oracle PeopleSoft Zero-Day (CVE-2026-35273)",
+    "url": "https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273",
+    "summary": "OverviewOn June 10, 2026, Oracle published a security alert for CVE-2026-35273, a critical vulnerability in the Updates Environment Management component of PeopleSoft Enterprise PeopleTools. Oracle released an out-of-band patch the same day as the advisory, underscoring the urgency of remediation. The vulnerability has a CVSSv3.1 score of 9.8 and is remotely exploitable without authentication. Per the vendor advisory, successful exploitation may result in remote code execution (RCE). TrendAI has classified the underlying flaw as a server-side request forgery (CWE-918). PeopleTools versions 8.6...",
+    "published": "2026-06-12T13:43:04Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "oracle",
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 81,
+    "vendors": [
+      "oracle"
+    ],
+    "cves": [
+      "CVE-2026-35273"
+    ]
+  },
+  {
+    "id": "e0432a76da93fbc4003af431025491b1",
+    "source": "trailofbits",
+    "source_name": "Trail of Bits Blog",
+    "category": "research",
+    "title": "Factoring \"short-sleeve\" RSA keys with polynomials",
+    "url": "https://blog.trailofbits.com/2026/06/12/factoring-short-sleeve-rsa-keys-with-polynomials/",
+    "summary": "What happens when the bits of an RSA private key are heavily biased toward 0 instead of being randomly generated? The public key’s bits could be biased enough for us to detect these incorrectly generated keys in the wild. Together with Hanno Böck of the badkeys project, we found hundreds of unique keys that not only have this property, but can be quickly factored. We also found the bug that led to many of these keys and analyzed historical data to track the issue over time. Surprisingly, the pattern of 0 bits is often highly structured, allowing us to develop a powerful polynomial-based cry...",
+    "published": "2026-06-12T11:00:00Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 61
+  },
+  {
+    "id": "6e8428a2775557e9adc4dc4e77170e8f",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA orders feds to patch actively exploited Ivanti flaw by Sunday",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-gives-feds-3-days-to-patch-ivanti-flaw-exploited-in-attacks/",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) ordered government agencies to patch an actively exploited Ivanti Sentry flaw within three days, as mandated by the newly issued Binding Operational Directive (BOD) 26-04. [...]",
+    "published": "2026-06-12T08:26:55Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "ivanti",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "ivanti"
+    ]
+  },
+  {
+    "id": "fb55ea031335e4a47aba77df706bb2c2",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-35273 — Oracle  PeopleSoft Enterprise PeopleTools: Oracle PeopleSoft Enterprise PeopleTools Missing Authentication for Critical Function Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35273",
+    "summary": "Oracle PeopleSoft Enterprise PeopleTools contains a missing authentication for critical function vulnerability which could allow an unauthenticated attacker to obtain takeover of PeopleSoft Enterprise PeopleTools.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-15",
+    "published": "2026-06-12T00:00:00Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "ransomware",
+      "oracle"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "oracle"
+    ],
+    "cves": [
+      "CVE-2026-35273"
+    ]
+  },
+  {
     "id": "8d0d1d1d9481852ba286dde6f1bd9561",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -289,6 +375,316 @@
     ]
   },
   {
+    "id": "a133920df13e088643349eb8c22ddaaa",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.0 HIGH] CVE-2026-45597 — Concurrent execution using shared resource with improper synchronization ('race …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45597",
+    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in UI Automation Manager (uiamanager.dll) allows an authorized attacker to elevate privileges locally.",
+    "published": "2026-06-09T17:17:27.897Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-45597"
+    ]
+  },
+  {
+    "id": "6af6b068833b8a8fcb224c03d615566a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.4 HIGH] CVE-2026-45458 — Access of resource using incompatible type ('type confusion') in Microsoft Offic…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45458",
+    "summary": "Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.",
+    "published": "2026-06-09T17:17:20.06Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-45458"
+    ]
+  },
+  {
+    "id": "ad67446b96c44f8fd6974ecc59488dc2",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.4 HIGH] CVE-2026-45456 — Access of resource using incompatible type ('type confusion') in Microsoft Offic…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45456",
+    "summary": "Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.",
+    "published": "2026-06-09T17:17:19.79Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-45456"
+    ]
+  },
+  {
+    "id": "774d5deab328fbf24f19b327bd898dde",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-42991 — Concurrent execution using shared resource with improper synchronization ('race …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42991",
+    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Push Notifications allows an authorized attacker to elevate privileges locally.",
+    "published": "2026-06-09T17:17:15.183Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-42991"
+    ]
+  },
+  {
+    "id": "722c5796b4a3f64c8851e2bc3d532543",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-42979 — Concurrent execution using shared resource with improper synchronization ('race …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42979",
+    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Push Notifications allows an authorized attacker to elevate privileges locally.",
+    "published": "2026-06-09T17:17:13.697Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-42979"
+    ]
+  },
+  {
+    "id": "dea2dcc6955c79455faf5dcfe3be8b53",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.5 MEDIUM] CVE-2026-42971 — Use of uninitialized resource in Windows Push Notifications allows an authorized…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42971",
+    "summary": "Use of uninitialized resource in Windows Push Notifications allows an authorized attacker to disclose information locally.",
+    "published": "2026-06-09T17:17:12.65Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-42971"
+    ]
+  },
+  {
+    "id": "2776658ddd65aa70d45a147b0fcd2bb7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.5 MEDIUM] CVE-2026-42970 — Use of uninitialized resource in Windows Push Notifications allows an authorized…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42970",
+    "summary": "Use of uninitialized resource in Windows Push Notifications allows an authorized attacker to disclose information locally.",
+    "published": "2026-06-09T17:17:12.463Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-42970"
+    ]
+  },
+  {
+    "id": "675e5dbf78873ba23c0fe8e1d4edd447",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.5 MEDIUM] CVE-2026-42969 — Use of uninitialized resource in Windows Push Notifications allows an authorized…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42969",
+    "summary": "Use of uninitialized resource in Windows Push Notifications allows an authorized attacker to disclose information locally.",
+    "published": "2026-06-09T17:17:12.303Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-42969"
+    ]
+  },
+  {
+    "id": "bfe661158d5f5cc1c5b65bf5f09d48bc",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.0 HIGH] CVE-2026-42912 — Concurrent execution using shared resource with improper synchronization ('race …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42912",
+    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Telephony Service allows an authorized attacker to elevate privileges locally.",
+    "published": "2026-06-09T17:17:11.27Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-42912"
+    ]
+  },
+  {
+    "id": "f574a1ed7dfa98027fc4dcec64e71009",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.0 HIGH] CVE-2026-42836 — Concurrent execution using shared resource with improper synchronization ('race …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42836",
+    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Function Discovery Service (fdwsd.dll) allows an authorized attacker to elevate privileges locally.",
+    "published": "2026-06-09T17:17:09.267Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-42836"
+    ]
+  },
+  {
+    "id": "a6ccd81bc0e83b7fe150197b92699a75",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-25089 — A improper neutralization of special elements used in an os command ('os command…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25089",
+    "summary": "A improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet FortiSandbox 5.0.0 through 5.0.5, FortiSandbox 4.4.0 through 4.4.8, FortiSandbox 4.2 all versions, FortiSandbox Cloud 5.0.4 through 5.0.5, FortiSandbox PaaS 5.0.4 through 5.0.5 may allow an unauthenticated attacker to execute unauthorized commands via specifically crafted HTTP requests",
+    "published": "2026-06-09T16:16:39.943Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "fortinet",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "fortinet"
+    ],
+    "cves": [
+      "CVE-2026-25089"
+    ]
+  },
+  {
+    "id": "cd7eef9c79f08f7fb6893af810649273",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 10.0 CRITICAL] CVE-2026-10520 — An OS Command Injection vulnerability in Ivanti Sentry before the R10.5.2, R…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10520",
+    "summary": "An OS Command Injection vulnerability in Ivanti Sentry before the R10.5.2, R10.6.2 and R10.7.1 versions allows a remote unauthenticated user to achieve root-level remote code execution",
+    "published": "2026-06-09T16:16:35.7Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "ivanti",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "ivanti"
+    ],
+    "cves": [
+      "CVE-2026-10520"
+    ]
+  },
+  {
+    "id": "84a137ba4935cde530597963a1af357f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 4.9 MEDIUM] CVE-2026-11790 — A flaw was found in 389 Directory Server. The PBKDF2-SHA256 password storage plu…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11790",
+    "summary": "A flaw was found in 389 Directory Server. The PBKDF2-SHA256 password storage plugin does not enforce an upper bound on the iteration count extracted from stored password hashes. A privileged attacker who can modify a user's password hash can cause excessive CPU consumption during authentication, resulting in denial of service.",
+    "published": "2026-06-09T14:16:37.197Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "redhat"
+    ],
+    "cves": [
+      "CVE-2026-11790"
+    ]
+  },
+  {
     "id": "8ba9ad7ef1e80f4c6ad514ad0bc59fec",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -311,6 +707,52 @@
     ],
     "cves": [
       "CVE-2026-11645"
+    ]
+  },
+  {
+    "id": "4f41a24bf586e563156b15189ea88e65",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-46749 — A vulnerability has been identified in SINEC INS (All versions < V1.0 SP2 Update…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46749",
+    "summary": "A vulnerability has been identified in SINEC INS (All versions < V1.0 SP2 Update 6). The affected application uses a password hashing implementation with a static, hardcoded salt shared across all users and installations, and is configured with an insufficient number of iterations. This could allow an attacker to efficiently recover user passwords using brute-force or precomputed attacks, potentially resulting in unauthorized access.",
+    "published": "2026-06-09T10:16:44.41Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "siemens"
+    ],
+    "cves": [
+      "CVE-2026-46749"
+    ]
+  },
+  {
+    "id": "3c0c9125ebf00268531ad84191fdcb35",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.5 MEDIUM] CVE-2026-49818 — The Apache Airflow Samba provider's `GCSToSambaOperator` joined GCS object names…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49818",
+    "summary": "The Apache Airflow Samba provider's `GCSToSambaOperator` joined GCS object names to the SMB destination path without a containment check, so an object named with `../` segments resolved a write path outside the configured `destination_path`. An attacker able to write objects into the source GCS bucket — typically an external data producer distinct from the trusted DAG author — could write files to arbitrary locations on the Samba target when the operator ran. Upgrade apache-airflow-providers-samba to 4.12.6 or later, which validates the resolved destination stays within `destination_path`.",
+    "published": "2026-06-09T09:16:30.443Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "apache",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-49818"
     ]
   },
   {
@@ -485,6 +927,51 @@
     ],
     "severity": "critical",
     "score": 87
+  },
+  {
+    "id": "066fae386784e4b9a0e8b1678e9cac8d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-46442 — Flowise is a drag & drop user interface to build a customized large language mod…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46442",
+    "summary": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to version 3.1.2, POST /api/v1/node-custom-function lacks route-level authorization, allowing any authenticated user or API key to submit arbitrary JavaScript to the Custom JS Function node. When E2B_APIKEY is not configured — the common deployment case — Flowise executes this code inside a NodeVM sandbox. This sandbox can be escaped, allowing an attacker to reach the host process object and execute system commands via child_process. The result is authenticated remote code execution on the Flowise server host. This issue has been patched in version 3.1.2.",
+    "published": "2026-06-08T16:16:41.347Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "vendors": [
+      "flowiseai"
+    ],
+    "cves": [
+      "CVE-2026-46442"
+    ]
+  },
+  {
+    "id": "a474ec95933dd3a3659dd869718d4d14",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-42863 — Flowise is a drag & drop user interface to build a customized large language mod…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42863",
+    "summary": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to version 3.1.2, a mass assignment vulnerability exists in the chatflow update endpoint of FlowiseAI. The endpoint allows clients to modify server-controlled properties such as deployed, isPublic, workspaceId, createdDate, and updatedDate when updating a chatflow object. Due to missing server-side validation and authorization checks, an authenticated user can manipulate internal attributes of a chatflow and reassign it to another workspace. This allows cross-workspace resource reassignment and unauthorized modification of deployment and visibility settings. This issue has been patched in version 3.1.2.",
+    "published": "2026-06-08T16:16:39.82Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "flowiseai"
+    ],
+    "cves": [
+      "CVE-2026-42863"
+    ]
   },
   {
     "id": "d680efa1c8515200afb5a81437b24463",
@@ -732,6 +1219,30 @@
     ],
     "cves": [
       "CVE-2026-11279"
+    ]
+  },
+  {
+    "id": "1585100a6a654caeeb39cedd5f3c6fdc",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-28318 — SolarWinds Serv-U: SolarWinds Serv-U Uncontrolled Resource Consumption Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28318",
+    "summary": "SolarWinds Serv-U contains an uncontrolled resource consumption vulnerability that allows specially crafted POST requests using the Content-Encoding: deflate header to crash the Serv-U service without authentication.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-19",
+    "published": "2026-06-05T00:00:00Z",
+    "fetched": "2026-06-12T22:57:46.90334405Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "solarwinds"
+    ],
+    "cves": [
+      "CVE-2026-28318"
     ]
   },
   {
@@ -1289,496 +1800,6 @@
     ],
     "cves": [
       "CVE-2026-11046"
-    ]
-  },
-  {
-    "id": "27621d3374405ef22df01ed0389340cd",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11028 — Use after free in Media in Google Chrome on Linux and ChromeOS prior to 149.0.78…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11028",
-    "summary": "Use after free in Media in Google Chrome on Linux and ChromeOS prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:06.813Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "linux",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11028"
-    ]
-  },
-  {
-    "id": "9d061aa4d184930a4ee5b2af80210252",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11003 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11003",
-    "summary": "Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:04.053Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11003"
-    ]
-  },
-  {
-    "id": "57a3645324e526f5e27c2ca18e06e78e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-10991 — Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10991",
-    "summary": "Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:02.533Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-10991"
-    ]
-  },
-  {
-    "id": "3efb8c0dc0e6bd63b8306dc001dd70fc",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-10987 — Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10987",
-    "summary": "Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-06-04T23:17:02.097Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-10987"
-    ]
-  },
-  {
-    "id": "8ea3c5f141036766e308fc714813bea0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-10986 — Integer overflow in Media in Google Chrome prior to 149.0.7827.53 allowed a remo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10986",
-    "summary": "Integer overflow in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a malicious file. (Chromium security severity: High)",
-    "published": "2026-06-04T23:17:01.98Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-10986"
-    ]
-  },
-  {
-    "id": "ff514cf14a97c116148220d85456fdd6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-10982 — Use after free in WebXR in Google Chrome prior to 149.0.7827.53 allowed a remote…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10982",
-    "summary": "Use after free in WebXR in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-06-04T23:17:01.523Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-10982"
-    ]
-  },
-  {
-    "id": "08e29e405b36ae82b03268b775af56c2",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-10978 — Use after free in Chromoting in Google Chrome on Windows prior to 149.0.7827.53 …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10978",
-    "summary": "Use after free in Chromoting in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via malicious network traffic. (Chromium security severity: High)",
-    "published": "2026-06-04T23:17:01.06Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "microsoft",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-10978"
-    ]
-  },
-  {
-    "id": "3eda4d0fa375d5410ecd6fe547dae2c0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-10975 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10975",
-    "summary": "Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-06-04T23:17:00.73Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-10975"
-    ]
-  },
-  {
-    "id": "250cd7cda66e0a5c32d45c19d72b58fe",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-10959 — Use after free in Input in Google Chrome on Android prior to 149.0.7827.53 allow…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10959",
-    "summary": "Use after free in Input in Google Chrome on Android prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-06-04T23:16:58.907Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-10959"
-    ]
-  },
-  {
-    "id": "3c596fdd8ac2de2673c3190c01613d67",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-10958 — Use after free in Chrome for iOS in Google Chrome on iOS prior to 149.0.7827.53 …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10958",
-    "summary": "Use after free in Chrome for iOS in Google Chrome on iOS prior to 149.0.7827.53 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-06-04T23:16:58.787Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-10958"
-    ]
-  },
-  {
-    "id": "f087697f9d1cd0f634a7b63d53d8b440",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-10939 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10939",
-    "summary": "Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-06-04T23:16:56.443Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-10939"
-    ]
-  },
-  {
-    "id": "87913a3bab26e904524967391c058cee",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-10923 — Use after free in WebAppInstalls in Google Chrome on Android prior to 149.0.7827…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10923",
-    "summary": "Use after free in WebAppInstalls in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to execute arbitrary code via a malicious file. (Chromium security severity: High)",
-    "published": "2026-06-04T23:16:54.637Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-10923"
-    ]
-  },
-  {
-    "id": "a95073a62a7399522fd23a66272adf40",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Hola Browser for Windows compromised to deliver cryptominer",
-    "url": "https://www.bleepingcomputer.com/news/security/hola-browser-for-windows-compromised-to-deliver-cryptominer/",
-    "summary": "The Windows version of the Hola Browser has been compromised in a supply chain attack that delivered an undeclared executable identified by researchers as a cryptocurrency miner. [...]",
-    "published": "2026-06-04T21:27:25Z",
-    "fetched": "2026-06-04T22:53:06.464314209Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "supply-chain"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "2f80de4db2a9c96a26fb39c5cb662d8c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.2 HIGH] CVE-2026-10870 — A flaw has been found in Shibby Tomato 1.28.0000. This affects the function star…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10870",
-    "summary": "A flaw has been found in Shibby Tomato 1.28.0000. This affects the function start_dhcpc of the file /sbin/rc of the component Web UI. This manipulation causes os command injection. It is possible to initiate the attack remotely. The exploit has been published and may be used. This project is superseded by FreshTomato.",
-    "published": "2026-06-04T21:16:30.22Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-10870"
-    ]
-  },
-  {
-    "id": "d79faa151b61596b091978f1b64016f4",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.2 HIGH] CVE-2026-41249 — CoreShop is a Pimcore enhanced eCommerce solution. In versions 5.0.1 through 5.1…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41249",
-    "summary": "CoreShop is a Pimcore enhanced eCommerce solution. In versions 5.0.1 through 5.1.0-beta.1,, the GitHub Actions workflow (`.github/workflows/static.yml`) uses the `pull_request_target` trigger but dangerously checks out the unverified code from the pull request head (`ref: ${{ github.event.pull_request.head.ref }}`). Subsequently, it executes a script (`bin/console`) from this untrusted checkout. This allows any external attacker to achieve Remote Code Execution (RCE) on the GitHub Actions runner simply by submitting a malicious Pull Request. Also known as a \"Pwn Request\" vulnerability. As of time of publication, `pull_request_target` is still in the file.",
-    "published": "2026-06-04T20:16:57.797Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "rce",
-      "github"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "github"
-    ],
-    "cves": [
-      "CVE-2026-41249"
-    ]
-  },
-  {
-    "id": "9a56c47e9f0113c25927e4de86cb5c29",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-41236 — Froxlor is open source server administration software. Version 2.3.6 contains a …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41236",
-    "summary": "Froxlor is open source server administration software. Version 2.3.6 contains a symlink-following flaw in the root-owned SSH key synchronization path used for customer FTP users. The provisioning code appends public keys to `~/.ssh/authorized_keys` under a customer-controlled home directory without verifying that the target path is not a symbolic link. If an attacker controls a shell-enabled customer account and can modify files inside the assigned home directory, the attacker can replace `~/.ssh/authorized_keys` with a symlink to `/root/.ssh/authorized_keys`. When Froxlor's privileged cron task later synchronizes SSH keys, it appends the attacker-supplied key into root's authorized key file, resulting in root SSH access. Version 2.3.7 contains a patch.",
-    "published": "2026-06-04T19:16:29.327Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-41236"
-    ]
-  },
-  {
-    "id": "b3ba4f37e3a32d1290200108627ac048",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-41235 — Froxlor is open source server administration software. Version 2.3.6 lets administrators configure `…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41235",
-    "summary": "Froxlor is open source server administration software. Version 2.3.6 lets administrators configure `system.available_shells` as the approved shell list that customers may assign to FTP users. However, the server-side FTP account handlers do not enforce that whitelist when processing add or edit requests. As a result, an authenticated customer with shell delegation enabled can submit an arbitrary shell such as `/bin/bash` even when the panel UI only offers more restricted choices. In deployments that use the default `nssextrausers` integration, the attacker-controlled shell is then propagated into the system account database, leading to real host shell access. Version 2.3.7 fixes the issue.",
-    "published": "2026-06-04T19:16:29.153Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-41235"
-    ]
-  },
-  {
-    "id": "f1ccc13c0512224c96aa9209e552ffcb",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-36499 — A missing upper-bound check in the udpif_set_threads() function of Open vSwitch …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36499",
-    "summary": "A missing upper-bound check in the udpif_set_threads() function of Open vSwitch v3.6.90 allows an attacker with OVSDB write access to request an excessive number of handler or revalidation threads. This can cause a denial of service (DoS) via resource exhaustion.",
-    "published": "2026-06-04T19:16:28.563Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-36499"
-    ]
-  },
-  {
-    "id": "ddbf9bad1242c14a900d43a0214e783d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-36182 — GNCC GP5 v7.1.76 was discovered to utilize a weak hashing algorithm to protect t…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36182",
-    "summary": "GNCC GP5 v7.1.76 was discovered to utilize a weak hashing algorithm to protect the root password, possibly allowing attackers to obtain root credentials and privileges via a bruteforce attack.",
-    "published": "2026-06-04T16:16:35.763Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-36182"
-    ]
-  },
-  {
-    "id": "5c4c7d84dd7cb943dafaa990f882611d",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-331: (Pwn2Own) Microsoft Edge Feedback Log File Handling Directory Traversal Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-331/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft Edge. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-45495.",
-    "published": "2026-06-04T05:00:00Z",
-    "fetched": "2026-06-04T22:53:06.464314209Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "high",
-    "score": 69,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-45495"
     ]
   }
 ]

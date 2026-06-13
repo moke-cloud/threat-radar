@@ -86,6 +86,116 @@
     ]
   },
   {
+    "id": "62ed2c76c0c20f6136c161b32a36485c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-12007 — Use after free in Core in Google Chrome on Windows prior to 149.0.7827.115 allow…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12007",
+    "summary": "Use after free in Core in Google Chrome on Windows prior to 149.0.7827.115 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security severity: Critical)",
+    "published": "2026-06-11T22:16:52.117Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "microsoft",
+      "chrome",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "google",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-12007"
+    ]
+  },
+  {
+    "id": "752ca4ee03bbd17f2e8efe7d5bbaf83f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-53819 — OpenClaw before 2026.5.27 contains an arbitrary code execution vulnerability in …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53819",
+    "summary": "OpenClaw before 2026.5.27 contains an arbitrary code execution vulnerability in skill install flows where workspace .env files can override the Homebrew executable selection. Attackers with access to trusted operator workspaces can execute unintended Homebrew-compatible executables during skill setup to compromise the system.",
+    "published": "2026-06-11T21:16:24.227Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "openclaw"
+    ],
+    "cves": [
+      "CVE-2026-53819"
+    ]
+  },
+  {
+    "id": "f4af8d6617810564016be656c2c30100",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-53810 — OpenClaw before 2026.5.18 contains a code execution vulnerability where marketpl…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53810",
+    "summary": "OpenClaw before 2026.5.18 contains a code execution vulnerability where marketplace runtime extension metadata can redirect loading toward unscanned package payloads. Attackers with trusted operator access can manipulate extension metadata to load plugin code outside reviewed package entry points, bypassing security scanning.",
+    "published": "2026-06-11T21:16:23.03Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "openclaw"
+    ],
+    "cves": [
+      "CVE-2026-53810"
+    ]
+  },
+  {
+    "id": "40009d3b4d096277631874e16e502b38",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.7 HIGH] CVE-2026-50245 — Brickcom cameras allow unauthenticated access to live snapshot images via the /…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50245",
+    "summary": "Brickcom cameras allow unauthenticated access to live snapshot images via the /ONVIF endpoint and no authentication is required to retrieve still images from the camera feed.",
+    "published": "2026-06-11T21:16:22.303Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-50245"
+    ]
+  },
+  {
+    "id": "34999d47ede0e5823a2fd02ef4a63efd",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-46489 — SolidInvoice is an open-source invoicing platform. Prior to version 2.3.17, the …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46489",
+    "summary": "SolidInvoice is an open-source invoicing platform. Prior to version 2.3.17, the company logo upload feature accepts any file type without validation. An authenticated administrator can upload an SVG file containing embedded JavaScript. This script is base64-encoded and injected unescaped into every page of the application, causing stored cross-site scripting (XSS) that executes in every authenticated user's browser. This issue has been patched in version 2.3.17.",
+    "published": "2026-06-11T20:16:23.24Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "xss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-46489"
+    ]
+  },
+  {
     "id": "8d0d1d1d9481852ba286dde6f1bd9561",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -111,6 +221,85 @@
     ]
   },
   {
+    "id": "82a27bb3a44589196328f74599850733",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-47188 — Quest Bot is an opensource modern Discord Bot built for moderation, utilities and support. Prior to …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47188",
+    "summary": "Quest Bot is an opensource modern Discord Bot built for moderation, utilities and support. Prior to version 1.0.5, the latest release suppresses mentions in several moderation commands, but /unban and /unwarn still echo user-controlled reason text in public bot messages without allowedMentions. A moderator can use @everyone or @here in the reason and make the bot send a mass ping. This issue has been patched in version 1.0.5.",
+    "published": "2026-06-11T19:16:46.46Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-47188"
+    ]
+  },
+  {
+    "id": "5ab34272dccc1993791c6165af16f1a6",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-47175 — Quest Bot is an opensource modern Discord Bot built for moderation, utilities and support. Prior to …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47175",
+    "summary": "Quest Bot is an opensource modern Discord Bot built for moderation, utilities and support. Prior to version 1.0.4, several moderation commands echo user-controlled reason text in public bot replies without disabling mention parsing. A moderator who does not have permission to mention everyone can still make the bot send @everyone or @here if the bot has that permission. This issue has been patched in version 1.0.4.",
+    "published": "2026-06-11T19:16:45.73Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-47175"
+    ]
+  },
+  {
+    "id": "53b627a6f3828b3ac943f95048318506",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-47173 — Quest Bot is an opensource modern Discord Bot built for moderation, utilities and support. Prior to …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47173",
+    "summary": "Quest Bot is an opensource modern Discord Bot built for moderation, utilities and support. Prior to version 1.0.3, a normal user can create a ticket with a reason containing @everyone, @here, user mentions, or role mentions. When the ticket is created, the bot posts the attacker-controlled reason into the new ticket channel without suppressing mentions. If the bot has permission to use those mentions, the attacker can make the bot ping staff or everyone with access to the ticket channel. This issue has been patched in version 1.0.3.",
+    "published": "2026-06-11T19:16:45.403Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-47173"
+    ]
+  },
+  {
+    "id": "b5bc23930f8f26709c5b707cd5506227",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-44488 — Axios is a promise based HTTP client for the browser and Node.js. Axios versions…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44488",
+    "summary": "Axios is a promise based HTTP client for the browser and Node.js. Axios versions 1.7.0 through 1.15.x did not enforce configured request and response size limits when requests were sent with the fetch adapter. Applications that selected adapter: 'fetch', or ran in environments where axios resolved to the fetch adapter, could receive or send bodies larger than maxContentLength or maxBodyLength despite those limits being explicitly configured. This can cause resource exhaustion in server-side usage when a malicious or compromised server returns an oversized response, when an attacker can supply a large data: URL, or when an application forwards attacker-controlled request bodies through axios while relying on maxBodyLength as a boundary. This vulnerability is fixed in 0.32.0 and 1.16.0.",
+    "published": "2026-06-11T17:16:32.75Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "axios"
+    ],
+    "cves": [
+      "CVE-2026-44488"
+    ]
+  },
+  {
     "id": "a37080ca3d739e1341d1b3ce5f949763",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -126,6 +315,30 @@
     ],
     "severity": "high",
     "score": 72
+  },
+  {
+    "id": "0982b798b7dfa5afd2a43c7b95a3351f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-41699 — Spring for GraphQL applications are vulnerable to Unsafe Deserialization when pr…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41699",
+    "summary": "Spring for GraphQL applications are vulnerable to Unsafe Deserialization when processing paginated GraphQL queries. An attacker can craft a malicious GraphQL request that can lead to Remote Code Execution when the application exposes a paginated (Connection) field and the classpath contains specific classes that can be leveraged during deserialization.\n\nAffected versions:\nSpring for GraphQL 2.0.0 through 2.0.3; 1.4.0 through 1.4.5; 1.3.0 through 1.3.8.",
+    "published": "2026-06-11T07:16:28.28Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "deserialization",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "vmware"
+    ],
+    "cves": [
+      "CVE-2026-41699"
+    ]
   },
   {
     "id": "40139fbd4011ac1502f4186c7da11cc4",
@@ -151,6 +364,76 @@
     ],
     "cves": [
       "CVE-2026-10520"
+    ]
+  },
+  {
+    "id": "cbcccd2126a56a3bca43545e820486c5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-50223 — Improper Control of Generation of Code ('Code Injection') vulnerability in Apach…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50223",
+    "summary": "Improper Control of Generation of Code ('Code Injection') vulnerability in Apache OFBiz allows a low-privileged authenticated user with Content/DataResource editing privileges to perform template injection attacks that could lead to Remote Code Execution.\n\nThis issue affects Apache OFBiz: before 24.09.07.\n\nUsers are recommended to upgrade to version 24.09.07, which fixes the issue.",
+    "published": "2026-06-10T23:16:49.777Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "apache",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-50223"
+    ]
+  },
+  {
+    "id": "2b3ffc7099ac80a991bff77a07ee855b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-46529 — Atril Document Viewer is the default document reader of the MATE desktop environment for Linux. A si…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46529",
+    "summary": "Atril Document Viewer is the default document reader of the MATE desktop environment for Linux. A single-click remote code execution vulnerability in versions prior to 1.26.3 and 1.28.4 allows an attacker to achieve arbitrary code execution as the user by tricking them into clicking a link inside a malicious PDF document. The PDF can be packaged as a polyglot file that is simultaneously a valid PDF and a valid ELF shared library, making the attack a single-file, single-click, configuration-independent RCE on stock atril installations. The root cause is `shell/ev-application.c:ev_spawn`, which builds a command line from attacker-controlled PDF link-destination fields without applying `g_shell_quote`. The cmdline is then handed to `g_app_info_create_from_commandline`, which shell-parses it back into argv — splitting any embedded `--gtk-module=PATH` into a separate argv element. GTK then `dlopen()`s the path during init, running any `__attribute__((constructor))` it finds. Versions 1.26.3 and 1.28.4 contain a patch for the issue. This is the same defect class as CVE-2023-51698 (CBT `--checkpoint-action` injection in `comics-document.c`, fixed in 1.6.2) but in a different code path (`shell/ev-application.c`) that the original patch did not touch.",
+    "published": "2026-06-10T20:17:28.57Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "adobe"
+    ],
+    "cves": [
+      "CVE-2026-46529",
+      "CVE-2023-51698"
+    ]
+  },
+  {
+    "id": "8f4294d893d5944e866c3b13fc038468",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.3 HIGH] CVE-2026-46558 — Plane is an open-source project management tool. Prior to version 1.3.1, there i…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46558",
+    "summary": "Plane is an open-source project management tool. Prior to version 1.3.1, there is a cross-workspace asset authorization bypass lets any authenticated user read, copy, delete, and overwrite assets in other Plane workspaces. This issue has been patched in version 1.3.1.",
+    "published": "2026-06-10T16:17:09.26Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "plane"
+    ],
+    "cves": [
+      "CVE-2026-46558"
     ]
   },
   {
@@ -312,6 +595,96 @@
     ]
   },
   {
+    "id": "c6c27c5aac03e787dc365ceca018ef62",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-44716 — Pipecat is an open-source Python framework for building real-time voice and mult…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44716",
+    "summary": "Pipecat is an open-source Python framework for building real-time voice and multimodal conversational agents. From version 0.0.90 to before version 1.2.0, a path traversal vulnerability exists in Pipecat's development runner (src/pipecat/runner/run.py). When the runner is started with the --folder flag, it exposes a GET /files/{filename:path} download endpoint. The filename path parameter is concatenated directly onto args.folder with no containment check. Starlette normalises literal ../ sequences in URLs, but %2F-encoded slashes bypass this normalisation: the path parameter is URL-decoded after routing, so ..%2F..%2Fetc%2Fpasswd resolves to a path two levels above args.folder. An attacker with network access to the runner can read any file the pipecat process has permission to access — including SSH private keys, credentials, and system files — with a single unauthenticated HTTP request. This issue has been patched in version 1.2.0.",
+    "published": "2026-06-10T00:16:53.11Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "path-traversal",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "pipecat"
+    ],
+    "cves": [
+      "CVE-2026-44716"
+    ]
+  },
+  {
+    "id": "494201136584fcfcbce3fb9f2d283673",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.6 HIGH] CVE-2026-41003 — An attacker able to influence values in RelyingPartyRegistration may be able to …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41003",
+    "summary": "An attacker able to influence values in RelyingPartyRegistration may be able to run arbitrary code on HTML forms generated by Spring Security filters.\n\nAffected versions:\nSpring Security 5.7.0 through 5.7.23; 5.8.0 through 5.8.25; 6.3.0 through 6.3.16; 6.4.0 through 6.4.16; 6.5.0 through 6.5.10; 7.0.0 through 7.0.5.",
+    "published": "2026-06-10T00:16:50.307Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "vmware"
+    ],
+    "cves": [
+      "CVE-2026-41003"
+    ]
+  },
+  {
+    "id": "c861afabca3f1a8218ea3b7d58217206",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-46374 — SQLFluff is a modular SQL linter and auto-formatter with support for multiple di…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46374",
+    "summary": "SQLFluff is a modular SQL linter and auto-formatter with support for multiple dialects and templated code. Prior to version 4.2.0, in deployments where untrusted users can provide SQL queries to be linted, an untrusted user can submit a malicious long query to any application using the parser to trigger a Denial of Service through resource exhaustion. This issue has been patched in version 4.2.0.",
+    "published": "2026-06-09T23:16:59.313Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "sqlfluff"
+    ],
+    "cves": [
+      "CVE-2026-46374"
+    ]
+  },
+  {
+    "id": "9c00c4b4448bad1f779bb2e3afbb8f66",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-46373 — SQLFluff is a modular SQL linter and auto-formatter with support for multiple di…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46373",
+    "summary": "SQLFluff is a modular SQL linter and auto-formatter with support for multiple dialects and templated code. Prior to version 4.1.0, in deployments where untrusted users can provide SQL queries to be linted, an untrusted user can submit a malicious query with deliberate excessive nesting to any application using the parser to trigger a Denial of Service through resource exhaustion. This issue has been patched in version 4.1.0.",
+    "published": "2026-06-09T23:16:59.167Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "sqlfluff"
+    ],
+    "cves": [
+      "CVE-2026-46373"
+    ]
+  },
+  {
     "id": "bdb8d61f6ddeb1a035329354f75f3beb",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -330,6 +703,363 @@
     "score": 77,
     "vendors": [
       "microsoft"
+    ]
+  },
+  {
+    "id": "d9336eba2de4f24519f83f9c7cca3a9e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 10.0 CRITICAL] CVE-2026-48303 — Adobe Campaign Classic (ACC) versions 7.4.3 build 9394 and earlier are affected …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48303",
+    "summary": "Adobe Campaign Classic (ACC) versions 7.4.3 build 9394 and earlier are affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "published": "2026-06-09T21:17:25.51Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "adobe",
+      "linux",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-48303"
+    ]
+  },
+  {
+    "id": "a0484ae11d1d41d3c778013436593269",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-48292 — Format Plugins versions 1.1.2 and earlier are affected by a Heap-based Buffer Ov…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48292",
+    "summary": "Format Plugins versions 1.1.2 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:25.27Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "adobe"
+    ],
+    "cves": [
+      "CVE-2026-48292"
+    ]
+  },
+  {
+    "id": "c088369864de8a0e435b1ccc6617624e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-48291 — Format Plugins versions 1.1.2 and earlier are affected by a Heap-based Buffer Ov…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48291",
+    "summary": "Format Plugins versions 1.1.2 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:25.143Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "adobe"
+    ],
+    "cves": [
+      "CVE-2026-48291"
+    ]
+  },
+  {
+    "id": "21c3dbd7e95efa764f3ec46e2da6916b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-47959 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47959",
+    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Stack-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:24.273Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "apple",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-47959"
+    ]
+  },
+  {
+    "id": "68bd3b83a36c6754a6e213a6aa8bcb59",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-47955 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47955",
+    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:24.023Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "apple",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-47955"
+    ]
+  },
+  {
+    "id": "6f151bbcfec447832b75203bb98417d7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-47952 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47952",
+    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:23.883Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "apple",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-47952"
+    ]
+  },
+  {
+    "id": "d023b74af84b5dbdbd1900ef753ae8b0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.4 HIGH] CVE-2026-47937 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47937",
+    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by an Uncontrolled Search Path Element vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+    "published": "2026-06-09T21:17:23.463Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "apple",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-47937"
+    ]
+  },
+  {
+    "id": "a54dda03f7b48d0c11e8661c14dffc93",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-47921 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47921",
+    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:22.087Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "apple",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-47921"
+    ]
+  },
+  {
+    "id": "eb9a745fbfdfe6b1594053209aec2d0f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-47920 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47920",
+    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:21.95Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "apple",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-47920"
+    ]
+  },
+  {
+    "id": "5fbb1f74456953c6242cb0fcf7039438",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-47919 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47919",
+    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:21.833Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "apple",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-47919"
+    ]
+  },
+  {
+    "id": "9a7aab771a288b3f5bb8b6a0307c1535",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-47918 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47918",
+    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:21.71Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "apple",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-47918"
+    ]
+  },
+  {
+    "id": "d2f033e0eb650482d008ada1f7e7ea01",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-47917 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47917",
+    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:21.59Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "apple",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-47917"
+    ]
+  },
+  {
+    "id": "8d74988691c42df4d4ba4931990555e0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-47916 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47916",
+    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:21.477Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "apple",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-47916"
+    ]
+  },
+  {
+    "id": "a6c9acc172cf158882ae9edb0445726a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-47915 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47915",
+    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "published": "2026-06-09T21:17:21.357Z",
+    "fetched": "2026-06-13T22:37:13.787485607Z",
+    "tags": [
+      "rce",
+      "adobe",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "adobe",
+      "apple",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-47915"
     ]
   },
   {
@@ -1144,662 +1874,6 @@
     "vendors": [
       "microsoft",
       "apache"
-    ]
-  },
-  {
-    "id": "99b8356171c6d46a7f80dfb0a921d92a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-21837 — HCL Digital Experience is affected by an OS command injection vulnerability in t…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21837",
-    "summary": "HCL Digital Experience is affected by an OS command injection vulnerability in the Digital Asset Management API.  An attacker may execute arbitrary operating system commands, typically inheriting the privileges of the vulnerable application, which could possibly lead to a complete system takeover and data compromise.",
-    "published": "2026-06-05T07:16:30.027Z",
-    "fetched": "2026-06-11T23:06:30.985574508Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "hcltech"
-    ],
-    "cves": [
-      "CVE-2026-21837"
-    ]
-  },
-  {
-    "id": "e0a7f1bca9361161788489f151c08814",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Cisco warns of unpatched SD-WAN zero-day exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/new-cisco-sd-wan-flaw-exploited-in-zero-day-attacks-to-gain-root/",
-    "summary": "On Thursday, Cisco warned of a high-severity, unpatched zero-day in the Cisco Catalyst SD-WAN Manager (tracked as CVE-2026-20245) actively exploited in attacks enabling root privilege escalation. [...]",
-    "published": "2026-06-05T06:24:20Z",
-    "fetched": "2026-06-05T22:42:34.00956939Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "lpe",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20245"
-    ]
-  },
-  {
-    "id": "51433f8add2f880d9242137a71811bf6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11279 — Out of bounds read in DevTools in Google Chrome prior to 149.0.7827.53 allowed a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11279",
-    "summary": "Out of bounds read in DevTools in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
-    "published": "2026-06-05T00:17:05.14Z",
-    "fetched": "2026-06-11T23:06:30.985574508Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11279"
-    ]
-  },
-  {
-    "id": "1585100a6a654caeeb39cedd5f3c6fdc",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-28318 — SolarWinds Serv-U: SolarWinds Serv-U Uncontrolled Resource Consumption Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28318",
-    "summary": "SolarWinds Serv-U contains an uncontrolled resource consumption vulnerability that allows specially crafted POST requests using the Content-Encoding: deflate header to crash the Serv-U service without authentication.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-19",
-    "published": "2026-06-05T00:00:00Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "solarwinds"
-    ],
-    "cves": [
-      "CVE-2026-28318"
-    ]
-  },
-  {
-    "id": "1585100a6a654caeeb39cedd5f3c6fdc",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-28318 — SolarWinds Serv-U: SolarWinds Serv-U Uncontrolled Resource Consumption Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28318",
-    "summary": "SolarWinds Serv-U contains an uncontrolled resource consumption vulnerability that allows specially crafted POST requests using the Content-Encoding: deflate header to crash the Serv-U service without authentication.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-19",
-    "published": "2026-06-05T00:00:00Z",
-    "fetched": "2026-06-05T22:42:34.00956939Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "solarwinds"
-    ],
-    "cves": [
-      "CVE-2026-28318"
-    ]
-  },
-  {
-    "id": "9e4843e8edef1453a20604161a956c14",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-20245 — A vulnerability in the CLI of Cisco Catalyst SD-WAN Controller, formerly SD-WAN …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20245",
-    "summary": "A vulnerability in the CLI of Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, and Cisco Catalyst SD-WAN Validator, formerly SD-WAN vBond, could allow an authenticated, local attacker to execute arbitrary commands as root by supplying a crafted file to the affected system.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by uploading a crafted file to the affected system. A successful exploit could allow the attacker to perform command injection attacks on an affected system and elevate their privileges as the root user.&nbsp;\r\nTo exploit this vulnerability, the attacker must have netadmin privileges on the affected system. This would require valid credentials or exploitation of  or . Cisco is not aware of successful exploitation by other methods. Cisco has observed limited cases where the exploitation of this bug resulted in a configuration change pushed to edge devices.\r\nCisco recommends that customers upgrade to the fixed software that is documented in the  that was published on May 14, 2026, and verify the configuration of the edge devices.",
-    "published": "2026-06-04T23:17:31.763Z",
-    "fetched": "2026-06-11T23:06:30.985574508Z",
-    "tags": [
-      "rce",
-      "cisco",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20245"
-    ]
-  },
-  {
-    "id": "62bc0364cf1ac7bdec3f1e93601a9c6b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11230 — Use after free in Extensions in Google Chrome prior to 149.0.7827.53 allowed a r…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11230",
-    "summary": "Use after free in Extensions in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
-    "published": "2026-06-04T23:17:30.817Z",
-    "fetched": "2026-06-11T23:06:30.985574508Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11230"
-    ]
-  },
-  {
-    "id": "5d7a7f5e304fde7b782c013e73da0117",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11211 — Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11211",
-    "summary": "Integer overflow in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:28.447Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11211"
-    ]
-  },
-  {
-    "id": "ca99daae13cf6aa64adb684f5d7977c9",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11201 — Use after free in ServiceWorker in Google Chrome prior to 149.0.7827.53 allowed …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11201",
-    "summary": "Use after free in ServiceWorker in Google Chrome prior to 149.0.7827.53 allowed an attacker who convinced a user to install a malicious extension to execute arbitrary code via a crafted Chrome Extension. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:27.27Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11201"
-    ]
-  },
-  {
-    "id": "3373aa9dc50de5a714381de865bae34c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11144 — Use after free in Media in Google Chrome prior to 149.0.7827.53 allowed a remote…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11144",
-    "summary": "Use after free in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted video file. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:20.667Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11144"
-    ]
-  },
-  {
-    "id": "5e6919c0e225f572036a21f5a9a40c40",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11116 — Use after free in Chromoting in Google Chrome prior to 149.0.7827.53 allowed a r…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11116",
-    "summary": "Use after free in Chromoting in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via malicious network traffic. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:17.31Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11116"
-    ]
-  },
-  {
-    "id": "61bcbef1e661bc57f898820cff34bc3a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11102 — Inappropriate implementation in Isolated Web Apps in Google Chrome prior to 149.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11102",
-    "summary": "Inappropriate implementation in Isolated Web Apps in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a malicious file. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:15.76Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11102"
-    ]
-  },
-  {
-    "id": "1b07825df2cd9dd000c0a0cfbaa22312",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11086 — Inappropriate implementation in Dawn in Google Chrome prior to 149.0.7827.53 all…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11086",
-    "summary": "Inappropriate implementation in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:13.447Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11086"
-    ]
-  },
-  {
-    "id": "e7967d2e4a00108bbbd94b082166b649",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11077 — Bad cast in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attack…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11077",
-    "summary": "Bad cast in Dawn in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:12.41Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11077"
-    ]
-  },
-  {
-    "id": "441948b9cd0da2058f39d159d82c10f0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11076 — Type Confusion in CSS in Google Chrome prior to 149.0.7827.53 allowed a remote a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11076",
-    "summary": "Type Confusion in CSS in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:12.307Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11076"
-    ]
-  },
-  {
-    "id": "a0888f1b75832b291d480ba655751f4f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11074 — Use after free in WebRTC in Google Chrome on Linux prior to 149.0.7827.53 allowe…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11074",
-    "summary": "Use after free in WebRTC in Google Chrome on Linux prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:12.07Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "linux",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11074"
-    ]
-  },
-  {
-    "id": "001bde937a8f1d0a3f9fe187ae08e1c7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-11072 — Use after free in WebView in Google Chrome on Android prior to 149.0.7827.53 all…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11072",
-    "summary": "Use after free in WebView in Google Chrome on Android prior to 149.0.7827.53 allowed a local attacker to execute arbitrary code via a malicious file. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:11.843Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11072"
-    ]
-  },
-  {
-    "id": "d190427f88db1a9999a35d9835ea461a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11068 — Use after free in WebSockets in Google Chrome prior to 149.0.7827.53 allowed a r…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11068",
-    "summary": "Use after free in WebSockets in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:11.353Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11068"
-    ]
-  },
-  {
-    "id": "585c4ed8de9cfa53b6a5b304613e1275",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11060 — Use after free in Media in Google Chrome on Windows prior to 149.0.7827.53 allow…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11060",
-    "summary": "Use after free in Media in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:10.477Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "microsoft",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11060"
-    ]
-  },
-  {
-    "id": "a9060d28efb21842f3551c7dffa22fbf",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11059 — Use after free in Blink in Google Chrome prior to 149.0.7827.53 allowed a remote…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11059",
-    "summary": "Use after free in Blink in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:10.36Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11059"
-    ]
-  },
-  {
-    "id": "711e2a377ac6a196e89548f87e9d25a9",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11055 — Use after free in ANGLE in Google Chrome on Windows prior to 149.0.7827.53 allow…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11055",
-    "summary": "Use after free in ANGLE in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:09.917Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11055"
-    ]
-  },
-  {
-    "id": "6d1714e9a140e00377db446aec228023",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11054 — Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remot…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11054",
-    "summary": "Use after free in WebRTC in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:09.803Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11054"
-    ]
-  },
-  {
-    "id": "2076afba788cfba153abd39a34ddff6c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11050 — Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11050",
-    "summary": "Use after free in V8 in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:09.46Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11050"
-    ]
-  },
-  {
-    "id": "86a10acb34aad03390b1c788c540bc75",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11049 — Use after free in Password Manager in Google Chrome prior to 149.0.7827.53 allow…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11049",
-    "summary": "Use after free in Password Manager in Google Chrome prior to 149.0.7827.53 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:09.353Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11049"
-    ]
-  },
-  {
-    "id": "862e8c5d7fde8785a5f0fccebfc0ced3",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11046 — Insufficient validation of untrusted input in Media in Google Chrome prior to 14…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11046",
-    "summary": "Insufficient validation of untrusted input in Media in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-06-04T23:17:09.02Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "apple",
-      "linux",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-11046"
     ]
   }
 ]

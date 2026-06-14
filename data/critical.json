@@ -1,5 +1,241 @@
 [
   {
+    "id": "531a53b931a497a3036a4cf5d35e2bcf",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-12186 — A weakness has been identified in GL.iNet GL-MT3000 up to 4.4.5. Affected is the…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12186",
+    "summary": "A weakness has been identified in GL.iNet GL-MT3000 up to 4.4.5. Affected is the function replace_country in the library /usr/lib/oui-httpd/rpc/tor of the component Tor Proxy Service Configuration Handler. This manipulation causes command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 4.7 is able to address this issue. It is recommended to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+    "published": "2026-06-14T21:16:18.483Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-12186"
+    ]
+  },
+  {
+    "id": "9e11fb297e5491564fbc2ed38a75ae29",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-11527 — Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11527",
+    "summary": "Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle.\n\nConfig::IniFiles::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. The helper is the open path behind the documented -file argument: new(-file => $thing) reaches it through ReadConfig. An in-memory scalar reference (-file => \\$text) does not open a path and is unaffected.\n\nAny caller that forwards untrusted input to the -file argument can run an arbitrary command or truncate a file under the process UID.",
+    "published": "2026-06-14T12:16:23.357Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-11527"
+    ]
+  },
+  {
+    "id": "33f6df5f7207ed36f3b628697c4127c5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-11526 — GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11526",
+    "summary": "GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle.\n\nGD::Image::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. _make_filehandle is the single open path behind every filename-accepting constructor (new, newFromPng, newFromJpeg, and the rest); the in-memory *Data variants do not open a path and are unaffected.\n\nAny caller that forwards untrusted input to one of these constructors as a pathname can run an arbitrary command or truncate a file under the process UID.",
+    "published": "2026-06-14T12:16:22.403Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-11526"
+    ]
+  },
+  {
+    "id": "42d9fbbb16a344f8354b479cad616dec",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.5 HIGH] CVE-2026-54420 — LiteSpeed cPanel plugin before 2.4.8 (as distributed in LiteSpeed WHM PlugIn bef…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54420",
+    "summary": "LiteSpeed cPanel plugin before 2.4.8 (as distributed in LiteSpeed WHM PlugIn before 5.3.2.0) mishandles symlinks provided by a user with FTP or web shell access on a shared hosting server running CloudLinux/CageFS, as exploited in the wild in May 2026.",
+    "published": "2026-06-14T04:16:28.63Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 70,
+    "cves": [
+      "CVE-2026-54420"
+    ]
+  },
+  {
+    "id": "16421ffa2c658ab7ecf267f2915769cf",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.2 HIGH] CVE-2026-9109 — The GPTranslate – Multilingual AI Translation for WordPress: Automatically Tra…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9109",
+    "summary": "The GPTranslate – Multilingual AI Translation for WordPress: Automatically Translate Websites plugin for WordPress is vulnerable to Stored Cross-Site Scripting via REST API Translation Storage in all versions up to, and including, 2.31 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The deterministically derived API key (sha256 of the site URL) is printed in the HTML source of every page via the JavaScript variable gptApiKey, meaning any unauthenticated visitor can retrieve the key and submit malicious translation payloads to the /wp-json/gptranslate/v1/request endpoint without any additional precondition.",
+    "published": "2026-06-13T07:16:14.853Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "xss",
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 78,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-9109"
+    ]
+  },
+  {
+    "id": "4ceb13b4279fc398d7695ef099bdc945",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 4.6 MEDIUM] CVE-2026-11443 — Allegra downloadAttachment Cross-Site Scripting Authentication Bypass Vulnerabil…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11443",
+    "summary": "Allegra downloadAttachment Cross-Site Scripting Authentication Bypass Vulnerability. This vulnerability allows remote attackers to execute arbitrary script on affected installations of Allegra. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.\n\nThe specific flaw exists within the downloadAttachment method. The issue results from the lack of proper validation of user-supplied data, which can lead to the injection of arbitrary script. An attacker can leverage this vulnerability to execute script in the context of the current user. Was ZDI-CAN-28236.",
+    "published": "2026-06-13T00:16:24.29Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "xss",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-11443"
+    ]
+  },
+  {
+    "id": "e8662ca2e627d90c2872b76aca4c4ad0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-45013 — ApostropheCMS is an open-source Node.js content management system. Versions up t…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45013",
+    "summary": "ApostropheCMS is an open-source Node.js content management system. Versions up to and including 4.29.0 have a password reset flow that constructs the reset URL using `req.hostname`, which is derived directly from the attacker-controlled HTTP `Host` header when `apos.baseUrl` is not explicitly configured. An unauthenticated attacker who knows a victim's email address can send a crafted reset request that causes the application to email the victim a reset link pointing to the attacker's domain. When the victim clicks the link, the valid reset token is delivered to the attacker, enabling full account takeover. As of time of publication, no known patched versions are available.",
+    "published": "2026-06-12T21:16:22.85Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-45013"
+    ]
+  },
+  {
+    "id": "ee3073975663bb89f2c109107dbcaef7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.5 MEDIUM] CVE-2026-42853 — ApostropheCMS is an open-source Node.js content management system. Versions of t…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42853",
+    "summary": "ApostropheCMS is an open-source Node.js content management system. Versions of the @apostrophecms/cli package up to and including 3.6.0 contain a command injection vulnerability in the apos create command. User-supplied input from the password prompt is embedded directly into a shell command without proper sanitization or escaping. This allows execution of arbitrary commands on the host system. As of time of publication, no known patched versions are available.",
+    "published": "2026-06-12T21:16:21.3Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-42853"
+    ]
+  },
+  {
+    "id": "61ab829e642a57b18d591b09248f55d8",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.7 HIGH] CVE-2026-47260 — Koel is a free, open-source music streaming solution. Prior to version 9.3.5, Ko…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47260",
+    "summary": "Koel is a free, open-source music streaming solution. Prior to version 9.3.5, Koel validates the podcast feed URL via the SafeUrl rule (DNS resolution + public IP check), but the individual episode <enclosure url=\"...\"> values extracted from the RSS XML are stored directly into the database without any SSRF validation. When a user plays an episode, the server downloads the full HTTP response from the unvalidated enclosure URL via Http::sink()->get() and streams it back to the user, enabling full-read SSRF against internal services. This issue has been patched in version 9.3.5.",
+    "published": "2026-06-12T20:16:46.32Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-47260"
+    ]
+  },
+  {
+    "id": "739ac332c71fb59fada73acd5df581d6",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-47141 — vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, NodeVM exposes some process-w…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47141",
+    "summary": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, NodeVM exposes some process-wide observability builtins when they are allowed through require.builtin. The diagnostics_channel, async_hooks, and perf_hooks builtins are not blocked by the dangerous builtin denylist. These modules are process-wide, not sandbox-local. Sandboxed code can use them to observe host application data across the vm2 boundary. This issue has been patched in version 3.11.4.",
+    "published": "2026-06-12T15:16:28.537Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-47141"
+    ]
+  },
+  {
+    "id": "8f5df91a46d06286080085565402f143",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 10.0 CRITICAL] CVE-2026-47131 — vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, by combin…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47131",
+    "summary": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, by combining Buffer.call.call({}.__lookupGetter__, Buffer, \"__proto__\"), Buffer.call.call({}.__lookupSetter__, Buffer, \"__proto__\"), and Node.js's ERR_INVALID_ARG_TYPE Error, the host's TypeError constructor can be obtained, which allows the escape from the sandbox. This allows attackers to run arbitrary code. This issue has been patched in version 3.11.4.",
+    "published": "2026-06-12T15:16:27.87Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-47131"
+    ]
+  },
+  {
+    "id": "effa6cfd2f36567323b5ab6ac8b7ffca",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-47200 — Nuxt is an open-source web development framework for Vue.js. In Nuxt versions 3.11.0 to before 3.21.…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47200",
+    "summary": "Nuxt is an open-source web development framework for Vue.js. In Nuxt versions 3.11.0 to before 3.21.6 and 4.0.0-alpha.1 to before 4.4.6 and @nuxt/nitro-server versions 3.20.0 to before 3.21.6 and 4.0.0-alpha.1 to before 4.4.6, when experimental.componentIslands is enabled (default in Nuxt 4), any .server.vue file under pages/ is automatically registered as a server island under the key page_<routeName> and exposed via the /__nuxt_island/:name endpoint. Until this fix, requests through that endpoint rendered the page component directly via the SSR renderer without instantiating Vue Router, which meant route middleware declared on the page (including definePageMeta({ middleware })) did not run. This issue has been patched in versions 3.21.6 and 4.4.6.",
+    "published": "2026-06-12T14:16:32.137Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-47200"
+    ]
+  },
+  {
     "id": "5f26bff3cdadd4b03c7d46eb60dc9d13",
     "source": "rapid7",
     "source_name": "Rapid7 Blog",
@@ -24,6 +260,25 @@
     ]
   },
   {
+    "id": "395bc944ad34c04ea3623fba69064e6d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-47197 — Quest Bot is an opensource Discord Bot. Prior to version 1.1.6, a moderator with the relevant Discor…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47197",
+    "summary": "Quest Bot is an opensource Discord Bot. Prior to version 1.1.6, a moderator with the relevant Discord permission bit can use the bot to moderate users above them in the Discord role hierarchy, as long as the bot itself outranks the target. This bypasses Discord’s normal role hierarchy protections and lets lower-ranked moderators ban, kick, timeout, untimeout, warn, or rename higher-ranked users. This issue has been patched in version 1.1.6.",
+    "published": "2026-06-12T13:16:33.677Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-47197"
+    ]
+  },
+  {
     "id": "e0432a76da93fbc4003af431025491b1",
     "source": "trailofbits",
     "source_name": "Trail of Bits Blog",
@@ -38,6 +293,30 @@
     ],
     "severity": "high",
     "score": 61
+  },
+  {
+    "id": "69f41fb149ff95f892642b2a33292f2f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-50645 — There is no restriction on the amount of attachment headers that a message can c…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50645",
+    "summary": "There is no restriction on the amount of attachment headers that a message can contain when being deserialized by Apache CXF, which can lead to uncontrolled resource consumption or a denial of service attack. Users are recommended to upgrade to versions 4.2.2 or 4.1.7, which fix this issue by imposing a maximum default of 500 attachments per message.",
+    "published": "2026-06-12T10:16:23.533Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "apache",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-50645"
+    ]
   },
   {
     "id": "6e8428a2775557e9adc4dc4e77170e8f",
@@ -83,6 +362,25 @@
     ],
     "cves": [
       "CVE-2026-35273"
+    ]
+  },
+  {
+    "id": "b2cb89097ed9546d31ab20b0bf389b7f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.5 MEDIUM] CVE-2026-47238 — ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 -…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47238",
+    "summary": "ClipBucket v5 is an open source video sharing platform. Prior to version 5.5.3 - #133, a normal authenticated user can edit another user's video subtitles because of a lack of authorization. They can upload subtitles, edit their name or delete them. This issue has been patched in version 5.5.3 - #133.",
+    "published": "2026-06-11T23:16:24.073Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-47238"
     ]
   },
   {
@@ -1415,6 +1713,30 @@
     ]
   },
   {
+    "id": "1151ed51220229f0472ecb6ecb0198db",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-46323 — In the Linux kernel, the following vulnerability has been resolved:\n\nnet: gro: d…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46323",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: gro: don't merge zcopy skbs\n\nskb_gro_receive() can currently copy frags between the source and GRO\nskb, without checking the zerocopy status, and in particular the\nSKBFL_MANAGED_FRAG_REFS flag.\n\nWhen SKBFL_MANAGED_FRAG_REFS is set, the skb doesn't hold a reference\non the pages in shinfo->frags. Appending those frags to another skb's\nfrags without fixing up the page refcount can lead to UAF.\n\nWhen either the last skb in the GRO chain (the one we would append\nfrags to) or the source skb is zerocopy, don't merge the skbs.",
+    "published": "2026-06-09T13:16:37.753Z",
+    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-46323"
+    ]
+  },
+  {
     "id": "8ba9ad7ef1e80f4c6ad514ad0bc59fec",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -1618,262 +1940,6 @@
     ],
     "cves": [
       "CVE-2026-20245"
-    ]
-  },
-  {
-    "id": "951908240664da9eecfc622e9f793e40",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Critical Check Point VPN Zero-Day Exploited in the Wild (CVE-2026-50751)",
-    "url": "https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751",
-    "summary": "OverviewOn June 8, 2026, Check Point published a security advisory for CVE-2026-50751, a critical authentication bypass vulnerability affecting Check Point Remote Access VPN, Mobile Access, and Spark Firewall products. The vulnerability affects deployments configured to use the deprecated IKEv1 key exchange protocol where gateways accept legacy Remote Access clients and do not require a machine certificate for connections.CVE-2026-50751, classified as improper authentication (CWE-287), has a CVSS score of 9.3. The vulnerability stems from a logic flow weakness in how Remote Access and Mobile A...",
-    "published": "2026-06-08T17:05:16Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "auth-bypass",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 81,
-    "cves": [
-      "CVE-2026-50751"
-    ]
-  },
-  {
-    "id": "ad4ae9ba8057ab471f70a821de10e3e2",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Gogs patches critical zero-day enabling remote code execution",
-    "url": "https://www.bleepingcomputer.com/news/security/gogs-patches-critical-zero-day-enabling-remote-code-execution/",
-    "summary": "Gogs has patched a critical security zero-day flaw that can allow attackers to compromise Internet-facing instances and access any repositories (including private ones). [...]",
-    "published": "2026-06-08T16:18:40Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 87
-  },
-  {
-    "id": "066fae386784e4b9a0e8b1678e9cac8d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-46442 — Flowise is a drag & drop user interface to build a customized large language mod…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46442",
-    "summary": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to version 3.1.2, POST /api/v1/node-custom-function lacks route-level authorization, allowing any authenticated user or API key to submit arbitrary JavaScript to the Custom JS Function node. When E2B_APIKEY is not configured — the common deployment case — Flowise executes this code inside a NodeVM sandbox. This sandbox can be escaped, allowing an attacker to reach the host process object and execute system commands via child_process. The result is authenticated remote code execution on the Flowise server host. This issue has been patched in version 3.1.2.",
-    "published": "2026-06-08T16:16:41.347Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "flowiseai"
-    ],
-    "cves": [
-      "CVE-2026-46442"
-    ]
-  },
-  {
-    "id": "a474ec95933dd3a3659dd869718d4d14",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-42863 — Flowise is a drag & drop user interface to build a customized large language mod…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42863",
-    "summary": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to version 3.1.2, a mass assignment vulnerability exists in the chatflow update endpoint of FlowiseAI. The endpoint allows clients to modify server-controlled properties such as deployed, isPublic, workspaceId, createdDate, and updatedDate when updating a chatflow object. Due to missing server-side validation and authorization checks, an authenticated user can manipulate internal attributes of a chatflow and reassign it to another workspace. This allows cross-workspace resource reassignment and unauthorized modification of deployment and visibility settings. This issue has been patched in version 3.1.2.",
-    "published": "2026-06-08T16:16:39.82Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "flowiseai"
-    ],
-    "cves": [
-      "CVE-2026-42863"
-    ]
-  },
-  {
-    "id": "d680efa1c8515200afb5a81437b24463",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Check Point links VPN zero-day attacks to Qilin ransomware gang",
-    "url": "https://www.bleepingcomputer.com/news/security/check-point-links-vpn-zero-day-attacks-to-qilin-ransomware-gang/",
-    "summary": "Israeli cybersecurity company Check Point has released security updates to patch a critical flaw affecting Remote Access VPN and Mobile Access deployments, which was exploited in zero-day attacks. [...]",
-    "published": "2026-06-08T13:05:16Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "0day",
-      "ransomware"
-    ],
-    "severity": "critical",
-    "score": 82
-  },
-  {
-    "id": "d67531ac35a7c2a05b82eeaa4d046db4",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-42271 — BerriAI LiteLLM: BerriAI LiteLLM Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42271",
-    "summary": "BerriAI LiteLLM contains a command injection vulnerability that could allow any authenticated user, including holders of low-privilege internal-user keys, to run arbitrary commands on the host.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-22",
-    "published": "2026-06-08T00:00:00Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "berriai"
-    ],
-    "cves": [
-      "CVE-2026-42271"
-    ]
-  },
-  {
-    "id": "7b801b233ce96465ac73b050066b91f5",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-50751 — Check Point Security Gateway: Check Point Security Gateway Improper Authentication Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50751",
-    "summary": "Check Point Security Gateway contains an improper authentication vulnerability in IKEv1 key exchange that could allow an unauthenticated remote attacker to bypass user authentication and establish a remote access VPN connection without a valid user password.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-06-11",
-    "published": "2026-06-08T00:00:00Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "check"
-    ],
-    "cves": [
-      "CVE-2026-50751"
-    ]
-  },
-  {
-    "id": "594fc9d21c4a691527192c72ee128cf3",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Hands on with Intelligent Terminal, an AI-powered Windows Terminal",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/hands-on-with-intelligent-terminal-an-ai-powered-windows-terminal/",
-    "summary": "Microsoft has created an open-source fork of Windows Terminal called \"Intelligent Terminal,\" and it allows you to use AI directly inside Terminal without interfering with the regular session. [...]",
-    "published": "2026-06-07T23:20:02Z",
-    "fetched": "2026-06-08T22:56:49.590703608Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "fc9ae5e14ef12a5d4b744c784748c561",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "AI Agent Uncovers 21 Zero-Days in FFmpeg; Chrome Patches Record 429 Bugs",
-    "url": "https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html",
-    "summary": "Two things landed within days of each other this week. A security startup reported 21 previously unknown vulnerabilities in FFmpeg, the media library inside almost everything that touches video, all of them found by an autonomous AI agent. The same week, Google shipped Chrome 149 with patches for 429 security bugs, the most ever in a single release. Only the FFmpeg bugs were found by AI.",
-    "published": "2026-06-06T07:28:30Z",
-    "fetched": "2026-06-06T22:36:30.467015573Z",
-    "tags": [
-      "chrome",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "chrome"
-    ]
-  },
-  {
-    "id": "6f2366348c765191362965ef6e4c5f51",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Cisco Catalyst SD-WAN Manager CVE-2026-20245 Flaw Actively Exploited – No Patch Available",
-    "url": "https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html",
-    "summary": "Cisco has warned that a high-severity security flaw impacting Catalyst SD-WAN Manager has come under active exploitation. The vulnerability, tracked as CVE-2026-20245, carries a CVSS score of 7.8 out of a maximum of 10.0. It affects the following deployment types - On-Prem Deployment Cisco SD-WAN Cloud-Pro Cisco SD-WAN Cloud (Cisco Managed) Cisco SD-WAN for Government (FedRAMP) \"A",
-    "published": "2026-06-06T04:19:28Z",
-    "fetched": "2026-06-06T22:36:30.467015573Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20245"
-    ]
-  },
-  {
-    "id": "352efcfa358c58e2dc6ecc85d14a91d7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-45409 — Internationalized Domain Names in Applications (IDNA) for Python provides support for Internationali…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45409",
-    "summary": "Internationalized Domain Names in Applications (IDNA) for Python provides support for Internationalized Domain Names in Applications (IDNA) and Unicode IDNA Compatibility Processing. In versions prior to 3.15, payloads such as `\"\\u0660\" * N` or `\"\\u30fb\" * N + \"\\u6f22\"` utilize the `valid_contexto` function prior to length rejection, and for high values of `N` will take a long time to process. This is the same issue as CVE-2024-3651, however the original remediation in 2024 was not a complete fix. A specially crafted argument to the `idna.encode()` function could consume significant resources. This may lead to a denial-of-service. Starting in version 3.14, the function rejects long inputs as soon as practicable prior to any further processing to minimize resource consumption. In version 3.15, this approach was extended to lesser used alternate functions (i.e. per-label conversions and codec support). A workaround is available. Domain names cannot exceed 253 characters in length. If this length limit is enforced prior to passing the domain to the `idna.encode()` function, it should no longer consume significant resources. This is triggered by arbitrarily large inputs that would not occur in normal usage, but may be passed to the library assuming there is no preliminary input validation by the higher-level application.",
-    "published": "2026-06-05T23:16:43.343Z",
-    "fetched": "2026-06-07T22:38:06.358219233Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-45409",
-      "CVE-2024-3651"
-    ]
-  },
-  {
-    "id": "b2ab07307dab113bd0647707115186d0",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Weekly Metasploit Update: Apache ActiveMQ RCE, Gogs Rebase RCE, and Windows Kernel Pointer Enum",
-    "url": "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-06-2026",
-    "summary": "When Open Source is a bit too OpenSeveral fun modules landed this week, including an Apache RCE, Windows Kernel pointer collection, and Gogs RCE via naming. Leading off is Gogs' RCE that allows an attacker to execute commands by naming their branch --exec <command> and requesting a rebase.Another useful post module by CharlesQuinnDev enumerates the Kernel pointers leaked via the popular NtQuerySystemInformation technique. Those exposed pointers, combined with a good write primitive, make local privilege escalation easier to accomplish. Several local privilege escalations already use that t...",
-    "published": "2026-06-05T17:01:48Z",
-    "fetched": "2026-06-06T22:36:30.467015573Z",
-    "tags": [
-      "microsoft",
-      "apache",
-      "watch",
-      "rce",
-      "lpe"
-    ],
-    "severity": "high",
-    "score": 69,
-    "vendors": [
-      "microsoft",
-      "apache"
     ]
   }
 ]

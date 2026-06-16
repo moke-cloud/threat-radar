@@ -1,5 +1,115 @@
 [
   {
+    "id": "e4cd7c7f61406479d509483c1aa87f8d",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Google Vertex AI SDK Flaw Let Attackers Hijack Model Uploads via Bucket Squatting",
+    "url": "https://thehackernews.com/2026/06/google-vertex-ai-sdk-flaw-let-attackers.html",
+    "summary": "A flaw in the Google Cloud Vertex AI SDK for Python let an attacker with no access to a victim's project hijack the victim's machine learning model upload and run code inside Google's serving infrastructure. Palo Alto Networks Unit 42, which found and reported the bug through Google's bug bounty program, calls the technique \"Pickle in the Middle\" and said it saw no exploitation in the wild.",
+    "published": "2026-06-16T19:05:41Z",
+    "fetched": "2026-06-16T23:04:51.280891837Z",
+    "tags": [
+      "paloalto",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "paloalto"
+    ]
+  },
+  {
+    "id": "fd6da54f2368662b000082941313fa6d",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA warns of another cPanel plugin flaw exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-another-actively-exploited-cpanel-plugin-flaw/",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has given U.S. government agencies three days to secure their servers against an actively exploited vulnerability (CVE-2026-54420) in the LiteSpeed cPanel user-end plugin. [...]",
+    "published": "2026-06-16T10:47:59Z",
+    "fetched": "2026-06-16T23:04:51.280891837Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 67,
+    "cves": [
+      "CVE-2026-54420"
+    ]
+  },
+  {
+    "id": "bc7435f807e7a11aced435a07d1cd163",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Ransomware gang abuses Microsoft Teams relays to hide malicious traffic",
+    "url": "https://www.bleepingcomputer.com/news/security/ransomware-gang-abuses-microsoft-teams-relays-to-hide-malicious-traffic/",
+    "summary": "DragonForce ransomware used a custom malware named 'Backdoor.Turn' to hide command-and-control traffic inside Microsoft Teams relay infrastructure. [...]",
+    "published": "2026-06-16T10:18:48Z",
+    "fetched": "2026-06-16T23:04:51.280891837Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce",
+      "ransomware",
+      "malware"
+    ],
+    "severity": "critical",
+    "score": 82,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "b25141254212b0f6cb46df0e15824905",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Cisco Releases Security Updates for Actively Exploited SD-WAN Manager Flaw",
+    "url": "https://thehackernews.com/2026/06/cisco-releases-security-updates-for.html",
+    "summary": "Cisco has released security updates for a medium-severity security flaw in Catalyst SD-WAN Manager that has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-20262, carries a CVSS score of 6.5 out of 10.0. \"A vulnerability in the web UI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an authenticated, remote attacker to create a file or",
+    "published": "2026-06-16T06:05:58Z",
+    "fetched": "2026-06-16T23:04:51.280891837Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20262"
+    ]
+  },
+  {
+    "id": "c845cf6b6b85859b87f928c8d636d624",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48907 — Widget Factory Joomla Content Editor : Widget Factory Joomla Content Editor Improper Access Control Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48907",
+    "summary": "Widget Factory Joomla Content Editor contains an improper access control vulnerability which could allow for upload and execution of PHP code via the creation of new editor profiles for unauthenticated users. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-19",
+    "published": "2026-06-16T00:00:00Z",
+    "fetched": "2026-06-16T23:04:51.280891837Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "widget"
+    ],
+    "cves": [
+      "CVE-2026-48907"
+    ]
+  },
+  {
     "id": "f83194ca2c15061b1775766b64217526",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1747,6 +1857,27 @@
     "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-june-2026",
     "summary": "Microsoft is publishing 200 vulnerabilities on June 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild for any of these vulnerabilities, and is aware of public disclosure for three. This is similar to last month’s Patch Tuesday, however several of last month’s vulnerabilities ended up on CISA KEV in the days following their publication. So far this month, Microsoft has provided patches to address 360 browser vulnerabilities, which is an order of magnitude more than has been typical in any given month over the past few years. As usual, browser vulns are not included in t...",
     "published": "2026-06-09T21:04:53Z",
+    "fetched": "2026-06-16T23:04:51.280891837Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 71,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "cf2e127a5464096e060fb9d158ceaf1c",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Patch Tuesday - June 2026",
+    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-june-2026",
+    "summary": "Microsoft is publishing 200 vulnerabilities on June 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild for any of these vulnerabilities, and is aware of public disclosure for three. This is similar to last month’s Patch Tuesday, however several of last month’s vulnerabilities ended up on CISA KEV in the days following their publication. So far this month, Microsoft has provided patches to address 360 browser vulnerabilities, which is an order of magnitude more than has been typical in any given month over the past few years. As usual, browser vulns are not included in t...",
+    "published": "2026-06-09T21:04:53Z",
     "fetched": "2026-06-09T22:58:55.762000082Z",
     "tags": [
       "microsoft",
@@ -1993,106 +2124,6 @@
     ],
     "cves": [
       "CVE-2026-42912"
-    ]
-  },
-  {
-    "id": "f574a1ed7dfa98027fc4dcec64e71009",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.0 HIGH] CVE-2026-42836 — Concurrent execution using shared resource with improper synchronization ('race …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42836",
-    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Function Discovery Service (fdwsd.dll) allows an authorized attacker to elevate privileges locally.",
-    "published": "2026-06-09T17:17:09.267Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-42836"
-    ]
-  },
-  {
-    "id": "73b0cdee2e49943fcbcfaf3b5de0a6e7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-34182 — Issue Summary: Cryptographic Message Services (CMS) processing fails to perform\n…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34182",
-    "summary": "Issue Summary: Cryptographic Message Services (CMS) processing fails to perform\nsufficient input validation on the cipher and tag length fields of\nAuthEnvelopedData containers, leading to various potential compromises.\n\nImpact Summary: Attackers making use of these vulnerabilities may achieve\nkey-equivalent functionality for a given CMS recipient and/or bypass integrity\nvalidation for a given message.\n\nIn one use case, an attacker may send a CMS message containing\nAuthEnvelopedData with the cipher specified as a non-AEAD cipher.  OpenSSL\nerroneously allows this selection, and attempts to decrypt and validate the\nmessage.\n\nAn on-path attacker who captures one legitimate AES-GCM AuthEnvelopedData\naddressed to the victim can re-emit it with the recipientInfos set left\nbyte-for-byte intact, so the victim's private key still unwraps the genuine CEK\n(the content-encryption key), but with the inner OID rewritten to AES-256-OFB\n(Output Feedback Mode, an unauthenticated keystream mode) and with an\nattacker-chosen IV and ciphertext. The victim initializes AES-256-OFB under the\nreal CEK, never consults the MAC field, and CMS_decrypt() returns success.\n\nIf the application under attack responds to the attacker with any indicator\nshowing success or failure of the decryption effort, it is possible for the\nattacker to use this as an oracle to obtain key equivalent functionality for the\nCEK used for the chosen recipient of the message.\n\nIn another use case, an attacker can reduce the tag length of the chosen AEAD\ncipher for a given AuthEnvelopedData container to be a single byte long,\nallowing an attacker to brute force CMS decryption, producing an integrity\nbypass for applications that trust CMS_decrypt() to reject modified content.\n\nThe FIPS modules are not affected by this issue.",
-    "published": "2026-06-09T17:17:04.857Z",
-    "fetched": "2026-06-15T23:17:14.883669826Z",
-    "tags": [
-      "critical-cvss",
-      "oracle",
-      "openssl",
-      "watch",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "openssl",
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-34182"
-    ]
-  },
-  {
-    "id": "a6ccd81bc0e83b7fe150197b92699a75",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-25089 — A improper neutralization of special elements used in an os command ('os command…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25089",
-    "summary": "A improper neutralization of special elements used in an os command ('os command injection') vulnerability in Fortinet FortiSandbox 5.0.0 through 5.0.5, FortiSandbox 4.4.0 through 4.4.8, FortiSandbox 4.2 all versions, FortiSandbox Cloud 5.0.4 through 5.0.5, FortiSandbox PaaS 5.0.4 through 5.0.5 may allow an unauthenticated attacker to execute unauthorized commands via specifically crafted HTTP requests",
-    "published": "2026-06-09T16:16:39.943Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "fortinet",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "fortinet"
-    ],
-    "cves": [
-      "CVE-2026-25089"
-    ]
-  },
-  {
-    "id": "cd7eef9c79f08f7fb6893af810649273",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 10.0 CRITICAL] CVE-2026-10520 — An OS Command Injection vulnerability in Ivanti Sentry before the R10.5.2, R…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10520",
-    "summary": "An OS Command Injection vulnerability in Ivanti Sentry before the R10.5.2, R10.6.2 and R10.7.1 versions allows a remote unauthenticated user to achieve root-level remote code execution",
-    "published": "2026-06-09T16:16:35.7Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "ivanti",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "ivanti"
-    ],
-    "cves": [
-      "CVE-2026-10520"
     ]
   }
 ]

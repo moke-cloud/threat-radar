@@ -1,5 +1,111 @@
 [
   {
+    "id": "ef89549353a0d2ef187f75735cecb626",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "DragonForce Hackers Abuse Microsoft Teams Relays to Hide Backdoor.Turn C2 Traffic",
+    "url": "https://thehackernews.com/2026/06/dragonforce-hackers-abuse-microsoft.html",
+    "summary": "Threat actors associated with the DragonForce ransomware have been observed using a custom Go-based remote access trojan (RAT) called Backdoor.Turn to conceal command-and-control (C2) traffic inside Microsoft Teams relay infrastructure. According to findings from Broadcom-owned Symantec and Carbon Black, the backdoor was deployed against a major U.S. services firm. The name of the company was",
+    "published": "2026-06-18T13:30:07Z",
+    "fetched": "2026-06-18T23:18:49.562632066Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce",
+      "ransomware",
+      "malware"
+    ],
+    "severity": "high",
+    "score": 73,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "cf9c360039b256771f913026c345e14a",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "ShapedPlugin update flow hacked to infect WordPress sites",
+    "url": "https://www.bleepingcomputer.com/news/security/shapedplugin-update-flow-hacked-to-infect-wordpress-sites/",
+    "summary": "Multiple WordPress plugins from ShapedPlugin were compromised in a supply chain attack that distributed infected releases to paying customers via the vendor's official update system. [...]",
+    "published": "2026-06-18T12:55:36Z",
+    "fetched": "2026-06-18T23:18:49.562632066Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "supply-chain"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "wordpress"
+    ]
+  },
+  {
+    "id": "2459f1a847f5a8d21328c3dbae0a6e4b",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "From package to postinstall payload: Inside the Mastra npm supply chain compromise",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/",
+    "summary": "A poisoned npm package infected 140+ projects with a hidden payload. This report highlights how to detect, hunt, and defend against supply chain attacks using Microsoft Defender and actionable threat intelligence. The post From package to postinstall payload: Inside the Mastra npm supply chain compromise appeared first on Microsoft Security Blog.",
+    "published": "2026-06-18T03:43:04Z",
+    "fetched": "2026-06-18T23:18:49.562632066Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "supply-chain"
+    ],
+    "severity": "high",
+    "score": 76,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "889725958c67f2702d590d96d59e23a5",
+    "source": "sans-isc",
+    "source_name": "SANS Internet Storm Center",
+    "category": "news",
+    "title": "The Behavior of Coordinated SSH Brute Force Attacks over the last three months &#x5b;Guest Diary&#x5d;, (Wed, Jun 17th)",
+    "url": "https://isc.sans.edu/diary/rss/33086",
+    "summary": "&#x5b;This is a Guest Diary by Adam Nason, an ISC intern as part of the SANS.edu BACS program&#x5d;&#xd;",
+    "published": "2026-06-18T01:49:29Z",
+    "fetched": "2026-06-18T23:18:49.562632066Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60
+  },
+  {
+    "id": "b91c70b652c47e76d0e4961747f7d1ac",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-20253 — Splunk Enterprise: Splunk Enterprise Missing Authentication for Critical Function Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20253",
+    "summary": "Splunk Enterprise contains a missing authentication for critical function vulnerability which could allow an unauthenticated user to create or truncate arbitrary files through a PostgreSQL sidecar service endpoint.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-21",
+    "published": "2026-06-18T00:00:00Z",
+    "fetched": "2026-06-18T23:18:49.562632066Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "postgres"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "splunk",
+      "postgres"
+    ],
+    "cves": [
+      "CVE-2026-20253"
+    ]
+  },
+  {
     "id": "e374c2ad7f82751ee915372a69c0608f",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -921,6 +1027,32 @@
     ],
     "cves": [
       "CVE-2026-41699"
+    ]
+  },
+  {
+    "id": "40139fbd4011ac1502f4186c7da11cc4",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-10520 — Ivanti Sentry: Ivanti Sentry OS Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10520",
+    "summary": "Ivanti Sentry (formerly known as MobileIron Sentry) contains an OS command injection vulnerability which could allow a remote unauthenticated user to achieve root-level remote code execution. This vulnerability can be successfully exploited in cases where the Sentry appliance is in an unmanaged state with its endpoints externally reachable. The use of mTLS with EPMM or restricted HTTPS access through Neurons for MDM makes interfaces inaccessible to external actors.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-14",
+    "published": "2026-06-11T00:00:00Z",
+    "fetched": "2026-06-18T23:18:49.562632066Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "ivanti",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "ivanti"
+    ],
+    "cves": [
+      "CVE-2026-10520"
     ]
   },
   {
@@ -2014,77 +2146,6 @@
     "score": 77,
     "vendors": [
       "microsoft"
-    ]
-  },
-  {
-    "id": "a133920df13e088643349eb8c22ddaaa",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.0 HIGH] CVE-2026-45597 — Concurrent execution using shared resource with improper synchronization ('race …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45597",
-    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in UI Automation Manager (uiamanager.dll) allows an authorized attacker to elevate privileges locally.",
-    "published": "2026-06-09T17:17:27.897Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-45597"
-    ]
-  },
-  {
-    "id": "6af6b068833b8a8fcb224c03d615566a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.4 HIGH] CVE-2026-45458 — Access of resource using incompatible type ('type confusion') in Microsoft Offic…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45458",
-    "summary": "Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.",
-    "published": "2026-06-09T17:17:20.06Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-45458"
-    ]
-  },
-  {
-    "id": "ad67446b96c44f8fd6974ecc59488dc2",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.4 HIGH] CVE-2026-45456 — Access of resource using incompatible type ('type confusion') in Microsoft Offic…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45456",
-    "summary": "Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally.",
-    "published": "2026-06-09T17:17:19.79Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-45456"
     ]
   }
 ]

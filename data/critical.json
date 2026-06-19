@@ -1,5 +1,58 @@
 [
   {
+    "id": "f416d9571d0e50972f2ee1b79c2e7db6",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Weekly Metasploit Update: NTLM Relay Priv Esc, MCP Server Integration, Paperclip AI RCE Chain, and more",
+    "url": "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-19-06-2026",
+    "summary": "This week's release includes five new modules, including a full unauthenticated RCE chain for Paperclip AI and a VS Code extension persistence technique. On the post-exploitation side, the new windows/local/ntlm_relay_2_self module coerces the local machine account to authenticate via OpenEncryptedFileRaw (WebDAV), relays that NTLM authentication to a Domain Controller's LDAP service, then uses the resulting LDAP session to write Shadow Credentials and obtain a Kerberos service ticket as Administrator via S4U2Proxy, enabling PsExec back to itself for SYSTEM access.On the enhancement side, th...",
+    "published": "2026-06-19T17:08:23Z",
+    "fetched": "2026-06-19T22:31:21.369102731Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "e56dfca7844d5ccab3f67c7e272b0f37",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA: Splunk Enterprise flaw actively exploited, patch by Sunday",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-splunk-enterprise-flaw-actively-exploited-patch-by-sunday/",
+    "summary": "CISA has urged U.S. federal agencies to secure their systems by Sunday against a critical Splunk Enterprise vulnerability that is being exploited in attacks. [...]",
+    "published": "2026-06-19T10:39:58Z",
+    "fetched": "2026-06-19T22:31:21.369102731Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "d0b58fa4cd9f05424bd6b41acbe44f50",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "AutoJack: How a single page can RCE the host running your AI agent",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/18/autojack-single-page-rce-host-running-ai-agent/",
+    "summary": "AutoJack is a novel exploit chain showing how a single malicious webpage can turn an AI browsing agent into a remote code execution vector on the host machine. By abusing trust in localhost, missing authentication, and unsafe parameter handling, attackers can trigger arbitrary process execution through AutoGen Studio’s MCP WebSocket. The research highlights a broader pattern - when agents can browse untrusted content and access local services, traditional boundaries like localhost are no longer secure. The post AutoJack: How a single page can RCE the host running your AI agent  appeared fir...",
+    "published": "2026-06-19T00:17:54Z",
+    "fetched": "2026-06-19T22:31:21.369102731Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 66
+  },
+  {
     "id": "ef89549353a0d2ef187f75735cecb626",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -635,6 +688,30 @@
     "url": "https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273",
     "summary": "OverviewOn June 10, 2026, Oracle published a security alert for CVE-2026-35273, a critical vulnerability in the Updates Environment Management component of PeopleSoft Enterprise PeopleTools. Oracle released an out-of-band patch the same day as the advisory, underscoring the urgency of remediation. The vulnerability has a CVSSv3.1 score of 9.8 and is remotely exploitable without authentication. Per the vendor advisory, successful exploitation may result in remote code execution (RCE). TrendAI has classified the underlying flaw as a server-side request forgery (CWE-918). PeopleTools versions 8.6...",
     "published": "2026-06-12T13:43:04Z",
+    "fetched": "2026-06-19T22:31:21.369102731Z",
+    "tags": [
+      "oracle",
+      "rce",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 66,
+    "vendors": [
+      "oracle"
+    ],
+    "cves": [
+      "CVE-2026-35273"
+    ]
+  },
+  {
+    "id": "5f26bff3cdadd4b03c7d46eb60dc9d13",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Active Exploitation of Oracle PeopleSoft Zero-Day (CVE-2026-35273)",
+    "url": "https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273",
+    "summary": "OverviewOn June 10, 2026, Oracle published a security alert for CVE-2026-35273, a critical vulnerability in the Updates Environment Management component of PeopleSoft Enterprise PeopleTools. Oracle released an out-of-band patch the same day as the advisory, underscoring the urgency of remediation. The vulnerability has a CVSSv3.1 score of 9.8 and is remotely exploitable without authentication. Per the vendor advisory, successful exploitation may result in remote code execution (RCE). TrendAI has classified the underlying flaw as a server-side request forgery (CWE-918). PeopleTools versions 8.6...",
+    "published": "2026-06-12T13:43:04Z",
     "fetched": "2026-06-12T22:57:46.90334405Z",
     "tags": [
       "oracle",
@@ -668,6 +745,22 @@
     "cves": [
       "CVE-2026-47197"
     ]
+  },
+  {
+    "id": "e0432a76da93fbc4003af431025491b1",
+    "source": "trailofbits",
+    "source_name": "Trail of Bits Blog",
+    "category": "research",
+    "title": "Factoring \"short-sleeve\" RSA keys with polynomials",
+    "url": "https://blog.trailofbits.com/2026/06/12/factoring-short-sleeve-rsa-keys-with-polynomials/",
+    "summary": "What happens when the bits of an RSA private key are heavily biased toward 0 instead of being randomly generated? The public key’s bits could be biased enough for us to detect these incorrectly generated keys in the wild. Together with Hanno Böck of the badkeys project, we found hundreds of unique keys that not only have this property, but can be quickly factored. We also found the bug that led to many of these keys and analyzed historical data to track the issue over time. Surprisingly, the pattern of 0 bits is often highly structured, allowing us to develop a powerful polynomial-based cry...",
+    "published": "2026-06-12T11:00:00Z",
+    "fetched": "2026-06-19T22:31:21.369102731Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 61
   },
   {
     "id": "e0432a76da93fbc4003af431025491b1",
@@ -728,6 +821,31 @@
     "score": 77,
     "vendors": [
       "ivanti"
+    ]
+  },
+  {
+    "id": "fb55ea031335e4a47aba77df706bb2c2",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-35273 — Oracle  PeopleSoft Enterprise PeopleTools: Oracle PeopleSoft Enterprise PeopleTools Missing Authentication for Critical Function Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35273",
+    "summary": "Oracle PeopleSoft Enterprise PeopleTools contains a missing authentication for critical function vulnerability which could allow an unauthenticated attacker to obtain takeover of PeopleSoft Enterprise PeopleTools.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-15",
+    "published": "2026-06-12T00:00:00Z",
+    "fetched": "2026-06-19T22:31:21.369102731Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "ransomware",
+      "oracle"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "oracle"
+    ],
+    "cves": [
+      "CVE-2026-35273"
     ]
   },
   {
@@ -1953,199 +2071,6 @@
     ],
     "cves": [
       "CVE-2026-47920"
-    ]
-  },
-  {
-    "id": "5fbb1f74456953c6242cb0fcf7039438",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-47919 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47919",
-    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-    "published": "2026-06-09T21:17:21.833Z",
-    "fetched": "2026-06-13T22:37:13.787485607Z",
-    "tags": [
-      "rce",
-      "adobe",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "adobe",
-      "apple",
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-47919"
-    ]
-  },
-  {
-    "id": "9a7aab771a288b3f5bb8b6a0307c1535",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-47918 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47918",
-    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-    "published": "2026-06-09T21:17:21.71Z",
-    "fetched": "2026-06-13T22:37:13.787485607Z",
-    "tags": [
-      "rce",
-      "adobe",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "adobe",
-      "apple",
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-47918"
-    ]
-  },
-  {
-    "id": "d2f033e0eb650482d008ada1f7e7ea01",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-47917 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47917",
-    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-    "published": "2026-06-09T21:17:21.59Z",
-    "fetched": "2026-06-13T22:37:13.787485607Z",
-    "tags": [
-      "rce",
-      "adobe",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "adobe",
-      "apple",
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-47917"
-    ]
-  },
-  {
-    "id": "8d74988691c42df4d4ba4931990555e0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-47916 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47916",
-    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-    "published": "2026-06-09T21:17:21.477Z",
-    "fetched": "2026-06-13T22:37:13.787485607Z",
-    "tags": [
-      "rce",
-      "adobe",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "adobe",
-      "apple",
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-47916"
-    ]
-  },
-  {
-    "id": "a6c9acc172cf158882ae9edb0445726a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-47915 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47915",
-    "summary": "Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-    "published": "2026-06-09T21:17:21.357Z",
-    "fetched": "2026-06-13T22:37:13.787485607Z",
-    "tags": [
-      "rce",
-      "adobe",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "adobe",
-      "apple",
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-47915"
-    ]
-  },
-  {
-    "id": "cf2e127a5464096e060fb9d158ceaf1c",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Patch Tuesday - June 2026",
-    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-june-2026",
-    "summary": "Microsoft is publishing 200 vulnerabilities on June 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild for any of these vulnerabilities, and is aware of public disclosure for three. This is similar to last month’s Patch Tuesday, however several of last month’s vulnerabilities ended up on CISA KEV in the days following their publication. So far this month, Microsoft has provided patches to address 360 browser vulnerabilities, which is an order of magnitude more than has been typical in any given month over the past few years. As usual, browser vulns are not included in t...",
-    "published": "2026-06-09T21:04:53Z",
-    "fetched": "2026-06-16T23:04:51.280891837Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "cf2e127a5464096e060fb9d158ceaf1c",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Patch Tuesday - June 2026",
-    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-june-2026",
-    "summary": "Microsoft is publishing 200 vulnerabilities on June 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild for any of these vulnerabilities, and is aware of public disclosure for three. This is similar to last month’s Patch Tuesday, however several of last month’s vulnerabilities ended up on CISA KEV in the days following their publication. So far this month, Microsoft has provided patches to address 360 browser vulnerabilities, which is an order of magnitude more than has been typical in any given month over the past few years. As usual, browser vulns are not included in t...",
-    "published": "2026-06-09T21:04:53Z",
-    "fetched": "2026-06-09T22:58:55.762000082Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "41555fef8104d4deb311bfc9eea181f3",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Microsoft June 2026 Patch Tuesday fixes 3 zero-day, 200 flaws",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-june-2026-patch-tuesday-fixes-3-zero-day-200-flaws/",
-    "summary": "Today is Microsoft's June 2026 Patch Tuesday, with security updates for 200 flaws and three publicly disclosed zero-day vulnerabilities. [...]",
-    "published": "2026-06-09T17:57:59Z",
-    "fetched": "2026-06-09T22:58:55.762000082Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
     ]
   }
 ]

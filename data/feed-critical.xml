@@ -5,7 +5,40 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Jun 2026 23:18:49 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 22:31:21 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Weekly Metasploit Update: NTLM Relay Priv Esc, MCP Server Integration, Paperclip AI RCE Chain, and more</title>
+      <link>https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-19-06-2026</link>
+      <guid isPermaLink="false">f416d9571d0e50972f2ee1b79c2e7db6</guid>
+      <pubDate>Fri, 19 Jun 2026 17:08:23 +0000</pubDate>
+      <description>This week&#39;s release includes five new modules, including a full unauthenticated RCE chain for Paperclip AI and a VS Code extension persistence technique. On the post-exploitation side, the new windows/local/ntlm_relay_2_self module coerces the local machine account to authenticate via OpenEncryptedFileRaw (WebDAV), relays that NTLM authentication to a Domain Controller&#39;s LDAP service, then uses the resulting LDAP session to write Shadow Credentials and obtain a Kerberos service ticket as Administrator via S4U2Proxy, enabling PsExec back to itself for SYSTEM access.On the enhancement side, th...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] CISA: Splunk Enterprise flaw actively exploited, patch by Sunday</title>
+      <link>https://www.bleepingcomputer.com/news/security/cisa-splunk-enterprise-flaw-actively-exploited-patch-by-sunday/</link>
+      <guid isPermaLink="false">e56dfca7844d5ccab3f67c7e272b0f37</guid>
+      <pubDate>Fri, 19 Jun 2026 10:39:58 +0000</pubDate>
+      <description>CISA has urged U.S. federal agencies to secure their systems by Sunday against a critical Splunk Enterprise vulnerability that is being exploited in attacks. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>actively-exploited</category>
+    </item>
+    <item>
+      <title>[HIGH] AutoJack: How a single page can RCE the host running your AI agent</title>
+      <link>https://www.microsoft.com/en-us/security/blog/2026/06/18/autojack-single-page-rce-host-running-ai-agent/</link>
+      <guid isPermaLink="false">d0b58fa4cd9f05424bd6b41acbe44f50</guid>
+      <pubDate>Fri, 19 Jun 2026 00:17:54 +0000</pubDate>
+      <description>AutoJack is a novel exploit chain showing how a single malicious webpage can turn an AI browsing agent into a remote code execution vector on the host machine. By abusing trust in localhost, missing authentication, and unsafe parameter handling, attackers can trigger arbitrary process execution through AutoGen Studio’s MCP WebSocket. The research highlights a broader pattern - when agents can browse untrusted content and access local services, traditional boundaries like localhost are no longer secure. The post AutoJack: How a single page can RCE the host running your AI agent  appeared fir...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
     <item>
       <title>[HIGH] DragonForce Hackers Abuse Microsoft Teams Relays to Hide Backdoor.Turn C2 Traffic</title>
       <link>https://thehackernews.com/2026/06/dragonforce-hackers-abuse-microsoft.html</link>
@@ -364,6 +397,19 @@
       <category>rce</category>
     </item>
     <item>
+      <title>[HIGH] Active Exploitation of Oracle PeopleSoft Zero-Day (CVE-2026-35273)</title>
+      <link>https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273</link>
+      <guid isPermaLink="false">5f26bff3cdadd4b03c7d46eb60dc9d13</guid>
+      <pubDate>Fri, 12 Jun 2026 13:43:04 +0000</pubDate>
+      <description>OverviewOn June 10, 2026, Oracle published a security alert for CVE-2026-35273, a critical vulnerability in the Updates Environment Management component of PeopleSoft Enterprise PeopleTools. Oracle released an out-of-band patch the same day as the advisory, underscoring the urgency of remediation. The vulnerability has a CVSSv3.1 score of 9.8 and is remotely exploitable without authentication. Per the vendor advisory, successful exploitation may result in remote code execution (RCE). TrendAI has classified the underlying flaw as a server-side request forgery (CWE-918). PeopleTools versions 8.6...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
+      <category>high</category>
+      <category>oracle</category>
+      <category>rce</category>
+      <category>0day</category>
+      <category>oracle</category>
+    </item>
+    <item>
       <title>[CRIT] Active Exploitation of Oracle PeopleSoft Zero-Day (CVE-2026-35273)</title>
       <link>https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273</link>
       <guid isPermaLink="false">5f26bff3cdadd4b03c7d46eb60dc9d13</guid>
@@ -385,6 +431,16 @@
       <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>high</category>
       <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] Factoring &#34;short-sleeve&#34; RSA keys with polynomials</title>
+      <link>https://blog.trailofbits.com/2026/06/12/factoring-short-sleeve-rsa-keys-with-polynomials/</link>
+      <guid isPermaLink="false">e0432a76da93fbc4003af431025491b1</guid>
+      <pubDate>Fri, 12 Jun 2026 11:00:00 +0000</pubDate>
+      <description>What happens when the bits of an RSA private key are heavily biased toward 0 instead of being randomly generated? The public key’s bits could be biased enough for us to detect these incorrectly generated keys in the wild. Together with Hanno Böck of the badkeys project, we found hundreds of unique keys that not only have this property, but can be quickly factored. We also found the bug that led to many of these keys and analyzed historical data to track the issue over time. Surprisingly, the pattern of 0 bits is often highly structured, allowing us to develop a powerful polynomial-based cry...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Trail of Bits Blog</source>
+      <category>high</category>
+      <category>actively-exploited</category>
     </item>
     <item>
       <title>[HIGH] Factoring &#34;short-sleeve&#34; RSA keys with polynomials</title>
@@ -421,6 +477,20 @@
       <category>watch</category>
       <category>actively-exploited</category>
       <category>ivanti</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-35273 — Oracle  PeopleSoft Enterprise PeopleTools: Oracle PeopleSoft Enterprise PeopleTools Missing Authentication for Critical Function Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35273</link>
+      <guid isPermaLink="false">fb55ea031335e4a47aba77df706bb2c2</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Oracle PeopleSoft Enterprise PeopleTools contains a missing authentication for critical function vulnerability which could allow an unauthenticated attacker to obtain takeover of PeopleSoft Enterprise PeopleTools.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-06-15</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>ransomware</category>
+      <category>oracle</category>
+      <category>oracle</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2026-35273 — Oracle  PeopleSoft Enterprise PeopleTools: Oracle PeopleSoft Enterprise PeopleTools Missing Authentication for Critical Function Vulnerability</title>
@@ -1091,120 +1161,6 @@
       <category>watch</category>
       <category>adobe</category>
       <category>apple</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-47919 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47919</link>
-      <guid isPermaLink="false">5fbb1f74456953c6242cb0fcf7039438</guid>
-      <pubDate>Tue, 09 Jun 2026 21:17:21 +0000</pubDate>
-      <description>Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>adobe</category>
-      <category>watch</category>
-      <category>adobe</category>
-      <category>apple</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-47918 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47918</link>
-      <guid isPermaLink="false">9a7aab771a288b3f5bb8b6a0307c1535</guid>
-      <pubDate>Tue, 09 Jun 2026 21:17:21 +0000</pubDate>
-      <description>Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>adobe</category>
-      <category>watch</category>
-      <category>adobe</category>
-      <category>apple</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-47917 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47917</link>
-      <guid isPermaLink="false">d2f033e0eb650482d008ada1f7e7ea01</guid>
-      <pubDate>Tue, 09 Jun 2026 21:17:21 +0000</pubDate>
-      <description>Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>adobe</category>
-      <category>watch</category>
-      <category>adobe</category>
-      <category>apple</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-47916 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47916</link>
-      <guid isPermaLink="false">8d74988691c42df4d4ba4931990555e0</guid>
-      <pubDate>Tue, 09 Jun 2026 21:17:21 +0000</pubDate>
-      <description>Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>adobe</category>
-      <category>watch</category>
-      <category>adobe</category>
-      <category>apple</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-47915 — Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47915</link>
-      <guid isPermaLink="false">a6c9acc172cf158882ae9edb0445726a</guid>
-      <pubDate>Tue, 09 Jun 2026 21:17:21 +0000</pubDate>
-      <description>Acrobat Reader versions 24.001.30365, 26.001.21651 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>adobe</category>
-      <category>watch</category>
-      <category>adobe</category>
-      <category>apple</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Patch Tuesday - June 2026</title>
-      <link>https://www.rapid7.com/blog/post/em-patch-tuesday-june-2026</link>
-      <guid isPermaLink="false">cf2e127a5464096e060fb9d158ceaf1c</guid>
-      <pubDate>Tue, 09 Jun 2026 21:04:53 +0000</pubDate>
-      <description>Microsoft is publishing 200 vulnerabilities on June 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild for any of these vulnerabilities, and is aware of public disclosure for three. This is similar to last month’s Patch Tuesday, however several of last month’s vulnerabilities ended up on CISA KEV in the days following their publication. So far this month, Microsoft has provided patches to address 360 browser vulnerabilities, which is an order of magnitude more than has been typical in any given month over the past few years. As usual, browser vulns are not included in t...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Patch Tuesday - June 2026</title>
-      <link>https://www.rapid7.com/blog/post/em-patch-tuesday-june-2026</link>
-      <guid isPermaLink="false">cf2e127a5464096e060fb9d158ceaf1c</guid>
-      <pubDate>Tue, 09 Jun 2026 21:04:53 +0000</pubDate>
-      <description>Microsoft is publishing 200 vulnerabilities on June 2026 Patch Tuesday. Microsoft is not aware of exploitation in the wild for any of these vulnerabilities, and is aware of public disclosure for three. This is similar to last month’s Patch Tuesday, however several of last month’s vulnerabilities ended up on CISA KEV in the days following their publication. So far this month, Microsoft has provided patches to address 360 browser vulnerabilities, which is an order of magnitude more than has been typical in any given month over the past few years. As usual, browser vulns are not included in t...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Microsoft June 2026 Patch Tuesday fixes 3 zero-day, 200 flaws</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-june-2026-patch-tuesday-fixes-3-zero-day-200-flaws/</link>
-      <guid isPermaLink="false">41555fef8104d4deb311bfc9eea181f3</guid>
-      <pubDate>Tue, 09 Jun 2026 17:57:59 +0000</pubDate>
-      <description>Today is Microsoft&#39;s June 2026 Patch Tuesday, with security updates for 200 flaws and three publicly disclosed zero-day vulnerabilities. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>0day</category>
       <category>microsoft</category>
     </item>
   </channel>

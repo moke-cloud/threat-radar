@@ -5,7 +5,20 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Jun 2026 22:43:48 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 23:02:15 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] One intrusion, two cyberattackers: Uncovering parallel threat activity</title>
+      <link>https://www.microsoft.com/en-us/security/blog/2026/06/22/one-intrusion-two-cyberattackers-uncovering-parallel-threat-activity/</link>
+      <guid isPermaLink="false">f16c1f1ee88c197e735640e47c38fbde</guid>
+      <pubDate>Mon, 22 Jun 2026 16:00:00 +0000</pubDate>
+      <description>Ransomware case reveals two parallel threat actors, blending tactics and evasion—showing why isolated signals can often miss modern, overlapping cyberattacks. The post One intrusion, two cyberattackers: Uncovering parallel threat activity appeared first on Microsoft Security Blog.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>ransomware</category>
+      <category>microsoft</category>
+    </item>
     <item>
       <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-12810 — A security flaw has been discovered in Edimax BR-6478AC V2 1.23. Affected by thi…</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12810</link>
@@ -619,6 +632,33 @@
       <category>cisco</category>
     </item>
     <item>
+      <title>[CRIT] [KEV] CVE-2026-54420 — LiteSpeed cPanel Plugin: LiteSpeed cPanel Plugin UNIX Symbolic Link (Symlink) Following Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54420</link>
+      <guid isPermaLink="false">c020a2c05c90555701a256a9353fe1fa</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <description>LiteSpeed cPanel plugin contains a UNIX symbolic link (Symlink) following vulnerability that could allow a user with FTP or web shell access on a shared hosting server running CloudLinux/CageFS.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-06-18</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>litespeed</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-20262 — Cisco Catalyst SD-WAN Manager: Cisco Catalyst SD-WAN Manager Directory or Path Traversal Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-20262</link>
+      <guid isPermaLink="false">4c0e3d8f5037bc81b6d653937c8b8c7c</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Cisco Catalyst SD-WAN Manager contains a directory or path traversal vulnerability that could allow an authenticated, remote attacker to create a file or overwrite any file on the filesystem of an affected system.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-06-29</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>cisco</category>
+      <category>watch</category>
+      <category>path-traversal</category>
+      <category>cisco</category>
+    </item>
+    <item>
       <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-12186 — A weakness has been identified in GL.iNet GL-MT3000 up to 4.4.5. Affected is the…</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12186</link>
       <guid isPermaLink="false">531a53b931a497a3036a4cf5d35e2bcf</guid>
@@ -1012,73 +1052,6 @@
       <category>deserialization</category>
       <category>watch</category>
       <category>vmware</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-10520 — Ivanti Sentry: Ivanti Sentry OS Command Injection Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10520</link>
-      <guid isPermaLink="false">40139fbd4011ac1502f4186c7da11cc4</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
-      <description>Ivanti Sentry (formerly known as MobileIron Sentry) contains an OS command injection vulnerability which could allow a remote unauthenticated user to achieve root-level remote code execution. This vulnerability can be successfully exploited in cases where the Sentry appliance is in an unmanaged state with its endpoints externally reachable. The use of mTLS with EPMM or restricted HTTPS access through Neurons for MDM makes interfaces inaccessible to external actors.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-06-14</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>ivanti</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>ivanti</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-10520 — Ivanti Sentry: Ivanti Sentry OS Command Injection Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10520</link>
-      <guid isPermaLink="false">40139fbd4011ac1502f4186c7da11cc4</guid>
-      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
-      <description>Ivanti Sentry (formerly known as MobileIron Sentry) contains an OS command injection vulnerability which could allow a remote unauthenticated user to achieve root-level remote code execution. This vulnerability can be successfully exploited in cases where the Sentry appliance is in an unmanaged state with its endpoints externally reachable. The use of mTLS with EPMM or restricted HTTPS access through Neurons for MDM makes interfaces inaccessible to external actors.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-06-14</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>ivanti</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>ivanti</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-50223 — Improper Control of Generation of Code (&#39;Code Injection&#39;) vulnerability in Apach…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-50223</link>
-      <guid isPermaLink="false">cbcccd2126a56a3bca43545e820486c5</guid>
-      <pubDate>Wed, 10 Jun 2026 23:16:49 +0000</pubDate>
-      <description>Improper Control of Generation of Code (&#39;Code Injection&#39;) vulnerability in Apache OFBiz allows a low-privileged authenticated user with Content/DataResource editing privileges to perform template injection attacks that could lead to Remote Code Execution.&#xA;&#xA;This issue affects Apache OFBiz: before 24.09.07.&#xA;&#xA;Users are recommended to upgrade to version 24.09.07, which fixes the issue.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>apache</category>
-      <category>watch</category>
-      <category>apache</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-46529 — Atril Document Viewer is the default document reader of the MATE desktop environment for Linux. A si…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46529</link>
-      <guid isPermaLink="false">2b3ffc7099ac80a991bff77a07ee855b</guid>
-      <pubDate>Wed, 10 Jun 2026 20:17:28 +0000</pubDate>
-      <description>Atril Document Viewer is the default document reader of the MATE desktop environment for Linux. A single-click remote code execution vulnerability in versions prior to 1.26.3 and 1.28.4 allows an attacker to achieve arbitrary code execution as the user by tricking them into clicking a link inside a malicious PDF document. The PDF can be packaged as a polyglot file that is simultaneously a valid PDF and a valid ELF shared library, making the attack a single-file, single-click, configuration-independent RCE on stock atril installations. The root cause is `shell/ev-application.c:ev_spawn`, which builds a command line from attacker-controlled PDF link-destination fields without applying `g_shell_quote`. The cmdline is then handed to `g_app_info_create_from_commandline`, which shell-parses it back into argv — splitting any embedded `--gtk-module=PATH` into a separate argv element. GTK then `dlopen()`s the path during init, running any `__attribute__((constructor))` it finds. Versions 1.26.3 and 1.28.4 contain a patch for the issue. This is the same defect class as CVE-2023-51698 (CBT `--checkpoint-action` injection in `comics-document.c`, fixed in 1.6.2) but in a different code path (`shell/ev-application.c`) that the original patch did not touch.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>adobe</category>
-      <category>adobe</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-20251 — In Splunk Enterprise versions below 10.2.4, 10.0.7, 9.4.12, and 9.3.13, Splunk C…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-20251</link>
-      <guid isPermaLink="false">b709c56f806b7813b3b74a6b9de4bee6</guid>
-      <pubDate>Wed, 10 Jun 2026 18:16:40 +0000</pubDate>
-      <description>In Splunk Enterprise versions below 10.2.4, 10.0.7, 9.4.12, and 9.3.13, Splunk Cloud Platform versions below 10.3.2512.12, 10.2.2510.14, 10.1.2507.22, and 9.3.2411.132, and Splunk Secure Gateway versions below 3.10.6, 3.9.20, and 3.8.67, a low-privileged user that does not hold the &#39;admin&#39; or &#39;power&#39; Splunk roles could perform a Remote Code Execution (RCE) through the Splunk Secure Gateway app.&lt;br&gt;&lt;br&gt;The Remote Code Execution is possible because of unsafe deserialization of App Key Value Store (KV Store) data through the ‘jsonpickle’ Python library, which reconstructs arbitrary Python objects from specially crafted JavaScript Object Notation (JSON) without adequate validation.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>deserialization</category>
-      <category>splunk</category>
     </item>
   </channel>
 </rss>

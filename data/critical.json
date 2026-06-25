@@ -1,5 +1,77 @@
 [
   {
+    "id": "5ca5fd58f5f0c41717af516e0647eb54",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Cisco Catalyst SD-WAN Zero-Day CVE-2026-20245 Exploited to Gain Root Access",
+    "url": "https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html",
+    "summary": "An unknown threat actor exploited a recently disclosed high-severity security flaw impacting Cisco Catalyst SD-WAN as a zero-day at least two months before it was publicly disclosed, according to new findings from Google-owned Mandiant. The vulnerability, tracked as CVE-2026-20245 (CVSS score: 7.8), allows an authenticated, local attacker to execute arbitrary commands with elevated privileges",
+    "published": "2026-06-25T05:46:54Z",
+    "fetched": "2026-06-25T22:56:07.466483046Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20245"
+    ]
+  },
+  {
+    "id": "6efec80aed7491b4aa5b945a23724f50",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-12569 — PTC Windchill and FlexPLM: PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12569",
+    "summary": "PTC Windchill and FlexPLM contains an improper input validation vulnerability allowing an unauthenticated, remote attacker to execute arbitrary code by sending a malicious request to the network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-28",
+    "published": "2026-06-25T00:00:00Z",
+    "fetched": "2026-06-25T22:56:07.466483046Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "ptc"
+    ],
+    "cves": [
+      "CVE-2026-12569"
+    ]
+  },
+  {
+    "id": "1132023850c9b088c56f30acdd36ac5b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-20230 — Cisco Unified Communications Manager: Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20230",
+    "summary": "Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) contain a server-side request forgery (SSRF) Vulnerability that could allow an unauthenticated, remote attacker to write files to the underlying operating system that could be used later to elevate to root.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-28",
+    "published": "2026-06-25T00:00:00Z",
+    "fetched": "2026-06-25T22:56:07.466483046Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "cisco",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20230"
+    ]
+  },
+  {
     "id": "f478bb9eebe1db5774c822b40885bfbf",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -917,6 +989,29 @@
     "source": "msrc",
     "source_name": "Microsoft Security Blog",
     "category": "advisory",
+    "title": "From package to postinstall payload: Inside the Mastra npm supply chain compromise by Sapphire Sleet",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/",
+    "summary": "A poisoned npm package infected 140+ projects with a hidden payload. This report highlights how to detect, hunt, and defend against supply chain attacks using Microsoft Defender and actionable threat intelligence. The post From package to postinstall payload: Inside the Mastra npm supply chain compromise by Sapphire Sleet appeared first on Microsoft Security Blog.",
+    "published": "2026-06-18T03:43:04Z",
+    "fetched": "2026-06-25T22:56:07.466483046Z",
+    "tags": [
+      "sap",
+      "microsoft",
+      "watch",
+      "supply-chain"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "sap",
+      "microsoft"
+    ]
+  },
+  {
+    "id": "2459f1a847f5a8d21328c3dbae0a6e4b",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
     "title": "From package to postinstall payload: Inside the Mastra npm supply chain compromise",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/",
     "summary": "A poisoned npm package infected 140+ projects with a hidden payload. This report highlights how to detect, hunt, and defend against supply chain attacks using Microsoft Defender and actionable threat intelligence. The post From package to postinstall payload: Inside the Mastra npm supply chain compromise appeared first on Microsoft Security Blog.",
@@ -948,6 +1043,31 @@
     ],
     "severity": "high",
     "score": 60
+  },
+  {
+    "id": "b91c70b652c47e76d0e4961747f7d1ac",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-20253 — Splunk Enterprise: Splunk Enterprise Missing Authentication for Critical Function Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20253",
+    "summary": "Splunk Enterprise contains a missing authentication for critical function vulnerability which could allow an unauthenticated user to create or truncate arbitrary files through a PostgreSQL sidecar service endpoint.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-21",
+    "published": "2026-06-18T00:00:00Z",
+    "fetched": "2026-06-25T22:56:07.466483046Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "postgres"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "splunk",
+      "postgres"
+    ],
+    "cves": [
+      "CVE-2026-20253"
+    ]
   },
   {
     "id": "b91c70b652c47e76d0e4961747f7d1ac",
@@ -1580,227 +1700,6 @@
     "score": 60,
     "cves": [
       "CVE-2026-42853"
-    ]
-  },
-  {
-    "id": "61ab829e642a57b18d591b09248f55d8",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.7 HIGH] CVE-2026-47260 — Koel is a free, open-source music streaming solution. Prior to version 9.3.5, Ko…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47260",
-    "summary": "Koel is a free, open-source music streaming solution. Prior to version 9.3.5, Koel validates the podcast feed URL via the SafeUrl rule (DNS resolution + public IP check), but the individual episode <enclosure url=\"...\"> values extracted from the RSS XML are stored directly into the database without any SSRF validation. When a user plays an episode, the server downloads the full HTTP response from the unvalidated enclosure URL via Http::sink()->get() and streams it back to the user, enabling full-read SSRF against internal services. This issue has been patched in version 9.3.5.",
-    "published": "2026-06-12T20:16:46.32Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-47260"
-    ]
-  },
-  {
-    "id": "739ac332c71fb59fada73acd5df581d6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-47141 — vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, NodeVM exposes some process-w…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47141",
-    "summary": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, NodeVM exposes some process-wide observability builtins when they are allowed through require.builtin. The diagnostics_channel, async_hooks, and perf_hooks builtins are not blocked by the dangerous builtin denylist. These modules are process-wide, not sandbox-local. Sandboxed code can use them to observe host application data across the vm2 boundary. This issue has been patched in version 3.11.4.",
-    "published": "2026-06-12T15:16:28.537Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-47141"
-    ]
-  },
-  {
-    "id": "8f5df91a46d06286080085565402f143",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 10.0 CRITICAL] CVE-2026-47131 — vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, by combin…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47131",
-    "summary": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.4, by combining Buffer.call.call({}.__lookupGetter__, Buffer, \"__proto__\"), Buffer.call.call({}.__lookupSetter__, Buffer, \"__proto__\"), and Node.js's ERR_INVALID_ARG_TYPE Error, the host's TypeError constructor can be obtained, which allows the escape from the sandbox. This allows attackers to run arbitrary code. This issue has been patched in version 3.11.4.",
-    "published": "2026-06-12T15:16:27.87Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-47131"
-    ]
-  },
-  {
-    "id": "effa6cfd2f36567323b5ab6ac8b7ffca",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-47200 — Nuxt is an open-source web development framework for Vue.js. In Nuxt versions 3.11.0 to before 3.21.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47200",
-    "summary": "Nuxt is an open-source web development framework for Vue.js. In Nuxt versions 3.11.0 to before 3.21.6 and 4.0.0-alpha.1 to before 4.4.6 and @nuxt/nitro-server versions 3.20.0 to before 3.21.6 and 4.0.0-alpha.1 to before 4.4.6, when experimental.componentIslands is enabled (default in Nuxt 4), any .server.vue file under pages/ is automatically registered as a server island under the key page_<routeName> and exposed via the /__nuxt_island/:name endpoint. Until this fix, requests through that endpoint rendered the page component directly via the SSR renderer without instantiating Vue Router, which meant route middleware declared on the page (including definePageMeta({ middleware })) did not run. This issue has been patched in versions 3.21.6 and 4.4.6.",
-    "published": "2026-06-12T14:16:32.137Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-47200"
-    ]
-  },
-  {
-    "id": "5f26bff3cdadd4b03c7d46eb60dc9d13",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Active Exploitation of Oracle PeopleSoft Zero-Day (CVE-2026-35273)",
-    "url": "https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273",
-    "summary": "OverviewOn June 10, 2026, Oracle published a security alert for CVE-2026-35273, a critical vulnerability in the Updates Environment Management component of PeopleSoft Enterprise PeopleTools. Oracle released an out-of-band patch the same day as the advisory, underscoring the urgency of remediation. The vulnerability has a CVSSv3.1 score of 9.8 and is remotely exploitable without authentication. Per the vendor advisory, successful exploitation may result in remote code execution (RCE). TrendAI has classified the underlying flaw as a server-side request forgery (CWE-918). PeopleTools versions 8.6...",
-    "published": "2026-06-12T13:43:04Z",
-    "fetched": "2026-06-19T22:31:21.369102731Z",
-    "tags": [
-      "oracle",
-      "rce",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 66,
-    "vendors": [
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-35273"
-    ]
-  },
-  {
-    "id": "5f26bff3cdadd4b03c7d46eb60dc9d13",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Active Exploitation of Oracle PeopleSoft Zero-Day (CVE-2026-35273)",
-    "url": "https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273",
-    "summary": "OverviewOn June 10, 2026, Oracle published a security alert for CVE-2026-35273, a critical vulnerability in the Updates Environment Management component of PeopleSoft Enterprise PeopleTools. Oracle released an out-of-band patch the same day as the advisory, underscoring the urgency of remediation. The vulnerability has a CVSSv3.1 score of 9.8 and is remotely exploitable without authentication. Per the vendor advisory, successful exploitation may result in remote code execution (RCE). TrendAI has classified the underlying flaw as a server-side request forgery (CWE-918). PeopleTools versions 8.6...",
-    "published": "2026-06-12T13:43:04Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "oracle",
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 81,
-    "vendors": [
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-35273"
-    ]
-  },
-  {
-    "id": "395bc944ad34c04ea3623fba69064e6d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-47197 — Quest Bot is an opensource Discord Bot. Prior to version 1.1.6, a moderator with the relevant Discor…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47197",
-    "summary": "Quest Bot is an opensource Discord Bot. Prior to version 1.1.6, a moderator with the relevant Discord permission bit can use the bot to moderate users above them in the Discord role hierarchy, as long as the bot itself outranks the target. This bypasses Discord’s normal role hierarchy protections and lets lower-ranked moderators ban, kick, timeout, untimeout, warn, or rename higher-ranked users. This issue has been patched in version 1.1.6.",
-    "published": "2026-06-12T13:16:33.677Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-47197"
-    ]
-  },
-  {
-    "id": "e0432a76da93fbc4003af431025491b1",
-    "source": "trailofbits",
-    "source_name": "Trail of Bits Blog",
-    "category": "research",
-    "title": "Factoring \"short-sleeve\" RSA keys with polynomials",
-    "url": "https://blog.trailofbits.com/2026/06/12/factoring-short-sleeve-rsa-keys-with-polynomials/",
-    "summary": "What happens when the bits of an RSA private key are heavily biased toward 0 instead of being randomly generated? The public key’s bits could be biased enough for us to detect these incorrectly generated keys in the wild. Together with Hanno Böck of the badkeys project, we found hundreds of unique keys that not only have this property, but can be quickly factored. We also found the bug that led to many of these keys and analyzed historical data to track the issue over time. Surprisingly, the pattern of 0 bits is often highly structured, allowing us to develop a powerful polynomial-based cry...",
-    "published": "2026-06-12T11:00:00Z",
-    "fetched": "2026-06-19T22:31:21.369102731Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 61
-  },
-  {
-    "id": "e0432a76da93fbc4003af431025491b1",
-    "source": "trailofbits",
-    "source_name": "Trail of Bits Blog",
-    "category": "research",
-    "title": "Factoring \"short-sleeve\" RSA keys with polynomials",
-    "url": "https://blog.trailofbits.com/2026/06/12/factoring-short-sleeve-rsa-keys-with-polynomials/",
-    "summary": "What happens when the bits of an RSA private key are heavily biased toward 0 instead of being randomly generated? The public key’s bits could be biased enough for us to detect these incorrectly generated keys in the wild. Together with Hanno Böck of the badkeys project, we found hundreds of unique keys that not only have this property, but can be quickly factored. We also found the bug that led to many of these keys and analyzed historical data to track the issue over time. Surprisingly, the pattern of 0 bits is often highly structured, allowing us to develop a powerful polynomial-based cry...",
-    "published": "2026-06-12T11:00:00Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 61
-  },
-  {
-    "id": "69f41fb149ff95f892642b2a33292f2f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-50645 — There is no restriction on the amount of attachment headers that a message can c…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50645",
-    "summary": "There is no restriction on the amount of attachment headers that a message can contain when being deserialized by Apache CXF, which can lead to uncontrolled resource consumption or a denial of service attack. Users are recommended to upgrade to versions 4.2.2 or 4.1.7, which fix this issue by imposing a maximum default of 500 attachments per message.",
-    "published": "2026-06-12T10:16:23.533Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "apache",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2026-50645"
-    ]
-  },
-  {
-    "id": "6e8428a2775557e9adc4dc4e77170e8f",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA orders feds to patch actively exploited Ivanti flaw by Sunday",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-gives-feds-3-days-to-patch-ivanti-flaw-exploited-in-attacks/",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) ordered government agencies to patch an actively exploited Ivanti Sentry flaw within three days, as mandated by the newly issued Binding Operational Directive (BOD) 26-04. [...]",
-    "published": "2026-06-12T08:26:55Z",
-    "fetched": "2026-06-12T22:57:46.90334405Z",
-    "tags": [
-      "ivanti",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "ivanti"
     ]
   }
 ]

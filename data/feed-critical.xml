@@ -5,7 +5,20 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Jun 2026 22:56:07 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 22:45:33 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] CISA sets urgent deadline to fix Cisco flaw exploited in attacks</title>
+      <link>https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/</link>
+      <guid isPermaLink="false">0bc570739753485faaef4abbb2b03692</guid>
+      <pubDate>Fri, 26 Jun 2026 19:43:06 +0000</pubDate>
+      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is giving federal agencies until Sunday to patch a vulnerability in Cisco Unified Communications Manager Server that is being actively exploited. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>cisco</category>
+      <category>watch</category>
+      <category>actively-exploited</category>
+      <category>cisco</category>
+    </item>
     <item>
       <title>[HIGH] Cisco Catalyst SD-WAN Zero-Day CVE-2026-20245 Exploited to Gain Root Access</title>
       <link>https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html</link>
@@ -918,51 +931,6 @@
       <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>high</category>
       <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-9109 — The GPTranslate – Multilingual AI Translation for WordPress: Automatically Tra…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9109</link>
-      <guid isPermaLink="false">16421ffa2c658ab7ecf267f2915769cf</guid>
-      <pubDate>Sat, 13 Jun 2026 07:16:14 +0000</pubDate>
-      <description>The GPTranslate – Multilingual AI Translation for WordPress: Automatically Translate Websites plugin for WordPress is vulnerable to Stored Cross-Site Scripting via REST API Translation Storage in all versions up to, and including, 2.31 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The deterministically derived API key (sha256 of the site URL) is printed in the HTML source of every page via the JavaScript variable gptApiKey, meaning any unauthenticated visitor can retrieve the key and submit malicious translation payloads to the /wp-json/gptranslate/v1/request endpoint without any additional precondition.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>xss</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 4.6 MEDIUM] CVE-2026-11443 — Allegra downloadAttachment Cross-Site Scripting Authentication Bypass Vulnerabil…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11443</link>
-      <guid isPermaLink="false">4ceb13b4279fc398d7695ef099bdc945</guid>
-      <pubDate>Sat, 13 Jun 2026 00:16:24 +0000</pubDate>
-      <description>Allegra downloadAttachment Cross-Site Scripting Authentication Bypass Vulnerability. This vulnerability allows remote attackers to execute arbitrary script on affected installations of Allegra. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.&#xA;&#xA;The specific flaw exists within the downloadAttachment method. The issue results from the lack of proper validation of user-supplied data, which can lead to the injection of arbitrary script. An attacker can leverage this vulnerability to execute script in the context of the current user. Was ZDI-CAN-28236.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>xss</category>
-      <category>auth-bypass</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.1 HIGH] CVE-2026-45013 — ApostropheCMS is an open-source Node.js content management system. Versions up t…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45013</link>
-      <guid isPermaLink="false">e8662ca2e627d90c2872b76aca4c4ad0</guid>
-      <pubDate>Fri, 12 Jun 2026 21:16:22 +0000</pubDate>
-      <description>ApostropheCMS is an open-source Node.js content management system. Versions up to and including 4.29.0 have a password reset flow that constructs the reset URL using `req.hostname`, which is derived directly from the attacker-controlled HTTP `Host` header when `apos.baseUrl` is not explicitly configured. An unauthenticated attacker who knows a victim&#39;s email address can send a crafted reset request that causes the application to email the victim a reset link pointing to the attacker&#39;s domain. When the victim clicks the link, the valid reset token is delivered to the attacker, enabling full account takeover. As of time of publication, no known patched versions are available.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-42853 — ApostropheCMS is an open-source Node.js content management system. Versions of t…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-42853</link>
-      <guid isPermaLink="false">ee3073975663bb89f2c109107dbcaef7</guid>
-      <pubDate>Fri, 12 Jun 2026 21:16:21 +0000</pubDate>
-      <description>ApostropheCMS is an open-source Node.js content management system. Versions of the @apostrophecms/cli package up to and including 3.6.0 contain a command injection vulnerability in the apos create command. User-supplied input from the password prompt is embedded directly into a shell command without proper sanitization or escaping. This allows execution of arbitrary commands on the host system. As of time of publication, no known patched versions are available.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
     </item>
   </channel>
 </rss>

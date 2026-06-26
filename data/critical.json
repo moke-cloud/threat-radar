@@ -1,5 +1,26 @@
 [
   {
+    "id": "0bc570739753485faaef4abbb2b03692",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA sets urgent deadline to fix Cisco flaw exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is giving federal agencies until Sunday to patch a vulnerability in Cisco Unified Communications Manager Server that is being actively exploited. [...]",
+    "published": "2026-06-26T19:43:06Z",
+    "fetched": "2026-06-26T22:45:33.434355189Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "cisco"
+    ]
+  },
+  {
     "id": "5ca5fd58f5f0c41717af516e0647eb54",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -1617,89 +1638,6 @@
     "score": 70,
     "cves": [
       "CVE-2026-54420"
-    ]
-  },
-  {
-    "id": "16421ffa2c658ab7ecf267f2915769cf",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.2 HIGH] CVE-2026-9109 — The GPTranslate – Multilingual AI Translation for WordPress: Automatically Tra…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9109",
-    "summary": "The GPTranslate – Multilingual AI Translation for WordPress: Automatically Translate Websites plugin for WordPress is vulnerable to Stored Cross-Site Scripting via REST API Translation Storage in all versions up to, and including, 2.31 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The deterministically derived API key (sha256 of the site URL) is printed in the HTML source of every page via the JavaScript variable gptApiKey, meaning any unauthenticated visitor can retrieve the key and submit malicious translation payloads to the /wp-json/gptranslate/v1/request endpoint without any additional precondition.",
-    "published": "2026-06-13T07:16:14.853Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "xss",
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 78,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-9109"
-    ]
-  },
-  {
-    "id": "4ceb13b4279fc398d7695ef099bdc945",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 4.6 MEDIUM] CVE-2026-11443 — Allegra downloadAttachment Cross-Site Scripting Authentication Bypass Vulnerabil…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11443",
-    "summary": "Allegra downloadAttachment Cross-Site Scripting Authentication Bypass Vulnerability. This vulnerability allows remote attackers to execute arbitrary script on affected installations of Allegra. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.\n\nThe specific flaw exists within the downloadAttachment method. The issue results from the lack of proper validation of user-supplied data, which can lead to the injection of arbitrary script. An attacker can leverage this vulnerability to execute script in the context of the current user. Was ZDI-CAN-28236.",
-    "published": "2026-06-13T00:16:24.29Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "xss",
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-11443"
-    ]
-  },
-  {
-    "id": "e8662ca2e627d90c2872b76aca4c4ad0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-45013 — ApostropheCMS is an open-source Node.js content management system. Versions up t…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45013",
-    "summary": "ApostropheCMS is an open-source Node.js content management system. Versions up to and including 4.29.0 have a password reset flow that constructs the reset URL using `req.hostname`, which is derived directly from the attacker-controlled HTTP `Host` header when `apos.baseUrl` is not explicitly configured. An unauthenticated attacker who knows a victim's email address can send a crafted reset request that causes the application to email the victim a reset link pointing to the attacker's domain. When the victim clicks the link, the valid reset token is delivered to the attacker, enabling full account takeover. As of time of publication, no known patched versions are available.",
-    "published": "2026-06-12T21:16:22.85Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-45013"
-    ]
-  },
-  {
-    "id": "ee3073975663bb89f2c109107dbcaef7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-42853 — ApostropheCMS is an open-source Node.js content management system. Versions of t…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42853",
-    "summary": "ApostropheCMS is an open-source Node.js content management system. Versions of the @apostrophecms/cli package up to and including 3.6.0 contain a command injection vulnerability in the apos create command. User-supplied input from the password prompt is embedded directly into a shell command without proper sanitization or escaping. This allows execution of arbitrary commands on the host system. As of time of publication, no known patched versions are available.",
-    "published": "2026-06-12T21:16:21.3Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-42853"
     ]
   }
 ]

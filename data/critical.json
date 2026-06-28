@@ -1545,44 +1545,6 @@
     ]
   },
   {
-    "id": "531a53b931a497a3036a4cf5d35e2bcf",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-12186 — A weakness has been identified in GL.iNet GL-MT3000 up to 4.4.5. Affected is the…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12186",
-    "summary": "A weakness has been identified in GL.iNet GL-MT3000 up to 4.4.5. Affected is the function replace_country in the library /usr/lib/oui-httpd/rpc/tor of the component Tor Proxy Service Configuration Handler. This manipulation causes command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 4.7 is able to address this issue. It is recommended to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
-    "published": "2026-06-14T21:16:18.483Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-12186"
-    ]
-  },
-  {
-    "id": "9e11fb297e5491564fbc2ed38a75ae29",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-11527 — Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11527",
-    "summary": "Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle.\n\nConfig::IniFiles::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. The helper is the open path behind the documented -file argument: new(-file => $thing) reaches it through ReadConfig. An in-memory scalar reference (-file => \\$text) does not open a path and is unaffected.\n\nAny caller that forwards untrusted input to the -file argument can run an arbitrary command or truncate a file under the process UID.",
-    "published": "2026-06-14T12:16:23.357Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-11527"
-    ]
-  },
-  {
     "id": "33f6df5f7207ed36f3b628697c4127c5",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -1603,41 +1565,27 @@
     ]
   },
   {
-    "id": "33f6df5f7207ed36f3b628697c4127c5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-11526 — GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11526",
-    "summary": "GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle.\n\nGD::Image::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. _make_filehandle is the single open path behind every filename-accepting constructor (new, newFromPng, newFromJpeg, and the rest); the in-memory *Data variants do not open a path and are unaffected.\n\nAny caller that forwards untrusted input to one of these constructors as a pathname can run an arbitrary command or truncate a file under the process UID.",
-    "published": "2026-06-14T12:16:22.403Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "id": "5f26bff3cdadd4b03c7d46eb60dc9d13",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Active Exploitation of Oracle PeopleSoft Zero-Day (CVE-2026-35273)",
+    "url": "https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273",
+    "summary": "OverviewOn June 10, 2026, Oracle published a security alert for CVE-2026-35273, a critical vulnerability in the Updates Environment Management component of PeopleSoft Enterprise PeopleTools. Oracle released an out-of-band patch the same day as the advisory, underscoring the urgency of remediation. The vulnerability has a CVSSv3.1 score of 9.8 and is remotely exploitable without authentication. Per the vendor advisory, successful exploitation may result in remote code execution (RCE). TrendAI has classified the underlying flaw as a server-side request forgery (CWE-918). PeopleTools versions 8.6...",
+    "published": "2026-06-12T13:43:04Z",
+    "fetched": "2026-06-26T22:45:33.434355189Z",
     "tags": [
-      "rce"
+      "oracle",
+      "rce",
+      "0day"
     ],
     "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-11526"
-    ]
-  },
-  {
-    "id": "42d9fbbb16a344f8354b479cad616dec",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.5 HIGH] CVE-2026-54420 — LiteSpeed cPanel plugin before 2.4.8 (as distributed in LiteSpeed WHM PlugIn bef…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54420",
-    "summary": "LiteSpeed cPanel plugin before 2.4.8 (as distributed in LiteSpeed WHM PlugIn before 5.3.2.0) mishandles symlinks provided by a user with FTP or web shell access on a shared hosting server running CloudLinux/CageFS, as exploited in the wild in May 2026.",
-    "published": "2026-06-14T04:16:28.63Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "actively-exploited"
+    "score": 66,
+    "vendors": [
+      "oracle"
     ],
-    "severity": "high",
-    "score": 70,
     "cves": [
-      "CVE-2026-54420"
+      "CVE-2026-35273"
     ]
   }
 ]

@@ -1,5 +1,34 @@
 [
   {
+    "id": "eaf669164bd2ae964aef3730705e7cb5",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Data breach exposes up to 14.2 million email logins at six ISPs",
+    "url": "https://www.bleepingcomputer.com/news/security/data-breach-exposes-up-to-142-million-email-logins-at-six-isps/",
+    "summary": "Japanese telecommunications operator KDDI Corporation disclosed a data breach where threat actors gained access to one of its email systems used by five other internet service providers (ISPs) in the country. [...]",
+    "published": "2026-06-28T14:13:46Z",
+    "fetched": "2026-06-28T22:35:43.535296123Z",
+    "tags": [
+      "breach"
+    ],
+    "severity": "medium",
+    "score": 42
+  },
+  {
+    "id": "fc301017c98ae0b3457dc4e0e839b5e8",
+    "source": "sans-isc",
+    "source_name": "SANS Internet Storm Center",
+    "category": "news",
+    "title": "YARA-X 1.18.0 and 1.19.0 Release, (Sun, Jun 28th)",
+    "url": "https://isc.sans.edu/diary/rss/33106",
+    "summary": "YARA-X&&#x23&#x3b;x26&#x3b;&#x23&#x3b;39&#x3b;s 1.18.0 release brings 3 improvements and 2 bugfixes.&#xd;",
+    "published": "2026-06-28T07:56:44Z",
+    "fetched": "2026-06-28T22:35:43.535296123Z",
+    "severity": "medium",
+    "score": 30
+  },
+  {
     "id": "78bcca35df7e8ab263ddcc8b4ccfccfc",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -379,6 +408,26 @@
     "summary": "The Russian state-sponsored threat actor known as Turla has been attributed to a previously undocumented .NET backdoor called STOCKSTAY that has been deployed against government and military organizations in Ukraine, and entities that have an interest in Italian foreign policy. Describing the Windows backdoor as continually developed by the hacking group, Google Threat Intelligence Group (",
     "published": "2026-06-26T07:15:46Z",
     "fetched": "2026-06-26T22:45:33.434355189Z",
+    "tags": [
+      "microsoft",
+      "watch"
+    ],
+    "severity": "low",
+    "score": 28,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "4a2e3346e5260425416d32fd5d6900af",
+    "source": "jpcert-wr",
+    "source_name": "JPCERT/CC 全フィード",
+    "category": "advisory",
+    "title": "JVN: ExpressUpdate Agent for Windowsにおける名前付きパイプに対するアクセス制御不備の脆弱性",
+    "url": "https://jvn.jp/jp/JVN35146924/",
+    "summary": "日本電気株式会社が提供するExpressUpdate Agent for Windowsには、内部で使用している名前付きパイプのアクセス制御設定に不備が存在します。",
+    "published": "2026-06-26T05:00:00Z",
+    "fetched": "2026-06-28T22:35:43.535296123Z",
     "tags": [
       "microsoft",
       "watch"
@@ -8509,89 +8558,6 @@
     ]
   },
   {
-    "id": "531a53b931a497a3036a4cf5d35e2bcf",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-12186 — A weakness has been identified in GL.iNet GL-MT3000 up to 4.4.5. Affected is the…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12186",
-    "summary": "A weakness has been identified in GL.iNet GL-MT3000 up to 4.4.5. Affected is the function replace_country in the library /usr/lib/oui-httpd/rpc/tor of the component Tor Proxy Service Configuration Handler. This manipulation causes command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 4.7 is able to address this issue. It is recommended to upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
-    "published": "2026-06-14T21:16:18.483Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-12186"
-    ]
-  },
-  {
-    "id": "39b060c599ac07585e893a9782c4f3fe",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.2 HIGH] CVE-2026-54413 — driftregion iso14229 through 0.9.0 contains an integer underflow and downstream …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54413",
-    "summary": "driftregion iso14229 through 0.9.0 contains an integer underflow and downstream out-of-bounds read in the Handle_0x27_SecurityAccess() function in iso14229.c that allows a remote unauthenticated attacker to crash a UDS server and potentially read memory past the receive buffer by sending a single-byte 0x27 SecurityAccess request that follows any earlier well-formed 0x27 message. The handler reads the SecurityAccess subFunction from recv_buf[1] without first checking that recv_len is at least 2, then computes the key-data length as the unsigned subtraction (uint16_t)(recv_len - UDS_0X27_REQ_BASE_LEN); when recv_len equals 1 the result underflows to 65535 and is passed as args.len to the application's SecAccessValidateKey or SecAccessRequestSeed callback, which typically iterates or copies that many bytes from the 4-KB receive buffer. Every other UDS sub-function handler in the library (0x10, 0x11, 0x14, 0x19, 0x22, 0x23, 0x28, and others) performs an explicit recv_len lower-bound check before indexing; Handle_0x27_SecurityAccess is the sole outlier. The vulnerable handler reaches over CAN bus, OBD-II, ISO-TP, and DoIP transports and is exposed in the default diagnostic session without prior authentication; deployments on automotive ECUs, industrial controllers, and IoT devices that ship iso14229 as their UDS server are affected.",
-    "published": "2026-06-14T18:17:20.943Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-54413"
-    ]
-  },
-  {
-    "id": "b5b74b6cdb62d8d1caac7378a78e15df",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.2 HIGH] CVE-2026-54412 — LiamBindle MQTT-C through version 1.1.6 contains a heap-based out-of-bounds read…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54412",
-    "summary": "LiamBindle MQTT-C through version 1.1.6 contains a heap-based out-of-bounds read and integer underflow in the mqtt_unpack_publish_response() function in src/mqtt.c that allows a remote unauthenticated attacker controlling an MQTT broker - or able to inject MQTT traffic into an unencrypted session - to crash a subscribed MQTT-C client and potentially disclose adjacent heap memory by sending a single crafted PUBLISH packet. The function validates only that the fixed-header remaining_length is at least 4, then reads the 16-bit topic_name_size field from the broker-controlled packet and advances the parse pointer by that value without verifying that topic_name_size plus the surrounding overhead fits within remaining_length; it subsequently computes application_message_size as remaining_length - topic_name_size - 2 (QoS 0) or - 4 (QoS greater than 0) in unsigned arithmetic, producing an integer underflow that is then passed to memmove(). A PUBLISH packet with topic_name_size = 0xFFFF and remaining_length = 7 advances the parse pointer 65535 bytes past the receive buffer (out-of-bounds read) and causes an application_message_size near 2^32, crashing the process when the resulting memmove() is executed.",
-    "published": "2026-06-14T18:17:20.75Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-54412"
-    ]
-  },
-  {
-    "id": "c2f053367b541e61fc86ffeb6809c075",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.9 MEDIUM] CVE-2026-54411 — Linux-PAM through 1.7.2 contains an observable timing discrepancy (CWE-208) in t…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54411",
-    "summary": "Linux-PAM through 1.7.2 contains an observable timing discrepancy (CWE-208) in the pam_userdb module's plaintext-password comparison path in modules/pam_userdb/pam_userdb.c that allows a local or network-adjacent attacker able to repeatedly drive authentication through a calling service to recover the plaintext password of a target account by measuring response-timing differences. The comparison uses strncmp() (or strncasecmp() when PAM_ICASE_ARG is set) preceded by a length-equality check, so the time to reject a candidate depends on the index of the first differing byte and on whether the candidate's length matches the stored password, leaking the password length and individual prefix bytes. The vulnerable path is reached when the administrator configures pam_userdb with crypt=none, with an unrecognized crypt method, or without a crypt= argument, causing the module to store and compare credentials in plaintext.",
-    "published": "2026-06-14T18:17:20.587Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-54411"
-    ]
-  },
-  {
-    "id": "4305c57c033edd5811c93ce8bd0cec08",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.6 HIGH] CVE-2026-54410 — nanoMODBUS through v1.23.0 contains an off-by-one buffer overflow in the recv_ms…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54410",
-    "summary": "nanoMODBUS through v1.23.0 contains an off-by-one buffer overflow in the recv_msg_header() function of the Modbus/TCP server that allows remote unauthenticated attackers to write one attacker-controlled byte past the end of the 260-byte receive buffer by sending a crafted MBAP frame whose Length field is set to 255. The overflow corrupts the adjacent buffer-index field of the nanoMODBUS state structure, resulting in denial of service through invalid memory accesses and, on bare-metal and RTOS targets without memory protection, one-byte information disclosure and writes to unintended register addresses on the Write Multiple Registers (FC16) handler path.",
-    "published": "2026-06-14T18:17:20.33Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-54410"
-    ]
-  },
-  {
     "id": "81f554a0eea08a46661dceae13869265",
     "source": "schneier",
     "source_name": "Schneier on Security",
@@ -8603,51 +8569,6 @@
     "fetched": "2026-06-21T22:43:48.573384491Z",
     "severity": "info",
     "score": 3
-  },
-  {
-    "id": "81f554a0eea08a46661dceae13869265",
-    "source": "schneier",
-    "source_name": "Schneier on Security",
-    "category": "analysis",
-    "title": "Upcoming Speaking Engagements",
-    "url": "https://www.schneier.com/blog/archives/2026/06/upcoming-speaking-engagements-57.html",
-    "summary": "This is a current list of where and when I am scheduled to speak: I’m giving a keynote at Cybernation 2026 in Berlin, Germany, on June 24, 2026. I’m speaking at the Potsdam Conference on National Cybersecurity at the Hasso Plattner Institut in Potsdam, Germany. The event runs June 24–25, 2026, and my talk will be the evening of June 24. I’m participating in a panel discussion at the Austrian Institute for International Affairs in Vienna on Thursday, June 25, 2026. I’m speaking at the Digital Humanism Conference in Vienna, Austria, on Friday, June 26, 2026...",
-    "published": "2026-06-14T16:07:31Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "severity": "low",
-    "score": 18
-  },
-  {
-    "id": "bc7fc75bb7c9457a5dd6c0a6828c5734",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "FBI disrupts massive AI-powered phishing service using a million URLs",
-    "url": "https://www.bleepingcomputer.com/news/security/fbi-disrupts-massive-ai-powered-phishing-service-using-a-million-urls/",
-    "summary": "In a coordinated effort, the FBI, working with Google and Black Lotus Labs, has dismantled a massive Chinese phishing-as-a-service operation called Outsider Enterprise with thousands of phishing websites used to steal credit card data and passwords. [...]",
-    "published": "2026-06-14T14:36:23Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "severity": "low",
-    "score": 27
-  },
-  {
-    "id": "9e11fb297e5491564fbc2ed38a75ae29",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-11527 — Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11527",
-    "summary": "Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle.\n\nConfig::IniFiles::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. The helper is the open path behind the documented -file argument: new(-file => $thing) reaches it through ReadConfig. An in-memory scalar reference (-file => \\$text) does not open a path and is unaffected.\n\nAny caller that forwards untrusted input to the -file argument can run an arbitrary command or truncate a file under the process UID.",
-    "published": "2026-06-14T12:16:23.357Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-11527"
-    ]
   },
   {
     "id": "33f6df5f7207ed36f3b628697c4127c5",
@@ -8670,80 +8591,140 @@
     ]
   },
   {
-    "id": "33f6df5f7207ed36f3b628697c4127c5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-11526 — GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11526",
-    "summary": "GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle.\n\nGD::Image::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. _make_filehandle is the single open path behind every filename-accepting constructor (new, newFromPng, newFromJpeg, and the rest); the in-memory *Data variants do not open a path and are unaffected.\n\nAny caller that forwards untrusted input to one of these constructors as a pathname can run an arbitrary command or truncate a file under the process UID.",
-    "published": "2026-06-14T12:16:22.403Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "id": "717801cae16e71ecb922eafd1399fdc9",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Critical Splunk Enterprise Flaw Lets Attackers Run Code Without Authentication",
+    "url": "https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html",
+    "summary": "Splunk has released security updates to address a critical security flaw in Splunk Enterprise that could be exploited to conduct unauthenticated file operations and even remote code execution. The vulnerability, tracked as CVE-2026-20253, is rated 9.8 on the CVSS scoring system. \"In Splunk Enterprise versions below 10.2.4 and 10.0.7, an unauthenticated user could create or truncate arbitrary",
+    "published": "2026-06-13T13:23:03Z",
+    "fetched": "2026-06-20T22:42:43.690272483Z",
     "tags": [
       "rce"
     ],
-    "severity": "high",
-    "score": 60,
+    "severity": "medium",
+    "score": 33,
     "cves": [
-      "CVE-2026-11526"
+      "CVE-2026-20253"
     ]
   },
   {
-    "id": "db43890fc99090cf927877168d51d3b8",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2025-15546 — The Iptanus File Upload WordPress plugin before 5.1.7 does not implement proper file handling when t…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15546",
-    "summary": "The Iptanus File Upload WordPress plugin before 5.1.7 does not implement proper file handling when the duplicatepolicy setting is configured to \"maintain both.\" Due to a Time-of-Check to Time-of-Use (TOCTOU) race condition between the file existence check and the actual file write operation, an authenticated attacker can overwrite files uploaded by other users.",
-    "published": "2026-06-14T08:16:17.04Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
+    "id": "e5535cfd9075b03eb804b568a81a5510",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "U.S. Orders Anthropic to Suspend Fable 5 and Mythos 5 Access for Foreign Nationals",
+    "url": "https://thehackernews.com/2026/06/us-orders-anthropic-to-suspend-fable-5.html",
+    "summary": "Anthropic said on Friday it will \"abruptly disable\" its most advanced artificial intelligence (AI) models, Claude Fable 5 and Mythos 5, for all users after the U.S. government ordered it to suspend access to the models for foreign nationals, whether inside or outside the U.S., citing national security concerns. The AI company said it received an order at 5:21 p.m. ET, instructing it to suspend",
+    "published": "2026-06-13T05:42:50Z",
+    "fetched": "2026-06-20T22:42:43.690272483Z",
+    "severity": "info",
+    "score": 3
+  },
+  {
+    "id": "fd267db4f59edd84262cf9e10932ddfe",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Weekly Metasploit Update: New Kerberos/Certificate tracing options, and multiple new modules",
+    "url": "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-13-06-2026",
+    "summary": "New Tracing OptionsAs hard as we try to ensure that Metasploit is bug free, issues inevitably come up. Whether you’re running a module on an op or writing a new one, what we can do is make the debugging experience easier. To that end one of our two Google Summer of Code (GSoC) projects is here to deliver. Building on the previous pattern of HttpTrace comes two new options KerberosTicketTrace and CertificateTrace. These options, when enabled, will enable debugging output of Kerberos tickets and Certificates that are both sent and received by applicable modules. Now when things aren’t g...",
+    "published": "2026-06-13T00:22:18Z",
+    "fetched": "2026-06-27T22:37:10.225587674Z",
+    "severity": "info",
+    "score": 6
+  },
+  {
+    "id": "fd267db4f59edd84262cf9e10932ddfe",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Weekly Metasploit Update: New Kerberos/Certificate tracing options, and multiple new modules",
+    "url": "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-13-06-2026",
+    "summary": "New Tracing OptionsAs hard as we try to ensure that Metasploit is bug free, issues inevitably come up. Whether you’re running a module on an op or writing a new one, what we can do is make the debugging experience easier. To that end one of our two Google Summer of Code (GSoC) projects is here to deliver. Building on the previous pattern of HttpTrace comes two new options KerberosTicketTrace and CertificateTrace. These options, when enabled, will enable debugging output of Kerberos tickets and Certificates that are both sent and received by applicable modules. Now when things aren’t g...",
+    "published": "2026-06-13T00:22:18Z",
+    "fetched": "2026-06-20T22:42:43.690272483Z",
+    "severity": "info",
+    "score": 6
+  },
+  {
+    "id": "8b19eacb15be5404e493dc1c5efca756",
+    "source": "schneier",
+    "source_name": "Schneier on Security",
+    "category": "analysis",
+    "title": "Friday Squid Blogging: Squid-Inspired Fluid Pump",
+    "url": "https://www.schneier.com/blog/archives/2026/06/friday-squid-blogging-squid-inspired-fluid-pump.html",
+    "summary": "This fluid pump was inspired by the way squids propel themselves through the water. As usual, you can also use this squid post to talk about the security stories in the news that I haven&#8217;t covered. Blog moderation policy.",
+    "published": "2026-06-12T21:05:03Z",
+    "fetched": "2026-06-19T22:31:21.369102731Z",
+    "severity": "info",
+    "score": 3
+  },
+  {
+    "id": "20af693b891cb70fd6506a3b40816cf6",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Over 400 Arch Linux AUR Packages Hijacked to Deploy Infostealer and eBPF Rootkit",
+    "url": "https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html",
+    "summary": "Attackers took over more than 400 packages in the Arch User Repository (AUR) this week and rewrote their build scripts to install a credential stealer on any machine that built them. The malware is a Rust binary built to harvest developer secrets. When it lands with root, it can also load an eBPF rootkit to hide itself. The AUR is Arch Linux's community package collection, and it is separate",
+    "published": "2026-06-12T19:33:25Z",
+    "fetched": "2026-06-19T22:31:21.369102731Z",
     "tags": [
-      "wordpress",
-      "watch"
+      "malware"
     ],
-    "severity": "medium",
-    "score": 40,
+    "severity": "info",
+    "score": 3
+  },
+  {
+    "id": "5ad4cac80a5a9e06eb6f1b5126691d61",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Google Sues Chinese Smishing Network Accused of Using Gemini AI in Phishing",
+    "url": "https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html",
+    "summary": "Google on Friday said it's pursuing legal action against a Chinese cybercrime network, accusing it of using its Gemini artificial intelligence (AI) agent to send phishing text messages targeting Americans. The network is said to be behind the development and management of a phishing-as-a-service (PhaaS) software kit called Outsider, per the tech giant. \"The operation weaponized Gemini to help",
+    "published": "2026-06-12T18:59:32Z",
+    "fetched": "2026-06-19T22:31:21.369102731Z",
+    "severity": "info",
+    "score": 3
+  },
+  {
+    "id": "246b0c10af781e3dbc7e29f6ca5cf4b0",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "China-Linked Hackers Backdoored Linux Login Software to Hide for Nearly a Decade",
+    "url": "https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html",
+    "summary": "Instead of hiding on the laptops and servers defenders watch most closely, a China-nexus group spent close to a decade hidden inside the Linux login system itself. Sygnia, which tracks the group as Velvet Ant, says it backdoored the PAM and OpenSSH components that decide who is allowed to sign in, planting its access where ordinary cleanup could not reach it. The network it targeted had no",
+    "published": "2026-06-12T18:17:55Z",
+    "fetched": "2026-06-19T22:31:21.369102731Z",
+    "severity": "info",
+    "score": 3
+  },
+  {
+    "id": "5f26bff3cdadd4b03c7d46eb60dc9d13",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Active Exploitation of Oracle PeopleSoft Zero-Day (CVE-2026-35273)",
+    "url": "https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273",
+    "summary": "OverviewOn June 10, 2026, Oracle published a security alert for CVE-2026-35273, a critical vulnerability in the Updates Environment Management component of PeopleSoft Enterprise PeopleTools. Oracle released an out-of-band patch the same day as the advisory, underscoring the urgency of remediation. The vulnerability has a CVSSv3.1 score of 9.8 and is remotely exploitable without authentication. Per the vendor advisory, successful exploitation may result in remote code execution (RCE). TrendAI has classified the underlying flaw as a server-side request forgery (CWE-918). PeopleTools versions 8.6...",
+    "published": "2026-06-12T13:43:04Z",
+    "fetched": "2026-06-26T22:45:33.434355189Z",
+    "tags": [
+      "oracle",
+      "rce",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 66,
     "vendors": [
-      "wordpress"
+      "oracle"
     ],
     "cves": [
-      "CVE-2025-15546"
-    ]
-  },
-  {
-    "id": "20a3b125a0a024791861092580b7751b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.8 MEDIUM] CVE-2026-54421 — In OpenStack Ironic through 35.0.1, when applying a PATCH to update fields in vo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54421",
-    "summary": "In OpenStack Ironic through 35.0.1, when applying a PATCH to update fields in volume properties the user is authorized for, Ironic can return unredacted sensitive information (such as iSCSI credentials). The PATCH outcome is a security issue; the POST outcome is not a security issue.",
-    "published": "2026-06-14T04:16:30.927Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-54421"
-    ]
-  },
-  {
-    "id": "42d9fbbb16a344f8354b479cad616dec",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.5 HIGH] CVE-2026-54420 — LiteSpeed cPanel plugin before 2.4.8 (as distributed in LiteSpeed WHM PlugIn bef…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54420",
-    "summary": "LiteSpeed cPanel plugin before 2.4.8 (as distributed in LiteSpeed WHM PlugIn before 5.3.2.0) mishandles symlinks provided by a user with FTP or web shell access on a shared hosting server running CloudLinux/CageFS, as exploited in the wild in May 2026.",
-    "published": "2026-06-14T04:16:28.63Z",
-    "fetched": "2026-06-14T22:41:38.910672369Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 70,
-    "cves": [
-      "CVE-2026-54420"
+      "CVE-2026-35273"
     ]
   }
 ]

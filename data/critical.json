@@ -1,5 +1,87 @@
 [
   {
+    "id": "b3e6538f2b6cd59bbb479b627ed638bc",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Nissan discloses employee data breach linked to Oracle zero-day attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/",
+    "summary": "Nissan is warning that it suffered a data breach affecting current and former employees after threat actors exploited an Oracle PeopleSoft vulnerability in data theft attacks previously linked to the ShinyHunters extortion group. [...]",
+    "published": "2026-06-29T20:40:44Z",
+    "fetched": "2026-06-29T22:37:04.246440223Z",
+    "tags": [
+      "oracle",
+      "0day",
+      "breach"
+    ],
+    "severity": "critical",
+    "score": 82,
+    "vendors": [
+      "oracle"
+    ]
+  },
+  {
+    "id": "c979537e37cf195da23e2d522bc95add",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "NAIC says public data stolen in ShinyHunters' PeopleSoft breach",
+    "url": "https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/",
+    "summary": "The National Association of Insurance Commissioners (NAIC) says the ShinyHunters extortion group stole only publicly available data, outdated logs, and configuration files after breaching its systems by exploiting a zero-day vulnerability in an Oracle PeopleSoft server. [...]",
+    "published": "2026-06-29T20:30:28Z",
+    "fetched": "2026-06-29T22:37:04.246440223Z",
+    "tags": [
+      "oracle",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "oracle"
+    ]
+  },
+  {
+    "id": "900de57610aa512e6f56a3e8f9c0d5b0",
+    "source": "schneier",
+    "source_name": "Schneier on Security",
+    "category": "analysis",
+    "title": "Factoring RSA Keys with Many Zeros",
+    "url": "https://www.schneier.com/blog/archives/2026/06/factoring-rsa-keys-with-many-zeros.html",
+    "summary": "Interesting research on a new class of weak RSA keys: keys with lots of zeros. It turns out that these keys are out in the wild. The badkeys project is an open-source service that checks public keys for known vulnerabilities. While developing this tool, Hanno collected a massive number of real-world keys from public sources, including Certificate Transparency logs, internet-wide TLS and SSH scans, PGP keys, and many others. By searching this dataset for unexpectedly sparse RSA moduli, we uncovered a large number of keys in the wild with the patterns in Figure 1...",
+    "published": "2026-06-29T16:05:18Z",
+    "fetched": "2026-06-29T22:37:04.246440223Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78
+  },
+  {
+    "id": "43c8a848acc18bbe0ab1111c1554243c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48558 — SimpleHelp  SimpleHelp: SimpleHelp Authentication Bypass Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48558",
+    "summary": "SimpleHelp contains an authentication bypass vulnerability in the OIDC authentication flow. When OIDC authentication is configured, identity tokens submitted during login are accepted without verifying their cryptographic signature. In a vulnerable configuration, a remote, unauthenticated attacker can submit a forged token containing arbitrary identity claims to obtain a fully authenticated technician session. In some configurations, this may also allow bypass of multi-factor authentication.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-02",
+    "published": "2026-06-29T00:00:00Z",
+    "fetched": "2026-06-29T22:37:04.246440223Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "auth-bypass"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "simplehelp"
+    ],
+    "cves": [
+      "CVE-2026-48558"
+    ]
+  },
+  {
     "id": "0bc570739753485faaef4abbb2b03692",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1311,281 +1393,6 @@
     "score": 82,
     "vendors": [
       "microsoft"
-    ]
-  },
-  {
-    "id": "b25141254212b0f6cb46df0e15824905",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Cisco Releases Security Updates for Actively Exploited SD-WAN Manager Flaw",
-    "url": "https://thehackernews.com/2026/06/cisco-releases-security-updates-for.html",
-    "summary": "Cisco has released security updates for a medium-severity security flaw in Catalyst SD-WAN Manager that has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-20262, carries a CVSS score of 6.5 out of 10.0. \"A vulnerability in the web UI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an authenticated, remote attacker to create a file or",
-    "published": "2026-06-16T06:05:58Z",
-    "fetched": "2026-06-16T23:04:51.280891837Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20262"
-    ]
-  },
-  {
-    "id": "c845cf6b6b85859b87f928c8d636d624",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-48907 — Widget Factory Joomla Content Editor : Widget Factory Joomla Content Editor Improper Access Control Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48907",
-    "summary": "Widget Factory Joomla Content Editor contains an improper access control vulnerability which could allow for upload and execution of PHP code via the creation of new editor profiles for unauthenticated users. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-19",
-    "published": "2026-06-16T00:00:00Z",
-    "fetched": "2026-06-23T22:46:41.541734377Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "widget"
-    ],
-    "cves": [
-      "CVE-2026-48907"
-    ]
-  },
-  {
-    "id": "c845cf6b6b85859b87f928c8d636d624",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-48907 — Widget Factory Joomla Content Editor : Widget Factory Joomla Content Editor Improper Access Control Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48907",
-    "summary": "Widget Factory Joomla Content Editor contains an improper access control vulnerability which could allow for upload and execution of PHP code via the creation of new editor profiles for unauthenticated users. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-19",
-    "published": "2026-06-16T00:00:00Z",
-    "fetched": "2026-06-16T23:04:51.280891837Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "widget"
-    ],
-    "cves": [
-      "CVE-2026-48907"
-    ]
-  },
-  {
-    "id": "f83194ca2c15061b1775766b64217526",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Cisco fixes SD-WAN vManage flaw exploited in zero-day attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/cisco-fixes-sd-wan-vmanage-flaw-exploited-in-zero-day-attacks/",
-    "summary": "Cisco has released security updates to address a vulnerability in the Catalyst SD-WAN Manager, tracked as CVE-2026-20262, that was exploited in attacks to escalate to root privileges. [...]",
-    "published": "2026-06-15T17:12:42Z",
-    "fetched": "2026-06-15T23:17:14.883669826Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20262"
-    ]
-  },
-  {
-    "id": "7c2d1f72cf024300b7c6205e29d5ec48",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "⚡ Weekly Recap: Chrome 0-Day, UniFi Exploits, macOS Stealers, VPN Flaw and More",
-    "url": "https://thehackernews.com/2026/06/weekly-recap-chrome-0-day-unifi.html",
-    "summary": "Stuff broke again. Not in a movie way. An old tool was left exposed. An abandoned package was abused. A deprecated feature was still running in prod. This week is the same lesson in a new form: phishing kits are easier to rent, AI names are useful bait, old login paths still fail, and forgotten software keeps becoming someone else's entry point. Scroll through the full Monday Cybersecurity",
-    "published": "2026-06-15T13:49:29Z",
-    "fetched": "2026-06-15T23:17:14.883669826Z",
-    "tags": [
-      "chrome",
-      "watch",
-      "0day",
-      "phishing"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "chrome"
-    ]
-  },
-  {
-    "id": "2532c3208721a98a0a6a80a4ce36cc96",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Infinite Campus data breach affects 137,000 school staff accounts",
-    "url": "https://www.bleepingcomputer.com/news/security/infinite-campus-data-breach-affects-137-000-school-staff-accounts/",
-    "summary": "The ShinyHunters extortion gang stole personal information from more than 137,000 school staff accounts in a Salesforce data theft attack that targeted the widely used Infinite Campus K-12 student information system in March. [...]",
-    "published": "2026-06-15T12:38:55Z",
-    "fetched": "2026-06-15T23:17:14.883669826Z",
-    "tags": [
-      "rce",
-      "breach"
-    ],
-    "severity": "high",
-    "score": 72
-  },
-  {
-    "id": "c020a2c05c90555701a256a9353fe1fa",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-54420 — LiteSpeed cPanel Plugin: LiteSpeed cPanel Plugin UNIX Symbolic Link (Symlink) Following Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54420",
-    "summary": "LiteSpeed cPanel plugin contains a UNIX symbolic link (Symlink) following vulnerability that could allow a user with FTP or web shell access on a shared hosting server running CloudLinux/CageFS.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-18",
-    "published": "2026-06-15T00:00:00Z",
-    "fetched": "2026-06-22T23:02:14.988493795Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "litespeed"
-    ],
-    "cves": [
-      "CVE-2026-54420"
-    ]
-  },
-  {
-    "id": "4c0e3d8f5037bc81b6d653937c8b8c7c",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-20262 — Cisco Catalyst SD-WAN Manager: Cisco Catalyst SD-WAN Manager Directory or Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20262",
-    "summary": "Cisco Catalyst SD-WAN Manager contains a directory or path traversal vulnerability that could allow an authenticated, remote attacker to create a file or overwrite any file on the filesystem of an affected system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-29",
-    "published": "2026-06-15T00:00:00Z",
-    "fetched": "2026-06-22T23:02:14.988493795Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20262"
-    ]
-  },
-  {
-    "id": "c020a2c05c90555701a256a9353fe1fa",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-54420 — LiteSpeed cPanel Plugin: LiteSpeed cPanel Plugin UNIX Symbolic Link (Symlink) Following Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54420",
-    "summary": "LiteSpeed cPanel plugin contains a UNIX symbolic link (Symlink) following vulnerability that could allow a user with FTP or web shell access on a shared hosting server running CloudLinux/CageFS.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-18",
-    "published": "2026-06-15T00:00:00Z",
-    "fetched": "2026-06-15T23:17:14.883669826Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "litespeed"
-    ],
-    "cves": [
-      "CVE-2026-54420"
-    ]
-  },
-  {
-    "id": "4c0e3d8f5037bc81b6d653937c8b8c7c",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-20262 — Cisco Catalyst SD-WAN Manager: Cisco Catalyst SD-WAN Manager Directory or Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20262",
-    "summary": "Cisco Catalyst SD-WAN Manager contains a directory or path traversal vulnerability that could allow an authenticated, remote attacker to create a file or overwrite any file on the filesystem of an affected system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-29",
-    "published": "2026-06-15T00:00:00Z",
-    "fetched": "2026-06-15T23:17:14.883669826Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20262"
-    ]
-  },
-  {
-    "id": "33f6df5f7207ed36f3b628697c4127c5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-11526 — GD versions before 2.86 for Perl allow OS command injection and file overwrite v…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11526",
-    "summary": "GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle.\n\nGD::Image::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. _make_filehandle is the single open path behind every filename-accepting constructor (new, newFromPng, newFromJpeg, and the rest); the in-memory *Data variants do not open a path and are unaffected.\n\nAny caller that forwards untrusted input to one of these constructors as a pathname can run an arbitrary command or truncate a file under the process UID.",
-    "published": "2026-06-14T12:16:22.403Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-11526"
-    ]
-  },
-  {
-    "id": "5f26bff3cdadd4b03c7d46eb60dc9d13",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Active Exploitation of Oracle PeopleSoft Zero-Day (CVE-2026-35273)",
-    "url": "https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273",
-    "summary": "OverviewOn June 10, 2026, Oracle published a security alert for CVE-2026-35273, a critical vulnerability in the Updates Environment Management component of PeopleSoft Enterprise PeopleTools. Oracle released an out-of-band patch the same day as the advisory, underscoring the urgency of remediation. The vulnerability has a CVSSv3.1 score of 9.8 and is remotely exploitable without authentication. Per the vendor advisory, successful exploitation may result in remote code execution (RCE). TrendAI has classified the underlying flaw as a server-side request forgery (CWE-918). PeopleTools versions 8.6...",
-    "published": "2026-06-12T13:43:04Z",
-    "fetched": "2026-06-26T22:45:33.434355189Z",
-    "tags": [
-      "oracle",
-      "rce",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 66,
-    "vendors": [
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-35273"
     ]
   }
 ]

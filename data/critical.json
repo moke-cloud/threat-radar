@@ -1,5 +1,28 @@
 [
   {
+    "id": "d8f3757d4da62800e117b89aa5c16021",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA: Windows BlueHammer flaw now exploited by ransomware gangs",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-windows-bluehammer-flaw-now-exploited-by-ransomware-gangs/",
+    "summary": "CISA confirmed on Monday that ransomware gangs are now exploiting a Microsoft Defender privilege escalation vulnerability, dubbed BlueHammer, that has previously been abused in zero-day attacks. [...]",
+    "published": "2026-06-30T08:53:13Z",
+    "fetched": "2026-06-30T22:49:54.25205577Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "lpe",
+      "0day",
+      "ransomware"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
     "id": "b3e6538f2b6cd59bbb479b627ed638bc",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -259,6 +282,99 @@
     ],
     "severity": "high",
     "score": 72
+  },
+  {
+    "id": "59dae3c3da448b449cee5ffa5f0e92c9",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2025-67038 — Lantronix EDS5000: Lantronix EDS5000 Code Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67038",
+    "summary": "Lantronix EDS5000 contains a code injection vulnerability that could allow attackers to inject arbitrary OS commands into the username parameter. Injected commands are executed with root privileges.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-26",
+    "published": "2026-06-23T00:00:00Z",
+    "fetched": "2026-06-30T22:49:54.25205577Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "lantronix"
+    ],
+    "cves": [
+      "CVE-2025-67038"
+    ]
+  },
+  {
+    "id": "3f0f763bde673efc0a0373279dc38c2b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-34910 — Ubiquiti UniFi OS: Ubiquiti UniFi OS Improper Input Validation Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34910",
+    "summary": "Ubiquiti UniFi OS contains an improper input validation vulnerability which could allow a malicious actor with access to the network to conduct command injection.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-26",
+    "published": "2026-06-23T00:00:00Z",
+    "fetched": "2026-06-30T22:49:54.25205577Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "ubiquiti"
+    ],
+    "cves": [
+      "CVE-2026-34910"
+    ]
+  },
+  {
+    "id": "ddfe6c4809874afab5bea1fbd868b171",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-34909 — Ubiquiti UniFi OS: Ubiquiti UniFi OS Path Traversal Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34909",
+    "summary": "Ubiquiti UniFi OS contains a path traversal vulnerability which could allow a malicious actor with access to the network to access files on the underlying system that could be manipulated to access an underlying account.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-26",
+    "published": "2026-06-23T00:00:00Z",
+    "fetched": "2026-06-30T22:49:54.25205577Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "ubiquiti"
+    ],
+    "cves": [
+      "CVE-2026-34909"
+    ]
+  },
+  {
+    "id": "1264b8895e86b14d132d094f99149b5d",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-34908 — Ubiquiti UniFi OS: Ubiquiti UniFi OS Improper Access Control Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34908",
+    "summary": "Ubiquiti UniFi OS contains an improper access control vulnerability which could allow a malicious actor with access to the network to make unauthorized changes to the system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-26",
+    "published": "2026-06-23T00:00:00Z",
+    "fetched": "2026-06-30T22:49:54.25205577Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "ubiquiti"
+    ],
+    "cves": [
+      "CVE-2026-34908"
+    ]
   },
   {
     "id": "59dae3c3da448b449cee5ffa5f0e92c9",
@@ -1247,152 +1363,6 @@
     ],
     "cves": [
       "CVE-2026-50656"
-    ]
-  },
-  {
-    "id": "c3879f9a61a475646856f541bf2dbe04",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA orders feds to patch max severity Joomla plugin flaw by Friday",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-max-severity-joomla-plugin-flaw-by-friday/",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has ordered federal agencies to patch a maximum-severity flaw in the Widget Factory Joomla Content Editor (JCE) plugin that is being actively exploited in the wild. [...]",
-    "published": "2026-06-17T10:09:24Z",
-    "fetched": "2026-06-17T22:58:03.870823022Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 67
-  },
-  {
-    "id": "7bf94361af846c12cd852ea696c1939d",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Microsoft working on Defender patch for RoguePlanet zero-day",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-working-on-defender-patch-for-rogueplanet-zero-day/",
-    "summary": "Microsoft confirmed that it's working on a security patch for a Defender zero-day vulnerability named \"RoguePlanet,\" disclosed one week ago. [...]",
-    "published": "2026-06-17T08:32:29Z",
-    "fetched": "2026-06-17T22:58:03.870823022Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "e4cd7c7f61406479d509483c1aa87f8d",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Google Vertex AI SDK Flaw Let Attackers Hijack Model Uploads via Bucket Squatting",
-    "url": "https://thehackernews.com/2026/06/google-vertex-ai-sdk-flaw-let-attackers.html",
-    "summary": "A flaw in the Google Cloud Vertex AI SDK for Python let an attacker with no access to a victim's project hijack the victim's machine learning model upload and run code inside Google's serving infrastructure. Palo Alto Networks Unit 42, which found and reported the bug through Google's bug bounty program, calls the technique \"Pickle in the Middle\" and said it saw no exploitation in the wild.",
-    "published": "2026-06-16T19:05:41Z",
-    "fetched": "2026-06-23T22:46:41.541734377Z",
-    "tags": [
-      "paloalto",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "paloalto"
-    ]
-  },
-  {
-    "id": "e4cd7c7f61406479d509483c1aa87f8d",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Google Vertex AI SDK Flaw Let Attackers Hijack Model Uploads via Bucket Squatting",
-    "url": "https://thehackernews.com/2026/06/google-vertex-ai-sdk-flaw-let-attackers.html",
-    "summary": "A flaw in the Google Cloud Vertex AI SDK for Python let an attacker with no access to a victim's project hijack the victim's machine learning model upload and run code inside Google's serving infrastructure. Palo Alto Networks Unit 42, which found and reported the bug through Google's bug bounty program, calls the technique \"Pickle in the Middle\" and said it saw no exploitation in the wild.",
-    "published": "2026-06-16T19:05:41Z",
-    "fetched": "2026-06-16T23:04:51.280891837Z",
-    "tags": [
-      "paloalto",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "paloalto"
-    ]
-  },
-  {
-    "id": "c14e03a00ff6eb7974c2ece29366643e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-12225 — syracom AG Secure Login (2FA) for Atlassian Jira, Confluence, and Bitbucket 3.4.0.x contains an auth…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12225",
-    "summary": "syracom AG Secure Login (2FA) for Atlassian Jira, Confluence, and Bitbucket 3.4.0.x contains an authentication bypass vulnerability. An attacker with valid credentials for a user account can bypass the two-factor authentication flow by sending HTTP requests with a crafted User-Agent header containing specific strings such as AtlassianMobileApp or JIRA. When such a User-Agent is present, the plugin does not enforce the configured 2FA checks for protected web resources. Successful exploitation allows the attacker to access the affected Atlassian application as the compromised user without completing 2FA. If the compromised account has administrative privileges, the attacker can access administrative functionality and may disable the 2FA plugin or make arbitrary administrative changes. The issue is fixed in version 3.5.0.0.",
-    "published": "2026-06-16T12:16:26.097Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
-    "tags": [
-      "auth-bypass",
-      "confluence",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "confluence"
-    ],
-    "cves": [
-      "CVE-2026-12225"
-    ]
-  },
-  {
-    "id": "fd6da54f2368662b000082941313fa6d",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA warns of another cPanel plugin flaw exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-another-actively-exploited-cpanel-plugin-flaw/",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has given U.S. government agencies three days to secure their servers against an actively exploited vulnerability (CVE-2026-54420) in the LiteSpeed cPanel user-end plugin. [...]",
-    "published": "2026-06-16T10:47:59Z",
-    "fetched": "2026-06-16T23:04:51.280891837Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 67,
-    "cves": [
-      "CVE-2026-54420"
-    ]
-  },
-  {
-    "id": "bc7435f807e7a11aced435a07d1cd163",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Ransomware gang abuses Microsoft Teams relays to hide malicious traffic",
-    "url": "https://www.bleepingcomputer.com/news/security/ransomware-gang-abuses-microsoft-teams-relays-to-hide-malicious-traffic/",
-    "summary": "DragonForce ransomware used a custom malware named 'Backdoor.Turn' to hide command-and-control traffic inside Microsoft Teams relay infrastructure. [...]",
-    "published": "2026-06-16T10:18:48Z",
-    "fetched": "2026-06-16T23:04:51.280891837Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce",
-      "ransomware",
-      "malware"
-    ],
-    "severity": "critical",
-    "score": 82,
-    "vendors": [
-      "microsoft"
     ]
   }
 ]

@@ -5,7 +5,32 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Jul 2026 22:47:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 22:36:45 +0000</lastBuildDate>
+    <item>
+      <title>[CRIT] CISA: Microsoft SharePoint RCE flaw now actively exploited</title>
+      <link>https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-rce-flaw-now-actively-exploited/</link>
+      <guid isPermaLink="false">5899695822c74e1671574ed1a0b0694a</guid>
+      <pubDate>Thu, 02 Jul 2026 10:52:43 +0000</pubDate>
+      <description>CISA warned on Wednesday that attackers have begun exploiting a high-severity Microsoft SharePoint remote code execution vulnerability patched in May. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>critical</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack</title>
+      <link>https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html</link>
+      <guid isPermaLink="false">ddc7e3f75e0c81bafbe9c1bb48f95820</guid>
+      <pubDate>Thu, 02 Jul 2026 09:13:13 +0000</pubDate>
+      <description>Security firm Sysdig says it has found what it believes is the first ransomware attack run from start to finish by an AI agent. Its Threat Research Team calls the operator JADEPUFFER and says a large language model handled the whole job: breaking in, stealing credentials, moving deeper into the network, then encrypting and wiping a company&#39;s production database. Ransomware has always</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>ransomware</category>
+    </item>
     <item>
       <title>[HIGH] FortiBleed credential-theft campaign linked to Lynx ransomware</title>
       <link>https://www.bleepingcomputer.com/news/security/fortibleed-credential-theft-campaign-linked-to-lynx-ransomware/</link>
@@ -135,6 +160,32 @@
       <category>cisco</category>
       <category>watch</category>
       <category>0day</category>
+      <category>cisco</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-12569 — PTC Windchill and FlexPLM: PTC Windchill and FlexPLM Improper Input Validation Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12569</link>
+      <guid isPermaLink="false">6efec80aed7491b4aa5b945a23724f50</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>PTC Windchill and FlexPLM contains an improper input validation vulnerability allowing an unauthenticated, remote attacker to execute arbitrary code by sending a malicious request to the network.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-06-28</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>ptc</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-20230 — Cisco Unified Communications Manager: Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-20230</link>
+      <guid isPermaLink="false">1132023850c9b088c56f30acdd36ac5b</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <description>Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) contain a server-side request forgery (SSRF) Vulnerability that could allow an unauthenticated, remote attacker to write files to the underlying operating system that could be used later to elevate to root.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-06-28</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>cisco</category>
+      <category>watch</category>
       <category>cisco</category>
     </item>
     <item>
@@ -660,29 +711,6 @@
       <category>wordpress</category>
       <category>watch</category>
       <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] Weekly Metasploit Update: NTLM Relay Priv Esc, MCP Server Integration, Paperclip AI RCE Chain, and more</title>
-      <link>https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-19-06-2026</link>
-      <guid isPermaLink="false">f416d9571d0e50972f2ee1b79c2e7db6</guid>
-      <pubDate>Fri, 19 Jun 2026 17:08:23 +0000</pubDate>
-      <description>This week&#39;s release includes five new modules, including a full unauthenticated RCE chain for Paperclip AI and a VS Code extension persistence technique. On the post-exploitation side, the new windows/local/ntlm_relay_2_self module coerces the local machine account to authenticate via OpenEncryptedFileRaw (WebDAV), relays that NTLM authentication to a Domain Controller&#39;s LDAP service, then uses the resulting LDAP session to write Shadow Credentials and obtain a Kerberos service ticket as Administrator via S4U2Proxy, enabling PsExec back to itself for SYSTEM access.On the enhancement side, th...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] CISA: Splunk Enterprise flaw actively exploited, patch by Sunday</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-splunk-enterprise-flaw-actively-exploited-patch-by-sunday/</link>
-      <guid isPermaLink="false">e56dfca7844d5ccab3f67c7e272b0f37</guid>
-      <pubDate>Fri, 19 Jun 2026 10:39:58 +0000</pubDate>
-      <description>CISA has urged U.S. federal agencies to secure their systems by Sunday against a critical Splunk Enterprise vulnerability that is being exploited in attacks. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>actively-exploited</category>
     </item>
   </channel>
 </rss>

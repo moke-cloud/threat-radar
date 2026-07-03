@@ -5,7 +5,7 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2026 22:36:45 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 22:33:29 +0000</lastBuildDate>
     <item>
       <title>[CRIT] CISA: Microsoft SharePoint RCE flaw now actively exploited</title>
       <link>https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-rce-flaw-now-actively-exploited/</link>
@@ -671,46 +671,6 @@
       <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>high</category>
       <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-11911 — The Simple File List plugin for WordPress is vulnerable to arbitrary file deleti…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11911</link>
-      <guid isPermaLink="false">ef0bc3cd1350411d645b7df14bb792a0</guid>
-      <pubDate>Sat, 20 Jun 2026 09:16:13 +0000</pubDate>
-      <description>The Simple File List plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the eeSFL_DeleteFile function in all versions up to, and including, 6.3.7. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). The simplefilelist_edit_job AJAX action is registered via wp_ajax_nopriv_, making it accessible without authentication, and the is_admin() guard that would otherwise restrict access is bypassed because is_admin() always returns true for requests to the admin-ajax.php endpoint.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.1 HIGH] CVE-2026-9843 — The Database for Contact Form 7, WPforms, Elementor forms plugin for WordPress i…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9843</link>
-      <guid isPermaLink="false">36f60327871fe274a2a687aef72fd0ae</guid>
-      <pubDate>Sat, 20 Jun 2026 02:16:26 +0000</pubDate>
-      <description>The Database for Contact Form 7, WPforms, Elementor forms plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the view_page function in all versions up to, and including, 1.5.1. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Successful exploitation requires an administrator to view or edit the poisoned form entry, at which point PHP&#39;s bracket parser reshapes the attacker-crafted JSON key to bypass the stored-path isset check and trigger deletion of the traversal-specified file.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-11551 — The Branda plugin for WordPress is vulnerable to privilege escalation via accoun…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11551</link>
-      <guid isPermaLink="false">d95930c39f62761b691d1773c8c5f169</guid>
-      <pubDate>Sat, 20 Jun 2026 00:16:15 +0000</pubDate>
-      <description>The Branda plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 3.4.29. This is due to the plugin not properly validating a user&#39;s identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user&#39;s passwords, including administrators, and leverage that to gain access to their account.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>lpe</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>wordpress</category>
     </item>
   </channel>
 </rss>

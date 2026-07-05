@@ -1,5 +1,18 @@
 [
   {
+    "id": "39945db4b54cf77808e24f93f6be9004",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Flipper Zero firmware development continues with community help",
+    "url": "https://www.bleepingcomputer.com/news/security/flipper-zero-firmware-development-continues-with-community-help/",
+    "summary": "Flipper Devices says development of the Flipper Zero firmware will continue, albeit with a smaller internal team and greater reliance on community contributions. [...]",
+    "published": "2026-07-05T14:14:52Z",
+    "fetched": "2026-07-05T22:30:40.091878537Z",
+    "severity": "low",
+    "score": 27
+  },
+  {
     "id": "715fd6b77b79a9e16cba522573973981",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -4032,6 +4045,19 @@
     ],
     "severity": "medium",
     "score": 42
+  },
+  {
+    "id": "fc301017c98ae0b3457dc4e0e839b5e8",
+    "source": "sans-isc",
+    "source_name": "SANS Internet Storm Center",
+    "category": "news",
+    "title": "YARA-X 1.18.0 and 1.19.0 Release, (Sun, Jun 28th)",
+    "url": "https://isc.sans.edu/diary/rss/33106",
+    "summary": "YARA-X&&#x23&#x3b;x26&#x3b;&#x23&#x3b;39&#x3b;s 1.18.0 release brings 3 improvements and 2 bugfixes.&#xd;",
+    "published": "2026-06-28T07:56:44Z",
+    "fetched": "2026-07-05T22:30:40.091878537Z",
+    "severity": "low",
+    "score": 15
   },
   {
     "id": "fc301017c98ae0b3457dc4e0e839b5e8",
@@ -9024,176 +9050,172 @@
     ]
   },
   {
-    "id": "292b844ff399b86825f61d3c3d780c59",
+    "id": "a91ecd9349fa657546f3b2c19193c60b",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
     "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-12810 — A security flaw has been discovered in Edimax BR-6478AC V2 1.23. Affected by thi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12810",
-    "summary": "A security flaw has been discovered in Edimax BR-6478AC V2 1.23. Affected by this vulnerability is the function mp of the file /goform/mp of the component POST Request Handler. Performing a manipulation of the argument command results in command injection. The attack may be initiated remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-06-21T22:16:38.9Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-52911 — In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: scop…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52911",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: scope conn->binding slowpath to bound sessions only\n\nWhen the binding SESSION_SETUP sets conn->binding = true, the flag stays\nset after the call so that the global session lookup in\nksmbd_session_lookup_all() can find the session, which was not added to\nconn->sessions. Because the flag is connection-wide, the global lookup\npath will also resolve any other session by id if asked.\n\nTighten the global lookup so that the returned session must have this\nconnection registered in its channel xarray (sess->ksmbd_chann_list).\nThe channel entry is installed by the existing binding_session path in\nntlm_authenticate()/krb5_authenticate() when a SESSION_SETUP completes\nsuccessfully, so this condition is a strict equivalent of \"this\nconnection has been accepted as a channel of this session\". Connections\nthat have not bound to a given session cannot reach it via the global\ntable.\n\nThe existing conn->binding gate for entering the slowpath is preserved\nso that non-binding connections keep the fast-path-only behavior, and\nthe session->state check is unchanged.",
+    "published": "2026-06-21T08:16:23.607Z",
+    "fetched": "2026-06-29T22:37:04.246440223Z",
     "tags": [
+      "linux",
+      "watch"
+    ],
+    "severity": "low",
+    "score": 25,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-52911"
+    ]
+  },
+  {
+    "id": "bfe44f3420e01d0ed11b0924b270bbf8",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-48939 — A vulnerability in the iCagenda extension for Joomla allows the upload of arbitr…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48939",
+    "summary": "A vulnerability in the iCagenda extension for Joomla allows the upload of arbitrary files in the file attachment feature, ultimately resulting in PHP code upload and execution.",
+    "published": "2026-06-20T13:16:42.433Z",
+    "fetched": "2026-07-04T22:27:37.687425383Z",
+    "tags": [
+      "critical-cvss"
+    ],
+    "severity": "medium",
+    "score": 30,
+    "vendors": [
+      "joomlic"
+    ],
+    "cves": [
+      "CVE-2026-48939"
+    ]
+  },
+  {
+    "id": "1c89be5973c686182d0b091215ac49cc",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Hackers Exploit Gravity SMTP WordPress Plugin Bug to Expose API Keys",
+    "url": "https://thehackernews.com/2026/06/hackers-exploit-gravity-smtp-wordpress.html",
+    "summary": "Threat actors are exploiting a recently patched security flaw impacting Gravity SMTP, a WordPress plugin that's installed on about 100,000 sites. The vulnerability, tracked as CVE-2026-4020 (CVSS score: 5.3), is a medium-severity information disclosure flaw that can allow unauthenticated attackers to extract sensitive data, such as configuration data, API keys, secrets, and OAuth tokens",
+    "published": "2026-06-20T09:56:04Z",
+    "fetched": "2026-06-27T22:37:10.225587674Z",
+    "tags": [
+      "wordpress",
+      "watch"
+    ],
+    "severity": "low",
+    "score": 13,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-4020"
+    ]
+  },
+  {
+    "id": "4cc53be50997ec3b72d40dffe658d5b0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-50559 — Quarkus is a Java framework for building cloud-native applications. Prior to ver…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50559",
+    "summary": "Quarkus is a Java framework for building cloud-native applications. Prior to versions 3.37.0, 3.36.3, 3.33.2.1, 3.33.3, 3.27.4.1, 3.27.5, and 3.20.6.2, Quarkus HTTP path-based authorization policies can be bypassed using encoded semicolons (%3B) to smuggle matrix parameters past the security layer, and using encoded slashes (%2F) or backslashes (%5C) to access protected static resources. This is a distinct issue from CVE-2026-39852, which addressed only literal semicolon stripping. Versions 3.37.0, 3.36.3, 3.33.2.1, 3.33.3, 3.27.4.1, 3.27.5, and 3.20.6.2 contain a patch.",
+    "published": "2026-06-19T21:17:02.373Z",
+    "fetched": "2026-07-04T22:27:37.687425383Z",
+    "severity": "low",
+    "score": 15,
+    "vendors": [
+      "quarkus"
+    ],
+    "cves": [
+      "CVE-2026-50559",
+      "CVE-2026-39852"
+    ]
+  },
+  {
+    "id": "9d542b866b4cfcaad38eff2e9972b913",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.5 MEDIUM] CVE-2026-50519 — Initialization of a resource with an insecure default in GitHub Copilot and Visu…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50519",
+    "summary": "Initialization of a resource with an insecure default in GitHub Copilot and Visual Studio Code allows an unauthorized attacker to disclose information over a network.",
+    "published": "2026-06-19T21:17:02.26Z",
+    "fetched": "2026-06-29T22:37:04.246440223Z",
+    "tags": [
+      "github",
+      "watch",
       "rce"
     ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-12810"
-    ]
-  },
-  {
-    "id": "45a23aedd30a4f2030c26931bb864cdb",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-12809 — A vulnerability was identified in Edimax BR-6478AC V2 1.23. Affected is the func…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12809",
-    "summary": "A vulnerability was identified in Edimax BR-6478AC V2 1.23. Affected is the function wiz_5in1_redirect of the file /goform/wiz_5in1_redirect of the component POST Request Handler. Such manipulation of the argument newpass leads to command injection. The attack can be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-06-21T22:16:37.893Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
-    "tags": [
-      "rce"
+    "severity": "medium",
+    "score": 55,
+    "vendors": [
+      "microsoft",
+      "github"
     ],
-    "severity": "high",
-    "score": 60,
     "cves": [
-      "CVE-2026-12809"
+      "CVE-2026-50519"
     ]
   },
   {
-    "id": "1fd08de74a361eeaa8ac6af19be86d03",
+    "id": "abe14d6570cfe041a2969facd798d5d7",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
     "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-12808 — A vulnerability was determined in Edimax BR-6478AC V2 1.23. This impacts the fun…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12808",
-    "summary": "A vulnerability was determined in Edimax BR-6478AC V2 1.23. This impacts the function stainfo of the file /goform/stainfo of the component POST Request Handler. This manipulation of the argument interface causes command injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-06-21T21:16:23.953Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-48584 — Execution with unnecessary privileges in Azure Synapse allows an authorized atta…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48584",
+    "summary": "Execution with unnecessary privileges in Azure Synapse allows an authorized attacker to elevate privileges over a network.",
+    "published": "2026-06-19T21:17:01.06Z",
+    "fetched": "2026-06-29T22:37:04.246440223Z",
     "tags": [
-      "rce"
+      "critical-cvss",
+      "microsoft",
+      "watch"
     ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-12808"
-    ]
-  },
-  {
-    "id": "3e009b3cd6607c7c2afbd0dadb68c6aa",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-12807 — A vulnerability was found in Edimax BR-6478AC V2 1.23. This affects the function…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12807",
-    "summary": "A vulnerability was found in Edimax BR-6478AC V2 1.23. This affects the function setWAN of the file /goform/setWAN of the component POST Request Handler. The manipulation of the argument pppUserName/pptpUserName/L2TPUserName results in command injection. It is possible to launch the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-06-21T21:16:23.797Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
-    "tags": [
-      "rce"
+    "severity": "medium",
+    "score": 40,
+    "vendors": [
+      "microsoft"
     ],
-    "severity": "high",
-    "score": 60,
     "cves": [
-      "CVE-2026-12807"
+      "CVE-2026-48584"
     ]
   },
   {
-    "id": "76e32e98577c51b1feaad52ccf2a61ee",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-12806 — A vulnerability has been found in Edimax BR-6478AC V2 1.23. The impacted element…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12806",
-    "summary": "A vulnerability has been found in Edimax BR-6478AC V2 1.23. The impacted element is the function formWlSiteSurvey of the file /goform/formWlSiteSurvey of the component POST Request Handler. The manipulation of the argument selSSID leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-06-21T20:16:27.497Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-12806"
-    ]
+    "id": "901bd76f507baf1a94b6cd48764e9f67",
+    "source": "schneier",
+    "source_name": "Schneier on Security",
+    "category": "analysis",
+    "title": "Friday Squid Blogging: Victims of Unregulated Squid Fishing",
+    "url": "https://www.schneier.com/blog/archives/2026/06/friday-squid-blogging-victims-of-unregulated-squid-fishing.html",
+    "summary": "Dolphins, sharks, turtles, and human workers are all victims of unregulated squid fishing fleets. Another news article. As usual, you can also use this squid post to talk about the security stories in the news that I haven&#8217;t covered. Blog moderation policy.",
+    "published": "2026-06-19T21:03:48Z",
+    "fetched": "2026-06-26T22:45:33.434355189Z",
+    "severity": "info",
+    "score": 3
   },
   {
-    "id": "e1b530725604b19b426d7f85114a4a29",
+    "id": "f37b5035b14e7057e6b7af840ea87e00",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
     "category": "vuln",
-    "title": "[CVSS 6.3 MEDIUM] CVE-2026-12805 — A flaw has been found in OFFIS DCMTK up to 3.7.0. The affected element is the fu…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12805",
-    "summary": "A flaw has been found in OFFIS DCMTK up to 3.7.0. The affected element is the function XMLNode::parseFile in the library ofstd/libsrc/ofxml.cc. Executing a manipulation can lead to heap-based buffer overflow. The attack may be performed from remote. The exploit has been published and may be used. This patch is called 1d4b3815c0987840a983160bfc671fef63a3105b. It is best practice to apply a patch to resolve this issue. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
-    "published": "2026-06-21T20:16:27.343Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
-    "severity": "medium",
-    "score": 30,
+    "title": "[CVSS 6.5 MEDIUM] CVE-2026-27878 — A TraceQL query in Grafana Tempo with a large exemplars hint value can cause the…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27878",
+    "summary": "A TraceQL query in Grafana Tempo with a large exemplars hint value can cause the Tempo instance to allocate an excessive amount of memory, resulting in an out-of-memory crash. This could allow an authenticated user to trigger a denial of service against the Tempo service.",
+    "published": "2026-06-19T19:16:34.897Z",
+    "fetched": "2026-06-29T22:37:04.246440223Z",
+    "severity": "low",
+    "score": 15,
+    "vendors": [
+      "grafana"
+    ],
     "cves": [
-      "CVE-2026-12805"
-    ]
-  },
-  {
-    "id": "a565926487ef225635375fd79956a769",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 4.3 MEDIUM] CVE-2026-12804 — A vulnerability was detected in lemonldap-ng up to 2.23.0. Impacted is an unknow…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12804",
-    "summary": "A vulnerability was detected in lemonldap-ng up to 2.23.0. Impacted is an unknown function in the library lemonldap-ng-portal/lib/Lemonldap/NG/Portal/CDC.pm of the component SAML Common Domain Cookie Endpoint. Performing a manipulation of the argument url results in open redirect. The attack is possible to be carried out remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-06-21T19:16:23.097Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-12804"
-    ]
-  },
-  {
-    "id": "0a1f3c4e40576ee1f2594e7299cfcea7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 4.9 MEDIUM] CVE-2026-56412 — libexpat before 2.8.2 does not consider XML_TOK_DATA_CHARS in doCdataSection and…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56412",
-    "summary": "libexpat before 2.8.2 does not consider XML_TOK_DATA_CHARS in doCdataSection and thus lacks handler call depth tracking for various calls from within handlers in cases of a policy violation. Thus, a use-after-free can occur. NOTE: this issue exists because of an incomplete fix for CVE-2026-50219.",
-    "published": "2026-06-21T17:16:44.657Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-56412",
-      "CVE-2026-50219"
-    ]
-  },
-  {
-    "id": "9022b9f89b37aa945891a3b39cf8c725",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.9 MEDIUM] CVE-2026-56411 — xmlwf in libexpat before 2.8.2 has an integer overflow in endDoctypeDecl via NOT…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56411",
-    "summary": "xmlwf in libexpat before 2.8.2 has an integer overflow in endDoctypeDecl via NOTATION declarations.",
-    "published": "2026-06-21T17:16:44.523Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-56411"
-    ]
-  },
-  {
-    "id": "8f9c5b9c3a6252aeeb3a0378fd5d548c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.9 MEDIUM] CVE-2026-56410 — xmlwf in libexpat before 2.8.2 has an integer overflow in resolveSystemId.",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56410",
-    "summary": "xmlwf in libexpat before 2.8.2 has an integer overflow in resolveSystemId.",
-    "published": "2026-06-21T16:16:28.36Z",
-    "fetched": "2026-06-21T22:43:48.573384491Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-56410"
+      "CVE-2026-27878"
     ]
   }
 ]

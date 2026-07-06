@@ -641,6 +641,23 @@
     "url": "https://www.schneier.com/blog/archives/2026/06/factoring-rsa-keys-with-many-zeros.html",
     "summary": "Interesting research on a new class of weak RSA keys: keys with lots of zeros. It turns out that these keys are out in the wild. The badkeys project is an open-source service that checks public keys for known vulnerabilities. While developing this tool, Hanno collected a massive number of real-world keys from public sources, including Certificate Transparency logs, internet-wide TLS and SSH scans, PGP keys, and many others. By searching this dataset for unexpectedly sparse RSA moduli, we uncovered a large number of keys in the wild with the patterns in Figure 1...",
     "published": "2026-06-29T16:05:18Z",
+    "fetched": "2026-07-06T22:45:37.658804975Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78
+  },
+  {
+    "id": "900de57610aa512e6f56a3e8f9c0d5b0",
+    "source": "schneier",
+    "source_name": "Schneier on Security",
+    "category": "analysis",
+    "title": "Factoring RSA Keys with Many Zeros",
+    "url": "https://www.schneier.com/blog/archives/2026/06/factoring-rsa-keys-with-many-zeros.html",
+    "summary": "Interesting research on a new class of weak RSA keys: keys with lots of zeros. It turns out that these keys are out in the wild. The badkeys project is an open-source service that checks public keys for known vulnerabilities. While developing this tool, Hanno collected a massive number of real-world keys from public sources, including Certificate Transparency logs, internet-wide TLS and SSH scans, PGP keys, and many others. By searching this dataset for unexpectedly sparse RSA moduli, we uncovered a large number of keys in the wild with the patterns in Figure 1...",
+    "published": "2026-06-29T16:05:18Z",
     "fetched": "2026-06-29T22:37:04.246440223Z",
     "tags": [
       "rce",
@@ -648,6 +665,30 @@
     ],
     "severity": "high",
     "score": 78
+  },
+  {
+    "id": "43c8a848acc18bbe0ab1111c1554243c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48558 — SimpleHelp  SimpleHelp: SimpleHelp Authentication Bypass Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48558",
+    "summary": "SimpleHelp contains an authentication bypass vulnerability in the OIDC authentication flow. When OIDC authentication is configured, identity tokens submitted during login are accepted without verifying their cryptographic signature. In a vulnerable configuration, a remote, unauthenticated attacker can submit a forged token containing arbitrary identity claims to obtain a fully authenticated technician session. In some configurations, this may also allow bypass of multi-factor authentication.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-02",
+    "published": "2026-06-29T00:00:00Z",
+    "fetched": "2026-07-06T22:45:37.658804975Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "auth-bypass"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "simplehelp"
+    ],
+    "cves": [
+      "CVE-2026-48558"
+    ]
   },
   {
     "id": "43c8a848acc18bbe0ab1111c1554243c",
@@ -1084,27 +1125,6 @@
     ],
     "cves": [
       "CVE-2026-34908"
-    ]
-  },
-  {
-    "id": "f16c1f1ee88c197e735640e47c38fbde",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "One intrusion, two cyberattackers: Uncovering parallel threat activity",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/06/22/one-intrusion-two-cyberattackers-uncovering-parallel-threat-activity/",
-    "summary": "Ransomware case reveals two parallel threat actors, blending tactics and evasion—showing why isolated signals can often miss modern, overlapping cyberattacks. The post One intrusion, two cyberattackers: Uncovering parallel threat activity appeared first on Microsoft Security Blog.",
-    "published": "2026-06-22T16:00:00Z",
-    "fetched": "2026-06-22T23:02:14.988493795Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "ransomware"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft"
     ]
   }
 ]

@@ -1,5 +1,669 @@
 [
   {
+    "id": "2e3cb51465193786449b46120a207e26",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-56271 — Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56271",
+    "summary": "Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded default JWT secrets ('auth_token', 'refresh_token') and default audience and issuer values ('AUDIENCE', 'ISSUER') in the enterprise passport authentication middleware (packages/server/src/enterprise/middleware/passport/index.ts). When the corresponding environment variables (JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER) are not set, the application silently falls back to these publicly known defaults, allowing an attacker to forge valid JWTs and impersonate any user, including administrators, resulting in authentication bypass.",
+    "published": "2026-07-12T12:16:45.29Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-56271"
+    ]
+  },
+  {
+    "id": "aa48cbc1508139f782d292bc06b14eb2",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2026-56259 — Crawl4AI before 0.8.8 contains credential exfiltration vulnerabilities in the Do…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56259",
+    "summary": "Crawl4AI before 0.8.8 contains credential exfiltration vulnerabilities in the Docker API server that allow attackers to redirect LLM API calls to attacker-controlled endpoints and read arbitrary environment variables. Attackers can exploit the unauthenticated /md, /llm, and /llm/job endpoints by supplying a malicious base_url parameter and setting api_token to env:VARIABLE_NAME to exfiltrate provider API keys and server secrets including JWT SECRET_KEY for authentication bypass.",
+    "published": "2026-07-12T12:16:45.013Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "auth-bypass",
+      "docker"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "docker"
+    ],
+    "cves": [
+      "CVE-2026-56259"
+    ]
+  },
+  {
+    "id": "b47378233a65e9baf0153c49d027ef20",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.3 MEDIUM] CVE-2026-15496 — A vulnerability was found in SonicCloudOrg sonic-agent up to 2.7.2. The impacted…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15496",
+    "summary": "A vulnerability was found in SonicCloudOrg sonic-agent up to 2.7.2. The impacted element is the function evalIsFailed of the file sonic-agent/src/main/java/org/cloud/sonic/agent/tests/script/GroovyScriptImpl.java of the component Groovy Script Handler. The manipulation results in os command injection. The attack can be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "published": "2026-07-12T11:16:46.713Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-15496"
+    ]
+  },
+  {
+    "id": "6e351fac6a94563cd58c7e802f51a896",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.3 MEDIUM] CVE-2026-15495 — A vulnerability has been found in SonicCloudOrg sonic-agent up to 2.7.2. The aff…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15495",
+    "summary": "A vulnerability has been found in SonicCloudOrg sonic-agent up to 2.7.2. The affected element is an unknown function of the file AndroidWSServer.java of the component Android WebSocket Server. The manipulation of the argument path leads to os command injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "published": "2026-07-12T11:16:46.537Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-15495"
+    ]
+  },
+  {
+    "id": "297b710aad08e3cde14fd5527082e2e0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.3 MEDIUM] CVE-2026-15487 — A vulnerability was found in TRENDnet TEW-821DAP 1.11B03. This impacts the funct…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15487",
+    "summary": "A vulnerability was found in TRENDnet TEW-821DAP 1.11B03. This impacts the function sub_41FBD0 of the file /goform/system_ntp of the component Firmware Update Handler. Performing a manipulation of the argument Hostname results in os command injection. The attack may be initiated remotely. The vendor explains: \"We are unable to confirm the existence of the vulnerabilities for (...) TEW-821DAP (v1.0R) as these items have been EOL. \" This vulnerability only affects products that are no longer supported by the maintainer.",
+    "published": "2026-07-12T09:16:39.577Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-15487"
+    ]
+  },
+  {
+    "id": "87171ed950cb4083205d83f187c56f57",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.3 MEDIUM] CVE-2026-15486 — A vulnerability has been found in TRENDnet TEW-821DAP 1.11B03. This affects the …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15486",
+    "summary": "A vulnerability has been found in TRENDnet TEW-821DAP 1.11B03. This affects the function sub_42026C of the file /goform/tools_ddns of the component Firmware Update Handler. Such manipulation of the argument hostname/username/password leads to os command injection. The attack can be launched remotely. The vendor explains: \"We are unable to confirm the existence of the vulnerabilities for (...) TEW-821DAP (v1.0R) as these items have been EOL. \" This vulnerability only affects products that are no longer supported by the maintainer.",
+    "published": "2026-07-12T09:16:38.56Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-15486"
+    ]
+  },
+  {
+    "id": "dcad03677018dcedaeb240e35db3b840",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.3 MEDIUM] CVE-2026-15485 — A flaw has been found in TRENDnet TEW-821DAP 1.11B03. The impacted element is th…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15485",
+    "summary": "A flaw has been found in TRENDnet TEW-821DAP 1.11B03. The impacted element is the function sub_43F2C4 of the file /goform/tools_nslookup of the component DNS Lookup Handler. This manipulation of the argument nslookup_target/dns_server causes os command injection. The attack can be initiated remotely. The vendor explains: \"We are unable to confirm the existence of the vulnerabilities for (...) TEW-821DAP (v1.0R) as these items have been EOL. \" This vulnerability only affects products that are no longer supported by the maintainer.",
+    "published": "2026-07-12T08:16:10.94Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-15485"
+    ]
+  },
+  {
+    "id": "b46faf31cd68f7ecdba786c3ef8af8cb",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-15481 — A security flaw has been discovered in Trendnet TEW-635BRM up to 1.00.03. This v…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15481",
+    "summary": "A security flaw has been discovered in Trendnet TEW-635BRM up to 1.00.03. This vulnerability affects the function ipoa_test of the file /sbin/rc of the component IPoA WAN Connection Setup. Performing a manipulation of the argument ipoa_ipaddr results in command injection. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The vendor explains: \"We are unable to confirm if the vulnerability exists. This item has been EOL since 2011. We will make an official announcement of possible vulnerabilities, and recommend users to switch devices.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+    "published": "2026-07-12T06:16:42.863Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-15481"
+    ]
+  },
+  {
+    "id": "b14c59c130ea0f720fe47d0c7d071940",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 10.0 CRITICAL] CVE-2026-61447 — PraisonAI before 1.6.78 contains a remote code execution vulnerability in CodeAg…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61447",
+    "summary": "PraisonAI before 1.6.78 contains a remote code execution vulnerability in CodeAgent._execute_python() that executes LLM-generated Python code without AST validation, import restrictions, or sandbox enforcement. Attackers can influence LLM output through prompt injection to exfiltrate all environment secrets and execute arbitrary code on the host system.",
+    "published": "2026-07-11T14:16:23.377Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-61447"
+    ]
+  },
+  {
+    "id": "056bba35b1f00adda38c215ffd266cae",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.1 HIGH] CVE-2026-61442 — PraisonAI Platform (praisonai-platform) before 0.1.9 fails to enforce owner/admi…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61442",
+    "summary": "PraisonAI Platform (praisonai-platform) before 0.1.9 fails to enforce owner/admin authorization on the PATCH routes for projects, issues, and agents, which only require workspace-member role. A workspace member can modify owner-created records; for projects, a member can reassign lead_id to their own user id and then delete the owner-created project, bypassing the delete route's owner/admin permission check.",
+    "published": "2026-07-11T14:16:23.017Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-61442"
+    ]
+  },
+  {
+    "id": "03012d0c37a96685944e4ea9ddbfbde7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.2 HIGH] CVE-2026-6939 — The CorvusPay WooCommerce Payment Gateway plugin for WordPress is vulnerable to …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6939",
+    "summary": "The CorvusPay WooCommerce Payment Gateway plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'approval_code' parameter in all versions up to, and including, 2.7.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The unauthenticated REST endpoint POST /wp-json/corvuspay/success/ is registered with permission_callback set to __return_true, and although a signature validation step exists it only logs the result without halting execution, meaning an attacker can supply a completely arbitrary signature and have a malicious approval_code stored in the database unchallenged.",
+    "published": "2026-07-11T07:16:46.787Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "xss",
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 78,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-6939"
+    ]
+  },
+  {
+    "id": "4e9c0b1a6eedfe709f16e6c88a01ddc3",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.3 MEDIUM] CVE-2026-12994 — The WCFM – Frontend Manager for WooCommerce plugin for WordPress is vulnerable…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12994",
+    "summary": "The WCFM – Frontend Manager for WooCommerce plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 6.7.27. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to inject arbitrary reply content into any store inquiry, overwrite the main inquiry record in wp_wcfm_enquiries, and trigger unsolicited notification emails to customers and vendors. Unlike sibling controller branches (wcfm-enquiry and wcfm-enquiry-manage), the wcfm-my-account-enquiry-manage branch performs no is_user_logged_in() or current_user_can() check, and the nonce that serves as the sole barrier is embedded into every public page load without any login gate.",
+    "published": "2026-07-11T07:16:45.9Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-12994"
+    ]
+  },
+  {
+    "id": "4c287b09d4b8fc1c841e3b9994c358ab",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.4 MEDIUM] CVE-2026-12126 — The WCFM Marketplace – Multivendor Marketplace for WooCommerce plugin for Word…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12126",
+    "summary": "The WCFM Marketplace – Multivendor Marketplace for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Attachment 'post_title' in all versions up to, and including, 3.7.3 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Vendor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. An attacker can plant the payload by uploading a media attachment with a crafted title via the WordPress REST API (/wp-json/wp/v2/media), without ever invoking the AJAX endpoint themselves, as the unescaped title is later emitted inside DataTables JSON and inserted as innerHTML upon any privileged user loading the media dashboard.",
+    "published": "2026-07-11T07:16:45.633Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "xss",
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 78,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-12126"
+    ]
+  },
+  {
+    "id": "d2733d95ddd5f0517068a5a51f53daaa",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 4.3 MEDIUM] CVE-2026-12103 — The Wallet for WooCommerce plugin for WordPress is vulnerable to authorization b…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12103",
+    "summary": "The Wallet for WooCommerce plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.6.4. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to enumerate the login name, email address, and user ID of all WordPress accounts — including administrators — by submitting arbitrary search terms to the AJAX handler. The required 'search-user' nonce is localized into the wallet_param object on the standard WooCommerce My Account page, which is accessible to any authenticated user, making it trivially obtainable by a Subscriber.",
+    "published": "2026-07-11T07:16:45.49Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-12103"
+    ]
+  },
+  {
+    "id": "de3ff86dbaa3e606b1fc8876c2e32581",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.3 MEDIUM] CVE-2026-10865 — The Cost Calculator Builder plugin for WordPress is vulnerable to Sensitive Info…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10865",
+    "summary": "The Cost Calculator Builder plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 4.0.11 via the (template body). This makes it possible for unauthenticated attackers to extract the plaintext Stripe secret key, Razorpay secret key, and PayPal client_secret embedded in the page source of any page containing a calculator, enabling full control of the merchant's payment gateway accounts. This exposure only occurs when the 'use in all calculators' option is enabled for one or more payment gateways in the plugin's global settings.",
+    "published": "2026-07-11T07:16:44.927Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-10865"
+    ]
+  },
+  {
+    "id": "074b07b443f76e0a1027b2b2cfb06f5b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 4.3 MEDIUM] CVE-2026-10041 — The WCFM – Frontend Manager for WooCommerce plugin for WordPress is vulnerable…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10041",
+    "summary": "The WCFM – Frontend Manager for WooCommerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 6.7.27 via the wcfm_product_archive due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with subscriber-level access and above, to archive arbitrary vendors' products, toggle the featured status on arbitrary listings, mark arbitrary WooCommerce orders as completed, and permanently delete arbitrary enquiries and bulk messages belonging to other vendors.",
+    "published": "2026-07-11T07:16:44.783Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-10041"
+    ]
+  },
+  {
+    "id": "9c5656344d078c5f24993082bbc33d96",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2025-6784 — The Code Engine plugin for WordPress is vulnerable to Remote Code Execution in a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6784",
+    "summary": "The Code Engine plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 0.3.5 via the 'code-engine' shortcode. This is due to the plugin not restricting access to the code injecting functionality of the plugin. This makes it possible for authenticated attackers, with Contributor-level access and above, to execute code on the server.",
+    "published": "2026-07-11T07:16:44.637Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2025-6784"
+    ]
+  },
+  {
+    "id": "a3f8fd80c3631ac4eaf64142d305c874",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-2354 — The Swiss Toolkit For WP plugin for WordPress is vulnerable to arbitrary file up…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2354",
+    "summary": "The Swiss Toolkit For WP plugin for WordPress is vulnerable to arbitrary file upload due to a flawed file type validation bypass in the `upload_extension_files()` function in all versions up to, and including, 1.4.6. The `upload_extension_files()` function hooks into WordPress's `wp_check_filetype_and_ext` filter and uses `strpos()` to check if a filename contains a configured extension string, rather than verifying the actual file extension. This makes it possible for authenticated attackers, with Author-level access and above, to upload arbitrary files (including PHP) on the affected site's server which may make remote code execution possible, granted the \"Enhanced Multi-Format Image Support\" feature is enabled with at least one extension (e.g., avif) in the allowed formats.",
+    "published": "2026-07-11T05:16:33.777Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-2354"
+    ]
+  },
+  {
+    "id": "ade2392e30779018023bf471ee17f9df",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-14262 — The Simple JWT Login – Allows you to use JWT on REST endpoints. plugin for Wor…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14262",
+    "summary": "The Simple JWT Login – Allows you to use JWT on REST endpoints. plugin for WordPress is vulnerable to Authentication Bypass to Privilege Escalation in all versions up to, and including, 3.6.6 via the `payload` parameter. The vulnerability exists because `AuthenticateService::generatePayload()` only overwrites JWT payload keys whose names appear in the admin-configured `jwt_payload` list — leaving any attacker-supplied identity claims such as `email`, `id`, or `username` intact and signed into the JWT with the site's HS256 secret. This makes it possible for authenticated attackers, with subscriber-level access and above, to escalate their privileges to that of an Administrator by injecting a target administrator's email address into the `payload` parameter at the `/wp-json/simple-jwt-login/v1/auth` endpoint, then redeeming the resulting JWT at the `/autologin` endpoint to obtain a fully authenticated session as that administrator.",
+    "published": "2026-07-11T05:16:32.367Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "auth-bypass",
+      "lpe",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 78,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-14262"
+    ]
+  },
+  {
+    "id": "cb788584a024cc5e40b837394057a167",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.3 MEDIUM] CVE-2026-13250 — The Solace Extra plugin for WordPress is vulnerable to authorization bypass in a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13250",
+    "summary": "The Solace Extra plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.5.3. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to permanently delete all content previously imported via the Starter Template feature, including posts, pages, media attachments, WooCommerce products, taxonomy terms, and sitebuilder templates. The required nonce is emitted on every wp-admin page via wp_localize_script() hooked to admin_enqueue_scripts without a page guard, meaning any Subscriber visiting /wp-admin/profile.php can obtain it; the handler is additionally registered via wp_ajax_nopriv_, making it reachable by fully unauthenticated users as well.",
+    "published": "2026-07-11T05:16:32.243Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-13250"
+    ]
+  },
+  {
+    "id": "f9ce0dd93c61bbb0fef8024ecaf4c727",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 4.3 MEDIUM] CVE-2026-13116 — The PDF Invoices & Packing Slips for WooCommerce plugin for WordPress is vulnera…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13116",
+    "summary": "The PDF Invoices & Packing Slips for WooCommerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 5.14.0 via the generate_document_shortcode due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with contributor-level access and above, to mint publicly accessible, session-free download links for arbitrary third-party orders, exposing customer names, billing and shipping addresses, email addresses, phone numbers, order and invoice numbers, line items, totals, payment details, and customer notes contained in those orders' invoices and packing slips. Exploitation requires the plugin's Document link access type setting to be configured to 'full'; with the default 'logged_in' value, generated URLs are signed with a per-session nonce rather than the order_key, making the shortcode path unexploitable for unauthorized access to third-party orders.",
+    "published": "2026-07-11T05:16:32.123Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-13116"
+    ]
+  },
+  {
+    "id": "2588172ebe596bd65d80aca12da218ba",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-13353 — The WP Ultimate CSV Importer – WordPress Import & Export for CSV, XML & Excel …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13353",
+    "summary": "The WP Ultimate CSV Importer – WordPress Import & Export for CSV, XML & Excel plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 8.0.1 via the 'MappedFields' parameter. This is due to missing capability checks on the AJAX handlers for install_addon, saveMappedFields, and StartImport, combined with the plugin nonce being exposed to any authenticated user who can load an admin page, allowing a Subscriber to install the Import WooCommerce add-on, persist attacker-controlled PHP expressions in the MappedFields parameter, and trigger evaluation via eval() in ImportHelpers::get_meta_values(). This makes it possible for authenticated attackers, with subscriber-level access and above, to execute code on the server.",
+    "published": "2026-07-11T04:17:16.937Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-13353"
+    ]
+  },
+  {
+    "id": "7b23296045a2a031574f55cd845d7368",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 4.3 MEDIUM] CVE-2026-10628 — The Points and Rewards for WooCommerce plugin for WordPress is vulnerable to aut…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10628",
+    "summary": "The Points and Rewards for WooCommerce plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.10.0. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to convert and drain any user's reward points into wallet balance, exfiltrate all users' emails and point balances to an attacker-controlled Klaviyo account, overwrite the site's Klaviyo public API key, block or unblock arbitrary users from the points system, and modify campaign banner and heading settings. The nonce used for authentication of these requests (wps-wpr-verify-nonce) is injected into every public-facing page via wp_localize_script(), and the wps_wpr_generate_custom_wallet handler is additionally registered on the wp_ajax_nopriv_ hook, meaning unauthenticated visitors can also obtain a valid nonce and exploit that specific action.",
+    "published": "2026-07-11T04:17:02.733Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-10628"
+    ]
+  },
+  {
+    "id": "ff905425be081e2b5f44a16ca694fefb",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-55175 — Spinnaker is an open source, multi-cloud continuous delivery platform. Prior to …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55175",
+    "summary": "Spinnaker is an open source, multi-cloud continuous delivery platform. Prior to versions 2026.1.1, 2026.0.3, 2025.4.4, and 2025.3.4 on their respective release lines, Kustomize bake operations allow unsafe YAML tag processing in rosco manifests. This can lead to remote code execution on rosco pods when performing Kustomize bakes. This issue is fixed in versions 2026.1.1, 2026.0.3, 2025.4.4, and 2025.3.4.",
+    "published": "2026-07-10T23:16:48.487Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-55175"
+    ]
+  },
+  {
+    "id": "b9217df009138ce830b1a4b8db32e10d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-15089 — vulnerability in Drupal Commerce guest registration allows . This issue affects Commerce guest regis…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15089",
+    "summary": "vulnerability in Drupal Commerce guest registration allows . This issue affects Commerce guest registration versions: *.*.",
+    "published": "2026-07-10T23:16:47.533Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-15089"
+    ]
+  },
+  {
+    "id": "a0125d4d27f4c1abddc8a75801d8b5cc",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-14480 — OpenPLC Runtime v3 contains an authenticated arbitrary file write \nvulnerability…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14480",
+    "summary": "OpenPLC Runtime v3 contains an authenticated arbitrary file write \nvulnerability in the legacy web UI program‑upload workflow. The \napplication stores an attacker‑supplied filename (prog_file) directly \ninto the Programs.File database field and later uses this value as the \ndestination path for an uploaded file without validating or restricting \nthe path. Because Python os.path.join() honors attacker‑controlled \nabsolute paths, an authenticated user can write arbitrary files anywhere\n writable by the OpenPLC webserver process. In the default build \npipeline, all C++ source files within the OpenPLC runtime core directory\n are automatically compiled into the executable runtime binary. By \nwriting a malicious .cpp file into this directory, an authenticated \nattacker can escalate the arbitrary file write into arbitrary native \ncode execution when the operator triggers a normal program compilation \nand runtime start.",
+    "published": "2026-07-10T23:16:47.11Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-14480"
+    ]
+  },
+  {
+    "id": "5781ea97b1bffe6788b8d6ad5ceccb85",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-11915 — vulnerability in Drupal Brute force attack protection allows . This issue affects Brute force attack…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11915",
+    "summary": "vulnerability in Drupal Brute force attack protection allows . This issue affects Brute force attack protection versions: *.*.",
+    "published": "2026-07-10T23:16:46.933Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-11915"
+    ]
+  },
+  {
+    "id": "d83aba343fe99cbc2fdfa06726af1a3d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 3.9 LOW] CVE-2026-15028 — A flaw was found in libarchive. This vulnerability allows a remote attacker to t…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15028",
+    "summary": "A flaw was found in libarchive. This vulnerability allows a remote attacker to trigger a heap overflow by providing a specially crafted tar archive. The issue occurs during the parsing of a PAX extended header containing a malformed SUN.holesdata sparse-file attribute. Successful exploitation could lead to a denial of service, making the system unavailable, or potentially allow for arbitrary code execution, giving the attacker control over the affected system.",
+    "published": "2026-07-10T10:16:23.417Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-15028"
+    ]
+  },
+  {
+    "id": "d0494db682859e1d25abd5176d8fe9d2",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-21049 — Out-of-bounds write in libpadm.so library prior to SMR Jul-2026 Release 1 allows local attackers to …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21049",
+    "summary": "Out-of-bounds write in libpadm.so library prior to SMR Jul-2026 Release 1 allows local attackers to execute arbitrary code.",
+    "published": "2026-07-10T05:16:35.533Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-21049"
+    ]
+  },
+  {
+    "id": "321d9b0090cabdb2a14307d57b50b890",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-21046 — Time-of-check time-of-use race condition in fabricKeymaster trustlet prior to SMR Jul-2026 Release 1…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21046",
+    "summary": "Time-of-check time-of-use race condition in fabricKeymaster trustlet prior to SMR Jul-2026 Release 1 allows local privileged attackers to execute arbitrary code.",
+    "published": "2026-07-10T05:16:35.29Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-21046"
+    ]
+  },
+  {
+    "id": "d16466963e9a3ec9ca8b8bda406bfd8f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-21042 — Out-of-bounds write in libsavsac.so prior to SMR Jul-2026 Release 1 allows local attackers to execut…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21042",
+    "summary": "Out-of-bounds write in libsavsac.so prior to SMR Jul-2026 Release 1 allows local attackers to execute arbitrary code.",
+    "published": "2026-07-10T05:16:34.797Z",
+    "fetched": "2026-07-12T22:24:09.059377977Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-21042"
+    ]
+  },
+  {
     "id": "d70f7ca083eba12c7334de5885e83439",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -971,267 +1635,6 @@
     ],
     "cves": [
       "CVE-2026-13759"
-    ]
-  },
-  {
-    "id": "d8f3757d4da62800e117b89aa5c16021",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA: Windows BlueHammer flaw now exploited by ransomware gangs",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-windows-bluehammer-flaw-now-exploited-by-ransomware-gangs/",
-    "summary": "CISA confirmed on Monday that ransomware gangs are now exploiting a Microsoft Defender privilege escalation vulnerability, dubbed BlueHammer, that has previously been abused in zero-day attacks. [...]",
-    "published": "2026-06-30T08:53:13Z",
-    "fetched": "2026-06-30T22:49:54.25205577Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "lpe",
-      "0day",
-      "ransomware"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "b3e6538f2b6cd59bbb479b627ed638bc",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Nissan discloses employee data breach linked to Oracle zero-day attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/",
-    "summary": "Nissan is warning that it suffered a data breach affecting current and former employees after threat actors exploited an Oracle PeopleSoft vulnerability in data theft attacks previously linked to the ShinyHunters extortion group. [...]",
-    "published": "2026-06-29T20:40:44Z",
-    "fetched": "2026-06-29T22:37:04.246440223Z",
-    "tags": [
-      "oracle",
-      "0day",
-      "breach"
-    ],
-    "severity": "critical",
-    "score": 82,
-    "vendors": [
-      "oracle"
-    ]
-  },
-  {
-    "id": "c979537e37cf195da23e2d522bc95add",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "NAIC says public data stolen in ShinyHunters' PeopleSoft breach",
-    "url": "https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/",
-    "summary": "The National Association of Insurance Commissioners (NAIC) says the ShinyHunters extortion group stole only publicly available data, outdated logs, and configuration files after breaching its systems by exploiting a zero-day vulnerability in an Oracle PeopleSoft server. [...]",
-    "published": "2026-06-29T20:30:28Z",
-    "fetched": "2026-06-29T22:37:04.246440223Z",
-    "tags": [
-      "oracle",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "oracle"
-    ]
-  },
-  {
-    "id": "c2792d5e8f1614891425ad23c34bd896",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.3 HIGH] CVE-2026-12912 — A flaw was found in libtiff. A remote attacker could exploit this vulnerability …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12912",
-    "summary": "A flaw was found in libtiff. A remote attacker could exploit this vulnerability by providing a specially crafted PixarLog-compressed TIFF image. This issue occurs when decoding Pixarlog codec images with the PIXARLOGDATAFMT_8BITABGR output format and a specific stride value, leading to a heap-based buffer overflow. This could potentially result in arbitrary code execution or a denial of service (DoS).",
-    "published": "2026-06-29T17:16:28.23Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-12912"
-    ]
-  },
-  {
-    "id": "900de57610aa512e6f56a3e8f9c0d5b0",
-    "source": "schneier",
-    "source_name": "Schneier on Security",
-    "category": "analysis",
-    "title": "Factoring RSA Keys with Many Zeros",
-    "url": "https://www.schneier.com/blog/archives/2026/06/factoring-rsa-keys-with-many-zeros.html",
-    "summary": "Interesting research on a new class of weak RSA keys: keys with lots of zeros. It turns out that these keys are out in the wild. The badkeys project is an open-source service that checks public keys for known vulnerabilities. While developing this tool, Hanno collected a massive number of real-world keys from public sources, including Certificate Transparency logs, internet-wide TLS and SSH scans, PGP keys, and many others. By searching this dataset for unexpectedly sparse RSA moduli, we uncovered a large number of keys in the wild with the patterns in Figure 1...",
-    "published": "2026-06-29T16:05:18Z",
-    "fetched": "2026-07-06T22:45:37.658804975Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 78
-  },
-  {
-    "id": "900de57610aa512e6f56a3e8f9c0d5b0",
-    "source": "schneier",
-    "source_name": "Schneier on Security",
-    "category": "analysis",
-    "title": "Factoring RSA Keys with Many Zeros",
-    "url": "https://www.schneier.com/blog/archives/2026/06/factoring-rsa-keys-with-many-zeros.html",
-    "summary": "Interesting research on a new class of weak RSA keys: keys with lots of zeros. It turns out that these keys are out in the wild. The badkeys project is an open-source service that checks public keys for known vulnerabilities. While developing this tool, Hanno collected a massive number of real-world keys from public sources, including Certificate Transparency logs, internet-wide TLS and SSH scans, PGP keys, and many others. By searching this dataset for unexpectedly sparse RSA moduli, we uncovered a large number of keys in the wild with the patterns in Figure 1...",
-    "published": "2026-06-29T16:05:18Z",
-    "fetched": "2026-06-29T22:37:04.246440223Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 78
-  },
-  {
-    "id": "43c8a848acc18bbe0ab1111c1554243c",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-48558 — SimpleHelp  SimpleHelp: SimpleHelp Authentication Bypass Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48558",
-    "summary": "SimpleHelp contains an authentication bypass vulnerability in the OIDC authentication flow. When OIDC authentication is configured, identity tokens submitted during login are accepted without verifying their cryptographic signature. In a vulnerable configuration, a remote, unauthenticated attacker can submit a forged token containing arbitrary identity claims to obtain a fully authenticated technician session. In some configurations, this may also allow bypass of multi-factor authentication.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-02",
-    "published": "2026-06-29T00:00:00Z",
-    "fetched": "2026-07-06T22:45:37.658804975Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "auth-bypass"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "simplehelp"
-    ],
-    "cves": [
-      "CVE-2026-48558"
-    ]
-  },
-  {
-    "id": "43c8a848acc18bbe0ab1111c1554243c",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-48558 — SimpleHelp  SimpleHelp: SimpleHelp Authentication Bypass Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48558",
-    "summary": "SimpleHelp contains an authentication bypass vulnerability in the OIDC authentication flow. When OIDC authentication is configured, identity tokens submitted during login are accepted without verifying their cryptographic signature. In a vulnerable configuration, a remote, unauthenticated attacker can submit a forged token containing arbitrary identity claims to obtain a fully authenticated technician session. In some configurations, this may also allow bypass of multi-factor authentication.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-02",
-    "published": "2026-06-29T00:00:00Z",
-    "fetched": "2026-06-29T22:37:04.246440223Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "auth-bypass"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "simplehelp"
-    ],
-    "cves": [
-      "CVE-2026-48558"
-    ]
-  },
-  {
-    "id": "6efec80aed7491b4aa5b945a23724f50",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-12569 — PTC Windchill and FlexPLM: PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12569",
-    "summary": "PTC Windchill and FlexPLM contains an improper input validation vulnerability allowing an unauthenticated, remote attacker to execute arbitrary code by sending a malicious request to the network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-28",
-    "published": "2026-06-25T00:00:00Z",
-    "fetched": "2026-07-09T22:50:16.380001815Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "ptc"
-    ],
-    "cves": [
-      "CVE-2026-12569"
-    ]
-  },
-  {
-    "id": "1132023850c9b088c56f30acdd36ac5b",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-20230 — Cisco Unified Communications Manager: Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20230",
-    "summary": "Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) contain a server-side request forgery (SSRF) Vulnerability that could allow an unauthenticated, remote attacker to write files to the underlying operating system that could be used later to elevate to root.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-28",
-    "published": "2026-06-25T00:00:00Z",
-    "fetched": "2026-07-09T22:50:16.380001815Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20230"
-    ]
-  },
-  {
-    "id": "6efec80aed7491b4aa5b945a23724f50",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-12569 — PTC Windchill and FlexPLM: PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12569",
-    "summary": "PTC Windchill and FlexPLM contains an improper input validation vulnerability allowing an unauthenticated, remote attacker to execute arbitrary code by sending a malicious request to the network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-28",
-    "published": "2026-06-25T00:00:00Z",
-    "fetched": "2026-07-02T22:36:45.759040921Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "ptc"
-    ],
-    "cves": [
-      "CVE-2026-12569"
-    ]
-  },
-  {
-    "id": "1132023850c9b088c56f30acdd36ac5b",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-20230 — Cisco Unified Communications Manager: Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20230",
-    "summary": "Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) contain a server-side request forgery (SSRF) Vulnerability that could allow an unauthenticated, remote attacker to write files to the underlying operating system that could be used later to elevate to root.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-06-28",
-    "published": "2026-06-25T00:00:00Z",
-    "fetched": "2026-07-02T22:36:45.759040921Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20230"
     ]
   }
 ]

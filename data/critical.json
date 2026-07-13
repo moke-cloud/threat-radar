@@ -1,5 +1,47 @@
 [
   {
+    "id": "b16dd42087ecdded17b1cba74c0b7de1",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA warns of actively exploited RCE flaws in Joomla extensions",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning that attackers are exploiting vulnerabilities in the iCagenda and Balbooa Forms extensions for Joomla to achieve remote code execution through arbitrary file uploads. [...]",
+    "published": "2026-07-13T15:20:16Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 87
+  },
+  {
+    "id": "9c029551f91e5dba449f9ac597ed5849",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2008-4128 — Cisco IOS: Cisco IOS Cross-Site Request Forgery Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4128",
+    "summary": "Cisco IOS 12.4 contains multiple cross-site forgery vulnerabilities that allows remote attackers to execute arbitrary commands via (1) a certain \"show privilege\" command to the /level/15/exec/- URI, and (2) a certain \"alias exec\" command to the /level/15/exec/-/configure/http URI.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-16",
+    "published": "2026-07-13T00:00:00Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "cisco",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2008-4128"
+    ]
+  },
+  {
     "id": "2e3cb51465193786449b46120a207e26",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -588,6 +630,52 @@
     ]
   },
   {
+    "id": "7a5d96f31397dcaf339592919b98c6ff",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-33382 — Several Grafana API endpoints, some of them unauthenticated, do not limit the si…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33382",
+    "summary": "Several Grafana API endpoints, some of them unauthenticated, do not limit the size of the request body before processing it. An attacker can send very large payloads that force excessive memory allocation, potentially exhausting memory and causing a denial of service.",
+    "published": "2026-07-10T16:16:29.13Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "grafana"
+    ],
+    "cves": [
+      "CVE-2026-33382"
+    ]
+  },
+  {
+    "id": "fdb01910a5af18aa5f5bd31da7fbcaf7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 3.3 LOW] CVE-2026-56366 — ImageMagick before 7.1.2-18 contains a memory leak vulnerability in the META rea…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56366",
+    "summary": "ImageMagick before 7.1.2-18 contains a memory leak vulnerability in the META reader when processing APP1JPEG input paths. Attackers can trigger this memory leak by providing specially crafted APP1JPEG image files, causing denial of service through resource exhaustion.",
+    "published": "2026-07-10T15:16:43.217Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "adobe",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "imagemagick",
+      "adobe"
+    ],
+    "cves": [
+      "CVE-2026-56366"
+    ]
+  },
+  {
     "id": "d83aba343fe99cbc2fdfa06726af1a3d",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -710,6 +798,257 @@
     ]
   },
   {
+    "id": "3cfc73c3e2ace4c8724dee602cac08e3",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.3 MEDIUM] CVE-2026-59828 — Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 20…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59828",
+    "summary": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, post revisions that should be hidden from regular users could be leaked through visible diffs on adjacent revisions serialized by PostRevisionSerializer. This issue is fixed in versions 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.",
+    "published": "2026-07-09T22:17:09.973Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "discourse"
+    ],
+    "cves": [
+      "CVE-2026-59828"
+    ]
+  },
+  {
+    "id": "7f0dc7095ce52659ff650f8835a50bfe",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.5 MEDIUM] CVE-2026-57032 — An Improper Handling of Undefined Parameters vulnerability in the packet forward…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57032",
+    "summary": "An Improper Handling of Undefined Parameters vulnerability in the packet forwarding engine (pfe) of Juniper Networks Junos OS on EX Series devices allows an authenticated attacker with low privileges to cause a Denial-of-Service (DoS).\n\nIf an attempt is made to subscribe to an unsupported telemetry sensor path on EX2300, EX3400, EX4000, EX4100 and EX4400 via gRPC, this causes the FPC to crash. This leads to a complete service outage until the module has automatically restarted. \n\nThe following log message can be seen when this issue happens:\n\nagentd[<PID>]: AGENTD_RESOURCE_NOT_FOUND: No resource name found for <sensor>\n\n\nThis issue affects Junos OS on \n\nEX2300, EX3400, EX4000, EX4100 and EX4400\n\ndevices:\n\n\n  *  all versions before 23.2R2-S7,\n  *  23.4 versions before 23.4R2-S8,\n  *  24.2 versions before  24.2R2-S5,\n  *  24.4 versions before 24.4R2.",
+    "published": "2026-07-09T22:17:09.007Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "juniper"
+    ],
+    "cves": [
+      "CVE-2026-57032"
+    ]
+  },
+  {
+    "id": "ea809b31bc259c4aa33978661d926814",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.9 MEDIUM] CVE-2026-57030 — A Concurrent Execution using Shared Resource with Improper Synchronization ('Rac…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57030",
+    "summary": "A Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') vulnerability in the packet forwarding engine (PFE) of Juniper Networks Junos OS on SRX Series allows an unauthenticated, network-based attacker to cause a Denial-of-Service (DoS).\n\nAs part of the stateful traffic processing on SRX Series devices flows are being established, and removed when not needed anymore. During the removal process the timeout of a flow should be set to 3 seconds and consequentially the flow should be removed shortly after. Due to a race condition occurring when setting the timeout there is a chance (the exact conditions are outside the attackers control) that the timeout is instead set to a very high value of larger than 10,000 seconds:\n\n\n\nuser@host> show security flow session | match timeout\nSession ID: 98784248524, Policy name: PROD-FLOW/4, HA State: Active, Timeout: 85250, Session State: Valid\n\nThis will lead to an accumulation of flows which can be observed by an ever-increasing value of invalidated sessions in the output of 'show security flow session summary':\n\nuser@host> show security flow session summary | match invalid\nInvalidated sessions: 216931These sessions can't be cleared manually with the 'clear security flow session' command, which will either lead to forwarding to stop (and the system needs to be manually recovered with a reboot) or to a flowd core and automatic reboot.\n\n\nThis issue affects Junos OS on SRX Series:\n\n\n  *  24.2 versions before 24.2R2-S3,\n  *  24.4 versions before 24.4R2-S1, 24.4R2-S2,\n  *  25.2 versions before 25.2R1-S2, 25.2R2.\n\n\n\n\nThis issue does not affect releases earlier than 24.2R1;",
+    "published": "2026-07-09T22:17:08.643Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "juniper"
+    ],
+    "cves": [
+      "CVE-2026-57030"
+    ]
+  },
+  {
+    "id": "642d1db2c9224919749c90cf85ff9756",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.2 MEDIUM] CVE-2026-39245 — decompress before 4.2.2 contains an improper path containment check that enables…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39245",
+    "summary": "decompress before 4.2.2 contains an improper path containment check that enables directory traversal and arbitrary file write. The safeMakeDir function (index.js line 29) and the extraction path validation (index.js line 106) use String.indexOf() to verify the resolved path is within the output directory: realDestinationDir.indexOf(realOutputPath) !== 0. This check is flawed because it does not enforce a path separator boundary. For example, \"/tmp/app_config\".indexOf(\"/tmp/app\") returns 0, incorrectly passing the check even though /tmp/app_config is outside /tmp/app. Combined with the unvalidated symlink creation in the same package, an attacker can write arbitrary files to directories adjacent to the extraction target. This is a bypass of the fix for CVE-2020-12265. The correct check requires appending a path separator: realParentPath.indexOf(realOutputPath + path.sep) !== 0.",
+    "published": "2026-07-09T22:17:04.247Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "path-traversal",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "decompress_project"
+    ],
+    "cves": [
+      "CVE-2026-39245",
+      "CVE-2020-12265"
+    ]
+  },
+  {
+    "id": "91dba1998036dc3bf197893591698dc9",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-54695 — Pipecat is an open-source Python framework for building real-time voice and mult…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54695",
+    "summary": "Pipecat is an open-source Python framework for building real-time voice and multimodal conversational agents. Prior to 1.4.0, the pipecat development runner registers a /ws WebSocket endpoint for telephony testing that accepts connections without authentication, reads an attacker-supplied callSid from a Twilio stream-start handshake in src/pipecat/runner/utils.py, and passes it to TwilioFrameSerializer so the server can issue an authenticated Twilio REST API hang-up request with the server operator's credentials; equivalent unauthenticated call-control sinks exist for Telnyx and Plivo. This issue is fixed in version 1.4.0.",
+    "published": "2026-07-09T19:17:06.54Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "pipecat"
+    ],
+    "cves": [
+      "CVE-2026-54695"
+    ]
+  },
+  {
+    "id": "b13d1324a46f8537cd5e42710e7b6f5e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.2 HIGH] CVE-2026-0286 — A command injection vulnerability in the management plane of Palo Alto Networks …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0286",
+    "summary": "A command injection vulnerability in the management plane of Palo Alto Networks PAN-OS® software enables an authenticated administrator to execute arbitrary OS commands as root.\n\n\n\nThe security risk posed by this issue is significantly minimized when CLI access is restricted to a limited group of administrators.\n\n\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\n\n\nCloud NGFW and Prisma Access®  are not impacted by this vulnerability.",
+    "published": "2026-07-09T19:17:02.227Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce",
+      "paloalto",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "paloaltonetworks",
+      "paloalto"
+    ],
+    "cves": [
+      "CVE-2026-0286"
+    ]
+  },
+  {
+    "id": "426d20ea85342549e794f205bb85ac7b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.2 HIGH] CVE-2026-0283 — An authentication bypass vulnerability in Large Scale VPN ( LSVPN) functionality…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0283",
+    "summary": "An authentication bypass vulnerability in Large Scale VPN ( LSVPN) functionality of Palo Alto Networks PAN-OS software allows an attacker with network access to bypass security restrictions and establish an unauthorized site-to-site VPN connection.\n\nPanorama, Cloud NGFW, and Prisma® Access are not impacted by this vulnerability.",
+    "published": "2026-07-09T19:17:00.593Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "auth-bypass",
+      "paloalto",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "paloaltonetworks",
+      "paloalto"
+    ],
+    "cves": [
+      "CVE-2026-0283"
+    ]
+  },
+  {
+    "id": "e7e4ce4783b7b296046495ea79d8b9e3",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-59827 — Metabase is an open-source business intelligence and embedded analytics tool. Pr…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59827",
+    "summary": "Metabase is an open-source business intelligence and embedded analytics tool. Prior to 1.58.15, 1.59.12, 1.60.6.3, and 1.61.1.4, Metabase instances with an H2 database connection, including the default sample database, deserialize arbitrary Java objects returned in H2 native query result columns of type OTHER without validation, allowing an authenticated user who can run native H2 queries to execute code on the Metabase server. This issue is fixed in versions 1.58.15, 1.59.12, 1.60.6.3, and 1.61.1.4.",
+    "published": "2026-07-09T18:16:57.893Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "vendors": [
+      "metabase"
+    ],
+    "cves": [
+      "CVE-2026-59827"
+    ]
+  },
+  {
+    "id": "3e6abaac1faefbc97f8c073b36dfebc4",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-55420 — Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 20…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55420",
+    "summary": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, under certain non-default configurations, processing of PDF uploads could be exploited to obtain RCE on the server. This issue is patched in 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.",
+    "published": "2026-07-09T18:16:54.44Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "discourse"
+    ],
+    "cves": [
+      "CVE-2026-55420"
+    ]
+  },
+  {
+    "id": "7848a2114e56ce7bf18683d7d41d82bc",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.5 MEDIUM] CVE-2026-59209 — n8n is an open source workflow automation platform. Prior to 1.123.61, 2.27.4, a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59209",
+    "summary": "n8n is an open source workflow automation platform. Prior to 1.123.61, 2.27.4, and, 2.28.1, an authenticated member with use-only editor access to a shared workflow could read credential-populated headers exposed via the $request object inside an HTTP Request node's pagination expression and exfiltrate the secret through item data. This issue is fixed in versions 1.123.61, 2.27.4, and 2.28.1.",
+    "published": "2026-07-09T17:17:01.78Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "n8n"
+    ],
+    "cves": [
+      "CVE-2026-59209"
+    ]
+  },
+  {
+    "id": "297bf3ac0e249639b623f6ca11295bb8",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-58459 — gpsd through release-3.27.5, fixed at commit 4c06658, contains a command injecti…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58459",
+    "summary": "gpsd through release-3.27.5, fixed at commit 4c06658, contains a command injection vulnerability in gpsprof that allows attackers who control the GPS device subtype value to execute arbitrary shell commands by embedding backtick payloads in the gnuplot plot title without proper escaping. The subtype field sourced from a DEVICES JSON log entry or NMEA PGRMT sentence is written into a generated gnuplot program via a set title statement with only double-quote characters escaped, enabling arbitrary shell command execution as the user running gnuplot when the victim renders the generated plot through the gpsprof and gnuplot workflow.",
+    "published": "2026-07-09T17:17:01.493Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "gpsd_project"
+    ],
+    "cves": [
+      "CVE-2026-58459"
+    ]
+  },
+  {
     "id": "b4ba40c9698ead38b9dd90a23f3d6eac",
     "source": "msrc",
     "source_name": "Microsoft Security Blog",
@@ -767,6 +1106,141 @@
     "score": 77,
     "vendors": [
       "microsoft"
+    ]
+  },
+  {
+    "id": "931697168ef8561c9e0eb4e7e1282b8b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.2 HIGH] CVE-2026-44161 — Fluentd collects events from various data sources and writes them to files, RDBM…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44161",
+    "summary": "Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, the Fluentd out_http output plugin allows placeholders such as ${tag} in the endpoint configuration parameter, and if a placeholder value is derived from untrusted input an attacker can control the destination hostname of outbound HTTP requests and force requests to arbitrary internal services. This issue is fixed in version 1.19.3.",
+    "published": "2026-07-08T22:17:14.737Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "fluentd"
+    ],
+    "cves": [
+      "CVE-2026-44161"
+    ]
+  },
+  {
+    "id": "0123386499a72423ebe08d74715737a1",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-44160 — Fluentd collects events from various data sources and writes them to files, RDBM…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44160",
+    "summary": "Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, Fluentd's in_http and in_forward plugins support gzip-compressed data but enforce limits only on compressed payloads through settings such as body_size_limit and chunk_size_limit, allowing crafted compressed payloads to decompress in memory to an excessive size and cause denial of service through memory exhaustion. This issue is fixed in version 1.19.3.",
+    "published": "2026-07-08T22:17:14.6Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "fluentd"
+    ],
+    "cves": [
+      "CVE-2026-44160"
+    ]
+  },
+  {
+    "id": "70cc1ea8880e825de8ddc50bb3983d91",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-44024 — Fluentd collects events from various data sources and writes them to files, RDBM…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44024",
+    "summary": "Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, Fluentd allows dynamically constructing file paths using the ${tag} placeholder, and insufficient validation of ${tag} in file configurations such as the path parameter of the out_file plugin allows attackers sending untrusted tags containing path traversal characters to write or overwrite arbitrary files and potentially achieve remote code execution. This issue is fixed in version 1.19.3.",
+    "published": "2026-07-08T22:17:14.337Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 83,
+    "vendors": [
+      "fluentd"
+    ],
+    "cves": [
+      "CVE-2026-44024"
+    ]
+  },
+  {
+    "id": "9298e8646a6328e5c8edac721133cb4f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.5 MEDIUM] CVE-2026-35211 — OpenCTI is an open source platform for managing cyber threat intelligence knowle…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35211",
+    "summary": "OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260401.0, the OpenCTI GraphQL API exposes a script filter operator in its FilterOperator enum that allows any authenticated user with the KNOWLEDGE capability to pass user-supplied Elasticsearch Painless script values directly into search queries without validation or sanitization, allowing computationally expensive scripts to consume cluster CPU resources and degrade or deny service for all users. This issue is fixed in version 7.260401.0.",
+    "published": "2026-07-08T21:16:48.63Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "citeum"
+    ],
+    "cves": [
+      "CVE-2026-35211"
+    ]
+  },
+  {
+    "id": "902b0e8fb0c476d6e18778316e25e91b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.1 HIGH] CVE-2026-35210 — OpenCTI is an open source platform for managing cyber threat intelligence knowle…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35210",
+    "summary": "OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260326.0, an authorization bypass vulnerability in OpenCTI allows any authenticated user with KNOWLEDGE_KNUPDATE permission to bypass Confidence Level validation and Object Marking restrictions by injecting the synchronized-upsert: true HTTP header, enabling attackers to downgrade confidence levels, remove security markings such as TLP:RED, manipulate relationships, and affect STIX object types including Indicators, ThreatActors, Malware, and Reports. This issue is fixed in version 7.260326.0.",
+    "published": "2026-07-08T21:16:48.487Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce",
+      "malware"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "citeum"
+    ],
+    "cves": [
+      "CVE-2026-35210"
+    ]
+  },
+  {
+    "id": "b8f9e1a97bc81b71624dcf1ce4f088d7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.1 MEDIUM] CVE-2026-59890 — setuptools is a package that allows users to download, build, install, upgrade, …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59890",
+    "summary": "setuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. Prior to 83.0.0, FileList applied MANIFEST.in exclude, global-exclude, recursive-exclude, and prune directives by matching compiled glob patterns against on-disk file names without Unicode normalization, so on macOS APFS or HFS+ an NFD file name could bypass an NFC exclusion rule and be packed into a source distribution. This issue is fixed in version 83.0.0.",
+    "published": "2026-07-08T17:17:27.02Z",
+    "fetched": "2026-07-13T22:27:28.801258292Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "python"
+    ],
+    "cves": [
+      "CVE-2026-59890"
     ]
   },
   {
@@ -1157,484 +1631,6 @@
     "score": 60,
     "cves": [
       "CVE-2026-13050"
-    ]
-  },
-  {
-    "id": "5899695822c74e1671574ed1a0b0694a",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA: Microsoft SharePoint RCE flaw now actively exploited",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-rce-flaw-now-actively-exploited/",
-    "summary": "CISA warned on Wednesday that attackers have begun exploiting a high-severity Microsoft SharePoint remote code execution vulnerability patched in May. [...]",
-    "published": "2026-07-02T10:52:43Z",
-    "fetched": "2026-07-02T22:36:45.759040921Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 97,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "ddc7e3f75e0c81bafbe9c1bb48f95820",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack",
-    "url": "https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html",
-    "summary": "Security firm Sysdig says it has found what it believes is the first ransomware attack run from start to finish by an AI agent. Its Threat Research Team calls the operator JADEPUFFER and says a large language model handled the whole job: breaking in, stealing credentials, moving deeper into the network, then encrypting and wiping a company's production database. Ransomware has always",
-    "published": "2026-07-02T09:13:13Z",
-    "fetched": "2026-07-02T22:36:45.759040921Z",
-    "tags": [
-      "rce",
-      "ransomware"
-    ],
-    "severity": "high",
-    "score": 63
-  },
-  {
-    "id": "819a1484550e05ba5473d7a0ee25228e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-14432 — Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14432",
-    "summary": "Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-07-01T23:16:51.697Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-14432"
-    ]
-  },
-  {
-    "id": "04047d08248a490655e52725bff45592",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-14431 — Type Confusion in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14431",
-    "summary": "Type Confusion in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-07-01T23:16:51.6Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-14431"
-    ]
-  },
-  {
-    "id": "f7668989c04a75f38bbc488b2d799f2c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-14430 — Integer overflow in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14430",
-    "summary": "Integer overflow in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-07-01T23:16:51.497Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-14430"
-    ]
-  },
-  {
-    "id": "a24d051def2ca7a95a5bfcfca2397aef",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-14426 — Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14426",
-    "summary": "Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-07-01T23:16:51.1Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-14426"
-    ]
-  },
-  {
-    "id": "19a5551b890b78fa9951a495b96c877a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-14409 — Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allow…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14409",
-    "summary": "Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
-    "published": "2026-07-01T23:16:49.367Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-14409"
-    ]
-  },
-  {
-    "id": "bf974194c1f811d07dd72ee4ed43fd26",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-14407 — Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allow…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14407",
-    "summary": "Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-07-01T23:16:49.167Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-14407"
-    ]
-  },
-  {
-    "id": "adb819a16930abcb59e6a159f36350ac",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-14405 — Uninitialized Use in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14405",
-    "summary": "Uninitialized Use in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
-    "published": "2026-07-01T23:16:48.947Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-14405"
-    ]
-  },
-  {
-    "id": "5afb86dc7e63a1089ff3b4d8e676e2b3",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-14403 — Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14403",
-    "summary": "Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
-    "published": "2026-07-01T23:16:48.723Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-14403"
-    ]
-  },
-  {
-    "id": "151d5645d61fb534cbfee8e49bb5b189",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-14395 — Out of bounds write in V8 in Google Chrome prior to 150.0.7871.46 allowed a remo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14395",
-    "summary": "Out of bounds write in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
-    "published": "2026-07-01T23:16:47.93Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-14395"
-    ]
-  },
-  {
-    "id": "d674a6407dedb7e110f0c01f5ec860e7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-14393 — Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14393",
-    "summary": "Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-07-01T23:16:47.733Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-14393"
-    ]
-  },
-  {
-    "id": "ff9ffd4ccc188910dbe668ad7a25b138",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-14383 — Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allow…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14383",
-    "summary": "Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-07-01T23:16:46.743Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-14383"
-    ]
-  },
-  {
-    "id": "5e3cf06e8071a3daeb84f636f1880edb",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "FortiBleed credential-theft campaign linked to Lynx ransomware",
-    "url": "https://www.bleepingcomputer.com/news/security/fortibleed-credential-theft-campaign-linked-to-lynx-ransomware/",
-    "summary": "The massive FortiBleed credential theft campaign has been linked to the INC and Lynx ransomware operations, suggesting the stolen Fortinet credentials were intended to fuel future network intrusions. [...]",
-    "published": "2026-07-01T21:37:24Z",
-    "fetched": "2026-07-01T22:47:14.19208354Z",
-    "tags": [
-      "fortinet",
-      "watch",
-      "ransomware"
-    ],
-    "severity": "high",
-    "score": 62,
-    "vendors": [
-      "fortinet"
-    ]
-  },
-  {
-    "id": "b7ffabd812af19c8b76c3baa268f9c86",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-46680 — containerd is an open-source container runtime. In versions prior to 1.7.32, 2.0…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46680",
-    "summary": "containerd is an open-source container runtime. In versions prior to 1.7.32, 2.0.9, 2.2.4 and 2.3.1, containers launched with a numeric User directive that cannot be parsed as a 32-bit integer are incorrectly treated as a username, leading to runAsNonRoot evasion. If a crafted image provides an /etc/passwd file mapping this large numeric string to root, the container ultimately runs as root (UID 0). This allows the Kubernetes runAsNonRoot restriction to be bypassed, causing unexpected behavior for environments that require containers to run as a non-root user. This issue has been fixed in versions 1.7.32, 2.0.9, 2.2.4 and 2.3.1.",
-    "published": "2026-07-01T18:16:32.853Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "kubernetes",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "linuxfoundation",
-      "kubernetes"
-    ],
-    "cves": [
-      "CVE-2026-46680"
-    ]
-  },
-  {
-    "id": "db9931708d543ada98ea20f0ad05cc0b",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Phantom Squatting Uses AI-Hallucinated Domains for Phishing and Malware",
-    "url": "https://thehackernews.com/2026/07/phantom-squatting-uses-ai-hallucinated.html",
-    "summary": "Large language models keep inventing web addresses that do not exist. Attackers have started buying those made-up domains before anyone else can, then hosting phishing pages on them to catch traffic that AI tools point their way. Palo Alto Networks' Unit 42 calls the trick phantom squatting, and its new research shows it is already happening in the wild. The reason it matters is",
-    "published": "2026-07-01T07:20:51Z",
-    "fetched": "2026-07-01T22:47:14.19208354Z",
-    "tags": [
-      "paloalto",
-      "watch",
-      "actively-exploited",
-      "malware"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "paloalto"
-    ]
-  },
-  {
-    "id": "474f29163f2c62784f3d527c53dca5da",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-53488 — containerd is an open-source container runtime. In versions prior to 1.7.33, 2.3…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53488",
-    "summary": "containerd is an open-source container runtime. In versions prior to 1.7.33, 2.3.2, 2.2.5, 2.1.9, and 2.0.10 the CRI plugin propagates labels from an image config (LABEL instruction in Dockerfile) to a container without validation. This may result in executing an arbitrary command on the host, via a plugin that consumes container labels for some operations. This issue has been fixed in versions 1.7.33, 2.3.2, 2.2.5, 2.1.9, and 2.0.10.",
-    "published": "2026-07-01T02:17:00.467Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "docker",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "linuxfoundation",
-      "docker"
-    ],
-    "cves": [
-      "CVE-2026-53488"
-    ]
-  },
-  {
-    "id": "fd98b0a04769f5b6df90ac3e0a72e1df",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-45659 — Microsoft SharePoint Server: Microsoft SharePoint Server Deserialization of Untrusted Data Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45659",
-    "summary": "Microsoft SharePoint Server contains a deserialization of untrusted data vulnerability which allows an authorized attacker to execute code over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-04",
-    "published": "2026-07-01T00:00:00Z",
-    "fetched": "2026-07-08T22:32:46.051903996Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-45659"
-    ]
-  },
-  {
-    "id": "fd98b0a04769f5b6df90ac3e0a72e1df",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-45659 — Microsoft SharePoint Server: Microsoft SharePoint Server Deserialization of Untrusted Data Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45659",
-    "summary": "Microsoft SharePoint Server contains a deserialization of untrusted data vulnerability which allows an authorized attacker to execute code over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-04",
-    "published": "2026-07-01T00:00:00Z",
-    "fetched": "2026-07-01T22:47:14.19208354Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-45659"
-    ]
-  },
-  {
-    "id": "55afc6e8443ab7ab48c7a5253e27dab1",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-13759 — IBM WebSphere Extreme Scale 8.6.1.0 through 8.6.1.6 ships three ObjectInputStrea…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13759",
-    "summary": "IBM WebSphere Extreme Scale 8.6.1.0 through 8.6.1.6 ships three ObjectInputStream subclasses (WsObjectInputStream, ObjectStreamPool$ReusableInputStream, ObjectInputStreamResolver) that install no JEP-290 class filter; when Coherence is on the classpath, multiple RCE gadget chains including RemoteConstructor.readResolve and PriorityQueue/ExtractorComparator are confirmed working, allowing a post-login attacker who can write a session attribute or a LAN-adjacent attacker on the grid replication wire to execute arbitrary code on peer WAS JVMs",
-    "published": "2026-06-30T20:17:28.953Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "ibm"
-    ],
-    "cves": [
-      "CVE-2026-13759"
     ]
   }
 ]

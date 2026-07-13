@@ -5,7 +5,32 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Jul 2026 22:24:09 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 22:27:28 +0000</lastBuildDate>
+    <item>
+      <title>[CRIT] CISA warns of actively exploited RCE flaws in Joomla extensions</title>
+      <link>https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/</link>
+      <guid isPermaLink="false">b16dd42087ecdded17b1cba74c0b7de1</guid>
+      <pubDate>Mon, 13 Jul 2026 15:20:16 +0000</pubDate>
+      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning that attackers are exploiting vulnerabilities in the iCagenda and Balbooa Forms extensions for Joomla to achieve remote code execution through arbitrary file uploads. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>critical</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2008-4128 — Cisco IOS: Cisco IOS Cross-Site Request Forgery Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2008-4128</link>
+      <guid isPermaLink="false">9c029551f91e5dba449f9ac597ed5849</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Cisco IOS 12.4 contains multiple cross-site forgery vulnerabilities that allows remote attackers to execute arbitrary commands via (1) a certain &#34;show privilege&#34; command to the /level/15/exec/- URI, and (2) a certain &#34;alias exec&#34; command to the /level/15/exec/-/configure/http URI.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-16</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>cisco</category>
+      <category>watch</category>
+      <category>cisco</category>
+    </item>
     <item>
       <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-56271 — Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded …</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56271</link>
@@ -324,6 +349,30 @@
       <category>rce</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-33382 — Several Grafana API endpoints, some of them unauthenticated, do not limit the si…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33382</link>
+      <guid isPermaLink="false">7a5d96f31397dcaf339592919b98c6ff</guid>
+      <pubDate>Fri, 10 Jul 2026 16:16:29 +0000</pubDate>
+      <description>Several Grafana API endpoints, some of them unauthenticated, do not limit the size of the request body before processing it. An attacker can send very large payloads that force excessive memory allocation, potentially exhausting memory and causing a denial of service.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>grafana</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 3.3 LOW] CVE-2026-56366 — ImageMagick before 7.1.2-18 contains a memory leak vulnerability in the META rea…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56366</link>
+      <guid isPermaLink="false">fdb01910a5af18aa5f5bd31da7fbcaf7</guid>
+      <pubDate>Fri, 10 Jul 2026 15:16:43 +0000</pubDate>
+      <description>ImageMagick before 7.1.2-18 contains a memory leak vulnerability in the META reader when processing APP1JPEG input paths. Attackers can trigger this memory leak by providing specially crafted APP1JPEG image files, causing denial of service through resource exhaustion.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>adobe</category>
+      <category>rce</category>
+      <category>imagemagick</category>
+      <category>adobe</category>
+    </item>
+    <item>
       <title>[HIGH] [CVSS 3.9 LOW] CVE-2026-15028 — A flaw was found in libarchive. This vulnerability allows a remote attacker to t…</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15028</link>
       <guid isPermaLink="false">d83aba343fe99cbc2fdfa06726af1a3d</guid>
@@ -388,6 +437,135 @@
       <category>icagenda</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-59828 — Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 20…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59828</link>
+      <guid isPermaLink="false">3cfc73c3e2ace4c8724dee602cac08e3</guid>
+      <pubDate>Thu, 09 Jul 2026 22:17:09 +0000</pubDate>
+      <description>Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, post revisions that should be hidden from regular users could be leaked through visible diffs on adjacent revisions serialized by PostRevisionSerializer. This issue is fixed in versions 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>discourse</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-57032 — An Improper Handling of Undefined Parameters vulnerability in the packet forward…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57032</link>
+      <guid isPermaLink="false">7f0dc7095ce52659ff650f8835a50bfe</guid>
+      <pubDate>Thu, 09 Jul 2026 22:17:09 +0000</pubDate>
+      <description>An Improper Handling of Undefined Parameters vulnerability in the packet forwarding engine (pfe) of Juniper Networks Junos OS on EX Series devices allows an authenticated attacker with low privileges to cause a Denial-of-Service (DoS).&#xA;&#xA;If an attempt is made to subscribe to an unsupported telemetry sensor path on EX2300, EX3400, EX4000, EX4100 and EX4400 via gRPC, this causes the FPC to crash. This leads to a complete service outage until the module has automatically restarted. &#xA;&#xA;The following log message can be seen when this issue happens:&#xA;&#xA;agentd[&lt;PID&gt;]: AGENTD_RESOURCE_NOT_FOUND: No resource name found for &lt;sensor&gt;&#xA;&#xA;&#xA;This issue affects Junos OS on &#xA;&#xA;EX2300, EX3400, EX4000, EX4100 and EX4400&#xA;&#xA;devices:&#xA;&#xA;&#xA;  *  all versions before 23.2R2-S7,&#xA;  *  23.4 versions before 23.4R2-S8,&#xA;  *  24.2 versions before  24.2R2-S5,&#xA;  *  24.4 versions before 24.4R2.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>juniper</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.9 MEDIUM] CVE-2026-57030 — A Concurrent Execution using Shared Resource with Improper Synchronization (&#39;Rac…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57030</link>
+      <guid isPermaLink="false">ea809b31bc259c4aa33978661d926814</guid>
+      <pubDate>Thu, 09 Jul 2026 22:17:08 +0000</pubDate>
+      <description>A Concurrent Execution using Shared Resource with Improper Synchronization (&#39;Race Condition&#39;) vulnerability in the packet forwarding engine (PFE) of Juniper Networks Junos OS on SRX Series allows an unauthenticated, network-based attacker to cause a Denial-of-Service (DoS).&#xA;&#xA;As part of the stateful traffic processing on SRX Series devices flows are being established, and removed when not needed anymore. During the removal process the timeout of a flow should be set to 3 seconds and consequentially the flow should be removed shortly after. Due to a race condition occurring when setting the timeout there is a chance (the exact conditions are outside the attackers control) that the timeout is instead set to a very high value of larger than 10,000 seconds:&#xA;&#xA;&#xA;&#xA;user@host&gt; show security flow session | match timeout&#xA;Session ID: 98784248524, Policy name: PROD-FLOW/4, HA State: Active, Timeout: 85250, Session State: Valid&#xA;&#xA;This will lead to an accumulation of flows which can be observed by an ever-increasing value of invalidated sessions in the output of &#39;show security flow session summary&#39;:&#xA;&#xA;user@host&gt; show security flow session summary | match invalid&#xA;Invalidated sessions: 216931These sessions can&#39;t be cleared manually with the &#39;clear security flow session&#39; command, which will either lead to forwarding to stop (and the system needs to be manually recovered with a reboot) or to a flowd core and automatic reboot.&#xA;&#xA;&#xA;This issue affects Junos OS on SRX Series:&#xA;&#xA;&#xA;  *  24.2 versions before 24.2R2-S3,&#xA;  *  24.4 versions before 24.4R2-S1, 24.4R2-S2,&#xA;  *  25.2 versions before 25.2R1-S2, 25.2R2.&#xA;&#xA;&#xA;&#xA;&#xA;This issue does not affect releases earlier than 24.2R1;</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>juniper</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.2 MEDIUM] CVE-2026-39245 — decompress before 4.2.2 contains an improper path containment check that enables…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-39245</link>
+      <guid isPermaLink="false">642d1db2c9224919749c90cf85ff9756</guid>
+      <pubDate>Thu, 09 Jul 2026 22:17:04 +0000</pubDate>
+      <description>decompress before 4.2.2 contains an improper path containment check that enables directory traversal and arbitrary file write. The safeMakeDir function (index.js line 29) and the extraction path validation (index.js line 106) use String.indexOf() to verify the resolved path is within the output directory: realDestinationDir.indexOf(realOutputPath) !== 0. This check is flawed because it does not enforce a path separator boundary. For example, &#34;/tmp/app_config&#34;.indexOf(&#34;/tmp/app&#34;) returns 0, incorrectly passing the check even though /tmp/app_config is outside /tmp/app. Combined with the unvalidated symlink creation in the same package, an attacker can write arbitrary files to directories adjacent to the extraction target. This is a bypass of the fix for CVE-2020-12265. The correct check requires appending a path separator: realParentPath.indexOf(realOutputPath + path.sep) !== 0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>path-traversal</category>
+      <category>rce</category>
+      <category>decompress_project</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-54695 — Pipecat is an open-source Python framework for building real-time voice and mult…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54695</link>
+      <guid isPermaLink="false">91dba1998036dc3bf197893591698dc9</guid>
+      <pubDate>Thu, 09 Jul 2026 19:17:06 +0000</pubDate>
+      <description>Pipecat is an open-source Python framework for building real-time voice and multimodal conversational agents. Prior to 1.4.0, the pipecat development runner registers a /ws WebSocket endpoint for telephony testing that accepts connections without authentication, reads an attacker-supplied callSid from a Twilio stream-start handshake in src/pipecat/runner/utils.py, and passes it to TwilioFrameSerializer so the server can issue an authenticated Twilio REST API hang-up request with the server operator&#39;s credentials; equivalent unauthenticated call-control sinks exist for Telnyx and Plivo. This issue is fixed in version 1.4.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>pipecat</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-0286 — A command injection vulnerability in the management plane of Palo Alto Networks …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0286</link>
+      <guid isPermaLink="false">b13d1324a46f8537cd5e42710e7b6f5e</guid>
+      <pubDate>Thu, 09 Jul 2026 19:17:02 +0000</pubDate>
+      <description>A command injection vulnerability in the management plane of Palo Alto Networks PAN-OS® software enables an authenticated administrator to execute arbitrary OS commands as root.&#xA;&#xA;&#xA;&#xA;The security risk posed by this issue is significantly minimized when CLI access is restricted to a limited group of administrators.&#xA;&#xA;&#xA;&#xA;This issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).&#xA;&#xA;&#xA;&#xA;Cloud NGFW and Prisma Access®  are not impacted by this vulnerability.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>paloalto</category>
+      <category>watch</category>
+      <category>paloaltonetworks</category>
+      <category>paloalto</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-0283 — An authentication bypass vulnerability in Large Scale VPN ( LSVPN) functionality…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0283</link>
+      <guid isPermaLink="false">426d20ea85342549e794f205bb85ac7b</guid>
+      <pubDate>Thu, 09 Jul 2026 19:17:00 +0000</pubDate>
+      <description>An authentication bypass vulnerability in Large Scale VPN ( LSVPN) functionality of Palo Alto Networks PAN-OS software allows an attacker with network access to bypass security restrictions and establish an unauthorized site-to-site VPN connection.&#xA;&#xA;Panorama, Cloud NGFW, and Prisma® Access are not impacted by this vulnerability.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>auth-bypass</category>
+      <category>paloalto</category>
+      <category>watch</category>
+      <category>paloaltonetworks</category>
+      <category>paloalto</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.9 CRITICAL] CVE-2026-59827 — Metabase is an open-source business intelligence and embedded analytics tool. Pr…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59827</link>
+      <guid isPermaLink="false">e7e4ce4783b7b296046495ea79d8b9e3</guid>
+      <pubDate>Thu, 09 Jul 2026 18:16:57 +0000</pubDate>
+      <description>Metabase is an open-source business intelligence and embedded analytics tool. Prior to 1.58.15, 1.59.12, 1.60.6.3, and 1.61.1.4, Metabase instances with an H2 database connection, including the default sample database, deserialize arbitrary Java objects returned in H2 native query result columns of type OTHER without validation, allowing an authenticated user who can run native H2 queries to execute code on the Metabase server. This issue is fixed in versions 1.58.15, 1.59.12, 1.60.6.3, and 1.61.1.4.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>metabase</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-55420 — Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 20…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55420</link>
+      <guid isPermaLink="false">3e6abaac1faefbc97f8c073b36dfebc4</guid>
+      <pubDate>Thu, 09 Jul 2026 18:16:54 +0000</pubDate>
+      <description>Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, under certain non-default configurations, processing of PDF uploads could be exploited to obtain RCE on the server. This issue is patched in 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>discourse</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-59209 — n8n is an open source workflow automation platform. Prior to 1.123.61, 2.27.4, a…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59209</link>
+      <guid isPermaLink="false">7848a2114e56ce7bf18683d7d41d82bc</guid>
+      <pubDate>Thu, 09 Jul 2026 17:17:01 +0000</pubDate>
+      <description>n8n is an open source workflow automation platform. Prior to 1.123.61, 2.27.4, and, 2.28.1, an authenticated member with use-only editor access to a shared workflow could read credential-populated headers exposed via the $request object inside an HTTP Request node&#39;s pagination expression and exfiltrate the secret through item data. This issue is fixed in versions 1.123.61, 2.27.4, and 2.28.1.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>n8n</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-58459 — gpsd through release-3.27.5, fixed at commit 4c06658, contains a command injecti…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58459</link>
+      <guid isPermaLink="false">297bf3ac0e249639b623f6ca11295bb8</guid>
+      <pubDate>Thu, 09 Jul 2026 17:17:01 +0000</pubDate>
+      <description>gpsd through release-3.27.5, fixed at commit 4c06658, contains a command injection vulnerability in gpsprof that allows attackers who control the GPS device subtype value to execute arbitrary shell commands by embedding backtick payloads in the gnuplot plot title without proper escaping. The subtype field sourced from a DEVICES JSON log entry or NMEA PGRMT sentence is written into a generated gnuplot program via a set title statement with only double-quote characters escaped, enabling arbitrary shell command execution as the user running gnuplot when the victim renders the generated plot through the gpsprof and gnuplot workflow.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>gpsd_project</category>
+    </item>
+    <item>
       <title>[HIGH] GigaWiper: Anatomy of a destructive backdoor assembled from multiple malware</title>
       <link>https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/</link>
       <guid isPermaLink="false">b4ba40c9698ead38b9dd90a23f3d6eac</guid>
@@ -424,6 +602,75 @@
       <category>watch</category>
       <category>0day</category>
       <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-44161 — Fluentd collects events from various data sources and writes them to files, RDBM…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44161</link>
+      <guid isPermaLink="false">931697168ef8561c9e0eb4e7e1282b8b</guid>
+      <pubDate>Wed, 08 Jul 2026 22:17:14 +0000</pubDate>
+      <description>Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, the Fluentd out_http output plugin allows placeholders such as ${tag} in the endpoint configuration parameter, and if a placeholder value is derived from untrusted input an attacker can control the destination hostname of outbound HTTP requests and force requests to arbitrary internal services. This issue is fixed in version 1.19.3.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>fluentd</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-44160 — Fluentd collects events from various data sources and writes them to files, RDBM…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44160</link>
+      <guid isPermaLink="false">0123386499a72423ebe08d74715737a1</guid>
+      <pubDate>Wed, 08 Jul 2026 22:17:14 +0000</pubDate>
+      <description>Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, Fluentd&#39;s in_http and in_forward plugins support gzip-compressed data but enforce limits only on compressed payloads through settings such as body_size_limit and chunk_size_limit, allowing crafted compressed payloads to decompress in memory to an excessive size and cause denial of service through memory exhaustion. This issue is fixed in version 1.19.3.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>fluentd</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 9.8 CRITICAL] CVE-2026-44024 — Fluentd collects events from various data sources and writes them to files, RDBM…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44024</link>
+      <guid isPermaLink="false">70cc1ea8880e825de8ddc50bb3983d91</guid>
+      <pubDate>Wed, 08 Jul 2026 22:17:14 +0000</pubDate>
+      <description>Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, Fluentd allows dynamically constructing file paths using the ${tag} placeholder, and insufficient validation of ${tag} in file configurations such as the path parameter of the out_file plugin allows attackers sending untrusted tags containing path traversal characters to write or overwrite arbitrary files and potentially achieve remote code execution. This issue is fixed in version 1.19.3.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>path-traversal</category>
+      <category>fluentd</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-35211 — OpenCTI is an open source platform for managing cyber threat intelligence knowle…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35211</link>
+      <guid isPermaLink="false">9298e8646a6328e5c8edac721133cb4f</guid>
+      <pubDate>Wed, 08 Jul 2026 21:16:48 +0000</pubDate>
+      <description>OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260401.0, the OpenCTI GraphQL API exposes a script filter operator in its FilterOperator enum that allows any authenticated user with the KNOWLEDGE capability to pass user-supplied Elasticsearch Painless script values directly into search queries without validation or sanitization, allowing computationally expensive scripts to consume cluster CPU resources and degrade or deny service for all users. This issue is fixed in version 7.260401.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>citeum</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.1 HIGH] CVE-2026-35210 — OpenCTI is an open source platform for managing cyber threat intelligence knowle…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35210</link>
+      <guid isPermaLink="false">902b0e8fb0c476d6e18778316e25e91b</guid>
+      <pubDate>Wed, 08 Jul 2026 21:16:48 +0000</pubDate>
+      <description>OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260326.0, an authorization bypass vulnerability in OpenCTI allows any authenticated user with KNOWLEDGE_KNUPDATE permission to bypass Confidence Level validation and Object Marking restrictions by injecting the synchronized-upsert: true HTTP header, enabling attackers to downgrade confidence levels, remove security markings such as TLP:RED, manipulate relationships, and affect STIX object types including Indicators, ThreatActors, Malware, and Reports. This issue is fixed in version 7.260326.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>malware</category>
+      <category>citeum</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.1 MEDIUM] CVE-2026-59890 — setuptools is a package that allows users to download, build, install, upgrade, …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59890</link>
+      <guid isPermaLink="false">b8f9e1a97bc81b71624dcf1ce4f088d7</guid>
+      <pubDate>Wed, 08 Jul 2026 17:17:27 +0000</pubDate>
+      <description>setuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. Prior to 83.0.0, FileList applied MANIFEST.in exclude, global-exclude, recursive-exclude, and prune directives by matching compiled glob patterns against on-disk file names without Unicode normalization, so on macOS APFS or HFS+ an NFD file name could bypass an NFC exclusion rule and be packed into a source distribution. This issue is fixed in version 83.0.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>python</category>
     </item>
     <item>
       <title>[HIGH] Felons, Fraudsters Flog Offensive Cybersecurity Startup</title>
@@ -651,278 +898,6 @@
       <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>high</category>
       <category>rce</category>
-    </item>
-    <item>
-      <title>[CRIT] CISA: Microsoft SharePoint RCE flaw now actively exploited</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-rce-flaw-now-actively-exploited/</link>
-      <guid isPermaLink="false">5899695822c74e1671574ed1a0b0694a</guid>
-      <pubDate>Thu, 02 Jul 2026 10:52:43 +0000</pubDate>
-      <description>CISA warned on Wednesday that attackers have begun exploiting a high-severity Microsoft SharePoint remote code execution vulnerability patched in May. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>critical</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack</title>
-      <link>https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html</link>
-      <guid isPermaLink="false">ddc7e3f75e0c81bafbe9c1bb48f95820</guid>
-      <pubDate>Thu, 02 Jul 2026 09:13:13 +0000</pubDate>
-      <description>Security firm Sysdig says it has found what it believes is the first ransomware attack run from start to finish by an AI agent. Its Threat Research Team calls the operator JADEPUFFER and says a large language model handled the whole job: breaking in, stealing credentials, moving deeper into the network, then encrypting and wiping a company&#39;s production database. Ransomware has always</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>ransomware</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-14432 — Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote at…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14432</link>
-      <guid isPermaLink="false">819a1484550e05ba5473d7a0ee25228e</guid>
-      <pubDate>Wed, 01 Jul 2026 23:16:51 +0000</pubDate>
-      <description>Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-14431 — Type Confusion in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote at…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14431</link>
-      <guid isPermaLink="false">04047d08248a490655e52725bff45592</guid>
-      <pubDate>Wed, 01 Jul 2026 23:16:51 +0000</pubDate>
-      <description>Type Confusion in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-14430 — Integer overflow in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14430</link>
-      <guid isPermaLink="false">f7668989c04a75f38bbc488b2d799f2c</guid>
-      <pubDate>Wed, 01 Jul 2026 23:16:51 +0000</pubDate>
-      <description>Integer overflow in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-14426 — Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote at…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14426</link>
-      <guid isPermaLink="false">a24d051def2ca7a95a5bfcfca2397aef</guid>
-      <pubDate>Wed, 01 Jul 2026 23:16:51 +0000</pubDate>
-      <description>Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-14409 — Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allow…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14409</link>
-      <guid isPermaLink="false">19a5551b890b78fa9951a495b96c877a</guid>
-      <pubDate>Wed, 01 Jul 2026 23:16:49 +0000</pubDate>
-      <description>Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-14407 — Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allow…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14407</link>
-      <guid isPermaLink="false">bf974194c1f811d07dd72ee4ed43fd26</guid>
-      <pubDate>Wed, 01 Jul 2026 23:16:49 +0000</pubDate>
-      <description>Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[CRIT] [CVSS 9.6 CRITICAL] CVE-2026-14405 — Uninitialized Use in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14405</link>
-      <guid isPermaLink="false">adb819a16930abcb59e6a159f36350ac</guid>
-      <pubDate>Wed, 01 Jul 2026 23:16:48 +0000</pubDate>
-      <description>Uninitialized Use in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>critical</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-14403 — Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote at…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14403</link>
-      <guid isPermaLink="false">5afb86dc7e63a1089ff3b4d8e676e2b3</guid>
-      <pubDate>Wed, 01 Jul 2026 23:16:48 +0000</pubDate>
-      <description>Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-14395 — Out of bounds write in V8 in Google Chrome prior to 150.0.7871.46 allowed a remo…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14395</link>
-      <guid isPermaLink="false">151d5645d61fb534cbfee8e49bb5b189</guid>
-      <pubDate>Wed, 01 Jul 2026 23:16:47 +0000</pubDate>
-      <description>Out of bounds write in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-14393 — Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote at…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14393</link>
-      <guid isPermaLink="false">d674a6407dedb7e110f0c01f5ec860e7</guid>
-      <pubDate>Wed, 01 Jul 2026 23:16:47 +0000</pubDate>
-      <description>Use after free in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-14383 — Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allow…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14383</link>
-      <guid isPermaLink="false">ff9ffd4ccc188910dbe668ad7a25b138</guid>
-      <pubDate>Wed, 01 Jul 2026 23:16:46 +0000</pubDate>
-      <description>Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.46 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Medium)</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] FortiBleed credential-theft campaign linked to Lynx ransomware</title>
-      <link>https://www.bleepingcomputer.com/news/security/fortibleed-credential-theft-campaign-linked-to-lynx-ransomware/</link>
-      <guid isPermaLink="false">5e3cf06e8071a3daeb84f636f1880edb</guid>
-      <pubDate>Wed, 01 Jul 2026 21:37:24 +0000</pubDate>
-      <description>The massive FortiBleed credential theft campaign has been linked to the INC and Lynx ransomware operations, suggesting the stolen Fortinet credentials were intended to fuel future network intrusions. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>ransomware</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-46680 — containerd is an open-source container runtime. In versions prior to 1.7.32, 2.0…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46680</link>
-      <guid isPermaLink="false">b7ffabd812af19c8b76c3baa268f9c86</guid>
-      <pubDate>Wed, 01 Jul 2026 18:16:32 +0000</pubDate>
-      <description>containerd is an open-source container runtime. In versions prior to 1.7.32, 2.0.9, 2.2.4 and 2.3.1, containers launched with a numeric User directive that cannot be parsed as a 32-bit integer are incorrectly treated as a username, leading to runAsNonRoot evasion. If a crafted image provides an /etc/passwd file mapping this large numeric string to root, the container ultimately runs as root (UID 0). This allows the Kubernetes runAsNonRoot restriction to be bypassed, causing unexpected behavior for environments that require containers to run as a non-root user. This issue has been fixed in versions 1.7.32, 2.0.9, 2.2.4 and 2.3.1.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>kubernetes</category>
-      <category>rce</category>
-      <category>linuxfoundation</category>
-      <category>kubernetes</category>
-    </item>
-    <item>
-      <title>[HIGH] Phantom Squatting Uses AI-Hallucinated Domains for Phishing and Malware</title>
-      <link>https://thehackernews.com/2026/07/phantom-squatting-uses-ai-hallucinated.html</link>
-      <guid isPermaLink="false">db9931708d543ada98ea20f0ad05cc0b</guid>
-      <pubDate>Wed, 01 Jul 2026 07:20:51 +0000</pubDate>
-      <description>Large language models keep inventing web addresses that do not exist. Attackers have started buying those made-up domains before anyone else can, then hosting phishing pages on them to catch traffic that AI tools point their way. Palo Alto Networks&#39; Unit 42 calls the trick phantom squatting, and its new research shows it is already happening in the wild. The reason it matters is</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>paloalto</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>malware</category>
-      <category>paloalto</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-53488 — containerd is an open-source container runtime. In versions prior to 1.7.33, 2.3…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-53488</link>
-      <guid isPermaLink="false">474f29163f2c62784f3d527c53dca5da</guid>
-      <pubDate>Wed, 01 Jul 2026 02:17:00 +0000</pubDate>
-      <description>containerd is an open-source container runtime. In versions prior to 1.7.33, 2.3.2, 2.2.5, 2.1.9, and 2.0.10 the CRI plugin propagates labels from an image config (LABEL instruction in Dockerfile) to a container without validation. This may result in executing an arbitrary command on the host, via a plugin that consumes container labels for some operations. This issue has been fixed in versions 1.7.33, 2.3.2, 2.2.5, 2.1.9, and 2.0.10.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>docker</category>
-      <category>rce</category>
-      <category>linuxfoundation</category>
-      <category>docker</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-45659 — Microsoft SharePoint Server: Microsoft SharePoint Server Deserialization of Untrusted Data Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45659</link>
-      <guid isPermaLink="false">fd98b0a04769f5b6df90ac3e0a72e1df</guid>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Microsoft SharePoint Server contains a deserialization of untrusted data vulnerability which allows an authorized attacker to execute code over a network.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-04</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-45659 — Microsoft SharePoint Server: Microsoft SharePoint Server Deserialization of Untrusted Data Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45659</link>
-      <guid isPermaLink="false">fd98b0a04769f5b6df90ac3e0a72e1df</guid>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Microsoft SharePoint Server contains a deserialization of untrusted data vulnerability which allows an authorized attacker to execute code over a network.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-04</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-13759 — IBM WebSphere Extreme Scale 8.6.1.0 through 8.6.1.6 ships three ObjectInputStrea…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13759</link>
-      <guid isPermaLink="false">55afc6e8443ab7ab48c7a5253e27dab1</guid>
-      <pubDate>Tue, 30 Jun 2026 20:17:28 +0000</pubDate>
-      <description>IBM WebSphere Extreme Scale 8.6.1.0 through 8.6.1.6 ships three ObjectInputStream subclasses (WsObjectInputStream, ObjectStreamPool$ReusableInputStream, ObjectInputStreamResolver) that install no JEP-290 class filter; when Coherence is on the classpath, multiple RCE gadget chains including RemoteConstructor.readResolve and PriorityQueue/ExtractorComparator are confirmed working, allowing a post-login attacker who can write a session attribute or a LAN-adjacent attacker on the grid replication wire to execute arbitrary code on peer WAS JVMs</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>ibm</category>
     </item>
   </channel>
 </rss>

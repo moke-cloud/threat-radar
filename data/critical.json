@@ -1,5 +1,249 @@
 [
   {
+    "id": "69ec2b84741933ac39b9cd482d15f57d",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Patch Tuesday - July 2026",
+    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026",
+    "summary": "Microsoft is publishing 622 vulnerabilities on July 2026 Patch Tuesday, including a record-breaking 416 Windows vulnerabilities. Microsoft is aware of exploitation in the wild for two of the vulnerabilities published today, both of which are listed on CISA KEV, as well as public disclosure for one other. As usual, browser vulns are not included in the Patch Tuesday count above. Rapid7 noted last month that Microsoft no longer enumerates Chromium CVEs in the Security Update Guide. However, Microsoft has now taken the pursuit of minimalism much further, since today’s Security Update Guide no l...",
+    "published": "2026-07-14T22:00:26Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "chrome",
+      "microsoft",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 71,
+    "vendors": [
+      "chrome",
+      "microsoft"
+    ]
+  },
+  {
+    "id": "cb33d8512afef95614fdf14a96b4ecb0",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "SonicWall warns of SMA1000 flaws exploited in zero-day attacks, patch now",
+    "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/",
+    "summary": "SonicWall warns that threat actors have been exploiting two SMA1000 vulnerabilities, tracked as CVE-2026-15409 and CVE-2026-15410, in zero-day attacks and urges customers to install the newly released security updates. [...]",
+    "published": "2026-07-14T21:23:24Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67,
+    "cves": [
+      "CVE-2026-15409",
+      "CVE-2026-15410"
+    ]
+  },
+  {
+    "id": "2ef5e198979967b5bfcb6b197dfccf17",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Microsoft Patches Record 622 Flaws, Including Two Zero-Days Under Active Attack",
+    "url": "https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html",
+    "summary": "Microsoft shipped its largest Patch Tuesday on record today, and two of the fixes close holes that attackers are already exploiting. The release covers 622 of Microsoft's own CVEs by its Security Update Guide count, more than triple June's previous high of around 200. Those two live bugs are the ones to grab first. Microsoft credits incident responders for both. Both are",
+    "published": "2026-07-14T20:25:47Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "1c86471976f201f6ab49dc7e22b91fab",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Microsoft July 2026 Patch Tuesday fixes massive 570 flaws, 3 zero-days",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/",
+    "summary": "Today is Microsoft's July 2026 Patch Tuesday, and with it comes security updates for a record-breaking 570 flaws, including two zero-day vulnerabilities exploited in attacks and one publicly disclosed. [...]",
+    "published": "2026-07-14T18:01:36Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "cb1dfb8ebeacea36e91192831d428cd3",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Progress confirms ShareFile zero-day flaw behind Storage Zone shutdown",
+    "url": "https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/",
+    "summary": "Progress Software has confirmed that a high-severity zero-day vulnerability is behind the emergency shutdown of ShareFile Storage Zone Controllers last week and has released security updates to patch the flaw. [...]",
+    "published": "2026-07-14T16:08:47Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "afa3af73588c3bea60b88f5bb4127227",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "CVE-2026-55040: Microsoft SharePoint JWT Token Authentication Bypass (FIXED)",
+    "url": "https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed",
+    "summary": "OverviewRapid7 Labs conducted a zero-day research project against Microsoft SharePoint, resulting in the discovery of two new vulnerabilities that, when chained together, achieve unauthenticated remote code execution (RCE) against a vulnerable SharePoint server. Today, both Rapid7 and Microsoft are disclosing the first vulnerability in this chain, the authentication bypass vulnerability CVE-2026-55040. The RCE component of the exploit chain is expected to be patched by Microsoft in the next update cycle for August 2026. The exploit chain was developed as an entry for the recent Pwn2Own Berlin ...",
+    "published": "2026-07-14T13:00:00Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce",
+      "auth-bypass",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 91,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-55040"
+    ]
+  },
+  {
+    "id": "d28f09074225c2e12f3d8faa7b5c9ef5",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-56155 — Microsoft Active Directory Federation Services: Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56155",
+    "summary": "Microsoft Active Directory Federation Services contains an insufficient granularity of access control vulnerability that allows an authorized attacker to elevate privileges locally.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-28",
+    "published": "2026-07-14T00:00:00Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-56155"
+    ]
+  },
+  {
+    "id": "637bdd03782a44f1d3e0f3e4999593a7",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-56164 — Microsoft SharePoint Server: Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56164",
+    "summary": "Microsoft SharePoint contains a missing authentication for critical function vulnerability that allows an unauthorized attacker to elevate privileges over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-17",
+    "published": "2026-07-14T00:00:00Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-56164"
+    ]
+  },
+  {
+    "id": "a45b27bf20b2330862bea291e7c0a743",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-15409 — SonicWall SMA1000 Appliances: SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15409",
+    "summary": "SonicWall SMA1000 Appliances contain a server-side request forgery vulnerability that could allow a remote unauthenticated attacker to potentially cause the appliance to make requests to unintended location.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-17",
+    "published": "2026-07-14T00:00:00Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "sonicwall"
+    ],
+    "cves": [
+      "CVE-2026-15409"
+    ]
+  },
+  {
+    "id": "94f9f05b61b4aac25cc75c1cc5209421",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-15410 — SonicWall SMA1000 Appliances: SonicWall SMA1000 Appliances Code Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15410",
+    "summary": "SonicWall SMA1000 Appliances contain a code injection vulnerability which in specific conditions could potentially enable a remote authenticated attacker as administrator to execute arbitrary OS commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-17",
+    "published": "2026-07-14T00:00:00Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "sonicwall"
+    ],
+    "cves": [
+      "CVE-2026-15410"
+    ]
+  },
+  {
+    "id": "060b15cf70ed0ac886dfd18de1c91e5c",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "Defending SaaS-based applications against ShinyHunters OAuth abuse",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/07/13/defending-saas-based-applications-against-shinyhunters-oauth-abuse/",
+    "summary": "Microsoft Threat Intelligence identified threat actor activity with overlapping tradecraft commonly associated with ShinyHunters, including voice phishing (vishing), supply-chain compromise, and misconfigured guest access targeting SaaS-based applications. The post Defending SaaS-based applications against ShinyHunters OAuth abuse appeared first on Microsoft Security Blog.",
+    "published": "2026-07-13T22:02:41Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "supply-chain"
+    ],
+    "severity": "high",
+    "score": 76,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
     "id": "b16dd42087ecdded17b1cba74c0b7de1",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1428,6 +1672,102 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48908",
     "summary": "JoomShaper SP Page Builder contains an unrestricted upload of file with dangerous type vulnerability that allows unauthenticated users to upload arbitrary files, ultimately resulting in the upload and execution of PHP code.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-10",
     "published": "2026-07-07T00:00:00Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "joomshaper"
+    ],
+    "cves": [
+      "CVE-2026-48908"
+    ]
+  },
+  {
+    "id": "e1d4258fd7cb23ba6dc17503cfb0a4d4",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-55255 — Langflow Langflow: Langflow Authorization Bypass Through User-Controlled Key Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55255",
+    "summary": "Langflow contains an authorization bypass through user-controlled key vulnerability which allows an authenticated attacker to execute any flow belonging to another user by specifying the victim's flow ID in the request.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-10",
+    "published": "2026-07-07T00:00:00Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "langflow"
+    ],
+    "cves": [
+      "CVE-2026-55255"
+    ]
+  },
+  {
+    "id": "45a07d73d54f76010d75896e812c1e41",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-56290 — Joomlack Page Builder: Joomlack Page Builder Improper Access Control Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56290",
+    "summary": "Joomlack Page Builder contains an improper access control vulnerability that could allow for remote code execution via unauthenticated arbitrary file upload.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-10",
+    "published": "2026-07-07T00:00:00Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "joomlack"
+    ],
+    "cves": [
+      "CVE-2026-56290"
+    ]
+  },
+  {
+    "id": "5482120e9ed5334ec53e118bd5fb4b7d",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48282 — Adobe ColdFusion: Adobe ColdFusion Path Traversal Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48282",
+    "summary": "Adobe ColdFusion contains a path traversal vulnerability that could lead to arbitrary code execution in the context of the current user.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-10",
+    "published": "2026-07-07T00:00:00Z",
+    "fetched": "2026-07-14T22:30:31.287981674Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "adobe",
+      "rce",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "adobe"
+    ],
+    "cves": [
+      "CVE-2026-48282"
+    ]
+  },
+  {
+    "id": "55c8ddbf9c977474374b48b912fd159c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48908 — JoomShaper SP Page Builder: JoomShaper SP Page Builder Unrestricted Upload of File with Dangerous Type Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48908",
+    "summary": "JoomShaper SP Page Builder contains an unrestricted upload of file with dangerous type vulnerability that allows unauthenticated users to upload arbitrary files, ultimately resulting in the upload and execution of PHP code.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-10",
+    "published": "2026-07-07T00:00:00Z",
     "fetched": "2026-07-07T22:36:56.48685077Z",
     "tags": [
       "kev",
@@ -1555,82 +1895,6 @@
     "score": 61,
     "vendors": [
       "microsoft"
-    ]
-  },
-  {
-    "id": "d3aa827e06a30990d74adefc5d8d974d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-13383 — An Out-of-bounds Write vulnerability in WatchGuard Fireware OS ikestubd process could allow an authe…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13383",
-    "summary": "An Out-of-bounds Write vulnerability in WatchGuard Fireware OS ikestubd process could allow an authenticated privileged user to execute arbitrary code via a specially crafted requests to the Management Web UI.This vulnerability affects Fireware OS 12.1 up to and including 12.12 and 2025.1 up to and including 2026.2.",
-    "published": "2026-07-03T00:16:51.773Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-13383"
-    ]
-  },
-  {
-    "id": "b246ac360b6568289ac89b483469d615",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-13368 — WatchGuard Fireware OS contains a race condition leading to a use-after-free vulnerability in LDAP a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13368",
-    "summary": "WatchGuard Fireware OS contains a race condition leading to a use-after-free vulnerability in LDAP authentication for the Mobile User VPN with IKEv2. A remote unauthenticated attacker could exploit this vulnerability to execute arbitrary code in the context of the iked process on Fireboxes that have a Mobile VPN with IKEv2 configured to use an external LDAP authentication server.\n\nThis vulnerability affects Fireware OS 11.0 up to and including 11.12.4_Update1, 12.0 up to and including 12.12 and 2025.1 up to and including 2026.2.",
-    "published": "2026-07-03T00:16:50.89Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-13368"
-    ]
-  },
-  {
-    "id": "a3e10ef3e8fccb423788113755e71245",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-13053 — An Out-of-bounds Write vulnerability in WatchGuard Fireware OS's CLI could allow an authenticated pr…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13053",
-    "summary": "An Out-of-bounds Write vulnerability in WatchGuard Fireware OS's CLI could allow an authenticated privileged user to execute arbitrary code via a specially crafted CLI command.\n\nThis vulnerability affects Fireware OS 11.0 up to and including 11.12.4_Update1, 12.0 up to and including 12.12 and 2025.1 up to and including 2026.2.",
-    "published": "2026-07-03T00:16:50.32Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-13053"
-    ]
-  },
-  {
-    "id": "5e78ebe8a2f7a04c5f95c41d9e4b5be2",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-13050 — An Out-of-bounds Write vulnerability in WatchGuard Fireware OS networkd process could allow an authe…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13050",
-    "summary": "An Out-of-bounds Write vulnerability in WatchGuard Fireware OS networkd process could allow an authenticated privileged user to execute arbitrary code via a specially crafted requests to the Management Web UI.This vulnerability affects Fireware OS 11.8 up to and including 11.12.4_Update1, 12.0 up to and including 12.12 and 2025.1 up to and including 2026.2.",
-    "published": "2026-07-03T00:16:49.333Z",
-    "fetched": "2026-07-04T22:27:37.687425383Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-13050"
     ]
   }
 ]

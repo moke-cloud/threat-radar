@@ -1,5 +1,118 @@
 [
   {
+    "id": "39f258feb962f128de825a2c3a5f64fe",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "CVE-2026-58644: Microsoft SharePoint Server Unauthenticated Remote Code Execution Vulnerability Exploited in the Wild",
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-58644-microsoft-sharepoint-server-unauthenticated-remote-code-execution-vulnerability-exploited-in-the-wild",
+    "summary": "OverviewOn July 14, 2026, Microsoft published a security advisory addressing CVE-2026-58644, a critical remote code execution (RCE) vulnerability affecting on-premises Microsoft SharePoint Server deployments. The vulnerability, which carries a CVSS v3.1 score of 9.8 (Critical), results from the deserialization of untrusted data (CWE-502) and allows an unauthenticated attacker to execute arbitrary code.Microsoft confirmed active exploitation of CVE-2026-58644, and the vulnerability was subsequently added to CISA’s Known Exploited Vulnerabilities (KEV) catalog on July 16, 2026. In parallel, CI...",
+    "published": "2026-07-17T18:18:53Z",
+    "fetched": "2026-07-17T22:22:02.395688736Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 91,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-58644"
+    ]
+  },
+  {
+    "id": "36abb2ab766f89dba33e6733eef284e4",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "Microsoft at Black Hat USA 2026: Defending trust in the age of AI and supply chain attacks",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/07/17/microsoft-at-black-hat-usa-2026-defending-trust-in-the-age-of-ai-and-supply-chain-attacks/",
+    "summary": "Join Microsoft Security at Black Hat USA 2026 for supply chain research, hands-on security experiences, expert conversations, and our reception. The post Microsoft at Black Hat USA 2026: Defending trust in the age of AI and supply chain attacks appeared first on Microsoft Security Blog.",
+    "published": "2026-07-17T16:00:00Z",
+    "fetched": "2026-07-17T22:22:02.395688736Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "supply-chain"
+    ],
+    "severity": "high",
+    "score": 76,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "fa5285e80e0db2cdf197650b869e1ad4",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "New Windows LegacyHive zero-day gives hackers admin privileges",
+    "url": "https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/",
+    "summary": "A security researcher using the \"Nightmare Eclipse\" handle has released a Windows zero-day exploit dubbed LegacyHive that allows attackers to escalate privileges on up-to-date Windows systems. [...]",
+    "published": "2026-07-17T11:05:30Z",
+    "fetched": "2026-07-17T22:22:02.395688736Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "4b5bf05e065eff53d83e36f4b58bd37a",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA urges immediate action on actively exploited Fortinet flaws",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-feds-to-patch-exploited-fortinet-fortisandbox-flaws-by-sunday/",
+    "summary": "CISA on Thursday ordered government agencies to prioritize patching two actively exploited vulnerabilities in the Fortinet FortiSandbox threat detection platform. [...]",
+    "published": "2026-07-17T07:03:33Z",
+    "fetched": "2026-07-17T22:22:02.395688736Z",
+    "tags": [
+      "fortinet",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "fortinet"
+    ]
+  },
+  {
+    "id": "ffabe375f2eeb246e52e85da5d9110b6",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "CISA Adds Exploited SharePoint RCE Zero-Day CVE-2026-58644 to KEV",
+    "url": "https://thehackernews.com/2026/07/cisa-adds-exploited-sharepoint-rce-zero.html",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added a newly patched security flaw impacting Microsoft SharePoint Server to its Known Exploited Vulnerabilities (KEV) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to apply the fixes by July 19, 2026. The vulnerability in question is CVE-2026-58644 (CVSS score: 9.8), a critical deserialization",
+    "published": "2026-07-17T06:42:23Z",
+    "fetched": "2026-07-17T22:22:02.395688736Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 88,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-58644"
+    ]
+  },
+  {
     "id": "82b054ea120f2684711a34b2013a8a0e",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1256,6 +1369,29 @@
     ]
   },
   {
+    "id": "3bfaf5236d29ac4925c28c3fdba4badf",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-56688 — Dell PowerFlex Manager, Version prior to 5.1.0.1, contain(s) an Improper Neutral…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56688",
+    "summary": "Dell PowerFlex Manager, Version prior to 5.1.0.1, contain(s) an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability during OS Repository processing to achieve arbitrary command execution as root, potentially leading to full appliance compromise and lateral movement into managed infrastructure.",
+    "published": "2026-07-10T12:17:23.453Z",
+    "fetched": "2026-07-17T22:22:02.395688736Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "dell"
+    ],
+    "cves": [
+      "CVE-2026-56688"
+    ]
+  },
+  {
     "id": "d83aba343fe99cbc2fdfa06726af1a3d",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -1329,6 +1465,52 @@
     "score": 60,
     "cves": [
       "CVE-2026-21042"
+    ]
+  },
+  {
+    "id": "d70f7ca083eba12c7334de5885e83439",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-56291 — Balbooa Forms: Balbooa Forms Unrestricted Upload of File with Dangerous Type Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56291",
+    "summary": "Balbooa Forms contains an unrestricted upload of file with dangerous type vulnerability that allows an unauthenticated arbitrary file upload which could allow uploading of executable files leading to full RCE.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-13",
+    "published": "2026-07-10T00:00:00Z",
+    "fetched": "2026-07-17T22:22:02.395688736Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "balbooa"
+    ],
+    "cves": [
+      "CVE-2026-56291"
+    ]
+  },
+  {
+    "id": "e393ca8a5ccf66f69bb5955c175178af",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48939 — iCagenda iCagenda: iCagenda Unrestricted Upload of File with Dangerous Type Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48939",
+    "summary": "iCagenda contains an unrestricted upload of file with dangerous type vulnerability that allows the upload of arbitrary files in the file attachment feature, ultimately resulting in PHP code upload and execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-13",
+    "published": "2026-07-10T00:00:00Z",
+    "fetched": "2026-07-17T22:22:02.395688736Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "icagenda"
+    ],
+    "cves": [
+      "CVE-2026-48939"
     ]
   },
   {
@@ -1730,97 +1912,6 @@
     ],
     "cves": [
       "CVE-2026-44160"
-    ]
-  },
-  {
-    "id": "70cc1ea8880e825de8ddc50bb3983d91",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-44024 — Fluentd collects events from various data sources and writes them to files, RDBM…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44024",
-    "summary": "Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, Fluentd allows dynamically constructing file paths using the ${tag} placeholder, and insufficient validation of ${tag} in file configurations such as the path parameter of the out_file plugin allows attackers sending untrusted tags containing path traversal characters to write or overwrite arbitrary files and potentially achieve remote code execution. This issue is fixed in version 1.19.3.",
-    "published": "2026-07-08T22:17:14.337Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 83,
-    "vendors": [
-      "fluentd"
-    ],
-    "cves": [
-      "CVE-2026-44024"
-    ]
-  },
-  {
-    "id": "9298e8646a6328e5c8edac721133cb4f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-35211 — OpenCTI is an open source platform for managing cyber threat intelligence knowle…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35211",
-    "summary": "OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260401.0, the OpenCTI GraphQL API exposes a script filter operator in its FilterOperator enum that allows any authenticated user with the KNOWLEDGE capability to pass user-supplied Elasticsearch Painless script values directly into search queries without validation or sanitization, allowing computationally expensive scripts to consume cluster CPU resources and degrade or deny service for all users. This issue is fixed in version 7.260401.0.",
-    "published": "2026-07-08T21:16:48.63Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "citeum"
-    ],
-    "cves": [
-      "CVE-2026-35211"
-    ]
-  },
-  {
-    "id": "902b0e8fb0c476d6e18778316e25e91b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.1 HIGH] CVE-2026-35210 — OpenCTI is an open source platform for managing cyber threat intelligence knowle…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35210",
-    "summary": "OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260326.0, an authorization bypass vulnerability in OpenCTI allows any authenticated user with KNOWLEDGE_KNUPDATE permission to bypass Confidence Level validation and Object Marking restrictions by injecting the synchronized-upsert: true HTTP header, enabling attackers to downgrade confidence levels, remove security markings such as TLP:RED, manipulate relationships, and affect STIX object types including Indicators, ThreatActors, Malware, and Reports. This issue is fixed in version 7.260326.0.",
-    "published": "2026-07-08T21:16:48.487Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "rce",
-      "malware"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "citeum"
-    ],
-    "cves": [
-      "CVE-2026-35210"
-    ]
-  },
-  {
-    "id": "b8f9e1a97bc81b71624dcf1ce4f088d7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.1 MEDIUM] CVE-2026-59890 — setuptools is a package that allows users to download, build, install, upgrade, …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59890",
-    "summary": "setuptools is a package that allows users to download, build, install, upgrade, and uninstall Python packages. Prior to 83.0.0, FileList applied MANIFEST.in exclude, global-exclude, recursive-exclude, and prune directives by matching compiled glob patterns against on-disk file names without Unicode normalization, so on macOS APFS or HFS+ an NFD file name could bypass an NFC exclusion rule and be packed into a source distribution. This issue is fixed in version 83.0.0.",
-    "published": "2026-07-08T17:17:27.02Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "python"
-    ],
-    "cves": [
-      "CVE-2026-59890"
     ]
   }
 ]

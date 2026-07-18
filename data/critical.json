@@ -1,5 +1,52 @@
 [
   {
+    "id": "ac42ba64c055d01cb31215e0c8bf3011",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "WordPress Core \"wp2shell\" RCE flaws get public exploits, patch now",
+    "url": "https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/",
+    "summary": "Public exploits have been released for the critical \"wp2shell\" remote code execution vulnerabilities affecting WordPress Core, making it imperative that administrators patch their sites immediately. [...]",
+    "published": "2026-07-18T17:22:47Z",
+    "fetched": "2026-07-18T22:23:25.816052509Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "wordpress"
+    ]
+  },
+  {
+    "id": "9963c66772bfd168ce22356ec6298c41",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "CVE-2026-63030: wp2shell a Critical Remote Code Execution Vulnerability in WordPress Core",
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-63030-wp2shell-a-critical-remote-code-execution-vulnerability-in-wordpress-core",
+    "summary": "OverviewOn July 17, 2026, a GitHub Security Advisory was published for CVE-2026-63030, a critical unauthenticated remote code execution vulnerability affecting WordPress Core. While the official GitHub security advisory classifies the severity as Critical, the vulnerability has currently been assigned a CVSS score of 7.5. WordPress is one of the most widely deployed content management systems, making vulnerabilities in its core software potentially significant for organizations operating public-facing websites. The vulnerability reportedly allows an unauthenticated attacker to execute code via...",
+    "published": "2026-07-17T22:23:03Z",
+    "fetched": "2026-07-18T22:23:25.816052509Z",
+    "tags": [
+      "github",
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "github",
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-63030"
+    ]
+  },
+  {
     "id": "39f258feb962f128de825a2c3a5f64fe",
     "source": "rapid7",
     "source_name": "Rapid7 Blog",
@@ -494,6 +541,174 @@
     ]
   },
   {
+    "id": "adea70d4f185f0df8673f6518704e9f7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.6 CRITICAL] CVE-2026-48259 — Adobe Experience Manager is affected by a Server-Side Request Forgery (SSRF) vul…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48259",
+    "summary": "Adobe Experience Manager is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could leverage this vulnerability to issue unauthorized server-side requests, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "published": "2026-07-14T20:17:06.697Z",
+    "fetched": "2026-07-18T22:23:25.816052509Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "adobe"
+    ],
+    "severity": "high",
+    "score": 75,
+    "vendors": [
+      "adobe"
+    ],
+    "cves": [
+      "CVE-2026-48259"
+    ]
+  },
+  {
+    "id": "e0644952bba4e237ed8ec81b2a264687",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-58628 — Concurrent execution using shared resource with improper synchronization ('race …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58628",
+    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Wireless Networking allows an authorized attacker to elevate privileges locally.",
+    "published": "2026-07-14T18:18:44.953Z",
+    "fetched": "2026-07-18T22:23:25.816052509Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-58628"
+    ]
+  },
+  {
+    "id": "3d407c3a656c5391ce603741ddf660d7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-58627 — Uncontrolled resource consumption in Windows DHCP Server allows an unauthorized …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58627",
+    "summary": "Uncontrolled resource consumption in Windows DHCP Server allows an unauthorized attacker to deny service over a network.",
+    "published": "2026-07-14T18:18:44.79Z",
+    "fetched": "2026-07-18T22:23:25.816052509Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-58627"
+    ]
+  },
+  {
+    "id": "ea7cd51bbd89f0cfa83b5ffecfa0a2af",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.5 MEDIUM] CVE-2026-57084 — Use of uninitialized resource in Windows File Explorer allows an unauthorized at…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57084",
+    "summary": "Use of uninitialized resource in Windows File Explorer allows an unauthorized attacker to disclose information locally.",
+    "published": "2026-07-14T18:18:32.52Z",
+    "fetched": "2026-07-18T22:23:25.816052509Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-57084"
+    ]
+  },
+  {
+    "id": "d711a0dfa9e8526c3050ef478ff144c4",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.5 MEDIUM] CVE-2026-57083 — Use of uninitialized resource in Microsoft Windows Codecs Library allows an unau…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57083",
+    "summary": "Use of uninitialized resource in Microsoft Windows Codecs Library allows an unauthorized attacker to disclose information locally.",
+    "published": "2026-07-14T18:18:32.323Z",
+    "fetched": "2026-07-18T22:23:25.816052509Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-57083"
+    ]
+  },
+  {
+    "id": "b78c7811d003f2efe3802ae4883d0e2e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.9 MEDIUM] CVE-2026-56649 — Concurrent execution using shared resource with improper synchronization ('race …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56649",
+    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Network File System allows an unauthorized attacker to execute code over a network.",
+    "published": "2026-07-14T18:18:31.913Z",
+    "fetched": "2026-07-18T22:23:25.816052509Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-56649"
+    ]
+  },
+  {
+    "id": "6badd3db78657fadaa516a88dc0ab0d7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-50321 — Concurrent execution using shared resource with improper synchronization ('race …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50321",
+    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows USB Driver allows an authorized attacker to elevate privileges locally.",
+    "published": "2026-07-14T18:17:30.903Z",
+    "fetched": "2026-07-18T22:23:25.816052509Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-50321"
+    ]
+  },
+  {
     "id": "1c86471976f201f6ab49dc7e22b91fab",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -512,6 +727,30 @@
     "score": 77,
     "vendors": [
       "microsoft"
+    ]
+  },
+  {
+    "id": "b3db4a9f602a060b816980152017e320",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-58635 — Improper neutralization of special elements used in a command ('command injectio…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58635",
+    "summary": "Improper neutralization of special elements used in a command ('command injection') in Windows Narrator Braille allows an authorized attacker to elevate privileges locally.",
+    "published": "2026-07-14T17:17:13.833Z",
+    "fetched": "2026-07-18T22:23:25.816052509Z",
+    "tags": [
+      "rce",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-58635"
     ]
   },
   {
@@ -1647,271 +1886,6 @@
     "cves": [
       "CVE-2026-39245",
       "CVE-2020-12265"
-    ]
-  },
-  {
-    "id": "91dba1998036dc3bf197893591698dc9",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-54695 — Pipecat is an open-source Python framework for building real-time voice and mult…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54695",
-    "summary": "Pipecat is an open-source Python framework for building real-time voice and multimodal conversational agents. Prior to 1.4.0, the pipecat development runner registers a /ws WebSocket endpoint for telephony testing that accepts connections without authentication, reads an attacker-supplied callSid from a Twilio stream-start handshake in src/pipecat/runner/utils.py, and passes it to TwilioFrameSerializer so the server can issue an authenticated Twilio REST API hang-up request with the server operator's credentials; equivalent unauthenticated call-control sinks exist for Telnyx and Plivo. This issue is fixed in version 1.4.0.",
-    "published": "2026-07-09T19:17:06.54Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "pipecat"
-    ],
-    "cves": [
-      "CVE-2026-54695"
-    ]
-  },
-  {
-    "id": "b13d1324a46f8537cd5e42710e7b6f5e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.2 HIGH] CVE-2026-0286 — A command injection vulnerability in the management plane of Palo Alto Networks …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0286",
-    "summary": "A command injection vulnerability in the management plane of Palo Alto Networks PAN-OS® software enables an authenticated administrator to execute arbitrary OS commands as root.\n\n\n\nThe security risk posed by this issue is significantly minimized when CLI access is restricted to a limited group of administrators.\n\n\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\n\n\nCloud NGFW and Prisma Access®  are not impacted by this vulnerability.",
-    "published": "2026-07-09T19:17:02.227Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "rce",
-      "paloalto",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "paloaltonetworks",
-      "paloalto"
-    ],
-    "cves": [
-      "CVE-2026-0286"
-    ]
-  },
-  {
-    "id": "426d20ea85342549e794f205bb85ac7b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.2 HIGH] CVE-2026-0283 — An authentication bypass vulnerability in Large Scale VPN ( LSVPN) functionality…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0283",
-    "summary": "An authentication bypass vulnerability in Large Scale VPN ( LSVPN) functionality of Palo Alto Networks PAN-OS software allows an attacker with network access to bypass security restrictions and establish an unauthorized site-to-site VPN connection.\n\nPanorama, Cloud NGFW, and Prisma® Access are not impacted by this vulnerability.",
-    "published": "2026-07-09T19:17:00.593Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "auth-bypass",
-      "paloalto",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "paloaltonetworks",
-      "paloalto"
-    ],
-    "cves": [
-      "CVE-2026-0283"
-    ]
-  },
-  {
-    "id": "e7e4ce4783b7b296046495ea79d8b9e3",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-59827 — Metabase is an open-source business intelligence and embedded analytics tool. Pr…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59827",
-    "summary": "Metabase is an open-source business intelligence and embedded analytics tool. Prior to 1.58.15, 1.59.12, 1.60.6.3, and 1.61.1.4, Metabase instances with an H2 database connection, including the default sample database, deserialize arbitrary Java objects returned in H2 native query result columns of type OTHER without validation, allowing an authenticated user who can run native H2 queries to execute code on the Metabase server. This issue is fixed in versions 1.58.15, 1.59.12, 1.60.6.3, and 1.61.1.4.",
-    "published": "2026-07-09T18:16:57.893Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "metabase"
-    ],
-    "cves": [
-      "CVE-2026-59827"
-    ]
-  },
-  {
-    "id": "3e6abaac1faefbc97f8c073b36dfebc4",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-55420 — Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 20…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55420",
-    "summary": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, under certain non-default configurations, processing of PDF uploads could be exploited to obtain RCE on the server. This issue is patched in 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.",
-    "published": "2026-07-09T18:16:54.44Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "discourse"
-    ],
-    "cves": [
-      "CVE-2026-55420"
-    ]
-  },
-  {
-    "id": "7848a2114e56ce7bf18683d7d41d82bc",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-59209 — n8n is an open source workflow automation platform. Prior to 1.123.61, 2.27.4, a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59209",
-    "summary": "n8n is an open source workflow automation platform. Prior to 1.123.61, 2.27.4, and, 2.28.1, an authenticated member with use-only editor access to a shared workflow could read credential-populated headers exposed via the $request object inside an HTTP Request node's pagination expression and exfiltrate the secret through item data. This issue is fixed in versions 1.123.61, 2.27.4, and 2.28.1.",
-    "published": "2026-07-09T17:17:01.78Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "n8n"
-    ],
-    "cves": [
-      "CVE-2026-59209"
-    ]
-  },
-  {
-    "id": "297bf3ac0e249639b623f6ca11295bb8",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-58459 — gpsd through release-3.27.5, fixed at commit 4c06658, contains a command injecti…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58459",
-    "summary": "gpsd through release-3.27.5, fixed at commit 4c06658, contains a command injection vulnerability in gpsprof that allows attackers who control the GPS device subtype value to execute arbitrary shell commands by embedding backtick payloads in the gnuplot plot title without proper escaping. The subtype field sourced from a DEVICES JSON log entry or NMEA PGRMT sentence is written into a generated gnuplot program via a set title statement with only double-quote characters escaped, enabling arbitrary shell command execution as the user running gnuplot when the victim renders the generated plot through the gpsprof and gnuplot workflow.",
-    "published": "2026-07-09T17:17:01.493Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "gpsd_project"
-    ],
-    "cves": [
-      "CVE-2026-58459"
-    ]
-  },
-  {
-    "id": "b4ba40c9698ead38b9dd90a23f3d6eac",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "GigaWiper: Anatomy of a destructive backdoor assembled from multiple malware",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/",
-    "summary": "GigaWiper is a destructive backdoor that combines multiple wiping and ransomware-like capabilities into a single operational platform. This blog analyzes how the malware incorporates code from several previously separate malware families and provides guidance to help defenders detect and defend against similar threats. The post GigaWiper: Anatomy of a destructive backdoor assembled from multiple malware appeared first on Microsoft Security Blog.",
-    "published": "2026-07-09T15:00:00Z",
-    "fetched": "2026-07-09T22:50:16.380001815Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "ransomware",
-      "malware"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "c0585b930ef0e4bb46dd3878c561baf6",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "GodDamn Ransomware Uses PoisonX Driver to Disable Endpoint Defenses",
-    "url": "https://thehackernews.com/2026/07/goddamn-ransomware-uses-poisonx-driver.html",
-    "summary": "Cybersecurity researchers have flagged a new ransomware family called GodDamn that employs the PoisonX kernel driver to neutralize security software as part of its defense evasion strategy. According to a new report published by the Threat Hunter Team from Symantec, the ransomware was first publicly spotted in the wild on May 21, 2026. It's assessed to be a rebrand of the Beast ransomware,",
-    "published": "2026-07-09T10:43:09Z",
-    "fetched": "2026-07-09T22:50:16.380001815Z",
-    "tags": [
-      "actively-exploited",
-      "ransomware"
-    ],
-    "severity": "high",
-    "score": 73
-  },
-  {
-    "id": "e40e36f64236799d977c9fc22796475e",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Microsoft patches RoguePlanet Defender zero-day vulnerability",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-rogueplanet-defender-zero-day-vulnerability/",
-    "summary": "Microsoft has released a security patch to address a Defender zero-day vulnerability known as \"RoguePlanet,\" disclosed after the June 2026 Patch Tuesday. [...]",
-    "published": "2026-07-09T05:42:49Z",
-    "fetched": "2026-07-09T22:50:16.380001815Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "931697168ef8561c9e0eb4e7e1282b8b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.2 HIGH] CVE-2026-44161 — Fluentd collects events from various data sources and writes them to files, RDBM…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44161",
-    "summary": "Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, the Fluentd out_http output plugin allows placeholders such as ${tag} in the endpoint configuration parameter, and if a placeholder value is derived from untrusted input an attacker can control the destination hostname of outbound HTTP requests and force requests to arbitrary internal services. This issue is fixed in version 1.19.3.",
-    "published": "2026-07-08T22:17:14.737Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "fluentd"
-    ],
-    "cves": [
-      "CVE-2026-44161"
-    ]
-  },
-  {
-    "id": "0123386499a72423ebe08d74715737a1",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-44160 — Fluentd collects events from various data sources and writes them to files, RDBM…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44160",
-    "summary": "Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, Fluentd's in_http and in_forward plugins support gzip-compressed data but enforce limits only on compressed payloads through settings such as body_size_limit and chunk_size_limit, allowing crafted compressed payloads to decompress in memory to an excessive size and cause denial of service through memory exhaustion. This issue is fixed in version 1.19.3.",
-    "published": "2026-07-08T22:17:14.6Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "fluentd"
-    ],
-    "cves": [
-      "CVE-2026-44160"
     ]
   }
 ]

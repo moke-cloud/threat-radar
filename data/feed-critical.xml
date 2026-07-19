@@ -5,7 +5,31 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Jul 2026 22:23:25 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 22:26:30 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-57857 — The Flow Payment plugin for WordPress (flow.cl) version 3.0.8 is vulnerable to r…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57857</link>
+      <guid isPermaLink="false">715d2940f066e78a1d52136f81e86b83</guid>
+      <pubDate>Sat, 18 Jul 2026 21:17:03 +0000</pubDate>
+      <description>The Flow Payment plugin for WordPress (flow.cl) version 3.0.8 is vulnerable to reflected cross-site scripting on the WooCommerce checkout page. When the plugin handles an order cancellation, the error_message GET parameter is passed directly to wc_add_notice() in flowpayment-fl.php (lines 57-58) without input sanitization (for example sanitize_text_field()) or output escaping (for example esc_html()) before being rendered in the checkout notice HTML. An unauthenticated attacker can craft a URL containing a JavaScript payload in the error_message parameter (for example /checkout/?add-to-cart={product-id}&amp;cancel_order=true&amp;error_message={payload}); when a victim with an active WooCommerce checkout session follows the link, the payload executes in the victim&#39;s browser in the origin of the WordPress site.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>xss</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.0 MEDIUM] CVE-2026-16133 — A flaw has been found in LiuMengxuan04 MiniCode 0.1.0. Affected by this vulnerab…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16133</link>
+      <guid isPermaLink="false">81eb580dcaf6687f12007dcca5fe6363</guid>
+      <pubDate>Sat, 18 Jul 2026 19:17:05 +0000</pubDate>
+      <description>A flaw has been found in LiuMengxuan04 MiniCode 0.1.0. Affected by this vulnerability is the function child_process.spawn of the file mcp.ts. Executing a manipulation can lead to command injection. The attack can be launched remotely. The attack requires a high level of complexity. The exploitation appears to be difficult. The exploit has been published and may be used. The pull request to fix this issue awaits acceptance.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
     <item>
       <title>[HIGH] WordPress Core &#34;wp2shell&#34; RCE flaws get public exploits, patch now</title>
       <link>https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/</link>
@@ -18,6 +42,143 @@
       <category>watch</category>
       <category>rce</category>
       <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2025-71396 — SurrealDB before 2.0.5, 2.1.x before 2.1.5, and 2.2.x before 2.2.2 does not enforce a default execut…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-71396</link>
+      <guid isPermaLink="false">a40fe3c79a243b89a81e32a1a049b0cc</guid>
+      <pubDate>Sat, 18 Jul 2026 14:17:11 +0000</pubDate>
+      <description>SurrealDB before 2.0.5, 2.1.x before 2.1.5, and 2.2.x before 2.2.2 does not enforce a default execution-time limit on embedded JavaScript scripting functions when the scripting capability is explicitly enabled (via --allow-scripting or --allow-all). An authenticated attacker can submit long-running JavaScript functions to exhaust server resources and cause a denial of service. Scripting is disabled by default.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2025-71393 — SurrealDB before 2.2.2 with scripting enabled fails to properly enforce recursion limits when native…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-71393</link>
+      <guid isPermaLink="false">3181898614fe24158890ae6d25376b58</guid>
+      <pubDate>Sat, 18 Jul 2026 14:17:10 +0000</pubDate>
+      <description>SurrealDB before 2.2.2 with scripting enabled fails to properly enforce recursion limits when native functions contain embedded JavaScript that issues new queries. Authenticated attackers can bypass the recursion limit by chaining native and JavaScript function calls to trigger infinite recursion and exhaust server memory.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2024-58370 — SurrealDB versions before 1.1.0 fail to enforce recursion depth limits when pars…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2024-58370</link>
+      <guid isPermaLink="false">37dc9219a8c1f8e316e44c27a5489b16</guid>
+      <pubDate>Sat, 18 Jul 2026 14:17:10 +0000</pubDate>
+      <description>SurrealDB versions before 1.1.0 fail to enforce recursion depth limits when parsing nested SurrealQL statements including IF, RELATE, and attribute access idioms. Authorized attackers can submit queries with excessive nesting depth to cause stack overflow and crash the server.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2024-58367 — SurrealDB versions before 2.0.4 fail to properly enforce field permissions during SELECT, UPDATE, an…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2024-58367</link>
+      <guid isPermaLink="false">3508621986ff4438bebc1bcae4d07419</guid>
+      <pubDate>Sat, 18 Jul 2026 14:17:09 +0000</pubDate>
+      <description>SurrealDB versions before 2.0.4 fail to properly enforce field permissions during SELECT, UPDATE, and DELETE operations, allowing authorized users to access unauthorized field values through various query techniques. Attackers can exploit SELECT VALUE operations, field aliasing, function arguments, WHERE clause filtering, RETURN BEFORE clauses, and SET clause references to leak protected field contents despite lacking SELECT permissions.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-9147 — uproot dynamically generates Python class source code from ROOT TStreamerInfo re…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9147</link>
+      <guid isPermaLink="false">955b0dc5f7ec5acae33b75b94eef0e57</guid>
+      <pubDate>Sat, 18 Jul 2026 13:17:06 +0000</pubDate>
+      <description>uproot dynamically generates Python class source code from ROOT TStreamerInfo records in a file and compiles it at runtime. Some file-controlled streamer metadata fields (for example, streamer element names) are interpolated into the generated Python source without safe quoting via repr() or the !r format specifier. An attacker who can supply a crafted ROOT file can place Python expression-breaking content into a streamer metadata field. When uproot generates and invokes the corresponding reader method, the injected Python expression is evaluated in the context of the process opening the file, resulting in arbitrary Python code execution in applications that open or process attacker-controlled ROOT files with affected uproot code paths.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>adobe</category>
+      <category>rce</category>
+      <category>adobe</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-59173 — Uncontrolled Resource Consumption vulnerability in Apache Traffic Server.&#xA;&#xA;This issue affects Apache…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59173</link>
+      <guid isPermaLink="false">e756c42842563a4c9ee3fa9e94e72f9d</guid>
+      <pubDate>Sat, 18 Jul 2026 13:17:06 +0000</pubDate>
+      <description>Uncontrolled Resource Consumption vulnerability in Apache Traffic Server.&#xA;&#xA;This issue affects Apache Traffic Server: from 9.0.0 through 9.1.13, from 10.0.0 through 10.1.2.&#xA;&#xA;Users are recommended to upgrade to version 9.1.14 or 10.1.3, which fixes the issue.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>apache</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>apache</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.7 HIGH] CVE-2026-16158 — Impact: @fastify/reply-from versions from 8.3.1 up to but not including 12.6.4 b…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16158</link>
+      <guid isPermaLink="false">35a7c4d1c3fe6fdfbdb0b2c3bbfb51c2</guid>
+      <pubDate>Sat, 18 Jul 2026 13:17:06 +0000</pubDate>
+      <description>Impact: @fastify/reply-from versions from 8.3.1 up to but not including 12.6.4 build the internal URL cache key by concatenating the destination and source path without a delimiter. Different destination and source pairs can therefore produce the same key while resolving to different upstream URLs. When getUpstream selects an upstream from request data, a URL cached for one upstream can be reused for a request intended for another upstream, causing cross-upstream data access and modification. The default configuration is affected. Setting disableCache to true prevents the behavior. Patches: upgrade to @fastify/reply-from 12.6.4. Workarounds: pass disableCache: true when registering the plugin.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.7 HIGH] CVE-2026-47869 — VMware Avi Load Balancer contains a remote code execution vulnerability. A malic…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47869</link>
+      <guid isPermaLink="false">18f8e32af80b931f6ac4093dd190bf0b</guid>
+      <pubDate>Sat, 18 Jul 2026 09:17:08 +0000</pubDate>
+      <description>VMware Avi Load Balancer contains a remote code execution vulnerability. A malicious authenticated user with network access may be able to inject and execute code.&#xA;&#xA;Affected versions:&#xA;32.1.1 (fixed in 32.1.2)&#xA;31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)&#xA;30.1.1 through 30.2.6 (fixed in 30.2.7)&#xA;22.1.1 through 22.1.7 (fixed in 30.2.7)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>vmware</category>
+      <category>watch</category>
+      <category>vmware</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.7 HIGH] CVE-2026-47867 — VMware Avi Load Balancer contains a remote code execution vulnerability. A malic…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47867</link>
+      <guid isPermaLink="false">7c1bef1d9dea37dbe9ecc9bf08c8a5ad</guid>
+      <pubDate>Sat, 18 Jul 2026 09:17:08 +0000</pubDate>
+      <description>VMware Avi Load Balancer contains a remote code execution vulnerability. A malicious user with network access may be able to access the Avi Control plane and execute code remotely.&#xA;&#xA;Affected versions:&#xA;32.1.1 (fixed in 32.1.2)&#xA;31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)&#xA;30.1.1 through 30.2.6 (fixed in 30.2.7)&#xA;22.1.1 through 22.1.7 (fixed in 30.2.7)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>vmware</category>
+      <category>watch</category>
+      <category>vmware</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 9.8 CRITICAL] CVE-2026-47865 — VMware Avi Load Balancer contains an authentication bypass vulnerability. A mali…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47865</link>
+      <guid isPermaLink="false">e8fa571f74204630680a9d541809bc26</guid>
+      <pubDate>Sat, 18 Jul 2026 09:17:08 +0000</pubDate>
+      <description>VMware Avi Load Balancer contains an authentication bypass vulnerability. A malicious user with network access may be able to access the Avi Control plane by bypassing the authentication mechanism.&#xA;&#xA;Affected versions:&#xA;31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)&#xA;30.1.1 through 30.2.6 (fixed in 30.2.7)&#xA;22.1.1 through 22.1.7 (fixed in 30.2.7)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>critical-cvss</category>
+      <category>auth-bypass</category>
+      <category>vmware</category>
+      <category>watch</category>
+      <category>vmware</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-16083 — A security flaw has been discovered in Sipeed PicoClaw up to 0.2.9. This affects…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16083</link>
+      <guid isPermaLink="false">9e5d9c531dc6214949e4aae876ae9522</guid>
+      <pubDate>Sat, 18 Jul 2026 09:17:07 +0000</pubDate>
+      <description>A security flaw has been discovered in Sipeed PicoClaw up to 0.2.9. This affects the function webhook.ParseRequest of the file pkg/channels/line/line.go of the component LINE Webhook. The manipulation results in authentication bypass by capture-replay. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks. The reported GitHub issue was closed automatically with the label &#34;not planned&#34; by a bot.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>auth-bypass</category>
+      <category>github</category>
+      <category>github</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-16076 — A vulnerability has been found in AstrBotDevs AstrBot up to 4.25.5. This issue a…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16076</link>
+      <guid isPermaLink="false">051278950485cf9906f5b85a34784c07</guid>
+      <pubDate>Sat, 18 Jul 2026 06:16:35 +0000</pubDate>
+      <description>A vulnerability has been found in AstrBotDevs AstrBot up to 4.25.5. This issue affects the function OpenApiRoute.chat_send of the file astrbot/dashboard/routes/open_api.py of the component API. Such manipulation of the argument Username leads to authentication bypass by spoofing. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>auth-bypass</category>
     </item>
     <item>
       <title>[HIGH] CVE-2026-63030: wp2shell a Critical Remote Code Execution Vulnerability in WordPress Core</title>
@@ -35,6 +196,63 @@
       <category>wordpress</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-8505 — IBM Langflow OSS 1.0.0 through 1.10.0 has a vulnerability in Langflow&#39;s webhook …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8505</link>
+      <guid isPermaLink="false">4cc58d410348fbeb500b35eb2ebb00f2</guid>
+      <pubDate>Fri, 17 Jul 2026 20:17:31 +0000</pubDate>
+      <description>IBM Langflow OSS 1.0.0 through 1.10.0 has a vulnerability in Langflow&#39;s webhook authentication logic allows unauthenticated users to trigger the execution of any flow. The system incorrectly bypasses API key validation when the WEBHOOK_AUTH_ENABLE configuration is set to False (which is the default setting). This allows a remote attacker who knows a flow&#39;s UUID to execute it as if they were the owner, potentially leading to Remote Code Execution (RCE).</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-7755 — IBM Langflow OSS 1.0.0 through 1.10.0 Langflow could allow remote code execution…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7755</link>
+      <guid isPermaLink="false">104e4aaffe6b5b1cdf392f3c78f1d6a9</guid>
+      <pubDate>Fri, 17 Jul 2026 20:17:30 +0000</pubDate>
+      <description>IBM Langflow OSS 1.0.0 through 1.10.0 Langflow could allow remote code execution due to incomplete validation enforcement on MCP server configuration files.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 9.8 CRITICAL] CVE-2026-63030 — WordPress 6.9.x before 6.9.5 and 7.0.x before 7.0.2 is affected by a REST API ba…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63030</link>
+      <guid isPermaLink="false">02cc69bcf2d3eb91c805c4406b436e1e</guid>
+      <pubDate>Fri, 17 Jul 2026 20:17:28 +0000</pubDate>
+      <description>WordPress 6.9.x before 6.9.5 and 7.0.x before 7.0.2 is affected by a REST API batch endpoint route confusion issue which, combined with the author__not_in WP_Query SQL Injection (CVE-2026-60137), could allow an attacker to perform SQL Injection and achieve Remote Code Execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>sqli</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.7 HIGH] CVE-2026-44739 — Pimcore is an Open Source Data &amp; Experience Management Platform. Prior to 11.5.1…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44739</link>
+      <guid isPermaLink="false">15274e7456d3bf8037b3c75251985602</guid>
+      <pubDate>Fri, 17 Jul 2026 20:17:16 +0000</pubDate>
+      <description>Pimcore is an Open Source Data &amp; Experience Management Platform. Prior to 11.5.17 (LTS) and 12.3.6, the columnConfigAction endpoint in bundles/CustomReportsBundle/src/Controller/Reports/CustomReportController.php passes malicious SQL configuration through CustomReportController:columnConfigAction, SqlAdapter::getColumns, SqlAdapter::buildQueryString, and Db::fetchAssociative(), allowing an attacker with the reports_config permission to use arbitrary SELECT queries, UNION statements, dangerous database functions, and error-based SQL injection to exfiltrate or manipulate database data. This issue is fixed in versions 11.5.17 (LTS) and 12.3.6.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>sqli</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.0 HIGH] CVE-2026-45162 — Pimcore is an Open Source Data &amp; Experience Management Platform. Prior to 11.5.1…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45162</link>
+      <guid isPermaLink="false">bdc08213be87c5f070775181d9b4a255</guid>
+      <pubDate>Fri, 17 Jul 2026 19:17:14 +0000</pubDate>
+      <description>Pimcore is an Open Source Data &amp; Experience Management Platform. Prior to 11.5.17 (LTS) and 12.3.7, multiple Pimcore locations call PHP&#39;s unserialize() on data from database columns and filesystem files without the allowed_classes restriction, including lib/Tool/Authentication.php, models/Site/Dao.php, models/DataObject/ClassDefinition/CustomLayout/Dao.php, models/Tool/TmpStore/Dao.php, models/Asset/WebDAV/Service.php, and admin-ui-classic-bundle/src/Helper/Dashboard.php, enabling object injection and remote code execution if an attacker can control the serialized data source. This issue is fixed in versions 11.5.17 (LTS) and 12.3.7.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[CRIT] CVE-2026-58644: Microsoft SharePoint Server Unauthenticated Remote Code Execution Vulnerability Exploited in the Wild</title>
       <link>https://www.rapid7.com/blog/post/etr-cve-2026-58644-microsoft-sharepoint-server-unauthenticated-remote-code-execution-vulnerability-exploited-in-the-wild</link>
       <guid isPermaLink="false">39f258feb962f128de825a2c3a5f64fe</guid>
@@ -47,6 +265,48 @@
       <category>rce</category>
       <category>actively-exploited</category>
       <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-9762 — IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.4 is vulnerable to remote…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9762</link>
+      <guid isPermaLink="false">5ec7839a5f0e4d758f067151995d6ca2</guid>
+      <pubDate>Fri, 17 Jul 2026 18:17:17 +0000</pubDate>
+      <description>IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.4 is vulnerable to remote code execution when jdbc url is under user control.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-9202 — IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to create…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9202</link>
+      <guid isPermaLink="false">1528d0f27bd39f8d0056ee8f3d7e14fd</guid>
+      <pubDate>Fri, 17 Jul 2026 18:17:17 +0000</pubDate>
+      <description>IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to create unlimited user accounts on any Langflow instance; when NEW_USER_IS_ACTIVE=true (documented deployment option), newly created accounts are immediately active and can authenticate to reach RCE endpoints, bypassing the need for AUTO_LOGIN.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-9198 — IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9198</link>
+      <guid isPermaLink="false">cf0635ec3969bbaee0d30b8259797886</guid>
+      <pubDate>Fri, 17 Jul 2026 18:17:17 +0000</pubDate>
+      <description>IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain /api/v1/auto_login (mints SUPERUSER tokens to any network caller) with /api/v1/validate/code (executes user code via exec()) to achieve full RCE on default Langflow deployments</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-48010 — Shopware is an open commerce platform. Prior to 6.6.10.18 and 6.7.10.1, UserCont…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48010</link>
+      <guid isPermaLink="false">7345d27647646e83799aa48c8191a863</guid>
+      <pubDate>Fri, 17 Jul 2026 18:17:16 +0000</pubDate>
+      <description>Shopware is an open commerce platform. Prior to 6.6.10.18 and 6.7.10.1, UserController::upsertUser() in src/Core/Framework/Api/Controller/UserController.php writes raw user data in SYSTEM_SCOPE without filtering the admin field, so a non-admin API user with user:create or user:update ACL permission can set admin: true on new or existing users; IntegrationController::upsertIntegration() contains an isAdmin() check for the same field, but UserController was missing this check. This issue is fixed in versions 6.6.10.18 and 6.7.10.1.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
     </item>
     <item>
       <title>[HIGH] Microsoft at Black Hat USA 2026: Defending trust in the age of AI and supply chain attacks</title>
@@ -102,6 +362,117 @@
       <category>microsoft</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-62207 — OpenClaw versions before 2026.6.5 contain an authentication bypass vulnerability…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62207</link>
+      <guid isPermaLink="false">a1549c30c25be4604cf40545799b6574</guid>
+      <pubDate>Fri, 17 Jul 2026 02:18:07 +0000</pubDate>
+      <description>OpenClaw versions before 2026.6.5 contain an authentication bypass vulnerability that allows lower-trust callers to reach admin-scoped tools. Attackers can perform actions requiring stronger authorization by exploiting insufficient policy checks on configured input paths.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>auth-bypass</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-33434 — Wazuh is a free and open source platform used for threat prevention, detection, …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33434</link>
+      <guid isPermaLink="false">9b5b6769cca6e8bac47deecff8ec7cf7</guid>
+      <pubDate>Fri, 17 Jul 2026 00:16:24 +0000</pubDate>
+      <description>Wazuh is a free and open source platform used for threat prevention, detection, and response. In versions 4.6.0 and above, prior to 4.14.5, a logic error in CheckRateLimitsMiddleware.dispatch() causes the /events endpoint rate check to unconditionally overwrite the general rate limit result. When the global max_request_per_minute is exceeded, requests to /events still succeed if the events-specific counter (hardcoded 30/min) has not been reached. This allows event injection into analysisd beyond the admin-configured global rate limit. This issue has been fixed in version 4.14.5.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.0 HIGH] CVE-2026-58598 — Concurrent execution using shared resource with improper synchronization (&#39;race …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58598</link>
+      <guid isPermaLink="false">69f75e0629bbd574ce954cb4ec57b95c</guid>
+      <pubDate>Thu, 16 Jul 2026 22:17:50 +0000</pubDate>
+      <description>Concurrent execution using shared resource with improper synchronization (&#39;race condition&#39;) in Windows Backup Engine allows an authorized attacker to elevate privileges locally.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-45368 — Kirby is an open-source content management system. In versions prior to 4.9.1 and 5.4.1, the underly…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45368</link>
+      <guid isPermaLink="false">fefb7818ddade9a48f06cac599d1caba</guid>
+      <pubDate>Thu, 16 Jul 2026 22:17:02 +0000</pubDate>
+      <description>Kirby is an open-source content management system. In versions prior to 4.9.1 and 5.4.1, the underlying URL methods for the KirbyTags and image blocks components did not filter out malicious URL values that resolve to script execution. The vulnerability affects four first-party Kirby renderers that produce `&lt;a href=&#34;…&#34;&gt;` output from editor-supplied field values: the (`link: …)` KirbyTag, the `link`: parameter of the `(image: …)` KirbyTag when it does not resolve to a known file or `self`, the `link` field of the built-in image block, and the HTML importer for the `blocks` field (which accepted the same malicious input as the image block `link` field). While simple `avascript:` URLs were already deactivated by treating them as a relative path and prepending a single slash to the URL, the use of URLs of the format `javascript://x%0A…` bypasses this protection. The `vbscript:`, `data:`, `livescript:`, `mocha:` and `jar:` schemes are affected by the same underlying gap. This issue has been fixed in versions 4.9.1 and 5.4.1.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-44174 — Kirby is an open-source content management system. Prior to 4.9.1 and 5.4.1, Kirby did not validate …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44174</link>
+      <guid isPermaLink="false">e62561256a2ca8b79c5e0d9adc9fb274</guid>
+      <pubDate>Thu, 16 Jul 2026 22:17:01 +0000</pubDate>
+      <description>Kirby is an open-source content management system. Prior to 4.9.1 and 5.4.1, Kirby did not validate the model attributes that were used in its collection queries, allowing attackers to include arbitrary model methods in their queries. This includes methods with sensitive data such as password() (disclosing the password hash) or root() (disclosing the absolute filesystem path on the server) as well as methods that perform impactful actions such as loginPasswordless() (causing a privilege escalation to another user) or delete() (deleting all queried models in one go if the authenticated user has appropriate permissions). This issue has been fixed in versions 4.9.1 and 5.4.1.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>lpe</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.3 HIGH] CVE-2026-62290 — cert-manager adds certificates and certificate issuers as resource types in Kube…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62290</link>
+      <guid isPermaLink="false">4503679c2895d9dc21ba21dc258f70d4</guid>
+      <pubDate>Thu, 16 Jul 2026 20:16:46 +0000</pubDate>
+      <description>cert-manager adds certificates and certificate issuers as resource types in Kubernetes clusters, and simplifies the process of obtaining, renewing and using those certificates. From 1.18.0 until 1.19.6 and 1.20.3, Challenge resources under acme.cert-manager.io can be created directly by namespace users without admission validation tying the Challenge to an Order, owner reference, or Issuer-selected solver, allowing attacker-controlled Challenge.spec.solver values referencing a ClusterIssuer to bypass DNS01 solver selectors such as dnsZones, dnsNames, and matchLabels and cause cert-manager to use ClusterIssuer DNS credentials for attacker-selected provider settings and DNS names, including disclosure of X-Api-User and X-Api-Key headers for acme-dns. This issue is fixed in versions 1.19.6 and 1.20.3.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>kubernetes</category>
+      <category>rce</category>
+      <category>kubernetes</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-53536 — Activepieces is an open source AI workflow automation platform. Prior to 0.83.0, the /v1/step-files/…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-53536</link>
+      <guid isPermaLink="false">df28c1fc8d96068b870d57869f225254</guid>
+      <pubDate>Thu, 16 Jul 2026 19:16:50 +0000</pubDate>
+      <description>Activepieces is an open source AI workflow automation platform. Prior to 0.83.0, the /v1/step-files/signed download endpoint verified the supplied JWT against the shared signing secret but did not check the token&#39;s audience, and combined with a missing null-check on the decoded fileId, this allowed any caller holding any valid Activepieces JWT (including a freshly created user&#39;s own access token) to receive a step-file belonging to another tenant. The file returned was whatever PostgreSQL happened to scan first for type = FLOW_STEP_FILE, varying over time as the database changed, so an authenticated user could obtain step-file attachments belonging to other tenants on the same instance; the attacker could not target a specific victim or file, and the access was read-only with no integrity or availability impact. This issue is fixed in version 0.83.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>postgres</category>
+      <category>rce</category>
+      <category>postgres</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-47751 — Claude Code Action is a general-purpose GitHub action that runs Claude Code on GitHub pull requests …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47751</link>
+      <guid isPermaLink="false">de141200dae54c89c9ea7b5af275febd</guid>
+      <pubDate>Thu, 16 Jul 2026 17:16:57 +0000</pubDate>
+      <description>Claude Code Action is a general-purpose GitHub action that runs Claude Code on GitHub pull requests and issues. Prior to 1.0.74, because the action checked out attacker-controlled pull request head branches, read .mcp.json from the working directory via default setting sources, and unconditionally enabled all project MCP servers via enableAllProjectMcpServers, an attacker who opened a pull request containing a malicious .mcp.json file could achieve arbitrary code execution on the GitHub Actions runner and exfiltrate secrets available to the workflow (such as API keys and tokens) when a privileged user or an automatic trigger invoked the Claude action on the pull request. This issue is fixed in version 1.0.74, which restores .claude/ and .mcp.json from the pull request base branch before the CLI runs.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>github</category>
+      <category>github</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-44595 — Yamcs is a mission control framework. Prior to 5.12.7, the IAM API endpoints lis…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44595</link>
+      <guid isPermaLink="false">e82dc893dd5b3de6d776db5b75c14298</guid>
+      <pubDate>Thu, 16 Jul 2026 17:16:55 +0000</pubDate>
+      <description>Yamcs is a mission control framework. Prior to 5.12.7, the IAM API endpoints listUsers, getUser, listGroups, and getGroup in yamcs-core did not enforce the required SystemPrivilege.ControlAccess check in yamcs-core/src/main/java/org/yamcs/http/api/IamApi.java, so any authenticated user, even one with low or no privileges, could enumerate all user accounts in the system including their usernames, superuser status, and group memberships. This issue is fixed in versions 5.12.7 and 5.13.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>spaceapplications</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2024-58360 — stoatchat versions before 0.7.8 fail to enforce account creation restrictions in…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2024-58360</link>
+      <guid isPermaLink="false">57cbd8303d295dee57ab1e81bd800f28</guid>
+      <pubDate>Thu, 16 Jul 2026 13:16:23 +0000</pubDate>
+      <description>stoatchat versions before 0.7.8 fail to enforce account creation restrictions including invite-only mode, email verification, captcha, and shield verification. Attackers can create unlimited accounts with unverified email addresses, increasing denial-of-service risk and compromising service integrity.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[HIGH] CISA orders feds to patch actively exploited Oracle flaw by Saturday</title>
       <link>https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-flaw-by-saturday/</link>
       <guid isPermaLink="false">82b054ea120f2684711a34b2013a8a0e</guid>
@@ -112,6 +483,20 @@
       <category>oracle</category>
       <category>actively-exploited</category>
       <category>oracle</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-12753 — The Advance Product Search- Voice &amp; Ajax Search for WooCommerce plugin for WordP…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12753</link>
+      <guid isPermaLink="false">38855750c3e51ce20e2b304737595552</guid>
+      <pubDate>Thu, 16 Jul 2026 04:17:16 +0000</pubDate>
+      <description>The Advance Product Search- Voice &amp; Ajax Search for WooCommerce plugin for WordPress is vulnerable to generic SQL Injection via the &#39;s&#39; and &#39;match&#39; parameter in all versions up to, and including, 1.4.4 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>sqli</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>wordpress</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2026-58644 — Microsoft SharePoint: Microsoft SharePoint Deserialization of Untrusted Data Vulnerability</title>
@@ -154,6 +539,71 @@
       <category>fortinet</category>
       <category>watch</category>
       <category>fortinet</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-52893 — Wekan is open source kanban built with Meteor. Prior to 9.32, the Wekan Accounts.onCreateUser hook i…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-52893</link>
+      <guid isPermaLink="false">27bbed6e818d89e615cf9c12e0002f2b</guid>
+      <pubDate>Wed, 15 Jul 2026 22:17:16 +0000</pubDate>
+      <description>Wekan is open source kanban built with Meteor. Prior to 9.32, the Wekan Accounts.onCreateUser hook in server/models/users.js merges OIDC logins into existing accounts when the OIDC email or username matches an existing Wekan user, without verifying ownership or checking email_verified. An attacker using an OIDC provider account with a victim&#39;s email or username can cause Wekan to merge the attacker&#39;s OIDC credentials into the victim account and then log in as that account. This issue is fixed in version 9.32.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-49279 — WWBN AVideo is an open source video platform. Versions 29.0 and below contain a Stored XSS vulnerabi…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49279</link>
+      <guid isPermaLink="false">8c5d7e564bacd2f70afd64c801a48e2e</guid>
+      <pubDate>Wed, 15 Jul 2026 22:16:52 +0000</pubDate>
+      <description>WWBN AVideo is an open source video platform. Versions 29.0 and below contain a Stored XSS vulnerability through the autoEvalCodeOnHTML parameter in the MessageSQLite WebSocket Handler. The MessageSQLite.php handler only strips autoEvalCodeOnHTML from $json[&#39;msg&#39;], but msgToResourceId() reads from $msg[&#39;json&#39;] with higher priority. An attacker can place the XSS payload in the json key instead of msg, bypassing the sanitization entirely. An authenticated attacker can execute arbitrary JavaScript in any connected user&#39;s browser session via the WebSocket messaging system, stealing session cookies and authentication tokens, taking over accounts through session hijacking, and chaining with CSRF to perform admin actions on the victim&#39;s behalf, in the default SQLite WebSocket backend configuration. This issue has a patch that has yet to be officially released, see https://github.com/WWBN/AVideo/commit/3e0b3ce2bfa766183ff0ae227439394db57b1a23.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>github</category>
+      <category>rce</category>
+      <category>xss</category>
+      <category>github</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-50030 — DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase SQL prev…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-50030</link>
+      <guid isPermaLink="false">11813f8a3be97dcc9e613c9168617b50</guid>
+      <pubDate>Wed, 15 Jul 2026 20:17:13 +0000</pubDate>
+      <description>DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase SQL preview exposes DatasetDataApi.previewSql/previewSqlCheck through /de2api/datasetData/previewSql, accepts PreviewSqlDTO.sql, PreviewSqlDTO.datasourceId, and PreviewSqlDTO.isCross, then DatasetDataManage.previewSql stores decoded SQL in datasourceRequest.query and CalciteProvider.fetchResultField executes it with prepareStatement(...).executeQuery(), allowing arbitrary readable datasource tables to be queried and returned in preview responses. This issue is fixed in version 2.10.23.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-49867 — DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase template…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49867</link>
+      <guid isPermaLink="false">a5277316a9012d08f8174381432e192d</guid>
+      <pubDate>Wed, 15 Jul 2026 20:17:12 +0000</pubDate>
+      <description>DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase template static resources let authenticated users submit TemplateManageRequest.staticResource through POST /de2api/templateManage/save or DataVisualizationServer.decompression, after which StaticResourceServer.saveFilesToServe and StaticResourceServer.saveSingleFileToServe write Base64-decoded .svg content to /de2api/static-resource/&lt;name&gt;.svg without validating extension, MIME type, decoded bytes, or SVG scriptability, causing stored same-origin cross-site scripting when a victim loads the resource. This issue is fixed in version 2.10.23.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>xss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-45419 — DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase template…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45419</link>
+      <guid isPermaLink="false">8a8c557acdc309245e04104b82be2d53</guid>
+      <pubDate>Wed, 15 Jul 2026 20:17:04 +0000</pubDate>
+      <description>DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase template saves call TemplateManageService#save, StaticResourceServer#saveFilesToServe, and the /de2api/templateManage/save endpoint with attacker-controlled staticResource names and Base64 content, allowing path traversal and arbitrary file writes because only / was used when extracting the file name. This issue is fixed in version 2.10.23.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>path-traversal</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-58659 — PyTorch Lightning through 2.6.5, fixed in commit d710d68, contains a remote code…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58659</link>
+      <guid isPermaLink="false">d9c85aa7f6ad3d12eb79873bceb06c02</guid>
+      <pubDate>Wed, 15 Jul 2026 18:16:48 +0000</pubDate>
+      <description>PyTorch Lightning through 2.6.5, fixed in commit d710d68, contains a remote code execution vulnerability in the _load_state function that imports and executes attacker-controlled module names from checkpoint _instantiator hyperparameters. Attackers can craft malicious checkpoint files that bypass weights_only=True protections to execute arbitrary code when LightningModule.load_from_checkpoint is called.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
     </item>
     <item>
       <title>[HIGH] Rapid7 MDR Team Discovers New SonicWall SMA1000 Zero Days being Actively Exploited (CVE-2026-15409, CVE-2026-15410)</title>
@@ -676,374 +1126,6 @@
       <category>watch</category>
       <category>rce</category>
       <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-12994 — The WCFM – Frontend Manager for WooCommerce plugin for WordPress is vulnerable…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12994</link>
-      <guid isPermaLink="false">4e9c0b1a6eedfe709f16e6c88a01ddc3</guid>
-      <pubDate>Sat, 11 Jul 2026 07:16:45 +0000</pubDate>
-      <description>The WCFM – Frontend Manager for WooCommerce plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 6.7.27. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to inject arbitrary reply content into any store inquiry, overwrite the main inquiry record in wp_wcfm_enquiries, and trigger unsolicited notification emails to customers and vendors. Unlike sibling controller branches (wcfm-enquiry and wcfm-enquiry-manage), the wcfm-my-account-enquiry-manage branch performs no is_user_logged_in() or current_user_can() check, and the nonce that serves as the sole barrier is embedded into every public page load without any login gate.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.4 MEDIUM] CVE-2026-12126 — The WCFM Marketplace – Multivendor Marketplace for WooCommerce plugin for Word…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12126</link>
-      <guid isPermaLink="false">4c287b09d4b8fc1c841e3b9994c358ab</guid>
-      <pubDate>Sat, 11 Jul 2026 07:16:45 +0000</pubDate>
-      <description>The WCFM Marketplace – Multivendor Marketplace for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Attachment &#39;post_title&#39; in all versions up to, and including, 3.7.3 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Vendor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. An attacker can plant the payload by uploading a media attachment with a crafted title via the WordPress REST API (/wp-json/wp/v2/media), without ever invoking the AJAX endpoint themselves, as the unescaped title is later emitted inside DataTables JSON and inserted as innerHTML upon any privileged user loading the media dashboard.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>xss</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-12103 — The Wallet for WooCommerce plugin for WordPress is vulnerable to authorization b…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12103</link>
-      <guid isPermaLink="false">d2733d95ddd5f0517068a5a51f53daaa</guid>
-      <pubDate>Sat, 11 Jul 2026 07:16:45 +0000</pubDate>
-      <description>The Wallet for WooCommerce plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.6.4. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to enumerate the login name, email address, and user ID of all WordPress accounts — including administrators — by submitting arbitrary search terms to the AJAX handler. The required &#39;search-user&#39; nonce is localized into the wallet_param object on the standard WooCommerce My Account page, which is accessible to any authenticated user, making it trivially obtainable by a Subscriber.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-10865 — The Cost Calculator Builder plugin for WordPress is vulnerable to Sensitive Info…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10865</link>
-      <guid isPermaLink="false">de3ff86dbaa3e606b1fc8876c2e32581</guid>
-      <pubDate>Sat, 11 Jul 2026 07:16:44 +0000</pubDate>
-      <description>The Cost Calculator Builder plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 4.0.11 via the (template body). This makes it possible for unauthenticated attackers to extract the plaintext Stripe secret key, Razorpay secret key, and PayPal client_secret embedded in the page source of any page containing a calculator, enabling full control of the merchant&#39;s payment gateway accounts. This exposure only occurs when the &#39;use in all calculators&#39; option is enabled for one or more payment gateways in the plugin&#39;s global settings.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-10041 — The WCFM – Frontend Manager for WooCommerce plugin for WordPress is vulnerable…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10041</link>
-      <guid isPermaLink="false">074b07b443f76e0a1027b2b2cfb06f5b</guid>
-      <pubDate>Sat, 11 Jul 2026 07:16:44 +0000</pubDate>
-      <description>The WCFM – Frontend Manager for WooCommerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 6.7.27 via the wcfm_product_archive due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with subscriber-level access and above, to archive arbitrary vendors&#39; products, toggle the featured status on arbitrary listings, mark arbitrary WooCommerce orders as completed, and permanently delete arbitrary enquiries and bulk messages belonging to other vendors.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2025-6784 — The Code Engine plugin for WordPress is vulnerable to Remote Code Execution in a…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-6784</link>
-      <guid isPermaLink="false">9c5656344d078c5f24993082bbc33d96</guid>
-      <pubDate>Sat, 11 Jul 2026 07:16:44 +0000</pubDate>
-      <description>The Code Engine plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 0.3.5 via the &#39;code-engine&#39; shortcode. This is due to the plugin not restricting access to the code injecting functionality of the plugin. This makes it possible for authenticated attackers, with Contributor-level access and above, to execute code on the server.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-2354 — The Swiss Toolkit For WP plugin for WordPress is vulnerable to arbitrary file up…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-2354</link>
-      <guid isPermaLink="false">a3f8fd80c3631ac4eaf64142d305c874</guid>
-      <pubDate>Sat, 11 Jul 2026 05:16:33 +0000</pubDate>
-      <description>The Swiss Toolkit For WP plugin for WordPress is vulnerable to arbitrary file upload due to a flawed file type validation bypass in the `upload_extension_files()` function in all versions up to, and including, 1.4.6. The `upload_extension_files()` function hooks into WordPress&#39;s `wp_check_filetype_and_ext` filter and uses `strpos()` to check if a filename contains a configured extension string, rather than verifying the actual file extension. This makes it possible for authenticated attackers, with Author-level access and above, to upload arbitrary files (including PHP) on the affected site&#39;s server which may make remote code execution possible, granted the &#34;Enhanced Multi-Format Image Support&#34; feature is enabled with at least one extension (e.g., avif) in the allowed formats.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-14262 — The Simple JWT Login – Allows you to use JWT on REST endpoints. plugin for Wor…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14262</link>
-      <guid isPermaLink="false">ade2392e30779018023bf471ee17f9df</guid>
-      <pubDate>Sat, 11 Jul 2026 05:16:32 +0000</pubDate>
-      <description>The Simple JWT Login – Allows you to use JWT on REST endpoints. plugin for WordPress is vulnerable to Authentication Bypass to Privilege Escalation in all versions up to, and including, 3.6.6 via the `payload` parameter. The vulnerability exists because `AuthenticateService::generatePayload()` only overwrites JWT payload keys whose names appear in the admin-configured `jwt_payload` list — leaving any attacker-supplied identity claims such as `email`, `id`, or `username` intact and signed into the JWT with the site&#39;s HS256 secret. This makes it possible for authenticated attackers, with subscriber-level access and above, to escalate their privileges to that of an Administrator by injecting a target administrator&#39;s email address into the `payload` parameter at the `/wp-json/simple-jwt-login/v1/auth` endpoint, then redeeming the resulting JWT at the `/autologin` endpoint to obtain a fully authenticated session as that administrator.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>auth-bypass</category>
-      <category>lpe</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-13250 — The Solace Extra plugin for WordPress is vulnerable to authorization bypass in a…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13250</link>
-      <guid isPermaLink="false">cb788584a024cc5e40b837394057a167</guid>
-      <pubDate>Sat, 11 Jul 2026 05:16:32 +0000</pubDate>
-      <description>The Solace Extra plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.5.3. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to permanently delete all content previously imported via the Starter Template feature, including posts, pages, media attachments, WooCommerce products, taxonomy terms, and sitebuilder templates. The required nonce is emitted on every wp-admin page via wp_localize_script() hooked to admin_enqueue_scripts without a page guard, meaning any Subscriber visiting /wp-admin/profile.php can obtain it; the handler is additionally registered via wp_ajax_nopriv_, making it reachable by fully unauthenticated users as well.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-13116 — The PDF Invoices &amp; Packing Slips for WooCommerce plugin for WordPress is vulnera…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13116</link>
-      <guid isPermaLink="false">f9ce0dd93c61bbb0fef8024ecaf4c727</guid>
-      <pubDate>Sat, 11 Jul 2026 05:16:32 +0000</pubDate>
-      <description>The PDF Invoices &amp; Packing Slips for WooCommerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 5.14.0 via the generate_document_shortcode due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with contributor-level access and above, to mint publicly accessible, session-free download links for arbitrary third-party orders, exposing customer names, billing and shipping addresses, email addresses, phone numbers, order and invoice numbers, line items, totals, payment details, and customer notes contained in those orders&#39; invoices and packing slips. Exploitation requires the plugin&#39;s Document link access type setting to be configured to &#39;full&#39;; with the default &#39;logged_in&#39; value, generated URLs are signed with a per-session nonce rather than the order_key, making the shortcode path unexploitable for unauthorized access to third-party orders.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-13353 — The WP Ultimate CSV Importer – WordPress Import &amp; Export for CSV, XML &amp; Excel …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13353</link>
-      <guid isPermaLink="false">2588172ebe596bd65d80aca12da218ba</guid>
-      <pubDate>Sat, 11 Jul 2026 04:17:16 +0000</pubDate>
-      <description>The WP Ultimate CSV Importer – WordPress Import &amp; Export for CSV, XML &amp; Excel plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 8.0.1 via the &#39;MappedFields&#39; parameter. This is due to missing capability checks on the AJAX handlers for install_addon, saveMappedFields, and StartImport, combined with the plugin nonce being exposed to any authenticated user who can load an admin page, allowing a Subscriber to install the Import WooCommerce add-on, persist attacker-controlled PHP expressions in the MappedFields parameter, and trigger evaluation via eval() in ImportHelpers::get_meta_values(). This makes it possible for authenticated attackers, with subscriber-level access and above, to execute code on the server.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-10628 — The Points and Rewards for WooCommerce plugin for WordPress is vulnerable to aut…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10628</link>
-      <guid isPermaLink="false">7b23296045a2a031574f55cd845d7368</guid>
-      <pubDate>Sat, 11 Jul 2026 04:17:02 +0000</pubDate>
-      <description>The Points and Rewards for WooCommerce plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.10.0. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to convert and drain any user&#39;s reward points into wallet balance, exfiltrate all users&#39; emails and point balances to an attacker-controlled Klaviyo account, overwrite the site&#39;s Klaviyo public API key, block or unblock arbitrary users from the points system, and modify campaign banner and heading settings. The nonce used for authentication of these requests (wps-wpr-verify-nonce) is injected into every public-facing page via wp_localize_script(), and the wps_wpr_generate_custom_wallet handler is additionally registered on the wp_ajax_nopriv_ hook, meaning unauthenticated visitors can also obtain a valid nonce and exploit that specific action.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-55175 — Spinnaker is an open source, multi-cloud continuous delivery platform. Prior to …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55175</link>
-      <guid isPermaLink="false">ff905425be081e2b5f44a16ca694fefb</guid>
-      <pubDate>Fri, 10 Jul 2026 23:16:48 +0000</pubDate>
-      <description>Spinnaker is an open source, multi-cloud continuous delivery platform. Prior to versions 2026.1.1, 2026.0.3, 2025.4.4, and 2025.3.4 on their respective release lines, Kustomize bake operations allow unsafe YAML tag processing in rosco manifests. This can lead to remote code execution on rosco pods when performing Kustomize bakes. This issue is fixed in versions 2026.1.1, 2026.0.3, 2025.4.4, and 2025.3.4.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-15089 — vulnerability in Drupal Commerce guest registration allows . This issue affects Commerce guest regis…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15089</link>
-      <guid isPermaLink="false">b9217df009138ce830b1a4b8db32e10d</guid>
-      <pubDate>Fri, 10 Jul 2026 23:16:47 +0000</pubDate>
-      <description>vulnerability in Drupal Commerce guest registration allows . This issue affects Commerce guest registration versions: *.*.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.9 CRITICAL] CVE-2026-14480 — OpenPLC Runtime v3 contains an authenticated arbitrary file write &#xA;vulnerability…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14480</link>
-      <guid isPermaLink="false">a0125d4d27f4c1abddc8a75801d8b5cc</guid>
-      <pubDate>Fri, 10 Jul 2026 23:16:47 +0000</pubDate>
-      <description>OpenPLC Runtime v3 contains an authenticated arbitrary file write &#xA;vulnerability in the legacy web UI program‑upload workflow. The &#xA;application stores an attacker‑supplied filename (prog_file) directly &#xA;into the Programs.File database field and later uses this value as the &#xA;destination path for an uploaded file without validating or restricting &#xA;the path. Because Python os.path.join() honors attacker‑controlled &#xA;absolute paths, an authenticated user can write arbitrary files anywhere&#xA; writable by the OpenPLC webserver process. In the default build &#xA;pipeline, all C++ source files within the OpenPLC runtime core directory&#xA; are automatically compiled into the executable runtime binary. By &#xA;writing a malicious .cpp file into this directory, an authenticated &#xA;attacker can escalate the arbitrary file write into arbitrary native &#xA;code execution when the operator triggers a normal program compilation &#xA;and runtime start.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-11915 — vulnerability in Drupal Brute force attack protection allows . This issue affects Brute force attack…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11915</link>
-      <guid isPermaLink="false">5781ea97b1bffe6788b8d6ad5ceccb85</guid>
-      <pubDate>Fri, 10 Jul 2026 23:16:46 +0000</pubDate>
-      <description>vulnerability in Drupal Brute force attack protection allows . This issue affects Brute force attack protection versions: *.*.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-33382 — Several Grafana API endpoints, some of them unauthenticated, do not limit the si…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33382</link>
-      <guid isPermaLink="false">7a5d96f31397dcaf339592919b98c6ff</guid>
-      <pubDate>Fri, 10 Jul 2026 16:16:29 +0000</pubDate>
-      <description>Several Grafana API endpoints, some of them unauthenticated, do not limit the size of the request body before processing it. An attacker can send very large payloads that force excessive memory allocation, potentially exhausting memory and causing a denial of service.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>grafana</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 3.3 LOW] CVE-2026-56366 — ImageMagick before 7.1.2-18 contains a memory leak vulnerability in the META rea…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56366</link>
-      <guid isPermaLink="false">fdb01910a5af18aa5f5bd31da7fbcaf7</guid>
-      <pubDate>Fri, 10 Jul 2026 15:16:43 +0000</pubDate>
-      <description>ImageMagick before 7.1.2-18 contains a memory leak vulnerability in the META reader when processing APP1JPEG input paths. Attackers can trigger this memory leak by providing specially crafted APP1JPEG image files, causing denial of service through resource exhaustion.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>adobe</category>
-      <category>rce</category>
-      <category>imagemagick</category>
-      <category>adobe</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.1 CRITICAL] CVE-2026-56688 — Dell PowerFlex Manager, Version prior to 5.1.0.1, contain(s) an Improper Neutral…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56688</link>
-      <guid isPermaLink="false">3bfaf5236d29ac4925c28c3fdba4badf</guid>
-      <pubDate>Fri, 10 Jul 2026 12:17:23 +0000</pubDate>
-      <description>Dell PowerFlex Manager, Version prior to 5.1.0.1, contain(s) an Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability during OS Repository processing to achieve arbitrary command execution as root, potentially leading to full appliance compromise and lateral movement into managed infrastructure.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-      <category>dell</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 3.9 LOW] CVE-2026-15028 — A flaw was found in libarchive. This vulnerability allows a remote attacker to t…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15028</link>
-      <guid isPermaLink="false">d83aba343fe99cbc2fdfa06726af1a3d</guid>
-      <pubDate>Fri, 10 Jul 2026 10:16:23 +0000</pubDate>
-      <description>A flaw was found in libarchive. This vulnerability allows a remote attacker to trigger a heap overflow by providing a specially crafted tar archive. The issue occurs during the parsing of a PAX extended header containing a malformed SUN.holesdata sparse-file attribute. Successful exploitation could lead to a denial of service, making the system unavailable, or potentially allow for arbitrary code execution, giving the attacker control over the affected system.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-21049 — Out-of-bounds write in libpadm.so library prior to SMR Jul-2026 Release 1 allows local attackers to …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21049</link>
-      <guid isPermaLink="false">d0494db682859e1d25abd5176d8fe9d2</guid>
-      <pubDate>Fri, 10 Jul 2026 05:16:35 +0000</pubDate>
-      <description>Out-of-bounds write in libpadm.so library prior to SMR Jul-2026 Release 1 allows local attackers to execute arbitrary code.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-21046 — Time-of-check time-of-use race condition in fabricKeymaster trustlet prior to SMR Jul-2026 Release 1…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21046</link>
-      <guid isPermaLink="false">321d9b0090cabdb2a14307d57b50b890</guid>
-      <pubDate>Fri, 10 Jul 2026 05:16:35 +0000</pubDate>
-      <description>Time-of-check time-of-use race condition in fabricKeymaster trustlet prior to SMR Jul-2026 Release 1 allows local privileged attackers to execute arbitrary code.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-21042 — Out-of-bounds write in libsavsac.so prior to SMR Jul-2026 Release 1 allows local attackers to execut…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21042</link>
-      <guid isPermaLink="false">d16466963e9a3ec9ca8b8bda406bfd8f</guid>
-      <pubDate>Fri, 10 Jul 2026 05:16:34 +0000</pubDate>
-      <description>Out-of-bounds write in libsavsac.so prior to SMR Jul-2026 Release 1 allows local attackers to execute arbitrary code.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-56291 — Balbooa Forms: Balbooa Forms Unrestricted Upload of File with Dangerous Type Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56291</link>
-      <guid isPermaLink="false">d70f7ca083eba12c7334de5885e83439</guid>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Balbooa Forms contains an unrestricted upload of file with dangerous type vulnerability that allows an unauthenticated arbitrary file upload which could allow uploading of executable files leading to full RCE.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-13</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>balbooa</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-48939 — iCagenda iCagenda: iCagenda Unrestricted Upload of File with Dangerous Type Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48939</link>
-      <guid isPermaLink="false">e393ca8a5ccf66f69bb5955c175178af</guid>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-      <description>iCagenda contains an unrestricted upload of file with dangerous type vulnerability that allows the upload of arbitrary files in the file attachment feature, ultimately resulting in PHP code upload and execution.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-13</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>icagenda</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-56291 — Balbooa Forms: Balbooa Forms Unrestricted Upload of File with Dangerous Type Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56291</link>
-      <guid isPermaLink="false">d70f7ca083eba12c7334de5885e83439</guid>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Balbooa Forms contains an unrestricted upload of file with dangerous type vulnerability that allows an unauthenticated arbitrary file upload which could allow uploading of executable files leading to full RCE.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-13</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>balbooa</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-48939 — iCagenda iCagenda: iCagenda Unrestricted Upload of File with Dangerous Type Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48939</link>
-      <guid isPermaLink="false">e393ca8a5ccf66f69bb5955c175178af</guid>
-      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-      <description>iCagenda contains an unrestricted upload of file with dangerous type vulnerability that allows the upload of arbitrary files in the file attachment feature, ultimately resulting in PHP code upload and execution.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-13</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>icagenda</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-59828 — Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 20…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59828</link>
-      <guid isPermaLink="false">3cfc73c3e2ace4c8724dee602cac08e3</guid>
-      <pubDate>Thu, 09 Jul 2026 22:17:09 +0000</pubDate>
-      <description>Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, post revisions that should be hidden from regular users could be leaked through visible diffs on adjacent revisions serialized by PostRevisionSerializer. This issue is fixed in versions 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>discourse</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-57032 — An Improper Handling of Undefined Parameters vulnerability in the packet forward…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57032</link>
-      <guid isPermaLink="false">7f0dc7095ce52659ff650f8835a50bfe</guid>
-      <pubDate>Thu, 09 Jul 2026 22:17:09 +0000</pubDate>
-      <description>An Improper Handling of Undefined Parameters vulnerability in the packet forwarding engine (pfe) of Juniper Networks Junos OS on EX Series devices allows an authenticated attacker with low privileges to cause a Denial-of-Service (DoS).&#xA;&#xA;If an attempt is made to subscribe to an unsupported telemetry sensor path on EX2300, EX3400, EX4000, EX4100 and EX4400 via gRPC, this causes the FPC to crash. This leads to a complete service outage until the module has automatically restarted. &#xA;&#xA;The following log message can be seen when this issue happens:&#xA;&#xA;agentd[&lt;PID&gt;]: AGENTD_RESOURCE_NOT_FOUND: No resource name found for &lt;sensor&gt;&#xA;&#xA;&#xA;This issue affects Junos OS on &#xA;&#xA;EX2300, EX3400, EX4000, EX4100 and EX4400&#xA;&#xA;devices:&#xA;&#xA;&#xA;  *  all versions before 23.2R2-S7,&#xA;  *  23.4 versions before 23.4R2-S8,&#xA;  *  24.2 versions before  24.2R2-S5,&#xA;  *  24.4 versions before 24.4R2.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>juniper</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.9 MEDIUM] CVE-2026-57030 — A Concurrent Execution using Shared Resource with Improper Synchronization (&#39;Rac…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57030</link>
-      <guid isPermaLink="false">ea809b31bc259c4aa33978661d926814</guid>
-      <pubDate>Thu, 09 Jul 2026 22:17:08 +0000</pubDate>
-      <description>A Concurrent Execution using Shared Resource with Improper Synchronization (&#39;Race Condition&#39;) vulnerability in the packet forwarding engine (PFE) of Juniper Networks Junos OS on SRX Series allows an unauthenticated, network-based attacker to cause a Denial-of-Service (DoS).&#xA;&#xA;As part of the stateful traffic processing on SRX Series devices flows are being established, and removed when not needed anymore. During the removal process the timeout of a flow should be set to 3 seconds and consequentially the flow should be removed shortly after. Due to a race condition occurring when setting the timeout there is a chance (the exact conditions are outside the attackers control) that the timeout is instead set to a very high value of larger than 10,000 seconds:&#xA;&#xA;&#xA;&#xA;user@host&gt; show security flow session | match timeout&#xA;Session ID: 98784248524, Policy name: PROD-FLOW/4, HA State: Active, Timeout: 85250, Session State: Valid&#xA;&#xA;This will lead to an accumulation of flows which can be observed by an ever-increasing value of invalidated sessions in the output of &#39;show security flow session summary&#39;:&#xA;&#xA;user@host&gt; show security flow session summary | match invalid&#xA;Invalidated sessions: 216931These sessions can&#39;t be cleared manually with the &#39;clear security flow session&#39; command, which will either lead to forwarding to stop (and the system needs to be manually recovered with a reboot) or to a flowd core and automatic reboot.&#xA;&#xA;&#xA;This issue affects Junos OS on SRX Series:&#xA;&#xA;&#xA;  *  24.2 versions before 24.2R2-S3,&#xA;  *  24.4 versions before 24.4R2-S1, 24.4R2-S2,&#xA;  *  25.2 versions before 25.2R1-S2, 25.2R2.&#xA;&#xA;&#xA;&#xA;&#xA;This issue does not affect releases earlier than 24.2R1;</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>juniper</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.2 MEDIUM] CVE-2026-39245 — decompress before 4.2.2 contains an improper path containment check that enables…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-39245</link>
-      <guid isPermaLink="false">642d1db2c9224919749c90cf85ff9756</guid>
-      <pubDate>Thu, 09 Jul 2026 22:17:04 +0000</pubDate>
-      <description>decompress before 4.2.2 contains an improper path containment check that enables directory traversal and arbitrary file write. The safeMakeDir function (index.js line 29) and the extraction path validation (index.js line 106) use String.indexOf() to verify the resolved path is within the output directory: realDestinationDir.indexOf(realOutputPath) !== 0. This check is flawed because it does not enforce a path separator boundary. For example, &#34;/tmp/app_config&#34;.indexOf(&#34;/tmp/app&#34;) returns 0, incorrectly passing the check even though /tmp/app_config is outside /tmp/app. Combined with the unvalidated symlink creation in the same package, an attacker can write arbitrary files to directories adjacent to the extraction target. This is a bypass of the fix for CVE-2020-12265. The correct check requires appending a path separator: realParentPath.indexOf(realOutputPath + path.sep) !== 0.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>path-traversal</category>
-      <category>rce</category>
-      <category>decompress_project</category>
     </item>
   </channel>
 </rss>

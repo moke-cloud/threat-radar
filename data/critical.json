@@ -1,5 +1,69 @@
 [
   {
+    "id": "86bb091b31dce63d97dae42eb67b61ad",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "SonicWall SMA1000 flaws exploited as zero-days to push custom malware",
+    "url": "https://www.bleepingcomputer.com/news/security/sonicwall-sma1000-flaws-exploited-as-zero-days-to-push-custom-malware/",
+    "summary": "Two recently disclosed SonicWall SMA1000 vulnerabilities were exploited in zero-day attacks for weeks, allowing threat actors to install custom malware on vulnerable VPN appliances. [...]",
+    "published": "2026-07-20T22:23:23Z",
+    "fetched": "2026-07-20T22:30:39.318314643Z",
+    "tags": [
+      "0day",
+      "malware"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "63cd6c7102ec498e57668c93c4b20785",
+    "source": "sans-isc",
+    "source_name": "SANS Internet Storm Center",
+    "category": "news",
+    "title": "WordPress Exploitation Underway (CVE-2026-63030), (Mon, Jul 20th)",
+    "url": "https://isc.sans.edu/diary/rss/33168",
+    "summary": "Last week, Searchlight Cyber released details about a vulnerability they are calling \"wp2shell\". The vulnerability was initially announced without a CVE number. But now has been assigned CVE-2026-63030. Many WordPress plugin vulnerabilities are never assigned CVE numbers. But wp2shell is different. It is a SQL injection vulnerability in WordPress Core, not a plugin, and can lead to unauthenticated remote code execution. Shortly after being announced, the vulnerability started to be exploited.&#xd;",
+    "published": "2026-07-20T18:41:24Z",
+    "fetched": "2026-07-20T22:30:39.318314643Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce",
+      "sqli"
+    ],
+    "severity": "high",
+    "score": 78,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-63030"
+    ]
+  },
+  {
+    "id": "17d2e3de3614db2d0b8707b5931dd109",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "⚡ Weekly Recap: WordPress RCE, SonicWall 0-Days, AI Service Attacks, SharePoint 0-Day and More",
+    "url": "https://thehackernews.com/2026/07/weekly-recap-wordpress-rce-sonicwall-0.html",
+    "summary": "A single request should not be able to do this much. But this week, small inputs led to code execution, memory loss, stolen keys, and disabled security tools. The paths were often simple: exposed systems, weak checks, old drivers, fake prompts, and public code used for malware delivery. Some bugs were new. Others were already being used before defenders had time to patch. Here is the full",
+    "published": "2026-07-20T13:32:26Z",
+    "fetched": "2026-07-20T22:30:39.318314643Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "0day",
+      "malware"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "wordpress"
+    ]
+  },
+  {
     "id": "715d2940f066e78a1d52136f81e86b83",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -1798,6 +1862,31 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4128",
     "summary": "Cisco IOS 12.4 contains multiple cross-site forgery vulnerabilities that allows remote attackers to execute arbitrary commands via (1) a certain \"show privilege\" command to the /level/15/exec/- URI, and (2) a certain \"alias exec\" command to the /level/15/exec/-/configure/http URI.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-16",
     "published": "2026-07-13T00:00:00Z",
+    "fetched": "2026-07-20T22:30:39.318314643Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "cisco",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2008-4128"
+    ]
+  },
+  {
+    "id": "9c029551f91e5dba449f9ac597ed5849",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2008-4128 — Cisco IOS: Cisco IOS Cross-Site Request Forgery Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4128",
+    "summary": "Cisco IOS 12.4 contains multiple cross-site forgery vulnerabilities that allows remote attackers to execute arbitrary commands via (1) a certain \"show privilege\" command to the /level/15/exec/- URI, and (2) a certain \"alias exec\" command to the /level/15/exec/-/configure/http URI.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-16",
+    "published": "2026-07-13T00:00:00Z",
     "fetched": "2026-07-13T22:27:28.801258292Z",
     "tags": [
       "kev",
@@ -1969,70 +2058,6 @@
     "score": 60,
     "cves": [
       "CVE-2026-15481"
-    ]
-  },
-  {
-    "id": "b14c59c130ea0f720fe47d0c7d071940",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 10.0 CRITICAL] CVE-2026-61447 — PraisonAI before 1.6.78 contains a remote code execution vulnerability in CodeAg…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61447",
-    "summary": "PraisonAI before 1.6.78 contains a remote code execution vulnerability in CodeAgent._execute_python() that executes LLM-generated Python code without AST validation, import restrictions, or sandbox enforcement. Attackers can influence LLM output through prompt injection to exfiltrate all environment secrets and execute arbitrary code on the host system.",
-    "published": "2026-07-11T14:16:23.377Z",
-    "fetched": "2026-07-12T22:24:09.059377977Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-61447"
-    ]
-  },
-  {
-    "id": "056bba35b1f00adda38c215ffd266cae",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.1 HIGH] CVE-2026-61442 — PraisonAI Platform (praisonai-platform) before 0.1.9 fails to enforce owner/admi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61442",
-    "summary": "PraisonAI Platform (praisonai-platform) before 0.1.9 fails to enforce owner/admin authorization on the PATCH routes for projects, issues, and agents, which only require workspace-member role. A workspace member can modify owner-created records; for projects, a member can reassign lead_id to their own user id and then delete the owner-created project, bypassing the delete route's owner/admin permission check.",
-    "published": "2026-07-11T14:16:23.017Z",
-    "fetched": "2026-07-12T22:24:09.059377977Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-61442"
-    ]
-  },
-  {
-    "id": "03012d0c37a96685944e4ea9ddbfbde7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.2 HIGH] CVE-2026-6939 — The CorvusPay WooCommerce Payment Gateway plugin for WordPress is vulnerable to …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6939",
-    "summary": "The CorvusPay WooCommerce Payment Gateway plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'approval_code' parameter in all versions up to, and including, 2.7.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The unauthenticated REST endpoint POST /wp-json/corvuspay/success/ is registered with permission_callback set to __return_true, and although a signature validation step exists it only logs the result without halting execution, meaning an attacker can supply a completely arbitrary signature and have a malicious approval_code stored in the database unchallenged.",
-    "published": "2026-07-11T07:16:46.787Z",
-    "fetched": "2026-07-12T22:24:09.059377977Z",
-    "tags": [
-      "xss",
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 78,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-6939"
     ]
   }
 ]

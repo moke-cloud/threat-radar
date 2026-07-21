@@ -5,7 +5,129 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Jul 2026 22:30:39 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 22:28:01 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Critical SharePoint RCE flaw exploited to steal machine keys</title>
+      <link>https://www.bleepingcomputer.com/news/security/critical-sharepoint-rce-flaw-exploited-to-steal-machine-keys/</link>
+      <guid isPermaLink="false">6d1e1809850967a5a0ee6c1b48fe28b6</guid>
+      <pubDate>Tue, 21 Jul 2026 20:06:55 +0000</pubDate>
+      <description>Hackers are actively exploiting the critical CVE-2026-50522 vulnerability in Microsoft SharePoint to steal machine keys and maintain access even after affected servers are patched. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] Qilin Ransomware Attackers Exploit PAN-OS Authentication Bypass for Initial Access</title>
+      <link>https://thehackernews.com/2026/07/qilin-ransomware-attackers-exploit-pan.html</link>
+      <guid isPermaLink="false">69d549e65b1171299a86f46155364c84</guid>
+      <pubDate>Tue, 21 Jul 2026 14:04:57 +0000</pubDate>
+      <description>Threat actors have been observed exploiting a now-patched high-severity Palo Alto Networks PAN-OS vulnerability as an entry point to deploy Qilin (aka Agenda) ransomware on victim environments. Arctic Wolf Labs said it investigated multiple intrusions in June 2026 that began with the exploitation of CVE-2026-0257 (CVSS score: 7.8), an authentication bypass flaw affecting the portal and gateway</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>paloalto</category>
+      <category>watch</category>
+      <category>auth-bypass</category>
+      <category>ransomware</category>
+      <category>paloalto</category>
+    </item>
+    <item>
+      <title>[CRIT] Critical Palo Alto VPN bug now exploited by Qilin ransomware gang</title>
+      <link>https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/</link>
+      <guid isPermaLink="false">8d288091a492d2e0c175751bc58eb823</guid>
+      <pubDate>Tue, 21 Jul 2026 10:12:24 +0000</pubDate>
+      <description>The Qilin ransomware gang is exploiting a critical PAN-OS GlobalProtect authentication bypass flaw to breach victims&#39; networks, according to cybersecurity company Arctic Wolf. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>critical</category>
+      <category>paloalto</category>
+      <category>watch</category>
+      <category>auth-bypass</category>
+      <category>ransomware</category>
+      <category>paloalto</category>
+    </item>
+    <item>
+      <title>[HIGH] Windows LegacyHive zero-day flaw gets free, unofficial patches</title>
+      <link>https://www.bleepingcomputer.com/news/security/windows-legacyhive-zero-day-flaw-gets-free-unofficial-patches/</link>
+      <guid isPermaLink="false">f7878b5fe98c753910af06071b599e23</guid>
+      <pubDate>Tue, 21 Jul 2026 08:06:26 +0000</pubDate>
+      <description>Free unofficial patches are available for a recently disclosed Windows zero-day flaw that allows attackers to escalate privileges on up-to-date Windows systems. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>0day</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] New ENCFORGE Ransomware Targets AI Model Files in Langflow RCE Attack</title>
+      <link>https://thehackernews.com/2026/07/new-encforge-ransomware-targets-ai.html</link>
+      <guid isPermaLink="false">98e877f8485704a16cd43c79ba2ac4e9</guid>
+      <pubDate>Tue, 21 Jul 2026 07:34:32 +0000</pubDate>
+      <description>Researchers at Sysdig have linked a second attack on the same Langflow server to JADEPUFFER, the AI-agent-driven operator it first documented earlier this month. The same operator has now been spotted deploying ENCFORGE, a new compiled Go ransomware designed to encrypt model weights, vector indexes, training datasets, and other AI infrastructure files across the host filesystem. The entry</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>ransomware</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-60137 — WordPress Core: WordPress Core SQL Injection Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60137</link>
+      <guid isPermaLink="false">f22719ce5129f548f0ab4b979db254a6</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>WordPress Core contains a SQL injection vulnerability when a plugin or theme passes untrusted input to the parameter. This vulnerability can be chained with CVE-2026-63030 to allow an unauthenticated attacker to gain remote code execution on default WordPress installations.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-04</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>sqli</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-63030 — WordPress Core: WordPress Core Interpretation Conflict Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63030</link>
+      <guid isPermaLink="false">695f29dd7dcd01453cda31e43e9f642f</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>WordPress Core contains an interpretation conflict vulnerability that could allow an attacker to perform SQL Injection and achieve Remote Code Execution. This vulnerability can be chained with CVE-2026-60137.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-24</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>sqli</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-0770 — Langflow Langflow: Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0770</link>
+      <guid isPermaLink="false">c684b98605578bbb19ddf74e77690c60</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Langflow contains an inclusion of functionality from untrusted control sphere vulnerability that allows remote attackers to execute arbitrary code on affected installations. &#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-24</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>langflow</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2021-27137 — DD-WRT DD-WRT: DD-WRT Stack-Based Buffer Overflow Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-27137</link>
+      <guid isPermaLink="false">5753e87a981f4381204d9b8412991797</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>DD-WRT contains a stack-based buffer overflow vulnerability that could allow an unauthenticated attacker to overflow an internal buffer used by UPnP and trigger a code execution vulnerability.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-24</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>rce</category>
+      <category>dd-wrt</category>
+    </item>
     <item>
       <title>[HIGH] SonicWall SMA1000 flaws exploited as zero-days to push custom malware</title>
       <link>https://www.bleepingcomputer.com/news/security/sonicwall-sma1000-flaws-exploited-as-zero-days-to-push-custom-malware/</link>
@@ -776,6 +898,21 @@
       <description>Microsoft is publishing 622 vulnerabilities on July 2026 Patch Tuesday, including a record-breaking 416 Windows vulnerabilities. Microsoft is aware of exploitation in the wild for two of the vulnerabilities published today, both of which are listed on CISA KEV, as well as public disclosure for one other. As usual, browser vulns are not included in the Patch Tuesday count above. Rapid7 noted last month that Microsoft no longer enumerates Chromium CVEs in the Security Update Guide. However, Microsoft has now taken the pursuit of minimalism much further, since today’s Security Update Guide no l...</description>
       <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
       <category>high</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>actively-exploited</category>
+      <category>microsoft</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] Patch Tuesday - July 2026</title>
+      <link>https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026</link>
+      <guid isPermaLink="false">69ec2b84741933ac39b9cd482d15f57d</guid>
+      <pubDate>Tue, 14 Jul 2026 22:00:26 +0000</pubDate>
+      <description>Microsoft is publishing 622 vulnerabilities on July 2026 Patch Tuesday, including a record-breaking 416 Windows vulnerabilities. Microsoft is aware of exploitation in the wild for two of the vulnerabilities published today, both of which are listed on CISA KEV, as well as public disclosure for one other. As usual, browser vulns are not included in the Patch Tuesday count above. Rapid7 noted last month that Microsoft no longer enumerates Chromium CVEs in the Security Update Guide. However, Microsoft has now taken the pursuit of minimalism much further, since today’s Security Update Guide no l...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
+      <category>high</category>
       <category>chrome</category>
       <category>microsoft</category>
       <category>watch</category>
@@ -934,6 +1071,21 @@
       <category>0day</category>
     </item>
     <item>
+      <title>[HIGH] CVE-2026-55040: Microsoft SharePoint JWT Token Authentication Bypass (FIXED)</title>
+      <link>https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed</link>
+      <guid isPermaLink="false">afa3af73588c3bea60b88f5bb4127227</guid>
+      <pubDate>Tue, 14 Jul 2026 13:00:00 +0000</pubDate>
+      <description>OverviewRapid7 Labs conducted a zero-day research project against Microsoft SharePoint, resulting in the discovery of two new vulnerabilities that, when chained together, achieve unauthenticated remote code execution (RCE) against a vulnerable SharePoint server. Today, both Rapid7 and Microsoft are disclosing the first vulnerability in this chain, the authentication bypass vulnerability CVE-2026-55040. The RCE component of the exploit chain is expected to be patched by Microsoft in the next update cycle for August 2026. The exploit chain was developed as an entry for the recent Pwn2Own Berlin ...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>auth-bypass</category>
+      <category>0day</category>
+      <category>microsoft</category>
+    </item>
+    <item>
       <title>[CRIT] CVE-2026-55040: Microsoft SharePoint JWT Token Authentication Bypass (FIXED)</title>
       <link>https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed</link>
       <guid isPermaLink="false">afa3af73588c3bea60b88f5bb4127227</guid>
@@ -1001,6 +1153,71 @@
       <category>sonicwall</category>
     </item>
     <item>
+      <title>[CRIT] [KEV] CVE-2026-56155 — Microsoft Active Directory Federation Services: Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56155</link>
+      <guid isPermaLink="false">d28f09074225c2e12f3d8faa7b5c9ef5</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Active Directory Federation Services contains an insufficient granularity of access control vulnerability that allows an authorized attacker to elevate privileges locally.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-28</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-56164 — Microsoft SharePoint Server: Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56164</link>
+      <guid isPermaLink="false">637bdd03782a44f1d3e0f3e4999593a7</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft SharePoint contains a missing authentication for critical function vulnerability that allows an unauthorized attacker to elevate privileges over a network.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-17</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-15409 — SonicWall SMA1000 Appliances: SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15409</link>
+      <guid isPermaLink="false">a45b27bf20b2330862bea291e7c0a743</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <description>SonicWall SMA1000 Appliances contain a server-side request forgery vulnerability that could allow a remote unauthenticated attacker to potentially cause the appliance to make requests to unintended location.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-17</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>sonicwall</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-15410 — SonicWall SMA1000 Appliances: SonicWall SMA1000 Appliances Code Injection Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15410</link>
+      <guid isPermaLink="false">94f9f05b61b4aac25cc75c1cc5209421</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+      <description>SonicWall SMA1000 Appliances contain a code injection vulnerability which in specific conditions could potentially enable a remote authenticated attacker as administrator to execute arbitrary OS commands.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-17</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>sonicwall</category>
+    </item>
+    <item>
+      <title>[HIGH] Defending SaaS-based applications against ShinyHunters OAuth abuse</title>
+      <link>https://www.microsoft.com/en-us/security/blog/2026/07/13/defending-saas-based-applications-against-shinyhunters-oauth-abuse/</link>
+      <guid isPermaLink="false">060b15cf70ed0ac886dfd18de1c91e5c</guid>
+      <pubDate>Mon, 13 Jul 2026 22:02:41 +0000</pubDate>
+      <description>Microsoft Threat Intelligence identified threat actor activity with overlapping tradecraft commonly associated with ShinyHunters, including voice phishing (vishing), supply-chain compromise, and misconfigured guest access targeting SaaS-based applications. The post Defending SaaS-based applications against ShinyHunters OAuth abuse appeared first on Microsoft Security Blog.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>supply-chain</category>
+      <category>microsoft</category>
+    </item>
+    <item>
       <title>[HIGH] Defending SaaS-based applications against ShinyHunters OAuth abuse</title>
       <link>https://www.microsoft.com/en-us/security/blog/2026/07/13/defending-saas-based-applications-against-shinyhunters-oauth-abuse/</link>
       <guid isPermaLink="false">060b15cf70ed0ac886dfd18de1c91e5c</guid>
@@ -1023,127 +1240,6 @@
       <category>critical</category>
       <category>rce</category>
       <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-400: (0Day) AnyDesk Screen Recording Link Following Denial-of-Service Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-400/</link>
-      <guid isPermaLink="false">a74af46134a156784ea74e7140db1803</guid>
-      <pubDate>Mon, 13 Jul 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows local attackers to create a denial-of-service condition on affected installations of AnyDesk. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 4.7. The following CVEs are assigned: CVE-2026-15681.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2008-4128 — Cisco IOS: Cisco IOS Cross-Site Request Forgery Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2008-4128</link>
-      <guid isPermaLink="false">9c029551f91e5dba449f9ac597ed5849</guid>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Cisco IOS 12.4 contains multiple cross-site forgery vulnerabilities that allows remote attackers to execute arbitrary commands via (1) a certain &#34;show privilege&#34; command to the /level/15/exec/- URI, and (2) a certain &#34;alias exec&#34; command to the /level/15/exec/-/configure/http URI.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-16</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2008-4128 — Cisco IOS: Cisco IOS Cross-Site Request Forgery Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2008-4128</link>
-      <guid isPermaLink="false">9c029551f91e5dba449f9ac597ed5849</guid>
-      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Cisco IOS 12.4 contains multiple cross-site forgery vulnerabilities that allows remote attackers to execute arbitrary commands via (1) a certain &#34;show privilege&#34; command to the /level/15/exec/- URI, and (2) a certain &#34;alias exec&#34; command to the /level/15/exec/-/configure/http URI.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-16</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-56271 — Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56271</link>
-      <guid isPermaLink="false">2e3cb51465193786449b46120a207e26</guid>
-      <pubDate>Sun, 12 Jul 2026 12:16:45 +0000</pubDate>
-      <description>Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded default JWT secrets (&#39;auth_token&#39;, &#39;refresh_token&#39;) and default audience and issuer values (&#39;AUDIENCE&#39;, &#39;ISSUER&#39;) in the enterprise passport authentication middleware (packages/server/src/enterprise/middleware/passport/index.ts). When the corresponding environment variables (JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER) are not set, the application silently falls back to these publicly known defaults, allowing an attacker to forge valid JWTs and impersonate any user, including administrators, resulting in authentication bypass.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>auth-bypass</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.2 HIGH] CVE-2026-56259 — Crawl4AI before 0.8.8 contains credential exfiltration vulnerabilities in the Do…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56259</link>
-      <guid isPermaLink="false">aa48cbc1508139f782d292bc06b14eb2</guid>
-      <pubDate>Sun, 12 Jul 2026 12:16:45 +0000</pubDate>
-      <description>Crawl4AI before 0.8.8 contains credential exfiltration vulnerabilities in the Docker API server that allow attackers to redirect LLM API calls to attacker-controlled endpoints and read arbitrary environment variables. Attackers can exploit the unauthenticated /md, /llm, and /llm/job endpoints by supplying a malicious base_url parameter and setting api_token to env:VARIABLE_NAME to exfiltrate provider API keys and server secrets including JWT SECRET_KEY for authentication bypass.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>auth-bypass</category>
-      <category>docker</category>
-      <category>docker</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-15496 — A vulnerability was found in SonicCloudOrg sonic-agent up to 2.7.2. The impacted…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15496</link>
-      <guid isPermaLink="false">b47378233a65e9baf0153c49d027ef20</guid>
-      <pubDate>Sun, 12 Jul 2026 11:16:46 +0000</pubDate>
-      <description>A vulnerability was found in SonicCloudOrg sonic-agent up to 2.7.2. The impacted element is the function evalIsFailed of the file sonic-agent/src/main/java/org/cloud/sonic/agent/tests/script/GroovyScriptImpl.java of the component Groovy Script Handler. The manipulation results in os command injection. The attack can be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-15495 — A vulnerability has been found in SonicCloudOrg sonic-agent up to 2.7.2. The aff…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15495</link>
-      <guid isPermaLink="false">6e351fac6a94563cd58c7e802f51a896</guid>
-      <pubDate>Sun, 12 Jul 2026 11:16:46 +0000</pubDate>
-      <description>A vulnerability has been found in SonicCloudOrg sonic-agent up to 2.7.2. The affected element is an unknown function of the file AndroidWSServer.java of the component Android WebSocket Server. The manipulation of the argument path leads to os command injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-15487 — A vulnerability was found in TRENDnet TEW-821DAP 1.11B03. This impacts the funct…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15487</link>
-      <guid isPermaLink="false">297b710aad08e3cde14fd5527082e2e0</guid>
-      <pubDate>Sun, 12 Jul 2026 09:16:39 +0000</pubDate>
-      <description>A vulnerability was found in TRENDnet TEW-821DAP 1.11B03. This impacts the function sub_41FBD0 of the file /goform/system_ntp of the component Firmware Update Handler. Performing a manipulation of the argument Hostname results in os command injection. The attack may be initiated remotely. The vendor explains: &#34;We are unable to confirm the existence of the vulnerabilities for (...) TEW-821DAP (v1.0R) as these items have been EOL. &#34; This vulnerability only affects products that are no longer supported by the maintainer.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-15486 — A vulnerability has been found in TRENDnet TEW-821DAP 1.11B03. This affects the …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15486</link>
-      <guid isPermaLink="false">87171ed950cb4083205d83f187c56f57</guid>
-      <pubDate>Sun, 12 Jul 2026 09:16:38 +0000</pubDate>
-      <description>A vulnerability has been found in TRENDnet TEW-821DAP 1.11B03. This affects the function sub_42026C of the file /goform/tools_ddns of the component Firmware Update Handler. Such manipulation of the argument hostname/username/password leads to os command injection. The attack can be launched remotely. The vendor explains: &#34;We are unable to confirm the existence of the vulnerabilities for (...) TEW-821DAP (v1.0R) as these items have been EOL. &#34; This vulnerability only affects products that are no longer supported by the maintainer.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-15485 — A flaw has been found in TRENDnet TEW-821DAP 1.11B03. The impacted element is th…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15485</link>
-      <guid isPermaLink="false">dcad03677018dcedaeb240e35db3b840</guid>
-      <pubDate>Sun, 12 Jul 2026 08:16:10 +0000</pubDate>
-      <description>A flaw has been found in TRENDnet TEW-821DAP 1.11B03. The impacted element is the function sub_43F2C4 of the file /goform/tools_nslookup of the component DNS Lookup Handler. This manipulation of the argument nslookup_target/dns_server causes os command injection. The attack can be initiated remotely. The vendor explains: &#34;We are unable to confirm the existence of the vulnerabilities for (...) TEW-821DAP (v1.0R) as these items have been EOL. &#34; This vulnerability only affects products that are no longer supported by the maintainer.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-15481 — A security flaw has been discovered in Trendnet TEW-635BRM up to 1.00.03. This v…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15481</link>
-      <guid isPermaLink="false">b46faf31cd68f7ecdba786c3ef8af8cb</guid>
-      <pubDate>Sun, 12 Jul 2026 06:16:42 +0000</pubDate>
-      <description>A security flaw has been discovered in Trendnet TEW-635BRM up to 1.00.03. This vulnerability affects the function ipoa_test of the file /sbin/rc of the component IPoA WAN Connection Setup. Performing a manipulation of the argument ipoa_ipaddr results in command injection. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The vendor explains: &#34;We are unable to confirm if the vulnerability exists. This item has been EOL since 2011. We will make an official announcement of possible vulnerabilities, and recommend users to switch devices.&#34; This vulnerability only affects products that are no longer supported by the maintainer.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,91 @@
 [
   {
+    "id": "8f6b2ff09acf5351b364a434da1cdb17",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Hackers Exploit Windmill Flaw to Read Arbitrary Server Files Without Authentication",
+    "url": "https://thehackernews.com/2026/07/hackers-exploit-windmill-flaw-to-read.html",
+    "summary": "A high-severity security flaw impacting open-source developer platform Windmill has come under active exploitation in the wild, per VulnCheck. The vulnerability in question is CVE-2026-29059 (CVSS score: 7.5), a case of unauthenticated path traversal impacting Windmill's \"get_log_file\" endpoint (\"/api/w/{workspace}/jobs_u/get_log_file/{filename}\"). \"The filename parameter is concatenated into",
+    "published": "2026-07-22T12:36:36Z",
+    "fetched": "2026-07-22T22:33:43.238596372Z",
+    "tags": [
+      "rce",
+      "path-traversal",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 86,
+    "cves": [
+      "CVE-2026-29059"
+    ]
+  },
+  {
+    "id": "b5b34efe0b7bfcc3c1f7268cce46d8aa",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA orders urgent action on actively exploited Langflow RCE flaw",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-langflow-rce-flaw/",
+    "summary": "The Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday ordered U.S. government agencies to prioritize patching an actively exploited vulnerability in the Langflow visual framework for building AI agents. [...]",
+    "published": "2026-07-22T11:43:28Z",
+    "fetched": "2026-07-22T22:33:43.238596372Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 87
+  },
+  {
+    "id": "2f8bcd2e4ccd37e804737c92575d1f0f",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-16232 — Check Point SmartConsole: Check Point SmartConsole Improper Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16232",
+    "summary": "Check Point SmartConsole contains an improper authentication vulnerability which could allow an unauthenticated remote attacker to obtain an application login token and use it to authenticate with full administrative privileges.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-25",
+    "published": "2026-07-22T00:00:00Z",
+    "fetched": "2026-07-22T22:33:43.238596372Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "check"
+    ],
+    "cves": [
+      "CVE-2026-16232"
+    ]
+  },
+  {
+    "id": "b8b056669388ca3b98252dd96d58e910",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-50522 — Microsoft SharePoint: Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50522",
+    "summary": "Microsoft SharePoint contains a deserialization of untrusted data vulnerability which could allow an unauthorized attacker to execute code over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-25",
+    "published": "2026-07-22T00:00:00Z",
+    "fetched": "2026-07-22T22:33:43.238596372Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-50522"
+    ]
+  },
+  {
     "id": "6d1e1809850967a5a0ee6c1b48fe28b6",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1380,6 +1466,26 @@
     "url": "https://www.rapid7.com/blog/post/etr-rapid7-mdr-team-discovers-new-sonicwall-sma1000-zero-days-being-actively-exploited-cve-2026-15409-cve-2026-15410",
     "summary": "OverviewOn July 14, 2026, SonicWall published a security advisory addressing two vulnerabilities affecting SMA1000 Series remote access appliances, including the critical server-side request forgery (SSRF) vulnerability CVE-2026-15409 (CVSS 10.0) and the high-severity code injection vulnerability CVE-2026-15410. The advisory urges customers to immediately apply the latest platform hotfix releases.Successful exploitation of CVE-2026-15409 permits an unauthenticated attacker to open a websocket-based tunnel to arbitrary localhost-only services, while CVE-2026-15410 is a local privilege escalatio...",
     "published": "2026-07-15T16:19:26Z",
+    "fetched": "2026-07-22T22:33:43.238596372Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 61,
+    "cves": [
+      "CVE-2026-15409",
+      "CVE-2026-15410"
+    ]
+  },
+  {
+    "id": "536dc23826feb7416ec2fd4894f831c7",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Rapid7 MDR Team Discovers New SonicWall SMA1000 Zero Days being Actively Exploited (CVE-2026-15409, CVE-2026-15410)",
+    "url": "https://www.rapid7.com/blog/post/etr-rapid7-mdr-team-discovers-new-sonicwall-sma1000-zero-days-being-actively-exploited-cve-2026-15409-cve-2026-15410",
+    "summary": "OverviewOn July 14, 2026, SonicWall published a security advisory addressing two vulnerabilities affecting SMA1000 Series remote access appliances, including the critical server-side request forgery (SSRF) vulnerability CVE-2026-15409 (CVSS 10.0) and the high-severity code injection vulnerability CVE-2026-15410. The advisory urges customers to immediately apply the latest platform hotfix releases.Successful exploitation of CVE-2026-15409 permits an unauthenticated attacker to open a websocket-based tunnel to arbitrary localhost-only services, while CVE-2026-15410 is a local privilege escalatio...",
+    "published": "2026-07-15T16:19:26Z",
     "fetched": "2026-07-15T22:29:43.271327101Z",
     "tags": [
       "actively-exploited"
@@ -1544,6 +1650,53 @@
     ],
     "cves": [
       "CVE-2026-50522"
+    ]
+  },
+  {
+    "id": "0b6400691df938a66e19009bc2c6ad14",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-46817 — Oracle E-Business Suite: Oracle E-Business Suite Improper Privilege Management Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46817",
+    "summary": "Oracle E-Business Suite contains an improper privilege management vulnerability that allows an unauthenticated attacker with network access via HTTP to compromise Oracle Payments. Successful attacks of this vulnerability can result in takeover of Oracle Payments.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-18",
+    "published": "2026-07-15T00:00:00Z",
+    "fetched": "2026-07-22T22:33:43.238596372Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "oracle"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "oracle"
+    ],
+    "cves": [
+      "CVE-2026-46817"
+    ]
+  },
+  {
+    "id": "75c1fae08036034892fd25f1ade3c88b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2023-4346 — KNX Association KNX Protocol Connection Authorization Option 1: KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4346",
+    "summary": "KNX Association KNX Protocol Connection Authorization Option 1 contains an overly restrictive account lockout mechanism vulnerability that could allow an attacker to purge all devices without additional security options enabled and set a BCU key to lock the device. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-29",
+    "published": "2026-07-15T00:00:00Z",
+    "fetched": "2026-07-22T22:33:43.238596372Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "knx"
+    ],
+    "cves": [
+      "CVE-2023-4346"
     ]
   },
   {
@@ -1959,326 +2112,6 @@
     ],
     "cves": [
       "CVE-2026-55040"
-    ]
-  },
-  {
-    "id": "d28f09074225c2e12f3d8faa7b5c9ef5",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-56155 — Microsoft Active Directory Federation Services: Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56155",
-    "summary": "Microsoft Active Directory Federation Services contains an insufficient granularity of access control vulnerability that allows an authorized attacker to elevate privileges locally.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-28",
-    "published": "2026-07-14T00:00:00Z",
-    "fetched": "2026-07-21T22:28:00.959443995Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-56155"
-    ]
-  },
-  {
-    "id": "637bdd03782a44f1d3e0f3e4999593a7",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-56164 — Microsoft SharePoint Server: Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56164",
-    "summary": "Microsoft SharePoint contains a missing authentication for critical function vulnerability that allows an unauthorized attacker to elevate privileges over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-17",
-    "published": "2026-07-14T00:00:00Z",
-    "fetched": "2026-07-21T22:28:00.959443995Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-56164"
-    ]
-  },
-  {
-    "id": "a45b27bf20b2330862bea291e7c0a743",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-15409 — SonicWall SMA1000 Appliances: SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15409",
-    "summary": "SonicWall SMA1000 Appliances contain a server-side request forgery vulnerability that could allow a remote unauthenticated attacker to potentially cause the appliance to make requests to unintended location.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-17",
-    "published": "2026-07-14T00:00:00Z",
-    "fetched": "2026-07-21T22:28:00.959443995Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "sonicwall"
-    ],
-    "cves": [
-      "CVE-2026-15409"
-    ]
-  },
-  {
-    "id": "94f9f05b61b4aac25cc75c1cc5209421",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-15410 — SonicWall SMA1000 Appliances: SonicWall SMA1000 Appliances Code Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15410",
-    "summary": "SonicWall SMA1000 Appliances contain a code injection vulnerability which in specific conditions could potentially enable a remote authenticated attacker as administrator to execute arbitrary OS commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-17",
-    "published": "2026-07-14T00:00:00Z",
-    "fetched": "2026-07-21T22:28:00.959443995Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "sonicwall"
-    ],
-    "cves": [
-      "CVE-2026-15410"
-    ]
-  },
-  {
-    "id": "d28f09074225c2e12f3d8faa7b5c9ef5",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-56155 — Microsoft Active Directory Federation Services: Microsoft Active Directory Federation Services Insufficient Granularity of Access Control Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56155",
-    "summary": "Microsoft Active Directory Federation Services contains an insufficient granularity of access control vulnerability that allows an authorized attacker to elevate privileges locally.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-28",
-    "published": "2026-07-14T00:00:00Z",
-    "fetched": "2026-07-14T22:30:31.287981674Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-56155"
-    ]
-  },
-  {
-    "id": "637bdd03782a44f1d3e0f3e4999593a7",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-56164 — Microsoft SharePoint Server: Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56164",
-    "summary": "Microsoft SharePoint contains a missing authentication for critical function vulnerability that allows an unauthorized attacker to elevate privileges over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-17",
-    "published": "2026-07-14T00:00:00Z",
-    "fetched": "2026-07-14T22:30:31.287981674Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-56164"
-    ]
-  },
-  {
-    "id": "a45b27bf20b2330862bea291e7c0a743",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-15409 — SonicWall SMA1000 Appliances: SonicWall SMA1000 Appliances Server-Side Request Forgery Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15409",
-    "summary": "SonicWall SMA1000 Appliances contain a server-side request forgery vulnerability that could allow a remote unauthenticated attacker to potentially cause the appliance to make requests to unintended location.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-17",
-    "published": "2026-07-14T00:00:00Z",
-    "fetched": "2026-07-14T22:30:31.287981674Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "sonicwall"
-    ],
-    "cves": [
-      "CVE-2026-15409"
-    ]
-  },
-  {
-    "id": "94f9f05b61b4aac25cc75c1cc5209421",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-15410 — SonicWall SMA1000 Appliances: SonicWall SMA1000 Appliances Code Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15410",
-    "summary": "SonicWall SMA1000 Appliances contain a code injection vulnerability which in specific conditions could potentially enable a remote authenticated attacker as administrator to execute arbitrary OS commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-17",
-    "published": "2026-07-14T00:00:00Z",
-    "fetched": "2026-07-14T22:30:31.287981674Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "sonicwall"
-    ],
-    "cves": [
-      "CVE-2026-15410"
-    ]
-  },
-  {
-    "id": "060b15cf70ed0ac886dfd18de1c91e5c",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "Defending SaaS-based applications against ShinyHunters OAuth abuse",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/07/13/defending-saas-based-applications-against-shinyhunters-oauth-abuse/",
-    "summary": "Microsoft Threat Intelligence identified threat actor activity with overlapping tradecraft commonly associated with ShinyHunters, including voice phishing (vishing), supply-chain compromise, and misconfigured guest access targeting SaaS-based applications. The post Defending SaaS-based applications against ShinyHunters OAuth abuse appeared first on Microsoft Security Blog.",
-    "published": "2026-07-13T22:02:41Z",
-    "fetched": "2026-07-21T22:28:00.959443995Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "supply-chain"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "060b15cf70ed0ac886dfd18de1c91e5c",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "Defending SaaS-based applications against ShinyHunters OAuth abuse",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/07/13/defending-saas-based-applications-against-shinyhunters-oauth-abuse/",
-    "summary": "Microsoft Threat Intelligence identified threat actor activity with overlapping tradecraft commonly associated with ShinyHunters, including voice phishing (vishing), supply-chain compromise, and misconfigured guest access targeting SaaS-based applications. The post Defending SaaS-based applications against ShinyHunters OAuth abuse appeared first on Microsoft Security Blog.",
-    "published": "2026-07-13T22:02:41Z",
-    "fetched": "2026-07-14T22:30:31.287981674Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "supply-chain"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "b16dd42087ecdded17b1cba74c0b7de1",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA warns of actively exploited RCE flaws in Joomla extensions",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning that attackers are exploiting vulnerabilities in the iCagenda and Balbooa Forms extensions for Joomla to achieve remote code execution through arbitrary file uploads. [...]",
-    "published": "2026-07-13T15:20:16Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 87
-  },
-  {
-    "id": "a74af46134a156784ea74e7140db1803",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-400: (0Day) AnyDesk Screen Recording Link Following Denial-of-Service Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-400/",
-    "summary": "This vulnerability allows local attackers to create a denial-of-service condition on affected installations of AnyDesk. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 4.7. The following CVEs are assigned: CVE-2026-15681.",
-    "published": "2026-07-13T05:00:00Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 61,
-    "cves": [
-      "CVE-2026-15681"
-    ]
-  },
-  {
-    "id": "9c029551f91e5dba449f9ac597ed5849",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2008-4128 — Cisco IOS: Cisco IOS Cross-Site Request Forgery Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4128",
-    "summary": "Cisco IOS 12.4 contains multiple cross-site forgery vulnerabilities that allows remote attackers to execute arbitrary commands via (1) a certain \"show privilege\" command to the /level/15/exec/- URI, and (2) a certain \"alias exec\" command to the /level/15/exec/-/configure/http URI.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-16",
-    "published": "2026-07-13T00:00:00Z",
-    "fetched": "2026-07-20T22:30:39.318314643Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2008-4128"
-    ]
-  },
-  {
-    "id": "9c029551f91e5dba449f9ac597ed5849",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2008-4128 — Cisco IOS: Cisco IOS Cross-Site Request Forgery Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4128",
-    "summary": "Cisco IOS 12.4 contains multiple cross-site forgery vulnerabilities that allows remote attackers to execute arbitrary commands via (1) a certain \"show privilege\" command to the /level/15/exec/- URI, and (2) a certain \"alias exec\" command to the /level/15/exec/-/configure/http URI.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-16",
-    "published": "2026-07-13T00:00:00Z",
-    "fetched": "2026-07-13T22:27:28.801258292Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2008-4128"
     ]
   }
 ]

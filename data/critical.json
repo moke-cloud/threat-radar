@@ -1,5 +1,22 @@
 [
   {
+    "id": "d461bd81d77c12b51913c318e8012469",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say",
+    "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
+    "summary": "Redis shipped seven security releases on July 23 after researchers published authenticated RCE PoCs for stock Redis 6.2.22, 7.4.9, 8.6.4, and 8.8.0. All four chains require RESTORE. The Streams chains also need EVAL and XGROUP; the 8.8.0 chain needs EVAL and the bundled RedisBloom module. Redis says the underlying memory flaws may lead to remote code execution. Redis 6.2.23, 7.2.15, and 7.4.10",
+    "published": "2026-07-24T06:58:27Z",
+    "fetched": "2026-07-24T22:34:51.500285138Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 78
+  },
+  {
     "id": "42ad05df3be833013502c0f939def9b5",
     "source": "rapid7",
     "source_name": "Rapid7 Blog",
@@ -902,6 +919,31 @@
     "url": "https://www.rapid7.com/blog/post/etr-cve-2026-58644-microsoft-sharepoint-server-unauthenticated-remote-code-execution-vulnerability-exploited-in-the-wild",
     "summary": "OverviewOn July 14, 2026, Microsoft published a security advisory addressing CVE-2026-58644, a critical remote code execution (RCE) vulnerability affecting on-premises Microsoft SharePoint Server deployments. The vulnerability, which carries a CVSS v3.1 score of 9.8 (Critical), results from the deserialization of untrusted data (CWE-502) and allows an unauthenticated attacker to execute arbitrary code.Microsoft confirmed active exploitation of CVE-2026-58644, and the vulnerability was subsequently added to CISA’s Known Exploited Vulnerabilities (KEV) catalog on July 16, 2026. In parallel, CI...",
     "published": "2026-07-17T18:18:53Z",
+    "fetched": "2026-07-24T22:34:51.500285138Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 91,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-58644"
+    ]
+  },
+  {
+    "id": "39f258feb962f128de825a2c3a5f64fe",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "CVE-2026-58644: Microsoft SharePoint Server Unauthenticated Remote Code Execution Vulnerability Exploited in the Wild",
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-58644-microsoft-sharepoint-server-unauthenticated-remote-code-execution-vulnerability-exploited-in-the-wild",
+    "summary": "OverviewOn July 14, 2026, Microsoft published a security advisory addressing CVE-2026-58644, a critical remote code execution (RCE) vulnerability affecting on-premises Microsoft SharePoint Server deployments. The vulnerability, which carries a CVSS v3.1 score of 9.8 (Critical), results from the deserialization of untrusted data (CWE-502) and allows an unauthenticated attacker to execute arbitrary code.Microsoft confirmed active exploitation of CVE-2026-58644, and the vulnerability was subsequently added to CISA’s Known Exploited Vulnerabilities (KEV) catalog on July 16, 2026. In parallel, CI...",
+    "published": "2026-07-17T18:18:53Z",
     "fetched": "2026-07-17T22:22:02.395688736Z",
     "tags": [
       "microsoft",
@@ -994,6 +1036,27 @@
     "score": 60,
     "cves": [
       "CVE-2026-48010"
+    ]
+  },
+  {
+    "id": "36abb2ab766f89dba33e6733eef284e4",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "Microsoft at Black Hat USA 2026: Defending trust in the age of AI and supply chain attacks",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/07/17/microsoft-at-black-hat-usa-2026-defending-trust-in-the-age-of-ai-and-supply-chain-attacks/",
+    "summary": "Join Microsoft Security at Black Hat USA 2026 for supply chain research, hands-on security experiences, expert conversations, and our reception. The post Microsoft at Black Hat USA 2026: Defending trust in the age of AI and supply chain attacks appeared first on Microsoft Security Blog.",
+    "published": "2026-07-17T16:00:00Z",
+    "fetched": "2026-07-24T22:34:51.500285138Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "supply-chain"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "microsoft"
     ]
   },
   {
@@ -1898,165 +1961,6 @@
     ],
     "cves": [
       "CVE-2023-4346"
-    ]
-  },
-  {
-    "id": "69ec2b84741933ac39b9cd482d15f57d",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Patch Tuesday - July 2026",
-    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026",
-    "summary": "Microsoft is publishing 622 vulnerabilities on July 2026 Patch Tuesday, including a record-breaking 416 Windows vulnerabilities. Microsoft is aware of exploitation in the wild for two of the vulnerabilities published today, both of which are listed on CISA KEV, as well as public disclosure for one other. As usual, browser vulns are not included in the Patch Tuesday count above. Rapid7 noted last month that Microsoft no longer enumerates Chromium CVEs in the Security Update Guide. However, Microsoft has now taken the pursuit of minimalism much further, since today’s Security Update Guide no l...",
-    "published": "2026-07-14T22:00:26Z",
-    "fetched": "2026-07-21T22:28:00.959443995Z",
-    "tags": [
-      "microsoft",
-      "chrome",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft",
-      "chrome"
-    ]
-  },
-  {
-    "id": "69ec2b84741933ac39b9cd482d15f57d",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Patch Tuesday - July 2026",
-    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026",
-    "summary": "Microsoft is publishing 622 vulnerabilities on July 2026 Patch Tuesday, including a record-breaking 416 Windows vulnerabilities. Microsoft is aware of exploitation in the wild for two of the vulnerabilities published today, both of which are listed on CISA KEV, as well as public disclosure for one other. As usual, browser vulns are not included in the Patch Tuesday count above. Rapid7 noted last month that Microsoft no longer enumerates Chromium CVEs in the Security Update Guide. However, Microsoft has now taken the pursuit of minimalism much further, since today’s Security Update Guide no l...",
-    "published": "2026-07-14T22:00:26Z",
-    "fetched": "2026-07-14T22:30:31.287981674Z",
-    "tags": [
-      "chrome",
-      "microsoft",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "chrome",
-      "microsoft"
-    ]
-  },
-  {
-    "id": "cb33d8512afef95614fdf14a96b4ecb0",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "SonicWall warns of SMA1000 flaws exploited in zero-day attacks, patch now",
-    "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/",
-    "summary": "SonicWall warns that threat actors have been exploiting two SMA1000 vulnerabilities, tracked as CVE-2026-15409 and CVE-2026-15410, in zero-day attacks and urges customers to install the newly released security updates. [...]",
-    "published": "2026-07-14T21:23:24Z",
-    "fetched": "2026-07-14T22:30:31.287981674Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67,
-    "cves": [
-      "CVE-2026-15409",
-      "CVE-2026-15410"
-    ]
-  },
-  {
-    "id": "2ef5e198979967b5bfcb6b197dfccf17",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Microsoft Patches Record 622 Flaws, Including Two Zero-Days Under Active Attack",
-    "url": "https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html",
-    "summary": "Microsoft shipped its largest Patch Tuesday on record today, and two of the fixes close holes that attackers are already exploiting. The release covers 622 of Microsoft's own CVEs by its Security Update Guide count, more than triple June's previous high of around 200. Those two live bugs are the ones to grab first. Microsoft credits incident responders for both. Both are",
-    "published": "2026-07-14T20:25:47Z",
-    "fetched": "2026-07-14T22:30:31.287981674Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "adea70d4f185f0df8673f6518704e9f7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-48259 — Adobe Experience Manager is affected by a Server-Side Request Forgery (SSRF) vul…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48259",
-    "summary": "Adobe Experience Manager is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could leverage this vulnerability to issue unauthorized server-side requests, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue does not require user interaction. Scope is changed.",
-    "published": "2026-07-14T20:17:06.697Z",
-    "fetched": "2026-07-18T22:23:25.816052509Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "adobe"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-48259"
-    ]
-  },
-  {
-    "id": "e0644952bba4e237ed8ec81b2a264687",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-58628 — Concurrent execution using shared resource with improper synchronization ('race …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58628",
-    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Wireless Networking allows an authorized attacker to elevate privileges locally.",
-    "published": "2026-07-14T18:18:44.953Z",
-    "fetched": "2026-07-18T22:23:25.816052509Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-58628"
-    ]
-  },
-  {
-    "id": "3d407c3a656c5391ce603741ddf660d7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-58627 — Uncontrolled resource consumption in Windows DHCP Server allows an unauthorized …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58627",
-    "summary": "Uncontrolled resource consumption in Windows DHCP Server allows an unauthorized attacker to deny service over a network.",
-    "published": "2026-07-14T18:18:44.79Z",
-    "fetched": "2026-07-18T22:23:25.816052509Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-58627"
     ]
   }
 ]

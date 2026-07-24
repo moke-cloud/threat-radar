@@ -5,7 +5,18 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Jul 2026 22:30:48 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 22:34:51 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say</title>
+      <link>https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html</link>
+      <guid isPermaLink="false">d461bd81d77c12b51913c318e8012469</guid>
+      <pubDate>Fri, 24 Jul 2026 06:58:27 +0000</pubDate>
+      <description>Redis shipped seven security releases on July 23 after researchers published authenticated RCE PoCs for stock Redis 6.2.22, 7.4.9, 8.6.4, and 8.8.0. All four chains require RESTORE. The Streams chains also need EVAL and XGROUP; the 8.8.0 chain needs EVAL and the bundled RedisBloom module. Redis says the underlying memory flaws may lead to remote code execution. Redis 6.2.23, 7.2.15, and 7.4.10</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>0day</category>
+    </item>
     <item>
       <title>[CRIT] CVE-2026-16232: Critical Check Point SmartConsole Authentication Bypass Exploited in the Wild</title>
       <link>https://www.rapid7.com/blog/post/etr-cve-2026-16232-critical-check-point-smartconsole-authentication-bypass-exploited-in-the-wild</link>
@@ -524,6 +535,20 @@
       <category>microsoft</category>
     </item>
     <item>
+      <title>[CRIT] CVE-2026-58644: Microsoft SharePoint Server Unauthenticated Remote Code Execution Vulnerability Exploited in the Wild</title>
+      <link>https://www.rapid7.com/blog/post/etr-cve-2026-58644-microsoft-sharepoint-server-unauthenticated-remote-code-execution-vulnerability-exploited-in-the-wild</link>
+      <guid isPermaLink="false">39f258feb962f128de825a2c3a5f64fe</guid>
+      <pubDate>Fri, 17 Jul 2026 18:18:53 +0000</pubDate>
+      <description>OverviewOn July 14, 2026, Microsoft published a security advisory addressing CVE-2026-58644, a critical remote code execution (RCE) vulnerability affecting on-premises Microsoft SharePoint Server deployments. The vulnerability, which carries a CVSS v3.1 score of 9.8 (Critical), results from the deserialization of untrusted data (CWE-502) and allows an unauthenticated attacker to execute arbitrary code.Microsoft confirmed active exploitation of CVE-2026-58644, and the vulnerability was subsequently added to CISA’s Known Exploited Vulnerabilities (KEV) catalog on July 16, 2026. In parallel, CI...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
+      <category>critical</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
+      <category>microsoft</category>
+    </item>
+    <item>
       <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-9762 — IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.4 is vulnerable to remote…</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9762</link>
       <guid isPermaLink="false">5ec7839a5f0e4d758f067151995d6ca2</guid>
@@ -564,6 +589,19 @@
       <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>high</category>
       <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] Microsoft at Black Hat USA 2026: Defending trust in the age of AI and supply chain attacks</title>
+      <link>https://www.microsoft.com/en-us/security/blog/2026/07/17/microsoft-at-black-hat-usa-2026-defending-trust-in-the-age-of-ai-and-supply-chain-attacks/</link>
+      <guid isPermaLink="false">36abb2ab766f89dba33e6733eef284e4</guid>
+      <pubDate>Fri, 17 Jul 2026 16:00:00 +0000</pubDate>
+      <description>Join Microsoft Security at Black Hat USA 2026 for supply chain research, hands-on security experiences, expert conversations, and our reception. The post Microsoft at Black Hat USA 2026: Defending trust in the age of AI and supply chain attacks appeared first on Microsoft Security Blog.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>supply-chain</category>
+      <category>microsoft</category>
     </item>
     <item>
       <title>[HIGH] Microsoft at Black Hat USA 2026: Defending trust in the age of AI and supply chain attacks</title>
@@ -1062,98 +1100,6 @@
       <category>kev</category>
       <category>actively-exploited</category>
       <category>knx</category>
-    </item>
-    <item>
-      <title>[HIGH] Patch Tuesday - July 2026</title>
-      <link>https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026</link>
-      <guid isPermaLink="false">69ec2b84741933ac39b9cd482d15f57d</guid>
-      <pubDate>Tue, 14 Jul 2026 22:00:26 +0000</pubDate>
-      <description>Microsoft is publishing 622 vulnerabilities on July 2026 Patch Tuesday, including a record-breaking 416 Windows vulnerabilities. Microsoft is aware of exploitation in the wild for two of the vulnerabilities published today, both of which are listed on CISA KEV, as well as public disclosure for one other. As usual, browser vulns are not included in the Patch Tuesday count above. Rapid7 noted last month that Microsoft no longer enumerates Chromium CVEs in the Security Update Guide. However, Microsoft has now taken the pursuit of minimalism much further, since today’s Security Update Guide no l...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] Patch Tuesday - July 2026</title>
-      <link>https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026</link>
-      <guid isPermaLink="false">69ec2b84741933ac39b9cd482d15f57d</guid>
-      <pubDate>Tue, 14 Jul 2026 22:00:26 +0000</pubDate>
-      <description>Microsoft is publishing 622 vulnerabilities on July 2026 Patch Tuesday, including a record-breaking 416 Windows vulnerabilities. Microsoft is aware of exploitation in the wild for two of the vulnerabilities published today, both of which are listed on CISA KEV, as well as public disclosure for one other. As usual, browser vulns are not included in the Patch Tuesday count above. Rapid7 noted last month that Microsoft no longer enumerates Chromium CVEs in the Security Update Guide. However, Microsoft has now taken the pursuit of minimalism much further, since today’s Security Update Guide no l...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>chrome</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>chrome</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] SonicWall warns of SMA1000 flaws exploited in zero-day attacks, patch now</title>
-      <link>https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/</link>
-      <guid isPermaLink="false">cb33d8512afef95614fdf14a96b4ecb0</guid>
-      <pubDate>Tue, 14 Jul 2026 21:23:24 +0000</pubDate>
-      <description>SonicWall warns that threat actors have been exploiting two SMA1000 vulnerabilities, tracked as CVE-2026-15409 and CVE-2026-15410, in zero-day attacks and urges customers to install the newly released security updates. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] Microsoft Patches Record 622 Flaws, Including Two Zero-Days Under Active Attack</title>
-      <link>https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html</link>
-      <guid isPermaLink="false">2ef5e198979967b5bfcb6b197dfccf17</guid>
-      <pubDate>Tue, 14 Jul 2026 20:25:47 +0000</pubDate>
-      <description>Microsoft shipped its largest Patch Tuesday on record today, and two of the fixes close holes that attackers are already exploiting. The release covers 622 of Microsoft&#39;s own CVEs by its Security Update Guide count, more than triple June&#39;s previous high of around 200. Those two live bugs are the ones to grab first. Microsoft credits incident responders for both. Both are</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.6 CRITICAL] CVE-2026-48259 — Adobe Experience Manager is affected by a Server-Side Request Forgery (SSRF) vul…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48259</link>
-      <guid isPermaLink="false">adea70d4f185f0df8673f6518704e9f7</guid>
-      <pubDate>Tue, 14 Jul 2026 20:17:06 +0000</pubDate>
-      <description>Adobe Experience Manager is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could leverage this vulnerability to issue unauthorized server-side requests, potentially gaining elevated access or control over the victim&#39;s account or session. Exploitation of this issue does not require user interaction. Scope is changed.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-      <category>adobe</category>
-      <category>adobe</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-58628 — Concurrent execution using shared resource with improper synchronization (&#39;race …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58628</link>
-      <guid isPermaLink="false">e0644952bba4e237ed8ec81b2a264687</guid>
-      <pubDate>Tue, 14 Jul 2026 18:18:44 +0000</pubDate>
-      <description>Concurrent execution using shared resource with improper synchronization (&#39;race condition&#39;) in Windows Wireless Networking allows an authorized attacker to elevate privileges locally.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-58627 — Uncontrolled resource consumption in Windows DHCP Server allows an unauthorized …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58627</link>
-      <guid isPermaLink="false">3d407c3a656c5391ce603741ddf660d7</guid>
-      <pubDate>Tue, 14 Jul 2026 18:18:44 +0000</pubDate>
-      <description>Uncontrolled resource consumption in Windows DHCP Server allows an unauthorized attacker to deny service over a network.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>microsoft</category>
     </item>
   </channel>
 </rss>

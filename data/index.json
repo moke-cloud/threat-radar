@@ -1,5 +1,56 @@
 [
   {
+    "id": "96c583446acc0371961b18fdab2f74ba",
+    "source": "sans-isc",
+    "source_name": "SANS Internet Storm Center",
+    "category": "news",
+    "title": "Scans for ESAFENET CDG 3 Document Management System Weak Logins, (Sun, Jul 26th)",
+    "url": "https://isc.sans.edu/diary/rss/33184",
+    "summary": "ESAFENET&&#x23&#x3b;x26&#x3b;&#x23&#x3b;39&#x3b;s CDG showed up in our data before. The company focused on secure document management and data leakage prevention solutions. The \"CDG\" stands for \"Content Data Guard\", and the product appears to be mostly targeting the Chinese market &#x5b;1&#x5d;. Sadly, like so many security products, it suffers from basic security vulnerabilities like SQL Injection, XSS, and default passwords. We have seen scanning for ESAFENET CDG before, in particular after the cross-site scripting vulnerability was made public.&#xd;",
+    "published": "2026-07-26T15:26:14Z",
+    "fetched": "2026-07-26T22:30:16.147828265Z",
+    "tags": [
+      "sqli",
+      "xss",
+      "breach"
+    ],
+    "severity": "medium",
+    "score": 53
+  },
+  {
+    "id": "57eec9aeb9c6f4eb5678f4affa2267f1",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "GitHub, PyPI add time-based defenses against supply chain attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/",
+    "summary": "GitHub and PyPI (Python Package Index) have introduced a time-based mechanism in the Dependabot dependency management tool to protect against supply-chain attacks and to limit their impact. [...]",
+    "published": "2026-07-26T14:13:39Z",
+    "fetched": "2026-07-26T22:30:16.147828265Z",
+    "tags": [
+      "github",
+      "supply-chain"
+    ],
+    "severity": "medium",
+    "score": 57,
+    "vendors": [
+      "github"
+    ]
+  },
+  {
+    "id": "c1be741d6779ee44dd1873f7f4b883c0",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Steam forum ClickFix attacks infect gamers with XMRig cryptominers",
+    "url": "https://www.bleepingcomputer.com/news/security/steam-forum-clickfix-attacks-infect-gamers-with-xmrig-cryptominers/",
+    "summary": "Steam discussion forums are being abused in ClickFix attacks that pretend to be fixes for game and computer problems but actually infect devices with cryptominers. [...]",
+    "published": "2026-07-25T22:37:47Z",
+    "fetched": "2026-07-26T22:30:16.147828265Z",
+    "severity": "low",
+    "score": 27
+  },
+  {
     "id": "732678a83c8bd40052ce96adb3a13586",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -9014,63 +9065,6 @@
     "score": 29,
     "cves": [
       "CVE-2026-56002"
-    ]
-  },
-  {
-    "id": "827754c8d3ef59d5c685686c22ae3d63",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-406: X.Org Server BitmapScaleBitmaps Integer Overflow Privilege Escalation Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-406/",
-    "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of X.Org Server. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-56001.",
-    "published": "2026-07-15T05:00:00Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "lpe"
-    ],
-    "severity": "low",
-    "score": 29,
-    "cves": [
-      "CVE-2026-56001"
-    ]
-  },
-  {
-    "id": "3638d01526e085d3555378d3e0810f90",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-405: X.Org Server GLX Extension Use-After-Free Privilege Escalation Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-405/",
-    "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of X.Org Server. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-56000.",
-    "published": "2026-07-15T05:00:00Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "lpe"
-    ],
-    "severity": "low",
-    "score": 29,
-    "cves": [
-      "CVE-2026-56000"
-    ]
-  },
-  {
-    "id": "c12cf8b6476e347b7ebe6bf800182abf",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-404: Delta Electronics DTM Soft Project File Parsing Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-404/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Delta Electronics DTM Soft. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-12578.",
-    "published": "2026-07-15T05:00:00Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 51,
-    "cves": [
-      "CVE-2026-12578"
     ]
   }
 ]

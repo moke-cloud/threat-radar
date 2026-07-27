@@ -1,5 +1,53 @@
 [
   {
+    "id": "4024a22808756292a1c079fdfa97c020",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2025-68686 — Fortinet FortiOS: Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68686",
+    "summary": "Fortinet FortiOS contains an exposure of sensitive information to an unauthorized actor vulnerability. This may allow a remote unauthenticated attacker to bypass the patch developed for the symbolic link persistency mechanism observed in some post-exploit cases, via crafted HTTP requests. An attacker would need first to have compromised the product via another vulnerability, at filesystem level.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-10",
+    "published": "2026-07-27T00:00:00Z",
+    "fetched": "2026-07-27T22:34:06.517951048Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "fortinet",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "fortinet"
+    ],
+    "cves": [
+      "CVE-2025-68686"
+    ]
+  },
+  {
+    "id": "2a4172eabf7d499e084be1734da4e7ea",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-16812 — Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16812",
+    "summary": "Arista VeloCloud Orchestrator On-Prem contains an OS command injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-30",
+    "published": "2026-07-27T00:00:00Z",
+    "fetched": "2026-07-27T22:34:06.517951048Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "arista"
+    ],
+    "cves": [
+      "CVE-2026-16812"
+    ]
+  },
+  {
     "id": "da672e170c25a8387a1fcd430ecc6d64",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -1788,102 +1836,5 @@
     ],
     "severity": "high",
     "score": 67
-  },
-  {
-    "id": "14bea4b15864390499b3d4d6be1be667",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-425: OpenSSL OCSP Stapling Verification Double Free Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-425/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OpenSSL. User interaction is required to exploit this vulnerability in that the target must make a request to a malicious server. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-35188.",
-    "published": "2026-07-15T05:00:00Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "openssl",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "openssl"
-    ],
-    "cves": [
-      "CVE-2026-35188"
-    ]
-  },
-  {
-    "id": "1f4a7e13b95b549834807aaea98262cc",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-414: Microsoft PowerShell Help Directory Traversal Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-414/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft PowerShell. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-40400.",
-    "published": "2026-07-15T05:00:00Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "high",
-    "score": 69,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-40400"
-    ]
-  },
-  {
-    "id": "af07035b1927e108a6fc2cc77e87d4c3",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-413: (Pwn2Own) Microsoft SharePoint Improper Verification of Cryptographic Signature Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-413/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft SharePoint. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-50522.",
-    "published": "2026-07-15T05:00:00Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-50522"
-    ]
-  },
-  {
-    "id": "10dbf42e8675b33f4f4a571dc9f164bc",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-412: (Pwn2Own) Microsoft SharePoint Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-412/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft SharePoint. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-50522.",
-    "published": "2026-07-15T05:00:00Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-50522"
-    ]
   }
 ]

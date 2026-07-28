@@ -1,5 +1,91 @@
 [
   {
+    "id": "47a61d380e206a985e96b1697341e80c",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "How AI is Rewriting the Zero-Day Playbook for Preemptive Security",
+    "url": "https://www.rapid7.com/blog/post/ai-rewriting-zero-day-playbook-for-preemptive-security",
+    "summary": "The scenario is all too familiar for any cybersecurity professional: It’s late in the day, and a critical zero-day vulnerability is disclosed. When this happens, CISOs from every industry immediately turn to their Security Operations Centers (SOC) with the single most important, and often most difficult, question: \"Are we exposed?”Answering questions like these when zero-days drop tends to trigger a frantic, high-stress fire drill. Analysts scramble to cross-reference outdated Configuration Management Databases (CMDBs), query disparate endpoint detection tools, and ping IT administrators. ...",
+    "published": "2026-07-29T13:00:00Z",
+    "fetched": "2026-07-28T22:34:19.645129454Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 61
+  },
+  {
+    "id": "58f4bbe64d0634a716049e72e976f639",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "OpenAI models used Artifactory zero-days to escape to the internet",
+    "url": "https://www.bleepingcomputer.com/news/security/openai-models-used-artifactory-zero-days-to-escape-to-the-internet/",
+    "summary": "JFrog has confirmed that OpenAI models exploited zero-day vulnerabilities in self-hosted Artifactory servers to help escape an isolated testing environment and gain access to the internet before attacking Hugging Face. [...]",
+    "published": "2026-07-28T20:37:06Z",
+    "fetched": "2026-07-28T22:34:19.645129454Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "fe4e8890b9968eeb8827d2b93ade902f",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Attackers Exploit Arista VeloCloud Orchestrator Command Injection Flaw",
+    "url": "https://thehackernews.com/2026/07/attackers-exploit-arista-velocloud.html",
+    "summary": "A maximum-severity security flaw impacting on-premises versions of Arista VeloCloud Orchestrator (VCO) has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-16812 (CVSS score: 10.0), is a case of operating system command injection that could pave the way for arbitrary code execution. \"VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue",
+    "published": "2026-07-28T04:43:53Z",
+    "fetched": "2026-07-28T22:34:19.645129454Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-16812"
+    ]
+  },
+  {
+    "id": "3040e520c3da9e408f89ca81a6c49c7b",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Hackers target US firms in FastJson RCE zero-day attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-target-us-firms-in-fastjson-rce-zero-day-attacks/",
+    "summary": "Hackers are actively exploiting a vulnerability in the FastJson open-source Java library, allowing remote code execution without user interaction or elevated privileges. [...]",
+    "published": "2026-07-27T23:49:44Z",
+    "fetched": "2026-07-28T22:34:19.645129454Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 87
+  },
+  {
+    "id": "ac1b47f30e1434d7090991449021c9a7",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Arista patches VeloCloud Orchestrator zero-day exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/arista-patches-velocloud-orchestrator-zero-day-exploited-in-attacks/",
+    "summary": "Arista has patched a maximum-severity command injection vulnerability in on-premises VeloCloud Orchestrator deployments that is being actively exploited in attacks. [...]",
+    "published": "2026-07-27T22:49:44Z",
+    "fetched": "2026-07-28T22:34:19.645129454Z",
+    "tags": [
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
     "id": "4024a22808756292a1c079fdfa97c020",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -354,6 +440,109 @@
     ],
     "severity": "high",
     "score": 63
+  },
+  {
+    "id": "f22719ce5129f548f0ab4b979db254a6",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-60137 — WordPress Core: WordPress Core SQL Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60137",
+    "summary": "WordPress Core contains a SQL injection vulnerability when a plugin or theme passes untrusted input to the parameter. This vulnerability can be chained with CVE-2026-63030 to allow an unauthenticated attacker to gain remote code execution on default WordPress installations.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-04",
+    "published": "2026-07-21T00:00:00Z",
+    "fetched": "2026-07-28T22:34:19.645129454Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "wordpress",
+      "watch",
+      "rce",
+      "sqli"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-60137",
+      "CVE-2026-63030"
+    ]
+  },
+  {
+    "id": "695f29dd7dcd01453cda31e43e9f642f",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-63030 — WordPress Core: WordPress Core Interpretation Conflict Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63030",
+    "summary": "WordPress Core contains an interpretation conflict vulnerability that could allow an attacker to perform SQL Injection and achieve Remote Code Execution. This vulnerability can be chained with CVE-2026-60137.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-24",
+    "published": "2026-07-21T00:00:00Z",
+    "fetched": "2026-07-28T22:34:19.645129454Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "wordpress",
+      "watch",
+      "rce",
+      "sqli"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-63030",
+      "CVE-2026-60137"
+    ]
+  },
+  {
+    "id": "c684b98605578bbb19ddf74e77690c60",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-0770 — Langflow Langflow: Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0770",
+    "summary": "Langflow contains an inclusion of functionality from untrusted control sphere vulnerability that allows remote attackers to execute arbitrary code on affected installations. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-24",
+    "published": "2026-07-21T00:00:00Z",
+    "fetched": "2026-07-28T22:34:19.645129454Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "langflow"
+    ],
+    "cves": [
+      "CVE-2026-0770"
+    ]
+  },
+  {
+    "id": "5753e87a981f4381204d9b8412991797",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2021-27137 — DD-WRT DD-WRT: DD-WRT Stack-Based Buffer Overflow Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27137",
+    "summary": "DD-WRT contains a stack-based buffer overflow vulnerability that could allow an unauthenticated attacker to overflow an internal buffer used by UPnP and trigger a code execution vulnerability.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-24",
+    "published": "2026-07-21T00:00:00Z",
+    "fetched": "2026-07-28T22:34:19.645129454Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "dd-wrt"
+    ],
+    "cves": [
+      "CVE-2021-27137"
+    ]
   },
   {
     "id": "f22719ce5129f548f0ab4b979db254a6",

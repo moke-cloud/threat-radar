@@ -5,7 +5,60 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Jul 2026 22:34:06 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 22:34:19 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] How AI is Rewriting the Zero-Day Playbook for Preemptive Security</title>
+      <link>https://www.rapid7.com/blog/post/ai-rewriting-zero-day-playbook-for-preemptive-security</link>
+      <guid isPermaLink="false">47a61d380e206a985e96b1697341e80c</guid>
+      <pubDate>Wed, 29 Jul 2026 13:00:00 +0000</pubDate>
+      <description>The scenario is all too familiar for any cybersecurity professional: It’s late in the day, and a critical zero-day vulnerability is disclosed. When this happens, CISOs from every industry immediately turn to their Security Operations Centers (SOC) with the single most important, and often most difficult, question: &#34;Are we exposed?”Answering questions like these when zero-days drop tends to trigger a frantic, high-stress fire drill. Analysts scramble to cross-reference outdated Configuration Management Databases (CMDBs), query disparate endpoint detection tools, and ping IT administrators. ...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
+      <category>high</category>
+      <category>0day</category>
+    </item>
+    <item>
+      <title>[HIGH] OpenAI models used Artifactory zero-days to escape to the internet</title>
+      <link>https://www.bleepingcomputer.com/news/security/openai-models-used-artifactory-zero-days-to-escape-to-the-internet/</link>
+      <guid isPermaLink="false">58f4bbe64d0634a716049e72e976f639</guid>
+      <pubDate>Tue, 28 Jul 2026 20:37:06 +0000</pubDate>
+      <description>JFrog has confirmed that OpenAI models exploited zero-day vulnerabilities in self-hosted Artifactory servers to help escape an isolated testing environment and gain access to the internet before attacking Hugging Face. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>0day</category>
+    </item>
+    <item>
+      <title>[HIGH] Attackers Exploit Arista VeloCloud Orchestrator Command Injection Flaw</title>
+      <link>https://thehackernews.com/2026/07/attackers-exploit-arista-velocloud.html</link>
+      <guid isPermaLink="false">fe4e8890b9968eeb8827d2b93ade902f</guid>
+      <pubDate>Tue, 28 Jul 2026 04:43:53 +0000</pubDate>
+      <description>A maximum-severity security flaw impacting on-premises versions of Arista VeloCloud Orchestrator (VCO) has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-16812 (CVSS score: 10.0), is a case of operating system command injection that could pave the way for arbitrary code execution. &#34;VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
+    </item>
+    <item>
+      <title>[CRIT] Hackers target US firms in FastJson RCE zero-day attacks</title>
+      <link>https://www.bleepingcomputer.com/news/security/hackers-target-us-firms-in-fastjson-rce-zero-day-attacks/</link>
+      <guid isPermaLink="false">3040e520c3da9e408f89ca81a6c49c7b</guid>
+      <pubDate>Mon, 27 Jul 2026 23:49:44 +0000</pubDate>
+      <description>Hackers are actively exploiting a vulnerability in the FastJson open-source Java library, allowing remote code execution without user interaction or elevated privileges. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>critical</category>
+      <category>rce</category>
+      <category>0day</category>
+    </item>
+    <item>
+      <title>[HIGH] Arista patches VeloCloud Orchestrator zero-day exploited in attacks</title>
+      <link>https://www.bleepingcomputer.com/news/security/arista-patches-velocloud-orchestrator-zero-day-exploited-in-attacks/</link>
+      <guid isPermaLink="false">ac1b47f30e1434d7090991449021c9a7</guid>
+      <pubDate>Mon, 27 Jul 2026 22:49:44 +0000</pubDate>
+      <description>Arista has patched a maximum-severity command injection vulnerability in on-premises VeloCloud Orchestrator deployments that is being actively exploited in attacks. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>actively-exploited</category>
+      <category>0day</category>
+    </item>
     <item>
       <title>[CRIT] [KEV] CVE-2025-68686 — Fortinet FortiOS: Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2025-68686</link>
@@ -214,6 +267,63 @@
       <category>high</category>
       <category>rce</category>
       <category>ransomware</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-60137 — WordPress Core: WordPress Core SQL Injection Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60137</link>
+      <guid isPermaLink="false">f22719ce5129f548f0ab4b979db254a6</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>WordPress Core contains a SQL injection vulnerability when a plugin or theme passes untrusted input to the parameter. This vulnerability can be chained with CVE-2026-63030 to allow an unauthenticated attacker to gain remote code execution on default WordPress installations.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-04</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>sqli</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-63030 — WordPress Core: WordPress Core Interpretation Conflict Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63030</link>
+      <guid isPermaLink="false">695f29dd7dcd01453cda31e43e9f642f</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>WordPress Core contains an interpretation conflict vulnerability that could allow an attacker to perform SQL Injection and achieve Remote Code Execution. This vulnerability can be chained with CVE-2026-60137.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-24</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>sqli</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-0770 — Langflow Langflow: Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0770</link>
+      <guid isPermaLink="false">c684b98605578bbb19ddf74e77690c60</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Langflow contains an inclusion of functionality from untrusted control sphere vulnerability that allows remote attackers to execute arbitrary code on affected installations. &#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-24</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>langflow</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2021-27137 — DD-WRT DD-WRT: DD-WRT Stack-Based Buffer Overflow Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-27137</link>
+      <guid isPermaLink="false">5753e87a981f4381204d9b8412991797</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>DD-WRT contains a stack-based buffer overflow vulnerability that could allow an unauthenticated attacker to overflow an internal buffer used by UPnP and trigger a code execution vulnerability.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-24</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>rce</category>
+      <category>dd-wrt</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2026-60137 — WordPress Core: WordPress Core SQL Injection Vulnerability</title>

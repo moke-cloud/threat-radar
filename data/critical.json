@@ -1,5 +1,30 @@
 [
   {
+    "id": "c768ee18699b21d6626980253948a4bc",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Cisco warns of FMC static credential flaw exploited in zero-day attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-fmc-static-credential-flaw-exploited-in-zero-day-attacks/",
+    "summary": "Cisco is warning that a high-severity Secure Firewall Management Center (FMC) static credential vulnerability, tracked as CVE-2026-20316, was actively exploited in zero-day attacks to gain unauthorized access to vulnerable devices. [...]",
+    "published": "2026-07-29T21:35:40Z",
+    "fetched": "2026-07-29T22:29:23.008940929Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20316"
+    ]
+  },
+  {
     "id": "47a61d380e206a985e96b1697341e80c",
     "source": "rapid7",
     "source_name": "Rapid7 Blog",
@@ -14,6 +39,51 @@
     ],
     "severity": "high",
     "score": 61
+  },
+  {
+    "id": "44b4160b7d20a5d640022cfb0b348cfe",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Public PoC Released for Exploited Check Point SmartConsole Authentication Bypass",
+    "url": "https://thehackernews.com/2026/07/rapid7-releases-poc-for-exploited-check.html",
+    "summary": "Cybersecurity researchers have shared additional technical details about a recently patched critical security flaw impacting Check Point Security Management Server and Multi-Domain Security Management Server (MDS) that has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-16232 (CVSS score: 9.3), is an authentication bypass in the SmartConsole login process that",
+    "published": "2026-07-29T08:58:27Z",
+    "fetched": "2026-07-29T22:29:23.008940929Z",
+    "tags": [
+      "auth-bypass",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-16232"
+    ]
+  },
+  {
+    "id": "64795b49e6b358ce59a29a9daec382fe",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-20316 — Cisco Secure Firewall Management Center (FMC): Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20316",
+    "summary": "Cisco Secure Firewall Management Center (FMC) formerly known as Firepower Management Center contains a use of hard-coded password vulnerability that could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-01",
+    "published": "2026-07-29T00:00:00Z",
+    "fetched": "2026-07-29T22:29:23.008940929Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "cisco",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20316"
+    ]
   },
   {
     "id": "58f4bbe64d0634a716049e72e976f639",
@@ -283,6 +353,54 @@
     ],
     "severity": "critical",
     "score": 87
+  },
+  {
+    "id": "2f8bcd2e4ccd37e804737c92575d1f0f",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-16232 — Check Point SmartConsole: Check Point SmartConsole Improper Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16232",
+    "summary": "Check Point SmartConsole contains an improper authentication vulnerability which could allow an unauthenticated remote attacker to obtain an application login token and use it to authenticate with full administrative privileges.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-25",
+    "published": "2026-07-22T00:00:00Z",
+    "fetched": "2026-07-29T22:29:23.008940929Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "check"
+    ],
+    "cves": [
+      "CVE-2026-16232"
+    ]
+  },
+  {
+    "id": "b8b056669388ca3b98252dd96d58e910",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-50522 — Microsoft SharePoint: Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50522",
+    "summary": "Microsoft SharePoint contains a deserialization of untrusted data vulnerability which could allow an unauthorized attacker to execute code over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-25",
+    "published": "2026-07-22T00:00:00Z",
+    "fetched": "2026-07-29T22:29:23.008940929Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-50522"
+    ]
   },
   {
     "id": "2f8bcd2e4ccd37e804737c92575d1f0f",
@@ -1611,419 +1729,5 @@
     "cves": [
       "CVE-2024-58360"
     ]
-  },
-  {
-    "id": "82b054ea120f2684711a34b2013a8a0e",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA orders feds to patch actively exploited Oracle flaw by Saturday",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-flaw-by-saturday/",
-    "summary": "CISA has ordered federal agencies to secure their systems by Saturday against ongoing attacks exploiting a critical vulnerability in the Oracle E-Business Suite financial application. [...]",
-    "published": "2026-07-16T10:56:03Z",
-    "fetched": "2026-07-16T22:29:44.558476792Z",
-    "tags": [
-      "oracle",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "oracle"
-    ]
-  },
-  {
-    "id": "38855750c3e51ce20e2b304737595552",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-12753 — The Advance Product Search- Voice & Ajax Search for WooCommerce plugin for WordP…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12753",
-    "summary": "The Advance Product Search- Voice & Ajax Search for WooCommerce plugin for WordPress is vulnerable to generic SQL Injection via the 's' and 'match' parameter in all versions up to, and including, 1.4.4 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-    "published": "2026-07-16T04:17:16.073Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "sqli",
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 78,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-12753"
-    ]
-  },
-  {
-    "id": "f61413c990721f7dfdc113f5174a9880",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-58644 — Microsoft SharePoint: Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58644",
-    "summary": "Microsoft SharePoint contains a deserialization of untrusted data vulnerability that allows an unauthorized attacker to execute code over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-19",
-    "published": "2026-07-16T00:00:00Z",
-    "fetched": "2026-07-23T22:30:48.794583597Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-58644"
-    ]
-  },
-  {
-    "id": "db35836e33cc642ff8ea1ca36b96d8fe",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-25089 — Fortinet FortiSandbox: Fortinet FortiSandbox OS Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25089",
-    "summary": "Fortinet FortiSandbox, FortiSandbox Cloud, and FortiSandbox PaaS contain an OS command injection vulnerability that allows an unauthenticated attacker to execute unauthorized commands via specifically crafted HTTP requests.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-19",
-    "published": "2026-07-16T00:00:00Z",
-    "fetched": "2026-07-23T22:30:48.794583597Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "fortinet",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "fortinet"
-    ],
-    "cves": [
-      "CVE-2026-25089"
-    ]
-  },
-  {
-    "id": "83e0fd4811ddab1f26e0644c2bfdc0cc",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-39808 — Fortinet FortiSandbox: Fortinet FortiSandbox OS Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39808",
-    "summary": "Fortinet FortiSandbox contains an OS command injection vulnerability that could allow an unauthenticated attacker to execute unauthorized code or commands via crafted HTTP requests.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-19",
-    "published": "2026-07-16T00:00:00Z",
-    "fetched": "2026-07-23T22:30:48.794583597Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "fortinet",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "fortinet"
-    ],
-    "cves": [
-      "CVE-2026-39808"
-    ]
-  },
-  {
-    "id": "f61413c990721f7dfdc113f5174a9880",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-58644 — Microsoft SharePoint: Microsoft SharePoint Deserialization of Untrusted Data Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58644",
-    "summary": "Microsoft SharePoint contains a deserialization of untrusted data vulnerability that allows an unauthorized attacker to execute code over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-19",
-    "published": "2026-07-16T00:00:00Z",
-    "fetched": "2026-07-16T22:29:44.558476792Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-58644"
-    ]
-  },
-  {
-    "id": "db35836e33cc642ff8ea1ca36b96d8fe",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-25089 — Fortinet FortiSandbox: Fortinet FortiSandbox OS Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25089",
-    "summary": "Fortinet FortiSandbox, FortiSandbox Cloud, and FortiSandbox PaaS contain an OS command injection vulnerability that allows an unauthenticated attacker to execute unauthorized commands via specifically crafted HTTP requests.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-19",
-    "published": "2026-07-16T00:00:00Z",
-    "fetched": "2026-07-16T22:29:44.558476792Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "fortinet",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "fortinet"
-    ],
-    "cves": [
-      "CVE-2026-25089"
-    ]
-  },
-  {
-    "id": "83e0fd4811ddab1f26e0644c2bfdc0cc",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-39808 — Fortinet FortiSandbox: Fortinet FortiSandbox OS Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39808",
-    "summary": "Fortinet FortiSandbox contains an OS command injection vulnerability that could allow an unauthenticated attacker to execute unauthorized code or commands via crafted HTTP requests.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-19",
-    "published": "2026-07-16T00:00:00Z",
-    "fetched": "2026-07-16T22:29:44.558476792Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "fortinet",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "fortinet"
-    ],
-    "cves": [
-      "CVE-2026-39808"
-    ]
-  },
-  {
-    "id": "27bbed6e818d89e615cf9c12e0002f2b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-52893 — Wekan is open source kanban built with Meteor. Prior to 9.32, the Wekan Accounts.onCreateUser hook i…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52893",
-    "summary": "Wekan is open source kanban built with Meteor. Prior to 9.32, the Wekan Accounts.onCreateUser hook in server/models/users.js merges OIDC logins into existing accounts when the OIDC email or username matches an existing Wekan user, without verifying ownership or checking email_verified. An attacker using an OIDC provider account with a victim's email or username can cause Wekan to merge the attacker's OIDC credentials into the victim account and then log in as that account. This issue is fixed in version 9.32.",
-    "published": "2026-07-15T22:17:16.71Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-52893"
-    ]
-  },
-  {
-    "id": "8c5d7e564bacd2f70afd64c801a48e2e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-49279 — WWBN AVideo is an open source video platform. Versions 29.0 and below contain a Stored XSS vulnerabi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49279",
-    "summary": "WWBN AVideo is an open source video platform. Versions 29.0 and below contain a Stored XSS vulnerability through the autoEvalCodeOnHTML parameter in the MessageSQLite WebSocket Handler. The MessageSQLite.php handler only strips autoEvalCodeOnHTML from $json['msg'], but msgToResourceId() reads from $msg['json'] with higher priority. An attacker can place the XSS payload in the json key instead of msg, bypassing the sanitization entirely. An authenticated attacker can execute arbitrary JavaScript in any connected user's browser session via the WebSocket messaging system, stealing session cookies and authentication tokens, taking over accounts through session hijacking, and chaining with CSRF to perform admin actions on the victim's behalf, in the default SQLite WebSocket backend configuration. This issue has a patch that has yet to be officially released, see https://github.com/WWBN/AVideo/commit/3e0b3ce2bfa766183ff0ae227439394db57b1a23.",
-    "published": "2026-07-15T22:16:52.163Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "github",
-      "rce",
-      "xss"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "github"
-    ],
-    "cves": [
-      "CVE-2026-49279"
-    ]
-  },
-  {
-    "id": "11813f8a3be97dcc9e613c9168617b50",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-50030 — DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase SQL prev…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50030",
-    "summary": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase SQL preview exposes DatasetDataApi.previewSql/previewSqlCheck through /de2api/datasetData/previewSql, accepts PreviewSqlDTO.sql, PreviewSqlDTO.datasourceId, and PreviewSqlDTO.isCross, then DatasetDataManage.previewSql stores decoded SQL in datasourceRequest.query and CalciteProvider.fetchResultField executes it with prepareStatement(...).executeQuery(), allowing arbitrary readable datasource tables to be queried and returned in preview responses. This issue is fixed in version 2.10.23.",
-    "published": "2026-07-15T20:17:13.233Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-50030"
-    ]
-  },
-  {
-    "id": "a5277316a9012d08f8174381432e192d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-49867 — DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase template…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49867",
-    "summary": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase template static resources let authenticated users submit TemplateManageRequest.staticResource through POST /de2api/templateManage/save or DataVisualizationServer.decompression, after which StaticResourceServer.saveFilesToServe and StaticResourceServer.saveSingleFileToServe write Base64-decoded .svg content to /de2api/static-resource/<name>.svg without validating extension, MIME type, decoded bytes, or SVG scriptability, causing stored same-origin cross-site scripting when a victim loads the resource. This issue is fixed in version 2.10.23.",
-    "published": "2026-07-15T20:17:12.943Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "xss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-49867"
-    ]
-  },
-  {
-    "id": "8a8c557acdc309245e04104b82be2d53",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-45419 — DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase template…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45419",
-    "summary": "DataEase is an open source data visualization and analysis tool. Prior to 2.10.23, DataEase template saves call TemplateManageService#save, StaticResourceServer#saveFilesToServe, and the /de2api/templateManage/save endpoint with attacker-controlled staticResource names and Base64 content, allowing path traversal and arbitrary file writes because only / was used when extracting the file name. This issue is fixed in version 2.10.23.",
-    "published": "2026-07-15T20:17:04.107Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "path-traversal",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-45419"
-    ]
-  },
-  {
-    "id": "d9c85aa7f6ad3d12eb79873bceb06c02",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-58659 — PyTorch Lightning through 2.6.5, fixed in commit d710d68, contains a remote code…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58659",
-    "summary": "PyTorch Lightning through 2.6.5, fixed in commit d710d68, contains a remote code execution vulnerability in the _load_state function that imports and executes attacker-controlled module names from checkpoint _instantiator hyperparameters. Attackers can craft malicious checkpoint files that bypass weights_only=True protections to execute arbitrary code when LightningModule.load_from_checkpoint is called.",
-    "published": "2026-07-15T18:16:48.743Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-58659"
-    ]
-  },
-  {
-    "id": "536dc23826feb7416ec2fd4894f831c7",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Rapid7 MDR Team Discovers New SonicWall SMA1000 Zero Days being Actively Exploited (CVE-2026-15409, CVE-2026-15410)",
-    "url": "https://www.rapid7.com/blog/post/etr-rapid7-mdr-team-discovers-new-sonicwall-sma1000-zero-days-being-actively-exploited-cve-2026-15409-cve-2026-15410",
-    "summary": "OverviewOn July 14, 2026, SonicWall published a security advisory addressing two vulnerabilities affecting SMA1000 Series remote access appliances, including the critical server-side request forgery (SSRF) vulnerability CVE-2026-15409 (CVSS 10.0) and the high-severity code injection vulnerability CVE-2026-15410. The advisory urges customers to immediately apply the latest platform hotfix releases.Successful exploitation of CVE-2026-15409 permits an unauthenticated attacker to open a websocket-based tunnel to arbitrary localhost-only services, while CVE-2026-15410 is a local privilege escalatio...",
-    "published": "2026-07-15T16:19:26Z",
-    "fetched": "2026-07-22T22:33:43.238596372Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 61,
-    "cves": [
-      "CVE-2026-15409",
-      "CVE-2026-15410"
-    ]
-  },
-  {
-    "id": "536dc23826feb7416ec2fd4894f831c7",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Rapid7 MDR Team Discovers New SonicWall SMA1000 Zero Days being Actively Exploited (CVE-2026-15409, CVE-2026-15410)",
-    "url": "https://www.rapid7.com/blog/post/etr-rapid7-mdr-team-discovers-new-sonicwall-sma1000-zero-days-being-actively-exploited-cve-2026-15409-cve-2026-15410",
-    "summary": "OverviewOn July 14, 2026, SonicWall published a security advisory addressing two vulnerabilities affecting SMA1000 Series remote access appliances, including the critical server-side request forgery (SSRF) vulnerability CVE-2026-15409 (CVSS 10.0) and the high-severity code injection vulnerability CVE-2026-15410. The advisory urges customers to immediately apply the latest platform hotfix releases.Successful exploitation of CVE-2026-15409 permits an unauthenticated attacker to open a websocket-based tunnel to arbitrary localhost-only services, while CVE-2026-15410 is a local privilege escalatio...",
-    "published": "2026-07-15T16:19:26Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 61,
-    "cves": [
-      "CVE-2026-15409",
-      "CVE-2026-15410"
-    ]
-  },
-  {
-    "id": "ef32de8b37e809376f046edee6ceda93",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "We built a vulnerability vending machine: AI tokens in, zero-days out",
-    "url": "https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/",
-    "summary": "Intruder built an AI-powered \"vulnerability vending machine\" that combines code slicing with LLMs to automatically discover complex software vulnerabilities. The company explains how the system found and exploited a previously unknown WordPress plugin zero-day, with additional discoveries already under responsible disclosure. [...]",
-    "published": "2026-07-15T14:01:11Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "wordpress",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "wordpress"
-    ]
-  },
-  {
-    "id": "55d8c23b1b1760017368138877f40157",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Researcher Drops New Windows Zero-Day PoC Hours After Microsoft Patch Tuesday",
-    "url": "https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html",
-    "summary": "Security researcher Chaotic Eclipse (aka Nightmare-Eclipse) has released a new proof-of-concept (PoC) exploit called LegacyHive. It has been described as a Windows User Profile Service arbitrary hive load elevation of privileges vulnerability. The Windows User Profile Service, also referred to as ProfSvc, is a core system component that manages user accounts and environments. \"The PoC requires",
-    "published": "2026-07-15T11:07:07Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "212de0dd45887ee65d8e547f3d5e85c9",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA warns admins to patch actively exploited SharePoint flaws",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-patch-actively-exploited-sharepoint-flaws/",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) warned Tuesday that attackers are actively exploiting three vulnerabilities to hack Internet-exposed on-premises SharePoint Server instances. [...]",
-    "published": "2026-07-15T09:44:52Z",
-    "fetched": "2026-07-15T22:29:43.271327101Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 67
   }
 ]

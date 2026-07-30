@@ -1,5 +1,120 @@
 [
   {
+    "id": "914c877d77437becec74cf156c2a7066",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "VMware fixes three critical flaws allowing auth bypass, VM escapes",
+    "url": "https://www.bleepingcomputer.com/news/security/vmware-fixes-three-critical-flaws-allowing-auth-bypass-vm-escapes/",
+    "summary": "Broadcom has released security updates to fix five vulnerabilities in VMware vCenter, ESX, Workstation, and Fusion, including three critical flaws that allow attackers to bypass authentication, execute arbitrary code, or escape from a virtual machine to the host. [...]",
+    "published": "2026-07-30T18:00:51Z",
+    "fetched": "2026-07-30T22:35:56.38886674Z",
+    "tags": [
+      "vmware",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "vmware"
+    ]
+  },
+  {
+    "id": "634925c1eb1e89e5d3a35e98d9c63672",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Microsoft Teams vishing attacks lead to Chaos ransomware attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/microsoft-teams-vishing-attacks-lead-to-chaos-ransomware-attacks/",
+    "summary": "Threat actors are impersonating IT support staff in Microsoft Teams calls to gain remote access to corporate devices and deploy Chaos ransomware in attacks targeting North American organizations. [...]",
+    "published": "2026-07-30T15:56:33Z",
+    "fetched": "2026-07-30T22:35:56.38886674Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "ransomware"
+    ],
+    "severity": "high",
+    "score": 62,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "ef8230621644a102244604cf75550d3f",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Critical VMware vCenter Vulnerabilities Allow Authentication Bypass and Remote Code Execution (CVE-2026-59309, CVE-2026-59310)",
+    "url": "https://www.rapid7.com/blog/post/etr-critical-vmware-vcenter-vulnerabilities-allow-authentication-bypass-and-remote-code-execution-cve-2026-59309-cve-2026-59310",
+    "summary": "OverviewOn July 29, 2026, Broadcom published security advisory VMSA-2026-0006 addressing multiple vulnerabilities in several VMWare products. Included in the advisory are two critical remotely exploitable vulnerabilities affecting VMware vCenter Server: CVE-2026-59309 and CVE-2026-59310. Both vulnerabilities carry CVSSv3.1 base scores of 9.8 and can be exploited by unauthenticated attackers with network access to a vulnerable vCenter Server.CVECVSSv3.1Description SummaryCVE-2026-593099.8 (Critical)An authentication bypass vulnerability in the VMware Directory Service of vCenter that could allo...",
+    "published": "2026-07-30T10:35:21Z",
+    "fetched": "2026-07-30T22:35:56.38886674Z",
+    "tags": [
+      "vmware",
+      "watch",
+      "rce",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "vmware"
+    ],
+    "cves": [
+      "CVE-2026-59309",
+      "CVE-2026-59310",
+      "CVE-2026-593099"
+    ]
+  },
+  {
+    "id": "1ba307d5e0d7ef50f8a5a486c40ac47d",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Cisco FMC Zero-Day Actively Exploited, Static Credentials Could Expose Sensitive Data",
+    "url": "https://thehackernews.com/2026/07/cisco-fmc-zero-day-actively-exploited.html",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a newly disclosed security flaw impacting Cisco Secure Firewall Management Center (FMC) Software to its Known Exploited Vulnerabilities (KEV) catalog, following reports of zero-day exploitation. The vulnerability, assigned CVE-2026-20316 (CVSS score: 5.3), could permit an unauthenticated, remote attacker to log",
+    "published": "2026-07-30T05:08:39Z",
+    "fetched": "2026-07-30T22:35:56.38886674Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20316"
+    ]
+  },
+  {
+    "id": "0f730eb788b0fcb028c54f16319f5940",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Russian hackers exploit Exchange OWA zero-day for long-term mailbox access",
+    "url": "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-exchange-owa-zero-day-for-long-term-mailbox-access/",
+    "summary": "The Russian state-sponsored hacking group Laundry Bear, also known as Void Blizzard, is exploiting an Exchange Outlook Web Access vulnerability in email campaigns to deliver a sophisticated backdoor called OWAReaper. [...]",
+    "published": "2026-07-29T23:44:07Z",
+    "fetched": "2026-07-30T22:35:56.38886674Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
     "id": "c768ee18699b21d6626980253948a4bc",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -236,6 +351,26 @@
     ],
     "severity": "high",
     "score": 78
+  },
+  {
+    "id": "42ad05df3be833013502c0f939def9b5",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "CVE-2026-16232: Critical Check Point SmartConsole Authentication Bypass Exploited in the Wild",
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-16232-critical-check-point-smartconsole-authentication-bypass-exploited-in-the-wild",
+    "summary": "OverviewOn July 22, 2026, Check Point published a security advisory for multiple vulnerabilities affecting Security Management, Multi-Domain Management, and firewall products. The most urgent of these is CVE-2026-16232, an authentication bypass in the SmartConsole login process classified as improper authentication (CWE-287). CVE-2026-16232 has been assigned a critical CVSS score of 9.1. The vulnerability allows an unauthenticated remote attacker to obtain an application login token and authenticate to the management server with full administrative privileges, enabling modification of security...",
+    "published": "2026-07-23T11:57:30Z",
+    "fetched": "2026-07-30T22:35:56.38886674Z",
+    "tags": [
+      "auth-bypass",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 81,
+    "cves": [
+      "CVE-2026-16232"
+    ]
   },
   {
     "id": "42ad05df3be833013502c0f939def9b5",
@@ -1450,284 +1585,6 @@
     "score": 76,
     "vendors": [
       "microsoft"
-    ]
-  },
-  {
-    "id": "fa5285e80e0db2cdf197650b869e1ad4",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "New Windows LegacyHive zero-day gives hackers admin privileges",
-    "url": "https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/",
-    "summary": "A security researcher using the \"Nightmare Eclipse\" handle has released a Windows zero-day exploit dubbed LegacyHive that allows attackers to escalate privileges on up-to-date Windows systems. [...]",
-    "published": "2026-07-17T11:05:30Z",
-    "fetched": "2026-07-17T22:22:02.395688736Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "4b5bf05e065eff53d83e36f4b58bd37a",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA urges immediate action on actively exploited Fortinet flaws",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-feds-to-patch-exploited-fortinet-fortisandbox-flaws-by-sunday/",
-    "summary": "CISA on Thursday ordered government agencies to prioritize patching two actively exploited vulnerabilities in the Fortinet FortiSandbox threat detection platform. [...]",
-    "published": "2026-07-17T07:03:33Z",
-    "fetched": "2026-07-17T22:22:02.395688736Z",
-    "tags": [
-      "fortinet",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "fortinet"
-    ]
-  },
-  {
-    "id": "ffabe375f2eeb246e52e85da5d9110b6",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "CISA Adds Exploited SharePoint RCE Zero-Day CVE-2026-58644 to KEV",
-    "url": "https://thehackernews.com/2026/07/cisa-adds-exploited-sharepoint-rce-zero.html",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added a newly patched security flaw impacting Microsoft SharePoint Server to its Known Exploited Vulnerabilities (KEV) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to apply the fixes by July 19, 2026. The vulnerability in question is CVE-2026-58644 (CVSS score: 9.8), a critical deserialization",
-    "published": "2026-07-17T06:42:23Z",
-    "fetched": "2026-07-17T22:22:02.395688736Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 88,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-58644"
-    ]
-  },
-  {
-    "id": "a1549c30c25be4604cf40545799b6574",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-62207 — OpenClaw versions before 2026.6.5 contain an authentication bypass vulnerability…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62207",
-    "summary": "OpenClaw versions before 2026.6.5 contain an authentication bypass vulnerability that allows lower-trust callers to reach admin-scoped tools. Attackers can perform actions requiring stronger authorization by exploiting insufficient policy checks on configured input paths.",
-    "published": "2026-07-17T02:18:07.04Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-62207"
-    ]
-  },
-  {
-    "id": "9b5b6769cca6e8bac47deecff8ec7cf7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 4.3 MEDIUM] CVE-2026-33434 — Wazuh is a free and open source platform used for threat prevention, detection, …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33434",
-    "summary": "Wazuh is a free and open source platform used for threat prevention, detection, and response. In versions 4.6.0 and above, prior to 4.14.5, a logic error in CheckRateLimitsMiddleware.dispatch() causes the /events endpoint rate check to unconditionally overwrite the general rate limit result. When the global max_request_per_minute is exceeded, requests to /events still succeed if the events-specific counter (hardcoded 30/min) has not been reached. This allows event injection into analysisd beyond the admin-configured global rate limit. This issue has been fixed in version 4.14.5.",
-    "published": "2026-07-17T00:16:24.573Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-33434"
-    ]
-  },
-  {
-    "id": "69f75e0629bbd574ce954cb4ec57b95c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.0 HIGH] CVE-2026-58598 — Concurrent execution using shared resource with improper synchronization ('race …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58598",
-    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Backup Engine allows an authorized attacker to elevate privileges locally.",
-    "published": "2026-07-16T22:17:50.33Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-58598"
-    ]
-  },
-  {
-    "id": "fefb7818ddade9a48f06cac599d1caba",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-45368 — Kirby is an open-source content management system. In versions prior to 4.9.1 and 5.4.1, the underly…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45368",
-    "summary": "Kirby is an open-source content management system. In versions prior to 4.9.1 and 5.4.1, the underlying URL methods for the KirbyTags and image blocks components did not filter out malicious URL values that resolve to script execution. The vulnerability affects four first-party Kirby renderers that produce `<a href=\"…\">` output from editor-supplied field values: the (`link: …)` KirbyTag, the `link`: parameter of the `(image: …)` KirbyTag when it does not resolve to a known file or `self`, the `link` field of the built-in image block, and the HTML importer for the `blocks` field (which accepted the same malicious input as the image block `link` field). While simple `avascript:` URLs were already deactivated by treating them as a relative path and prepending a single slash to the URL, the use of URLs of the format `javascript://x%0A…` bypasses this protection. The `vbscript:`, `data:`, `livescript:`, `mocha:` and `jar:` schemes are affected by the same underlying gap. This issue has been fixed in versions 4.9.1 and 5.4.1.",
-    "published": "2026-07-16T22:17:02.68Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-45368"
-    ]
-  },
-  {
-    "id": "e62561256a2ca8b79c5e0d9adc9fb274",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-44174 — Kirby is an open-source content management system. Prior to 4.9.1 and 5.4.1, Kirby did not validate …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44174",
-    "summary": "Kirby is an open-source content management system. Prior to 4.9.1 and 5.4.1, Kirby did not validate the model attributes that were used in its collection queries, allowing attackers to include arbitrary model methods in their queries. This includes methods with sensitive data such as password() (disclosing the password hash) or root() (disclosing the absolute filesystem path on the server) as well as methods that perform impactful actions such as loginPasswordless() (causing a privilege escalation to another user) or delete() (deleting all queried models in one go if the authenticated user has appropriate permissions). This issue has been fixed in versions 4.9.1 and 5.4.1.",
-    "published": "2026-07-16T22:17:01.65Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "lpe",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-44174"
-    ]
-  },
-  {
-    "id": "4503679c2895d9dc21ba21dc258f70d4",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.3 HIGH] CVE-2026-62290 — cert-manager adds certificates and certificate issuers as resource types in Kube…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62290",
-    "summary": "cert-manager adds certificates and certificate issuers as resource types in Kubernetes clusters, and simplifies the process of obtaining, renewing and using those certificates. From 1.18.0 until 1.19.6 and 1.20.3, Challenge resources under acme.cert-manager.io can be created directly by namespace users without admission validation tying the Challenge to an Order, owner reference, or Issuer-selected solver, allowing attacker-controlled Challenge.spec.solver values referencing a ClusterIssuer to bypass DNS01 solver selectors such as dnsZones, dnsNames, and matchLabels and cause cert-manager to use ClusterIssuer DNS credentials for attacker-selected provider settings and DNS names, including disclosure of X-Api-User and X-Api-Key headers for acme-dns. This issue is fixed in versions 1.19.6 and 1.20.3.",
-    "published": "2026-07-16T20:16:46.55Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "kubernetes",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "kubernetes"
-    ],
-    "cves": [
-      "CVE-2026-62290"
-    ]
-  },
-  {
-    "id": "df28c1fc8d96068b870d57869f225254",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-53536 — Activepieces is an open source AI workflow automation platform. Prior to 0.83.0, the /v1/step-files/…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53536",
-    "summary": "Activepieces is an open source AI workflow automation platform. Prior to 0.83.0, the /v1/step-files/signed download endpoint verified the supplied JWT against the shared signing secret but did not check the token's audience, and combined with a missing null-check on the decoded fileId, this allowed any caller holding any valid Activepieces JWT (including a freshly created user's own access token) to receive a step-file belonging to another tenant. The file returned was whatever PostgreSQL happened to scan first for type = FLOW_STEP_FILE, varying over time as the database changed, so an authenticated user could obtain step-file attachments belonging to other tenants on the same instance; the attacker could not target a specific victim or file, and the access was read-only with no integrity or availability impact. This issue is fixed in version 0.83.0.",
-    "published": "2026-07-16T19:16:50.24Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "postgres",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "postgres"
-    ],
-    "cves": [
-      "CVE-2026-53536"
-    ]
-  },
-  {
-    "id": "de141200dae54c89c9ea7b5af275febd",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-47751 — Claude Code Action is a general-purpose GitHub action that runs Claude Code on GitHub pull requests …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47751",
-    "summary": "Claude Code Action is a general-purpose GitHub action that runs Claude Code on GitHub pull requests and issues. Prior to 1.0.74, because the action checked out attacker-controlled pull request head branches, read .mcp.json from the working directory via default setting sources, and unconditionally enabled all project MCP servers via enableAllProjectMcpServers, an attacker who opened a pull request containing a malicious .mcp.json file could achieve arbitrary code execution on the GitHub Actions runner and exfiltrate secrets available to the workflow (such as API keys and tokens) when a privileged user or an automatic trigger invoked the Claude action on the pull request. This issue is fixed in version 1.0.74, which restores .claude/ and .mcp.json from the pull request base branch before the CLI runs.",
-    "published": "2026-07-16T17:16:57.357Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "rce",
-      "github"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "github"
-    ],
-    "cves": [
-      "CVE-2026-47751"
-    ]
-  },
-  {
-    "id": "e82dc893dd5b3de6d776db5b75c14298",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 4.3 MEDIUM] CVE-2026-44595 — Yamcs is a mission control framework. Prior to 5.12.7, the IAM API endpoints lis…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44595",
-    "summary": "Yamcs is a mission control framework. Prior to 5.12.7, the IAM API endpoints listUsers, getUser, listGroups, and getGroup in yamcs-core did not enforce the required SystemPrivilege.ControlAccess check in yamcs-core/src/main/java/org/yamcs/http/api/IamApi.java, so any authenticated user, even one with low or no privileges, could enumerate all user accounts in the system including their usernames, superuser status, and group memberships. This issue is fixed in versions 5.12.7 and 5.13.0.",
-    "published": "2026-07-16T17:16:55.74Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "spaceapplications"
-    ],
-    "cves": [
-      "CVE-2026-44595"
-    ]
-  },
-  {
-    "id": "57cbd8303d295dee57ab1e81bd800f28",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2024-58360 — stoatchat versions before 0.7.8 fail to enforce account creation restrictions in…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58360",
-    "summary": "stoatchat versions before 0.7.8 fail to enforce account creation restrictions including invite-only mode, email verification, captcha, and shield verification. Attackers can create unlimited accounts with unverified email addresses, increasing denial-of-service risk and compromising service integrity.",
-    "published": "2026-07-16T13:16:23Z",
-    "fetched": "2026-07-19T22:26:30.601643552Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2024-58360"
     ]
   }
 ]

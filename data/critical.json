@@ -1,5 +1,30 @@
 [
   {
+    "id": "bb7ed1ebcf864f4910fa149a68c7bc49",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-18577 — N-able N-central: N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18577",
+    "summary": "N-able N-central contains an authentication bypass using an alternate path or channel allows for authentication bypass and account takeover in N-central. This vulnerability is the result of an incomplete patch for CVE-2026-18556.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-06",
+    "published": "2026-08-03T00:00:00Z",
+    "fetched": "2026-08-03T22:33:57.269697963Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "auth-bypass"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "n-able"
+    ],
+    "cves": [
+      "CVE-2026-18577",
+      "CVE-2026-18556"
+    ]
+  },
+  {
     "id": "072f0e9bb161c95a5e11bede65d58bb6",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -1001,6 +1026,54 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68686",
     "summary": "Fortinet FortiOS contains an exposure of sensitive information to an unauthorized actor vulnerability. This may allow a remote unauthenticated attacker to bypass the patch developed for the symbolic link persistency mechanism observed in some post-exploit cases, via crafted HTTP requests. An attacker would need first to have compromised the product via another vulnerability, at filesystem level.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-10",
     "published": "2026-07-27T00:00:00Z",
+    "fetched": "2026-08-03T22:33:57.269697963Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "fortinet",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "fortinet"
+    ],
+    "cves": [
+      "CVE-2025-68686"
+    ]
+  },
+  {
+    "id": "2a4172eabf7d499e084be1734da4e7ea",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-16812 — Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16812",
+    "summary": "Arista VeloCloud Orchestrator On-Prem contains an OS command injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-07-30",
+    "published": "2026-07-27T00:00:00Z",
+    "fetched": "2026-08-03T22:33:57.269697963Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "arista"
+    ],
+    "cves": [
+      "CVE-2026-16812"
+    ]
+  },
+  {
+    "id": "4024a22808756292a1c079fdfa97c020",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2025-68686 — Fortinet FortiOS: Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68686",
+    "summary": "Fortinet FortiOS contains an exposure of sensitive information to an unauthorized actor vulnerability. This may allow a remote unauthenticated attacker to bypass the patch developed for the symbolic link persistency mechanism observed in some post-exploit cases, via crafted HTTP requests. An attacker would need first to have compromised the product via another vulnerability, at filesystem level.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-10",
+    "published": "2026-07-27T00:00:00Z",
     "fetched": "2026-07-27T22:34:06.517951048Z",
     "tags": [
       "kev",
@@ -1328,54 +1401,6 @@
     ],
     "cves": [
       "CVE-2026-50522"
-    ]
-  },
-  {
-    "id": "f6b61dfca7caed487d46f3dc24d2d581",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-61184 — Vulnerability in the Oracle Agile Product Lifecycle Management for Process produ…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61184",
-    "summary": "Vulnerability in the Oracle Agile Product Lifecycle Management for Process product of Oracle Supply Chain (component: Product Quality Management).   The supported version that is affected is 6.2.4. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Agile Product Lifecycle Management for Process.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Agile Product Lifecycle Management for Process accessible data as well as  unauthorized access to critical data or complete access to all Oracle Agile Product Lifecycle Management for Process accessible data. CVSS 3.1 Base Score 9.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N).",
-    "published": "2026-07-21T22:18:50.233Z",
-    "fetched": "2026-08-02T22:27:42.359204211Z",
-    "tags": [
-      "critical-cvss",
-      "supply-chain",
-      "oracle"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-61184"
-    ]
-  },
-  {
-    "id": "1665789372874d1a93c7e58a2233321c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-61183 — Vulnerability in the Oracle Agile Product Lifecycle Management for Process produ…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61183",
-    "summary": "Vulnerability in the Oracle Agile Product Lifecycle Management for Process product of Oracle Supply Chain (component: Reporting).   The supported version that is affected is 6.2.4. Easily exploitable vulnerability allows unauthenticated attacker with network access via HTTP to compromise Oracle Agile Product Lifecycle Management for Process.  Successful attacks of this vulnerability can result in takeover of Oracle Agile Product Lifecycle Management for Process. CVSS 3.1 Base Score 9.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H).",
-    "published": "2026-07-21T22:18:50.11Z",
-    "fetched": "2026-08-02T22:27:42.359204211Z",
-    "tags": [
-      "critical-cvss",
-      "supply-chain",
-      "oracle"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-61183"
     ]
   }
 ]

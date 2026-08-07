@@ -5,7 +5,34 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 05 Aug 2026 22:34:41 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 01:03:17 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Attackers Compile khunt Inside Oracle to Turn SQL Injection Into Windows SYSTEM Access</title>
+      <link>https://thehackernews.com/2026/08/attackers-compile-khunt-inside-oracle.html</link>
+      <guid isPermaLink="false">bb8b3f3819eb5c8e9618c71d006e9908</guid>
+      <pubDate>Thu, 06 Aug 2026 09:19:23 +0000</pubDate>
+      <description>Attackers broke into an organization&#39;s Oracle database through a SQL injection flaw in a public-facing web application, then installed a post-exploitation toolkit without writing an executable to disk. They fed Java source code to the database, let Oracle compile it into stored schema objects, and ran commands from inside the database engine. Huntress, which tracks the toolkit as khunt,</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>oracle</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>sqli</category>
+      <category>microsoft</category>
+      <category>oracle</category>
+    </item>
+    <item>
+      <title>[HIGH] CISA Flags TeamCity CVE-2026-63077 RCE Flaw Under Active Exploitation in the Wild</title>
+      <link>https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html</link>
+      <guid isPermaLink="false">109b131dd45d219c8ebf0e54cade774b</guid>
+      <pubDate>Thu, 06 Aug 2026 06:51:43 +0000</pubDate>
+      <description>A newly patched security flaw impacting on-premise versions of JetBrains TeamCity has come under active exploitation in the wild, according to the U.S. Cybersecurity and Infrastructure Security Agency (CISA). The vulnerability in question is CVE-2026-63077 (CVSS score: 9.8), a case of deserialization of untrusted data that could allow an unauthenticated attacker with access to a TeamCity server</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
+    </item>
     <item>
       <title>[HIGH] CISA warns of hackers exploiting Langflow, N-central, Apache Tomcat flaws</title>
       <link>https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-langflow-n-central-apache-tomcat-flaws/</link>
@@ -677,102 +704,6 @@
       <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
       <category>high</category>
       <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] Attackers Exploit Arista VeloCloud Orchestrator Command Injection Flaw</title>
-      <link>https://thehackernews.com/2026/07/attackers-exploit-arista-velocloud.html</link>
-      <guid isPermaLink="false">fe4e8890b9968eeb8827d2b93ade902f</guid>
-      <pubDate>Tue, 28 Jul 2026 04:43:53 +0000</pubDate>
-      <description>A maximum-severity security flaw impacting on-premises versions of Arista VeloCloud Orchestrator (VCO) has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-16812 (CVSS score: 10.0), is a case of operating system command injection that could pave the way for arbitrary code execution. &#34;VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[CRIT] Hackers target US firms in FastJson RCE zero-day attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/hackers-target-us-firms-in-fastjson-rce-zero-day-attacks/</link>
-      <guid isPermaLink="false">3040e520c3da9e408f89ca81a6c49c7b</guid>
-      <pubDate>Mon, 27 Jul 2026 23:49:44 +0000</pubDate>
-      <description>Hackers are actively exploiting a vulnerability in the FastJson open-source Java library, allowing remote code execution without user interaction or elevated privileges. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>critical</category>
-      <category>rce</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] Arista patches VeloCloud Orchestrator zero-day exploited in attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/arista-patches-velocloud-orchestrator-zero-day-exploited-in-attacks/</link>
-      <guid isPermaLink="false">ac1b47f30e1434d7090991449021c9a7</guid>
-      <pubDate>Mon, 27 Jul 2026 22:49:44 +0000</pubDate>
-      <description>Arista has patched a maximum-severity command injection vulnerability in on-premises VeloCloud Orchestrator deployments that is being actively exploited in attacks. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>actively-exploited</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2025-68686 — Fortinet FortiOS: Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-68686</link>
-      <guid isPermaLink="false">4024a22808756292a1c079fdfa97c020</guid>
-      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Fortinet FortiOS contains an exposure of sensitive information to an unauthorized actor vulnerability. This may allow a remote unauthenticated attacker to bypass the patch developed for the symbolic link persistency mechanism observed in some post-exploit cases, via crafted HTTP requests. An attacker would need first to have compromised the product via another vulnerability, at filesystem level.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-10</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-16812 — Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16812</link>
-      <guid isPermaLink="false">2a4172eabf7d499e084be1734da4e7ea</guid>
-      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Arista VeloCloud Orchestrator On-Prem contains an OS command injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-30</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>arista</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2025-68686 — Fortinet FortiOS: Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-68686</link>
-      <guid isPermaLink="false">4024a22808756292a1c079fdfa97c020</guid>
-      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Fortinet FortiOS contains an exposure of sensitive information to an unauthorized actor vulnerability. This may allow a remote unauthenticated attacker to bypass the patch developed for the symbolic link persistency mechanism observed in some post-exploit cases, via crafted HTTP requests. An attacker would need first to have compromised the product via another vulnerability, at filesystem level.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-10</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-16812 — Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16812</link>
-      <guid isPermaLink="false">2a4172eabf7d499e084be1734da4e7ea</guid>
-      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
-      <description>Arista VeloCloud Orchestrator On-Prem contains an OS command injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-07-30</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>arista</category>
-    </item>
-    <item>
-      <title>[HIGH] Cl0p Affiliates Target Internet-Exposed PTC Windchill and FlexPLM with Unauthenticated RCE</title>
-      <link>https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html</link>
-      <guid isPermaLink="false">da672e170c25a8387a1fcd430ecc6d64</guid>
-      <pubDate>Sat, 25 Jul 2026 10:14:03 +0000</pubDate>
-      <description>Threat actors linked to the Cl0p (aka Chubby Scorpius, FIN11, Graceful Spider, and Lace Tempest) ransomware campaign are exploiting flaws in internet-exposed PTC Windmill and FlexPLM deployments as part of a new data extortion campaign. &#34;Attackers chain a pre-authentication information disclosure in the FlexPLM WSDL endpoint with a server-side flaw in the Windchill login servlet, enabling</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>ransomware</category>
     </item>
   </channel>
 </rss>

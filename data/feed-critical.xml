@@ -5,7 +5,67 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Aug 2026 21:56:06 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 21:58:23 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] [CVSS 5.7 MEDIUM] CVE-2026-64676 — Kata Containers is an open source implementation of lightweight Virtual Machines…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-64676</link>
+      <guid isPermaLink="false">abafc01bbca8da1ae0cd51ea3114642f</guid>
+      <pubDate>Fri, 07 Aug 2026 22:16:59 +0000</pubDate>
+      <description>Kata Containers is an open source implementation of lightweight Virtual Machines (VMs) that perform like containers. In versions prior to 4.0.0, the kata-agent is vulnerable to an authorization bypass in confidential-guest memory management. In Confidential Containers (CoCo) deployments, the kata-agent enforces an OPA/Rego-based AgentPolicy that must authorize every ttRPC API call, forming the security boundary that prevents an untrusted host from directing the confidential guest. Two ttRPC methods introduced with the mem-agent feature are missing this authorization check, so an untrusted host can invoke them unconditionally regardless of the guest&#39;s policy configuration. When mem-agent is enabled (off by default), this lets the host tamper with in-guest memory management by forcing swap, aggressive eviction, or compaction, resulting in attacker-controlled availability and performance degradation of the confidential workload entirely outside the agent-policy boundary. The impact does not include memory disclosure or code execution, and severity is bounded by the precondition that mem-agent must be explicitly enabled. This issue is fixed in version 4.0.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-48169 — PraisonAI is a multi-agent teams system. Versions prior to 0.1.4 of the PraisonA…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48169</link>
+      <guid isPermaLink="false">ef516789c5d60f2c666623b9aeb8d237</guid>
+      <pubDate>Fri, 07 Aug 2026 22:16:59 +0000</pubDate>
+      <description>PraisonAI is a multi-agent teams system. Versions prior to 0.1.4 of the PraisonAI Platform API have two authorization failures that together break workspace isolation. The service layer for issues and projects performs global primary-key lookups without checking workspace ownership, so any authenticated user can read, modify, and delete resources in any workspace just by swapping UUIDs in their API requests. On top of that, every member management endpoint (add, update role, remove) only requires `min_role=&#34;member&#34;`, which lets any workspace member promote themselves to owner and kick out the original owner. A low-privilege member of one workspace can steal data from every other workspace and take over any workspace they belong to. Both issues come from the same gap: the route layer pulls `workspace_id` from the URL and verifies membership, but the service layer ignores the workspace scope for resource lookups and ignores the caller&#39;s role level for member operations. The `require_workspace_member()` dependency does its job correctly. The problem is that the service layer doesn&#39;t use the information it provides. Version 0.1.4 of the PraisonAI Platform API patch the issue.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-47243 — Kata Containers is an open source project focusing on a standard implementation of lightweight Virtu…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47243</link>
+      <guid isPermaLink="false">f10039c9b840b4d1a4b5db8eabfa88e1</guid>
+      <pubDate>Fri, 07 Aug 2026 22:16:58 +0000</pubDate>
+      <description>Kata Containers is an open source project focusing on a standard implementation of lightweight Virtual Machines (VMs) that perform like containers. Prior to 3.31.0, the runtime-rs standalone virtio-fs path is vulnerable to a guest-root to host-root escape. In this configuration, Kata runs the host virtiofsd as root with --sandbox none --seccomp none, so an attacker with root-equivalent access inside the guest can bypass the guest virtio-fs client entirely by taking over the virtio-fs PCI device and building a virtqueue in userspace to submit raw FUSE requests directly to the host virtiofsd. A crafted FUSE_SYMLINK request whose new symlink name is an absolute host path is honored outside the configured shared directory, allowing guest root to create root-owned symlinks in sensitive host locations such as /etc/cron.d. By pointing such a symlink at a guest-controlled crontab payload reachable through a live runtime process&#39;s mount namespace, the attacker causes the host cron daemon to execute that payload as host root, crossing the Kata isolation boundary. This issue is fixed in version 3.31.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-46405 — OpenBao is an open source identity-based secrets management system. Prior to ver…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46405</link>
+      <guid isPermaLink="false">47ee31cd12304994b0078111cab830b6</guid>
+      <pubDate>Fri, 07 Aug 2026 22:16:58 +0000</pubDate>
+      <description>OpenBao is an open source identity-based secrets management system. Prior to version 2.5.4, in OpenBao&#39;s Kerberos auth method on the `GET` handler, or when an `Authorization: Negotiate` header is supplied, the response is includes a `logical.Auth` object in addition to an error message. This results in tokens being created with only the default policy, default TTL, and no entity information, which are hidden by the returned error message. No access to these tokens by the caller occurs and the authentication token is not ever made accessible outside of `sys/raw`. This is fixed in OpenBao v2.5.4. As a workaround, users may set a rate limit quota to limit the creation of these paths. As the path is unauthenticated, it isn&#39;t possible to deny access to it.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-45808 — OpenBao is an open source identity-based secrets management system. Prior to version 2.5.4, OpenBao&#39;…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45808</link>
+      <guid isPermaLink="false">0d5f8d7a6b71b04bb4653b27923c37bf</guid>
+      <pubDate>Fri, 07 Aug 2026 22:16:58 +0000</pubDate>
+      <description>OpenBao is an open source identity-based secrets management system. Prior to version 2.5.4, OpenBao&#39;s namespaces provide multi-tenant separation. A tenant who intentionally leaks lease identifiers can have their lease and underlying credential revoked or renewed by a user in another tenant via the legacy, undocumented `sys/revoke` and `sys/renew` endpoints. This is fixed in OpenBao v2.5.4.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.6 MEDIUM] CVE-2026-11743 — The SF32LB MPI QSPI NOR flash driver (drivers/flash/flash_sf32lb_mpi_qspi_nor.c)…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11743</link>
+      <guid isPermaLink="false">105fd5454db1dd4a3a72a4945bd74998</guid>
+      <pubDate>Fri, 07 Aug 2026 22:16:57 +0000</pubDate>
+      <description>The SF32LB MPI QSPI NOR flash driver (drivers/flash/flash_sf32lb_mpi_qspi_nor.c) validated the flash offset and length on its read and write paths with the test (offset + size) &gt; data-&gt;size. Because offset is a signed off_t while size is unsigned, a negative offset is converted to a large unsigned value and the addition can wrap to a small result that passes the check. The read path then performs memcpy(dst, (void *)(data-&gt;base + offset), size) and the write path programs flash at offset and cache-invalidates data-&gt;base + offset, in both cases accessing memory outside the mapped flash window. The driver&#39;s erase path already rejected negative offsets, but read and write did not.&#xA;&#xA;In builds with CONFIG_USERSPACE, flash_read and flash_write are syscalls whose verifiers validate the device object and the caller&#39;s buffer but deliberately delegate offset bounds checking to the driver. An unprivileged thread that has been granted access to this flash device can therefore call the syscall with a crafted negative offset and a buffer valid in its own memory domain, and reach the unchecked access.&#xA;&#xA;The most direct impact is on the read path: by choosing a negative offset and matching size, an attacker slides the memcpy source below the flash base and copies arbitrary CPU-addressable memory into its own buffer, disclosing memory it is not authorized to read. The write path additionally allows programming flash at an out-of-range address and invalidating an attacker-chosen cache range, affecting integrity and availability. Reachability requires userspace to be enabled and the raw flash device object to be granted to an untrusted thread.&#xA;&#xA;The fix replaces the check with qspi_nor_range_is_valid(), which rejects negative offsets and performs the bound comparison in overflow-safe 64-bit arithmetic on both paths, and additionally adds an SRAM DMA bounce buffer plus source/destination overlap rejection to prevent a separate DMA bus-hang condition.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
     <item>
       <title>[HIGH] Metabase SQLi zero-day exploited in customer data-theft attacks</title>
       <link>https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/</link>
@@ -16,6 +76,72 @@
       <category>high</category>
       <category>sqli</category>
       <category>0day</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.0 CRITICAL] CVE-2026-71851 — crypto-js is a JavaScript library of crypto standards. Versions of crypto-js pri…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71851</link>
+      <guid isPermaLink="false">092aea6ccb438deadfbd5d90f8c79342</guid>
+      <pubDate>Fri, 07 Aug 2026 19:18:54 +0000</pubDate>
+      <description>crypto-js is a JavaScript library of crypto standards. Versions of crypto-js prior to 4.0.0 generate randomness in CryptoJS.lib.WordArray.random() using a custom variation of the Multiply-With-Carry pseudorandom number generator, seeded from Math.random(), instead of a cryptographically secure source. This generator was introduced in version 3.1.2-4 and remained present in nearly every 3.x release. Nominal requests for 128 or 256 bits of entropy through this function produce effective search spaces of approximately 2 to the 39th and 2 to the 47th possibilities, small enough to enumerate on commodity hardware. Downstream wallet applications that used CryptoJS.lib.WordArray.random() as the entropy source for BIP39 recovery phrases are affected, and an attacker who enumerates the reduced output space can recover the resulting private keys and control the associated funds. This issue is fixed in version 4.0.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.3 HIGH] CVE-2026-11430 — Grav CMS&#39;s scheduler-webhook plugin contains an authentication bypass in the web…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11430</link>
+      <guid isPermaLink="false">6a3d24911e813acb4fc10c62372b68b5</guid>
+      <pubDate>Fri, 07 Aug 2026 19:17:34 +0000</pubDate>
+      <description>Grav CMS&#39;s scheduler-webhook plugin contains an authentication bypass in the webhook token check. When the webhook feature is enabled but no webhookToken is configured, a compound conditional short-circuits and skips token validation, so an unauthenticated remote attacker who can reach POST /scheduler/webhook can trigger the operator&#39;s already-configured scheduled jobs by sending a single request. The primitive is triggering-existing-jobs, not attacker-chosen command execution: the attacker controls when the jobs run and which one runs (via ?job=), but does not control what the jobs do. Code execution follows only when the operator has configured a job that shells out, and even then the attacker controls timing rather than payload. Not a default-install issue: reaching the endpoint requires the separate scheduler-webhook GPM plugin to be installed, scheduler.modern.webhook.enabled to be true (default false), and no webhookToken to be configured; a stock Grav or Grav-Admin install exposes nothing here.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>auth-bypass</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.5 MEDIUM] CVE-2026-44965 — In versions of the Datadog Android application prior to v545-5.9.2, six App Widg…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44965</link>
+      <guid isPermaLink="false">4a4e12c92004b231b40fa48252177faf</guid>
+      <pubDate>Fri, 07 Aug 2026 18:17:14 +0000</pubDate>
+      <description>In versions of the Datadog Android application prior to v545-5.9.2, six App Widget configuration activities (IncidentWidgetActivity, MonitorSavedViewWidgetActivity, OnCallShiftsWidgetActivity, OnCallPagesWidgetActivity, SloWidgetActivity, DashboardWidgetActivity) are exported with no permission guard. Each accepts a caller-supplied AppWidgetManager.EXTRA_APPWIDGET_ID and, when no deep-link destination is resolved, uses it to load the matching widget&#39;s stored session and automatically log in as that user. Because Android widget IDs are small sequential integers, a co-installed application can brute-force this value to find one that matches a widget configured on the victim&#39;s device.&#xD;&#xA;This requires:&#xD;&#xA;A malicious application co-installed on the victim&#39;s device.&#xD;&#xA;At least one of the six widgets configured on the victim&#39;s home screen.&#xD;&#xA;An active Datadog session cached locally.&#xD;&#xA;Impact: The matching configuration activity opens in the foreground under the victim&#39;s session and renders live infrastructure data. Exposure is limited to a visual side channel (e.g., screen recording or accessibility services); the calling application cannot programmatically read the rendered data.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.0 HIGH] CVE-2026-68772 — ZenML 0.94.6 contains a remote code execution vulnerability in the CloudpickleMa…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68772</link>
+      <guid isPermaLink="false">5f4596eac1977d665f89f5b078ac30fa</guid>
+      <pubDate>Fri, 07 Aug 2026 17:17:07 +0000</pubDate>
+      <description>ZenML 0.94.6 contains a remote code execution vulnerability in the CloudpickleMaterializer component that allows attackers with write access to a shared artifact store to execute arbitrary code by planting a malicious pickle file. Attackers can replace a stored artifact.pkl file with a crafted cloudpickle payload containing a malicious __reduce__ method, which executes arbitrary system commands when any user or pipeline materializes the artifact through the unsanitized cloudpickle.load() call in cloudpickle_materializer.py.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-17595 — Nexus Repository 3 did not fully sandbox JEXL expressions used in Content Selectors. An account hold…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-17595</link>
+      <guid isPermaLink="false">d41976e01077a129423a0504195744c1</guid>
+      <pubDate>Fri, 07 Aug 2026 17:16:59 +0000</pubDate>
+      <description>Nexus Repository 3 did not fully sandbox JEXL expressions used in Content Selectors. An account holding the nexus:selectors:create permission could construct an expression that read Java object properties not intended to be exposed to the expression engine, disclosing internal JVM class metadata such as class and classloader names. This issue does not permit method invocation, object construction, or arbitrary code execution. This has been fixed by restricting property access in the JEXL sandbox to the intended data types.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 9.8 CRITICAL] CVE-2026-71558 — Heap type confusion vulnerability in Apache Fory C++ deserialization.&#xA;&#xA;This issu…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71558</link>
+      <guid isPermaLink="false">053ad18426a12b193ad90ad145422c64</guid>
+      <pubDate>Fri, 07 Aug 2026 10:16:59 +0000</pubDate>
+      <description>Heap type confusion vulnerability in Apache Fory C++ deserialization.&#xA;&#xA;This issue affects Apache Fory C++ versions from 0.14.0 before 1.5.0. A crafted input payload can bypass type compatibility checks during polymorphic smart-pointer deserialization, causing an object of an incompatible type to be treated as the declared base type. This may result in undefined behavior and potentially lead to denial of service or arbitrary code execution.&#xA;&#xA;&#xA;Users are recommended to upgrade to Apache Fory 1.5.0, which fixes this issue. Applications not using Apache Fory C++ polymorphic smart-pointer deserialization are not affected.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>deserialization</category>
+      <category>apache</category>
+      <category>watch</category>
+      <category>apache</category>
     </item>
     <item>
       <title>[HIGH] AI-Assisted HTTP Terminator Finds Novel HTTP Desync Techniques and Apache Zero-Day</title>
@@ -43,6 +169,172 @@
       <category>progress</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-8325 — A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8325</link>
+      <guid isPermaLink="false">54cf57243ce2f3ab1a5d187f61b759bd</guid>
+      <pubDate>Thu, 06 Aug 2026 22:18:33 +0000</pubDate>
+      <description>A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an Out-of-Bounds Write vulnerability. A malicious actor may leverage this vulnerability to cause a crash, cause data corruption, or execute arbitrary code in the context of the current process.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-71476 — Nx is a monorepo solution for TypeScript and polyglot codebases. From version 20.8.0 until 22.7.7 an…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71476</link>
+      <guid isPermaLink="false">a8678622db377a351a77f1e1f14d4ed4</guid>
+      <pubDate>Thu, 06 Aug 2026 22:18:31 +0000</pubDate>
+      <description>Nx is a monorepo solution for TypeScript and polyglot codebases. From version 20.8.0 until 22.7.7 and 23.0.2, the Nx self-hosted HTTP remote cache extracts downloaded cache artifacts without constraining where files are written. A malicious or on-path (MITM) remote cache server can return a crafted tar archive whose entries escape the cache directory and write to arbitrary locations on the machine running Nx, which can be escalated to remote code execution. Nx&#39;s default local cache and Nx Cloud are not affected; only workspaces configured to use a self-hosted remote cache are affected. This issue is fixed in versions 22.7.7 and 23.0.2.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-71326 — Traefik is an open source HTTP reverse proxy and load balancer. From 3.6.11 until 3.6.25 and 3.7.10,…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71326</link>
+      <guid isPermaLink="false">8d021c0eb0df733c6474b6da1b3f26eb</guid>
+      <pubDate>Thu, 06 Aug 2026 22:18:29 +0000</pubDate>
+      <description>Traefik is an open source HTTP reverse proxy and load balancer. From 3.6.11 until 3.6.25 and 3.7.10, Traefik&#39;s BasicAuth middleware in pkg/middlewares/auth/basic_auth.go deduplicates concurrent password checks with a singleflight key built from the delimiter-free concatenation of password and secret, allowing an attacker who has a valid credential and the stored hash to authenticate as an unconfigured username when headerField trusts the forwarded identity. This issue is fixed in 3.6.25 and 3.7.10.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-70636 — Flowise through 3.1.4 contains an authentication bypass vulnerability that allow…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-70636</link>
+      <guid isPermaLink="false">2ab12755e914b4be731a8fa727c3f28a</guid>
+      <pubDate>Thu, 06 Aug 2026 22:18:28 +0000</pubDate>
+      <description>Flowise through 3.1.4 contains an authentication bypass vulnerability that allows unauthenticated attackers to access the OAuth2 credential refresh endpoint by exploiting prefix-based whitelist matching in the authentication middleware defined in packages/server/src/utils/constants.ts. Attackers can send a POST request to the oauth2-credential refresh route with a trailing credential identifier to bypass all authentication and authorization checks, triggering unauthorized OAuth token rotation against credentials belonging to any workspace and potentially disrupting dependent OAuth integrations. This is a bypass of CVE-2026-41273.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>auth-bypass</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-70558 — Dinky&#39;s POST /download/uploadFromRsByLocal handler passes the caller-supplied pa…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-70558</link>
+      <guid isPermaLink="false">abba3809d4542fc48e881d5d6cb3ff19</guid>
+      <pubDate>Thu, 06 Aug 2026 22:18:26 +0000</pubDate>
+      <description>Dinky&#39;s POST /download/uploadFromRsByLocal handler passes the caller-supplied path parameter directly to new File(path) and file.transferTo(dest) with no path validation. The route is marked @SaIgnore and /download/** is excluded from the Sa-Token interceptor, so the only guard is a header equality check against a dinkyToken value whose default (efda1551-7958-4e0f-80a8-dfd107df3e38) is hardcoded in source and shipped to every deployment. Anyone who can reach Dinky&#39;s HTTP port (8888 by default) and supplies the hardcoded token can write arbitrary files as the Dinky service account. The default Docker image runs on 8888 with no proxy or authentication and chmod 777 on /opt/dinky, so the application&#39;s own classpath, launch scripts, and static assets are writable. Demonstrated impact: overwriting /opt/dinky/config/static/index.html served attacker JavaScript to admin browsers immediately, and writing /opt/dinky/org/dinky/Dinky.class executed attacker code as the Dinky service account at the next JVM start via a classpath-shadow launched by script/bin/auto.sh. Writes are uid 9999 (flink), not root, so /etc, /root, /home, and /usr are refused. Affects Dinky v1.2.5 (the current release) and the development branch, where the code is byte-identical.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>docker</category>
+      <category>rce</category>
+      <category>docker</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-64655 — GitHub CLI (gh) is GitHub’s official command line tool. Prior to 2.97.0, gh attestation verify  b…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-64655</link>
+      <guid isPermaLink="false">da6e02100f2a6f381ba556404ce7f3ec</guid>
+      <pubDate>Thu, 06 Aug 2026 22:18:13 +0000</pubDate>
+      <description>GitHub CLI (gh) is GitHub’s official command line tool. Prior to 2.97.0, gh attestation verify  builds the certificate Subject Alternative Name matcher from the --signer-repo and --signer-workflow  flag values without escaping regex metacharacters, so a user-supplied repository or workflow name is treated as a regular expression rather than a literal string. Because GitHub permits characters such as  `.`  in organization, repository, and workflow path names and  `.`  is a regex wildcard, an attacker can register a lookalike name (for example github/artifact.attestations-workflows) that satisfies a matcher intended for a different trusted signer (github/artifact-attestations-workflows), bypassing the intended Sigstore attestation verification. Exploitation requires the attacker to create a plausible lookalike repository and produce valid attestations from it, which could undermine supply chain verification for CI/CD pipelines or policy gates that pin trust to a specific signing workflow. This issue is fixed in version 2.97.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>supply-chain</category>
+      <category>github</category>
+      <category>github</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.1 HIGH] CVE-2026-5857 — Contiki-NG&#39;s MQTT client parse_publish_vhdr() in os/net/app-layer/mqtt/mqtt.c se…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-5857</link>
+      <guid isPermaLink="false">774fa6ed9d2a886e1dee29766cd81207</guid>
+      <pubDate>Thu, 06 Aug 2026 22:18:10 +0000</pubDate>
+      <description>Contiki-NG&#39;s MQTT client parse_publish_vhdr() in os/net/app-layer/mqtt/mqtt.c sets topic_len_received=1 before checking topic_len against the 64-byte limit, so an over-length topic returns early but leaves the flag set. On the next TCP segment, tcp_input() re-invokes the parser with topic_received==0, and the persisted topic_len_received==1 skips the length-reading block containing the guard, falling through directly to a memcpy() that uses the unvalidated 16-bit topic_len as the copy length. The 65-byte topic[] destination overruns into adjacent struct fields including the payload_chunk pointer, which subsequent MQTT code dereferences, giving a compromised or attacker-controlled broker an arbitrary-pointer-write primitive. Contiki-NG&#39;s MQTT implementation has no TLS support so the connection is plaintext. Impact ranges from information disclosure and denial of service to remote code execution on embedded targets without memory protection.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.4 CRITICAL] CVE-2026-48088 — OpenReception&#39;s appointment booking software provides an end-to-end encrypted ap…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48088</link>
+      <guid isPermaLink="false">633fbc1094d58e3bc9599d8c748062ea</guid>
+      <pubDate>Thu, 06 Aug 2026 22:17:11 +0000</pubDate>
+      <description>OpenReception&#39;s appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.4, the route `POST /api/tenants/{tenantId}/staff/{staffId}/crypto` accepts and stores attacker-controlled ML-KEM-768 public keys against any tenant on the platform without authentication. The handler logs an &#34;Unauthorized crypto key storage attempt&#34; warning when neither a session nor a registration cookie is present, then proceeds to insert the row regardless. The platform&#39;s E2E claim that &#34;even administrators cannot view sensitive information&#34; is broken: any unauthenticated network attacker can register themselves as an additional encryption recipient for any tenant&#39;s future patient appointments. A second variant of the bug suppresses the unauthorized-warning log entry. The Zod schema makes the `email` field optional. When the request body omits `email` and the request carries no registration cookie, the comparison `registrationEmail === email` becomes `undefined === undefined`, which evaluates to `true`. The handler treats the request as a legitimate registration flow, skips the warning entirely, and stores the row. Successful storage is still recorded as an `[info]` log line, but the security-relevant warning that operators are most likely to monitor or alert on is gone. The `staff_crypto` table has no unique constraint on `user_id`, so an arbitrary number of attacker rows can coexist for the same staff identifier and all return as `is_active=true`. The supplied `staffId` does not need to match any existing user or pending invite. Schema validation on `passkeyId`, `publicKey`, and `privateKeyShare` is also weak: the literal string `&lt;placeholder-base64&gt;` was accepted, indicating no length, format, or cryptographic-validity check beyond field presence. This weakness is independent of the auth bypass but compounds it: a poisoned directory can also be filled with malformed entries that break legitimate booking flows. The injected key is consumed by the public booking flow. After completing the unauthenticated `bootstrap-challenge` and `bootstrap-verify` ceremony as a &#34;patient&#34;, the resulting `bookingAccessToken` is accepted by `GET /api/tenants/{id}/appointments/staff-public-keys`, which returns the attacker-controlled keys alongside any legitimate ones. A new appointment encrypts its tunnel key with ML-KEM to all listed recipients, so the attacker becomes a co-recipient of the encryption and can decapsulate the tunnel key with the matching secret. From there, all appointment payloads for that booking are decryptable. Version 1.0.4 patches the issue.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>auth-bypass</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-48083 — OpenReception&#39;s appointment booking software provides an end-to-end encrypted ap…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48083</link>
+      <guid isPermaLink="false">9d8d436ccb9bea153185e3faab0b56d5</guid>
+      <pubDate>Thu, 06 Aug 2026 22:17:11 +0000</pubDate>
+      <description>OpenReception&#39;s appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.2, the `/api/log` endpoint accepts unauthenticated POST requests, applies no schema validation to the message body, writes attacker-controlled content directly into the application&#39;s stdout log, interprets newline characters as real line breaks, and enforces no size or rate limits. Three independent abuse modes follow: log injection (forge log lines that look like legitimate system events), log volume DoS (saturate the logging pipeline at sustained 100+ requests per second of small messages), and oversized-payload submission (100 KB payloads accepted; larger sizes not tested). The most operationally damaging mode is log injection. An attacker can inject lines that an operator scanning logs would mistake for real system errors, mask their own activity behind fake noise, or pollute SIEM alerting rules with crafted false positives. A line such as `[error]: injected admin error` injected from an unauthenticated source is indistinguishable from the application&#39;s own error output once written to disk. Version 1.0.2 fixes the issue.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-43627 — llama.cpp builds b1283 through b9058 contain an integer overflow vulnerability i…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-43627</link>
+      <guid isPermaLink="false">5d9dd07043afc652f1c882d672290906</guid>
+      <pubDate>Thu, 06 Aug 2026 22:17:05 +0000</pubDate>
+      <description>llama.cpp builds b1283 through b9058 contain an integer overflow vulnerability in the llama_batch_init() function where unchecked multiplications in malloc() calls can wrap past INT32_MAX when computing allocation sizes. Attackers can pass specially crafted parameters to trigger integer overflow, causing heap corruption and potentially achieving arbitrary code execution through subsequent batch operations that write past allocated buffer boundaries.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-1289 — A maliciously crafted PDF file, when parsed through Autodesk Revit, can force a …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-1289</link>
+      <guid isPermaLink="false">565aca6cf61dbe6cb01ef7951567a171</guid>
+      <pubDate>Thu, 06 Aug 2026 22:17:00 +0000</pubDate>
+      <description>A maliciously crafted PDF file, when parsed through Autodesk Revit, can force a Use-After-Free vulnerability. A malicious actor can leverage this vulnerability to cause a crash, disclose sensitive data, or execute arbitrary code in the context of the current process.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-11803 — A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11803</link>
+      <guid isPermaLink="false">6e6e1162e4ff5c49a880bc9a277f3a7b</guid>
+      <pubDate>Thu, 06 Aug 2026 22:16:44 +0000</pubDate>
+      <description>A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an Out-of-Bounds Read vulnerability. A malicious actor can leverage this vulnerability to cause a crash, read sensitive data, or execute arbitrary code in the context of the current process.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-19047 — A vulnerability was detected in NocteDefensor LudusMCP up to 1.0.24. This affect…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19047</link>
+      <guid isPermaLink="false">a897f2bb7ccc567cb8b66d19d357929e</guid>
+      <pubDate>Thu, 06 Aug 2026 16:16:41 +0000</pubDate>
+      <description>A vulnerability was detected in NocteDefensor LudusMCP up to 1.0.24. This affects the function executeArbitraryCommand/executeCommand of the file src/ludusMCP/cliWrapper.ts of the component ludus_cli_execute. Performing a manipulation of the argument command/args results in command injection. The attack needs to be approached locally. The project was informed of the problem early through an issue report but has not responded yet.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-70646 — aiosend is a synchronous and asynchronous Crypto Pay API client. Pror to version…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-70646</link>
+      <guid isPermaLink="false">c0a141ad402521a6c54d95b058bb94cb</guid>
+      <pubDate>Thu, 06 Aug 2026 15:17:27 +0000</pubDate>
+      <description>aiosend is a synchronous and asynchronous Crypto Pay API client. Pror to version 3.0.7, `WebhookHandler.feed_update()` deserializes the entire request body before verifying the HMAC signature. This allows an unauthenticated attacker to force expensive parsing of arbitrary JSON payloads that will ultimately be rejected, leading to unnecessary CPU and memory consumption. Version 3.0.7 fixes the issue. Some workarounds are available. Restrict request body size at the reverse proxy or web framework, rate-limit webhook endpoints, and/or reject oversized requests before JSON parsing.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.1 HIGH] CVE-2026-66707 — Unauthenticated Cross Site Scripting (XSS) in Facebook for WooCommerce &lt;= 3.7.5 …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-66707</link>
+      <guid isPermaLink="false">2d6a806e4649017e7be54b632f658a96</guid>
+      <pubDate>Thu, 06 Aug 2026 15:17:23 +0000</pubDate>
+      <description>Unauthenticated Cross Site Scripting (XSS) in Facebook for WooCommerce &lt;= 3.7.5 versions.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-66692 — Customer Insecure Direct Object References (IDOR) in Colissimo Officiel : Métho…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-66692</link>
+      <guid isPermaLink="false">2450fe67902af4d9653ea246cfd65606</guid>
+      <pubDate>Thu, 06 Aug 2026 15:17:22 +0000</pubDate>
+      <description>Customer Insecure Direct Object References (IDOR) in Colissimo Officiel : Méthodes de livraison pour WooCommerce &lt;= 2.10.0 versions.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[HIGH] Attackers Compile khunt Inside Oracle to Turn SQL Injection Into Windows SYSTEM Access</title>
       <link>https://thehackernews.com/2026/08/attackers-compile-khunt-inside-oracle.html</link>
       <guid isPermaLink="false">bb8b3f3819eb5c8e9618c71d006e9908</guid>
@@ -57,6 +349,30 @@
       <category>sqli</category>
       <category>microsoft</category>
       <category>oracle</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-64584 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;usb: gadget…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-64584</link>
+      <guid isPermaLink="false">3598b3cab0a32a174f7dec25a13626b2</guid>
+      <pubDate>Thu, 06 Aug 2026 08:16:33 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;usb: gadget: f_midi: cancel pending IN work before freeing the midi object&#xA;&#xA;The f_midi driver embeds a work item (midi-&gt;work) whose handler,&#xA;f_midi_in_work(), dereferences the enclosing struct f_midi through&#xA;container_of().  This work is armed from two sites: f_midi_complete(),&#xA;on a normal IN-endpoint completion, and f_midi_in_trigger(), on an ALSA&#xA;rawmidi output-stream start.&#xA;&#xA;Neither f_midi_disable() nor f_midi_unbind() cancels midi-&gt;work.&#xA;f_midi_disable() only disables the endpoints and drains the in_req_fifo;&#xA;it does not synchronize the work item, and the sound card is released&#xA;asynchronously to the final free of the midi object.&#xA;&#xA;The midi object is reference-counted (midi-&gt;free_ref) and is freed in&#xA;f_midi_free() only once both the usb_function reference and the rawmidi&#xA;private_data reference have been dropped.  In f_midi_unbind(),&#xA;f_midi_disable() runs before the sound card is released, so while the&#xA;USB endpoints are already disabled the rawmidi device is still usable by&#xA;an open substream.  A concurrent userspace write on such a substream can&#xA;reach f_midi_in_trigger() and queue midi-&gt;work again after&#xA;f_midi_disable() has returned.  A work item armed this way may still be&#xA;pending when the last reference drops and f_midi_free() proceeds to&#xA;kfree(midi), letting f_midi_in_work() dereference the struct after it&#xA;has been freed, a use-after-free.&#xA;&#xA;For this reason cancelling midi-&gt;work in f_midi_disable() would not be&#xA;sufficient: the ALSA trigger path can rearm the work after disable()&#xA;returns.  Cancelling at the refcount-zero free site is the boundary&#xA;after which neither arming source can survive, because by then both&#xA;references that keep the midi object alive have been dropped: the USB&#xA;endpoints are already disabled and the rawmidi device has been released.&#xA;&#xA;Fix this by calling cancel_work_sync(&amp;midi-&gt;work) in the refcount-zero&#xA;block of f_midi_free(), before the embedded work_struct is freed along&#xA;with the rest of the structure.  opts-&gt;lock is a sleeping mutex, so&#xA;calling cancel_work_sync() under it is permitted, and the handler takes&#xA;midi-&gt;transmit_lock rather than opts-&gt;lock, so no self-deadlock can&#xA;occur while it waits for a running instance of the work to finish.&#xA;&#xA;This issue was found by an in-house static analysis tool.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.9 MEDIUM] CVE-2024-6832 — The account locking mechanism fails to trigger when secondary user stores are in…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2024-6832</link>
+      <guid isPermaLink="false">5b073406b759d24a5641e96e552a73af</guid>
+      <pubDate>Thu, 06 Aug 2026 08:16:27 +0000</pubDate>
+      <description>The account locking mechanism fails to trigger when secondary user stores are inaccessible. The software does not maintain a consistent state for account locking if it cannot reach all configured user stores, allowing an attacker to repeatedly attempt authentication with invalid credentials without triggering the lockout mechanism for users within active stores.&#xA;&#xA;When the account locking mechanism is bypassed due to the inaccessibility of secondary user stores, users in accessible user stores are left vulnerable to brute force attacks. A malicious actor can exploit this by attempting numerous invalid password combinations against a user account without the expected account lockout consequence.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>wso2</category>
     </item>
     <item>
       <title>[HIGH] CISA Flags TeamCity CVE-2026-63077 RCE Flaw Under Active Exploitation in the Wild</title>
@@ -81,6 +397,20 @@
       <category>watch</category>
       <category>actively-exploited</category>
       <category>apache</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 9.8 CRITICAL] CVE-2026-64566 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;xfrm: iptfs…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-64566</link>
+      <guid isPermaLink="false">e017d015afaa08d5d299a8798ffdf45d</guid>
+      <pubDate>Wed, 05 Aug 2026 08:16:36 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;xfrm: iptfs: propagate SKBFL_SHARED_FRAG in iptfs_skb_add_frags()&#xA;&#xA;When iptfs_skb_add_frags() copies frag references from the source&#xA;frag walk into a new SKB, it increments the page reference count via&#xA;__skb_frag_ref() but does not propagate SKBFL_SHARED_FRAG to the&#xA;destination SKB&#39;s skb_shinfo-&gt;flags.&#xA;&#xA;If the source SKB carries shared frags (e.g. from a page-pool backed&#xA;receive path), the new inner SKB will appear to ESP as having privately&#xA;owned frags.  A subsequent esp_input() call for a nested transport-mode&#xA;SA then takes the no-COW fast path and decrypts in place, writing over&#xA;pages that are still referenced by the outer IPTFS SKB.  This causes&#xA;kernel-visible memory corruption and can trigger a panic.&#xA;&#xA;All other frag-transfer helpers in the kernel (skb_try_coalesce,&#xA;skb_gro_receive, __pskb_copy_fclone, skb_shift, skb_segment) correctly&#xA;propagate SKBFL_SHARED_FRAG; align iptfs_skb_add_frags() with this&#xA;convention by setting the flag inside the loop immediately after&#xA;__skb_frag_ref() and nr_frags++, so every exit path that attaches a frag&#xA;unconditionally propagates SKBFL_SHARED_FRAG.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>critical-cvss</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
     </item>
     <item>
       <title>[CRIT] ZDI-26-526: (0Day) PAX Technology Q80 Application Installer Signature Verification Bypass Remote Code Execution Vulnerability</title>
@@ -150,6 +480,20 @@
       <category>critical</category>
       <category>auth-bypass</category>
       <category>actively-exploited</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 9.8 CRITICAL] CVE-2026-64564 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;sctp: don&#39;t…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-64564</link>
+      <guid isPermaLink="false">6cfab2e6d76f96adc59d5d0ce7b36768</guid>
+      <pubDate>Tue, 04 Aug 2026 07:16:31 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;sctp: don&#39;t free the ASCONF&#39;s own transport in DEL-IP processing&#xA;&#xA;sctp_process_asconf() caches the transport the ASCONF chunk is processed&#xA;against in asconf-&gt;transport (== chunk-&gt;transport, set once in sctp_rcv()).&#xA;For an ASCONF located through its Address Parameter by&#xA;__sctp_rcv_asconf_lookup(), that cached transport corresponds to the&#xA;Address Parameter, which need not be the packet&#39;s source address.&#xA;&#xA;sctp_process_asconf_param() rejects a DEL-IP for the packet source address&#xA;(ADDIP D8, SCTP_ERROR_DEL_SRC_IP), but nothing protects asconf-&gt;transport.&#xA;A single ASCONF can therefore carry, in order:&#xA;&#xA;    [Address Parameter L] [DEL-IP L] [DEL-IP 0.0.0.0]&#xA;&#xA;where L differs from the source. The DEL-IP for L passes the D8 check and&#xA;calls sctp_assoc_rm_peer() on the transport that asconf-&gt;transport still&#xA;points at, freeing it (RCU-deferred). The following wildcard DEL-IP then&#xA;reuses the now-dangling asconf-&gt;transport in sctp_assoc_set_primary() and&#xA;sctp_assoc_del_nonprimary_peers(): set_primary() dereferences the freed&#xA;transport (-&gt;ipaddr, -&gt;state) and plants the dangling pointer into&#xA;asoc-&gt;peer.primary_path / active_path, and del_nonprimary_peers(), keeping&#xA;only the pointer that is no longer on the list, removes every real&#xA;transport, leaving the association with a transport_count of 0 and&#xA;primary_path/active_path pointing at freed memory.&#xA;&#xA;Reject a DEL-IP that targets the transport the ASCONF is being processed&#xA;against, mirroring the existing source-address guard, so the wildcard&#xA;branch can never reuse a freed transport.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>critical-cvss</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2026-18556 — N-able N-central: N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability</title>
@@ -644,64 +988,6 @@
       <category>actively-exploited</category>
       <category>0day</category>
       <category>cisco</category>
-    </item>
-    <item>
-      <title>[HIGH] Russian hackers exploit Exchange OWA zero-day for long-term mailbox access</title>
-      <link>https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-exchange-owa-zero-day-for-long-term-mailbox-access/</link>
-      <guid isPermaLink="false">0f730eb788b0fcb028c54f16319f5940</guid>
-      <pubDate>Wed, 29 Jul 2026 23:44:07 +0000</pubDate>
-      <description>The Russian state-sponsored hacking group Laundry Bear, also known as Void Blizzard, is exploiting an Exchange Outlook Web Access vulnerability in email campaigns to deliver a sophisticated backdoor called OWAReaper. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Cisco warns of FMC static credential flaw exploited in zero-day attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisco-warns-of-fmc-static-credential-flaw-exploited-in-zero-day-attacks/</link>
-      <guid isPermaLink="false">c768ee18699b21d6626980253948a4bc</guid>
-      <pubDate>Wed, 29 Jul 2026 21:35:40 +0000</pubDate>
-      <description>Cisco is warning that a high-severity Secure Firewall Management Center (FMC) static credential vulnerability, tracked as CVE-2026-20316, was actively exploited in zero-day attacks to gain unauthorized access to vulnerable devices. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>0day</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[HIGH] How AI is Rewriting the Zero-Day Playbook for Preemptive Security</title>
-      <link>https://www.rapid7.com/blog/post/ai-rewriting-zero-day-playbook-for-preemptive-security</link>
-      <guid isPermaLink="false">47a61d380e206a985e96b1697341e80c</guid>
-      <pubDate>Wed, 29 Jul 2026 13:00:00 +0000</pubDate>
-      <description>The scenario is all too familiar for any cybersecurity professional: It’s late in the day, and a critical zero-day vulnerability is disclosed. When this happens, CISOs from every industry immediately turn to their Security Operations Centers (SOC) with the single most important, and often most difficult, question: &#34;Are we exposed?”Answering questions like these when zero-days drop tends to trigger a frantic, high-stress fire drill. Analysts scramble to cross-reference outdated Configuration Management Databases (CMDBs), query disparate endpoint detection tools, and ping IT administrators. ...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] How AI is Rewriting the Zero-Day Playbook for Preemptive Security</title>
-      <link>https://www.rapid7.com/blog/post/ai-rewriting-zero-day-playbook-for-preemptive-security</link>
-      <guid isPermaLink="false">47a61d380e206a985e96b1697341e80c</guid>
-      <pubDate>Wed, 29 Jul 2026 13:00:00 +0000</pubDate>
-      <description>The scenario is all too familiar for any cybersecurity professional: It’s late in the day, and a critical zero-day vulnerability is disclosed. When this happens, CISOs from every industry immediately turn to their Security Operations Centers (SOC) with the single most important, and often most difficult, question: &#34;Are we exposed?”Answering questions like these when zero-days drop tends to trigger a frantic, high-stress fire drill. Analysts scramble to cross-reference outdated Configuration Management Databases (CMDBs), query disparate endpoint detection tools, and ping IT administrators. ...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] Public PoC Released for Exploited Check Point SmartConsole Authentication Bypass</title>
-      <link>https://thehackernews.com/2026/07/rapid7-releases-poc-for-exploited-check.html</link>
-      <guid isPermaLink="false">44b4160b7d20a5d640022cfb0b348cfe</guid>
-      <pubDate>Wed, 29 Jul 2026 08:58:27 +0000</pubDate>
-      <description>Cybersecurity researchers have shared additional technical details about a recently patched critical security flaw impacting Check Point Security Management Server and Multi-Domain Security Management Server (MDS) that has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-16232 (CVSS score: 9.3), is an authentication bypass in the SmartConsole login process that</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>auth-bypass</category>
-      <category>actively-exploited</category>
     </item>
   </channel>
 </rss>

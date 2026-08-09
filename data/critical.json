@@ -1,5 +1,119 @@
 [
   {
+    "id": "abafc01bbca8da1ae0cd51ea3114642f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.7 MEDIUM] CVE-2026-64676 — Kata Containers is an open source implementation of lightweight Virtual Machines…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64676",
+    "summary": "Kata Containers is an open source implementation of lightweight Virtual Machines (VMs) that perform like containers. In versions prior to 4.0.0, the kata-agent is vulnerable to an authorization bypass in confidential-guest memory management. In Confidential Containers (CoCo) deployments, the kata-agent enforces an OPA/Rego-based AgentPolicy that must authorize every ttRPC API call, forming the security boundary that prevents an untrusted host from directing the confidential guest. Two ttRPC methods introduced with the mem-agent feature are missing this authorization check, so an untrusted host can invoke them unconditionally regardless of the guest's policy configuration. When mem-agent is enabled (off by default), this lets the host tamper with in-guest memory management by forcing swap, aggressive eviction, or compaction, resulting in attacker-controlled availability and performance degradation of the confidential workload entirely outside the agent-policy boundary. The impact does not include memory disclosure or code execution, and severity is bounded by the precondition that mem-agent must be explicitly enabled. This issue is fixed in version 4.0.0.",
+    "published": "2026-08-07T22:16:59.48Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-64676"
+    ]
+  },
+  {
+    "id": "ef516789c5d60f2c666623b9aeb8d237",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-48169 — PraisonAI is a multi-agent teams system. Versions prior to 0.1.4 of the PraisonA…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48169",
+    "summary": "PraisonAI is a multi-agent teams system. Versions prior to 0.1.4 of the PraisonAI Platform API have two authorization failures that together break workspace isolation. The service layer for issues and projects performs global primary-key lookups without checking workspace ownership, so any authenticated user can read, modify, and delete resources in any workspace just by swapping UUIDs in their API requests. On top of that, every member management endpoint (add, update role, remove) only requires `min_role=\"member\"`, which lets any workspace member promote themselves to owner and kick out the original owner. A low-privilege member of one workspace can steal data from every other workspace and take over any workspace they belong to. Both issues come from the same gap: the route layer pulls `workspace_id` from the URL and verifies membership, but the service layer ignores the workspace scope for resource lookups and ignores the caller's role level for member operations. The `require_workspace_member()` dependency does its job correctly. The problem is that the service layer doesn't use the information it provides. Version 0.1.4 of the PraisonAI Platform API patch the issue.",
+    "published": "2026-08-07T22:16:59.013Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-48169"
+    ]
+  },
+  {
+    "id": "f10039c9b840b4d1a4b5db8eabfa88e1",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-47243 — Kata Containers is an open source project focusing on a standard implementation of lightweight Virtu…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47243",
+    "summary": "Kata Containers is an open source project focusing on a standard implementation of lightweight Virtual Machines (VMs) that perform like containers. Prior to 3.31.0, the runtime-rs standalone virtio-fs path is vulnerable to a guest-root to host-root escape. In this configuration, Kata runs the host virtiofsd as root with --sandbox none --seccomp none, so an attacker with root-equivalent access inside the guest can bypass the guest virtio-fs client entirely by taking over the virtio-fs PCI device and building a virtqueue in userspace to submit raw FUSE requests directly to the host virtiofsd. A crafted FUSE_SYMLINK request whose new symlink name is an absolute host path is honored outside the configured shared directory, allowing guest root to create root-owned symlinks in sensitive host locations such as /etc/cron.d. By pointing such a symlink at a guest-controlled crontab payload reachable through a live runtime process's mount namespace, the attacker causes the host cron daemon to execute that payload as host root, crossing the Kata isolation boundary. This issue is fixed in version 3.31.0.",
+    "published": "2026-08-07T22:16:58.753Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-47243"
+    ]
+  },
+  {
+    "id": "47ee31cd12304994b0078111cab830b6",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.3 MEDIUM] CVE-2026-46405 — OpenBao is an open source identity-based secrets management system. Prior to ver…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46405",
+    "summary": "OpenBao is an open source identity-based secrets management system. Prior to version 2.5.4, in OpenBao's Kerberos auth method on the `GET` handler, or when an `Authorization: Negotiate` header is supplied, the response is includes a `logical.Auth` object in addition to an error message. This results in tokens being created with only the default policy, default TTL, and no entity information, which are hidden by the returned error message. No access to these tokens by the caller occurs and the authentication token is not ever made accessible outside of `sys/raw`. This is fixed in OpenBao v2.5.4. As a workaround, users may set a rate limit quota to limit the creation of these paths. As the path is unauthenticated, it isn't possible to deny access to it.",
+    "published": "2026-08-07T22:16:58.6Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-46405"
+    ]
+  },
+  {
+    "id": "0d5f8d7a6b71b04bb4653b27923c37bf",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-45808 — OpenBao is an open source identity-based secrets management system. Prior to version 2.5.4, OpenBao'…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45808",
+    "summary": "OpenBao is an open source identity-based secrets management system. Prior to version 2.5.4, OpenBao's namespaces provide multi-tenant separation. A tenant who intentionally leaks lease identifiers can have their lease and underlying credential revoked or renewed by a user in another tenant via the legacy, undocumented `sys/revoke` and `sys/renew` endpoints. This is fixed in OpenBao v2.5.4.",
+    "published": "2026-08-07T22:16:58.37Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-45808"
+    ]
+  },
+  {
+    "id": "105fd5454db1dd4a3a72a4945bd74998",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.6 MEDIUM] CVE-2026-11743 — The SF32LB MPI QSPI NOR flash driver (drivers/flash/flash_sf32lb_mpi_qspi_nor.c)…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11743",
+    "summary": "The SF32LB MPI QSPI NOR flash driver (drivers/flash/flash_sf32lb_mpi_qspi_nor.c) validated the flash offset and length on its read and write paths with the test (offset + size) > data->size. Because offset is a signed off_t while size is unsigned, a negative offset is converted to a large unsigned value and the addition can wrap to a small result that passes the check. The read path then performs memcpy(dst, (void *)(data->base + offset), size) and the write path programs flash at offset and cache-invalidates data->base + offset, in both cases accessing memory outside the mapped flash window. The driver's erase path already rejected negative offsets, but read and write did not.\n\nIn builds with CONFIG_USERSPACE, flash_read and flash_write are syscalls whose verifiers validate the device object and the caller's buffer but deliberately delegate offset bounds checking to the driver. An unprivileged thread that has been granted access to this flash device can therefore call the syscall with a crafted negative offset and a buffer valid in its own memory domain, and reach the unchecked access.\n\nThe most direct impact is on the read path: by choosing a negative offset and matching size, an attacker slides the memcpy source below the flash base and copies arbitrary CPU-addressable memory into its own buffer, disclosing memory it is not authorized to read. The write path additionally allows programming flash at an out-of-range address and invalidating an attacker-chosen cache range, affecting integrity and availability. Reachability requires userspace to be enabled and the raw flash device object to be granted to an untrusted thread.\n\nThe fix replaces the check with qspi_nor_range_is_valid(), which rejects negative offsets and performs the bound comparison in overflow-safe 64-bit arithmetic on both paths, and additionally adds an SRAM DMA bounce buffer plus source/destination overlap rejection to prevent a separate DMA bus-hang condition.",
+    "published": "2026-08-07T22:16:57.317Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-11743"
+    ]
+  },
+  {
     "id": "6ca6e6f4a395053a3b48c81c0e59a1f0",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -15,6 +129,128 @@
     ],
     "severity": "high",
     "score": 75
+  },
+  {
+    "id": "092aea6ccb438deadfbd5d90f8c79342",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.0 CRITICAL] CVE-2026-71851 — crypto-js is a JavaScript library of crypto standards. Versions of crypto-js pri…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71851",
+    "summary": "crypto-js is a JavaScript library of crypto standards. Versions of crypto-js prior to 4.0.0 generate randomness in CryptoJS.lib.WordArray.random() using a custom variation of the Multiply-With-Carry pseudorandom number generator, seeded from Math.random(), instead of a cryptographically secure source. This generator was introduced in version 3.1.2-4 and remained present in nearly every 3.x release. Nominal requests for 128 or 256 bits of entropy through this function produce effective search spaces of approximately 2 to the 39th and 2 to the 47th possibilities, small enough to enumerate on commodity hardware. Downstream wallet applications that used CryptoJS.lib.WordArray.random() as the entropy source for BIP39 recovery phrases are affected, and an attacker who enumerates the reduced output space can recover the resulting private keys and control the associated funds. This issue is fixed in version 4.0.0.",
+    "published": "2026-08-07T19:18:54.39Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-71851"
+    ]
+  },
+  {
+    "id": "6a3d24911e813acb4fc10c62372b68b5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.3 HIGH] CVE-2026-11430 — Grav CMS's scheduler-webhook plugin contains an authentication bypass in the web…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11430",
+    "summary": "Grav CMS's scheduler-webhook plugin contains an authentication bypass in the webhook token check. When the webhook feature is enabled but no webhookToken is configured, a compound conditional short-circuits and skips token validation, so an unauthenticated remote attacker who can reach POST /scheduler/webhook can trigger the operator's already-configured scheduled jobs by sending a single request. The primitive is triggering-existing-jobs, not attacker-chosen command execution: the attacker controls when the jobs run and which one runs (via ?job=), but does not control what the jobs do. Code execution follows only when the operator has configured a job that shells out, and even then the attacker controls timing rather than payload. Not a default-install issue: reaching the endpoint requires the separate scheduler-webhook GPM plugin to be installed, scheduler.modern.webhook.enabled to be true (default false), and no webhookToken to be configured; a stock Grav or Grav-Admin install exposes nothing here.",
+    "published": "2026-08-07T19:17:34.497Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-11430"
+    ]
+  },
+  {
+    "id": "4a4e12c92004b231b40fa48252177faf",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.5 MEDIUM] CVE-2026-44965 — In versions of the Datadog Android application prior to v545-5.9.2, six App Widg…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44965",
+    "summary": "In versions of the Datadog Android application prior to v545-5.9.2, six App Widget configuration activities (IncidentWidgetActivity, MonitorSavedViewWidgetActivity, OnCallShiftsWidgetActivity, OnCallPagesWidgetActivity, SloWidgetActivity, DashboardWidgetActivity) are exported with no permission guard. Each accepts a caller-supplied AppWidgetManager.EXTRA_APPWIDGET_ID and, when no deep-link destination is resolved, uses it to load the matching widget's stored session and automatically log in as that user. Because Android widget IDs are small sequential integers, a co-installed application can brute-force this value to find one that matches a widget configured on the victim's device.\r\nThis requires:\r\nA malicious application co-installed on the victim's device.\r\nAt least one of the six widgets configured on the victim's home screen.\r\nAn active Datadog session cached locally.\r\nImpact: The matching configuration activity opens in the foreground under the victim's session and renders live infrastructure data. Exposure is limited to a visual side channel (e.g., screen recording or accessibility services); the calling application cannot programmatically read the rendered data.",
+    "published": "2026-08-07T18:17:14.69Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-44965"
+    ]
+  },
+  {
+    "id": "5f4596eac1977d665f89f5b078ac30fa",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.0 HIGH] CVE-2026-68772 — ZenML 0.94.6 contains a remote code execution vulnerability in the CloudpickleMa…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68772",
+    "summary": "ZenML 0.94.6 contains a remote code execution vulnerability in the CloudpickleMaterializer component that allows attackers with write access to a shared artifact store to execute arbitrary code by planting a malicious pickle file. Attackers can replace a stored artifact.pkl file with a crafted cloudpickle payload containing a malicious __reduce__ method, which executes arbitrary system commands when any user or pipeline materializes the artifact through the unsanitized cloudpickle.load() call in cloudpickle_materializer.py.",
+    "published": "2026-08-07T17:17:07.573Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-68772"
+    ]
+  },
+  {
+    "id": "d41976e01077a129423a0504195744c1",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-17595 — Nexus Repository 3 did not fully sandbox JEXL expressions used in Content Selectors. An account hold…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17595",
+    "summary": "Nexus Repository 3 did not fully sandbox JEXL expressions used in Content Selectors. An account holding the nexus:selectors:create permission could construct an expression that read Java object properties not intended to be exposed to the expression engine, disclosing internal JVM class metadata such as class and classloader names. This issue does not permit method invocation, object construction, or arbitrary code execution. This has been fixed by restricting property access in the JEXL sandbox to the intended data types.",
+    "published": "2026-08-07T17:16:59.76Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-17595"
+    ]
+  },
+  {
+    "id": "053ad18426a12b193ad90ad145422c64",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-71558 — Heap type confusion vulnerability in Apache Fory C++ deserialization.\n\nThis issu…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71558",
+    "summary": "Heap type confusion vulnerability in Apache Fory C++ deserialization.\n\nThis issue affects Apache Fory C++ versions from 0.14.0 before 1.5.0. A crafted input payload can bypass type compatibility checks during polymorphic smart-pointer deserialization, causing an object of an incompatible type to be treated as the declared base type. This may result in undefined behavior and potentially lead to denial of service or arbitrary code execution.\n\n\nUsers are recommended to upgrade to Apache Fory 1.5.0, which fixes this issue. Applications not using Apache Fory C++ polymorphic smart-pointer deserialization are not affected.",
+    "published": "2026-08-07T10:16:59.337Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "deserialization",
+      "apache",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-71558"
+    ]
   },
   {
     "id": "69e81121869e31fba12a57edc780367d",
@@ -61,6 +297,321 @@
     ]
   },
   {
+    "id": "54cf57243ce2f3ab1a5d187f61b759bd",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-8325 — A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8325",
+    "summary": "A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an Out-of-Bounds Write vulnerability. A malicious actor may leverage this vulnerability to cause a crash, cause data corruption, or execute arbitrary code in the context of the current process.",
+    "published": "2026-08-06T22:18:33.243Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-8325"
+    ]
+  },
+  {
+    "id": "a8678622db377a351a77f1e1f14d4ed4",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-71476 — Nx is a monorepo solution for TypeScript and polyglot codebases. From version 20.8.0 until 22.7.7 an…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71476",
+    "summary": "Nx is a monorepo solution for TypeScript and polyglot codebases. From version 20.8.0 until 22.7.7 and 23.0.2, the Nx self-hosted HTTP remote cache extracts downloaded cache artifacts without constraining where files are written. A malicious or on-path (MITM) remote cache server can return a crafted tar archive whose entries escape the cache directory and write to arbitrary locations on the machine running Nx, which can be escalated to remote code execution. Nx's default local cache and Nx Cloud are not affected; only workspaces configured to use a self-hosted remote cache are affected. This issue is fixed in versions 22.7.7 and 23.0.2.",
+    "published": "2026-08-06T22:18:31.603Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-71476"
+    ]
+  },
+  {
+    "id": "8d021c0eb0df733c6474b6da1b3f26eb",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-71326 — Traefik is an open source HTTP reverse proxy and load balancer. From 3.6.11 until 3.6.25 and 3.7.10,…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71326",
+    "summary": "Traefik is an open source HTTP reverse proxy and load balancer. From 3.6.11 until 3.6.25 and 3.7.10, Traefik's BasicAuth middleware in pkg/middlewares/auth/basic_auth.go deduplicates concurrent password checks with a singleflight key built from the delimiter-free concatenation of password and secret, allowing an attacker who has a valid credential and the stored hash to authenticate as an unconfigured username when headerField trusts the forwarded identity. This issue is fixed in 3.6.25 and 3.7.10.",
+    "published": "2026-08-06T22:18:29.65Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-71326"
+    ]
+  },
+  {
+    "id": "2ab12755e914b4be731a8fa727c3f28a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-70636 — Flowise through 3.1.4 contains an authentication bypass vulnerability that allow…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70636",
+    "summary": "Flowise through 3.1.4 contains an authentication bypass vulnerability that allows unauthenticated attackers to access the OAuth2 credential refresh endpoint by exploiting prefix-based whitelist matching in the authentication middleware defined in packages/server/src/utils/constants.ts. Attackers can send a POST request to the oauth2-credential refresh route with a trailing credential identifier to bypass all authentication and authorization checks, triggering unauthorized OAuth token rotation against credentials belonging to any workspace and potentially disrupting dependent OAuth integrations. This is a bypass of CVE-2026-41273.",
+    "published": "2026-08-06T22:18:28.15Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-70636",
+      "CVE-2026-41273"
+    ]
+  },
+  {
+    "id": "abba3809d4542fc48e881d5d6cb3ff19",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-70558 — Dinky's POST /download/uploadFromRsByLocal handler passes the caller-supplied pa…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70558",
+    "summary": "Dinky's POST /download/uploadFromRsByLocal handler passes the caller-supplied path parameter directly to new File(path) and file.transferTo(dest) with no path validation. The route is marked @SaIgnore and /download/** is excluded from the Sa-Token interceptor, so the only guard is a header equality check against a dinkyToken value whose default (efda1551-7958-4e0f-80a8-dfd107df3e38) is hardcoded in source and shipped to every deployment. Anyone who can reach Dinky's HTTP port (8888 by default) and supplies the hardcoded token can write arbitrary files as the Dinky service account. The default Docker image runs on 8888 with no proxy or authentication and chmod 777 on /opt/dinky, so the application's own classpath, launch scripts, and static assets are writable. Demonstrated impact: overwriting /opt/dinky/config/static/index.html served attacker JavaScript to admin browsers immediately, and writing /opt/dinky/org/dinky/Dinky.class executed attacker code as the Dinky service account at the next JVM start via a classpath-shadow launched by script/bin/auto.sh. Writes are uid 9999 (flink), not root, so /etc, /root, /home, and /usr are refused. Affects Dinky v1.2.5 (the current release) and the development branch, where the code is byte-identical.",
+    "published": "2026-08-06T22:18:26.227Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "critical-cvss",
+      "docker",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "vendors": [
+      "docker"
+    ],
+    "cves": [
+      "CVE-2026-70558"
+    ]
+  },
+  {
+    "id": "da6e02100f2a6f381ba556404ce7f3ec",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "CVE-2026-64655 — GitHub CLI (gh) is GitHub’s official command line tool. Prior to 2.97.0, gh attestation verify  b…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64655",
+    "summary": "GitHub CLI (gh) is GitHub’s official command line tool. Prior to 2.97.0, gh attestation verify  builds the certificate Subject Alternative Name matcher from the --signer-repo and --signer-workflow  flag values without escaping regex metacharacters, so a user-supplied repository or workflow name is treated as a regular expression rather than a literal string. Because GitHub permits characters such as  `.`  in organization, repository, and workflow path names and  `.`  is a regex wildcard, an attacker can register a lookalike name (for example github/artifact.attestations-workflows) that satisfies a matcher intended for a different trusted signer (github/artifact-attestations-workflows), bypassing the intended Sigstore attestation verification. Exploitation requires the attacker to create a plausible lookalike repository and produce valid attestations from it, which could undermine supply chain verification for CI/CD pipelines or policy gates that pin trust to a specific signing workflow. This issue is fixed in version 2.97.0.",
+    "published": "2026-08-06T22:18:13.527Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "supply-chain",
+      "github"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "github"
+    ],
+    "cves": [
+      "CVE-2026-64655"
+    ]
+  },
+  {
+    "id": "774fa6ed9d2a886e1dee29766cd81207",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-5857 — Contiki-NG's MQTT client parse_publish_vhdr() in os/net/app-layer/mqtt/mqtt.c se…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5857",
+    "summary": "Contiki-NG's MQTT client parse_publish_vhdr() in os/net/app-layer/mqtt/mqtt.c sets topic_len_received=1 before checking topic_len against the 64-byte limit, so an over-length topic returns early but leaves the flag set. On the next TCP segment, tcp_input() re-invokes the parser with topic_received==0, and the persisted topic_len_received==1 skips the length-reading block containing the guard, falling through directly to a memcpy() that uses the unvalidated 16-bit topic_len as the copy length. The 65-byte topic[] destination overruns into adjacent struct fields including the payload_chunk pointer, which subsequent MQTT code dereferences, giving a compromised or attacker-controlled broker an arbitrary-pointer-write primitive. Contiki-NG's MQTT implementation has no TLS support so the connection is plaintext. Impact ranges from information disclosure and denial of service to remote code execution on embedded targets without memory protection.",
+    "published": "2026-08-06T22:18:10.9Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-5857"
+    ]
+  },
+  {
+    "id": "633fbc1094d58e3bc9599d8c748062ea",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.4 CRITICAL] CVE-2026-48088 — OpenReception's appointment booking software provides an end-to-end encrypted ap…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48088",
+    "summary": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.4, the route `POST /api/tenants/{tenantId}/staff/{staffId}/crypto` accepts and stores attacker-controlled ML-KEM-768 public keys against any tenant on the platform without authentication. The handler logs an \"Unauthorized crypto key storage attempt\" warning when neither a session nor a registration cookie is present, then proceeds to insert the row regardless. The platform's E2E claim that \"even administrators cannot view sensitive information\" is broken: any unauthenticated network attacker can register themselves as an additional encryption recipient for any tenant's future patient appointments. A second variant of the bug suppresses the unauthorized-warning log entry. The Zod schema makes the `email` field optional. When the request body omits `email` and the request carries no registration cookie, the comparison `registrationEmail === email` becomes `undefined === undefined`, which evaluates to `true`. The handler treats the request as a legitimate registration flow, skips the warning entirely, and stores the row. Successful storage is still recorded as an `[info]` log line, but the security-relevant warning that operators are most likely to monitor or alert on is gone. The `staff_crypto` table has no unique constraint on `user_id`, so an arbitrary number of attacker rows can coexist for the same staff identifier and all return as `is_active=true`. The supplied `staffId` does not need to match any existing user or pending invite. Schema validation on `passkeyId`, `publicKey`, and `privateKeyShare` is also weak: the literal string `<placeholder-base64>` was accepted, indicating no length, format, or cryptographic-validity check beyond field presence. This weakness is independent of the auth bypass but compounds it: a poisoned directory can also be filled with malformed entries that break legitimate booking flows. The injected key is consumed by the public booking flow. After completing the unauthenticated `bootstrap-challenge` and `bootstrap-verify` ceremony as a \"patient\", the resulting `bookingAccessToken` is accepted by `GET /api/tenants/{id}/appointments/staff-public-keys`, which returns the attacker-controlled keys alongside any legitimate ones. A new appointment encrypts its tunnel key with ML-KEM to all listed recipients, so the attacker becomes a co-recipient of the encryption and can decapsulate the tunnel key with the matching secret. From there, all appointment payloads for that booking are decryptable. Version 1.0.4 patches the issue.",
+    "published": "2026-08-06T22:17:11.893Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-48088"
+    ]
+  },
+  {
+    "id": "9d8d436ccb9bea153185e3faab0b56d5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 6.5 MEDIUM] CVE-2026-48083 — OpenReception's appointment booking software provides an end-to-end encrypted ap…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48083",
+    "summary": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.2, the `/api/log` endpoint accepts unauthenticated POST requests, applies no schema validation to the message body, writes attacker-controlled content directly into the application's stdout log, interprets newline characters as real line breaks, and enforces no size or rate limits. Three independent abuse modes follow: log injection (forge log lines that look like legitimate system events), log volume DoS (saturate the logging pipeline at sustained 100+ requests per second of small messages), and oversized-payload submission (100 KB payloads accepted; larger sizes not tested). The most operationally damaging mode is log injection. An attacker can inject lines that an operator scanning logs would mistake for real system errors, mask their own activity behind fake noise, or pollute SIEM alerting rules with crafted false positives. A line such as `[error]: injected admin error` injected from an unauthenticated source is indistinguishable from the application's own error output once written to disk. Version 1.0.2 fixes the issue.",
+    "published": "2026-08-06T22:17:11.143Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-48083"
+    ]
+  },
+  {
+    "id": "5d9dd07043afc652f1c882d672290906",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-43627 — llama.cpp builds b1283 through b9058 contain an integer overflow vulnerability i…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43627",
+    "summary": "llama.cpp builds b1283 through b9058 contain an integer overflow vulnerability in the llama_batch_init() function where unchecked multiplications in malloc() calls can wrap past INT32_MAX when computing allocation sizes. Attackers can pass specially crafted parameters to trigger integer overflow, causing heap corruption and potentially achieving arbitrary code execution through subsequent batch operations that write past allocated buffer boundaries.",
+    "published": "2026-08-06T22:17:05.633Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-43627"
+    ]
+  },
+  {
+    "id": "565aca6cf61dbe6cb01ef7951567a171",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-1289 — A maliciously crafted PDF file, when parsed through Autodesk Revit, can force a …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1289",
+    "summary": "A maliciously crafted PDF file, when parsed through Autodesk Revit, can force a Use-After-Free vulnerability. A malicious actor can leverage this vulnerability to cause a crash, disclose sensitive data, or execute arbitrary code in the context of the current process.",
+    "published": "2026-08-06T22:17:00.373Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-1289"
+    ]
+  },
+  {
+    "id": "6e6e1162e4ff5c49a880bc9a277f3a7b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-11803 — A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11803",
+    "summary": "A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an Out-of-Bounds Read vulnerability. A malicious actor can leverage this vulnerability to cause a crash, read sensitive data, or execute arbitrary code in the context of the current process.",
+    "published": "2026-08-06T22:16:44.967Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-11803"
+    ]
+  },
+  {
+    "id": "a897f2bb7ccc567cb8b66d19d357929e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.3 MEDIUM] CVE-2026-19047 — A vulnerability was detected in NocteDefensor LudusMCP up to 1.0.24. This affect…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19047",
+    "summary": "A vulnerability was detected in NocteDefensor LudusMCP up to 1.0.24. This affects the function executeArbitraryCommand/executeCommand of the file src/ludusMCP/cliWrapper.ts of the component ludus_cli_execute. Performing a manipulation of the argument command/args results in command injection. The attack needs to be approached locally. The project was informed of the problem early through an issue report but has not responded yet.",
+    "published": "2026-08-06T16:16:41.51Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-19047"
+    ]
+  },
+  {
+    "id": "c0a141ad402521a6c54d95b058bb94cb",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.5 HIGH] CVE-2026-70646 — aiosend is a synchronous and asynchronous Crypto Pay API client. Pror to version…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70646",
+    "summary": "aiosend is a synchronous and asynchronous Crypto Pay API client. Pror to version 3.0.7, `WebhookHandler.feed_update()` deserializes the entire request body before verifying the HMAC signature. This allows an unauthenticated attacker to force expensive parsing of arbitrary JSON payloads that will ultimately be rejected, leading to unnecessary CPU and memory consumption. Version 3.0.7 fixes the issue. Some workarounds are available. Restrict request body size at the reverse proxy or web framework, rate-limit webhook endpoints, and/or reject oversized requests before JSON parsing.",
+    "published": "2026-08-06T15:17:27.75Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-70646"
+    ]
+  },
+  {
+    "id": "2d6a806e4649017e7be54b632f658a96",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.1 HIGH] CVE-2026-66707 — Unauthenticated Cross Site Scripting (XSS) in Facebook for WooCommerce <= 3.7.5 …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66707",
+    "summary": "Unauthenticated Cross Site Scripting (XSS) in Facebook for WooCommerce <= 3.7.5 versions.",
+    "published": "2026-08-06T15:17:23.67Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-66707"
+    ]
+  },
+  {
+    "id": "2450fe67902af4d9653ea246cfd65606",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 4.3 MEDIUM] CVE-2026-66692 — Customer Insecure Direct Object References (IDOR) in Colissimo Officiel : Métho…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66692",
+    "summary": "Customer Insecure Direct Object References (IDOR) in Colissimo Officiel : Méthodes de livraison pour WooCommerce <= 2.10.0 versions.",
+    "published": "2026-08-06T15:17:22.357Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-66692"
+    ]
+  },
+  {
     "id": "bb8b3f3819eb5c8e9618c71d006e9908",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -82,6 +633,52 @@
     "vendors": [
       "microsoft",
       "oracle"
+    ]
+  },
+  {
+    "id": "3598b3cab0a32a174f7dec25a13626b2",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-64584 — In the Linux kernel, the following vulnerability has been resolved:\n\nusb: gadget…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64584",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nusb: gadget: f_midi: cancel pending IN work before freeing the midi object\n\nThe f_midi driver embeds a work item (midi->work) whose handler,\nf_midi_in_work(), dereferences the enclosing struct f_midi through\ncontainer_of().  This work is armed from two sites: f_midi_complete(),\non a normal IN-endpoint completion, and f_midi_in_trigger(), on an ALSA\nrawmidi output-stream start.\n\nNeither f_midi_disable() nor f_midi_unbind() cancels midi->work.\nf_midi_disable() only disables the endpoints and drains the in_req_fifo;\nit does not synchronize the work item, and the sound card is released\nasynchronously to the final free of the midi object.\n\nThe midi object is reference-counted (midi->free_ref) and is freed in\nf_midi_free() only once both the usb_function reference and the rawmidi\nprivate_data reference have been dropped.  In f_midi_unbind(),\nf_midi_disable() runs before the sound card is released, so while the\nUSB endpoints are already disabled the rawmidi device is still usable by\nan open substream.  A concurrent userspace write on such a substream can\nreach f_midi_in_trigger() and queue midi->work again after\nf_midi_disable() has returned.  A work item armed this way may still be\npending when the last reference drops and f_midi_free() proceeds to\nkfree(midi), letting f_midi_in_work() dereference the struct after it\nhas been freed, a use-after-free.\n\nFor this reason cancelling midi->work in f_midi_disable() would not be\nsufficient: the ALSA trigger path can rearm the work after disable()\nreturns.  Cancelling at the refcount-zero free site is the boundary\nafter which neither arming source can survive, because by then both\nreferences that keep the midi object alive have been dropped: the USB\nendpoints are already disabled and the rawmidi device has been released.\n\nFix this by calling cancel_work_sync(&midi->work) in the refcount-zero\nblock of f_midi_free(), before the embedded work_struct is freed along\nwith the rest of the structure.  opts->lock is a sleeping mutex, so\ncalling cancel_work_sync() under it is permitted, and the handler takes\nmidi->transmit_lock rather than opts->lock, so no self-deadlock can\noccur while it waits for a running instance of the work to finish.\n\nThis issue was found by an in-house static analysis tool.",
+    "published": "2026-08-06T08:16:33.543Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-64584"
+    ]
+  },
+  {
+    "id": "5b073406b759d24a5641e96e552a73af",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 5.9 MEDIUM] CVE-2024-6832 — The account locking mechanism fails to trigger when secondary user stores are in…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6832",
+    "summary": "The account locking mechanism fails to trigger when secondary user stores are inaccessible. The software does not maintain a consistent state for account locking if it cannot reach all configured user stores, allowing an attacker to repeatedly attempt authentication with invalid credentials without triggering the lockout mechanism for users within active stores.\n\nWhen the account locking mechanism is bypassed due to the inaccessibility of secondary user stores, users in accessible user stores are left vulnerable to brute force attacks. A malicious actor can exploit this by attempting numerous invalid password combinations against a user account without the expected account lockout consequence.",
+    "published": "2026-08-06T08:16:27.533Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "wso2"
+    ],
+    "cves": [
+      "CVE-2024-6832"
     ]
   },
   {
@@ -123,6 +720,31 @@
     "score": 77,
     "vendors": [
       "apache"
+    ]
+  },
+  {
+    "id": "e017d015afaa08d5d299a8798ffdf45d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-64566 — In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: iptfs…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64566",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: iptfs: propagate SKBFL_SHARED_FRAG in iptfs_skb_add_frags()\n\nWhen iptfs_skb_add_frags() copies frag references from the source\nfrag walk into a new SKB, it increments the page reference count via\n__skb_frag_ref() but does not propagate SKBFL_SHARED_FRAG to the\ndestination SKB's skb_shinfo->flags.\n\nIf the source SKB carries shared frags (e.g. from a page-pool backed\nreceive path), the new inner SKB will appear to ESP as having privately\nowned frags.  A subsequent esp_input() call for a nested transport-mode\nSA then takes the no-COW fast path and decrypts in place, writing over\npages that are still referenced by the outer IPTFS SKB.  This causes\nkernel-visible memory corruption and can trigger a panic.\n\nAll other frag-transfer helpers in the kernel (skb_try_coalesce,\nskb_gro_receive, __pskb_copy_fclone, skb_shift, skb_segment) correctly\npropagate SKBFL_SHARED_FRAG; align iptfs_skb_add_frags() with this\nconvention by setting the flag inside the loop immediately after\n__skb_frag_ref() and nr_frags++, so every exit path that attaches a frag\nunconditionally propagates SKBFL_SHARED_FRAG.",
+    "published": "2026-08-05T08:16:36.14Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "critical-cvss",
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-64566"
     ]
   },
   {
@@ -239,6 +861,31 @@
     "cves": [
       "CVE-2026-18577",
       "CVE-2026-18556"
+    ]
+  },
+  {
+    "id": "6cfab2e6d76f96adc59d5d0ce7b36768",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-64564 — In the Linux kernel, the following vulnerability has been resolved:\n\nsctp: don't…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64564",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nsctp: don't free the ASCONF's own transport in DEL-IP processing\n\nsctp_process_asconf() caches the transport the ASCONF chunk is processed\nagainst in asconf->transport (== chunk->transport, set once in sctp_rcv()).\nFor an ASCONF located through its Address Parameter by\n__sctp_rcv_asconf_lookup(), that cached transport corresponds to the\nAddress Parameter, which need not be the packet's source address.\n\nsctp_process_asconf_param() rejects a DEL-IP for the packet source address\n(ADDIP D8, SCTP_ERROR_DEL_SRC_IP), but nothing protects asconf->transport.\nA single ASCONF can therefore carry, in order:\n\n    [Address Parameter L] [DEL-IP L] [DEL-IP 0.0.0.0]\n\nwhere L differs from the source. The DEL-IP for L passes the D8 check and\ncalls sctp_assoc_rm_peer() on the transport that asconf->transport still\npoints at, freeing it (RCU-deferred). The following wildcard DEL-IP then\nreuses the now-dangling asconf->transport in sctp_assoc_set_primary() and\nsctp_assoc_del_nonprimary_peers(): set_primary() dereferences the freed\ntransport (->ipaddr, ->state) and plants the dangling pointer into\nasoc->peer.primary_path / active_path, and del_nonprimary_peers(), keeping\nonly the pointer that is no longer on the list, removes every real\ntransport, leaving the association with a transport_count of 0 and\nprimary_path/active_path pointing at freed memory.\n\nReject a DEL-IP that targets the transport the ASCONF is being processed\nagainst, mirroring the existing source-address guard, so the wildcard\nbranch can never reuse a freed transport.",
+    "published": "2026-08-04T07:16:31.34Z",
+    "fetched": "2026-08-09T21:58:23.385916754Z",
+    "tags": [
+      "critical-cvss",
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-64564"
     ]
   },
   {
@@ -1153,104 +1800,6 @@
     ],
     "cves": [
       "CVE-2026-20316"
-    ]
-  },
-  {
-    "id": "0f730eb788b0fcb028c54f16319f5940",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Russian hackers exploit Exchange OWA zero-day for long-term mailbox access",
-    "url": "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-exchange-owa-zero-day-for-long-term-mailbox-access/",
-    "summary": "The Russian state-sponsored hacking group Laundry Bear, also known as Void Blizzard, is exploiting an Exchange Outlook Web Access vulnerability in email campaigns to deliver a sophisticated backdoor called OWAReaper. [...]",
-    "published": "2026-07-29T23:44:07Z",
-    "fetched": "2026-07-30T22:35:56.38886674Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "c768ee18699b21d6626980253948a4bc",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Cisco warns of FMC static credential flaw exploited in zero-day attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-fmc-static-credential-flaw-exploited-in-zero-day-attacks/",
-    "summary": "Cisco is warning that a high-severity Secure Firewall Management Center (FMC) static credential vulnerability, tracked as CVE-2026-20316, was actively exploited in zero-day attacks to gain unauthorized access to vulnerable devices. [...]",
-    "published": "2026-07-29T21:35:40Z",
-    "fetched": "2026-07-29T22:29:23.008940929Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20316"
-    ]
-  },
-  {
-    "id": "47a61d380e206a985e96b1697341e80c",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "How AI is Rewriting the Zero-Day Playbook for Preemptive Security",
-    "url": "https://www.rapid7.com/blog/post/ai-rewriting-zero-day-playbook-for-preemptive-security",
-    "summary": "The scenario is all too familiar for any cybersecurity professional: It’s late in the day, and a critical zero-day vulnerability is disclosed. When this happens, CISOs from every industry immediately turn to their Security Operations Centers (SOC) with the single most important, and often most difficult, question: \"Are we exposed?”Answering questions like these when zero-days drop tends to trigger a frantic, high-stress fire drill. Analysts scramble to cross-reference outdated Configuration Management Databases (CMDBs), query disparate endpoint detection tools, and ping IT administrators. ...",
-    "published": "2026-07-29T13:00:00Z",
-    "fetched": "2026-08-04T22:35:54.387378019Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 61
-  },
-  {
-    "id": "47a61d380e206a985e96b1697341e80c",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "How AI is Rewriting the Zero-Day Playbook for Preemptive Security",
-    "url": "https://www.rapid7.com/blog/post/ai-rewriting-zero-day-playbook-for-preemptive-security",
-    "summary": "The scenario is all too familiar for any cybersecurity professional: It’s late in the day, and a critical zero-day vulnerability is disclosed. When this happens, CISOs from every industry immediately turn to their Security Operations Centers (SOC) with the single most important, and often most difficult, question: \"Are we exposed?”Answering questions like these when zero-days drop tends to trigger a frantic, high-stress fire drill. Analysts scramble to cross-reference outdated Configuration Management Databases (CMDBs), query disparate endpoint detection tools, and ping IT administrators. ...",
-    "published": "2026-07-29T13:00:00Z",
-    "fetched": "2026-07-28T22:34:19.645129454Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 61
-  },
-  {
-    "id": "44b4160b7d20a5d640022cfb0b348cfe",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Public PoC Released for Exploited Check Point SmartConsole Authentication Bypass",
-    "url": "https://thehackernews.com/2026/07/rapid7-releases-poc-for-exploited-check.html",
-    "summary": "Cybersecurity researchers have shared additional technical details about a recently patched critical security flaw impacting Check Point Security Management Server and Multi-Domain Security Management Server (MDS) that has come under active exploitation in the wild. The vulnerability, tracked as CVE-2026-16232 (CVSS score: 9.3), is an authentication bypass in the SmartConsole login process that",
-    "published": "2026-07-29T08:58:27Z",
-    "fetched": "2026-07-29T22:29:23.008940929Z",
-    "tags": [
-      "auth-bypass",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 78,
-    "cves": [
-      "CVE-2026-16232"
     ]
   }
 ]

@@ -1,5 +1,43 @@
 [
   {
+    "id": "a5ad3e1c71f3a18c8d5e48f32f3fb24c",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "DeadLock ransomware: Breaking down a Rust-based encryptor with decentralized recovery infrastructure",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/",
+    "summary": "Microsoft Threat Intelligence examines DeadLock ransomware, an emerging financially motivated operation distinguished by its use of decentralized infrastructure to support victim communications, negotiations, and data leak operations alongside double extortion tactics used to pressure victims. The post DeadLock ransomware: Breaking down a Rust-based encryptor with decentralized recovery infrastructure appeared first on Microsoft Security Blog.",
+    "published": "2026-08-10T15:00:00Z",
+    "fetched": "2026-08-10T22:07:05.236725184Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "ransomware",
+      "breach"
+    ],
+    "severity": "high",
+    "score": 71,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "c766120880fb500944cb870d93c9687e",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Critical Progress LoadMaster flaw now actively exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-progress-loadmaster-flaw-exploited-in-attacks/",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) warned that hackers are exploiting a critical-severity Progress Kemp LoadMaster command injection vulnerability. [...]",
+    "published": "2026-08-10T09:49:37Z",
+    "fetched": "2026-08-10T22:07:05.236725184Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
     "id": "abafc01bbca8da1ae0cd51ea3114642f",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -970,6 +1008,31 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18577",
     "summary": "N-able N-central contains an authentication bypass using an alternate path or channel allows for authentication bypass and account takeover in N-central. This vulnerability is the result of an incomplete patch for CVE-2026-18556.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-06",
     "published": "2026-08-03T00:00:00Z",
+    "fetched": "2026-08-10T22:07:05.236725184Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "auth-bypass"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "n-able"
+    ],
+    "cves": [
+      "CVE-2026-18577",
+      "CVE-2026-18556"
+    ]
+  },
+  {
+    "id": "bb7ed1ebcf864f4910fa149a68c7bc49",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-18577 — N-able N-central: N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18577",
+    "summary": "N-able N-central contains an authentication bypass using an alternate path or channel allows for authentication bypass and account takeover in N-central. This vulnerability is the result of an incomplete patch for CVE-2026-18556.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-06",
+    "published": "2026-08-03T00:00:00Z",
     "fetched": "2026-08-03T22:33:57.269697963Z",
     "tags": [
       "kev",
@@ -1756,50 +1819,6 @@
     "score": 60,
     "cves": [
       "CVE-2026-47858"
-    ]
-  },
-  {
-    "id": "1d397314e22d587b641498252ded7891",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.3 HIGH] CVE-2026-16527 — An unauthenticated remote attacker can bypass access controls by sending crafted…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16527",
-    "summary": "An unauthenticated remote attacker can bypass access controls by sending crafted requests to the PCP pmproxy /store endpoint. This allows the attacker to overwrite any PMDA metric, leading to arbitrary code execution and system takeover.",
-    "published": "2026-07-30T06:25:02.813Z",
-    "fetched": "2026-08-02T22:27:42.359204211Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-16527"
-    ]
-  },
-  {
-    "id": "1ba307d5e0d7ef50f8a5a486c40ac47d",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Cisco FMC Zero-Day Actively Exploited, Static Credentials Could Expose Sensitive Data",
-    "url": "https://thehackernews.com/2026/07/cisco-fmc-zero-day-actively-exploited.html",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a newly disclosed security flaw impacting Cisco Secure Firewall Management Center (FMC) Software to its Known Exploited Vulnerabilities (KEV) catalog, following reports of zero-day exploitation. The vulnerability, assigned CVE-2026-20316 (CVSS score: 5.3), could permit an unauthenticated, remote attacker to log",
-    "published": "2026-07-30T05:08:39Z",
-    "fetched": "2026-07-30T22:35:56.38886674Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20316"
     ]
   }
 ]

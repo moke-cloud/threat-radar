@@ -5,7 +5,7 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Aug 2026 22:11:13 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 21:49:53 +0000</lastBuildDate>
     <item>
       <title>[HIGH] Microsoft patches LegacyHive Windows zero-day vulnerability</title>
       <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/</link>
@@ -541,6 +541,18 @@
       <category>progress</category>
     </item>
     <item>
+      <title>[CRIT] [KEV] CVE-2026-8037 — Progress LoadMaster: Progress LoadMaster Command Injection Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8037</link>
+      <guid isPermaLink="false">2b2304d125028dbb960b455758d21f6d</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Progress LoadMaster contains a command injection vulnerability that allows an un-authenticated attacker to execute arbitrary commands on the LoadMaster appliance by exploiting unsanitized input in multiple command endpoints.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-10</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>progress</category>
+    </item>
+    <item>
       <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-8325 — A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an…</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8325</link>
       <guid isPermaLink="false">54cf57243ce2f3ab1a5d187f61b759bd</guid>
@@ -1005,73 +1017,6 @@
       <category>actively-exploited</category>
       <category>auth-bypass</category>
       <category>n-able</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-18577 — N-able N-central: N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18577</link>
-      <guid isPermaLink="false">bb7ed1ebcf864f4910fa149a68c7bc49</guid>
-      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
-      <description>N-able N-central contains an authentication bypass using an alternate path or channel allows for authentication bypass and account takeover in N-central. This vulnerability is the result of an incomplete patch for CVE-2026-18556.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-06</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>auth-bypass</category>
-      <category>n-able</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.4 MEDIUM] CVE-2026-15662 — The Advanced Woo Labels – Product Labels &amp; Badges for WooCommerce plugin for W…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15662</link>
-      <guid isPermaLink="false">072f0e9bb161c95a5e11bede65d58bb6</guid>
-      <pubDate>Sat, 01 Aug 2026 09:16:59 +0000</pubDate>
-      <description>The Advanced Woo Labels – Product Labels &amp; Badges for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the &#39;bg_color&#39; parameter in all versions up to, and including, 2.48 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>xss</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 4.9 MEDIUM] CVE-2026-15601 — The Kirki – Freeform Page Builder, Website Builder &amp; Customizer plugin for Wor…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15601</link>
-      <guid isPermaLink="false">08cdcab9bcf6e29d0d8bdf261046eb1a</guid>
-      <pubDate>Sat, 01 Aug 2026 09:16:59 +0000</pubDate>
-      <description>The Kirki – Freeform Page Builder, Website Builder &amp; Customizer plugin for WordPress is vulnerable to Path Traversal (Zip Slip) in all versions up to, and including, 6.0.13 via the extract_zip_file function. This makes it possible for authenticated attackers, with custom-level access and above, to write arbitrary files on the server, which can allow for remote code execution. The install_app, update_app, and get_kirki_template_from_zip code paths accept a user-supplied app src value to construct the download URL, and no sanitization is applied to prevent a crafted ZIP from being fetched and extracted with path-traversing entry names that escape the intended destination directory.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>path-traversal</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2025-14073 — The WooCommerce PayPal Payments plugin for WordPress is vulnerable to Sensitive …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-14073</link>
-      <guid isPermaLink="false">ef827ea1c34ee94ef16232982e96424b</guid>
-      <pubDate>Sat, 01 Aug 2026 09:16:57 +0000</pubDate>
-      <description>The WooCommerce PayPal Payments plugin for WordPress is vulnerable to Sensitive Information Disclosure due to an Insecure Direct Object Reference in all versions up to, and including, 3.3.2 via the `enqueue_paypal_insights_script_on_order_received()` function due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to obtain sensitive order information including order keys, which can then be leveraged to access full customer billing details (name, email, phone, address) via the WooCommerce Store API within a 10-minute grace period after order creation.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-15988 — The AI Engine – The Chatbot, AI Framework &amp; MCP for WordPress plugin for WordP…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15988</link>
-      <guid isPermaLink="false">e679f73e9a40d8c0028485da25d8d71e</guid>
-      <pubDate>Sat, 01 Aug 2026 08:16:29 +0000</pubDate>
-      <description>The AI Engine – The Chatbot, AI Framework &amp; MCP for WordPress plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 3.6.5 This is due to missing or incorrect nonce validation on the reauth_for_authorize function. This makes it possible for unauthenticated attackers to create new administrator accounts with attacker-supplied credentials via a CSRF-based REST authentication bypass, granted they can trick a site administrator into performing an action such as clicking on a link. This bypass can be combined with WordPress&#39;s ?_method=POST method-override support to convert a top-navigation GET request into an authenticated POST to the REST users endpoint, requiring no existing account on the attacker&#39;s part.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>auth-bypass</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>wordpress</category>
     </item>
   </channel>
 </rss>

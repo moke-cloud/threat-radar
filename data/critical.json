@@ -1,5 +1,97 @@
 [
   {
+    "id": "c4f34f4cd027319d96afea41369e2d16",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "⚡ Weekly Recap: VMware Exploits, Windows 0-Day, MCP Attacks, Browser Hijacks and More",
+    "url": "https://thehackernews.com/2026/08/weekly-recap-vmware-exploits-windows-0.html",
+    "summary": "The expensive attacks are not always the clever ones. This week had plenty of proof. Exposed services got hit, old bugs found fresh use, browser sessions became attack paths, and supply-chain problems kept spreading farther than the original compromise. A lot of it came down to access that was already there and defenses that assumed nobody would look too closely. So, nothing magical. Just a",
+    "published": "2026-08-17T13:23:51Z",
+    "fetched": "2026-08-17T21:51:07.326235243Z",
+    "tags": [
+      "microsoft",
+      "vmware",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "microsoft",
+      "vmware"
+    ]
+  },
+  {
+    "id": "6e10bd2a0cc484a87b261152844ac03f",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Microsoft working on Defender patch for ShieldBreak zero-day",
+    "url": "https://www.bleepingcomputer.com/news/security/microsoft-working-on-defender-patch-for-shieldbreak-zero-day/",
+    "summary": "Microsoft is working on a security patch for the \"ShieldBreak\" zero-day vulnerability disclosed last week by security researcher \"Nightmare Eclipse\" and now tracked as CVE-2026-69414. [...]",
+    "published": "2026-08-17T09:05:33Z",
+    "fetched": "2026-08-17T21:51:07.326235243Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-69414"
+    ]
+  },
+  {
+    "id": "e712ac44df6cd4fc940f8a6c44d7cc66",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2025-62593 — Ray-Project Ray: Ray-Project Ray Code Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62593",
+    "summary": "Ray-Project Ray contains a code injection vulnerability that could allow remote code execution. Developers using Ray as a development tool may be exposed to this vulnerability exploitable through Firefox and Safari.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-20",
+    "published": "2026-08-17T00:00:00Z",
+    "fetched": "2026-08-17T21:51:07.326235243Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "firefox",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "ray-project",
+      "firefox"
+    ],
+    "cves": [
+      "CVE-2025-62593"
+    ]
+  },
+  {
+    "id": "5d5085f12c5588664c1e5242de4bd16e",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "GeoServer Zero-Day Targeted in Active Exploitation Attempts, Can Lead to RCE",
+    "url": "https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html",
+    "summary": "A newly disclosed zero-day flaw in GeoServer is seeing active exploitation efforts, per watchTowr. The vulnerability, which has yet to be assigned a CVE identifier, is an SQL injection vulnerability in the open-source platform that can lead to remote code execution (RCE). The security defect remains unpatched. It was first disclosed on August 12, 2026, at 10:46 UTC, by a researcher named @",
+    "published": "2026-08-13T18:45:12Z",
+    "fetched": "2026-08-17T21:51:07.326235243Z",
+    "tags": [
+      "rce",
+      "sqli",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 86
+  },
+  {
     "id": "40425126201ceb19add23e8ceecf7a4a",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1565,93 +1657,6 @@
     "vendors": [
       "microsoft",
       "oracle"
-    ]
-  },
-  {
-    "id": "3598b3cab0a32a174f7dec25a13626b2",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-64584 — In the Linux kernel, the following vulnerability has been resolved:\n\nusb: gadget…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64584",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nusb: gadget: f_midi: cancel pending IN work before freeing the midi object\n\nThe f_midi driver embeds a work item (midi->work) whose handler,\nf_midi_in_work(), dereferences the enclosing struct f_midi through\ncontainer_of().  This work is armed from two sites: f_midi_complete(),\non a normal IN-endpoint completion, and f_midi_in_trigger(), on an ALSA\nrawmidi output-stream start.\n\nNeither f_midi_disable() nor f_midi_unbind() cancels midi->work.\nf_midi_disable() only disables the endpoints and drains the in_req_fifo;\nit does not synchronize the work item, and the sound card is released\nasynchronously to the final free of the midi object.\n\nThe midi object is reference-counted (midi->free_ref) and is freed in\nf_midi_free() only once both the usb_function reference and the rawmidi\nprivate_data reference have been dropped.  In f_midi_unbind(),\nf_midi_disable() runs before the sound card is released, so while the\nUSB endpoints are already disabled the rawmidi device is still usable by\nan open substream.  A concurrent userspace write on such a substream can\nreach f_midi_in_trigger() and queue midi->work again after\nf_midi_disable() has returned.  A work item armed this way may still be\npending when the last reference drops and f_midi_free() proceeds to\nkfree(midi), letting f_midi_in_work() dereference the struct after it\nhas been freed, a use-after-free.\n\nFor this reason cancelling midi->work in f_midi_disable() would not be\nsufficient: the ALSA trigger path can rearm the work after disable()\nreturns.  Cancelling at the refcount-zero free site is the boundary\nafter which neither arming source can survive, because by then both\nreferences that keep the midi object alive have been dropped: the USB\nendpoints are already disabled and the rawmidi device has been released.\n\nFix this by calling cancel_work_sync(&midi->work) in the refcount-zero\nblock of f_midi_free(), before the embedded work_struct is freed along\nwith the rest of the structure.  opts->lock is a sleeping mutex, so\ncalling cancel_work_sync() under it is permitted, and the handler takes\nmidi->transmit_lock rather than opts->lock, so no self-deadlock can\noccur while it waits for a running instance of the work to finish.\n\nThis issue was found by an in-house static analysis tool.",
-    "published": "2026-08-06T08:16:33.543Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "linux",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "linux"
-    ],
-    "cves": [
-      "CVE-2026-64584"
-    ]
-  },
-  {
-    "id": "5b073406b759d24a5641e96e552a73af",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.9 MEDIUM] CVE-2024-6832 — The account locking mechanism fails to trigger when secondary user stores are in…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6832",
-    "summary": "The account locking mechanism fails to trigger when secondary user stores are inaccessible. The software does not maintain a consistent state for account locking if it cannot reach all configured user stores, allowing an attacker to repeatedly attempt authentication with invalid credentials without triggering the lockout mechanism for users within active stores.\n\nWhen the account locking mechanism is bypassed due to the inaccessibility of secondary user stores, users in accessible user stores are left vulnerable to brute force attacks. A malicious actor can exploit this by attempting numerous invalid password combinations against a user account without the expected account lockout consequence.",
-    "published": "2026-08-06T08:16:27.533Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "wso2"
-    ],
-    "cves": [
-      "CVE-2024-6832"
-    ]
-  },
-  {
-    "id": "109b131dd45d219c8ebf0e54cade774b",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "CISA Flags TeamCity CVE-2026-63077 RCE Flaw Under Active Exploitation in the Wild",
-    "url": "https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html",
-    "summary": "A newly patched security flaw impacting on-premise versions of JetBrains TeamCity has come under active exploitation in the wild, according to the U.S. Cybersecurity and Infrastructure Security Agency (CISA). The vulnerability in question is CVE-2026-63077 (CVSS score: 9.8), a case of deserialization of untrusted data that could allow an unauthenticated attacker with access to a TeamCity server",
-    "published": "2026-08-06T06:51:43Z",
-    "fetched": "2026-08-07T01:03:17.093495165Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 78,
-    "cves": [
-      "CVE-2026-63077"
-    ]
-  },
-  {
-    "id": "eb485f585edf8bb79bc38a17d7ac1794",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA warns of hackers exploiting Langflow, N-central, Apache Tomcat flaws",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-langflow-n-central-apache-tomcat-flaws/",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency is giving federal agencies three days to mitigate vulnerabilities in IBM Langflow, N-central, and Apache Tomcat, all actively exploited. [...]",
-    "published": "2026-08-05T15:51:33Z",
-    "fetched": "2026-08-05T22:34:41.499015799Z",
-    "tags": [
-      "apache",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "apache"
     ]
   }
 ]

@@ -5,7 +5,63 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 16 Aug 2026 21:45:04 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 21:51:07 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] ⚡ Weekly Recap: VMware Exploits, Windows 0-Day, MCP Attacks, Browser Hijacks and More</title>
+      <link>https://thehackernews.com/2026/08/weekly-recap-vmware-exploits-windows-0.html</link>
+      <guid isPermaLink="false">c4f34f4cd027319d96afea41369e2d16</guid>
+      <pubDate>Mon, 17 Aug 2026 13:23:51 +0000</pubDate>
+      <description>The expensive attacks are not always the clever ones. This week had plenty of proof. Exposed services got hit, old bugs found fresh use, browser sessions became attack paths, and supply-chain problems kept spreading farther than the original compromise. A lot of it came down to access that was already there and defenses that assumed nobody would look too closely. So, nothing magical. Just a</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>vmware</category>
+      <category>watch</category>
+      <category>0day</category>
+      <category>microsoft</category>
+      <category>vmware</category>
+    </item>
+    <item>
+      <title>[HIGH] Microsoft working on Defender patch for ShieldBreak zero-day</title>
+      <link>https://www.bleepingcomputer.com/news/security/microsoft-working-on-defender-patch-for-shieldbreak-zero-day/</link>
+      <guid isPermaLink="false">6e10bd2a0cc484a87b261152844ac03f</guid>
+      <pubDate>Mon, 17 Aug 2026 09:05:33 +0000</pubDate>
+      <description>Microsoft is working on a security patch for the &#34;ShieldBreak&#34; zero-day vulnerability disclosed last week by security researcher &#34;Nightmare Eclipse&#34; and now tracked as CVE-2026-69414. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>0day</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2025-62593 — Ray-Project Ray: Ray-Project Ray Code Injection Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-62593</link>
+      <guid isPermaLink="false">e712ac44df6cd4fc940f8a6c44d7cc66</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Ray-Project Ray contains a code injection vulnerability that could allow remote code execution. Developers using Ray as a development tool may be exposed to this vulnerability exploitable through Firefox and Safari.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-20</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>firefox</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>ray-project</category>
+      <category>firefox</category>
+    </item>
+    <item>
+      <title>[CRIT] GeoServer Zero-Day Targeted in Active Exploitation Attempts, Can Lead to RCE</title>
+      <link>https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html</link>
+      <guid isPermaLink="false">5d5085f12c5588664c1e5242de4bd16e</guid>
+      <pubDate>Thu, 13 Aug 2026 18:45:12 +0000</pubDate>
+      <description>A newly disclosed zero-day flaw in GeoServer is seeing active exploitation efforts, per watchTowr. The vulnerability, which has yet to be assigned a CVE identifier, is an SQL injection vulnerability in the open-source platform that can lead to remote code execution (RCE). The security defect remains unpatched. It was first disclosed on August 12, 2026, at 10:46 UTC, by a researcher named @</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>critical</category>
+      <category>rce</category>
+      <category>sqli</category>
+      <category>0day</category>
+    </item>
     <item>
       <title>[HIGH] Microsoft patches LegacyHive Windows zero-day vulnerability</title>
       <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/</link>
@@ -875,54 +931,6 @@
       <category>sqli</category>
       <category>microsoft</category>
       <category>oracle</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-64584 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;usb: gadget…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-64584</link>
-      <guid isPermaLink="false">3598b3cab0a32a174f7dec25a13626b2</guid>
-      <pubDate>Thu, 06 Aug 2026 08:16:33 +0000</pubDate>
-      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;usb: gadget: f_midi: cancel pending IN work before freeing the midi object&#xA;&#xA;The f_midi driver embeds a work item (midi-&gt;work) whose handler,&#xA;f_midi_in_work(), dereferences the enclosing struct f_midi through&#xA;container_of().  This work is armed from two sites: f_midi_complete(),&#xA;on a normal IN-endpoint completion, and f_midi_in_trigger(), on an ALSA&#xA;rawmidi output-stream start.&#xA;&#xA;Neither f_midi_disable() nor f_midi_unbind() cancels midi-&gt;work.&#xA;f_midi_disable() only disables the endpoints and drains the in_req_fifo;&#xA;it does not synchronize the work item, and the sound card is released&#xA;asynchronously to the final free of the midi object.&#xA;&#xA;The midi object is reference-counted (midi-&gt;free_ref) and is freed in&#xA;f_midi_free() only once both the usb_function reference and the rawmidi&#xA;private_data reference have been dropped.  In f_midi_unbind(),&#xA;f_midi_disable() runs before the sound card is released, so while the&#xA;USB endpoints are already disabled the rawmidi device is still usable by&#xA;an open substream.  A concurrent userspace write on such a substream can&#xA;reach f_midi_in_trigger() and queue midi-&gt;work again after&#xA;f_midi_disable() has returned.  A work item armed this way may still be&#xA;pending when the last reference drops and f_midi_free() proceeds to&#xA;kfree(midi), letting f_midi_in_work() dereference the struct after it&#xA;has been freed, a use-after-free.&#xA;&#xA;For this reason cancelling midi-&gt;work in f_midi_disable() would not be&#xA;sufficient: the ALSA trigger path can rearm the work after disable()&#xA;returns.  Cancelling at the refcount-zero free site is the boundary&#xA;after which neither arming source can survive, because by then both&#xA;references that keep the midi object alive have been dropped: the USB&#xA;endpoints are already disabled and the rawmidi device has been released.&#xA;&#xA;Fix this by calling cancel_work_sync(&amp;midi-&gt;work) in the refcount-zero&#xA;block of f_midi_free(), before the embedded work_struct is freed along&#xA;with the rest of the structure.  opts-&gt;lock is a sleeping mutex, so&#xA;calling cancel_work_sync() under it is permitted, and the handler takes&#xA;midi-&gt;transmit_lock rather than opts-&gt;lock, so no self-deadlock can&#xA;occur while it waits for a running instance of the work to finish.&#xA;&#xA;This issue was found by an in-house static analysis tool.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.9 MEDIUM] CVE-2024-6832 — The account locking mechanism fails to trigger when secondary user stores are in…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2024-6832</link>
-      <guid isPermaLink="false">5b073406b759d24a5641e96e552a73af</guid>
-      <pubDate>Thu, 06 Aug 2026 08:16:27 +0000</pubDate>
-      <description>The account locking mechanism fails to trigger when secondary user stores are inaccessible. The software does not maintain a consistent state for account locking if it cannot reach all configured user stores, allowing an attacker to repeatedly attempt authentication with invalid credentials without triggering the lockout mechanism for users within active stores.&#xA;&#xA;When the account locking mechanism is bypassed due to the inaccessibility of secondary user stores, users in accessible user stores are left vulnerable to brute force attacks. A malicious actor can exploit this by attempting numerous invalid password combinations against a user account without the expected account lockout consequence.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>wso2</category>
-    </item>
-    <item>
-      <title>[HIGH] CISA Flags TeamCity CVE-2026-63077 RCE Flaw Under Active Exploitation in the Wild</title>
-      <link>https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html</link>
-      <guid isPermaLink="false">109b131dd45d219c8ebf0e54cade774b</guid>
-      <pubDate>Thu, 06 Aug 2026 06:51:43 +0000</pubDate>
-      <description>A newly patched security flaw impacting on-premise versions of JetBrains TeamCity has come under active exploitation in the wild, according to the U.S. Cybersecurity and Infrastructure Security Agency (CISA). The vulnerability in question is CVE-2026-63077 (CVSS score: 9.8), a case of deserialization of untrusted data that could allow an unauthenticated attacker with access to a TeamCity server</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[HIGH] CISA warns of hackers exploiting Langflow, N-central, Apache Tomcat flaws</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-langflow-n-central-apache-tomcat-flaws/</link>
-      <guid isPermaLink="false">eb485f585edf8bb79bc38a17d7ac1794</guid>
-      <pubDate>Wed, 05 Aug 2026 15:51:33 +0000</pubDate>
-      <description>The U.S. Cybersecurity and Infrastructure Security Agency is giving federal agencies three days to mitigate vulnerabilities in IBM Langflow, N-central, and Apache Tomcat, all actively exploited. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>apache</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>apache</category>
     </item>
   </channel>
 </rss>

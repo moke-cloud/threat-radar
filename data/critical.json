@@ -1,5 +1,98 @@
 [
   {
+    "id": "556e65c2e7e418497ac2e19ae8bce9e3",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "CVE-2026-19490: Critical Vulnerability Affecting Citrix NetScaler ADC and NetScaler Gateway",
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-19490-critical-vulnerability-affecting-citrix-netscaler-adc-and-netscaler-gateway",
+    "summary": "OverviewOn August 19, 2026, a security advisory was published for CVE-2026-19490, a critical authentication bypass vulnerability affecting Citrix NetScaler ADC and NetScaler Gateway. The vulnerability carries a CVSS v4.0 base score of 9.3 and can be exploited remotely by an unauthenticated attacker over the network without user interaction or elevated privileges.NetScaler ADC and NetScaler Gateway are widely deployed enterprise networking products commonly positioned at or near the network perimeter. NetScaler ADC provides application delivery, traffic management, load balancing, SSL/TLS offlo...",
+    "published": "2026-08-19T16:46:06Z",
+    "fetched": "2026-08-19T21:51:17.547310034Z",
+    "tags": [
+      "citrix",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "citrix"
+    ],
+    "cves": [
+      "CVE-2026-19490"
+    ]
+  },
+  {
+    "id": "ed132dfb3dd13d22cb72dc994c49f869",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Critical macOS, SharePoint, vCenter, and Microsoft IKE Flaws Under Active Exploitation",
+    "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added four critical vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, stating they are being exploited in the wild. The shortcomings added to the KEV catalog are listed below - CVE-2026-65400 (CVSS score: 9.8) - An improper authentication vulnerability impacting Apple macOS that could allow an",
+    "published": "2026-08-19T11:01:48Z",
+    "fetched": "2026-08-19T21:51:17.547310034Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-65400"
+    ]
+  },
+  {
+    "id": "019f4a7bcf4e9462dcab21355498b2ff",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Critical RCE flaw in Windows IKE Extension now actively exploited",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-critical-windows-ike-extension-flaw-now-exploited-in-attacks/",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) warned that hackers are exploiting a critical-severity remote code execution (RCE) flaw in the Windows Internet Key Exchange (IKE) Service Extensions component. [...]",
+    "published": "2026-08-19T10:12:24Z",
+    "fetched": "2026-08-19T21:51:17.547310034Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 97,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "6c0e809b7a8013be2fb0c3155ee5265c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-64849 — MLflow MLflow: MLflow Server-Side Request Forgery Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64849",
+    "summary": "MLflow contains a server-side request forgery vulnerability that can allow attackers to reach internal or cloud metadata services and receive response_status and response_body.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-02",
+    "published": "2026-08-19T00:00:00Z",
+    "fetched": "2026-08-19T21:51:17.547310034Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "mlflow"
+    ],
+    "cves": [
+      "CVE-2026-64849"
+    ]
+  },
+  {
     "id": "286064b885eb239e556e5d1bbbd4deac",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -215,6 +308,27 @@
     ],
     "cves": [
       "CVE-2025-62593"
+    ]
+  },
+  {
+    "id": "e5971670c6d8ef33942961e403931a8a",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-526: (0Day) PAX Technology Q80 Application Installer Signature Verification Bypass Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-526/",
+    "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of PAX Technology Q80. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-19910, CVE-2026-19911.",
+    "published": "2026-08-14T05:00:00Z",
+    "fetched": "2026-08-19T21:51:17.547310034Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 81,
+    "cves": [
+      "CVE-2026-19910",
+      "CVE-2026-19911"
     ]
   },
   {
@@ -481,6 +595,27 @@
     ],
     "severity": "critical",
     "score": 80,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "978863577900beb3a0b120010158ff48",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Patch Tuesday - August 2026",
+    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-august-2026",
+    "summary": "Microsoft is publishing 421 vulnerabilities on August 2026 Patch Tuesday, including 236 vulnerabilities in Windows. This is lower volume than last month’s record-breaking behemoth, but still one of the largest Patch Tuesday totals ever. There is no reason to suppose that Patch Tuesday will ever return to the lower volumes we saw prior to 2026. Microsoft is aware of exploitation in the wild for one of the vulnerabilities published today, as well as public disclosure for two others, although the Notable CVEs section of the Security Update Guide omits one of these. As usual, browser vulns are n...",
+    "published": "2026-08-11T21:10:55Z",
+    "fetched": "2026-08-19T21:51:17.547310034Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 71,
     "vendors": [
       "microsoft"
     ]
@@ -1490,319 +1625,6 @@
     "score": 60,
     "cves": [
       "CVE-2026-17595"
-    ]
-  },
-  {
-    "id": "053ad18426a12b193ad90ad145422c64",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-71558 — Heap type confusion vulnerability in Apache Fory C++ deserialization.\n\nThis issu…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71558",
-    "summary": "Heap type confusion vulnerability in Apache Fory C++ deserialization.\n\nThis issue affects Apache Fory C++ versions from 0.14.0 before 1.5.0. A crafted input payload can bypass type compatibility checks during polymorphic smart-pointer deserialization, causing an object of an incompatible type to be treated as the declared base type. This may result in undefined behavior and potentially lead to denial of service or arbitrary code execution.\n\n\nUsers are recommended to upgrade to Apache Fory 1.5.0, which fixes this issue. Applications not using Apache Fory C++ polymorphic smart-pointer deserialization are not affected.",
-    "published": "2026-08-07T10:16:59.337Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "deserialization",
-      "apache",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2026-71558"
-    ]
-  },
-  {
-    "id": "69e81121869e31fba12a57edc780367d",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "AI-Assisted HTTP Terminator Finds Novel HTTP Desync Techniques and Apache Zero-Day",
-    "url": "https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html",
-    "summary": "PortSwigger says HTTP Terminator, an artificial intelligence (AI)-assisted research system built by James Kettle, generated and proved new HTTP desynchronization techniques after exploring 30,000 candidate desync vectors. PortSwigger said a separate human-guided discovery cascade also exposed a zero-day in Apache Traffic Server. Kettle said HTTP Terminator tested 30,000 websites where",
-    "published": "2026-08-07T10:09:54Z",
-    "fetched": "2026-08-07T22:06:17.73045207Z",
-    "tags": [
-      "apache",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "apache"
-    ]
-  },
-  {
-    "id": "2b2304d125028dbb960b455758d21f6d",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-8037 — Progress LoadMaster: Progress LoadMaster Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8037",
-    "summary": "Progress LoadMaster contains a command injection vulnerability that allows an un-authenticated attacker to execute arbitrary commands on the LoadMaster appliance by exploiting unsanitized input in multiple command endpoints.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-10",
-    "published": "2026-08-07T00:00:00Z",
-    "fetched": "2026-08-14T21:49:53.713982718Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "progress"
-    ],
-    "cves": [
-      "CVE-2026-8037"
-    ]
-  },
-  {
-    "id": "2b2304d125028dbb960b455758d21f6d",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-8037 — Progress LoadMaster: Progress LoadMaster Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8037",
-    "summary": "Progress LoadMaster contains a command injection vulnerability that allows an un-authenticated attacker to execute arbitrary commands on the LoadMaster appliance by exploiting unsanitized input in multiple command endpoints.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-10",
-    "published": "2026-08-07T00:00:00Z",
-    "fetched": "2026-08-07T22:06:17.73045207Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "progress"
-    ],
-    "cves": [
-      "CVE-2026-8037"
-    ]
-  },
-  {
-    "id": "54cf57243ce2f3ab1a5d187f61b759bd",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-8325 — A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8325",
-    "summary": "A maliciously crafted PDF file, when parsed through Autodesk Revit, can force an Out-of-Bounds Write vulnerability. A malicious actor may leverage this vulnerability to cause a crash, cause data corruption, or execute arbitrary code in the context of the current process.",
-    "published": "2026-08-06T22:18:33.243Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-8325"
-    ]
-  },
-  {
-    "id": "a8678622db377a351a77f1e1f14d4ed4",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-71476 — Nx is a monorepo solution for TypeScript and polyglot codebases. From version 20.8.0 until 22.7.7 an…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71476",
-    "summary": "Nx is a monorepo solution for TypeScript and polyglot codebases. From version 20.8.0 until 22.7.7 and 23.0.2, the Nx self-hosted HTTP remote cache extracts downloaded cache artifacts without constraining where files are written. A malicious or on-path (MITM) remote cache server can return a crafted tar archive whose entries escape the cache directory and write to arbitrary locations on the machine running Nx, which can be escalated to remote code execution. Nx's default local cache and Nx Cloud are not affected; only workspaces configured to use a self-hosted remote cache are affected. This issue is fixed in versions 22.7.7 and 23.0.2.",
-    "published": "2026-08-06T22:18:31.603Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-71476"
-    ]
-  },
-  {
-    "id": "8d021c0eb0df733c6474b6da1b3f26eb",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-71326 — Traefik is an open source HTTP reverse proxy and load balancer. From 3.6.11 until 3.6.25 and 3.7.10,…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71326",
-    "summary": "Traefik is an open source HTTP reverse proxy and load balancer. From 3.6.11 until 3.6.25 and 3.7.10, Traefik's BasicAuth middleware in pkg/middlewares/auth/basic_auth.go deduplicates concurrent password checks with a singleflight key built from the delimiter-free concatenation of password and secret, allowing an attacker who has a valid credential and the stored hash to authenticate as an unconfigured username when headerField trusts the forwarded identity. This issue is fixed in 3.6.25 and 3.7.10.",
-    "published": "2026-08-06T22:18:29.65Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-71326"
-    ]
-  },
-  {
-    "id": "2ab12755e914b4be731a8fa727c3f28a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-70636 — Flowise through 3.1.4 contains an authentication bypass vulnerability that allow…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70636",
-    "summary": "Flowise through 3.1.4 contains an authentication bypass vulnerability that allows unauthenticated attackers to access the OAuth2 credential refresh endpoint by exploiting prefix-based whitelist matching in the authentication middleware defined in packages/server/src/utils/constants.ts. Attackers can send a POST request to the oauth2-credential refresh route with a trailing credential identifier to bypass all authentication and authorization checks, triggering unauthorized OAuth token rotation against credentials belonging to any workspace and potentially disrupting dependent OAuth integrations. This is a bypass of CVE-2026-41273.",
-    "published": "2026-08-06T22:18:28.15Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-70636",
-      "CVE-2026-41273"
-    ]
-  },
-  {
-    "id": "abba3809d4542fc48e881d5d6cb3ff19",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-70558 — Dinky's POST /download/uploadFromRsByLocal handler passes the caller-supplied pa…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70558",
-    "summary": "Dinky's POST /download/uploadFromRsByLocal handler passes the caller-supplied path parameter directly to new File(path) and file.transferTo(dest) with no path validation. The route is marked @SaIgnore and /download/** is excluded from the Sa-Token interceptor, so the only guard is a header equality check against a dinkyToken value whose default (efda1551-7958-4e0f-80a8-dfd107df3e38) is hardcoded in source and shipped to every deployment. Anyone who can reach Dinky's HTTP port (8888 by default) and supplies the hardcoded token can write arbitrary files as the Dinky service account. The default Docker image runs on 8888 with no proxy or authentication and chmod 777 on /opt/dinky, so the application's own classpath, launch scripts, and static assets are writable. Demonstrated impact: overwriting /opt/dinky/config/static/index.html served attacker JavaScript to admin browsers immediately, and writing /opt/dinky/org/dinky/Dinky.class executed attacker code as the Dinky service account at the next JVM start via a classpath-shadow launched by script/bin/auto.sh. Writes are uid 9999 (flink), not root, so /etc, /root, /home, and /usr are refused. Affects Dinky v1.2.5 (the current release) and the development branch, where the code is byte-identical.",
-    "published": "2026-08-06T22:18:26.227Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "critical-cvss",
-      "docker",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "docker"
-    ],
-    "cves": [
-      "CVE-2026-70558"
-    ]
-  },
-  {
-    "id": "da6e02100f2a6f381ba556404ce7f3ec",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-64655 — GitHub CLI (gh) is GitHub’s official command line tool. Prior to 2.97.0, gh attestation verify  b…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64655",
-    "summary": "GitHub CLI (gh) is GitHub’s official command line tool. Prior to 2.97.0, gh attestation verify  builds the certificate Subject Alternative Name matcher from the --signer-repo and --signer-workflow  flag values without escaping regex metacharacters, so a user-supplied repository or workflow name is treated as a regular expression rather than a literal string. Because GitHub permits characters such as  `.`  in organization, repository, and workflow path names and  `.`  is a regex wildcard, an attacker can register a lookalike name (for example github/artifact.attestations-workflows) that satisfies a matcher intended for a different trusted signer (github/artifact-attestations-workflows), bypassing the intended Sigstore attestation verification. Exploitation requires the attacker to create a plausible lookalike repository and produce valid attestations from it, which could undermine supply chain verification for CI/CD pipelines or policy gates that pin trust to a specific signing workflow. This issue is fixed in version 2.97.0.",
-    "published": "2026-08-06T22:18:13.527Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "supply-chain",
-      "github"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "github"
-    ],
-    "cves": [
-      "CVE-2026-64655"
-    ]
-  },
-  {
-    "id": "774fa6ed9d2a886e1dee29766cd81207",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-5857 — Contiki-NG's MQTT client parse_publish_vhdr() in os/net/app-layer/mqtt/mqtt.c se…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5857",
-    "summary": "Contiki-NG's MQTT client parse_publish_vhdr() in os/net/app-layer/mqtt/mqtt.c sets topic_len_received=1 before checking topic_len against the 64-byte limit, so an over-length topic returns early but leaves the flag set. On the next TCP segment, tcp_input() re-invokes the parser with topic_received==0, and the persisted topic_len_received==1 skips the length-reading block containing the guard, falling through directly to a memcpy() that uses the unvalidated 16-bit topic_len as the copy length. The 65-byte topic[] destination overruns into adjacent struct fields including the payload_chunk pointer, which subsequent MQTT code dereferences, giving a compromised or attacker-controlled broker an arbitrary-pointer-write primitive. Contiki-NG's MQTT implementation has no TLS support so the connection is plaintext. Impact ranges from information disclosure and denial of service to remote code execution on embedded targets without memory protection.",
-    "published": "2026-08-06T22:18:10.9Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-5857"
-    ]
-  },
-  {
-    "id": "633fbc1094d58e3bc9599d8c748062ea",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.4 CRITICAL] CVE-2026-48088 — OpenReception's appointment booking software provides an end-to-end encrypted ap…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48088",
-    "summary": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.4, the route `POST /api/tenants/{tenantId}/staff/{staffId}/crypto` accepts and stores attacker-controlled ML-KEM-768 public keys against any tenant on the platform without authentication. The handler logs an \"Unauthorized crypto key storage attempt\" warning when neither a session nor a registration cookie is present, then proceeds to insert the row regardless. The platform's E2E claim that \"even administrators cannot view sensitive information\" is broken: any unauthenticated network attacker can register themselves as an additional encryption recipient for any tenant's future patient appointments. A second variant of the bug suppresses the unauthorized-warning log entry. The Zod schema makes the `email` field optional. When the request body omits `email` and the request carries no registration cookie, the comparison `registrationEmail === email` becomes `undefined === undefined`, which evaluates to `true`. The handler treats the request as a legitimate registration flow, skips the warning entirely, and stores the row. Successful storage is still recorded as an `[info]` log line, but the security-relevant warning that operators are most likely to monitor or alert on is gone. The `staff_crypto` table has no unique constraint on `user_id`, so an arbitrary number of attacker rows can coexist for the same staff identifier and all return as `is_active=true`. The supplied `staffId` does not need to match any existing user or pending invite. Schema validation on `passkeyId`, `publicKey`, and `privateKeyShare` is also weak: the literal string `<placeholder-base64>` was accepted, indicating no length, format, or cryptographic-validity check beyond field presence. This weakness is independent of the auth bypass but compounds it: a poisoned directory can also be filled with malformed entries that break legitimate booking flows. The injected key is consumed by the public booking flow. After completing the unauthenticated `bootstrap-challenge` and `bootstrap-verify` ceremony as a \"patient\", the resulting `bookingAccessToken` is accepted by `GET /api/tenants/{id}/appointments/staff-public-keys`, which returns the attacker-controlled keys alongside any legitimate ones. A new appointment encrypts its tunnel key with ML-KEM to all listed recipients, so the attacker becomes a co-recipient of the encryption and can decapsulate the tunnel key with the matching secret. From there, all appointment payloads for that booking are decryptable. Version 1.0.4 patches the issue.",
-    "published": "2026-08-06T22:17:11.893Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "critical-cvss",
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-48088"
-    ]
-  },
-  {
-    "id": "9d8d436ccb9bea153185e3faab0b56d5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.5 MEDIUM] CVE-2026-48083 — OpenReception's appointment booking software provides an end-to-end encrypted ap…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48083",
-    "summary": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.2, the `/api/log` endpoint accepts unauthenticated POST requests, applies no schema validation to the message body, writes attacker-controlled content directly into the application's stdout log, interprets newline characters as real line breaks, and enforces no size or rate limits. Three independent abuse modes follow: log injection (forge log lines that look like legitimate system events), log volume DoS (saturate the logging pipeline at sustained 100+ requests per second of small messages), and oversized-payload submission (100 KB payloads accepted; larger sizes not tested). The most operationally damaging mode is log injection. An attacker can inject lines that an operator scanning logs would mistake for real system errors, mask their own activity behind fake noise, or pollute SIEM alerting rules with crafted false positives. A line such as `[error]: injected admin error` injected from an unauthenticated source is indistinguishable from the application's own error output once written to disk. Version 1.0.2 fixes the issue.",
-    "published": "2026-08-06T22:17:11.143Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-48083"
-    ]
-  },
-  {
-    "id": "5d9dd07043afc652f1c882d672290906",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-43627 — llama.cpp builds b1283 through b9058 contain an integer overflow vulnerability i…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43627",
-    "summary": "llama.cpp builds b1283 through b9058 contain an integer overflow vulnerability in the llama_batch_init() function where unchecked multiplications in malloc() calls can wrap past INT32_MAX when computing allocation sizes. Attackers can pass specially crafted parameters to trigger integer overflow, causing heap corruption and potentially achieving arbitrary code execution through subsequent batch operations that write past allocated buffer boundaries.",
-    "published": "2026-08-06T22:17:05.633Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-43627"
-    ]
-  },
-  {
-    "id": "565aca6cf61dbe6cb01ef7951567a171",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-1289 — A maliciously crafted PDF file, when parsed through Autodesk Revit, can force a …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1289",
-    "summary": "A maliciously crafted PDF file, when parsed through Autodesk Revit, can force a Use-After-Free vulnerability. A malicious actor can leverage this vulnerability to cause a crash, disclose sensitive data, or execute arbitrary code in the context of the current process.",
-    "published": "2026-08-06T22:17:00.373Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-1289"
     ]
   }
 ]

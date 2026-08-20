@@ -1,5 +1,109 @@
 [
   {
+    "id": "efe6e23ae013aa577cf5c2b6f1a14836",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Critical Elementor Pro bug exposes WordPress sites to RCE attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/critical-elementor-pro-bug-exposes-wordpress-sites-to-rce-attacks/",
+    "summary": "A critical vulnerability in the Elementor Pro WordPress plugin could allow attackers to upload executable files for remote code execution on the server. [...]",
+    "published": "2026-08-20T14:39:48Z",
+    "fetched": "2026-08-20T21:53:47.060123032Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "wordpress"
+    ]
+  },
+  {
+    "id": "c28baaf43be2cbd62ba46f5b58c9ad16",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution",
+    "url": "https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html",
+    "summary": "A now-patched security flaw impacting Zimbra Collaboration (ZCS) has come under active exploitation in the wild, according to the Polish Computer Emergency Response Team (CERT Polska). The vulnerability in question is CVE-2026-73570 (CVSS score: 8.9), which refers to a case of command injection that can lead to remote code execution. \"A remote code execution vulnerability exists in Zimbra",
+    "published": "2026-08-20T13:24:28Z",
+    "fetched": "2026-08-20T21:53:47.060123032Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-73570"
+    ]
+  },
+  {
+    "id": "6b4c2730ccb515190469fb8db276663e",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Critical Zimbra RCE flaw now actively exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/",
+    "summary": "CERT Polska, the Polish Computer Emergency Response Team (CERT), warned that attackers have begun exploiting a critical vulnerability in Zimbra Collaboration Suite (ZCS). [...]",
+    "published": "2026-08-20T09:46:54Z",
+    "fetched": "2026-08-20T21:53:47.060123032Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 87
+  },
+  {
+    "id": "88bc3aecbff0eaef094ebc6dcdd06ad4",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-72530 — TrueConf Server: TrueConf Server Code Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72530",
+    "summary": "TrueConf Server contains a code injection vulnerability that could allow an unauthorized remote attacker with network access via port 4307/TCP to use a specially crafted script to break out of the isolated environment and execute arbitrary code on the host system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-03",
+    "published": "2026-08-20T00:00:00Z",
+    "fetched": "2026-08-20T21:53:47.060123032Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "trueconf"
+    ],
+    "cves": [
+      "CVE-2026-72530"
+    ]
+  },
+  {
+    "id": "b9f01097f001c86e3a0e611e3981654e",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-72529 — TrueConf Server: TrueConf Server Missing Authentication for Critical Function Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72529",
+    "summary": "TrueConf Server contains a missing authentication for critical function vulnerability which could allow a remote unauthorized attacker with network access via port 4307/TCP to execute an arbitrary script.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-23",
+    "published": "2026-08-20T00:00:00Z",
+    "fetched": "2026-08-20T21:53:47.060123032Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "trueconf"
+    ],
+    "cves": [
+      "CVE-2026-72529"
+    ]
+  },
+  {
     "id": "556e65c2e7e418497ac2e19ae8bce9e3",
     "source": "rapid7",
     "source_name": "Rapid7 Blog",
@@ -1399,232 +1503,5 @@
     ],
     "severity": "high",
     "score": 67
-  },
-  {
-    "id": "abafc01bbca8da1ae0cd51ea3114642f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.7 MEDIUM] CVE-2026-64676 — Kata Containers is an open source implementation of lightweight Virtual Machines…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64676",
-    "summary": "Kata Containers is an open source implementation of lightweight Virtual Machines (VMs) that perform like containers. In versions prior to 4.0.0, the kata-agent is vulnerable to an authorization bypass in confidential-guest memory management. In Confidential Containers (CoCo) deployments, the kata-agent enforces an OPA/Rego-based AgentPolicy that must authorize every ttRPC API call, forming the security boundary that prevents an untrusted host from directing the confidential guest. Two ttRPC methods introduced with the mem-agent feature are missing this authorization check, so an untrusted host can invoke them unconditionally regardless of the guest's policy configuration. When mem-agent is enabled (off by default), this lets the host tamper with in-guest memory management by forcing swap, aggressive eviction, or compaction, resulting in attacker-controlled availability and performance degradation of the confidential workload entirely outside the agent-policy boundary. The impact does not include memory disclosure or code execution, and severity is bounded by the precondition that mem-agent must be explicitly enabled. This issue is fixed in version 4.0.0.",
-    "published": "2026-08-07T22:16:59.48Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-64676"
-    ]
-  },
-  {
-    "id": "ef516789c5d60f2c666623b9aeb8d237",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-48169 — PraisonAI is a multi-agent teams system. Versions prior to 0.1.4 of the PraisonA…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48169",
-    "summary": "PraisonAI is a multi-agent teams system. Versions prior to 0.1.4 of the PraisonAI Platform API have two authorization failures that together break workspace isolation. The service layer for issues and projects performs global primary-key lookups without checking workspace ownership, so any authenticated user can read, modify, and delete resources in any workspace just by swapping UUIDs in their API requests. On top of that, every member management endpoint (add, update role, remove) only requires `min_role=\"member\"`, which lets any workspace member promote themselves to owner and kick out the original owner. A low-privilege member of one workspace can steal data from every other workspace and take over any workspace they belong to. Both issues come from the same gap: the route layer pulls `workspace_id` from the URL and verifies membership, but the service layer ignores the workspace scope for resource lookups and ignores the caller's role level for member operations. The `require_workspace_member()` dependency does its job correctly. The problem is that the service layer doesn't use the information it provides. Version 0.1.4 of the PraisonAI Platform API patch the issue.",
-    "published": "2026-08-07T22:16:59.013Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-48169"
-    ]
-  },
-  {
-    "id": "f10039c9b840b4d1a4b5db8eabfa88e1",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-47243 — Kata Containers is an open source project focusing on a standard implementation of lightweight Virtu…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47243",
-    "summary": "Kata Containers is an open source project focusing on a standard implementation of lightweight Virtual Machines (VMs) that perform like containers. Prior to 3.31.0, the runtime-rs standalone virtio-fs path is vulnerable to a guest-root to host-root escape. In this configuration, Kata runs the host virtiofsd as root with --sandbox none --seccomp none, so an attacker with root-equivalent access inside the guest can bypass the guest virtio-fs client entirely by taking over the virtio-fs PCI device and building a virtqueue in userspace to submit raw FUSE requests directly to the host virtiofsd. A crafted FUSE_SYMLINK request whose new symlink name is an absolute host path is honored outside the configured shared directory, allowing guest root to create root-owned symlinks in sensitive host locations such as /etc/cron.d. By pointing such a symlink at a guest-controlled crontab payload reachable through a live runtime process's mount namespace, the attacker causes the host cron daemon to execute that payload as host root, crossing the Kata isolation boundary. This issue is fixed in version 3.31.0.",
-    "published": "2026-08-07T22:16:58.753Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-47243"
-    ]
-  },
-  {
-    "id": "47ee31cd12304994b0078111cab830b6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.3 MEDIUM] CVE-2026-46405 — OpenBao is an open source identity-based secrets management system. Prior to ver…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46405",
-    "summary": "OpenBao is an open source identity-based secrets management system. Prior to version 2.5.4, in OpenBao's Kerberos auth method on the `GET` handler, or when an `Authorization: Negotiate` header is supplied, the response is includes a `logical.Auth` object in addition to an error message. This results in tokens being created with only the default policy, default TTL, and no entity information, which are hidden by the returned error message. No access to these tokens by the caller occurs and the authentication token is not ever made accessible outside of `sys/raw`. This is fixed in OpenBao v2.5.4. As a workaround, users may set a rate limit quota to limit the creation of these paths. As the path is unauthenticated, it isn't possible to deny access to it.",
-    "published": "2026-08-07T22:16:58.6Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-46405"
-    ]
-  },
-  {
-    "id": "0d5f8d7a6b71b04bb4653b27923c37bf",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-45808 — OpenBao is an open source identity-based secrets management system. Prior to version 2.5.4, OpenBao'…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45808",
-    "summary": "OpenBao is an open source identity-based secrets management system. Prior to version 2.5.4, OpenBao's namespaces provide multi-tenant separation. A tenant who intentionally leaks lease identifiers can have their lease and underlying credential revoked or renewed by a user in another tenant via the legacy, undocumented `sys/revoke` and `sys/renew` endpoints. This is fixed in OpenBao v2.5.4.",
-    "published": "2026-08-07T22:16:58.37Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-45808"
-    ]
-  },
-  {
-    "id": "105fd5454db1dd4a3a72a4945bd74998",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.6 MEDIUM] CVE-2026-11743 — The SF32LB MPI QSPI NOR flash driver (drivers/flash/flash_sf32lb_mpi_qspi_nor.c)…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11743",
-    "summary": "The SF32LB MPI QSPI NOR flash driver (drivers/flash/flash_sf32lb_mpi_qspi_nor.c) validated the flash offset and length on its read and write paths with the test (offset + size) > data->size. Because offset is a signed off_t while size is unsigned, a negative offset is converted to a large unsigned value and the addition can wrap to a small result that passes the check. The read path then performs memcpy(dst, (void *)(data->base + offset), size) and the write path programs flash at offset and cache-invalidates data->base + offset, in both cases accessing memory outside the mapped flash window. The driver's erase path already rejected negative offsets, but read and write did not.\n\nIn builds with CONFIG_USERSPACE, flash_read and flash_write are syscalls whose verifiers validate the device object and the caller's buffer but deliberately delegate offset bounds checking to the driver. An unprivileged thread that has been granted access to this flash device can therefore call the syscall with a crafted negative offset and a buffer valid in its own memory domain, and reach the unchecked access.\n\nThe most direct impact is on the read path: by choosing a negative offset and matching size, an attacker slides the memcpy source below the flash base and copies arbitrary CPU-addressable memory into its own buffer, disclosing memory it is not authorized to read. The write path additionally allows programming flash at an out-of-range address and invalidating an attacker-chosen cache range, affecting integrity and availability. Reachability requires userspace to be enabled and the raw flash device object to be granted to an untrusted thread.\n\nThe fix replaces the check with qspi_nor_range_is_valid(), which rejects negative offsets and performs the bound comparison in overflow-safe 64-bit arithmetic on both paths, and additionally adds an SRAM DMA bounce buffer plus source/destination overlap rejection to prevent a separate DMA bus-hang condition.",
-    "published": "2026-08-07T22:16:57.317Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-11743"
-    ]
-  },
-  {
-    "id": "6ca6e6f4a395053a3b48c81c0e59a1f0",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Metabase SQLi zero-day exploited in customer data-theft attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/",
-    "summary": "A critical Metabase SQL injection vulnerability was exploited in zero-day attacks to breach customer instances in data theft attacks, known to impact Framework and Tally. [...]",
-    "published": "2026-08-07T20:14:46Z",
-    "fetched": "2026-08-07T22:06:17.73045207Z",
-    "tags": [
-      "sqli",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 75
-  },
-  {
-    "id": "092aea6ccb438deadfbd5d90f8c79342",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.0 CRITICAL] CVE-2026-71851 — crypto-js is a JavaScript library of crypto standards. Versions of crypto-js pri…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71851",
-    "summary": "crypto-js is a JavaScript library of crypto standards. Versions of crypto-js prior to 4.0.0 generate randomness in CryptoJS.lib.WordArray.random() using a custom variation of the Multiply-With-Carry pseudorandom number generator, seeded from Math.random(), instead of a cryptographically secure source. This generator was introduced in version 3.1.2-4 and remained present in nearly every 3.x release. Nominal requests for 128 or 256 bits of entropy through this function produce effective search spaces of approximately 2 to the 39th and 2 to the 47th possibilities, small enough to enumerate on commodity hardware. Downstream wallet applications that used CryptoJS.lib.WordArray.random() as the entropy source for BIP39 recovery phrases are affected, and an attacker who enumerates the reduced output space can recover the resulting private keys and control the associated funds. This issue is fixed in version 4.0.0.",
-    "published": "2026-08-07T19:18:54.39Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-71851"
-    ]
-  },
-  {
-    "id": "6a3d24911e813acb4fc10c62372b68b5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.3 HIGH] CVE-2026-11430 — Grav CMS's scheduler-webhook plugin contains an authentication bypass in the web…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11430",
-    "summary": "Grav CMS's scheduler-webhook plugin contains an authentication bypass in the webhook token check. When the webhook feature is enabled but no webhookToken is configured, a compound conditional short-circuits and skips token validation, so an unauthenticated remote attacker who can reach POST /scheduler/webhook can trigger the operator's already-configured scheduled jobs by sending a single request. The primitive is triggering-existing-jobs, not attacker-chosen command execution: the attacker controls when the jobs run and which one runs (via ?job=), but does not control what the jobs do. Code execution follows only when the operator has configured a job that shells out, and even then the attacker controls timing rather than payload. Not a default-install issue: reaching the endpoint requires the separate scheduler-webhook GPM plugin to be installed, scheduler.modern.webhook.enabled to be true (default false), and no webhookToken to be configured; a stock Grav or Grav-Admin install exposes nothing here.",
-    "published": "2026-08-07T19:17:34.497Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-11430"
-    ]
-  },
-  {
-    "id": "4a4e12c92004b231b40fa48252177faf",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.5 MEDIUM] CVE-2026-44965 — In versions of the Datadog Android application prior to v545-5.9.2, six App Widg…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44965",
-    "summary": "In versions of the Datadog Android application prior to v545-5.9.2, six App Widget configuration activities (IncidentWidgetActivity, MonitorSavedViewWidgetActivity, OnCallShiftsWidgetActivity, OnCallPagesWidgetActivity, SloWidgetActivity, DashboardWidgetActivity) are exported with no permission guard. Each accepts a caller-supplied AppWidgetManager.EXTRA_APPWIDGET_ID and, when no deep-link destination is resolved, uses it to load the matching widget's stored session and automatically log in as that user. Because Android widget IDs are small sequential integers, a co-installed application can brute-force this value to find one that matches a widget configured on the victim's device.\r\nThis requires:\r\nA malicious application co-installed on the victim's device.\r\nAt least one of the six widgets configured on the victim's home screen.\r\nAn active Datadog session cached locally.\r\nImpact: The matching configuration activity opens in the foreground under the victim's session and renders live infrastructure data. Exposure is limited to a visual side channel (e.g., screen recording or accessibility services); the calling application cannot programmatically read the rendered data.",
-    "published": "2026-08-07T18:17:14.69Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-44965"
-    ]
-  },
-  {
-    "id": "5f4596eac1977d665f89f5b078ac30fa",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.0 HIGH] CVE-2026-68772 — ZenML 0.94.6 contains a remote code execution vulnerability in the CloudpickleMa…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68772",
-    "summary": "ZenML 0.94.6 contains a remote code execution vulnerability in the CloudpickleMaterializer component that allows attackers with write access to a shared artifact store to execute arbitrary code by planting a malicious pickle file. Attackers can replace a stored artifact.pkl file with a crafted cloudpickle payload containing a malicious __reduce__ method, which executes arbitrary system commands when any user or pipeline materializes the artifact through the unsanitized cloudpickle.load() call in cloudpickle_materializer.py.",
-    "published": "2026-08-07T17:17:07.573Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-68772"
-    ]
-  },
-  {
-    "id": "d41976e01077a129423a0504195744c1",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-17595 — Nexus Repository 3 did not fully sandbox JEXL expressions used in Content Selectors. An account hold…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17595",
-    "summary": "Nexus Repository 3 did not fully sandbox JEXL expressions used in Content Selectors. An account holding the nexus:selectors:create permission could construct an expression that read Java object properties not intended to be exposed to the expression engine, disclosing internal JVM class metadata such as class and classloader names. This issue does not permit method invocation, object construction, or arbitrary code execution. This has been fixed by restricting property access in the JEXL sandbox to the intended data types.",
-    "published": "2026-08-07T17:16:59.76Z",
-    "fetched": "2026-08-09T21:58:23.385916754Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-17595"
-    ]
   }
 ]

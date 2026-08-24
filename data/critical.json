@@ -1,5 +1,90 @@
 [
   {
+    "id": "4056d28720abba2ccfcadc890d70c8d3",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Hackers target WordPress sites in miniOrange auth bypass attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks/",
+    "summary": "Hackers are attempting to exploit two critical authentication bypass vulnerabilities in the miniOrange SAML 2.0 Single Sign On plugin for WordPress that can be used to forge SAML responses and log in as administrators. [...]",
+    "published": "2026-08-24T19:26:32Z",
+    "fetched": "2026-08-24T21:53:54.752420717Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "wordpress"
+    ]
+  },
+  {
+    "id": "bc0fcdcffb538fa3543e2f529f7d069e",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Rapid7 Analysis: Microsoft SharePoint Remote Code Execution (CVE-2026-63520)",
+    "url": "https://www.rapid7.com/blog/post/ra-microsoft-sharepoint-remote-code-execution-cve-2026-63520",
+    "summary": "",
+    "published": "2026-08-24T16:18:05Z",
+    "fetched": "2026-08-24T21:53:54.752420717Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-63520"
+    ]
+  },
+  {
+    "id": "8228507d1e0a4ee945e803e3aa1c67ef",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA orders urgent patching of actively exploited Zimbra flaw",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-urgent-patching-of-actively-exploited-zimbra-flaw/",
+    "summary": "The Cybersecurity and Infrastructure Security Agency (CISA) has ordered U.S. government agencies to patch an actively exploited vulnerability in Zimbra Collaboration Suite (ZCS) within three days. [...]",
+    "published": "2026-08-24T10:45:12Z",
+    "fetched": "2026-08-24T21:53:54.752420717Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "7111983c53f7e905fb57af0e5226d9e3",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-21962 — Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in: Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21962",
+    "summary": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in contain an improper access control vulnerability that can result in unauthorized creation, deletion or modification access to critical data as well as unauthorized access to critical data or complete access to all Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in accessible data.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-08-27",
+    "published": "2026-08-24T00:00:00Z",
+    "fetched": "2026-08-24T21:53:54.752420717Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "oracle"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "oracle"
+    ],
+    "cves": [
+      "CVE-2026-21962"
+    ]
+  },
+  {
     "id": "440b68a0bb288f6e159258c2af0f30c4",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -424,6 +509,33 @@
     ],
     "cves": [
       "CVE-2026-69414"
+    ]
+  },
+  {
+    "id": "e712ac44df6cd4fc940f8a6c44d7cc66",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2025-62593 — Ray-Project Ray: Ray-Project Ray Code Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62593",
+    "summary": "Ray-Project Ray contains a code injection vulnerability that could allow remote code execution. Developers using Ray as a development tool may be exposed to this vulnerability exploitable through Firefox and Safari.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-20",
+    "published": "2026-08-17T00:00:00Z",
+    "fetched": "2026-08-24T21:53:54.752420717Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "firefox",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "ray-project",
+      "firefox"
+    ],
+    "cves": [
+      "CVE-2025-62593"
     ]
   },
   {
@@ -945,173 +1057,6 @@
     ],
     "cves": [
       "CVE-2026-62709"
-    ]
-  },
-  {
-    "id": "ac37ab5f1f95a910cac41e0c3252d070",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.0 HIGH] CVE-2026-62690 — Concurrent execution using shared resource with improper synchronization ('race …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62690",
-    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Push Notifications allows an authorized attacker to elevate privileges locally.",
-    "published": "2026-08-11T17:18:18.53Z",
-    "fetched": "2026-08-16T21:45:04.635961797Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-62690"
-    ]
-  },
-  {
-    "id": "ab103ae8e5887f94082d8b4434ff19a9",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-61932 — Access of resource using incompatible type ('type confusion') in Windows DWM Cor…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61932",
-    "summary": "Access of resource using incompatible type ('type confusion') in Windows DWM Core Library allows an authorized attacker to elevate privileges locally.",
-    "published": "2026-08-11T17:18:16.063Z",
-    "fetched": "2026-08-16T21:45:04.635961797Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-61932"
-    ]
-  },
-  {
-    "id": "2caf699bc5480aeb22118bc2bccb61d7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 6.6 MEDIUM] CVE-2026-61920 — Concurrent execution using shared resource with improper synchronization ('race …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61920",
-    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows DNS allows an authorized attacker to execute code over a network.",
-    "published": "2026-08-11T17:18:14.193Z",
-    "fetched": "2026-08-16T21:45:04.635961797Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-61920"
-    ]
-  },
-  {
-    "id": "406d7f2fa7a69ae6cd1ea671370ae461",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-61352 — Concurrent execution using shared resource with improper synchronization ('race …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61352",
-    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Remote Desktop Client allows an unauthorized attacker to execute code over a network.",
-    "published": "2026-08-11T17:18:09.8Z",
-    "fetched": "2026-08-16T21:45:04.635961797Z",
-    "tags": [
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-61352"
-    ]
-  },
-  {
-    "id": "b2711d173bf0dd93a283441586d026c1",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.5 MEDIUM] CVE-2026-59137 — Use of uninitialized resource in Windows Event Logging Service allows an authori…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59137",
-    "summary": "Use of uninitialized resource in Windows Event Logging Service allows an authorized attacker to disclose information locally.",
-    "published": "2026-08-11T17:18:08.36Z",
-    "fetched": "2026-08-16T21:45:04.635961797Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-59137"
-    ]
-  },
-  {
-    "id": "2cd5b05de92007ace6bd7605f2837f51",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.5 MEDIUM] CVE-2026-59136 — Use of uninitialized resource in Microsoft COM for Windows allows an authorized …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59136",
-    "summary": "Use of uninitialized resource in Microsoft COM for Windows allows an authorized attacker to disclose information locally.",
-    "published": "2026-08-11T17:18:08.17Z",
-    "fetched": "2026-08-16T21:45:04.635961797Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-59136"
-    ]
-  },
-  {
-    "id": "0b6df1aa22792fe59eacddd68ae59ec5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.0 HIGH] CVE-2026-59122 — Concurrent execution using shared resource with improper synchronization ('race …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59122",
-    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Telephony Service allows an authorized attacker to elevate privileges locally.",
-    "published": "2026-08-11T17:18:06.09Z",
-    "fetched": "2026-08-16T21:45:04.635961797Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-59122"
     ]
   }
 ]

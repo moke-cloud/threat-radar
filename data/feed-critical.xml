@@ -5,7 +5,33 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Aug 2026 21:53:54 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 21:53:26 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Attackers Target miniOrange SAML Flaws That Can Grant WordPress Admin Access</title>
+      <link>https://thehackernews.com/2026/08/attackers-target-miniorange-saml-flaws.html</link>
+      <guid isPermaLink="false">474e7625600b653eb9a2d432bb67791b</guid>
+      <pubDate>Tue, 25 Aug 2026 08:34:07 +0000</pubDate>
+      <description>Bad actors are attempting to exploit two severe unauthenticated authentication bypasses in the Xecurify miniOrange SAML 2.0 Single Sign On plugin that make it possible for an attacker to sign in as any WordPress user, including administrators. The vulnerabilities, as disclosed by Patchstack, are listed below - CVE-2026-61979 (CVSS score: 8.1) - An unauthenticated privilege escalation</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>auth-bypass</category>
+      <category>lpe</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-60004 — Gitea Gitea: Gitea Code Injection Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60004</link>
+      <guid isPermaLink="false">a4723cce3dfe3c28de493b3e5bf9e129</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Gitea contains a code injection vulnerability that allows an attacker with repository write access to send a malicious patch to the diffpatch API endpoint to plant an executable Git hook and run shell commands as the Gitea service account.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-28</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>gitea</category>
+    </item>
     <item>
       <title>[HIGH] Hackers target WordPress sites in miniOrange auth bypass attacks</title>
       <link>https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks/</link>
@@ -214,6 +240,63 @@
       <category>rce</category>
       <category>actively-exploited</category>
       <category>github</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-33824 — Microsoft Internet Key Exchange (IKE) Service Extensions: Microsoft Internet Key Exchange (IKE) Service Extensions Double Free Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33824</link>
+      <guid isPermaLink="false">2034b7de46d8cf27cdedbe5a33fae23f</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft Internet Key Exchange (IKE) Service Extensions contains a double free vulnerability that could enable remote code execution.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-21</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-59310 — Broadcom VMware vCenter: Broadcom VMware vCenter Path Traversal Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59310</link>
+      <guid isPermaLink="false">adb2534976f3454c80b451f12408e955</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Broadcom VMware vCenter contains a path traversal vulnerability which could allow a threat actor with network access to vCenter to execute arbitrary code.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-21</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>vmware</category>
+      <category>watch</category>
+      <category>path-traversal</category>
+      <category>broadcom</category>
+      <category>vmware</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-55040 — Microsoft SharePoint: Microsoft SharePoint Weak Authentication Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55040</link>
+      <guid isPermaLink="false">689ebf17a3c1c79556b79d802f10d2ec</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Microsoft SharePoint contains a weak authentication vulnerability which allows an unauthorized attacker to bypass a security feature over a network.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-21</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-65400 — Apple macOS: Apple macOS Improper Authentication Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65400</link>
+      <guid isPermaLink="false">5f2ac015900124e9737ea851c6930043</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Apple macOS contains an improper authentication vulnerability that could allow an attacker on the network to authenticate to Screen Sharing without valid credentials.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-21</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>apple</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2026-33824 — Microsoft Internet Key Exchange (IKE) Service Extensions: Microsoft Internet Key Exchange (IKE) Service Extensions Double Free Vulnerability</title>
@@ -523,101 +606,6 @@
       <category>microsoft</category>
       <category>watch</category>
       <category>actively-exploited</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack</title>
-      <link>https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html</link>
-      <guid isPermaLink="false">634cd751c03ac5b56081813df3466520</guid>
-      <pubDate>Tue, 11 Aug 2026 20:10:55 +0000</pubDate>
-      <description>Microsoft released its monthly security updates on Tuesday, and one of the flaws it closed is already being used in attacks. The bug sits in a core Windows kernel driver that handles network socket operations. An attacker with code already running on a machine can use it to escalate to SYSTEM. That patch goes out first. The flaw is tracked as CVE-2026-68820 (CVSS score: 7.0) and is the only</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Cisco warns of ASA and FTD VPN flaw exploited to crash devices</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisco-warns-of-asa-and-ftd-vpn-flaw-exploited-to-crash-devices/</link>
-      <guid isPermaLink="false">71d5133bd0b09e85f9b7f840c1d52e00</guid>
-      <pubDate>Tue, 11 Aug 2026 19:45:31 +0000</pubDate>
-      <description>Cisco is warning that a high-severity denial-of-service vulnerability in Secure Firewall ASA and Threat Defense (FTD) software is being actively exploited in attacks to remotely crash affected devices. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[HIGH] Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days</title>
-      <link>https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/</link>
-      <guid isPermaLink="false">594077586153c1a9bbfe38c3925727c0</guid>
-      <pubDate>Tue, 11 Aug 2026 18:08:50 +0000</pubDate>
-      <description>Today is Microsoft&#39;s August 2026 Patch Tuesday, and with it comes security updates for a massive 400 flaws, including one actively exploited and two publicly disclosed zero-day vulnerabilities. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[CRIT] Microsoft Patch Tuesday August 2026, (Tue, Aug 11th)</title>
-      <link>https://isc.sans.edu/diary/rss/33236</link>
-      <guid isPermaLink="false">32a9634c45797202a1d8d5788704b558</guid>
-      <pubDate>Tue, 11 Aug 2026 17:54:49 +0000</pubDate>
-      <description>This month we got patches for 418 vulnerabilities. Of these, 62 are critical, 1 is being exploited in the wild, and 2 were publicly disclosed as zero-days. Notable fixes include Windows privilege escalation, container tampering, and critical QUIC and DNS Server remote code execution bugs. &amp;#xd;</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
-      <category>critical</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>lpe</category>
-      <category>actively-exploited</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.0 HIGH] CVE-2026-62734 — Concurrent execution using shared resource with improper synchronization (&#39;race …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62734</link>
-      <guid isPermaLink="false">e60385c8c57a8a25d78cb0c35b9468c5</guid>
-      <pubDate>Tue, 11 Aug 2026 17:18:24 +0000</pubDate>
-      <description>Concurrent execution using shared resource with improper synchronization (&#39;race condition&#39;) in Windows Telephony Service allows an authorized attacker to elevate privileges locally.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 7.0 HIGH] CVE-2026-62729 — Concurrent execution using shared resource with improper synchronization (&#39;race …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62729</link>
-      <guid isPermaLink="false">8bd9bb072a50f07730d5a3a75d529352</guid>
-      <pubDate>Tue, 11 Aug 2026 17:18:24 +0000</pubDate>
-      <description>Concurrent execution using shared resource with improper synchronization (&#39;race condition&#39;) in Windows Telephony Service allows an authorized attacker to elevate privileges locally.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 5.5 MEDIUM] CVE-2026-62709 — Use of uninitialized resource in Windows GDI+ allows an authorized attacker to d…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62709</link>
-      <guid isPermaLink="false">450aeac162c5c5d9c794943cb41933a6</guid>
-      <pubDate>Tue, 11 Aug 2026 17:18:20 +0000</pubDate>
-      <description>Use of uninitialized resource in Windows GDI+ allows an authorized attacker to disclose information locally.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
       <category>microsoft</category>
     </item>
   </channel>

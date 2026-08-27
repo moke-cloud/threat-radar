@@ -1,5 +1,215 @@
 [
   {
+    "id": "6cbc010dc59f0379f466c6122af53c1f",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Critical Avada WordPress theme flaw enables zero-click RCE",
+    "url": "https://www.bleepingcomputer.com/news/security/critical-avada-wordpress-theme-flaw-enables-zero-click-rce/",
+    "summary": "A critical vulnerability chain in the popular Avada theme for WordPress can be exploited by an unauthenticated attacker to execute arbitrary PHP code on the server. [...]",
+    "published": "2026-08-26T21:33:20Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "wordpress"
+    ]
+  },
+  {
+    "id": "b4ae203ef1e27ca841f69fedacee2ed1",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Hackers target Microsoft SharePoint RCE chain with PoC exploit",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-sharepoint-rce-chain-with-poc-exploit/",
+    "summary": "Attackers are now targeting a chain of two Microsoft SharePoint vulnerabilities that can allow them to execute arbitrary code on unpatched servers, according to threat intelligence company Defused. [...]",
+    "published": "2026-08-26T14:47:51Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "d16ef0958bdf8cfc0dcfa0fb3a85daa0",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Critical Gitea RCE Actively Exploited as Reported Attack Drops Miner-Like Payload",
+    "url": "https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday warned of active exploitation efforts targeting a recently patched critical security flaw impacting Gitea. The vulnerability in question is CVE-2026-60004 (CVSS score: 9.8), a case of remote code execution that allows an attacker with ordinary write access to a repository to execute arbitrary shell commands as the",
+    "published": "2026-08-26T06:27:07Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-60004"
+    ]
+  },
+  {
+    "id": "cd98ec9cc0a2a8c2da33ac32c4a0fc1c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2021-23758 — Ajax.NET Professional Ajax.NET Professional: Ajax.NET Professional Deserialization of Untrusted Data Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23758",
+    "summary": "Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-09",
+    "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "ajax.net"
+    ],
+    "cves": [
+      "CVE-2021-23758"
+    ]
+  },
+  {
+    "id": "1e430267ca57b19b4912a5b497768415",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2015-3246 — Red Hat Libuser: Red Hat Libuser Race Condition Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3246",
+    "summary": "Red Hat libuser contains a race condition vulnerability that allows authenticated local users to corrupt the /etc/passwd file to cause a denial of service or privilege escalation. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-09",
+    "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "red"
+    ],
+    "cves": [
+      "CVE-2015-3246"
+    ]
+  },
+  {
+    "id": "90042255702faadefe9f29bbc2241010",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2015-5287 — Red Hat Automatic Bug Reporting Tool: Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5287",
+    "summary": "Red Hat Automatic Bug Reporting Tool (ABRT) contains a privilege escalation vulnerability that could allow local users with certain permissions to gain privileges via a symlink attack on a file with a predictable name. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-09",
+    "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "red"
+    ],
+    "cves": [
+      "CVE-2015-5287"
+    ]
+  },
+  {
+    "id": "155da1470c13812e598ce68497e4fb43",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2022-0995 — Linux Kernel: Linux Kernel Out-of-Bounds Write Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0995",
+    "summary": "Linux Kernel contains an out-of-bounds memory write vulnerability which could allow a local user to gain privileged access or cause a denial of service on the system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-09",
+    "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "linux",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2022-0995"
+    ]
+  },
+  {
+    "id": "495de851372539e4afb9ed33fac698c0",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-8452 — Citrix NetScaler ADC and NetScaler Gateway: Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8452",
+    "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability which could lead to denial of service. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-29",
+    "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "citrix",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "citrix"
+    ],
+    "cves": [
+      "CVE-2026-8452"
+    ]
+  },
+  {
+    "id": "81e6525f9a414cc5cfb55b02f51d6296",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2019-1068 — Microsoft SQL Server: Microsoft SQL Server Remote Code Execution Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1068",
+    "summary": "Microsoft SQL Server contains a remote code execution vulnerability that could allow an attacker to execute code in the context of the SQL Server Database Engine service account.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-29",
+    "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2019-1068"
+    ]
+  },
+  {
     "id": "474e7625600b653eb9a2d432bb67791b",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -201,6 +411,26 @@
     "url": "https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html",
     "summary": "A now-patched security flaw impacting Zimbra Collaboration (ZCS) has come under active exploitation in the wild, according to the Polish Computer Emergency Response Team (CERT Polska). The vulnerability in question is CVE-2026-73570 (CVSS score: 8.9), which refers to a case of command injection that can lead to remote code execution. \"A remote code execution vulnerability exists in Zimbra",
     "published": "2026-08-20T13:24:28Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-73570"
+    ]
+  },
+  {
+    "id": "c28baaf43be2cbd62ba46f5b58c9ad16",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution",
+    "url": "https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html",
+    "summary": "A now-patched security flaw impacting Zimbra Collaboration (ZCS) has come under active exploitation in the wild, according to the Polish Computer Emergency Response Team (CERT Polska). The vulnerability in question is CVE-2026-73570 (CVSS score: 8.9), which refers to a case of command injection that can lead to remote code execution. \"A remote code execution vulnerability exists in Zimbra",
+    "published": "2026-08-20T13:24:28Z",
     "fetched": "2026-08-20T21:53:47.060123032Z",
     "tags": [
       "rce",
@@ -228,6 +458,52 @@
     ],
     "severity": "critical",
     "score": 87
+  },
+  {
+    "id": "88bc3aecbff0eaef094ebc6dcdd06ad4",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-72530 — TrueConf Server: TrueConf Server Code Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72530",
+    "summary": "TrueConf Server contains a code injection vulnerability that could allow an unauthorized remote attacker with network access via port 4307/TCP to use a specially crafted script to break out of the isolated environment and execute arbitrary code on the host system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-03",
+    "published": "2026-08-20T00:00:00Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "trueconf"
+    ],
+    "cves": [
+      "CVE-2026-72530"
+    ]
+  },
+  {
+    "id": "b9f01097f001c86e3a0e611e3981654e",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-72529 — TrueConf Server: TrueConf Server Missing Authentication for Critical Function Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72529",
+    "summary": "TrueConf Server contains a missing authentication for critical function vulnerability which could allow a remote unauthorized attacker with network access via port 4307/TCP to execute an arbitrary script.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-23",
+    "published": "2026-08-20T00:00:00Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "trueconf"
+    ],
+    "cves": [
+      "CVE-2026-72529"
+    ]
   },
   {
     "id": "88bc3aecbff0eaef094ebc6dcdd06ad4",
@@ -343,6 +619,29 @@
     "score": 97,
     "vendors": [
       "microsoft"
+    ]
+  },
+  {
+    "id": "6c0e809b7a8013be2fb0c3155ee5265c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-64849 — MLflow MLflow: MLflow Server-Side Request Forgery Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64849",
+    "summary": "MLflow contains a server-side request forgery vulnerability that can allow attackers to reach internal or cloud metadata services and receive response_status and response_body.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-02",
+    "published": "2026-08-19T00:00:00Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "mlflow"
+    ],
+    "cves": [
+      "CVE-2026-64849"
     ]
   },
   {
@@ -723,6 +1022,27 @@
     "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-526/",
     "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of PAX Technology Q80. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-19910, CVE-2026-19911.",
     "published": "2026-08-14T05:00:00Z",
+    "fetched": "2026-08-27T00:58:19.588462669Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 66,
+    "cves": [
+      "CVE-2026-19910",
+      "CVE-2026-19911"
+    ]
+  },
+  {
+    "id": "e5971670c6d8ef33942961e403931a8a",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-526: (0Day) PAX Technology Q80 Application Installer Signature Verification Bypass Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-526/",
+    "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of PAX Technology Q80. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-19910, CVE-2026-19911.",
+    "published": "2026-08-14T05:00:00Z",
     "fetched": "2026-08-19T21:51:17.547310034Z",
     "tags": [
       "rce",
@@ -752,297 +1072,5 @@
     ],
     "severity": "critical",
     "score": 86
-  },
-  {
-    "id": "40425126201ceb19add23e8ceecf7a4a",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Microsoft patches LegacyHive Windows zero-day vulnerability",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/",
-    "summary": "Microsoft has released security patches to address a Windows zero-day vulnerability known as \"LegacyHive,\" disclosed after the July 2026 Patch Tuesday. [...]",
-    "published": "2026-08-13T17:46:20Z",
-    "fetched": "2026-08-13T22:11:13.717566295Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "78ac5484625fd00483c9f4efb1a210a7",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Critical VMware vCenter RCE flaw exploited for reverse SSH access",
-    "url": "https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/",
-    "summary": "A recently patched critical vulnerability (CVE-2026-59310) in VMware vCenter Syslog Server is being exploited in an active campaign to deploy a reverse SSH tool for persistence and remote access. [...]",
-    "published": "2026-08-13T16:40:23Z",
-    "fetched": "2026-08-13T22:11:13.717566295Z",
-    "tags": [
-      "vmware",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "vmware"
-    ],
-    "cves": [
-      "CVE-2026-59310"
-    ]
-  },
-  {
-    "id": "cfee8b555920b4eb321a532a3b170e8d",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-581: Cisco Identity Services Engine invokeScript Command Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-581/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco Identity Services Engine. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-20147.",
-    "published": "2026-08-13T05:00:00Z",
-    "fetched": "2026-08-13T22:11:13.717566295Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20147"
-    ]
-  },
-  {
-    "id": "03192504ada74dd430b6c843b54c2108",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-579: Cisco Identity Services Engine zipFiles Directory Traversal Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-579/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco Identity Services Engine. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-20181.",
-    "published": "2026-08-13T05:00:00Z",
-    "fetched": "2026-08-13T22:11:13.717566295Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "high",
-    "score": 69,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20181"
-    ]
-  },
-  {
-    "id": "747f06a28503a4b6ca498d61eb1cefac",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
-    "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
-    "summary": "The North Korean threat actor known as Lazarus Group has been attributed to the zero-day exploitation of a newly patched security flaw impacting Microsoft Windows to deliver a never-before-seen backdoor targeting defense and aerospace companies across France, Germany, Brazil, and India. The activity, per Check Point Research, is part of Operation Dream Job, a long-running cyber espionage and",
-    "published": "2026-08-12T17:39:27Z",
-    "fetched": "2026-08-12T22:10:18.913883083Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "afb85e4286e4276b0feb914a9b02315d",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Lazarus hackers exploited Windows zero-day to target defense firms",
-    "url": "https://www.bleepingcomputer.com/news/security/lazarus-hackers-exploited-windows-zero-day-to-target-defense-firms/",
-    "summary": "North Korean hackers have been exploiting a Windows zero-day vulnerability (CVE-2026-68820) to target defense-sector companies as part of the Operation Dream Job campaign. [...]",
-    "published": "2026-08-12T15:38:08Z",
-    "fetched": "2026-08-12T22:10:18.913883083Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-68820"
-    ]
-  },
-  {
-    "id": "1115fadcb402181c35e017678f13a48e",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "New Microsoft Defender 'ShieldBreak' zero-day grants SYSTEM privileges",
-    "url": "https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldbreak-zero-day-grants-system-privileges/",
-    "summary": "Nightmare Eclipse has released a new Microsoft Defender zero-day exploit named \"ShieldBreak\" after Microsoft released the August 2026 Patch Tuesday security updates. [...]",
-    "published": "2026-08-12T10:15:22Z",
-    "fetched": "2026-08-12T22:10:18.913883083Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "0f6795bc3f43678ad86291cefc116226",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "ShieldBreak Zero-Day PoC Claims Microsoft Defender Patch Bypass With SYSTEM Access",
-    "url": "https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html",
-    "summary": "The security researcher going by the name Chaotic Eclipse (aka INFINITE NIGHTMARE, MSNightmare, and Nightmare-Eclipse) has released a proof-of-concept (PoC) for a new Microsoft zero-day called ShieldBreak. The vulnerability, rooted in Microsoft Defender for Windows, demonstrates a patch bypass for CVE-2026-50656 (CVSS score: 7.8), otherwise known as RoguePlanet. RoguePlanet has been described",
-    "published": "2026-08-12T06:41:38Z",
-    "fetched": "2026-08-12T22:10:18.913883083Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-50656"
-    ]
-  },
-  {
-    "id": "8cdb45d4e4cb20b0157afb9cb2a204f5",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS",
-    "url": "https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html",
-    "summary": "Cisco has warned that a new vulnerability impacting Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software has been exploited in the wild. The high-severity flaw, tracked as CVE-2026-20349 (CVSS score: 8.6), is a case of insufficient error checking when processing HTTP requests that could allow an unauthenticated, remote attacker to trigger",
-    "published": "2026-08-12T06:15:58Z",
-    "fetched": "2026-08-12T22:10:18.913883083Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20349"
-    ]
-  },
-  {
-    "id": "264b0cfdc6c03894614724428d559f46",
-    "source": "krebs",
-    "source_name": "Krebs on Security",
-    "category": "news",
-    "title": "Microsoft Plugs Nearly 400 Security Holes",
-    "url": "https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/",
-    "summary": "Microsoft today released updates to remedy at least 398 security vulnerabilities in its Windows operating systems and supported software, including one weakness that is already being actively exploited and two others that were publicly detailed prior to today.",
-    "published": "2026-08-11T21:28:35Z",
-    "fetched": "2026-08-25T21:53:26.254036304Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 80,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "264b0cfdc6c03894614724428d559f46",
-    "source": "krebs",
-    "source_name": "Krebs on Security",
-    "category": "news",
-    "title": "Microsoft Plugs Nearly 400 Security Holes",
-    "url": "https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/",
-    "summary": "Microsoft today released updates to remedy at least 398 security vulnerabilities in its Windows operating systems and supported software, including one weakness that is already being actively exploited and two others that were publicly detailed prior to today.",
-    "published": "2026-08-11T21:28:35Z",
-    "fetched": "2026-08-18T21:48:27.400621526Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 80,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "978863577900beb3a0b120010158ff48",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Patch Tuesday - August 2026",
-    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-august-2026",
-    "summary": "Microsoft is publishing 421 vulnerabilities on August 2026 Patch Tuesday, including 236 vulnerabilities in Windows. This is lower volume than last month’s record-breaking behemoth, but still one of the largest Patch Tuesday totals ever. There is no reason to suppose that Patch Tuesday will ever return to the lower volumes we saw prior to 2026. Microsoft is aware of exploitation in the wild for one of the vulnerabilities published today, as well as public disclosure for two others, although the Notable CVEs section of the Security Update Guide omits one of these. As usual, browser vulns are n...",
-    "published": "2026-08-11T21:10:55Z",
-    "fetched": "2026-08-19T21:51:17.547310034Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "978863577900beb3a0b120010158ff48",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Patch Tuesday - August 2026",
-    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-august-2026",
-    "summary": "Microsoft is publishing 421 vulnerabilities on August 2026 Patch Tuesday, including 236 vulnerabilities in Windows. This is lower volume than last month’s record-breaking behemoth, but still one of the largest Patch Tuesday totals ever. There is no reason to suppose that Patch Tuesday will ever return to the lower volumes we saw prior to 2026. Microsoft is aware of exploitation in the wild for one of the vulnerabilities published today, as well as public disclosure for two others, although the Notable CVEs section of the Security Update Guide omits one of these. As usual, browser vulns are n...",
-    "published": "2026-08-11T21:10:55Z",
-    "fetched": "2026-08-12T22:10:18.913883083Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft"
-    ]
   }
 ]

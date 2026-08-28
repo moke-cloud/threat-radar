@@ -1,5 +1,159 @@
 [
   {
+    "id": "108ca091a00a74a6952f0975f1393eb5",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "PaperCut warns of NG, MF flaw exploited in zero-day attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/papercut-warns-of-ng-mf-flaw-exploited-in-zero-day-attacks/",
+    "summary": "PaperCut is warning that hackers are actively exploiting a vulnerability in all versions of its PaperCut NG and PaperCut MF print management software in zero-day attacks. [...]",
+    "published": "2026-08-27T16:31:53Z",
+    "fetched": "2026-08-28T05:32:29.339547205Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "37058b3a81abec1766d1f66abba17988",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Next.js Patches Critical AVIF and Windows Flaws Enabling Unauthenticated RCE",
+    "url": "https://thehackernews.com/2026/08/nextjs-patches-critical-avif-and.html",
+    "summary": "Credit: Hacktron Vercel has released security patches for two critical-severity vulnerabilities in the Next.js web framework, both of which allow unauthenticated remote code execution, one exploitable via specially crafted AVIF image files and the other through a path traversal flaw affecting servers that use a Windows filesystem. The Windows path traversal, tracked as CVE-2026-75604&",
+    "published": "2026-08-27T15:13:00Z",
+    "fetched": "2026-08-28T05:32:29.339547205Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce",
+      "path-traversal"
+    ],
+    "severity": "high",
+    "score": 66,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-75604"
+    ]
+  },
+  {
+    "id": "d3d4236b45645ceeb32ad7329fff201f",
+    "source": "krebs",
+    "source_name": "Krebs on Security",
+    "category": "news",
+    "title": "Two Alleged ‘TeamPCP’ Hackers Arrested in Australia",
+    "url": "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/",
+    "summary": "Authorities in Australia have arrested two men believed to be members of TeamPCP, a prolific cybercrime and data extortion group blamed for perpetrating the longest running spree of software supply chain attacks ever. In a statement released today, the Australian Federal Police (AFP) said two unnamed suspects from Western Australia, aged 21 and 23, were arrested in connection with a \"sophisticated cybercrime syndicate that allegedly created malicious open-source software to rob thousands of global businesses.\" The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old sus...",
+    "published": "2026-08-27T11:04:15Z",
+    "fetched": "2026-08-28T05:32:29.339547205Z",
+    "tags": [
+      "rce",
+      "supply-chain"
+    ],
+    "severity": "high",
+    "score": 60
+  },
+  {
+    "id": "be0e0d11ed57f54d8ccd591a946dc736",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA orders feds to patch Citrix NetScaler RCE flaw by Saturday",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploiting-citrix-netscaler-rce-flaw-in-attacks/",
+    "summary": "CISA has ordered U.S. government agencies to patch their Citrix NetScaler appliances against an actively exploited remote code execution vulnerability by Saturday. [...]",
+    "published": "2026-08-27T09:16:50Z",
+    "fetched": "2026-08-28T05:32:29.339547205Z",
+    "tags": [
+      "citrix",
+      "watch",
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 97,
+    "vendors": [
+      "citrix"
+    ]
+  },
+  {
+    "id": "cf50323d4731dbe5105d37c871d9bf16",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2023-49105 — ownCloud ownCloud: ownCloud Improper Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49105",
+    "summary": "ownCloud contains an improper authentication vulnerability that allows an attacker to access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-30",
+    "published": "2026-08-27T00:00:00Z",
+    "fetched": "2026-08-28T05:32:29.339547205Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "owncloud"
+    ],
+    "cves": [
+      "CVE-2023-49105"
+    ]
+  },
+  {
+    "id": "78f9e1ebf5089da2d11ee69bd626ddaa",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-53362 — Linux Kernel: Linux Kernel Unspecified Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53362",
+    "summary": "Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using Linux. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-30",
+    "published": "2026-08-27T00:00:00Z",
+    "fetched": "2026-08-28T05:32:29.339547205Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "linux",
+      "watch",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-53362"
+    ]
+  },
+  {
+    "id": "27cf5f5ee8a2eee0f1c5c6b7af72938c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-66384 — JFrog Artifactory: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66384",
+    "summary": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-10",
+    "published": "2026-08-27T00:00:00Z",
+    "fetched": "2026-08-28T05:32:29.339547205Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "docker"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "jfrog",
+      "docker"
+    ],
+    "cves": [
+      "CVE-2026-66384"
+    ]
+  },
+  {
     "id": "6cbc010dc59f0379f466c6122af53c1f",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -357,6 +511,29 @@
     ],
     "severity": "high",
     "score": 67
+  },
+  {
+    "id": "272f55a5fce15f927dc7e6b098f01f5b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-73570 — Synacor Zimbra Collaboration Suite (ZCS): Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73570",
+    "summary": "Zimbra Collaboration Suite (ZCS) contains an OS command injection vulnerability which could allow an unauthenticated attacker to send specially crafted SMTP requests that may result in execution of arbitrary operating system commands as the Zimbra user.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-24",
+    "published": "2026-08-21T00:00:00Z",
+    "fetched": "2026-08-28T05:32:29.339547205Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "synacor"
+    ],
+    "cves": [
+      "CVE-2026-73570"
+    ]
   },
   {
     "id": "272f55a5fce15f927dc7e6b098f01f5b",

@@ -1,5 +1,26 @@
 [
   {
+    "id": "a454de2c124c6561c1fd10c737165805",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Researcher Releases FalconFlank PoC Showing Privilege Escalation in CrowdStrike Falcon",
+    "url": "https://thehackernews.com/2026/09/researcher-releases-falconflank-poc.html",
+    "summary": "The security researcher known as Chaotic Eclipse (aka INFINITE NIGHTMARE, MSNightmare, and Nightmare-Eclipse) has dropped a new zero-day dubbed FalconFlank, a privilege escalation flaw impacting Crowdstrike Falcon. \"FalconFlank is a 0day privilege escalation that abuses the office malicious macros remediation in CrowdStrike Falcon Sensor,\" the researcher said in a GitHub README file, adding",
+    "published": "2026-09-03T06:26:59Z",
+    "fetched": "2026-09-03T23:26:36.461037252Z",
+    "tags": [
+      "github",
+      "lpe",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 66,
+    "vendors": [
+      "github"
+    ]
+  },
+  {
     "id": "3bcb49161059dd5988d7b032fb7bc173",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1218,6 +1239,154 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23758",
     "summary": "Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-09",
     "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-09-03T23:26:36.461037252Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "ajax.net"
+    ],
+    "cves": [
+      "CVE-2021-23758"
+    ]
+  },
+  {
+    "id": "1e430267ca57b19b4912a5b497768415",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2015-3246 — Red Hat Libuser: Red Hat Libuser Race Condition Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3246",
+    "summary": "Red Hat libuser contains a race condition vulnerability that allows authenticated local users to corrupt the /etc/passwd file to cause a denial of service or privilege escalation. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-09",
+    "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-09-03T23:26:36.461037252Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "red"
+    ],
+    "cves": [
+      "CVE-2015-3246"
+    ]
+  },
+  {
+    "id": "90042255702faadefe9f29bbc2241010",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2015-5287 — Red Hat Automatic Bug Reporting Tool: Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5287",
+    "summary": "Red Hat Automatic Bug Reporting Tool (ABRT) contains a privilege escalation vulnerability that could allow local users with certain permissions to gain privileges via a symlink attack on a file with a predictable name. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-09",
+    "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-09-03T23:26:36.461037252Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "red"
+    ],
+    "cves": [
+      "CVE-2015-5287"
+    ]
+  },
+  {
+    "id": "155da1470c13812e598ce68497e4fb43",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2022-0995 — Linux Kernel: Linux Kernel Out-of-Bounds Write Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0995",
+    "summary": "Linux Kernel contains an out-of-bounds memory write vulnerability which could allow a local user to gain privileged access or cause a denial of service on the system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-09",
+    "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-09-03T23:26:36.461037252Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "linux",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2022-0995"
+    ]
+  },
+  {
+    "id": "495de851372539e4afb9ed33fac698c0",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-8452 — Citrix NetScaler ADC and NetScaler Gateway: Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8452",
+    "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability which could lead to denial of service. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-29",
+    "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-09-03T23:26:36.461037252Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "citrix",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "citrix"
+    ],
+    "cves": [
+      "CVE-2026-8452"
+    ]
+  },
+  {
+    "id": "81e6525f9a414cc5cfb55b02f51d6296",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2019-1068 — Microsoft SQL Server: Microsoft SQL Server Remote Code Execution Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1068",
+    "summary": "Microsoft SQL Server contains a remote code execution vulnerability that could allow an attacker to execute code in the context of the SQL Server Database Engine service account.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-29",
+    "published": "2026-08-26T00:00:00Z",
+    "fetched": "2026-09-03T23:26:36.461037252Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2019-1068"
+    ]
+  },
+  {
+    "id": "cd98ec9cc0a2a8c2da33ac32c4a0fc1c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2021-23758 — Ajax.NET Professional Ajax.NET Professional: Ajax.NET Professional Deserialization of Untrusted Data Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23758",
+    "summary": "Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-09",
+    "published": "2026-08-26T00:00:00Z",
     "fetched": "2026-08-27T00:58:19.588462669Z",
     "tags": [
       "kev",
@@ -1580,53 +1749,5 @@
     ],
     "severity": "high",
     "score": 67
-  },
-  {
-    "id": "7111983c53f7e905fb57af0e5226d9e3",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-21962 — Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in: Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21962",
-    "summary": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in contain an improper access control vulnerability that can result in unauthorized creation, deletion or modification access to critical data as well as unauthorized access to critical data or complete access to all Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in accessible data.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-27",
-    "published": "2026-08-24T00:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "oracle"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-21962"
-    ]
-  },
-  {
-    "id": "7111983c53f7e905fb57af0e5226d9e3",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-21962 — Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in: Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21962",
-    "summary": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in contain an improper access control vulnerability that can result in unauthorized creation, deletion or modification access to critical data as well as unauthorized access to critical data or complete access to all Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in accessible data.\nRequired: Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.\nDue: 2026-08-27",
-    "published": "2026-08-24T00:00:00Z",
-    "fetched": "2026-08-24T21:53:54.752420717Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "oracle"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-21962"
-    ]
   }
 ]

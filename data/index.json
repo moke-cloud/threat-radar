@@ -1,5 +1,460 @@
 [
   {
+    "id": "06a5acc1957d586a1edb63604c438417",
+    "source": "schneier",
+    "source_name": "Schneier on Security",
+    "category": "analysis",
+    "title": "Friday Squid Blogging: Squid on a Stick at the New York State Fair",
+    "url": "https://www.schneier.com/blog/archives/2026/09/friday-squid-blogging-squid-on-a-stick-at-the-new-york-state-fair.html",
+    "summary": "Looks tasty. As usual, you can also use this squid post to talk about the security stories in the news that I haven&#8217;t covered. Blog moderation policy.",
+    "published": "2026-09-04T21:01:35Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "low",
+    "score": 18
+  },
+  {
+    "id": "db5b4f704d9e96f351b8b485137f59ae",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "How to secure edge AI in customer-owned environments",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/04/secure-edge-ai-customer-owned-environments/",
+    "summary": "As AI moves into customer-owned environments, organizations need new ways to verify the systems, software, and AI assets they trust before releasing sensitive data, credentials, and models. The post How to secure edge AI in customer-owned environments appeared first on Microsoft Security Blog.",
+    "published": "2026-09-04T19:10:10Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "microsoft",
+      "watch"
+    ],
+    "severity": "medium",
+    "score": 46,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "474b35b4b1b6d5d940c250b259701da7",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "IDScan sued over alleged data breach affecting 153 million drivers",
+    "url": "https://www.bleepingcomputer.com/news/security/idscan-sued-over-alleged-data-breach-affecting-153-million-drivers/",
+    "summary": "Multiple lawsuits have been filed against identity verification company IDScan after hackers allegedly breached the service and offered to sell more than 153 million driver's licenses. [...]",
+    "published": "2026-09-04T16:56:45Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "breach"
+    ],
+    "severity": "medium",
+    "score": 42
+  },
+  {
+    "id": "5c71ddce1a6334c70efb0f83ceb1de95",
+    "source": "schneier",
+    "source_name": "Schneier on Security",
+    "category": "analysis",
+    "title": "Using a VM to Contain an AI Agent",
+    "url": "https://www.schneier.com/blog/archives/2026/09/using-a-vm-to-contain-an-ai-agent.html",
+    "summary": "It won&#8217;t work: My suspicion was that GPT 5.6-Cyber would succeed, but the frequency and manner of its success removed all doubt. We have to reassess sandboxing quality for capable AI agents, and in general the software stack with which they interact. An off-the-shelf VM is not enough to contain a modern, cyber-capable AI agent. There is simply too much attack surface. Even innocuous features (like running with a display) add extra, exploitable attack surface.",
+    "published": "2026-09-04T16:31:38Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "low",
+    "score": 18
+  },
+  {
+    "id": "0d1b453bf7e0400370dd16c400c2c451",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters",
+    "url": "https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html",
+    "summary": "Microsoft is alerting of a \"high-volume phishing campaign\" that's using invisible Unicode tag characters to bypass email filters. \"Instead of using these characters to hide instructions from people while exposing them to AI models, the attacker used them to split financial lure words such as 'funding' to prevent email filters from parsing them,\" the Microsoft Security Research team said. The",
+    "published": "2026-09-04T15:57:15Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "phishing"
+    ],
+    "severity": "low",
+    "score": 28,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "e3c7c55ea3bb7d23e57214e687e72f5a",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Critical Citrix NetScaler auth bypass now leveraged in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/",
+    "summary": "Attackers have begun targeting a critical-severity Citrix NetScaler auth bypass flaw (CVE-2026-19490) in the wild, according to vulnerability intelligence company Previdian. [...]",
+    "published": "2026-09-04T15:25:59Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "citrix",
+      "watch",
+      "auth-bypass",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 97,
+    "vendors": [
+      "citrix"
+    ],
+    "cves": [
+      "CVE-2026-19490"
+    ]
+  },
+  {
+    "id": "c15b90703b58c38189c135858b51c043",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "PostgreSQL Fixes 12-Year-Old Logical Decoding Flaw Enabling Replication-Role Code Execution",
+    "url": "https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html",
+    "summary": "PostgreSQL has released updates to address a security flaw that allows an account with the REPLICATION attribute to run arbitrary code as the operating-system user running the database server. The flaw, tracked as CVE-2026-6471 (CVSS score: 7.2), has been present since logical decoding was introduced in PostgreSQL 9.4 in 2014. Versions before PostgreSQL 18.6, 17.11, 16.15, 15.19, and 14.24 are",
+    "published": "2026-09-04T15:20:19Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "postgres"
+    ],
+    "severity": "low",
+    "score": 18,
+    "vendors": [
+      "postgres"
+    ],
+    "cves": [
+      "CVE-2026-6471"
+    ]
+  },
+  {
+    "id": "3e02d5a80498d2cde5ecadbd07f46829",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "New Ted Backdoor Hides Inside Victims' Own HAProxy Builds to Intercept Web Traffic",
+    "url": "https://thehackernews.com/2026/09/new-ted-backdoor-hides-inside-victims.html",
+    "summary": "A previously undocumented Linux toolkit has been found compiled directly into the trojanized HAProxy load balancers of two South Korean organizations, where it intercepted web traffic and served altered pages to selected visitors. The attackers named the implant ted in debug strings left in the binary. It is not a HAProxy vulnerability, and installing it requires code execution on the host and",
+    "published": "2026-09-04T14:51:13Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "malware"
+    ],
+    "severity": "low",
+    "score": 18
+  },
+  {
+    "id": "be55b0f168fdb7764a5afe1af2f860b4",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Microsoft says some users can’t open the Teams desktop client",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-some-users-cant-open-the-teams-desktop-client/",
+    "summary": "Microsoft is working to resolve a known issue that causes delays or blocks some users from opening the Microsoft Teams desktop client on Windows systems. [...]",
+    "published": "2026-09-04T14:30:15Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "microsoft",
+      "watch"
+    ],
+    "severity": "medium",
+    "score": 37,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "6430d279e470ce55e1c7d3f972be70d6",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "39 New Methods That Compromise Passkey Authentication",
+    "url": "https://www.bleepingcomputer.com/news/security/39-new-methods-that-compromise-passkey-authentication/",
+    "summary": "Passkeys eliminate many password-based attacks, but researchers have documented 39 methods for compromising authentication built around them. Token explains how attackers can abuse authentication prompts, synced credentials, enrollment, recovery, and other trust boundaries without breaking FIDO2 cryptography. [...]",
+    "published": "2026-09-04T14:01:11Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "low",
+    "score": 27
+  },
+  {
+    "id": "bf68b724073ebb6e1d1541399944daf1",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges",
+    "url": "https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/",
+    "summary": "An anonymous security researcher who uses the \"Nightmare Eclipse\" handle released a CrowdStrike Falcon zero-day exploit named \"FalconFlank\" that lets attackers escalate privileges on up-to-date Windows systems. [...]",
+    "published": "2026-09-04T13:22:01Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "6cd2c0467803f1845ec5af5ad6a32b98",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Exchange Online outage causes email delays, 'Server busy' errors",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/exchange-online-outage-causes-email-delays-server-busy-errors/",
+    "summary": "Microsoft is working to resolve an ongoing Exchange Online outage that is delaying email sent to and received from external domains. [...]",
+    "published": "2026-09-04T12:22:30Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "microsoft",
+      "watch"
+    ],
+    "severity": "medium",
+    "score": 37,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "623040547eba0650eafc20b10c2246c3",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "DPRK APTs: Ted backdoor and curlRAT target South Korean media and automotive sectors",
+    "url": "https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors",
+    "summary": "OverviewA new Linux toolkit, identified by Rapid7 Labs, has been targeting organizations across South Korea’s automotive and media industries with minimal detection. The campaign made use of a HAProxy instance named “ted backdoor”, alongside trojanized versions of crond, agetty, atd, sshd, and polkitd. This previously undocumented framework enabled threat actors to execute remote commands on compromised servers, inject malicious scripts into web traffic, perform credential harvesting, and engage in long-term surveillance.The standout feature of this toolkit is its depth of integration wi...",
+    "published": "2026-09-04T12:00:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "malware"
+    ],
+    "severity": "low",
+    "score": 21
+  },
+  {
+    "id": "ce41f68f6653718c80f010048c96c3fe",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Google warns of new Chrome zero-day flaw exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/",
+    "summary": "Google has updated the Chrome browser to address an actively exploited high-severity zero-day flaw in the V8 engine and 11 other vulnerabilities. [...]",
+    "published": "2026-09-04T11:48:17Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "chrome",
+      "watch",
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "chrome"
+    ]
+  },
+  {
+    "id": "ecaf68a36019ce188d12947139448634",
+    "source": "schneier",
+    "source_name": "Schneier on Security",
+    "category": "analysis",
+    "title": "Security Vulnerability in a Voting System",
+    "url": "https://www.schneier.com/blog/archives/2026/09/security-vulnerability-in-a-voting-system.html",
+    "summary": "It&#8217;s a vulnerability that allows someone to recover the order of ballots cast, newly exploited with AI tools. Nearly four years since the original vulnerability was disclosed, I was still able to use it to analyze voter behavior in Georgia (one of the 21 states that uses affected scanners) in the recent May 2026 primary. Notably, I never touched a voting machine, exploited a network, examined source code, or accessed anything non-public. After pointing a coding agent to the original vulnerability paper, I supplied it with two data sources highlighted in the paper: the early-voting list f...",
+    "published": "2026-09-04T11:09:35Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "medium",
+    "score": 48
+  },
+  {
+    "id": "522c019008f5f206502a3b0b35183db6",
+    "source": "schneier",
+    "source_name": "Schneier on Security",
+    "category": "analysis",
+    "title": "AI Coding Agents Are Installing Unknown/Untrusted Code on Corporate Networks",
+    "url": "https://www.schneier.com/blog/archives/2026/09/ai-coding-agents-are-installing-unknown-untrusted-code-on-corporate-networks.html",
+    "summary": "We cannot forget that AI coding agents are not yet trustworthy: Researchers at a stealth startup in Israel scanned 6,214 live domains belonging to defense contractors, Fortune 500, and Big Tech companies. Of the 8,265 llms.txt and llms-full.txt files they found (many sites hosted both an llms.txt and an llms-full.txt file), 120 of them, each on a different site, pointed to one or more code packages or domain names that weren&#8217;t registered. To test what happens when an AI agent processes such files, the researchers registered a handful of the unclaimed names and hosted packages that caused...",
+    "published": "2026-09-04T10:35:17Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "low",
+    "score": 18
+  },
+  {
+    "id": "91da73e3f5780d0c506994b00d1535c8",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Over 440,000 Exploit Attempts Target Super Forms and Elementor Pro RCE Flaws",
+    "url": "https://thehackernews.com/2026/09/over-440000-exploit-attempts-target.html",
+    "summary": "Threat actors are exploiting two critical security flaws in WordPress plugins Super Forms and Elementor Pro, according to findings from Wordfence. The vulnerabilities in question are - CVE-2026-14894 (CVSS score: 9.8) - A missing file type validation vulnerability in Super Forms – Drag & Drop Form Builder that allows unauthenticated attackers to upload files of any type, including",
+    "published": "2026-09-04T08:48:45Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "medium",
+    "score": 58,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-14894"
+    ]
+  },
+  {
+    "id": "ed8531282bd8027926b32c4210fb0257",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Plex Urges Immediate Updates After Patching Multiple Undisclosed Security Flaws",
+    "url": "https://thehackernews.com/2026/09/plex-urges-immediate-updates-after.html",
+    "summary": "Plex is urging users to update their instances to the latest version following the release of an update that patches multiple security flaws. The fixes are available in Plex Media Server 1.43.3 and Plex Desktop 1.115.0. The streaming media service did not elaborate on what those issues are, but said CVE identifiers have been requested for them. \"We recommend all server owners and Desktop users",
+    "published": "2026-09-04T07:35:14Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "low",
+    "score": 18
+  },
+  {
+    "id": "23e468d94b5b8e44b223904a276a377f",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Google Releases Chrome Update to Patch Actively Exploited V8 Zero-Day",
+    "url": "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html",
+    "summary": "Google on Thursday released security updates to patch 12 vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, tracked as CVE-2026-85046 (CVSS score: 8.8), has been described as a type confusion bug in V8, Chrome's JavaScript and WebAssembly engine. \"Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote",
+    "published": "2026-09-04T07:18:47Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "chrome",
+      "watch",
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-85046"
+    ]
+  },
+  {
+    "id": "94a9dc33c34b956da6f38994a5dab668",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "GPT-6 Astra Scores 100% on ExploitBench as OpenAI Blocks PoC Exploit Requests",
+    "url": "https://thehackernews.com/2026/09/gpt-6-astra-scores-100-on-exploitbench.html",
+    "summary": "OpenAI on Thursday officially unveiled GPT‑6 Astra, which it described as the \"world's most intelligent and aligned model.\" The development comes days after the artificial intelligence (AI) company said the model had reached the \"Critical\" cybersecurity capability threshold under its Preparedness Framework. \"Astra is state-of-the-art on computer use, browsing, software engineering,",
+    "published": "2026-09-04T06:47:52Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "low",
+    "score": 18
+  },
+  {
+    "id": "89280501494b4d1310bf561743b2718f",
+    "source": "jpcert-wr",
+    "source_name": "JPCERT/CC 全フィード",
+    "category": "advisory",
+    "title": "JVN: エクシングCPTrans-ME-Xにおける複数の脆弱性",
+    "url": "https://jvn.jp/jp/JVN32505330/",
+    "summary": "株式会社エクシングが提供するCPTrans-ME-Xには、複数の脆弱性が存在します。",
+    "published": "2026-09-04T03:00:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "low",
+    "score": 18
+  },
+  {
+    "id": "d39ec7661932beb13a9474eb63375bb3",
+    "source": "sans-isc",
+    "source_name": "SANS Internet Storm Center",
+    "category": "news",
+    "title": "ISC Stormcast For Friday, September 4th, 2026 https://isc.sans.edu/podcastdetail/10082, (Fri, Sep 4th)",
+    "url": "https://isc.sans.edu/diary/rss/33310",
+    "summary": "",
+    "published": "2026-09-04T02:00:02Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "medium",
+    "score": 30
+  },
+  {
+    "id": "5ac124762b478b184ba3752e648462fa",
+    "source": "jpcert-wr",
+    "source_name": "JPCERT/CC 全フィード",
+    "category": "advisory",
+    "title": "JVN: CISA ICS Advisory / ICS Medical Advisory（2026年09月03日）",
+    "url": "https://jvn.jp/vu/JVNVU94249914/",
+    "summary": "米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。",
+    "published": "2026-09-04T01:15:30Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "low",
+    "score": 18
+  },
+  {
+    "id": "d8e6bb1ecda9e785764ca498a2257061",
+    "source": "jpcert-wr",
+    "source_name": "JPCERT/CC 全フィード",
+    "category": "advisory",
+    "title": "JVN: Casdoorにおける認可回避の脆弱性",
+    "url": "https://jvn.jp/vu/JVNVU96680494/",
+    "summary": "CERT/CCから本件に関するアドバイザリが公表されました。",
+    "published": "2026-09-04T01:15:15Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "low",
+    "score": 18
+  },
+  {
+    "id": "a287017e9e900f5f17ce62cb8c211e8c",
+    "source": "jpcert-wr",
+    "source_name": "JPCERT/CC 全フィード",
+    "category": "advisory",
+    "title": "JVN: Siemens製品に対するアップデート（2026年9月）",
+    "url": "https://jvn.jp/vu/JVNVU97027767/",
+    "summary": "Siemensから各製品向けのアドバイザリが公表されました。",
+    "published": "2026-09-04T01:15:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "low",
+    "score": 18
+  },
+  {
+    "id": "5c2a5e5c4edd0b4ac5b1e818fe205010",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-85046 — Google Chromium V8: Google Chromium V8 Type Confusion Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85046",
+    "summary": "Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-18",
+    "published": "2026-09-04T00:00:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "chrome",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "google",
+      "chrome",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-85046"
+    ]
+  },
+  {
     "id": "9d42470e9d0cca236fb032ba5b0fd2ca",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -5961,6 +6416,26 @@
     "url": "https://www.microsoft.com/en-us/security/blog/2026/08/27/whats-new-in-microsoft-security-august-2026/",
     "summary": "This month’s updates provide new capabilities to help organizations gain insights into agent activity, expand security coverage across supported environments, and enhance security management across their environments. The post ​​​​​​What’s new in Microsoft Security: August 2026 appeared first on Microsoft Security Blog.",
     "published": "2026-08-27T16:00:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "microsoft",
+      "watch"
+    ],
+    "severity": "medium",
+    "score": 31,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "df633227b4e554b92c6d100642b1bffa",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "​​​​​​What’s new in Microsoft Security: August 2026",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/27/whats-new-in-microsoft-security-august-2026/",
+    "summary": "This month’s updates provide new capabilities to help organizations gain insights into agent activity, expand security coverage across supported environments, and enhance security management across their environments. The post ​​​​​​What’s new in Microsoft Security: August 2026 appeared first on Microsoft Security Blog.",
+    "published": "2026-08-27T16:00:00Z",
     "fetched": "2026-08-28T05:32:29.339547205Z",
     "tags": [
       "microsoft",
@@ -6043,6 +6518,19 @@
     "fetched": "2026-08-28T05:32:29.339547205Z",
     "severity": "low",
     "score": 27
+  },
+  {
+    "id": "b90e6d594d51b170e4509ae6ca479be9",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Identity-as-a-Service: Uncovering Dark Web Marketplaces Trading Executive SSNs",
+    "url": "https://www.rapid7.com/blog/post/tr-identity-as-a-service-dark-web-marketplaces-executive-ssn",
+    "summary": "IntroductionDespite modern verification controls, identity theft remains one of the most pervasive threats to both individuals and enterprise organizations. U.S. Federal Trade Commission statistics show over 1 million identity theft reports annually, with related fraud and imposter scams accounting for billions in financial losses each year. While stolen credit cards enable rapid, short-term monetization, Social Security numbers (SSNs) represent a far more permanent and dangerous tier within the cybercrime ecosystem, because unlike payment cards, they cannot simply be deactivated. Once expose...",
+    "published": "2026-08-27T13:51:55Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "severity": "info",
+    "score": 6
   },
   {
     "id": "b90e6d594d51b170e4509ae6ca479be9",
@@ -6203,6 +6691,23 @@
     ],
     "severity": "medium",
     "score": 42
+  },
+  {
+    "id": "d3d4236b45645ceeb32ad7329fff201f",
+    "source": "krebs",
+    "source_name": "Krebs on Security",
+    "category": "news",
+    "title": "Two Alleged ‘TeamPCP’ Hackers Arrested in Australia",
+    "url": "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/",
+    "summary": "Authorities in Australia have arrested two men believed to be members of TeamPCP, a prolific cybercrime and data extortion group blamed for perpetrating the longest running spree of software supply chain attacks ever. In a statement released today, the Australian Federal Police (AFP) said two unnamed suspects from Western Australia, aged 21 and 23, were arrested in connection with a \"sophisticated cybercrime syndicate that allegedly created malicious open-source software to rob thousands of global businesses.\" The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old sus...",
+    "published": "2026-08-27T11:04:15Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "rce",
+      "supply-chain"
+    ],
+    "severity": "medium",
+    "score": 45
   },
   {
     "id": "d3d4236b45645ceeb32ad7329fff201f",
@@ -6396,6 +6901,80 @@
     "fetched": "2026-08-28T05:32:29.339547205Z",
     "severity": "medium",
     "score": 30
+  },
+  {
+    "id": "cf50323d4731dbe5105d37c871d9bf16",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2023-49105 — ownCloud ownCloud: ownCloud Improper Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49105",
+    "summary": "ownCloud contains an improper authentication vulnerability that allows an attacker to access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-30",
+    "published": "2026-08-27T00:00:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "owncloud"
+    ],
+    "cves": [
+      "CVE-2023-49105"
+    ]
+  },
+  {
+    "id": "78f9e1ebf5089da2d11ee69bd626ddaa",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-53362 — Linux Kernel: Linux Kernel Unspecified Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53362",
+    "summary": "Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using Linux. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-30",
+    "published": "2026-08-27T00:00:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "linux",
+      "watch",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-53362"
+    ]
+  },
+  {
+    "id": "27cf5f5ee8a2eee0f1c5c6b7af72938c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-66384 — JFrog Artifactory: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66384",
+    "summary": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-10",
+    "published": "2026-08-27T00:00:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "docker"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "jfrog",
+      "docker"
+    ],
+    "cves": [
+      "CVE-2026-66384"
+    ]
   },
   {
     "id": "cf50323d4731dbe5105d37c871d9bf16",
@@ -8702,650 +9281,6 @@
     "score": 37,
     "vendors": [
       "microsoft"
-    ]
-  },
-  {
-    "id": "c6bab956394196c68f7e56e2e656a6e5",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "UAT-10147 Uses AI to Scale Server Attacks, Deploys SPECTRE With EDR Bypass and Linux Rootkit",
-    "url": "https://thehackernews.com/2026/08/uat-10147-uses-ai-to-scale-server.html",
-    "summary": "Cybersecurity researchers have disclosed details of a Chinese-speaking cybercrime group dubbed UAT-10147 that's targeting Windows and Linux web servers globally across the education, media, technology, and gaming sectors. The vast majority of the targets are located in Brazil, Bolivia, China, Canada, and Vietnam. Details of the threat activity came to light following the discovery of an open",
-    "published": "2026-08-24T08:08:31Z",
-    "fetched": "2026-08-24T21:53:54.752420717Z",
-    "tags": [
-      "microsoft",
-      "watch"
-    ],
-    "severity": "low",
-    "score": 28,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "639ee148d2376038910fcdee1f5f4c49",
-    "source": "jpcert-wr",
-    "source_name": "JPCERT/CC 全フィード",
-    "category": "advisory",
-    "title": "JVN: SKYSEA Client ViewおよびSKYMEC IT Managerにおける複数の脆弱性",
-    "url": "https://jvn.jp/jp/JVN33423625/",
-    "summary": "Ｓｋｙ株式会社が提供するSKYSEA Client ViewおよびSKYMEC IT Managerには、複数の脆弱性が存在します。",
-    "published": "2026-08-24T07:30:00Z",
-    "fetched": "2026-08-24T21:53:54.752420717Z",
-    "severity": "low",
-    "score": 18
-  },
-  {
-    "id": "9f04ba67e62c365059c80a5ba06f20bd",
-    "source": "sans-isc",
-    "source_name": "SANS Internet Storm Center",
-    "category": "news",
-    "title": "DOUBLECUP's PNG Payload, (Mon, Aug 24th)",
-    "url": "https://isc.sans.edu/diary/rss/33274",
-    "summary": "New malware that uses steganography always gets my attention, but I was disappointed when I looked at the latest DOUBLECUP write-up. It doesn&&#x23&#x3b;x26&#x3b;&#x23&#x3b;39&#x3b;t use real steganography:&#xd;",
-    "published": "2026-08-24T07:23:16Z",
-    "fetched": "2026-08-24T21:53:54.752420717Z",
-    "tags": [
-      "sap",
-      "malware"
-    ],
-    "severity": "medium",
-    "score": 30,
-    "vendors": [
-      "sap"
-    ]
-  },
-  {
-    "id": "e739a53a123dc7593f0c567ddd837b50",
-    "source": "jpcert-wr",
-    "source_name": "JPCERT/CC 全フィード",
-    "category": "advisory",
-    "title": "JVN: SKYSEA Client Viewにおける複数の脆弱性",
-    "url": "https://jvn.jp/jp/JVN84326763/",
-    "summary": "Sky株式会社が提供するSKYSEA Client Viewには、複数の脆弱性が存在します。",
-    "published": "2026-08-24T05:15:00Z",
-    "fetched": "2026-08-24T21:53:54.752420717Z",
-    "severity": "low",
-    "score": 18
-  },
-  {
-    "id": "cb4a80daa762c1e8974ed335b28f8f0d",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-610: Apple Safari JavaScriptCore B3 ReduceStrength Phase Use-After-Free Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-610/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Apple Safari. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-64715.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "cves": [
-      "CVE-2026-64715"
-    ]
-  },
-  {
-    "id": "7ad9130323ea8084c651458027133cd4",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-609: Linux Kernel Net Scheduler Packet Classifier Use-After-Free Local Privilege Escalation Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-609/",
-    "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "linux",
-      "watch",
-      "lpe"
-    ],
-    "severity": "low",
-    "score": 24,
-    "vendors": [
-      "linux"
-    ]
-  },
-  {
-    "id": "fa4ad9dbcb377f7689fd0f6c946e175c",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-608: Linux Kernel KVM IOAPIC Use-After-Free Local Privilege Escalation Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-608/",
-    "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel. An attacker must first obtain the ability to execute high-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.2.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "linux",
-      "watch",
-      "lpe"
-    ],
-    "severity": "low",
-    "score": 24,
-    "vendors": [
-      "linux"
-    ]
-  },
-  {
-    "id": "1bda097e9d9c12cadd1b8a8e0c4e760f",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-607: Microsoft Office HTML Injection Information Disclosure Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-607/",
-    "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Microsoft Office. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.6.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "microsoft",
-      "watch"
-    ],
-    "severity": "low",
-    "score": 16,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "e76cc040acea572344c80f9a03cb255f",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-606: Microsoft Windows Compatibility Appraiser Link Following Local Privilege Escalation Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-606/",
-    "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of Microsoft Windows. An attacker must first obtain the ability to execute low-privileged code in the context of LOCAL SERVICE on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.0.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "lpe"
-    ],
-    "severity": "low",
-    "score": 24,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "e98785e7df73d787551afee57901ab82",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-605: Microsoft Windows Localized Filenames Improper Input Validation NTLM Response Information Disclosure Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-605/",
-    "summary": "This vulnerability allows remote attackers to disclose NTLM responses on affected installations of Microsoft Windows. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 3.3. The following CVEs are assigned: CVE-2026-50508.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "microsoft",
-      "watch"
-    ],
-    "severity": "low",
-    "score": 16,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-50508"
-    ]
-  },
-  {
-    "id": "d62011cc546977800d14df60586b8389",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-604: Foxit PDF Reader Annotation Use-After-Free Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-604/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-13126.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "adobe",
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-13126"
-    ]
-  },
-  {
-    "id": "1e2515b28391ffb37b504acff8469137",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-603: Foxit PDF Reader Annotation Use-After-Free Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-603/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-13127.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "adobe",
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-13127"
-    ]
-  },
-  {
-    "id": "47909e45c6fc0ec53e83ab681305b113",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-602: Foxit PDF Reader Doc Object Use-After-Free Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-602/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-13128.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "adobe",
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-13128"
-    ]
-  },
-  {
-    "id": "11a7ed58105a9371393931067165ad5a",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-601: Foxit PDF Reader Annotation Use-After-Free Information Disclosure Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-601/",
-    "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 3.3. The following CVEs are assigned: CVE-2026-13129.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "adobe"
-    ],
-    "severity": "info",
-    "score": 6,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-13129"
-    ]
-  },
-  {
-    "id": "4f440b58797fc1183d5955cb08fa8b13",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-600: Foxit PDF Reader Annotation Use-After-Free Information Disclosure Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-600/",
-    "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 3.3. The following CVEs are assigned: CVE-2026-57237.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "adobe"
-    ],
-    "severity": "info",
-    "score": 6,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-57237"
-    ]
-  },
-  {
-    "id": "5ea0c184bd084d89fccb8c170b8ec4cc",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-599: Foxit PDF Reader Annotation Use-After-Free Information Disclosure Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-599/",
-    "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 3.3. The following CVEs are assigned: CVE-2026-57238.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "adobe"
-    ],
-    "severity": "info",
-    "score": 6,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-57238"
-    ]
-  },
-  {
-    "id": "a7a521bc3b15b6c9eed98d890e289011",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-598: Foxit PDF Reader AcroForm Use-After-Free Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-598/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-57242.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "adobe",
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-57242"
-    ]
-  },
-  {
-    "id": "4d82ea5b3b649cf8da9e07acf0531aa0",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-597: Foxit PDF Reader AcroForm Use-After-Free Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-597/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-57252.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "adobe",
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-57252"
-    ]
-  },
-  {
-    "id": "6fbe4cf2b5f15a7d627ea5f497ae4b98",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-596: Foxit PDF Reader PDF File Parsing Out-Of-Bounds Read Information Disclosure Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-596/",
-    "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 3.3. The following CVEs are assigned: CVE-2026-57253.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "adobe"
-    ],
-    "severity": "info",
-    "score": 6,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-57253"
-    ]
-  },
-  {
-    "id": "868ad4da7700ac4379229e715254f16f",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-595: Foxit PDF Reader Annotation Use-After-Free Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-595/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Foxit PDF Reader. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-57254.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "adobe",
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-57254"
-    ]
-  },
-  {
-    "id": "4532b467caf7b1b7bc77e57ed0a4f1a0",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-594: NVIDIA Megatron Bridge load_model_config Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-594/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of NVIDIA Megatron Bridge. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-24251.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "cves": [
-      "CVE-2026-24251"
-    ]
-  },
-  {
-    "id": "d232358c09ed9ca73f8d9016fb4f3f10",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-593: NVIDIA TensorRT ONNX File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-593/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of NVIDIA TensorRT. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-24268.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "cves": [
-      "CVE-2026-24268"
-    ]
-  },
-  {
-    "id": "35fe6e1bc80f263fadea7a3ba6b9bb3e",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-592: NVIDIA TensorRT ONNX File Parsing Improper Validation of Array Index Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-592/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of NVIDIA TensorRT. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-24238.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "cves": [
-      "CVE-2026-24238"
-    ]
-  },
-  {
-    "id": "8b43b4a29d52a355572613f7c0b907ae",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-591: NVIDIA TensorRT ONNX File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-591/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of NVIDIA TensorRT. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-24272.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "cves": [
-      "CVE-2026-24272"
-    ]
-  },
-  {
-    "id": "d50bd695a08393d6913cd7560c0f920a",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-590: libwebsockets HTTP/2 HPACK Path Header Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-590/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of libwebsockets. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.8. The following CVEs are assigned: CVE-2026-19773.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "cves": [
-      "CVE-2026-19773"
-    ]
-  },
-  {
-    "id": "63793d514ba22b18d99d754a278486ca",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-589: BlueZ A2DP Stack-based Buffer Overflow Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-589/",
-    "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of BlueZ. An attacker must first obtain the ability to pair a malicious Bluetooth device with the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.1. The following CVEs are assigned: CVE-2026-19774.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "cves": [
-      "CVE-2026-19774"
-    ]
-  },
-  {
-    "id": "7199fc8ace3509157d43b1141b91fe71",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-588: Fabric.js loadFromJSON Server-Side Request Forgery Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-588/",
-    "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Fabric.js. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 4.0. The following CVEs are assigned: CVE-2026-19504.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "severity": "info",
-    "score": 6,
-    "cves": [
-      "CVE-2026-19504"
-    ]
-  },
-  {
-    "id": "62fd11672473635d876733a12d19e9be",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-587: Ashlar-Vellum Cobalt VS File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-587/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ashlar-Vellum Cobalt. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-19781.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "cves": [
-      "CVE-2026-19781"
-    ]
-  },
-  {
-    "id": "91b25943bcc7f2f82c8258cd41ee2b1b",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-586: OriginLab Origin Viewer OGM File Parsing Memory Corruption Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-586/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-19886.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "cves": [
-      "CVE-2026-19886"
-    ]
-  },
-  {
-    "id": "715e5010d1754af18486e0fa19ad1239",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-585: OriginLab Origin Viewer OGWU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-585/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-19885.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-09-01T00:43:31.913960666Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 36,
-    "cves": [
-      "CVE-2026-19885"
-    ]
-  },
-  {
-    "id": "cb4a80daa762c1e8974ed335b28f8f0d",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-610: Apple Safari JavaScriptCore B3 ReduceStrength Phase Use-After-Free Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-610/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Apple Safari. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-64715.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-08-24T21:53:54.752420717Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 51,
-    "cves": [
-      "CVE-2026-64715"
-    ]
-  },
-  {
-    "id": "7ad9130323ea8084c651458027133cd4",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-609: Linux Kernel Net Scheduler Packet Classifier Use-After-Free Local Privilege Escalation Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-609/",
-    "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-08-24T05:00:00Z",
-    "fetched": "2026-08-24T21:53:54.752420717Z",
-    "tags": [
-      "linux",
-      "watch",
-      "lpe"
-    ],
-    "severity": "medium",
-    "score": 39,
-    "vendors": [
-      "linux"
     ]
   }
 ]

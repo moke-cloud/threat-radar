@@ -5,7 +5,79 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 03 Sep 2026 23:26:36 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 23:10:47 +0000</lastBuildDate>
+    <item>
+      <title>[CRIT] Critical Citrix NetScaler auth bypass now leveraged in attacks</title>
+      <link>https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/</link>
+      <guid isPermaLink="false">e3c7c55ea3bb7d23e57214e687e72f5a</guid>
+      <pubDate>Fri, 04 Sep 2026 15:25:59 +0000</pubDate>
+      <description>Attackers have begun targeting a critical-severity Citrix NetScaler auth bypass flaw (CVE-2026-19490) in the wild, according to vulnerability intelligence company Previdian. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>critical</category>
+      <category>citrix</category>
+      <category>watch</category>
+      <category>auth-bypass</category>
+      <category>actively-exploited</category>
+      <category>citrix</category>
+    </item>
+    <item>
+      <title>[HIGH] New CrowdStrike &#39;FalconFlank&#39; zero-day grants SYSTEM privileges</title>
+      <link>https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/</link>
+      <guid isPermaLink="false">bf68b724073ebb6e1d1541399944daf1</guid>
+      <pubDate>Fri, 04 Sep 2026 13:22:01 +0000</pubDate>
+      <description>An anonymous security researcher who uses the &#34;Nightmare Eclipse&#34; handle released a CrowdStrike Falcon zero-day exploit named &#34;FalconFlank&#34; that lets attackers escalate privileges on up-to-date Windows systems. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>0day</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] Google warns of new Chrome zero-day flaw exploited in attacks</title>
+      <link>https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/</link>
+      <guid isPermaLink="false">ce41f68f6653718c80f010048c96c3fe</guid>
+      <pubDate>Fri, 04 Sep 2026 11:48:17 +0000</pubDate>
+      <description>Google has updated the Chrome browser to address an actively exploited high-severity zero-day flaw in the V8 engine and 11 other vulnerabilities. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>actively-exploited</category>
+      <category>0day</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] Google Releases Chrome Update to Patch Actively Exploited V8 Zero-Day</title>
+      <link>https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html</link>
+      <guid isPermaLink="false">23e468d94b5b8e44b223904a276a377f</guid>
+      <pubDate>Fri, 04 Sep 2026 07:18:47 +0000</pubDate>
+      <description>Google on Thursday released security updates to patch 12 vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, tracked as CVE-2026-85046 (CVSS score: 8.8), has been described as a type confusion bug in V8, Chrome&#39;s JavaScript and WebAssembly engine. &#34;Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>high</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>actively-exploited</category>
+      <category>0day</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-85046 — Google Chromium V8: Google Chromium V8 Type Confusion Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85046</link>
+      <guid isPermaLink="false">5c2a5e5c4edd0b4ac5b1e818fe205010</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-18</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>chrome</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+      <category>microsoft</category>
+    </item>
     <item>
       <title>[HIGH] Researcher Releases FalconFlank PoC Showing Privilege Escalation in CrowdStrike Falcon</title>
       <link>https://thehackernews.com/2026/09/researcher-releases-falconflank-poc.html</link>
@@ -588,6 +660,47 @@
       <category>rce</category>
       <category>actively-exploited</category>
       <category>citrix</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2023-49105 — ownCloud ownCloud: ownCloud Improper Authentication Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2023-49105</link>
+      <guid isPermaLink="false">cf50323d4731dbe5105d37c871d9bf16</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <description>ownCloud contains an improper authentication vulnerability that allows an attacker to access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-30</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>owncloud</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-53362 — Linux Kernel: Linux Kernel Unspecified Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-53362</link>
+      <guid isPermaLink="false">78f9e1ebf5089da2d11ee69bd626ddaa</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <description>Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using Linux. &#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-30</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>lpe</category>
+      <category>linux</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-66384 — JFrog Artifactory: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-66384</link>
+      <guid isPermaLink="false">27cf5f5ee8a2eee0f1c5c6b7af72938c</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <description>JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-10</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>docker</category>
+      <category>jfrog</category>
+      <category>docker</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2023-49105 — ownCloud ownCloud: ownCloud Improper Authentication Vulnerability</title>

@@ -1,5 +1,126 @@
 [
   {
+    "id": "e3c7c55ea3bb7d23e57214e687e72f5a",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Critical Citrix NetScaler auth bypass now leveraged in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/",
+    "summary": "Attackers have begun targeting a critical-severity Citrix NetScaler auth bypass flaw (CVE-2026-19490) in the wild, according to vulnerability intelligence company Previdian. [...]",
+    "published": "2026-09-04T15:25:59Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "citrix",
+      "watch",
+      "auth-bypass",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 97,
+    "vendors": [
+      "citrix"
+    ],
+    "cves": [
+      "CVE-2026-19490"
+    ]
+  },
+  {
+    "id": "bf68b724073ebb6e1d1541399944daf1",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges",
+    "url": "https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/",
+    "summary": "An anonymous security researcher who uses the \"Nightmare Eclipse\" handle released a CrowdStrike Falcon zero-day exploit named \"FalconFlank\" that lets attackers escalate privileges on up-to-date Windows systems. [...]",
+    "published": "2026-09-04T13:22:01Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "ce41f68f6653718c80f010048c96c3fe",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Google warns of new Chrome zero-day flaw exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/",
+    "summary": "Google has updated the Chrome browser to address an actively exploited high-severity zero-day flaw in the V8 engine and 11 other vulnerabilities. [...]",
+    "published": "2026-09-04T11:48:17Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "chrome",
+      "watch",
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "chrome"
+    ]
+  },
+  {
+    "id": "23e468d94b5b8e44b223904a276a377f",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Google Releases Chrome Update to Patch Actively Exploited V8 Zero-Day",
+    "url": "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html",
+    "summary": "Google on Thursday released security updates to patch 12 vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, tracked as CVE-2026-85046 (CVSS score: 8.8), has been described as a type confusion bug in V8, Chrome's JavaScript and WebAssembly engine. \"Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote",
+    "published": "2026-09-04T07:18:47Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "chrome",
+      "watch",
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-85046"
+    ]
+  },
+  {
+    "id": "5c2a5e5c4edd0b4ac5b1e818fe205010",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-85046 — Google Chromium V8: Google Chromium V8 Type Confusion Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85046",
+    "summary": "Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-18",
+    "published": "2026-09-04T00:00:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "chrome",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "google",
+      "chrome",
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-85046"
+    ]
+  },
+  {
     "id": "a454de2c124c6561c1fd10c737165805",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -1031,6 +1152,80 @@
     "score": 97,
     "vendors": [
       "citrix"
+    ]
+  },
+  {
+    "id": "cf50323d4731dbe5105d37c871d9bf16",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2023-49105 — ownCloud ownCloud: ownCloud Improper Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49105",
+    "summary": "ownCloud contains an improper authentication vulnerability that allows an attacker to access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-30",
+    "published": "2026-08-27T00:00:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "owncloud"
+    ],
+    "cves": [
+      "CVE-2023-49105"
+    ]
+  },
+  {
+    "id": "78f9e1ebf5089da2d11ee69bd626ddaa",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-53362 — Linux Kernel: Linux Kernel Unspecified Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53362",
+    "summary": "Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using Linux. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-08-30",
+    "published": "2026-08-27T00:00:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "linux",
+      "watch",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-53362"
+    ]
+  },
+  {
+    "id": "27cf5f5ee8a2eee0f1c5c6b7af72938c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-66384 — JFrog Artifactory: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66384",
+    "summary": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-10",
+    "published": "2026-08-27T00:00:00Z",
+    "fetched": "2026-09-04T23:10:46.958706864Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "docker"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "jfrog",
+      "docker"
+    ],
+    "cves": [
+      "CVE-2026-66384"
     ]
   },
   {

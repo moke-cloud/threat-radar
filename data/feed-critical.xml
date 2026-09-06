@@ -5,7 +5,17 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Sep 2026 23:08:26 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 22:59:20 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Critical MikroTik Vulnerability - Patch Now, (Sun, Sep 6th)</title>
+      <link>https://isc.sans.edu/diary/rss/33314</link>
+      <guid isPermaLink="false">08bd297ddeaa09a241f6758f86167a18</guid>
+      <pubDate>Sun, 06 Sep 2026 21:43:17 +0000</pubDate>
+      <description>Mikrotik released a patch late last week for an already-exploited vulnerability. The vulnerability allows an SSH authentication bypass and is already being exploited. At this point, assume compromise. Attackers have been adding new accounts to affected devices to maintain access after a patch is installed.&amp;#xd;</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">SANS Internet Storm Center</source>
+      <category>high</category>
+      <category>auth-bypass</category>
+    </item>
     <item>
       <title>[HIGH] Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores</title>
       <link>https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html</link>
@@ -18,6 +28,109 @@
       <category>rce</category>
       <category>0day</category>
       <category>adobe</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-75018 — The Custom Contact Forms plugin for WordPress is vulnerable to authorization byp…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75018</link>
+      <guid isPermaLink="false">b285517fe7643da163dff6a02f54550a</guid>
+      <pubDate>Sat, 05 Sep 2026 08:16:40 +0000</pubDate>
+      <description>The Custom Contact Forms plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 7.16. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with contributor-level access and above, to permanently force-delete arbitrary posts of any post type (including pages, administrator-authored posts, and WooCommerce products) and write arbitrary ccf_field_* post meta onto any post regardless of ownership or post type. The top-level form ID is checked via edit_post/publish_posts, but the nested fields[].ID and choices[].ID paths processed by _create_and_map_fields() and _create_and_map_choices() carry no equivalent capability or post-type guard, leaving those sinks fully exposed while delete_item() and delete_submission() contain explicit post-type restriction fixes demonstrating the developer&#39;s awareness of scoping requirements.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-84936 — The EmbedPress  WordPress plugin before 4.6.4 does not have proper authorization…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84936</link>
+      <guid isPermaLink="false">622c892d8c71577365a7fcb31da20758</guid>
+      <pubDate>Sat, 05 Sep 2026 07:17:14 +0000</pubDate>
+      <description>The EmbedPress  WordPress plugin before 4.6.4 does not have proper authorization on a public review-loading action, allowing unauthenticated users to force the site to make repeated billable third-party API requests using the site&#39;s own configured API key, and to create an unbounded number of attacker-controlled rows in the database.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-19887 — The Welcart e-Commerce plugin for WordPress is vulnerable to PHP Object Injectio…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19887</link>
+      <guid isPermaLink="false">3f03b5362c08aa379f24954d1127cfff</guid>
+      <pubDate>Sat, 05 Sep 2026 07:17:11 +0000</pubDate>
+      <description>The Welcart e-Commerce plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 2.12.1 via deserialization of untrusted input in the Telecom EDY payment callback (usces_action_acting_transaction). Unauthenticated attackers can store arbitrary &#39;reserve&#39; key/value pairs as order metadata during a public checkout, then invoke the callback with an attacker-chosen &#39;option&#39; parameter to select and unserialize that metadata without any provider signature, source-address, transaction-identity or ownership check. A POP chain is present in the TCPDF library bundled with the plugin itself, so no additional plugin or theme is required. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, including wp-config.php, which can lead to remote code execution when an attacker re-runs the WordPress installer against a database they control. Successful exploitation is contingent on an admin printing an invoice to trigger file deletion.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>deserialization</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 4.3 MEDIUM] CVE-2026-83628 — The Theme My Login plugin for WordPress is vulnerable to Missing Authorization i…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83628</link>
+      <guid isPermaLink="false">15f47b42c0cf866acf6582b9a47ede56</guid>
+      <pubDate>Sat, 05 Sep 2026 06:17:10 +0000</pubDate>
+      <description>The Theme My Login plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 7.1.15 on Multisite installations. This is due to the `tml_ms_signup_handler()` function&#39;s `gimmeanotherblog` branch failing to enforce the network&#39;s `active_signup` registration policy, checking only `is_user_logged_in()` while sibling branches such as `validate-blog-signup` apply the full policy gate. This makes it possible for authenticated attackers, with Subscriber-level access and above, to directly POST `stage=gimmeanotherblog` to Theme My Login&#39;s signup route, bypassing the configured registration policy entirely — even when it is set to `none` or `user` — which causes `wpmu_create_blog()` to execute with the attacker&#39;s user ID, after which WordPress core assigns the Administrator role on the newly created subsite via `add_user_to_blog()`. The privilege gain is scoped to the newly created subsite only; the attacker&#39;s account retains Subscriber-level access on the main site and does not obtain Super Admin or network-level capabilities such as `manage_network` or `manage_sites`.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 9.8 CRITICAL] CVE-2026-83627 — The Hummingbird – Speed Optimization, Caching, Minify, Compress &amp; CDN plugin f…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83627</link>
+      <guid isPermaLink="false">446157680fc916d576ad1abb11cd574b</guid>
+      <pubDate>Sat, 05 Sep 2026 06:17:10 +0000</pubDate>
+      <description>The Hummingbird – Speed Optimization, Caching, Minify, Compress &amp; CDN plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 3.21.0 via the log_msg() function in core/modules/class-page-cache.php. The page-cache debug log is written to wp-content/wphb-logs/page-caching-log.php, a directly web-accessible PHP file that is supposed to be protected by a leading &#39;&lt;?php die(); ?&gt;&#39; header. That header is guarded by class_exists( &#39;Filesystem&#39; ), which can never match because class_exists() resolves string arguments in the global namespace while the class is Hummingbird\Core\Filesystem; when the log is created during a front-end request the header is therefore omitted entirely. get_cookies() then writes the raw name of any cookie matching the wphb_cache_ prefix into that file without sanitization. This makes it possible for unauthenticated attackers to write arbitrary PHP into the log file with a single anonymous request and execute it by requesting the file directly, resulting in full remote code execution. Exploitation requires the site administrator to have enabled Page Caching with the Debug Log option (non-default), and the log file to be created during a front-end request — a state reached by the plugin&#39;s own &#39;Clear logs&#39; action, any cache flush, or unattended via the plugin&#39;s daily log-rotation cron, which can strip the protective header from an existing log file.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 9.8 CRITICAL] CVE-2026-13447 — The Mstore Api plugin for WordPress is vulnerable to Authentication Bypass via J…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13447</link>
+      <guid isPermaLink="false">5ebf9aad8543f69493ffec546cb198b3</guid>
+      <pubDate>Sat, 05 Sep 2026 06:17:09 +0000</pubDate>
+      <description>The Mstore Api plugin for WordPress is vulnerable to Authentication Bypass via JWT Forgery in versions up to, and including, 4.20.0 This is due to missing cryptographic signature verification in the FirebasePhoneAuthHelper::verify_id_token() function, which decodes and validates Firebase ID token claims (alg, kid, aud, iss) but never calls openssl_verify() or any equivalent to validate the JWT signature against Google&#39;s actual public key certificates. This makes it possible for unauthenticated attackers to forge a Firebase Phone Auth JWT signed with a self-generated RSA key pair and impersonate any phone number, resulting in unauthorized access to existing WordPress accounts or creation of new arbitrary accounts.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>critical-cvss</category>
+      <category>auth-bypass</category>
+      <category>openssl</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>openssl</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.6 MEDIUM] CVE-2026-86144 — In xinclude in libxml2 before 2.15.4, xmlXIncludeProcess and xmlXIncludeProcessT…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86144</link>
+      <guid isPermaLink="false">5deb49d802f16d5e215ec24214c4cf0e</guid>
+      <pubDate>Sat, 05 Sep 2026 05:17:13 +0000</pubDate>
+      <description>In xinclude in libxml2 before 2.15.4, xmlXIncludeProcess and xmlXIncludeProcessTree do not propagate parseFlags. This has security relevance for, for example, the XML_PARSE_NONET flag, if (without it) a custom resource loader accesses the internet and triggers XML external entity injection, SSRF, or a denial of service (e.g., for an attacker-controlled internet resource that is intentionally slow).</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-52762 — YesWiki is a wiki system written in PHP. Prior to version 4.6.6, YesWiki Bazar contains a stored Ser…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-52762</link>
+      <guid isPermaLink="false">770fd098349b12cb474be80c56be2f44</guid>
+      <pubDate>Sat, 05 Sep 2026 00:17:18 +0000</pubDate>
+      <description>YesWiki is a wiki system written in PHP. Prior to version 4.6.6, YesWiki Bazar contains a stored Server-Side Template Injection (SSTI) vulnerability in the semantic template feature that can be escalated to confirmed Remote Code Execution (RCE). An authenticated administrator can place arbitrary Twig expressions into the Semantic template (Twig) field (bn_sem_template), and that content is later executed server-side when public semantic endpoints are requested. This issue has been patched in version 4.6.6.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
     </item>
     <item>
       <title>[CRIT] Critical Citrix NetScaler auth bypass now leveraged in attacks</title>
@@ -45,6 +158,38 @@
       <category>watch</category>
       <category>0day</category>
       <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-85604 — Grav before 2.0.18 (affected versions &lt;= 2.0.17) contains a remote code executio…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85604</link>
+      <guid isPermaLink="false">3f74ed07dd6d4fcaff2879c5b826db12</guid>
+      <pubDate>Fri, 04 Sep 2026 12:17:24 +0000</pubDate>
+      <description>Grav before 2.0.18 (affected versions &lt;= 2.0.17) contains a remote code execution vulnerability in the Twig sort filter. The sortFunc wrapper in GravExtension.php hardcodes Twig&#39;s isSandboxed argument to false, so unlike |map/|filter/|reduce, |sort accepts a plain function name inside the sandbox; the remaining denylist misses spl_autoload, which performs a PHP include. An authenticated user with only page-write rights (admin.pages or api.pages.write) can supply a crafted payload (e.g., via form frontmatter rendered by the Email plugin) that invokes spl_autoload through the sort filter, resulting in arbitrary PHP execution as the web server user.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-85596 — Traefik versions &gt;= v3.7.0 and &lt;= v3.7.10 contain an authentication bypass in the Kubernetes Ingress…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85596</link>
+      <guid isPermaLink="false">f5977a6004254f1b6e682c0237ebd3f0</guid>
+      <pubDate>Fri, 04 Sep 2026 12:17:23 +0000</pubDate>
+      <description>Traefik versions &gt;= v3.7.0 and &lt;= v3.7.10 contain an authentication bypass in the Kubernetes Ingress NGINX provider. The TLS option generated for an Ingress carrying the nginx.ingress.kubernetes.io/auth-tls-secret annotation was named after the Ingress namespace and name. As a result, two Ingress objects sharing the same host, the same client CA secret, and the same client-authentication mode produced two distinct TLS option names for that host. Traefik treats this as a TLS options conflict and falls back to the entry point&#39;s default TLS configuration, which does not request a client certificate, so a route configured with nginx.ingress.kubernetes.io/auth-tls-verify-client: &#34;on&#34; becomes reachable without a client certificate. Only the v3.7 line is affected; the issue is fixed in v3.7.11.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>auth-bypass</category>
+      <category>kubernetes</category>
+      <category>kubernetes</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-85595 — Traefik versions before v2.11.55 and versions v3.0.0 through v3.7.10 contain an authentication bypas…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85595</link>
+      <guid isPermaLink="false">0d44cb0f52948beae2a5a8e206e41421</guid>
+      <pubDate>Fri, 04 Sep 2026 12:17:22 +0000</pubDate>
+      <description>Traefik versions before v2.11.55 and versions v3.0.0 through v3.7.10 contain an authentication bypass vulnerability in the digestAuth middleware where unknown usernames receive an empty secret instead of rejection. Attackers can compute a valid digest response using the empty secret and arbitrary credentials to bypass authentication on any digestAuth-protected route without a valid username or password.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>auth-bypass</category>
     </item>
     <item>
       <title>[HIGH] Google warns of new Chrome zero-day flaw exploited in attacks</title>
@@ -75,6 +220,16 @@
       <category>chrome</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 4.4 MEDIUM] CVE-2026-49509 — Out-of-bounds read vulnerability in Samsung Opensource rLottie allows Overread B…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49509</link>
+      <guid isPermaLink="false">168a4ed2017d2ed1cab238b1bd8ee25a</guid>
+      <pubDate>Fri, 04 Sep 2026 00:17:12 +0000</pubDate>
+      <description>Out-of-bounds read vulnerability in Samsung Opensource rLottie allows Overread Buffers.&#xA;&#xA;This issue affects rLottie: 25648aef19187b3f87f4d9420b8d761453ad4630.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[CRIT] [KEV] CVE-2026-85046 — Google Chromium V8: Google Chromium V8 Type Confusion Vulnerability</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85046</link>
       <guid isPermaLink="false">5c2a5e5c4edd0b4ac5b1e818fe205010</guid>
@@ -92,6 +247,64 @@
       <category>microsoft</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-85439 — MOOS-IvP through 24.8.1 contains a remote code execution vulnerability in alogsp…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85439</link>
+      <guid isPermaLink="false">2714a251e1472b39cc07d4576b633873</guid>
+      <pubDate>Thu, 03 Sep 2026 23:17:23 +0000</pubDate>
+      <description>MOOS-IvP through 24.8.1 contains a remote code execution vulnerability in alogsplit&#39;s SplitHandler::handlePreCheckSplitDir() function that fails to sanitize shell metacharacters in log file pathnames. Attackers can embed shell syntax in log file names or the --dir parameter to execute arbitrary commands with the privileges of the operator running alogsplit.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-85429 — MOOS-IvP uFldNodeComms through 24.8.1 trusts the source node identity from the m…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85429</link>
+      <guid isPermaLink="false">3e5158754e7150648b26ab03cb2e7554</guid>
+      <pubDate>Thu, 03 Sep 2026 23:17:21 +0000</pubDate>
+      <description>MOOS-IvP uFldNodeComms through 24.8.1 trusts the source node identity from the message body rather than validating it from the connection source. Attackers can craft NODE_MESSAGE packets with spoofed source identities to impersonate other nodes and post arbitrary variable notifications without validation.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 9.1 CRITICAL] CVE-2026-62916 — Authentication bypass using an alternate path or channel in Microsoft Entra ID a…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62916</link>
+      <guid isPermaLink="false">87f519281d6a4e1e5fe6cb7980456a25</guid>
+      <pubDate>Thu, 03 Sep 2026 23:17:19 +0000</pubDate>
+      <description>Authentication bypass using an alternate path or channel in Microsoft Entra ID allows an unauthorized attacker to elevate privileges over a network.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>critical-cvss</category>
+      <category>auth-bypass</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-85046 — Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote at…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85046</link>
+      <guid isPermaLink="false">7e2366c14cb8de78cbfa613dbc094714</guid>
+      <pubDate>Thu, 03 Sep 2026 20:17:24 +0000</pubDate>
+      <description>Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-75036 — A security vulnerability was discovered in Fleet&#39;s Helm template preprocessing where templates evalu…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75036</link>
+      <guid isPermaLink="false">07087e369a79575233c86d96a48b85f7</guid>
+      <pubDate>Thu, 03 Sep 2026 16:18:22 +0000</pubDate>
+      <description>A security vulnerability was discovered in Fleet&#39;s Helm template preprocessing where templates evaluated by the Fleet controller could reach network resources outside the management cluster. A user who can supply bundle content to a repository referenced by a `GitRepo` resource can cause the Fleet controller to:&#xA;- Disclose cluster metadata available to the templating context.&#xA;- Reveal information about hosts reachable from the controller&#39;s network position.&#xA;Because the disclosure channel is name resolution, it may remain effective in environments where outbound traffic is otherwise restricted. The disclosed information is limited to values exposed to the Fleet templating context and to name resolution results. Integrity and availability of managed clusters are not affected.&#xA;&#xA;This issue affects Fleet:&#xA;from 0.12.0 before 0.12.19, &#xA;from 0.13.0 before 0.13.15, &#xA;from 0.14.0 before 0.14.10, &#xA;from 0.15.0 before 0.15.6, and&#xA;from 0.16.0 before 0.16.1.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[HIGH] Researcher Releases FalconFlank PoC Showing Privilege Escalation in CrowdStrike Falcon</title>
       <link>https://thehackernews.com/2026/09/researcher-releases-falconflank-poc.html</link>
       <guid isPermaLink="false">a454de2c124c6561c1fd10c737165805</guid>
@@ -105,6 +318,16 @@
       <category>github</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 5.3 MEDIUM] CVE-2026-84886 — A vulnerability was determined in simular-ai Agent-S up to 0.3.2. Affected by th…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84886</link>
+      <guid isPermaLink="false">fe13046911d940376d15eea5c06b2f2c</guid>
+      <pubDate>Thu, 03 Sep 2026 05:16:47 +0000</pubDate>
+      <description>A vulnerability was determined in simular-ai Agent-S up to 0.3.2. Affected by this vulnerability is the function ImageData of the file gui_agents/s1/utils/ocr_server.py of the component OCR HTTP API. Executing a manipulation of the argument img_bytes can lead to resource consumption. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[HIGH] Hackers exploit Sangoma Switchvox flaw to deploy reverse shells</title>
       <link>https://www.bleepingcomputer.com/news/security/hackers-exploit-sangoma-switchvox-flaw-to-deploy-reverse-shells/</link>
       <guid isPermaLink="false">3bcb49161059dd5988d7b032fb7bc173</guid>
@@ -114,6 +337,17 @@
       <category>high</category>
       <category>rce</category>
       <category>sqli</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.1 CRITICAL] CVE-2026-66786 — A flaw was found in submariner. In cert-auth mode, the connection configuration …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-66786</link>
+      <guid isPermaLink="false">a827d327d7b2ab4dbb3b2e7a181ae761</guid>
+      <pubDate>Wed, 02 Sep 2026 18:21:10 +0000</pubDate>
+      <description>A flaw was found in submariner. In cert-auth mode, the connection configuration is built using free-form strings from the Custom Resource Definition (CRD) without proper validation. A malicious cluster can exploit this by publishing a CableName that includes newlines and ipsec.conf directives. This allows an attacker to inject arbitrary configuration parameters or execute commands through leftupdown hooks, leading to remote code execution as root on the gateway node.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
     </item>
     <item>
       <title>[CRIT] Critical SonicWall SMA1000 Vulnerabilities CVE-2026-83548, CVE-2026-83549 Exploited in the Wild</title>
@@ -635,484 +869,6 @@
       <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
       <category>high</category>
       <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] PaperCut warns of NG, MF flaw exploited in zero-day attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/papercut-warns-of-ng-mf-flaw-exploited-in-zero-day-attacks/</link>
-      <guid isPermaLink="false">108ca091a00a74a6952f0975f1393eb5</guid>
-      <pubDate>Thu, 27 Aug 2026 16:31:53 +0000</pubDate>
-      <description>PaperCut is warning that hackers are actively exploiting a vulnerability in all versions of its PaperCut NG and PaperCut MF print management software in zero-day attacks. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] Next.js Patches Critical AVIF and Windows Flaws Enabling Unauthenticated RCE</title>
-      <link>https://thehackernews.com/2026/08/nextjs-patches-critical-avif-and.html</link>
-      <guid isPermaLink="false">37058b3a81abec1766d1f66abba17988</guid>
-      <pubDate>Thu, 27 Aug 2026 15:13:00 +0000</pubDate>
-      <description>Credit: Hacktron Vercel has released security patches for two critical-severity vulnerabilities in the Next.js web framework, both of which allow unauthenticated remote code execution, one exploitable via specially crafted AVIF image files and the other through a path traversal flaw affecting servers that use a Windows filesystem. The Windows path traversal, tracked as CVE-2026-75604&amp;</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>path-traversal</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Two Alleged ‘TeamPCP’ Hackers Arrested in Australia</title>
-      <link>https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/</link>
-      <guid isPermaLink="false">d3d4236b45645ceeb32ad7329fff201f</guid>
-      <pubDate>Thu, 27 Aug 2026 11:04:15 +0000</pubDate>
-      <description>Authorities in Australia have arrested two men believed to be members of TeamPCP, a prolific cybercrime and data extortion group blamed for perpetrating the longest running spree of software supply chain attacks ever. In a statement released today, the Australian Federal Police (AFP) said two unnamed suspects from Western Australia, aged 21 and 23, were arrested in connection with a &#34;sophisticated cybercrime syndicate that allegedly created malicious open-source software to rob thousands of global businesses.&#34; The AFP did not name the defendants, but KrebsOnSecurity learned the 21-year-old sus...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Krebs on Security</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>supply-chain</category>
-    </item>
-    <item>
-      <title>[CRIT] CISA orders feds to patch Citrix NetScaler RCE flaw by Saturday</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploiting-citrix-netscaler-rce-flaw-in-attacks/</link>
-      <guid isPermaLink="false">be0e0d11ed57f54d8ccd591a946dc736</guid>
-      <pubDate>Thu, 27 Aug 2026 09:16:50 +0000</pubDate>
-      <description>CISA has ordered U.S. government agencies to patch their Citrix NetScaler appliances against an actively exploited remote code execution vulnerability by Saturday. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>critical</category>
-      <category>citrix</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>actively-exploited</category>
-      <category>citrix</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2023-49105 — ownCloud ownCloud: ownCloud Improper Authentication Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2023-49105</link>
-      <guid isPermaLink="false">cf50323d4731dbe5105d37c871d9bf16</guid>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
-      <description>ownCloud contains an improper authentication vulnerability that allows an attacker to access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-30</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>owncloud</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-53362 — Linux Kernel: Linux Kernel Unspecified Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-53362</link>
-      <guid isPermaLink="false">78f9e1ebf5089da2d11ee69bd626ddaa</guid>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using Linux. &#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-30</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>lpe</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-66384 — JFrog Artifactory: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-66384</link>
-      <guid isPermaLink="false">27cf5f5ee8a2eee0f1c5c6b7af72938c</guid>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
-      <description>JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-10</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>docker</category>
-      <category>jfrog</category>
-      <category>docker</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2023-49105 — ownCloud ownCloud: ownCloud Improper Authentication Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2023-49105</link>
-      <guid isPermaLink="false">cf50323d4731dbe5105d37c871d9bf16</guid>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
-      <description>ownCloud contains an improper authentication vulnerability that allows an attacker to access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-30</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>owncloud</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-53362 — Linux Kernel: Linux Kernel Unspecified Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-53362</link>
-      <guid isPermaLink="false">78f9e1ebf5089da2d11ee69bd626ddaa</guid>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using Linux. &#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-30</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>lpe</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-66384 — JFrog Artifactory: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-66384</link>
-      <guid isPermaLink="false">27cf5f5ee8a2eee0f1c5c6b7af72938c</guid>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
-      <description>JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-10</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>docker</category>
-      <category>jfrog</category>
-      <category>docker</category>
-    </item>
-    <item>
-      <title>[HIGH] Critical Avada WordPress theme flaw enables zero-click RCE</title>
-      <link>https://www.bleepingcomputer.com/news/security/critical-avada-wordpress-theme-flaw-enables-zero-click-rce/</link>
-      <guid isPermaLink="false">6cbc010dc59f0379f466c6122af53c1f</guid>
-      <pubDate>Wed, 26 Aug 2026 21:33:20 +0000</pubDate>
-      <description>A critical vulnerability chain in the popular Avada theme for WordPress can be exploited by an unauthenticated attacker to execute arbitrary PHP code on the server. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] CVE-2026-79921 — amqp091-go is a Go AMQP 0.9.1 client. Before version 1.13.0, a compromised or malicious AMQP broker …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-79921</link>
-      <guid isPermaLink="false">d67fba5d5d8747fc567310891d921c2c</guid>
-      <pubDate>Wed, 26 Aug 2026 21:16:41 +0000</pubDate>
-      <description>amqp091-go is a Go AMQP 0.9.1 client. Before version 1.13.0, a compromised or malicious AMQP broker can force the client to allocate resources for and process content body frames that exceed the negotiated frame_max limit. This can lead to unexpected memory consumption or application-layer denial of service (DoS), bypassing the protocol&#39;s built-in framing constraints. Version 1.13.0 contains a fix. No known workarounds are available.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-46370 — Fleet is an open-source device management platform built on osquery. In versions…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46370</link>
-      <guid isPermaLink="false">6983d614cc82bec3df79147345ca5233</guid>
-      <pubDate>Wed, 26 Aug 2026 20:17:23 +0000</pubDate>
-      <description>Fleet is an open-source device management platform built on osquery. In versions up to and including 4.84.1, the labels host-listing endpoint (GET /api/v1/fleet/labels/{id}/hosts) allowed an authenticated user with the lowest-privilege Observer role to extract host enrollment secrets through a sort-order oracle. The endpoint accepted a user-supplied order_key parameter that was not validated against a column allowlist, so an attacker with Global or Team Observer access could set the sort column to a sensitive field such as h.node_key and combine it with the cursor-based after parameter to binary-search the value one character at a time; the targeted value never appeared in the response, but the presence or absence of results revealed each character. Because node_key and orbit_node_key are the long-lived shared secrets that osquery and Orbit agents use to authenticate to the Fleet server, an attacker who reconstructed them could impersonate enrolled hosts, submit fabricated query results and inventory, retrieve pending scripts and MDM commands, and poison compliance and policy results across the deployment. This issue is fixed in version 4.84.2.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>oracle</category>
-      <category>rce</category>
-      <category>oracle</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 6.8 MEDIUM] CVE-2026-32639 — Winter CMS is a content management system built on the Laravel PHP framework. In…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-32639</link>
-      <guid isPermaLink="false">7d64428a727b99a38b03a4bb96662fcb</guid>
-      <pubDate>Wed, 26 Aug 2026 18:16:30 +0000</pubDate>
-      <description>Winter CMS is a content management system built on the Laravel PHP framework. In versions up to and including 1.2.12, the CMS section&#39;s Theme Editor AJAX handlers did not enforce per-template-type permission checks, allowing a backend user with any single CMS permission to act on template types outside their authorized scope. The CMS controller gated access to the section as a whole using OR-logic across its five permissions, but individual handlers such as onSave(), onDelete(), and onDeleteTemplates() did not verify that the user held the specific permission for the requested template type, so a user with only cms.manage_pages could craft AJAX requests to delete layouts, modify partials, or read content files. Separately, the AssetList widget was registered for any user who passed the controller gate regardless of the cms.manage_assets permission, and its onUpload() handler omitted the theme-validation call present on the other mutating handlers, permitting unauthorized file uploads into the active theme&#39;s asset directory. Exploitation requires an authenticated backend account holding at least one of the CMS Theme Editor permissions. This issue is fixed in version 1.2.13.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-    </item>
-    <item>
-      <title>[HIGH] Hackers target Microsoft SharePoint RCE chain with PoC exploit</title>
-      <link>https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-sharepoint-rce-chain-with-poc-exploit/</link>
-      <guid isPermaLink="false">b4ae203ef1e27ca841f69fedacee2ed1</guid>
-      <pubDate>Wed, 26 Aug 2026 14:47:51 +0000</pubDate>
-      <description>Attackers are now targeting a chain of two Microsoft SharePoint vulnerabilities that can allow them to execute arbitrary code on unpatched servers, according to threat intelligence company Defused. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Critical Gitea RCE Actively Exploited as Reported Attack Drops Miner-Like Payload</title>
-      <link>https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html</link>
-      <guid isPermaLink="false">d16ef0958bdf8cfc0dcfa0fb3a85daa0</guid>
-      <pubDate>Wed, 26 Aug 2026 06:27:07 +0000</pubDate>
-      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday warned of active exploitation efforts targeting a recently patched critical security flaw impacting Gitea. The vulnerability in question is CVE-2026-60004 (CVSS score: 9.8), a case of remote code execution that allows an attacker with ordinary write access to a repository to execute arbitrary shell commands as the</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2021-23758 — Ajax.NET Professional Ajax.NET Professional: Ajax.NET Professional Deserialization of Untrusted Data Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-23758</link>
-      <guid isPermaLink="false">cd98ec9cc0a2a8c2da33ac32c4a0fc1c</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-09</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>rce</category>
-      <category>ajax.net</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2015-3246 — Red Hat Libuser: Red Hat Libuser Race Condition Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2015-3246</link>
-      <guid isPermaLink="false">1e430267ca57b19b4912a5b497768415</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Red Hat libuser contains a race condition vulnerability that allows authenticated local users to corrupt the /etc/passwd file to cause a denial of service or privilege escalation. &#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-09</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>lpe</category>
-      <category>red</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2015-5287 — Red Hat Automatic Bug Reporting Tool: Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2015-5287</link>
-      <guid isPermaLink="false">90042255702faadefe9f29bbc2241010</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Red Hat Automatic Bug Reporting Tool (ABRT) contains a privilege escalation vulnerability that could allow local users with certain permissions to gain privileges via a symlink attack on a file with a predictable name. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-09</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>lpe</category>
-      <category>red</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2022-0995 — Linux Kernel: Linux Kernel Out-of-Bounds Write Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2022-0995</link>
-      <guid isPermaLink="false">155da1470c13812e598ce68497e4fb43</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Linux Kernel contains an out-of-bounds memory write vulnerability which could allow a local user to gain privileged access or cause a denial of service on the system.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-09</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-8452 — Citrix NetScaler ADC and NetScaler Gateway: Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8452</link>
-      <guid isPermaLink="false">495de851372539e4afb9ed33fac698c0</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability which could lead to denial of service. &#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-29</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>citrix</category>
-      <category>watch</category>
-      <category>citrix</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2019-1068 — Microsoft SQL Server: Microsoft SQL Server Remote Code Execution Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2019-1068</link>
-      <guid isPermaLink="false">81e6525f9a414cc5cfb55b02f51d6296</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Microsoft SQL Server contains a remote code execution vulnerability that could allow an attacker to execute code in the context of the SQL Server Database Engine service account.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-29</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2021-23758 — Ajax.NET Professional Ajax.NET Professional: Ajax.NET Professional Deserialization of Untrusted Data Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2021-23758</link>
-      <guid isPermaLink="false">cd98ec9cc0a2a8c2da33ac32c4a0fc1c</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-09</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>rce</category>
-      <category>ajax.net</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2015-3246 — Red Hat Libuser: Red Hat Libuser Race Condition Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2015-3246</link>
-      <guid isPermaLink="false">1e430267ca57b19b4912a5b497768415</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Red Hat libuser contains a race condition vulnerability that allows authenticated local users to corrupt the /etc/passwd file to cause a denial of service or privilege escalation. &#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-09</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>lpe</category>
-      <category>red</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2015-5287 — Red Hat Automatic Bug Reporting Tool: Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2015-5287</link>
-      <guid isPermaLink="false">90042255702faadefe9f29bbc2241010</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Red Hat Automatic Bug Reporting Tool (ABRT) contains a privilege escalation vulnerability that could allow local users with certain permissions to gain privileges via a symlink attack on a file with a predictable name. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-09</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>lpe</category>
-      <category>red</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2022-0995 — Linux Kernel: Linux Kernel Out-of-Bounds Write Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2022-0995</link>
-      <guid isPermaLink="false">155da1470c13812e598ce68497e4fb43</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Linux Kernel contains an out-of-bounds memory write vulnerability which could allow a local user to gain privileged access or cause a denial of service on the system.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-09</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>linux</category>
-      <category>watch</category>
-      <category>linux</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-8452 — Citrix NetScaler ADC and NetScaler Gateway: Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8452</link>
-      <guid isPermaLink="false">495de851372539e4afb9ed33fac698c0</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability which could lead to denial of service. &#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-29</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>citrix</category>
-      <category>watch</category>
-      <category>citrix</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2019-1068 — Microsoft SQL Server: Microsoft SQL Server Remote Code Execution Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2019-1068</link>
-      <guid isPermaLink="false">81e6525f9a414cc5cfb55b02f51d6296</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Microsoft SQL Server contains a remote code execution vulnerability that could allow an attacker to execute code in the context of the SQL Server Database Engine service account.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-29</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 10.0 CRITICAL] CVE-2026-76197 — Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Specia…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76197</link>
-      <guid isPermaLink="false">59aa7c4e254684967349bb5193e431ce</guid>
-      <pubDate>Tue, 25 Aug 2026 18:18:05 +0000</pubDate>
-      <description>Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-      <category>adobe</category>
-      <category>adobe</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 10.0 CRITICAL] CVE-2026-76195 — Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Specia…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76195</link>
-      <guid isPermaLink="false">483953ac175c0565bf059a7e2abfde91</guid>
-      <pubDate>Tue, 25 Aug 2026 18:18:04 +0000</pubDate>
-      <description>Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-      <category>adobe</category>
-      <category>adobe</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 10.0 CRITICAL] CVE-2026-76193 — Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF)…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76193</link>
-      <guid isPermaLink="false">8e82ad3afd0efa1dc7013ac2dc48802c</guid>
-      <pubDate>Tue, 25 Aug 2026 18:18:04 +0000</pubDate>
-      <description>Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>rce</category>
-      <category>adobe</category>
-      <category>adobe</category>
-    </item>
-    <item>
-      <title>[HIGH] Attackers Target miniOrange SAML Flaws That Can Grant WordPress Admin Access</title>
-      <link>https://thehackernews.com/2026/08/attackers-target-miniorange-saml-flaws.html</link>
-      <guid isPermaLink="false">474e7625600b653eb9a2d432bb67791b</guid>
-      <pubDate>Tue, 25 Aug 2026 08:34:07 +0000</pubDate>
-      <description>Bad actors are attempting to exploit two severe unauthenticated authentication bypasses in the Xecurify miniOrange SAML 2.0 Single Sign On plugin that make it possible for an attacker to sign in as any WordPress user, including administrators. The vulnerabilities, as disclosed by Patchstack, are listed below - CVE-2026-61979 (CVSS score: 8.1) - An unauthenticated privilege escalation</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>lpe</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-60004 — Gitea Gitea: Gitea Code Injection Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60004</link>
-      <guid isPermaLink="false">a4723cce3dfe3c28de493b3e5bf9e129</guid>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Gitea contains a code injection vulnerability that allows an attacker with repository write access to send a malicious patch to the diffpatch API endpoint to plant an executable Git hook and run shell commands as the Gitea service account.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-28</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>gitea</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-60004 — Gitea Gitea: Gitea Code Injection Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60004</link>
-      <guid isPermaLink="false">a4723cce3dfe3c28de493b3e5bf9e129</guid>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
-      <description>Gitea contains a code injection vulnerability that allows an attacker with repository write access to send a malicious patch to the diffpatch API endpoint to plant an executable Git hook and run shell commands as the Gitea service account.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-08-28</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>gitea</category>
-    </item>
-    <item>
-      <title>[HIGH] Hackers target WordPress sites in miniOrange auth bypass attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/hackers-target-wordpress-sites-in-miniorange-auth-bypass-attacks/</link>
-      <guid isPermaLink="false">4056d28720abba2ccfcadc890d70c8d3</guid>
-      <pubDate>Mon, 24 Aug 2026 19:26:32 +0000</pubDate>
-      <description>Hackers are attempting to exploit two critical authentication bypass vulnerabilities in the miniOrange SAML 2.0 Single Sign On plugin for WordPress that can be used to forge SAML responses and log in as administrators. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>wordpress</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-77915 — rConfig Core 8.0.0 before 8.2.10 contains an authentication bypass vulnerability…</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77915</link>
-      <guid isPermaLink="false">3b2586ab622593bfbeadcc9cf6ecd528</guid>
-      <pubDate>Mon, 24 Aug 2026 17:18:18 +0000</pubDate>
-      <description>rConfig Core 8.0.0 before 8.2.10 contains an authentication bypass vulnerability that allows unauthenticated attackers to self-register accounts with full Administrator privileges due to a duplicate bare Auth::routes() call in routes/web.php that re-enables the POST /register route after it was explicitly disabled. Attackers can register a new account that is immediately authenticated with Admin-level access because the registration controller does not assign a role and the users.role column defaults to Admin, enabling access to stored device credentials, user data, and API token issuance.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>critical-cvss</category>
-      <category>auth-bypass</category>
-    </item>
-    <item>
-      <title>[HIGH] Rapid7 Analysis: Microsoft SharePoint Remote Code Execution (CVE-2026-63520)</title>
-      <link>https://www.rapid7.com/blog/post/ra-microsoft-sharepoint-remote-code-execution-cve-2026-63520</link>
-      <guid isPermaLink="false">bc0fcdcffb538fa3543e2f529f7d069e</guid>
-      <pubDate>Mon, 24 Aug 2026 16:18:05 +0000</pubDate>
-      <description></description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>microsoft</category>
     </item>
   </channel>
 </rss>

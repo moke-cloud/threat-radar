@@ -1,5 +1,125 @@
 [
   {
+    "id": "a2e3a450e83dd5895ce5f7e1989ea23f",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Cisco FMC Flaws Exploited to Steal Credentials and Deploy Qilin Ransomware",
+    "url": "https://thehackernews.com/2026/09/cisco-fmc-flaws-exploited-to-steal.html",
+    "summary": "Cisco has revealed that three distinct threat clusters linked to ransomware and state-sponsored attacks have been exploiting two recently patched Secure Firewall Management Center (FMC) vulnerabilities. The attacks leverage CVE-2026-20079 (CVSS score: 10.0), an authentication bypass vulnerability in the web interface of FMC software that could allow an unauthenticated, remote attacker to bypass",
+    "published": "2026-09-11T06:19:59Z",
+    "fetched": "2026-09-11T23:29:14.507970641Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "auth-bypass",
+      "ransomware"
+    ],
+    "severity": "high",
+    "score": 73,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20079"
+    ]
+  },
+  {
+    "id": "24abfe93b816e77b111b680d7791283d",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-84869 — ConnectWise ScreenConnect: ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84869",
+    "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host confirmation.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-14",
+    "published": "2026-09-11T00:00:00Z",
+    "fetched": "2026-09-11T23:29:14.507970641Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "connectwise"
+    ],
+    "cves": [
+      "CVE-2026-84869"
+    ]
+  },
+  {
+    "id": "dfd59409fffaa6f45ffb514fb2516ce6",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-42016 — JFrog Artifactory: JFrog Artifactory Incorrect Authorization Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42016",
+    "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that allows leads to privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-25",
+    "published": "2026-09-11T00:00:00Z",
+    "fetched": "2026-09-11T23:29:14.507970641Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "jfrog"
+    ],
+    "cves": [
+      "CVE-2026-42016"
+    ]
+  },
+  {
+    "id": "96a6609b99de570a2bade1b51952e357",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-42018 — JFrog Artifactory: JFrog Artifactory Improper Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42018",
+    "summary": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-25",
+    "published": "2026-09-11T00:00:00Z",
+    "fetched": "2026-09-11T23:29:14.507970641Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "jfrog"
+    ],
+    "cves": [
+      "CVE-2026-42018"
+    ]
+  },
+  {
+    "id": "a405b8dfff8e36812bed889b0bb39292",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-85706 — GitLab Community Edition and Enterprise Edition: GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85706",
+    "summary": "GitLab Community Edition and Enterprise Edition contains a path traversal vulnerability that allows an unauthenticated user to read arbitrary files due to an improper path confinement and missing authentication enforcement in the repository commits API.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-14",
+    "published": "2026-09-11T00:00:00Z",
+    "fetched": "2026-09-11T23:29:14.507970641Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "gitlab",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "gitlab"
+    ],
+    "cves": [
+      "CVE-2026-85706"
+    ]
+  },
+  {
     "id": "5f6d5e75d1e167f5e9c5bd395ca51fc3",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1153,6 +1273,34 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85046",
     "summary": "Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-18",
     "published": "2026-09-04T00:00:00Z",
+    "fetched": "2026-09-11T23:29:14.507970641Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "microsoft",
+      "chrome",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "google",
+      "microsoft",
+      "chrome"
+    ],
+    "cves": [
+      "CVE-2026-85046"
+    ]
+  },
+  {
+    "id": "5c2a5e5c4edd0b4ac5b1e818fe205010",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-85046 — Google Chromium V8: Google Chromium V8 Type Confusion Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85046",
+    "summary": "Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-18",
+    "published": "2026-09-04T00:00:00Z",
     "fetched": "2026-09-04T23:10:46.958706864Z",
     "tags": [
       "kev",
@@ -1754,58 +1902,5 @@
     "cves": [
       "CVE-2026-83549"
     ]
-  },
-  {
-    "id": "6fed8231817d6fa4a1750ccbddc87e47",
-    "source": "krebs",
-    "source_name": "Krebs on Security",
-    "category": "news",
-    "title": "FBI Probes Service Selling 153M+ Drivers Licenses",
-    "url": "https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/",
-    "summary": "A new identity theft service launched on the dark web this week is selling digital scans of more than 153 million drivers licenses from people in the United States and Canada. Based on interviews with individuals whose licenses are available for purchase on this service, it appears to be siphoning images collected by a widely-used identity verification company based in Louisiana. KrebsOnSecurity also has learned that the New Orleans field office of the Federal Bureau of Investigation (FBI) today launched an official inquiry into the source of the images.",
-    "published": "2026-09-01T22:40:28Z",
-    "fetched": "2026-09-01T23:28:11.711681897Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60
-  },
-  {
-    "id": "7e0f5d1cfc96c5eea9e478d083075ca3",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Nearly 22,000 Microsoft Exchange servers vulnerable to hijack attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/",
-    "summary": "Nearly 22,000 Microsoft Exchange servers exposed online remain unpatched against a high-severity authentication bypass vulnerability that allows attackers to hijack all user mailboxes. [...]",
-    "published": "2026-09-01T12:38:35Z",
-    "fetched": "2026-09-01T23:28:11.711681897Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "346e0e35336f58781128d3ef05925cd1",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Recently patched PaperCut zero-days used in data theft attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/recently-patched-papercut-zero-days-used-in-data-theft-attacks/",
-    "summary": "Two security vulnerabilities in the PaperCut NG and MF print management software, patched last week after being exploited as zero-days, are now being abused in data theft attacks. [...]",
-    "published": "2026-09-01T07:48:24Z",
-    "fetched": "2026-09-01T23:28:11.711681897Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67
   }
 ]

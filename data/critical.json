@@ -1,5 +1,152 @@
 [
   {
+    "id": "d188de31097b0e067644a3095f544db4",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-89550 — In the Linux kernel, the following vulnerability has been resolved:\n\nSUNRPC: svc…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89550",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nSUNRPC: svcauth_gss: enforce krb5 token minimum length\n\nsvcauth_gss_unwrap_priv() validates only an upper bound on the\nwire-supplied opaque length before handing the buffer to\ngss_unwrap():\n\n    if (len > xdr_stream_remaining(xdr))\n            goto unwrap_failed;\n    offset = xdr_stream_pos(xdr);\n    ...\n    maj_stat = gss_unwrap(ctx, offset, offset + len, buf);\n\nThe wire value `len` flows unchanged as the upper bound into the\nkrb5 unwrap path, so a len in [0, 16] passes this check and is\nhanded to gss_unwrap(). For a krb5 v2 context that lands in\ngss_krb5_unwrap_v2(), which reads the 16-byte RFC 4121 token\nheader fields at ptr+4 and ptr+6 and then calls rotate_left()\nbefore any integrity check. With a sub-header length the header\nreads run past the token, and _rotate_left()'s `shift %= buf->len`\npath can divide by zero when buf->len has been driven to zero by\nthe truncated token. A header-only token (len == 16) is equally\ninvalid: with a non-zero RRC field and the opaque blob ending at\nthe XDR buffer boundary, rotate_left() builds a zero-length\nsubbuffer, reaching the same division.\n\nReject the token at the server entry point before it reaches the\nkrb5 unwrap core. A valid sealed RFC 4121 token must contain\nthe 16-byte header plus at least some encrypted payload.\n\nFix by adding a minimum-length check immediately after the\nexisting upper-bound check:\n\n    if (len <= GSS_KRB5_TOK_HDR_LEN)\n            goto unwrap_failed;",
+    "published": "2026-09-11T20:19:38.5Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "critical-cvss",
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-89550"
+    ]
+  },
+  {
+    "id": "7283378b209fdaae87a67288ec12df4d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-89541 — In the Linux kernel, the following vulnerability has been resolved:\n\nSUNRPC: har…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89541",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nSUNRPC: harden gss_unwrap_resp_priv length checks\n\ngss_unwrap_resp_priv() validates the RPCSEC_GSS opaque length with\n\n    offset = (u8 *)(p) - (u8 *)head->iov_base;\n    if (offset + opaque_len > rcv_buf->len)\n            goto unwrap_failed;\n    maj_stat = gss_unwrap(ctx->gc_gss_ctx, offset,\n                          offset + opaque_len, rcv_buf);\n\nBoth operands are u32 and the sum is computed in u32. A reply with\nopaque_len near 0xffffffff makes offset + opaque_len wrap to a small\nvalue that is below rcv_buf->len, so the bound check passes and\ngss_unwrap() is called with end < begin. The check also lacks a\nlower bound, so any opaque_len in [0, GSS_KRB5_TOK_HDR_LEN) is\naccepted and forwarded to gss_krb5_unwrap_v2(), whose pre-decrypt\nheader reads at ptr+4 and ptr+6 then run past the token.\n\nA krb5p NFS server returning a crafted RPCSEC_GSS reply can drive\nthe client into out-of-bounds reads in gss_krb5_unwrap_v2() and the\nrotate_left() loop that follows.\n\nFix by replacing the single combined check with three guards that\nare safe in u32 arithmetic and that enforce the RFC 4121 minimum\nouter token length:\n\n    if (offset > rcv_buf->len)\n            goto unwrap_failed;\n    if (opaque_len > rcv_buf->len - offset)\n            goto unwrap_failed;\n    if (opaque_len < GSS_KRB5_TOK_HDR_LEN)\n            goto unwrap_failed;\n\nThe first guard makes the subtraction in the second guard\nunconditionally safe; offset is derived from a successful\nxdr_inline_decode() in the head kvec, so in practice it already\nsatisfies the bound. The floor mirrors the server-side check added\nin commit 5b757c2e57a5 (\"SUNRPC: svcauth_gss: enforce krb5 token\nminimum length\").",
+    "published": "2026-09-11T20:19:37.247Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "critical-cvss",
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-89541"
+    ]
+  },
+  {
+    "id": "9c1d41ba643f938f51f945cf2b348734",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-89524 — In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: ath6k…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89524",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: ath6kl: clamp assoc request/response lengths before subtracting IE offsets\n\nath6kl_cfg80211_connect_event() subtracts fixed IE offsets from\nassoc_req_len (-= 4) and assoc_resp_len (-= 6), both u8, with no lower\nbound. The aggregate check recently added to ath6kl_wmi_connect_event_rx()\nbounds the declared lengths from above (their sum must fit the received\nevent), but an assoc request/response shorter than its fixed offset still\nunderflows here: the u8 wraps to ~250, and cfg80211_connect_result() /\ncfg80211_roamed() then treat that wrapped value as the IE length and copy\nthat many bytes out of the small assoc_info buffer to user space via\nnl80211, disclosing adjacent slab memory.\n\nClamp both lengths to their offsets before subtracting.\n\nFound by 0sec (https://0sec.ai) using automated source analysis; the\nmissing lower bound is evident from source. Compile-tested.",
+    "published": "2026-09-11T20:19:35.137Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-89524"
+    ]
+  },
+  {
+    "id": "80af4ff03fb1dd035c22c59b0990d10e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.3 CRITICAL] CVE-2026-89448 — In the Linux kernel, the following vulnerability has been resolved:\n\niommu/vt-d:…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89448",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\niommu/vt-d: Force requesting ACS when tboot is enabled\n\nCurrently the conditions of requesting ACS in detect_intel_iommu()\ndon't include tboot, leading to a possible misconfiguration with ACS\ndisabled (e.g. due to user opts) while iommu is later forced on by\ntboot_force_iommu().\n\nFix it by checking tboot in detect_intel_iommu().",
+    "published": "2026-09-11T20:19:25.347Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "critical-cvss",
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-89448"
+    ]
+  },
+  {
+    "id": "8af7259784e96d382fea40862b5cab8d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 7.8 HIGH] CVE-2026-81001 — In the Linux kernel, the following vulnerability has been resolved:\n\nslip: fix u…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81001",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nslip: fix use-after-free in sl_sync()\n\nslip_devs[] stores bare net_device pointers and takes no reference on\nthem.  sl_sync() and sl_alloc() walk that table from slip_open() under\nrtnl_lock(), while an entry is dropped by sl_free_netdev(), which\nsl_setup() installs as dev->priv_destructor.\n\npriv_destructor is called from netdev_run_todo(), which deliberately\nruns with the RTNL semaphore released so that it can sleep while waiting\nfor the device refcount to drop:\n\n\t/* Snapshot list, allow later requests */\n\tlist_replace_init(&net_todo_list, &list);\n\n\t__rtnl_unlock();\n\t...\n\t\tif (dev->priv_destructor)\n\t\t\tdev->priv_destructor(dev);\t/* slip_devs[i] = NULL */\n\t\tif (dev->needs_free_netdev)\n\t\t\tfree_netdev(dev);\n\t\t...\n\t\t/* Free network device */\n\t\tkobject_put(&dev->dev.kobj);\n\nSo rtnl_lock() does not serialise slip_open() against the teardown at\nall.  sl_sync() can load slip_devs[i] while the entry is still published\nand dereference it after netdev_run_todo() has run the destructor and\nreleased the device:\n\n  CPU0 (slip_open)                 CPU1 (slip_close)\n                                   unregister_netdev()\n                                     rtnl_unlock()\n                                       netdev_run_todo()\n                                         __rtnl_unlock()\n  rtnl_lock()\n  sl_sync()\n    dev = slip_devs[i]\n                                         priv_destructor(dev)\n                                           slip_devs[i] = NULL\n                                         kobject_put(&dev->dev.kobj)\n                                           /* dev is freed */\n    sl = netdev_priv(dev)\n    if (sl->tty || sl->leased)     /* use-after-free */\n\n  BUG: KASAN: use-after-free in sl_sync drivers/net/slip/slip.c:730 [inline]\n  BUG: KASAN: use-after-free in slip_open+0xef4/0x1210 drivers/net/slip/slip.c:806\n  Read of size 1 at addr ffff8880712dac71 by task syz-executor.2/6506\n\n  CPU: 2 PID: 6506 Comm: syz-executor.2 Not tainted 6.1.134-syzkaller-00260-g0c8fc3469765 #0\n  Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.12.0-1 04/01/2014\n  Call Trace:\n   sl_sync drivers/net/slip/slip.c:730 [inline]\n   slip_open+0xef4/0x1210 drivers/net/slip/slip.c:806\n   tty_ldisc_open+0xa2/0x120 drivers/tty/tty_ldisc.c:433\n   tty_set_ldisc+0x324/0x720 drivers/tty/tty_ldisc.c:564\n   tiocsetd drivers/tty/tty_io.c:2428 [inline]\n   tty_ioctl+0x5f0/0x1530 drivers/tty/tty_io.c:2712\n\n  Allocated by task 6502:\n   alloc_netdev_mqs+0x98/0xfe0 net/core/dev.c:10719\n   sl_alloc drivers/net/slip/slip.c:756 [inline]\n   slip_open+0x36d/0x1210 drivers/net/slip/slip.c:817\n   tty_ldisc_open+0xa2/0x120 drivers/tty/tty_ldisc.c:433\n   tty_set_ldisc+0x324/0x720 drivers/tty/tty_ldisc.c:564\n\n  Freed by task 6497:\n   device_release+0xa2/0x240 drivers/base/core.c:2507\n   kobject_put+0x179/0x280 lib/kobject.c:729\n   netdev_run_todo+0x6c8/0xef0 net/core/dev.c:10509\n   slip_close+0x166/0x1c0 drivers/net/slip/slip.c:906\n   tty_ldisc_close+0x113/0x1a0 drivers/tty/tty_ldisc.c:456\n   tty_ldisc_kill+0x94/0x160 drivers/tty/tty_ldisc.c:614\n   tty_ldisc_release+0xe3/0x2b0 drivers/tty/tty_ldisc.c:782\n   tty_release+0xbcc/0xe70 drivers/tty/tty_io.c:1860\n\nCommit e58c19124189 (\"slip: Fix use-after-free Read in slip_open\") fixed\na different source of stale entries - a device left in slip_devs[] after\nslip_open() freed it on the registration error path - and does not\naddress this race, which is why the report survives it.\n\nDrop the entry from ndo_uninit instead.  unregister_netdevice() calls\nndo_uninit under RTNL, before the device is queued to netdev_run_todo(),\nso an entry that sl_sync() can still see while holding RTNL belongs to a\ndevice that cannot be freed until RTNL is dropped.  sl_free_netdev()\nstays only for the slip_open() error path, where register_netdevice()\nmay have failed before ndo_init and ndo_uninit is then not called\neither.  Both running for the same device is harmless: the\n---truncated---",
+    "published": "2026-09-11T20:19:08.16Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-81001"
+    ]
+  },
+  {
+    "id": "dcea2b5e2b63a4d1a28468adf6c0e727",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.4 HIGH] CVE-2026-80932 — In the Linux kernel, the following vulnerability has been resolved:\n\nvsock/virti…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80932",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nvsock/virtio: flush works in dependency order\n\nvirtio_vsock_remove() stops the virtqueues and then flushes each work\nitem before freeing the enclosing virtio_vsock.  The current order does\nnot account for dependencies between those items: tx_work may queue\nsend_pkt_work, and send_pkt_work may queue rx_work.\n\nIn particular, send_pkt_work can set restart_rx and release tx_lock.\nThe remove path can then stop the queues and flush rx_work before\nsend_pkt_work queues it.  Although the later send_pkt_work flush waits\nfor that producer to finish, nothing waits for the newly queued rx_work,\nso kfree(vsock) can race with it.\n\nKASAN reported:\n\n  BUG: KASAN: slab-use-after-free in\n  virtio_transport_rx_work+0x487/0x4b0\n  Read of size 8 at addr ffff888114c2b008 by task kworker/1:1/47\n  Workqueue: virtio_vsock virtio_transport_rx_work\n  Call Trace:\n   virtio_transport_rx_work+0x487/0x4b0\n   process_one_work+0x688/0x1120\n   worker_thread+0x45b/0xd10\n  Allocated by task 1:\n   virtio_vsock_probe+0xef/0x6b0\n  Freed by task 84:\n   kfree+0x131/0x3c0\n   virtio_vsock_remove+0xd1/0x100\n\nFlush the works in producer-to-consumer order.  virtio_vsock_vqs_del()\nhas already disabled the queue callbacks and cleared the run flags, so\nafter tx_work and send_pkt_work are drained, no source remains that can\nqueue rx_work after its flush.",
+    "published": "2026-09-11T20:18:57.023Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-80932"
+    ]
+  },
+  {
     "id": "a2e3a450e83dd5895ce5f7e1989ea23f",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -117,6 +264,160 @@
     ],
     "cves": [
       "CVE-2026-85706"
+    ]
+  },
+  {
+    "id": "522603d57b1650489dcd8a9de3463949",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-84889 — IBM Langflow OSS 1.0.0 through 1.10.3 could allow a remote authenticated attacke…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84889",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.3 could allow a remote authenticated attacker to execute arbitrary code due to improper limitation of a pathname to a restricted directory.",
+    "published": "2026-09-10T22:17:04.347Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-84889"
+    ]
+  },
+  {
+    "id": "133538baf57ef260a248bf80e57c8672",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-81940 — IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote authenticated attacke…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81940",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of special characters in flow display names.",
+    "published": "2026-09-10T22:17:03.083Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-81940"
+    ]
+  },
+  {
+    "id": "ce51c0f5e73eefb86d719de9ba326ce7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-81204 — IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote attacker to execute a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81204",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote attacker to execute arbitrary code due to code injection during graph construction.",
+    "published": "2026-09-10T22:17:01.58Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-81204"
+    ]
+  },
+  {
+    "id": "bb5208348a904369dc0f1a3d819df742",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-79742 — IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote authenticated attacke…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79742",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote authenticated attacker to execute arbitrary code due to an incomplete environment variable blocklist.",
+    "published": "2026-09-10T22:17:00.78Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-79742"
+    ]
+  },
+  {
+    "id": "82c7710649f8bf69623bdc2037761835",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-78571 — IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote authenticated attacke…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78571",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.11.5 could allow a remote authenticated attacker to execute arbitrary code due to an unguarded eval() call on attacker-controlled input.",
+    "published": "2026-09-10T22:16:59.853Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-78571"
+    ]
+  },
+  {
+    "id": "fa357ee2aeeaa82bac327dd06dd7dfe0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-78569 — IBM Langflow OSS 1.0.0 through 1.11.5 could allow an authenticated attacker to e…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78569",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.11.5 could allow an authenticated attacker to execute arbitrary code due to an incomplete denylist in the security scanner.",
+    "published": "2026-09-10T22:16:59.723Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-78569"
+    ]
+  },
+  {
+    "id": "3d39033324117fb7c4e8d26125b8cf2b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-76059 — IBM Langflow OSS 1.0.0 through 1.11.5 An attacker who could submit custom compon…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76059",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.11.5 An attacker who could submit custom component source code could bypass the static security scanner by crafting an annotated class-body assignment that resolved to a dangerous callable through alias tracking; the resolved value was never checked against the dangerous callable blocklist due to the logic error. If the crafted component reached the runtime execution path, the attacker could cause arbitrary operating system commands to execute on the server in-process, with the privileges of the running service.",
+    "published": "2026-09-10T22:16:59.59Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-76059"
+    ]
+  },
+  {
+    "id": "38c8ec6298d8d24d5a7ccef613ae590c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-85025 — IBM Langflow OSS 1.0.0 through 1.11.5 Langflow could allow an unauthenticated at…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85025",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.11.5 Langflow could allow an unauthenticated attacker to execute arbitrary code and access or modify chat sessions through publicly shared MCP project endpoints due to improper enforcement of public-flow security restrictions and session isolation controls.",
+    "published": "2026-09-10T21:17:51.99Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-85025"
     ]
   },
   {
@@ -251,6 +552,25 @@
     ],
     "cves": [
       "CVE-2026-20079"
+    ]
+  },
+  {
+    "id": "6799496817ae851ba0d8fb26120219ac",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 4.3 MEDIUM] CVE-2026-87875 — The cupsUTF32ToUTF8() function in CUPS's cups/transcode.c lacks a source-length …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87875",
+    "summary": "The cupsUTF32ToUTF8() function in CUPS's cups/transcode.c lacks a source-length bound and can read past the end of the source buffer, resulting in a heap out-of-bounds read. This is reachable via SNMP supply-description parsing in backend/snmp-supplies.c with attacker-controlled content.",
+    "published": "2026-09-09T17:17:53.24Z",
+    "fetched": "2026-09-13T23:21:04.694779683Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-87875"
     ]
   },
   {
@@ -1070,483 +1390,6 @@
     "score": 60,
     "cves": [
       "CVE-2026-86144"
-    ]
-  },
-  {
-    "id": "770fd098349b12cb474be80c56be2f44",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-52762 — YesWiki is a wiki system written in PHP. Prior to version 4.6.6, YesWiki Bazar contains a stored Ser…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52762",
-    "summary": "YesWiki is a wiki system written in PHP. Prior to version 4.6.6, YesWiki Bazar contains a stored Server-Side Template Injection (SSTI) vulnerability in the semantic template feature that can be escalated to confirmed Remote Code Execution (RCE). An authenticated administrator can place arbitrary Twig expressions into the Semantic template (Twig) field (bn_sem_template), and that content is later executed server-side when public semantic endpoints are requested. This issue has been patched in version 4.6.6.",
-    "published": "2026-09-05T00:17:18.607Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-52762"
-    ]
-  },
-  {
-    "id": "e3c7c55ea3bb7d23e57214e687e72f5a",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Critical Citrix NetScaler auth bypass now leveraged in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/",
-    "summary": "Attackers have begun targeting a critical-severity Citrix NetScaler auth bypass flaw (CVE-2026-19490) in the wild, according to vulnerability intelligence company Previdian. [...]",
-    "published": "2026-09-04T15:25:59Z",
-    "fetched": "2026-09-04T23:10:46.958706864Z",
-    "tags": [
-      "citrix",
-      "watch",
-      "auth-bypass",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 97,
-    "vendors": [
-      "citrix"
-    ],
-    "cves": [
-      "CVE-2026-19490"
-    ]
-  },
-  {
-    "id": "bf68b724073ebb6e1d1541399944daf1",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges",
-    "url": "https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/",
-    "summary": "An anonymous security researcher who uses the \"Nightmare Eclipse\" handle released a CrowdStrike Falcon zero-day exploit named \"FalconFlank\" that lets attackers escalate privileges on up-to-date Windows systems. [...]",
-    "published": "2026-09-04T13:22:01Z",
-    "fetched": "2026-09-04T23:10:46.958706864Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "3f74ed07dd6d4fcaff2879c5b826db12",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-85604 — Grav before 2.0.18 (affected versions <= 2.0.17) contains a remote code executio…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85604",
-    "summary": "Grav before 2.0.18 (affected versions <= 2.0.17) contains a remote code execution vulnerability in the Twig sort filter. The sortFunc wrapper in GravExtension.php hardcodes Twig's isSandboxed argument to false, so unlike |map/|filter/|reduce, |sort accepts a plain function name inside the sandbox; the remaining denylist misses spl_autoload, which performs a PHP include. An authenticated user with only page-write rights (admin.pages or api.pages.write) can supply a crafted payload (e.g., via form frontmatter rendered by the Email plugin) that invokes spl_autoload through the sort filter, resulting in arbitrary PHP execution as the web server user.",
-    "published": "2026-09-04T12:17:24.177Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-85604"
-    ]
-  },
-  {
-    "id": "f5977a6004254f1b6e682c0237ebd3f0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-85596 — Traefik versions >= v3.7.0 and <= v3.7.10 contain an authentication bypass in the Kubernetes Ingress…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85596",
-    "summary": "Traefik versions >= v3.7.0 and <= v3.7.10 contain an authentication bypass in the Kubernetes Ingress NGINX provider. The TLS option generated for an Ingress carrying the nginx.ingress.kubernetes.io/auth-tls-secret annotation was named after the Ingress namespace and name. As a result, two Ingress objects sharing the same host, the same client CA secret, and the same client-authentication mode produced two distinct TLS option names for that host. Traefik treats this as a TLS options conflict and falls back to the entry point's default TLS configuration, which does not request a client certificate, so a route configured with nginx.ingress.kubernetes.io/auth-tls-verify-client: \"on\" becomes reachable without a client certificate. Only the v3.7 line is affected; the issue is fixed in v3.7.11.",
-    "published": "2026-09-04T12:17:23.087Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "auth-bypass",
-      "kubernetes"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "kubernetes"
-    ],
-    "cves": [
-      "CVE-2026-85596"
-    ]
-  },
-  {
-    "id": "0d44cb0f52948beae2a5a8e206e41421",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-85595 — Traefik versions before v2.11.55 and versions v3.0.0 through v3.7.10 contain an authentication bypas…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85595",
-    "summary": "Traefik versions before v2.11.55 and versions v3.0.0 through v3.7.10 contain an authentication bypass vulnerability in the digestAuth middleware where unknown usernames receive an empty secret instead of rejection. Attackers can compute a valid digest response using the empty secret and arbitrary credentials to bypass authentication on any digestAuth-protected route without a valid username or password.",
-    "published": "2026-09-04T12:17:22.96Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-85595"
-    ]
-  },
-  {
-    "id": "ce41f68f6653718c80f010048c96c3fe",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Google warns of new Chrome zero-day flaw exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/",
-    "summary": "Google has updated the Chrome browser to address an actively exploited high-severity zero-day flaw in the V8 engine and 11 other vulnerabilities. [...]",
-    "published": "2026-09-04T11:48:17Z",
-    "fetched": "2026-09-04T23:10:46.958706864Z",
-    "tags": [
-      "chrome",
-      "watch",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "chrome"
-    ]
-  },
-  {
-    "id": "23e468d94b5b8e44b223904a276a377f",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Google Releases Chrome Update to Patch Actively Exploited V8 Zero-Day",
-    "url": "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html",
-    "summary": "Google on Thursday released security updates to patch 12 vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, tracked as CVE-2026-85046 (CVSS score: 8.8), has been described as a type confusion bug in V8, Chrome's JavaScript and WebAssembly engine. \"Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote",
-    "published": "2026-09-04T07:18:47Z",
-    "fetched": "2026-09-04T23:10:46.958706864Z",
-    "tags": [
-      "chrome",
-      "watch",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-85046"
-    ]
-  },
-  {
-    "id": "168a4ed2017d2ed1cab238b1bd8ee25a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 4.4 MEDIUM] CVE-2026-49509 — Out-of-bounds read vulnerability in Samsung Opensource rLottie allows Overread B…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49509",
-    "summary": "Out-of-bounds read vulnerability in Samsung Opensource rLottie allows Overread Buffers.\n\nThis issue affects rLottie: 25648aef19187b3f87f4d9420b8d761453ad4630.",
-    "published": "2026-09-04T00:17:12.82Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-49509"
-    ]
-  },
-  {
-    "id": "5c2a5e5c4edd0b4ac5b1e818fe205010",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-85046 — Google Chromium V8: Google Chromium V8 Type Confusion Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85046",
-    "summary": "Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-18",
-    "published": "2026-09-04T00:00:00Z",
-    "fetched": "2026-09-11T23:29:14.507970641Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "google",
-      "microsoft",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-85046"
-    ]
-  },
-  {
-    "id": "5c2a5e5c4edd0b4ac5b1e818fe205010",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-85046 — Google Chromium V8: Google Chromium V8 Type Confusion Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85046",
-    "summary": "Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-18",
-    "published": "2026-09-04T00:00:00Z",
-    "fetched": "2026-09-04T23:10:46.958706864Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "chrome",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "google",
-      "chrome",
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-85046"
-    ]
-  },
-  {
-    "id": "2714a251e1472b39cc07d4576b633873",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-85439 — MOOS-IvP through 24.8.1 contains a remote code execution vulnerability in alogsp…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85439",
-    "summary": "MOOS-IvP through 24.8.1 contains a remote code execution vulnerability in alogsplit's SplitHandler::handlePreCheckSplitDir() function that fails to sanitize shell metacharacters in log file pathnames. Attackers can embed shell syntax in log file names or the --dir parameter to execute arbitrary commands with the privileges of the operator running alogsplit.",
-    "published": "2026-09-03T23:17:23.427Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-85439"
-    ]
-  },
-  {
-    "id": "3e5158754e7150648b26ab03cb2e7554",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-85429 — MOOS-IvP uFldNodeComms through 24.8.1 trusts the source node identity from the m…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85429",
-    "summary": "MOOS-IvP uFldNodeComms through 24.8.1 trusts the source node identity from the message body rather than validating it from the connection source. Attackers can craft NODE_MESSAGE packets with spoofed source identities to impersonate other nodes and post arbitrary variable notifications without validation.",
-    "published": "2026-09-03T23:17:21.91Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-85429"
-    ]
-  },
-  {
-    "id": "87f519281d6a4e1e5fe6cb7980456a25",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-62916 — Authentication bypass using an alternate path or channel in Microsoft Entra ID a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62916",
-    "summary": "Authentication bypass using an alternate path or channel in Microsoft Entra ID allows an unauthorized attacker to elevate privileges over a network.",
-    "published": "2026-09-03T23:17:19.693Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "critical-cvss",
-      "auth-bypass",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-62916"
-    ]
-  },
-  {
-    "id": "7e2366c14cb8de78cbfa613dbc094714",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-85046 — Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85046",
-    "summary": "Type confusion in V8 in Google Chrome prior to 152.0.7977.82 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-09-03T20:17:24.21Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-85046"
-    ]
-  },
-  {
-    "id": "07087e369a79575233c86d96a48b85f7",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-75036 — A security vulnerability was discovered in Fleet's Helm template preprocessing where templates evalu…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75036",
-    "summary": "A security vulnerability was discovered in Fleet's Helm template preprocessing where templates evaluated by the Fleet controller could reach network resources outside the management cluster. A user who can supply bundle content to a repository referenced by a `GitRepo` resource can cause the Fleet controller to:\n- Disclose cluster metadata available to the templating context.\n- Reveal information about hosts reachable from the controller's network position.\nBecause the disclosure channel is name resolution, it may remain effective in environments where outbound traffic is otherwise restricted. The disclosed information is limited to values exposed to the Fleet templating context and to name resolution results. Integrity and availability of managed clusters are not affected.\n\nThis issue affects Fleet:\nfrom 0.12.0 before 0.12.19, \nfrom 0.13.0 before 0.13.15, \nfrom 0.14.0 before 0.14.10, \nfrom 0.15.0 before 0.15.6, and\nfrom 0.16.0 before 0.16.1.",
-    "published": "2026-09-03T16:18:22.607Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-75036"
-    ]
-  },
-  {
-    "id": "a454de2c124c6561c1fd10c737165805",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Researcher Releases FalconFlank PoC Showing Privilege Escalation in CrowdStrike Falcon",
-    "url": "https://thehackernews.com/2026/09/researcher-releases-falconflank-poc.html",
-    "summary": "The security researcher known as Chaotic Eclipse (aka INFINITE NIGHTMARE, MSNightmare, and Nightmare-Eclipse) has dropped a new zero-day dubbed FalconFlank, a privilege escalation flaw impacting Crowdstrike Falcon. \"FalconFlank is a 0day privilege escalation that abuses the office malicious macros remediation in CrowdStrike Falcon Sensor,\" the researcher said in a GitHub README file, adding",
-    "published": "2026-09-03T06:26:59Z",
-    "fetched": "2026-09-03T23:26:36.461037252Z",
-    "tags": [
-      "github",
-      "lpe",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 66,
-    "vendors": [
-      "github"
-    ]
-  },
-  {
-    "id": "fe13046911d940376d15eea5c06b2f2c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.3 MEDIUM] CVE-2026-84886 — A vulnerability was determined in simular-ai Agent-S up to 0.3.2. Affected by th…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84886",
-    "summary": "A vulnerability was determined in simular-ai Agent-S up to 0.3.2. Affected by this vulnerability is the function ImageData of the file gui_agents/s1/utils/ocr_server.py of the component OCR HTTP API. Executing a manipulation of the argument img_bytes can lead to resource consumption. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-09-03T05:16:47.167Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-84886"
-    ]
-  },
-  {
-    "id": "3bcb49161059dd5988d7b032fb7bc173",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Hackers exploit Sangoma Switchvox flaw to deploy reverse shells",
-    "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sangoma-switchvox-flaw-to-deploy-reverse-shells/",
-    "summary": "Attackers are actively exploiting CVE-2026-9586, an unauthenticated SQL injection vulnerability in the Sangoma Switchvox VoIP platform that can lead to remote code execution. [...]",
-    "published": "2026-09-02T21:00:13Z",
-    "fetched": "2026-09-02T23:29:36.055673665Z",
-    "tags": [
-      "rce",
-      "sqli"
-    ],
-    "severity": "high",
-    "score": 65,
-    "cves": [
-      "CVE-2026-9586"
-    ]
-  },
-  {
-    "id": "a827d327d7b2ab4dbb3b2e7a181ae761",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-66786 — A flaw was found in submariner. In cert-auth mode, the connection configuration …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66786",
-    "summary": "A flaw was found in submariner. In cert-auth mode, the connection configuration is built using free-form strings from the Custom Resource Definition (CRD) without proper validation. A malicious cluster can exploit this by publishing a CableName that includes newlines and ipsec.conf directives. This allows an attacker to inject arbitrary configuration parameters or execute commands through leftupdown hooks, leading to remote code execution as root on the gateway node.",
-    "published": "2026-09-02T18:21:10.517Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-66786"
-    ]
-  },
-  {
-    "id": "4db2f44be8a5eb30cb4615cf3db4d522",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Critical SonicWall SMA1000 Vulnerabilities CVE-2026-83548, CVE-2026-83549 Exploited in the Wild",
-    "url": "https://www.rapid7.com/blog/post/etr-critical-sonicwall-sma1000-vulnerabilities-cve-2026-83548-cve-2026-83549-exploited-in-the-wild",
-    "summary": "OverviewOn September 1, 2026, SonicWall disclosed two vulnerabilities affecting SonicWall SMA1000 appliances that the vendor says are being actively exploited in the wild. The vulnerabilities, CVE-2026-83548 and CVE-2026-83549, can be chained to achieve unauthenticated remote code execution (RCE) on affected appliances.CVE-2026-83548 is a critical pre-authentication server-side request forgery (SSRF) vulnerability in the SMA1000 Appliance Work Place interface. The flaw has a CVSS v3.1 base score of 10.0 and can allow a remote, unauthenticated attacker to access sensitive functionality and perf...",
-    "published": "2026-09-02T16:58:45Z",
-    "fetched": "2026-09-09T23:26:23.36600599Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 81,
-    "cves": [
-      "CVE-2026-83548",
-      "CVE-2026-83549"
-    ]
-  },
-  {
-    "id": "4db2f44be8a5eb30cb4615cf3db4d522",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Critical SonicWall SMA1000 Vulnerabilities CVE-2026-83548, CVE-2026-83549 Exploited in the Wild",
-    "url": "https://www.rapid7.com/blog/post/etr-critical-sonicwall-sma1000-vulnerabilities-cve-2026-83548-cve-2026-83549-exploited-in-the-wild",
-    "summary": "OverviewOn September 1, 2026, SonicWall disclosed two vulnerabilities affecting SonicWall SMA1000 appliances that the vendor says are being actively exploited in the wild. The vulnerabilities, CVE-2026-83548 and CVE-2026-83549, can be chained to achieve unauthenticated remote code execution (RCE) on affected appliances.CVE-2026-83548 is a critical pre-authentication server-side request forgery (SSRF) vulnerability in the SMA1000 Appliance Work Place interface. The flaw has a CVSS v3.1 base score of 10.0 and can allow a remote, unauthenticated attacker to access sensitive functionality and perf...",
-    "published": "2026-09-02T16:58:45Z",
-    "fetched": "2026-09-02T23:29:36.055673665Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 81,
-    "cves": [
-      "CVE-2026-83548",
-      "CVE-2026-83549"
     ]
   }
 ]

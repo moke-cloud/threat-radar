@@ -1,5 +1,172 @@
 [
   {
+    "id": "9afaf83394fa663084684d435533e326",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "CVE-2026-85706: Critical GitLab Path Traversal Exploited in the Wild",
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-85706-critical-gitlab-path-traversal-exploited-in-the-wild",
+    "summary": "OverviewOn September 10, 2026, GitLab published a critical patch release for GitLab Community Edition (CE) and Enterprise Edition (EE). The release addresses CVE-2026-85706, a critical path traversal vulnerability (CWE-22) in the repository commits API with a CVSSv3.1 score of 10.0. According to GitLab, improper path confinement and missing authentication enforcement could allow an unauthenticated user to read arbitrary files from an affected GitLab server under certain conditions.On September 11, 2026, CVE-2026-85706 was added to the U.S. Cybersecurity and Infrastructure Security Agency's (CI...",
+    "published": "2026-09-14T10:02:57Z",
+    "fetched": "2026-09-14T23:56:50.470565081Z",
+    "tags": [
+      "gitlab",
+      "path-traversal",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 69,
+    "vendors": [
+      "gitlab"
+    ],
+    "cves": [
+      "CVE-2026-85706"
+    ]
+  },
+  {
+    "id": "97f6cb3c30d0f395b360742f1b763e75",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-696: Linux Kernel NTFS3 Journal Heap-based Buffer Overflow Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-696/",
+    "summary": "This vulnerability allows local attackers to execute arbitrary code on affected installations of Linux Kernel. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-72196.",
+    "published": "2026-09-14T05:00:00Z",
+    "fetched": "2026-09-14T23:56:50.470565081Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-72196"
+    ]
+  },
+  {
+    "id": "10f958058bf6ce62e87f3b67e224bfdc",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-695: Linux Kernel NFSv4 Server Race Condition Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-695/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Linux Kernel. Authentication is required to exploit this vulnerability. Furthermore, only systems with nfsd enabled are vulnerable. The ZDI has assigned a CVSS rating of 8.5. The following CVEs are assigned: CVE-2026-89688.",
+    "published": "2026-09-14T05:00:00Z",
+    "fetched": "2026-09-14T23:56:50.470565081Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-89688"
+    ]
+  },
+  {
+    "id": "db67b1b034d061d3148315bd0f2288d2",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-693: Linux Kernel ksmbd Share Configuration Race Condition Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-693/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Linux Kernel. Authentication is required to exploit this vulnerability. Furthermore, only systems with ksmbd enabled are vulnerable. The ZDI has assigned a CVSS rating of 8.5.",
+    "published": "2026-09-14T05:00:00Z",
+    "fetched": "2026-09-14T23:56:50.470565081Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "linux"
+    ]
+  },
+  {
+    "id": "a6738c1a600a0f5ceec716e9630c643a",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-692: Linux Kernel eMPIA USB Device Driver Race Condition Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-692/",
+    "summary": "This vulnerability allows physically present attackers to execute arbitrary code on affected installations of Linux Kernel. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.1. The following CVEs are assigned: CVE-2026-31583.",
+    "published": "2026-09-14T05:00:00Z",
+    "fetched": "2026-09-14T23:56:50.470565081Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-31583"
+    ]
+  },
+  {
+    "id": "ee769cfea748e3a33350c29b9afa0a2f",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-684: Linux Kernel KSMBD Query Directory Request Race Condition Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-684/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Linux Kernel KSMBD. Authentication is not required to exploit this vulnerability. Furthermore, only systems with KSMBD enabled are vulnerable. The ZDI has assigned a CVSS rating of 9.0. The following CVEs are assigned: CVE-2026-64397.",
+    "published": "2026-09-14T05:00:00Z",
+    "fetched": "2026-09-14T23:56:50.470565081Z",
+    "tags": [
+      "linux",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-64397"
+    ]
+  },
+  {
+    "id": "3a6e64bfd7aeaa81964c4b0c77de758a",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-76461 — Cisco Secure Email Gateway: Cisco Secure Email Gateway SQL Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76461",
+    "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-17",
+    "published": "2026-09-14T00:00:00Z",
+    "fetched": "2026-09-14T23:56:50.470565081Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "cisco",
+      "watch",
+      "sqli"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-76461"
+    ]
+  },
+  {
     "id": "d188de31097b0e067644a3095f544db4",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -1270,126 +1437,6 @@
     ],
     "cves": [
       "CVE-2026-84936"
-    ]
-  },
-  {
-    "id": "3f03b5362c08aa379f24954d1127cfff",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-19887 — The Welcart e-Commerce plugin for WordPress is vulnerable to PHP Object Injectio…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19887",
-    "summary": "The Welcart e-Commerce plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 2.12.1 via deserialization of untrusted input in the Telecom EDY payment callback (usces_action_acting_transaction). Unauthenticated attackers can store arbitrary 'reserve' key/value pairs as order metadata during a public checkout, then invoke the callback with an attacker-chosen 'option' parameter to select and unserialize that metadata without any provider signature, source-address, transaction-identity or ownership check. A POP chain is present in the TCPDF library bundled with the plugin itself, so no additional plugin or theme is required. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, including wp-config.php, which can lead to remote code execution when an attacker re-runs the WordPress installer against a database they control. Successful exploitation is contingent on an admin printing an invoice to trigger file deletion.",
-    "published": "2026-09-05T07:17:11.657Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "rce",
-      "deserialization",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-19887"
-    ]
-  },
-  {
-    "id": "15f47b42c0cf866acf6582b9a47ede56",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 4.3 MEDIUM] CVE-2026-83628 — The Theme My Login plugin for WordPress is vulnerable to Missing Authorization i…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83628",
-    "summary": "The Theme My Login plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 7.1.15 on Multisite installations. This is due to the `tml_ms_signup_handler()` function's `gimmeanotherblog` branch failing to enforce the network's `active_signup` registration policy, checking only `is_user_logged_in()` while sibling branches such as `validate-blog-signup` apply the full policy gate. This makes it possible for authenticated attackers, with Subscriber-level access and above, to directly POST `stage=gimmeanotherblog` to Theme My Login's signup route, bypassing the configured registration policy entirely — even when it is set to `none` or `user` — which causes `wpmu_create_blog()` to execute with the attacker's user ID, after which WordPress core assigns the Administrator role on the newly created subsite via `add_user_to_blog()`. The privilege gain is scoped to the newly created subsite only; the attacker's account retains Subscriber-level access on the main site and does not obtain Super Admin or network-level capabilities such as `manage_network` or `manage_sites`.",
-    "published": "2026-09-05T06:17:10.23Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-83628"
-    ]
-  },
-  {
-    "id": "446157680fc916d576ad1abb11cd574b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-83627 — The Hummingbird – Speed Optimization, Caching, Minify, Compress & CDN plugin f…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83627",
-    "summary": "The Hummingbird – Speed Optimization, Caching, Minify, Compress & CDN plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 3.21.0 via the log_msg() function in core/modules/class-page-cache.php. The page-cache debug log is written to wp-content/wphb-logs/page-caching-log.php, a directly web-accessible PHP file that is supposed to be protected by a leading '<?php die(); ?>' header. That header is guarded by class_exists( 'Filesystem' ), which can never match because class_exists() resolves string arguments in the global namespace while the class is Hummingbird\\Core\\Filesystem; when the log is created during a front-end request the header is therefore omitted entirely. get_cookies() then writes the raw name of any cookie matching the wphb_cache_ prefix into that file without sanitization. This makes it possible for unauthenticated attackers to write arbitrary PHP into the log file with a single anonymous request and execute it by requesting the file directly, resulting in full remote code execution. Exploitation requires the site administrator to have enabled Page Caching with the Debug Log option (non-default), and the log file to be created during a front-end request — a state reached by the plugin's own 'Clear logs' action, any cache flush, or unattended via the plugin's daily log-rotation cron, which can strip the protective header from an existing log file.",
-    "published": "2026-09-05T06:17:10.08Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-83627"
-    ]
-  },
-  {
-    "id": "5ebf9aad8543f69493ffec546cb198b3",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-13447 — The Mstore Api plugin for WordPress is vulnerable to Authentication Bypass via J…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13447",
-    "summary": "The Mstore Api plugin for WordPress is vulnerable to Authentication Bypass via JWT Forgery in versions up to, and including, 4.20.0 This is due to missing cryptographic signature verification in the FirebasePhoneAuthHelper::verify_id_token() function, which decodes and validates Firebase ID token claims (alg, kid, aud, iss) but never calls openssl_verify() or any equivalent to validate the JWT signature against Google's actual public key certificates. This makes it possible for unauthenticated attackers to forge a Firebase Phone Auth JWT signed with a self-generated RSA key pair and impersonate any phone number, resulting in unauthorized access to existing WordPress accounts or creation of new arbitrary accounts.",
-    "published": "2026-09-05T06:17:09.403Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "critical-cvss",
-      "auth-bypass",
-      "openssl",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "openssl",
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-13447"
-    ]
-  },
-  {
-    "id": "5deb49d802f16d5e215ec24214c4cf0e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 5.6 MEDIUM] CVE-2026-86144 — In xinclude in libxml2 before 2.15.4, xmlXIncludeProcess and xmlXIncludeProcessT…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86144",
-    "summary": "In xinclude in libxml2 before 2.15.4, xmlXIncludeProcess and xmlXIncludeProcessTree do not propagate parseFlags. This has security relevance for, for example, the XML_PARSE_NONET flag, if (without it) a custom resource loader accesses the internet and triggers XML external entity injection, SSRF, or a denial of service (e.g., for an attacker-controlled internet resource that is intentionally slow).",
-    "published": "2026-09-05T05:17:13.407Z",
-    "fetched": "2026-09-06T22:59:20.1405361Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-86144"
     ]
   }
 ]

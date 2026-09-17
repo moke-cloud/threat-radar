@@ -5,7 +5,35 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 16 Sep 2026 23:44:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 23:37:25 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Cisco warns of max severity ISE zero-day exploited in attacks</title>
+      <link>https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/</link>
+      <guid isPermaLink="false">08c9be1803c94505c38b288c7fa484a6</guid>
+      <pubDate>Thu, 17 Sep 2026 07:20:54 +0000</pubDate>
+      <description>Cisco has released security updates to address a maximum-severity Identity Services Engine vulnerability that attackers are actively exploiting in the wild. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>cisco</category>
+      <category>watch</category>
+      <category>actively-exploited</category>
+      <category>0day</category>
+      <category>cisco</category>
+    </item>
+    <item>
+      <title>[CRIT] Cisco Warns of New Zero-Day ISE Auth Bypass (CVSS 10.0) Exploited in Active Attacks</title>
+      <link>https://thehackernews.com/2026/09/cisco-warns-of-new-zero-day-ise-auth.html</link>
+      <guid isPermaLink="false">3aa2ced821e1bb9f2b7a7d0870bdc7d1</guid>
+      <pubDate>Thu, 17 Sep 2026 06:39:40 +0000</pubDate>
+      <description>Cisco has warned of a fresh maximum-severity security flaw impacting Identity Services Engine (ISE) that has come under active exploitation. The vulnerability, tracked as CVE-2026-76460 (CVSS score: 10.0), could allow an unauthenticated, remote attacker to bypass authentication. &#34;This vulnerability is due to insufficient authentication control on an API endpoint,&#34; Cisco said. &#34;An attacker</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
+      <category>critical</category>
+      <category>cisco</category>
+      <category>watch</category>
+      <category>auth-bypass</category>
+      <category>0day</category>
+      <category>cisco</category>
+    </item>
     <item>
       <title>[HIGH] Malware bypasses browser checks to force install Chrome, Edge extensions</title>
       <link>https://www.bleepingcomputer.com/news/security/malware-bypasses-browser-checks-to-force-install-chrome-edge-extensions/</link>
@@ -62,6 +90,19 @@
       <category>high</category>
       <category>actively-exploited</category>
       <category>0day</category>
+    </item>
+    <item>
+      <title>[HIGH] ZDI-26-709: Cisco Secure Firewall Management Center CommandSinkRmi Deserialization of Untrusted Data Remote Code Execution Vulnerability</title>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-709/</link>
+      <guid isPermaLink="false">7b2d33db8d966babd22530a4402c2904</guid>
+      <pubDate>Wed, 16 Sep 2026 05:00:00 +0000</pubDate>
+      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco Secure Firewall Management Center. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-20242.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
+      <category>high</category>
+      <category>cisco</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>cisco</category>
     </item>
     <item>
       <title>[HIGH] ZDI-26-708: (0Day) Microsoft Windows HTTP Proxy Privilege Escalation Vulnerability</title>
@@ -640,6 +681,31 @@
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86060</link>
       <guid isPermaLink="false">72d8fdd91cb426e574616449bd0823f8</guid>
       <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacker to change the trusted RouterOS policy mask, leading to privilege escalation.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-13</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>lpe</category>
+      <category>mikrotik</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-67277 — MikroTik RouterOS: MikroTik RouterOS Missing Authentication for Critical Function Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-67277</link>
+      <guid isPermaLink="false">44b1de891e2e46891f820b6998e6feb1</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <description>MikroTik RouterOS contains a missing authentication for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-13</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>mikrotik</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-86060 — MikroTik RouterOS: MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86060</link>
+      <guid isPermaLink="false">72d8fdd91cb426e574616449bd0823f8</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
       <description>MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-13</description>
       <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
       <category>critical</category>
@@ -737,192 +803,6 @@
       <category>actively-exploited</category>
       <category>0day</category>
       <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-645: Fortinet FortiSandbox write_remote_backup_to_crontab cronValue Command Injection Remote Code Execution Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-645/</link>
-      <guid isPermaLink="false">919ae78813421bee36ae24f4d2366a25</guid>
-      <pubDate>Wed, 09 Sep 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of Fortinet FortiSandbox. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-84387.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[HIGH] Microsoft Patches Record 974 Flaws, Including Two Exploited Windows Zero-Days</title>
-      <link>https://thehackernews.com/2026/09/microsoft-patches-record-974-flaws.html</link>
-      <guid isPermaLink="false">63b5f654877833a41b555694425dc410</guid>
-      <pubDate>Wed, 09 Sep 2026 04:41:29 +0000</pubDate>
-      <description>Microsoft on Tuesday broke Patch Tuesday records by addressing an earth-shattering 974 vulnerabilities spanning its software portfolio, including two flaws that it said have been actively exploited in the wild. These include 723 flaws in Windows, 111 in Office and Office 2016, 62 in SQL, and 22 in Developer Tools. Of these, over 110 shortcomings have been assigned a critical severity rating.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] N-able N-central Pre-Auth RCE Flaw Exploited in the Wild</title>
-      <link>https://thehackernews.com/2026/09/n-able-n-central-pre-auth-rce-flaw.html</link>
-      <guid isPermaLink="false">144cf59e9152332906445cbe06ee0a56</guid>
-      <pubDate>Wed, 09 Sep 2026 04:27:51 +0000</pubDate>
-      <description>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a maximum-severity security flaw impacting N-able N-central to its Known Exploited Vulnerabilities (KEV) catalog, requiring Federal Civilian Executive Branch (FCEB) agencies to apply the fixes by September 11, 2026. The vulnerability in question is CVE-2026-86218 (CVSS score: 10.0), which has been described as a</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-19490 — Citrix NetScaler: Citrix NetScaler Authentication Bypass Using an Alternate Path or Channel Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19490</link>
-      <guid isPermaLink="false">a880d672a188d75a60a39827bf5fd9b2</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Citrix NetScaler ADC and NetScaler Gateway contain an authentication-bypass vulnerability involving an alternate path or channel. When the NetScaler appliance is configured as an AAA virtual server or as a Gateway (SSL VPN, ICA Proxy, CVPN, or RDP Proxy), an unauthenticated remote threat actor may be able to bypass authentication.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-12</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>citrix</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>citrix</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2025-25249 — Fortinet Multiple Products: Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-25249</link>
-      <guid isPermaLink="false">bb111066aa90f55fd16821ccedae133d</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Fortinet FortiOS, FortiSwitchManager, and FortiSASE contain a heap-based buffer overflow vulnerability that allows an attacker to execute unauthorized code or commands via specially crafted packets.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-12</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-87491 — Google Chromium V8: Google Chromium V8 Out of Bounds Write Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87491</link>
-      <guid isPermaLink="false">d1f0fe2ce2cfd4ae54a892884d130e17</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Google Chromium V8 contains an out of bounds write vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-23</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>chrome</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>chrome</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-20079 — Cisco Secure Firewall Management Center (FMC) and Security Cloud Control (SCC) Firewall Management: Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-20079</link>
-      <guid isPermaLink="false">db6d3638e95c69ffcf4e771cbabbc881</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management contain an authentication Bypass using an alternate path or channel vulnerability that could allow an unauthenticated, remote attacker to bypass authentication and execute script files on an affected device to obtain root access to the underlying operating system.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-12</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-19490 — Citrix NetScaler: Citrix NetScaler Authentication Bypass Using an Alternate Path or Channel Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19490</link>
-      <guid isPermaLink="false">a880d672a188d75a60a39827bf5fd9b2</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Citrix NetScaler ADC and NetScaler Gateway contain an authentication-bypass vulnerability involving an alternate path or channel. When the NetScaler appliance is configured as an AAA virtual server or as a Gateway (SSL VPN, ICA Proxy, CVPN, or RDP Proxy), an unauthenticated remote threat actor may be able to bypass authentication.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-12</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>citrix</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>citrix</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2025-25249 — Fortinet Multiple Products: Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-25249</link>
-      <guid isPermaLink="false">bb111066aa90f55fd16821ccedae133d</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Fortinet FortiOS, FortiSwitchManager, and FortiSASE contain a heap-based buffer overflow vulnerability that allows an attacker to execute unauthorized code or commands via specially crafted packets.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-12</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-87491 — Google Chromium V8: Google Chromium V8 Out of Bounds Write Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87491</link>
-      <guid isPermaLink="false">d1f0fe2ce2cfd4ae54a892884d130e17</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Google Chromium V8 contains an out of bounds write vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-23</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>google</category>
-      <category>microsoft</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-20079 — Cisco Secure Firewall Management Center (FMC) and Security Cloud Control (SCC) Firewall Management: Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-20079</link>
-      <guid isPermaLink="false">db6d3638e95c69ffcf4e771cbabbc881</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management contain an authentication Bypass using an alternate path or channel vulnerability that could allow an unauthenticated, remote attacker to bypass authentication and execute script files on an affected device to obtain root access to the underlying operating system.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-12</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[HIGH] Patch Tuesday - September 2026</title>
-      <link>https://www.rapid7.com/blog/post/em-patch-tuesday-september-2026</link>
-      <guid isPermaLink="false">451fdcd8d493f33b965f9f034e90337a</guid>
-      <pubDate>Tue, 08 Sep 2026 21:44:04 +0000</pubDate>
-      <description>Microsoft is publishing 974 own-product vulnerabilities on September 2026 Patch Tuesday, including 723 vulnerabilities in Windows. Along with Microsoft fixes for 25 non-Microsoft CVEs, that brings the total number of vulnerabilities on the table today to 999. Whether this is the biggest Patch Tuesday ever depends on how we count, but this is by far the most CVEs that Microsoft has ever published in a single day. As Rapid7 noted last month, there is no reason to suppose that Patch Tuesday will ever return to the lower volumes we saw prior to 2026. Microsoft is aware of exploitation in the wild ...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Patch Tuesday - September 2026</title>
-      <link>https://www.rapid7.com/blog/post/em-patch-tuesday-september-2026</link>
-      <guid isPermaLink="false">451fdcd8d493f33b965f9f034e90337a</guid>
-      <pubDate>Tue, 08 Sep 2026 21:44:04 +0000</pubDate>
-      <description>Microsoft is publishing 974 own-product vulnerabilities on September 2026 Patch Tuesday, including 723 vulnerabilities in Windows. Along with Microsoft fixes for 25 non-Microsoft CVEs, that brings the total number of vulnerabilities on the table today to 999. Whether this is the biggest Patch Tuesday ever depends on how we count, but this is by far the most CVEs that Microsoft has ever published in a single day. As Rapid7 noted last month, there is no reason to suppose that Patch Tuesday will ever return to the lower volumes we saw prior to 2026. Microsoft is aware of exploitation in the wild ...</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>actively-exploited</category>
-      <category>microsoft</category>
     </item>
   </channel>
 </rss>

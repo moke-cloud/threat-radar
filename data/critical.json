@@ -1,5 +1,128 @@
 [
   {
+    "id": "ac3006372a70475856bf98e585649d21",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-717: Cisco Identity Services Engine AlarmMessageDiskQueue Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-717/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco Identity Services Engine. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-20211.",
+    "published": "2026-09-18T05:00:00Z",
+    "fetched": "2026-09-18T23:29:27.851705535Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20211"
+    ]
+  },
+  {
+    "id": "a21311845e6c03f501cfc072b5c8b164",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-716: Cisco Identity Services Engine createDBLink Command Injection Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-716/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco Identity Services Engine. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-20176.",
+    "published": "2026-09-18T05:00:00Z",
+    "fetched": "2026-09-18T23:29:27.851705535Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20176"
+    ]
+  },
+  {
+    "id": "2817cf58419858e5ce23e12fb8ae16c4",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2025-39964 — Linux Kernel: Linux Kernel Race Condition Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-39964",
+    "summary": "Linux Kernel contains a race condition vulnerability which allows concurrent writes to the same AF_ALG socket causing data to be unpredictably interleaved and creating inconsistencies in the socket's internal state.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-21",
+    "published": "2026-09-18T00:00:00Z",
+    "fetched": "2026-09-18T23:29:27.851705535Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "linux",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2025-39964"
+    ]
+  },
+  {
+    "id": "20a1e6a140e54e657dbe96ccdccdccd7",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-53266 — Linux Kernel: Linux Kernel Out-of-Bounds Write Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53266",
+    "summary": "Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-21",
+    "published": "2026-09-18T00:00:00Z",
+    "fetched": "2026-09-18T23:29:27.851705535Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "linux",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2026-53266"
+    ]
+  },
+  {
+    "id": "d596cc3777c2cd804ce0cd44c1bbebe5",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2025-39682 — Linux Kernel: Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-39682",
+    "summary": "Linux Kernel contains an improper check for unusual or exceptional conditions vulnerability in the TLS receive path which allows a zero-length record retrieved from the rx_list to bypass the intended recvmsg() record-type handling, potentially causing subsequent TLS records to be processed using incorrect zero-copy and queuing assumptions. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-21",
+    "published": "2026-09-18T00:00:00Z",
+    "fetched": "2026-09-18T23:29:27.851705535Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "linux",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "linux"
+    ],
+    "cves": [
+      "CVE-2025-39682"
+    ]
+  },
+  {
     "id": "08c9be1803c94505c38b288c7fa484a6",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -874,6 +997,101 @@
     "category": "vuln",
     "title": "[KEV] CVE-2026-84869 — ConnectWise ScreenConnect: ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84869",
+    "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to transfer and execute files through an active remote session without authorization or host confirmation.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-14",
+    "published": "2026-09-11T00:00:00Z",
+    "fetched": "2026-09-18T23:29:27.851705535Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "connectwise"
+    ],
+    "cves": [
+      "CVE-2026-84869"
+    ]
+  },
+  {
+    "id": "dfd59409fffaa6f45ffb514fb2516ce6",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-42016 — JFrog Artifactory: JFrog Artifactory Incorrect Authorization Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42016",
+    "summary": "JFrog Artifactory contains an incorrect authorization vulnerability that leads to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-25",
+    "published": "2026-09-11T00:00:00Z",
+    "fetched": "2026-09-18T23:29:27.851705535Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "lpe"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "jfrog"
+    ],
+    "cves": [
+      "CVE-2026-42016"
+    ]
+  },
+  {
+    "id": "96a6609b99de570a2bade1b51952e357",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-42018 — JFrog Artifactory: JFrog Artifactory Improper Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42018",
+    "summary": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-25",
+    "published": "2026-09-11T00:00:00Z",
+    "fetched": "2026-09-18T23:29:27.851705535Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "jfrog"
+    ],
+    "cves": [
+      "CVE-2026-42018"
+    ]
+  },
+  {
+    "id": "a405b8dfff8e36812bed889b0bb39292",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-85706 — GitLab Community Edition and Enterprise Edition: GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85706",
+    "summary": "GitLab Community Edition and Enterprise Edition contains a path traversal vulnerability that allows an unauthenticated user to read arbitrary files due to an improper path confinement and missing authentication enforcement in the repository commits API.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-14",
+    "published": "2026-09-11T00:00:00Z",
+    "fetched": "2026-09-18T23:29:27.851705535Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "gitlab",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "gitlab"
+    ],
+    "cves": [
+      "CVE-2026-85706"
+    ]
+  },
+  {
+    "id": "24abfe93b816e77b111b680d7791283d",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-84869 — ConnectWise ScreenConnect: ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84869",
     "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host confirmation.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-14",
     "published": "2026-09-11T00:00:00Z",
     "fetched": "2026-09-11T23:29:14.507970641Z",
@@ -1177,235 +1395,5 @@
     ],
     "severity": "critical",
     "score": 100
-  },
-  {
-    "id": "72d8fdd91cb426e574616449bd0823f8",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-86060 — MikroTik RouterOS: MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86060",
-    "summary": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacker to change the trusted RouterOS policy mask, leading to privilege escalation.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-13",
-    "published": "2026-09-10T00:00:00Z",
-    "fetched": "2026-09-17T23:37:25.213355882Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "lpe"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "mikrotik"
-    ],
-    "cves": [
-      "CVE-2026-86060"
-    ]
-  },
-  {
-    "id": "44b1de891e2e46891f820b6998e6feb1",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-67277 — MikroTik RouterOS: MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67277",
-    "summary": "MikroTik RouterOS contains a missing authentication for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-13",
-    "published": "2026-09-10T00:00:00Z",
-    "fetched": "2026-09-17T23:37:25.213355882Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "mikrotik"
-    ],
-    "cves": [
-      "CVE-2026-67277"
-    ]
-  },
-  {
-    "id": "72d8fdd91cb426e574616449bd0823f8",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-86060 — MikroTik RouterOS: MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86060",
-    "summary": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-13",
-    "published": "2026-09-10T00:00:00Z",
-    "fetched": "2026-09-10T23:20:49.930083037Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "lpe"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "mikrotik"
-    ],
-    "cves": [
-      "CVE-2026-86060"
-    ]
-  },
-  {
-    "id": "44b1de891e2e46891f820b6998e6feb1",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-67277 — MikroTik RouterOS: MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67277",
-    "summary": "MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-13",
-    "published": "2026-09-10T00:00:00Z",
-    "fetched": "2026-09-10T23:20:49.930083037Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "mikrotik"
-    ],
-    "cves": [
-      "CVE-2026-67277"
-    ]
-  },
-  {
-    "id": "f804a379bbbac7024d428c47ad9ba1ac",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Cisco confirms CVE-2026-20079 Secure FMC flaw exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/cisco-confirms-cve-2026-20079-secure-fmc-flaw-exploited-in-attacks/",
-    "summary": "Cisco has confirmed that a maximum-severity authentication bypass vulnerability tracked as CVE-2026-20079 in its Secure Firewall Management Center (FMC) software is being actively exploited in attacks. [...]",
-    "published": "2026-09-09T21:40:44Z",
-    "fetched": "2026-09-09T23:26:23.36600599Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "auth-bypass",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 97,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20079"
-    ]
-  },
-  {
-    "id": "6799496817ae851ba0d8fb26120219ac",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 4.3 MEDIUM] CVE-2026-87875 — The cupsUTF32ToUTF8() function in CUPS's cups/transcode.c lacks a source-length …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87875",
-    "summary": "The cupsUTF32ToUTF8() function in CUPS's cups/transcode.c lacks a source-length bound and can read past the end of the source buffer, resulting in a heap out-of-bounds read. This is reachable via SNMP supply-description parsing in backend/snmp-supplies.c with attacker-controlled content.",
-    "published": "2026-09-09T17:17:53.24Z",
-    "fetched": "2026-09-13T23:21:04.694779683Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-87875"
-    ]
-  },
-  {
-    "id": "c7a9f5265b0b3c912993bcb8416862c5",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Chrome V8 Zero-Day Exploited in the Wild Enables Code Execution Inside Sandbox",
-    "url": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html",
-    "summary": "Google on Thursday released updates to patch 230 security vulnerabilities, including one that has come under active exploitation in the wild. The medium-severity vulnerability, assigned the CVE identifier CVE-2026-87491 (CVSS score: N/A), has been described as an out-of-bounds bug in V8, Chrome's JavaScript and WebAssembly engine. \"Out-of-bounds write in V8 in Google Chrome prior to",
-    "published": "2026-09-09T09:11:03Z",
-    "fetched": "2026-09-09T23:26:23.36600599Z",
-    "tags": [
-      "chrome",
-      "watch",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-87491"
-    ]
-  },
-  {
-    "id": "20c2382d7702e4ca4a04dd16fa2addec",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "New Microsoft Defender 'ShieldCrash' zero-day grants SYSTEM access",
-    "url": "https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldcrash-zero-day-grants-system-access/",
-    "summary": "An anonymous security researcher known as Nightmare Eclipse has released a new Microsoft Defender zero-day exploit named \"ShieldCrash\" right after Microsoft rolled out its September 2026 Patch Tuesday security updates. [...]",
-    "published": "2026-09-09T07:30:15Z",
-    "fetched": "2026-09-09T23:26:23.36600599Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "a045bb780fd8e245a5a61515a1454db5",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Researcher Drops New Microsoft Defender PoC Showing ShieldBreak Patch Can Be Bypassed",
-    "url": "https://thehackernews.com/2026/09/researcher-drops-new-microsoft-defender.html",
-    "summary": "The security researcher known as Chaotic Eclipse has dropped a proof-of-concept (PoC) for yet another zero-day in Microsoft Defender. The vulnerability, codenamed ShieldCrash, is assessed to be a patch bypass for CVE-2026-69414 (CVSS score: 7.8), also called ShieldBreak, which the researcher reported last month. \"Microsoft has failed to properly patch ShieldBreak CVE-2026-69414,\" Chaotic",
-    "published": "2026-09-09T06:47:27Z",
-    "fetched": "2026-09-09T23:26:23.36600599Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-69414"
-    ]
-  },
-  {
-    "id": "a9f1c9e6aff9c4092da7009231b9ea04",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Google warns of new Chrome zero-day bug exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/google-patches-seventh-chrome-zero-day-exploited-in-attacks-this-year/",
-    "summary": "Google has patched 230 vulnerabilities on Tuesday, including another actively exploited Chrome zero-day bug, the seventh such vulnerability patched since the start of the year. [...]",
-    "published": "2026-09-09T06:25:48Z",
-    "fetched": "2026-09-09T23:26:23.36600599Z",
-    "tags": [
-      "chrome",
-      "watch",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "chrome"
-    ]
   }
 ]

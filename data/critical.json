@@ -1,5 +1,66 @@
 [
   {
+    "id": "4be18f34d1cb4311794cb465a30f5e54",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "BigCommerce alerts merchants of data breach linked to Ribon apps",
+    "url": "https://www.bleepingcomputer.com/news/security/bigcommerce-alerts-merchants-of-data-breach-linked-to-ribon-apps/",
+    "summary": "Ecommerce platform BigCommerce has alerted multiple merchants to data breaches after attackers compromised credentials for third-party Ribon applications and used them to inject malicious scripts into online stores. [...]",
+    "published": "2026-09-21T21:18:49Z",
+    "fetched": "2026-09-22T00:13:44.965699186Z",
+    "tags": [
+      "rce",
+      "breach"
+    ],
+    "severity": "high",
+    "score": 72
+  },
+  {
+    "id": "7921e555829d3cc5895d49f5f7058485",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "⚡ Weekly Recap: Cisco 0-Day, AI Agent RCE, ClickFix Attacks, ClickFix Surge, and Browser Hijacks",
+    "url": "https://thehackernews.com/2026/09/weekly-recap-cisco-0-day-ai-agent-rce.html",
+    "summary": "A browser. A plugin. A package. A login screen. Normal stuff. That is basically the problem this week. The trouble keeps showing up inside things people already trust: code that takes a bad turn, old payloads coming back, exposed systems, weak checks, fake fixes, and attack paths that look almost too easy. Even the research side is getting messy, with more findings, more automation, and not",
+    "published": "2026-09-21T14:24:13Z",
+    "fetched": "2026-09-22T00:13:44.965699186Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "cisco"
+    ]
+  },
+  {
+    "id": "faf6169b27dee75bba524c74cc85e86f",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-7273 — Zyxel GS1900 Series Switches: Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7273",
+    "summary": "Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-24",
+    "published": "2026-09-21T00:00:00Z",
+    "fetched": "2026-09-22T00:13:44.965699186Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "zyxel"
+    ],
+    "cves": [
+      "CVE-2026-7273"
+    ]
+  },
+  {
     "id": "1601fa6c8d8c9f2c000d5532a56bef7a",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -1371,6 +1432,32 @@
     "url": "https://www.rapid7.com/blog/post/etr-cve-2026-76461-critical-cisco-secure-email-gateway-vulnerability-exploited-in-the-wild",
     "summary": "OverviewOn September 14, 2026, Cisco published a security advisory for CVE-2026-76461, a critical SQL injection vulnerability affecting Cisco AsyncOS Software for Cisco Secure Email Gateway. The vulnerability has a reported CVSS v3.1 base score of 9.8 and could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on an affected appliance.Cisco Secure Email Gateway, formerly known as IronPort Email Security Appliance, is an enterprise email security product that inspects inbound and outbound email for threats including phishing, malware, spam, and busines...",
     "published": "2026-09-15T12:22:50Z",
+    "fetched": "2026-09-22T00:13:44.965699186Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "sqli",
+      "actively-exploited",
+      "malware"
+    ],
+    "severity": "high",
+    "score": 79,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-76461"
+    ]
+  },
+  {
+    "id": "8539816d6e509f1b749922d23b5bc956",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "CVE-2026-76461: Critical Cisco Secure Email Gateway Vulnerability Exploited in the Wild",
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-76461-critical-cisco-secure-email-gateway-vulnerability-exploited-in-the-wild",
+    "summary": "OverviewOn September 14, 2026, Cisco published a security advisory for CVE-2026-76461, a critical SQL injection vulnerability affecting Cisco AsyncOS Software for Cisco Secure Email Gateway. The vulnerability has a reported CVSS v3.1 base score of 9.8 and could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on an affected appliance.Cisco Secure Email Gateway, formerly known as IronPort Email Security Appliance, is an enterprise email security product that inspects inbound and outbound email for threats including phishing, malware, spam, and busines...",
+    "published": "2026-09-15T12:22:50Z",
     "fetched": "2026-09-15T23:35:39.315463914Z",
     "tags": [
       "cisco",
@@ -1477,6 +1564,30 @@
     "vendors": [
       "chrome",
       "microsoft"
+    ]
+  },
+  {
+    "id": "9afaf83394fa663084684d435533e326",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "CVE-2026-85706: Critical GitLab Path Traversal Exploited in the Wild",
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-85706-critical-gitlab-path-traversal-exploited-in-the-wild",
+    "summary": "OverviewOn September 10, 2026, GitLab published a critical patch release for GitLab Community Edition (CE) and Enterprise Edition (EE). The release addresses CVE-2026-85706, a critical path traversal vulnerability (CWE-22) in the repository commits API with a CVSSv3.1 score of 10.0. According to GitLab, improper path confinement and missing authentication enforcement could allow an unauthenticated user to read arbitrary files from an affected GitLab server under certain conditions.On September 11, 2026, CVE-2026-85706 was added to the U.S. Cybersecurity and Infrastructure Security Agency's (CI...",
+    "published": "2026-09-14T10:02:57Z",
+    "fetched": "2026-09-22T00:13:44.965699186Z",
+    "tags": [
+      "gitlab",
+      "path-traversal",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 69,
+    "vendors": [
+      "gitlab"
+    ],
+    "cves": [
+      "CVE-2026-85706"
     ]
   },
   {
@@ -1629,6 +1740,32 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76461",
     "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-17",
     "published": "2026-09-14T00:00:00Z",
+    "fetched": "2026-09-22T00:13:44.965699186Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "cisco",
+      "watch",
+      "sqli"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-76461"
+    ]
+  },
+  {
+    "id": "3a6e64bfd7aeaa81964c4b0c77de758a",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-76461 — Cisco Secure Email Gateway: Cisco Secure Email Gateway SQL Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76461",
+    "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-17",
+    "published": "2026-09-14T00:00:00Z",
     "fetched": "2026-09-14T23:56:50.470565081Z",
     "tags": [
       "kev",
@@ -1718,55 +1855,6 @@
     ],
     "cves": [
       "CVE-2026-89524"
-    ]
-  },
-  {
-    "id": "80af4ff03fb1dd035c22c59b0990d10e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.3 CRITICAL] CVE-2026-89448 — In the Linux kernel, the following vulnerability has been resolved:\n\niommu/vt-d:…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89448",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\niommu/vt-d: Force requesting ACS when tboot is enabled\n\nCurrently the conditions of requesting ACS in detect_intel_iommu()\ndon't include tboot, leading to a possible misconfiguration with ACS\ndisabled (e.g. due to user opts) while iommu is later forced on by\ntboot_force_iommu().\n\nFix it by checking tboot in detect_intel_iommu().",
-    "published": "2026-09-11T20:19:25.347Z",
-    "fetched": "2026-09-13T23:21:04.694779683Z",
-    "tags": [
-      "critical-cvss",
-      "linux",
-      "watch",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "linux"
-    ],
-    "cves": [
-      "CVE-2026-89448"
-    ]
-  },
-  {
-    "id": "8af7259784e96d382fea40862b5cab8d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.8 HIGH] CVE-2026-81001 — In the Linux kernel, the following vulnerability has been resolved:\n\nslip: fix u…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81001",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nslip: fix use-after-free in sl_sync()\n\nslip_devs[] stores bare net_device pointers and takes no reference on\nthem.  sl_sync() and sl_alloc() walk that table from slip_open() under\nrtnl_lock(), while an entry is dropped by sl_free_netdev(), which\nsl_setup() installs as dev->priv_destructor.\n\npriv_destructor is called from netdev_run_todo(), which deliberately\nruns with the RTNL semaphore released so that it can sleep while waiting\nfor the device refcount to drop:\n\n\t/* Snapshot list, allow later requests */\n\tlist_replace_init(&net_todo_list, &list);\n\n\t__rtnl_unlock();\n\t...\n\t\tif (dev->priv_destructor)\n\t\t\tdev->priv_destructor(dev);\t/* slip_devs[i] = NULL */\n\t\tif (dev->needs_free_netdev)\n\t\t\tfree_netdev(dev);\n\t\t...\n\t\t/* Free network device */\n\t\tkobject_put(&dev->dev.kobj);\n\nSo rtnl_lock() does not serialise slip_open() against the teardown at\nall.  sl_sync() can load slip_devs[i] while the entry is still published\nand dereference it after netdev_run_todo() has run the destructor and\nreleased the device:\n\n  CPU0 (slip_open)                 CPU1 (slip_close)\n                                   unregister_netdev()\n                                     rtnl_unlock()\n                                       netdev_run_todo()\n                                         __rtnl_unlock()\n  rtnl_lock()\n  sl_sync()\n    dev = slip_devs[i]\n                                         priv_destructor(dev)\n                                           slip_devs[i] = NULL\n                                         kobject_put(&dev->dev.kobj)\n                                           /* dev is freed */\n    sl = netdev_priv(dev)\n    if (sl->tty || sl->leased)     /* use-after-free */\n\n  BUG: KASAN: use-after-free in sl_sync drivers/net/slip/slip.c:730 [inline]\n  BUG: KASAN: use-after-free in slip_open+0xef4/0x1210 drivers/net/slip/slip.c:806\n  Read of size 1 at addr ffff8880712dac71 by task syz-executor.2/6506\n\n  CPU: 2 PID: 6506 Comm: syz-executor.2 Not tainted 6.1.134-syzkaller-00260-g0c8fc3469765 #0\n  Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.12.0-1 04/01/2014\n  Call Trace:\n   sl_sync drivers/net/slip/slip.c:730 [inline]\n   slip_open+0xef4/0x1210 drivers/net/slip/slip.c:806\n   tty_ldisc_open+0xa2/0x120 drivers/tty/tty_ldisc.c:433\n   tty_set_ldisc+0x324/0x720 drivers/tty/tty_ldisc.c:564\n   tiocsetd drivers/tty/tty_io.c:2428 [inline]\n   tty_ioctl+0x5f0/0x1530 drivers/tty/tty_io.c:2712\n\n  Allocated by task 6502:\n   alloc_netdev_mqs+0x98/0xfe0 net/core/dev.c:10719\n   sl_alloc drivers/net/slip/slip.c:756 [inline]\n   slip_open+0x36d/0x1210 drivers/net/slip/slip.c:817\n   tty_ldisc_open+0xa2/0x120 drivers/tty/tty_ldisc.c:433\n   tty_set_ldisc+0x324/0x720 drivers/tty/tty_ldisc.c:564\n\n  Freed by task 6497:\n   device_release+0xa2/0x240 drivers/base/core.c:2507\n   kobject_put+0x179/0x280 lib/kobject.c:729\n   netdev_run_todo+0x6c8/0xef0 net/core/dev.c:10509\n   slip_close+0x166/0x1c0 drivers/net/slip/slip.c:906\n   tty_ldisc_close+0x113/0x1a0 drivers/tty/tty_ldisc.c:456\n   tty_ldisc_kill+0x94/0x160 drivers/tty/tty_ldisc.c:614\n   tty_ldisc_release+0xe3/0x2b0 drivers/tty/tty_ldisc.c:782\n   tty_release+0xbcc/0xe70 drivers/tty/tty_io.c:1860\n\nCommit e58c19124189 (\"slip: Fix use-after-free Read in slip_open\") fixed\na different source of stale entries - a device left in slip_devs[] after\nslip_open() freed it on the registration error path - and does not\naddress this race, which is why the report survives it.\n\nDrop the entry from ndo_uninit instead.  unregister_netdevice() calls\nndo_uninit under RTNL, before the device is queued to netdev_run_todo(),\nso an entry that sl_sync() can still see while holding RTNL belongs to a\ndevice that cannot be freed until RTNL is dropped.  sl_free_netdev()\nstays only for the slip_open() error path, where register_netdevice()\nmay have failed before ndo_init and ndo_uninit is then not called\neither.  Both running for the same device is harmless: the\n---truncated---",
-    "published": "2026-09-11T20:19:08.16Z",
-    "fetched": "2026-09-13T23:21:04.694779683Z",
-    "tags": [
-      "linux",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "linux"
-    ],
-    "cves": [
-      "CVE-2026-81001"
     ]
   }
 ]

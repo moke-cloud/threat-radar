@@ -1,5 +1,53 @@
 [
   {
+    "id": "78c7be7db7619e382608c58c5d9c275d",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "JadePuffer agentic AI attacks target Azure, destroy cloud resources",
+    "url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-ai-attacks-target-azure-destroy-cloud-resources/",
+    "summary": "The JadePuffer ransomware operator is targeting Azure tenants with agent-driven attacks that conduct reconnaissance, steal credentials, and destroy core components. [...]",
+    "published": "2026-09-28T15:49:27Z",
+    "fetched": "2026-09-29T01:09:24.66741732Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "ransomware"
+    ],
+    "severity": "high",
+    "score": 62,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "b1ed5cc43be0e2a475f32c32205128bd",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "Zero-Day Exploitation of Citrix NetScaler ADC and Gateway: CVE-2026-88771 and CVE-2026-88772",
+    "url": "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772",
+    "summary": "OverviewOn September 27, 2026, Citrix disclosed eight new vulnerabilities affecting NetScaler ADC and NetScaler Gateway, including two critical remote code execution (RCE) vulnerabilities: CVE-2026-88771 and CVE-2026-88772. Both of these RCE vulnerabilities carry a critical CVSSv4 score of 9.5, and both have been confirmed as being actively exploited in the wild as zero-days prior to the vendor disclosure. CVE-2026-88771 affects vulnerable NetScaler deployments in their default configuration, with no additional product features required. The vendor has also indicated that the attack complexit...",
+    "published": "2026-09-28T10:05:00Z",
+    "fetched": "2026-09-29T01:09:24.66741732Z",
+    "tags": [
+      "citrix",
+      "watch",
+      "rce",
+      "actively-exploited",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 91,
+    "vendors": [
+      "citrix"
+    ],
+    "cves": [
+      "CVE-2026-88771",
+      "CVE-2026-88772"
+    ]
+  },
+  {
     "id": "e5ee7b95aeb434a8ecfe2a35c04057e3",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -592,6 +640,30 @@
     "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-719/",
     "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco ThousandEyes Virtual Appliance. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-20350.",
     "published": "2026-09-22T05:00:00Z",
+    "fetched": "2026-09-29T01:09:24.66741732Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20350"
+    ]
+  },
+  {
+    "id": "01f9e77d748d04b3e11e8011db10f931",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-719: Cisco ThousandEyes Virtual Appliance DHCP Client Command Injection Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-719/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco ThousandEyes Virtual Appliance. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-20350.",
+    "published": "2026-09-22T05:00:00Z",
     "fetched": "2026-09-22T23:43:01.013554688Z",
     "tags": [
       "cisco",
@@ -605,6 +677,100 @@
     ],
     "cves": [
       "CVE-2026-20350"
+    ]
+  },
+  {
+    "id": "8c92e6b80797cf4fc8199f7d445bf07e",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-93952 — Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator Improper Input Validation Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93952",
+    "summary": "Arista VeloCloud Orchestrator (VCO) on-prem contains an improper input validation vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-25",
+    "published": "2026-09-22T00:00:00Z",
+    "fetched": "2026-09-29T01:09:24.66741732Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "arista"
+    ],
+    "cves": [
+      "CVE-2026-93952"
+    ]
+  },
+  {
+    "id": "4483207531726d94d12891eb386c007a",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-94127 — F5 BIG-IP APM: F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94127",
+    "summary": "F5 BIG-IP APM contains a heap-based buffer overflow vulnerability when access policy and an OAuth profile are configured on a virtual server. This vulnerability could allow an unauthenticated attacker to perform remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-25",
+    "published": "2026-09-22T00:00:00Z",
+    "fetched": "2026-09-29T01:09:24.66741732Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "f5"
+    ],
+    "cves": [
+      "CVE-2026-94127"
+    ]
+  },
+  {
+    "id": "d7fb98b2773b952756904c787bb0466e",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-93616 — Check Point Multiple Products: Check Point Multiple Products Path Traversal Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93616",
+    "summary": "Check Point Security Management Server, Multi-Domain Security Management Server, Log Server, Multi-Domain Log Server, and SmartEvent contain a path traversal vulnerability that allows an unauthenticated attacker to upload and execute arbitrary scripts.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-25",
+    "published": "2026-09-22T00:00:00Z",
+    "fetched": "2026-09-29T01:09:24.66741732Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "check"
+    ],
+    "cves": [
+      "CVE-2026-93616"
+    ]
+  },
+  {
+    "id": "f274927470a604fb1ff9b5fb210359a4",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-85102 — Check Point Multiple Products: Check Point Multiple Products Improper Certificate Validation Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85102",
+    "summary": "Check Point Security Gateway and Check Point Spark Firewall using Site to Site VPN or Remote Access VPN contain an improper certificate validation vulnerability which could allow an unauthenticated remote attacker to execute arbitrary code on the Gateway.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-25",
+    "published": "2026-09-22T00:00:00Z",
+    "fetched": "2026-09-29T01:09:24.66741732Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "check"
+    ],
+    "cves": [
+      "CVE-2026-85102"
     ]
   },
   {
@@ -737,6 +903,29 @@
     "score": 68,
     "vendors": [
       "cisco"
+    ]
+  },
+  {
+    "id": "faf6169b27dee75bba524c74cc85e86f",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-7273 — Zyxel GS1900 Series Switches: Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7273",
+    "summary": "Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-24",
+    "published": "2026-09-21T00:00:00Z",
+    "fetched": "2026-09-29T01:09:24.66741732Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "zyxel"
+    ],
+    "cves": [
+      "CVE-2026-7273"
     ]
   },
   {
@@ -2138,163 +2327,6 @@
     ],
     "cves": [
       "CVE-2026-58704"
-    ]
-  },
-  {
-    "id": "7e2ae8dffde0fce1fe109410262e6d53",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-76460 — Cisco Identity Services Engine: Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76460",
-    "summary": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-19",
-    "published": "2026-09-16T00:00:00Z",
-    "fetched": "2026-09-23T23:52:34.047859786Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-76460"
-    ]
-  },
-  {
-    "id": "7bcd8bcc0e29ee2d865d39340ad784a1",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-87886 — Acronis Backup: Acronis Backup Incorrect Default Permissions Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87886",
-    "summary": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-19",
-    "published": "2026-09-16T00:00:00Z",
-    "fetched": "2026-09-23T23:52:34.047859786Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "lpe"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "acronis"
-    ],
-    "cves": [
-      "CVE-2026-87886"
-    ]
-  },
-  {
-    "id": "4de256eceeac6f8897535cf9e6a4ffa7",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-58704 — Google Pixel: Google Pixel Improper Authorization Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58704",
-    "summary": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-19",
-    "published": "2026-09-16T00:00:00Z",
-    "fetched": "2026-09-16T23:44:16.761091446Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google"
-    ],
-    "cves": [
-      "CVE-2026-58704"
-    ]
-  },
-  {
-    "id": "7e2ae8dffde0fce1fe109410262e6d53",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-76460 — Cisco Identity Services Engine: Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76460",
-    "summary": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-19",
-    "published": "2026-09-16T00:00:00Z",
-    "fetched": "2026-09-16T23:44:16.761091446Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-76460"
-    ]
-  },
-  {
-    "id": "7bcd8bcc0e29ee2d865d39340ad784a1",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-87886 — Acronis Backup: Acronis Backup Incorrect Default Permissions Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87886",
-    "summary": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-19",
-    "published": "2026-09-16T00:00:00Z",
-    "fetched": "2026-09-16T23:44:16.761091446Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "lpe"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "acronis"
-    ],
-    "cves": [
-      "CVE-2026-87886"
-    ]
-  },
-  {
-    "id": "4c2bd983adf3dab9b88cda785e210985",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Acronis warns of actively exploited flaw in its cPanel backup plugin",
-    "url": "https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/",
-    "summary": "Acronis disclosed a high-severity Linux local privilege escalation vulnerability in its backup plugin for cPanel, WebHost Manager (WHM), and Plesk that may be exploited in the wild. [...]",
-    "published": "2026-09-15T21:37:35Z",
-    "fetched": "2026-09-15T23:35:39.315463914Z",
-    "tags": [
-      "lpe",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 75
-  },
-  {
-    "id": "4bfb9613c9e76e70202c5004c0b3f1e0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 7.5 HIGH] CVE-2026-91941 — Crawl4AI before 0.9.3 contains an uncontrolled resource consumption vulnerabilit…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91941",
-    "summary": "Crawl4AI before 0.9.3 contains an uncontrolled resource consumption vulnerability in PDFContentScrapingStrategy that allows untrusted clients to cause denial of service. Attackers can select the PDF scraping strategy in POST requests to download large remote PDFs without size or page limits, exhausting disk, CPU, and bandwidth on shared workers.",
-    "published": "2026-09-15T16:17:46Z",
-    "fetched": "2026-09-20T23:21:58.14516882Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-91941"
     ]
   }
 ]

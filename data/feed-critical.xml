@@ -5,7 +5,35 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Sep 2026 23:52:35 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 01:09:24 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] JadePuffer agentic AI attacks target Azure, destroy cloud resources</title>
+      <link>https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-ai-attacks-target-azure-destroy-cloud-resources/</link>
+      <guid isPermaLink="false">78c7be7db7619e382608c58c5d9c275d</guid>
+      <pubDate>Mon, 28 Sep 2026 15:49:27 +0000</pubDate>
+      <description>The JadePuffer ransomware operator is targeting Azure tenants with agent-driven attacks that conduct reconnaissance, steal credentials, and destroy core components. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>ransomware</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[CRIT] Zero-Day Exploitation of Citrix NetScaler ADC and Gateway: CVE-2026-88771 and CVE-2026-88772</title>
+      <link>https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772</link>
+      <guid isPermaLink="false">b1ed5cc43be0e2a475f32c32205128bd</guid>
+      <pubDate>Mon, 28 Sep 2026 10:05:00 +0000</pubDate>
+      <description>OverviewOn September 27, 2026, Citrix disclosed eight new vulnerabilities affecting NetScaler ADC and NetScaler Gateway, including two critical remote code execution (RCE) vulnerabilities: CVE-2026-88771 and CVE-2026-88772. Both of these RCE vulnerabilities carry a critical CVSSv4 score of 9.5, and both have been confirmed as being actively exploited in the wild as zero-days prior to the vendor disclosure. CVE-2026-88771 affects vulnerable NetScaler deployments in their default configuration, with no additional product features required. The vendor has also indicated that the attack complexit...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
+      <category>critical</category>
+      <category>citrix</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>actively-exploited</category>
+      <category>0day</category>
+      <category>citrix</category>
+    </item>
     <item>
       <title>[CRIT] Citrix confirms two NetScaler RCE zero-days exploited in attacks</title>
       <link>https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/</link>
@@ -362,6 +390,69 @@
       <category>cisco</category>
     </item>
     <item>
+      <title>[HIGH] ZDI-26-719: Cisco ThousandEyes Virtual Appliance DHCP Client Command Injection Remote Code Execution Vulnerability</title>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-719/</link>
+      <guid isPermaLink="false">01f9e77d748d04b3e11e8011db10f931</guid>
+      <pubDate>Tue, 22 Sep 2026 05:00:00 +0000</pubDate>
+      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco ThousandEyes Virtual Appliance. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-20350.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
+      <category>high</category>
+      <category>cisco</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>cisco</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-93952 — Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator Improper Input Validation Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93952</link>
+      <guid isPermaLink="false">8c92e6b80797cf4fc8199f7d445bf07e</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Arista VeloCloud Orchestrator (VCO) on-prem contains an improper input validation vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-25</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>arista</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-94127 — F5 BIG-IP APM: F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94127</link>
+      <guid isPermaLink="false">4483207531726d94d12891eb386c007a</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description>F5 BIG-IP APM contains a heap-based buffer overflow vulnerability when access policy and an OAuth profile are configured on a virtual server. This vulnerability could allow an unauthenticated attacker to perform remote code execution.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-25</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>rce</category>
+      <category>f5</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-93616 — Check Point Multiple Products: Check Point Multiple Products Path Traversal Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93616</link>
+      <guid isPermaLink="false">d7fb98b2773b952756904c787bb0466e</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Check Point Security Management Server, Multi-Domain Security Management Server, Log Server, Multi-Domain Log Server, and SmartEvent contain a path traversal vulnerability that allows an unauthenticated attacker to upload and execute arbitrary scripts.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-25</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>path-traversal</category>
+      <category>check</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-85102 — Check Point Multiple Products: Check Point Multiple Products Improper Certificate Validation Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85102</link>
+      <guid isPermaLink="false">f274927470a604fb1ff9b5fb210359a4</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Check Point Security Gateway and Check Point Spark Firewall using Site to Site VPN or Remote Access VPN contain an improper certificate validation vulnerability which could allow an unauthenticated remote attacker to execute arbitrary code on the Gateway.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-25</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>check</category>
+    </item>
+    <item>
       <title>[CRIT] [KEV] CVE-2026-93952 — Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator Improper Input Validation Vulnerability</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93952</link>
       <guid isPermaLink="false">8c92e6b80797cf4fc8199f7d445bf07e</guid>
@@ -434,6 +525,18 @@
       <category>watch</category>
       <category>0day</category>
       <category>cisco</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-7273 — Zyxel GS1900 Series Switches: Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7273</link>
+      <guid isPermaLink="false">faf6169b27dee75bba524c74cc85e86f</guid>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-24</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>zyxel</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2026-7273 — Zyxel GS1900 Series Switches: Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability</title>
@@ -1159,99 +1262,6 @@
       <category>critical</category>
       <category>rce</category>
       <category>0day</category>
-    </item>
-    <item>
-      <title>[CRIT] ZDI-26-706: (0Day) CrewAI crewAI Framework Agent Loading Unsafe Reflection Remote Code Execution Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-706/</link>
-      <guid isPermaLink="false">20cf326f113b42457bc80ceb8461bff9</guid>
-      <pubDate>Wed, 16 Sep 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of CrewAI crewAI. User interaction is required to exploit this vulnerability in that the target must load a malicious agent configuration from the repository. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-92206.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>critical</category>
-      <category>rce</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-705: (0Day) BusyBox libarchive Symlink Directory Traversal Arbitrary File Creation Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-705/</link>
-      <guid isPermaLink="false">1ce2411b8f6b62de24b8df0ae261ef76</guid>
-      <pubDate>Wed, 16 Sep 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to create arbitrary files on affected installations of BusyBox. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 6.1. The following CVEs are assigned: CVE-2026-92205.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>path-traversal</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-704: (0Day) Airbyte OneDrive Connector _get_shared_drive_object Server-Side Request Forgery Information Disclosure Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-704/</link>
-      <guid isPermaLink="false">117f291ef44d9ec1fcb2d29e52b310a6</guid>
-      <pubDate>Wed, 16 Sep 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to initiate arbitrary server-side requests on affected installations of Airbyte. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.7. The following CVEs are assigned: CVE-2026-92204.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-703: (0Day) Airbyte SharePoint Connector _get_shared_drive_object Server-Side Request Forgery Information Disclosure Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-703/</link>
-      <guid isPermaLink="false">1c4d30a0d120d06ee5b42a4903166e0b</guid>
-      <pubDate>Wed, 16 Sep 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to initiate arbitrary server-side requests on affected installations of Airbyte. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.7. The following CVEs are assigned: CVE-2026-92203.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-58704 — Google Pixel: Google Pixel Improper Authorization Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58704</link>
-      <guid isPermaLink="false">4de256eceeac6f8897535cf9e6a4ffa7</guid>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-19</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>google</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-76460 — Cisco Identity Services Engine: Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76460</link>
-      <guid isPermaLink="false">7e2ae8dffde0fce1fe109410262e6d53</guid>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-19</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-87886 — Acronis Backup: Acronis Backup Incorrect Default Permissions Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87886</link>
-      <guid isPermaLink="false">7bcd8bcc0e29ee2d865d39340ad784a1</guid>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Acronis Backup plugin for cPanel &amp; WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-19</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>lpe</category>
-      <category>acronis</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-58704 — Google Pixel: Google Pixel Improper Authorization Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58704</link>
-      <guid isPermaLink="false">4de256eceeac6f8897535cf9e6a4ffa7</guid>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-19</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>google</category>
     </item>
   </channel>
 </rss>

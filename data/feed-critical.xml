@@ -5,7 +5,57 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Sep 2026 01:09:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 00:40:38 +0000</lastBuildDate>
+    <item>
+      <title>[HIGH] Hackers exploit Citrix NetScaler zero-day to deploy web shells</title>
+      <link>https://www.bleepingcomputer.com/news/security/hackers-exploit-citrix-netscaler-zero-day-to-deploy-web-shells/</link>
+      <guid isPermaLink="false">cda387472f3a4a4470a1fdb6877bafdb</guid>
+      <pubDate>Tue, 29 Sep 2026 18:37:12 +0000</pubDate>
+      <description>Cybersecurity firms say attackers exploited the Citrix NetScaler CVE-2026-88772 zero-day to deploy custom web shells and tunneling malware, gain root access, steal credentials, and spread into internal networks. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>citrix</category>
+      <category>watch</category>
+      <category>0day</category>
+      <category>malware</category>
+      <category>citrix</category>
+    </item>
+    <item>
+      <title>[HIGH] ​​Beyond source code: A path to the keys to the kingdom</title>
+      <link>https://www.microsoft.com/en-us/security/blog/2026/09/29/beyond-source-code-a-path-to-the-keys-to-the-kingdom/</link>
+      <guid isPermaLink="false">11804e9f137ed3a6e713df9a6105e505</guid>
+      <pubDate>Tue, 29 Sep 2026 16:00:00 +0000</pubDate>
+      <description>Explore how Storm-3068 turned a compromised identity into broader cloud access and the steps organizations can take to defend their identities, pipelines, and cloud infrastructure. The post ​​Beyond source code: A path to the keys to the kingdom appeared first on Microsoft Security Blog.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
+      <category>high</category>
+      <category>microsoft</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>microsoft</category>
+    </item>
+    <item>
+      <title>[HIGH] Apple patches CoreGraphics zero-day flaw exploited in attacks</title>
+      <link>https://www.bleepingcomputer.com/news/security/apple-patches-coregraphics-zero-day-flaw-exploited-in-attacks/</link>
+      <guid isPermaLink="false">dd0c19898a6aed7bf3306abfd705db05</guid>
+      <pubDate>Tue, 29 Sep 2026 07:33:12 +0000</pubDate>
+      <description>Apple released security updates to fix a zero-day vulnerability exploited in &#34;extremely sophisticated&#34; targeted attacks on iOS devices. [...]</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
+      <category>high</category>
+      <category>0day</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-86950 — Apple Multiple Products: Apple Multiple Products Out-of-Bounds Write Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86950</link>
+      <guid isPermaLink="false">251f22643c6cdfde9e7ea3f28a597274</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-02</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>rce</category>
+      <category>apple</category>
+    </item>
     <item>
       <title>[HIGH] JadePuffer agentic AI attacks target Azure, destroy cloud resources</title>
       <link>https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-ai-attacks-target-azure-destroy-cloud-resources/</link>
@@ -1118,150 +1168,6 @@
       <category>wordpress</category>
       <category>watch</category>
       <category>wordpress</category>
-    </item>
-    <item>
-      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-92580 — In AVideo through 29.0, the CloneSite plugin is vulnerable to stored OS command …</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92580</link>
-      <guid isPermaLink="false">58b833ed98ac9ad2074cb31abeee43fc</guid>
-      <pubDate>Wed, 16 Sep 2026 22:18:28 +0000</pubDate>
-      <description>In AVideo through 29.0, the CloneSite plugin is vulnerable to stored OS command injection. In plugin/CloneSite/cloneClient.json.php (line ~270) the stored SSH password is substituted into the command string `sshpass -p &#39;{password}&#39; rsync ...` with a plain str_replace and no escaping, so a single quote in the password breaks out of the quoted word and injects arbitrary shell. The password is written through the admin-only endpoint objects/pluginAddDataObject.json.php, whose only CSRF defense (isUntrustedRequest()/forbidIfIsUntrustedRequest()) is a no-op when the request source appears to be loopback — as happens behind a same-host TLS-terminating reverse proxy with $global[&#39;trustedProxies&#39;] unset — or when an attacker-controlled application is co-hosted on the same hostname; on HTTPS the session cookie is issued with SameSite=None, so a cross-site POST carries it. An unauthenticated remote attacker can therefore lure an authenticated administrator into planting a malicious password (and an attacker-controlled cloneSiteURL), after which the plugin&#39;s documented crontab entry executes the injected command with no further administrator action, as the crontab owner (commonly root or www-data). Exploitation requires the CloneSite plugin to be enabled with the documented crontab installed and one of the above CSRF channels; default single-process Apache deployments are reported as not CSRF-exploitable. This is a residual sink of CVE-2026-41304. The issue is confirmed at master HEAD (8963b6a1); no patched version is available.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>apache</category>
-      <category>watch</category>
-      <category>apache</category>
-    </item>
-    <item>
-      <title>[HIGH] Malware bypasses browser checks to force install Chrome, Edge extensions</title>
-      <link>https://www.bleepingcomputer.com/news/security/malware-bypasses-browser-checks-to-force-install-chrome-edge-extensions/</link>
-      <guid isPermaLink="false">6b0eb569b23a94b4174ab66ace282598</guid>
-      <pubDate>Wed, 16 Sep 2026 18:50:53 +0000</pubDate>
-      <description>A banking malware operation active since mid-2025 has been using a toolkit named KREMLIN to install malicious Chrome and Edge extensions that steal credentials, session tokens, and sensitive data. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>chrome</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>malware</category>
-      <category>chrome</category>
-    </item>
-    <item>
-      <title>[HIGH] Google Patches Pixel Modem Flaw Amid Signs of Limited Targeted Exploitation</title>
-      <link>https://thehackernews.com/2026/09/google-patches-pixel-modem-flaw-amid.html</link>
-      <guid isPermaLink="false">b08a0dda36b0564f87c54281ec0934aa</guid>
-      <pubDate>Wed, 16 Sep 2026 11:15:58 +0000</pubDate>
-      <description>Google has disclosed that a high-severity security flaw in its Pixel Cellular Modem has come under exploitation in the wild. The vulnerability, tracked as CVE-2026-58704 (CVSS score: 8.0), is a privilege escalation flaw. &#34;In Cellular Modem, there is a possible permission bypass due to a logic error in the code,&#34; according to a description of the bug in the NIST National Vulnerability Database</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>lpe</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[HIGH] Critical ScreenConnect flaw now actively exploited in attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-screenconnect-flaw/</link>
-      <guid isPermaLink="false">8dfc5f97f3971c828734e686292732e6</guid>
-      <pubDate>Wed, 16 Sep 2026 11:14:28 +0000</pubDate>
-      <description>Attackers now exploit a critical-severity ConnectWise ScreenConnect vulnerability in the wild, according to the U.S. Cybersecurity and Infrastructure Security Agency (CISA). [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[HIGH] Acronis cPanel Backup Plugin Vulnerability Exploited in Targeted Attacks</title>
-      <link>https://thehackernews.com/2026/09/acronis-cpanel-backup-plugin.html</link>
-      <guid isPermaLink="false">45b6741bf354d1fa6820ea3042e916ca</guid>
-      <pubDate>Wed, 16 Sep 2026 11:08:54 +0000</pubDate>
-      <description>Acronis has warned that a high-severity security flaw in its Backup plugin for cPanel and Web Host Manager (WHM) deployments has been exploited in the wild. The vulnerability, tracked as CVE-2026-87886 (CVSS score: 7.8), is described as a case of local privilege escalation due to insecure file permissions. It affects the following versions - Acronis Backup plugin for cPanel &amp; WHM (Linux</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>lpe</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[HIGH] Google fixes actively exploited Android zero-day on Pixel devices</title>
-      <link>https://www.bleepingcomputer.com/news/security/google-fixes-actively-exploited-android-zero-day-on-pixel-devices/</link>
-      <guid isPermaLink="false">ffb60a55ebd7b04dae956bc3bcd45d38</guid>
-      <pubDate>Wed, 16 Sep 2026 07:00:19 +0000</pubDate>
-      <description>Google has released the September 2026 security patches to address 110 vulnerabilities affecting its Pixel devices, including one zero-day flaw actively exploited in targeted attacks. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>actively-exploited</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-708: (0Day) Microsoft Windows HTTP Proxy Privilege Escalation Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-708/</link>
-      <guid isPermaLink="false">42659e27579056b84104c9c0c5de1a92</guid>
-      <pubDate>Wed, 16 Sep 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows local attackers to escalate privileges on affected installations of Microsoft Windows. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 5.3.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>lpe</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-707: (0Day) MindsDB OpenBBtable Code Injection Remote Code Execution Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-707/</link>
-      <guid isPermaLink="false">aec5ff6910c9ad1d84f5231a8867e217</guid>
-      <pubDate>Wed, 16 Sep 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of MindsDB. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-92207.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-706: (0Day) CrewAI crewAI Framework Agent Loading Unsafe Reflection Remote Code Execution Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-706/</link>
-      <guid isPermaLink="false">20cf326f113b42457bc80ceb8461bff9</guid>
-      <pubDate>Wed, 16 Sep 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of CrewAI crewAI. User interaction is required to exploit this vulnerability in that the target must load a malicious agent configuration from the repository. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-92206.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-709: Cisco Secure Firewall Management Center CommandSinkRmi Deserialization of Untrusted Data Remote Code Execution Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-709/</link>
-      <guid isPermaLink="false">7b2d33db8d966babd22530a4402c2904</guid>
-      <pubDate>Wed, 16 Sep 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco Secure Firewall Management Center. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-20242.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>cisco</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>cisco</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-708: (0Day) Microsoft Windows HTTP Proxy Privilege Escalation Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-708/</link>
-      <guid isPermaLink="false">42659e27579056b84104c9c0c5de1a92</guid>
-      <pubDate>Wed, 16 Sep 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows local attackers to escalate privileges on affected installations of Microsoft Windows. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 5.3.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>lpe</category>
-      <category>0day</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[CRIT] ZDI-26-707: (0Day) MindsDB OpenBBtable Code Injection Remote Code Execution Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-707/</link>
-      <guid isPermaLink="false">aec5ff6910c9ad1d84f5231a8867e217</guid>
-      <pubDate>Wed, 16 Sep 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of MindsDB. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-92207.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>critical</category>
-      <category>rce</category>
-      <category>0day</category>
     </item>
   </channel>
 </rss>

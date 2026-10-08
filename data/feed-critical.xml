@@ -5,7 +5,7 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Oct 2026 00:55:03 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 01:11:33 +0000</lastBuildDate>
     <item>
       <title>[HIGH] Hackers exploit 32 zero-days on first day of Pwn2Own Ireland</title>
       <link>https://www.bleepingcomputer.com/news/security/hackers-exploit-32-zero-days-on-first-day-of-pwn2own-ireland/</link>
@@ -200,6 +200,20 @@
       <category>cisco</category>
     </item>
     <item>
+      <title>[CRIT] Critical Cisco Catalyst SD-WAN Manager API authentication bypass exploited in the wild (CVE-2026-76504)</title>
+      <link>https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504</link>
+      <guid isPermaLink="false">654b625d0e1d28cd72cb02494c45b1ff</guid>
+      <pubDate>Wed, 30 Sep 2026 15:09:22 +0000</pubDate>
+      <description>OverviewOn September 30, 2026, Cisco published a security advisory for CVE-2026-76504, a critical API authentication bypass vulnerability affecting Cisco Catalyst SD-WAN Manager. The vulnerability has a CVSSv3.1 score of 9.8 and results from improper handling of URL encoding (CWE-177). An unauthenticated, remote attacker can send a crafted HTTP request that bypasses an authentication rule for a specific API endpoint, gaining access to the API with the privileges of the admin user.According to Cisco, CVE-2026-76504 is being actively exploited in the wild; Cisco PSIRT became aware of the activit...</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">Rapid7 Blog</source>
+      <category>critical</category>
+      <category>cisco</category>
+      <category>watch</category>
+      <category>auth-bypass</category>
+      <category>actively-exploited</category>
+      <category>cisco</category>
+    </item>
+    <item>
       <title>[HIGH] Cisco warns of new SD-WAN zero-day exploited in attacks</title>
       <link>https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-sd-wan-authentication-bypass-zero-day-exploited-in-attacks/</link>
       <guid isPermaLink="false">aae9af6a9f7ae7bb6c47a044886e54b8</guid>
@@ -234,6 +248,20 @@
       <category>watch</category>
       <category>actively-exploited</category>
       <category>citrix</category>
+    </item>
+    <item>
+      <title>[CRIT] [KEV] CVE-2026-76504 — Cisco Catalyst SD-WAN Manager: Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76504</link>
+      <guid isPermaLink="false">58c1020c58afc723e561535de16bde5f</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+      <description>Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP request.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-03</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
+      <category>critical</category>
+      <category>kev</category>
+      <category>actively-exploited</category>
+      <category>cisco</category>
+      <category>watch</category>
+      <category>cisco</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2026-76504 — Cisco Catalyst SD-WAN Manager: Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability</title>
@@ -664,29 +692,6 @@
       <category>microsoft</category>
     </item>
     <item>
-      <title>[HIGH] Beyond the ransomware: Tracking Storm-2570’s consistent tradecraft across deployments</title>
-      <link>https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/</link>
-      <guid isPermaLink="false">71298df2fd62ddf3eb4bf0cef575eff9</guid>
-      <pubDate>Thu, 24 Sep 2026 16:00:00 +0000</pubDate>
-      <description>Storm-2570 is a ransomware affiliate that uses consistent post-compromise tools and techniques across deployments involving Qilin, DragonForce, Anubis, and BERT ransomware, and provides guidance to help defenders detect and disrupt this activity before ransomware deployment. The post Beyond the ransomware: Tracking Storm-2570’s consistent tradecraft across deployments appeared first on Microsoft Security Blog.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Microsoft Security Blog</source>
-      <category>high</category>
-      <category>microsoft</category>
-      <category>watch</category>
-      <category>ransomware</category>
-      <category>microsoft</category>
-    </item>
-    <item>
-      <title>[HIGH] Hackers now exploit critical Roundcube flaw in code injection attacks</title>
-      <link>https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/</link>
-      <guid isPermaLink="false">9457e0e057038376f5712240aa57a633</guid>
-      <pubDate>Thu, 24 Sep 2026 13:27:57 +0000</pubDate>
-      <description>A high-severity Roundcube Webmail vulnerability patched in May is now being actively exploited in attacks, according to the Canadian Centre for Cyber Security. [...]</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
-      <category>high</category>
-      <category>actively-exploited</category>
-    </item>
-    <item>
       <title>[CRIT] [KEV] CVE-2026-5430 — WSO2 Multiple Products: WSO2 Multiple Products Path Traversal Vulnerability</title>
       <link>https://nvd.nist.gov/vuln/detail/CVE-2026-5430</link>
       <guid isPermaLink="false">e52efff83dda508cff7e9cb23378f9ff</guid>
@@ -854,30 +859,6 @@
       <category>kev</category>
       <category>actively-exploited</category>
       <category>check</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-7273 — Zyxel GS1900 Series Switches: Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7273</link>
-      <guid isPermaLink="false">faf6169b27dee75bba524c74cc85e86f</guid>
-      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-24</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>zyxel</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-7273 — Zyxel GS1900 Series Switches: Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-7273</link>
-      <guid isPermaLink="false">faf6169b27dee75bba524c74cc85e86f</guid>
-      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
-      <description>Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-09-24</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>zyxel</category>
     </item>
   </channel>
 </rss>

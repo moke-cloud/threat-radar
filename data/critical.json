@@ -1,5 +1,42 @@
 [
   {
+    "id": "5d6002a82d17b2ad5f4d2d0830bfcf0b",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Citrix warns admins to patch new NetScaler RCE flaw immediately",
+    "url": "https://www.bleepingcomputer.com/news/security/citrix-warns-admins-to-patch-new-netscaler-rce-flaw-immediately/",
+    "summary": "Citrix has warned IT administrators to patch systems immediately against a new critical vulnerability affecting NetScaler ADC networking appliances and NetScaler Gateway secure remote access solutions. [...]",
+    "published": "2026-10-09T08:27:42Z",
+    "fetched": "2026-10-10T01:07:43.438656265Z",
+    "tags": [
+      "citrix",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "citrix"
+    ]
+  },
+  {
+    "id": "3f898a86b764cbb856fc8ef8c4242779",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Hackers get $1,262,000 for 98 zero-days at Pwn2Own Ireland",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-earn-1262000-for-98-zero-days-at-pwn2own-ireland/",
+    "summary": "The Pwn2Own Ireland 2026 hacking contest has concluded, with hackers collecting $1,262,000 in rewards after exploiting 98 zero-day flaws. [...]",
+    "published": "2026-10-09T05:41:04Z",
+    "fetched": "2026-10-10T01:07:43.438656265Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
     "id": "6a64d35df72ad3c3fe990a9ea66d0b9f",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -287,6 +324,55 @@
     ],
     "cves": [
       "CVE-2026-104286"
+    ]
+  },
+  {
+    "id": "dee56b5f12370c4a113471e4edf3f702",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-102490 — Zammad GmbH Zammad: Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
+    "summary": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-05",
+    "published": "2026-10-02T00:00:00Z",
+    "fetched": "2026-10-10T01:07:43.438656265Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "zammad"
+    ],
+    "cves": [
+      "CVE-2026-102490",
+      "CVE-2026-102489"
+    ]
+  },
+  {
+    "id": "a3ace7e966b91a999a99c98980ca6b9b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-102489 — Zammad GmbH Zammad: Zammad GmbH Zammad Session Fixation Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102489",
+    "summary": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-05",
+    "published": "2026-10-02T00:00:00Z",
+    "fetched": "2026-10-10T01:07:43.438656265Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "zammad"
+    ],
+    "cves": [
+      "CVE-2026-102489",
+      "CVE-2026-102490"
     ]
   },
   {
@@ -1020,89 +1106,6 @@
     ]
   },
   {
-    "id": "575a9f3b89cf45c656c60dd25a8bb7c0",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw and Deploy Web Shells",
-    "url": "https://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html",
-    "summary": "Google is warning of renewed mass exploitation of a known security vulnerability in Oracle PeopleSoft as part of a campaign targeting multiple sectors globally. The ShinyHunters-linked activity involves the weaponization of CVE-2026-35273 (CVSS score: 9.8), a critical security flaw that could result in unauthenticated remote code execution. The vulnerability was first exploited as a zero-day",
-    "published": "2026-09-26T11:46:40Z",
-    "fetched": "2026-09-26T23:45:31.348143583Z",
-    "tags": [
-      "oracle",
-      "rce",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 78,
-    "vendors": [
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-35273"
-    ]
-  },
-  {
-    "id": "3ba8f9af5c9c31b849522c5a31c3d5cd",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild",
-    "url": "https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Microsoft SharePoint and Mikrotik RouterOS to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerabilities in question are as follows - CVE-2026-65660 (CVSS score: 8.8) - A code injection vulnerability in Microsoft Office SharePoint",
-    "published": "2026-09-26T08:49:53Z",
-    "fetched": "2026-09-26T23:45:31.348143583Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 88,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-65660"
-    ]
-  },
-  {
-    "id": "e78110da65530800eea1123bcf02b6c4",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Kiteworks urges 6-hour server shutdown over potential zero-day attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks/",
-    "summary": "Secure file-sharing software company Kiteworks is urging customers worldwide to temporarily shut down their servers on Saturday for a six-hour window after receiving threat intelligence warning of a potentially imminent cyberattack. [...]",
-    "published": "2026-09-25T21:41:07Z",
-    "fetched": "2026-09-26T00:01:02.496963721Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67
-  },
-  {
-    "id": "72111749a5305ece81184c95078b3bc6",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw",
-    "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/",
-    "summary": "The Clop ransomware gang has moved its data leak site to a new Tor address after confirming its previous server was compromised and defaced through an unpatched Grav CMS flaw that BleepingComputer has learned is an unauthenticated path traversal vulnerability. [...]",
-    "published": "2026-09-25T20:57:55Z",
-    "fetched": "2026-09-26T00:01:02.496963721Z",
-    "tags": [
-      "path-traversal",
-      "ransomware",
-      "breach"
-    ],
-    "severity": "high",
-    "score": 60
-  },
-  {
     "id": "6514638f4b1f4975ea6014d773a22c48",
     "source": "msrc",
     "source_name": "Microsoft Security Blog",
@@ -1124,47 +1127,6 @@
     ]
   },
   {
-    "id": "6514638f4b1f4975ea6014d773a22c48",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "Storm-3168: Agentic-driven cloud attacks using compromised service principals",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/",
-    "summary": "Microsoft details JADEPUFFER-linked Azure reconnaissance, resource deletion, and credential access using compromised service principals, identifying the activity as associated with Storm-3168 and providing guidance for defenders. The post Storm-3168: Agentic-driven cloud attacks using compromised service principals appeared first on Microsoft Security Blog.",
-    "published": "2026-09-25T15:35:08Z",
-    "fetched": "2026-09-26T00:01:02.496963721Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 76,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "b7d12f9e6a9c735f88ba7114b905b5f9",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
-    "url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
-    "summary": "The Canadian Centre for Cyber Security has warned that a now-patched Roundcube Webmail vulnerability is being actively exploited in the wild. The vulnerability in question is CVE-2026-48842 (CVSS score: 8.1), a pre-authentication SQL injection in the virtuser_query plugin of Roundcube Webmail versions 1.6.x before 1.6.16 and 1.7.x before 1.7.1. The issue stems from a preg_replace() backslash",
-    "published": "2026-09-25T10:14:02Z",
-    "fetched": "2026-09-26T00:01:02.496963721Z",
-    "tags": [
-      "sqli",
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 66,
-    "cves": [
-      "CVE-2026-48842"
-    ]
-  },
-  {
     "id": "af75eda0b09c7dbdac6c20205a647b53",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -1173,7 +1135,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67279",
     "summary": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthenticated exploitation of CVE-2026-86060.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-28",
     "published": "2026-09-25T00:00:00Z",
-    "fetched": "2026-10-03T00:37:48.878651114Z",
+    "fetched": "2026-10-10T01:07:43.438656265Z",
     "tags": [
       "kev",
       "actively-exploited"
@@ -1197,7 +1159,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65660",
     "summary": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-28",
     "published": "2026-09-25T00:00:00Z",
-    "fetched": "2026-10-03T00:37:48.878651114Z",
+    "fetched": "2026-10-10T01:07:43.438656265Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1222,7 +1184,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87902",
     "summary": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-28",
     "published": "2026-09-25T00:00:00Z",
-    "fetched": "2026-10-03T00:37:48.878651114Z",
+    "fetched": "2026-10-10T01:07:43.438656265Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1248,7 +1210,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67279",
     "summary": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthenticated exploitation of CVE-2026-86060.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-28",
     "published": "2026-09-25T00:00:00Z",
-    "fetched": "2026-09-26T00:01:02.496963721Z",
+    "fetched": "2026-10-03T00:37:48.878651114Z",
     "tags": [
       "kev",
       "actively-exploited"
@@ -1272,7 +1234,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65660",
     "summary": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-28",
     "published": "2026-09-25T00:00:00Z",
-    "fetched": "2026-09-26T00:01:02.496963721Z",
+    "fetched": "2026-10-03T00:37:48.878651114Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1297,7 +1259,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87902",
     "summary": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-28",
     "published": "2026-09-25T00:00:00Z",
-    "fetched": "2026-09-26T00:01:02.496963721Z",
+    "fetched": "2026-10-03T00:37:48.878651114Z",
     "tags": [
       "kev",
       "actively-exploited",

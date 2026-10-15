@@ -1,5 +1,75 @@
 [
   {
+    "id": "3691b27e3f38749c9e4340c4071fc4fd",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-771: Fortinet FortiSandbox login_user_profile Hard-Coded Credentials Authentication Bypass Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-771/",
+    "summary": "This vulnerability allows remote attackers to bypass authentication on affected installations of Fortinet FortiSandbox. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.3. The following CVEs are assigned: CVE-2026-107656.",
+    "published": "2026-10-15T05:00:00Z",
+    "fetched": "2026-10-15T23:45:17.021982916Z",
+    "tags": [
+      "fortinet",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "fortinet"
+    ],
+    "cves": [
+      "CVE-2026-107656"
+    ]
+  },
+  {
+    "id": "aff96673adc98022015feac69b83226a",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-757: (0Day) Telegram rlottie Numeric Truncation Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-757/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Telegram. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.0. The following CVEs are assigned: CVE-2026-111105.",
+    "published": "2026-10-15T05:00:00Z",
+    "fetched": "2026-10-15T23:45:17.021982916Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 81,
+    "cves": [
+      "CVE-2026-111105"
+    ]
+  },
+  {
+    "id": "320f5ce97cd9f70d4b20fa1a85e29566",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-21589 — Atlassian Multiple Products: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589",
+    "summary": "Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessible to external parties vulnerability which could allow an unauthenticated attacker to access specific files within the web application root directory in affected versions.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-18",
+    "published": "2026-10-15T00:00:00Z",
+    "fetched": "2026-10-15T23:45:17.021982916Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "confluence",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "atlassian",
+      "confluence"
+    ],
+    "cves": [
+      "CVE-2026-21589"
+    ]
+  },
+  {
     "id": "2e242ecb2fb9b437d5670559aa74c31a",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1604,106 +1674,6 @@
     ],
     "cves": [
       "CVE-2026-97413"
-    ]
-  },
-  {
-    "id": "e52efff83dda508cff7e9cb23378f9ff",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-5430 — WSO2 Multiple Products: WSO2 Multiple Products Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5430",
-    "summary": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-27",
-    "published": "2026-09-24T00:00:00Z",
-    "fetched": "2026-10-15T00:01:24.489888301Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "wso2"
-    ],
-    "cves": [
-      "CVE-2026-5430"
-    ]
-  },
-  {
-    "id": "fa12b15eb53e4197b5d3476e0991e2ed",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-71362 — Adobe Commerce and Magento : Adobe Commerce and Magento Incorrect Authorization Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71362",
-    "summary": "Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-27",
-    "published": "2026-09-24T00:00:00Z",
-    "fetched": "2026-10-15T00:01:24.489888301Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "adobe",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-71362"
-    ]
-  },
-  {
-    "id": "e52efff83dda508cff7e9cb23378f9ff",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-5430 — WSO2 Multiple Products: WSO2 Multiple Products Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5430",
-    "summary": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-27",
-    "published": "2026-09-24T00:00:00Z",
-    "fetched": "2026-10-08T01:11:33.549405193Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "wso2"
-    ],
-    "cves": [
-      "CVE-2026-5430"
-    ]
-  },
-  {
-    "id": "fa12b15eb53e4197b5d3476e0991e2ed",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-71362 — Adobe Commerce and Magento : Adobe Commerce and Magento Incorrect Authorization Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71362",
-    "summary": "Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-27",
-    "published": "2026-09-24T00:00:00Z",
-    "fetched": "2026-10-08T01:11:33.549405193Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "adobe",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-71362"
     ]
   }
 ]

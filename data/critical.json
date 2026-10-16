@@ -1,5 +1,90 @@
 [
   {
+    "id": "c3f6408f9006f22236bad7becba2a71e",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "BeyondTrust patches zero-day exploited in attacks since August",
+    "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/",
+    "summary": "BeyondTrust warned customers on Thursday to patch a critical flaw in its Remote Support (RS) that has been exploited in zero-day attacks since late August. [...]",
+    "published": "2026-10-16T06:18:08Z",
+    "fetched": "2026-10-16T23:46:01.586480736Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "a8fe7391561edc88912ab1e4e7d6bdf9",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-779: (0Day) Sparx Systems Enterprise Architect XSLT Debugger XML External Entity Processing Information Disclosure Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-779/",
+    "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Sparx Systems Enterprise Architect. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 5.5. The following CVEs are assigned: CVE-2026-88794.",
+    "published": "2026-10-16T05:00:00Z",
+    "fetched": "2026-10-16T23:46:01.586480736Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 61,
+    "cves": [
+      "CVE-2026-88794"
+    ]
+  },
+  {
+    "id": "3445ee46f24edad9791162bd05ec50f8",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-102764 — BeyondTrust Remote Support: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764",
+    "summary": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-19",
+    "published": "2026-10-16T00:00:00Z",
+    "fetched": "2026-10-16T23:46:01.586480736Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "auth-bypass"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "beyondtrust"
+    ],
+    "cves": [
+      "CVE-2026-102764"
+    ]
+  },
+  {
+    "id": "ef6e641d5ecfe0bee1f6225fd5660904",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2025-61624 — Fortinet Multiple Products: Fortinet Multiple Products Path Traversal Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61624",
+    "summary": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-19",
+    "published": "2026-10-16T00:00:00Z",
+    "fetched": "2026-10-16T23:46:01.586480736Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "fortinet",
+      "watch",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "fortinet"
+    ],
+    "cves": [
+      "CVE-2025-61624"
+    ]
+  },
+  {
     "id": "3691b27e3f38749c9e4340c4071fc4fd",
     "source": "zdi",
     "source_name": "Zero Day Initiative — Published",
@@ -616,6 +701,127 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477",
     "summary": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
     "published": "2026-10-08T00:00:00Z",
+    "fetched": "2026-10-16T23:46:01.586480736Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "isc"
+    ],
+    "cves": [
+      "CVE-2015-5477"
+    ]
+  },
+  {
+    "id": "197f74bc27771d9232dfcb9702081582",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2016-3081 — Apache Struts: Apache Struts Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3081",
+    "summary": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
+    "published": "2026-10-08T00:00:00Z",
+    "fetched": "2026-10-16T23:46:01.586480736Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "apache",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2016-3081"
+    ]
+  },
+  {
+    "id": "8a10003c58970fea530b0ba378bfd24e",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2023-22894 — Strapi Strapi: Strapi Cleartext Storage of Sensitive Information Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22894",
+    "summary": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with CVE-2023-22621 to achieve remote code execution. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
+    "published": "2026-10-08T00:00:00Z",
+    "fetched": "2026-10-16T23:46:01.586480736Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "strapi"
+    ],
+    "cves": [
+      "CVE-2023-22894",
+      "CVE-2023-22621"
+    ]
+  },
+  {
+    "id": "4fe3c2e0b1fe91e6c1823f45df85cca0",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2021-3199 — ONLYOFFICE Docs: ONLYOFFICE Docs Server Path Traversal Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3199",
+    "summary": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
+    "published": "2026-10-08T00:00:00Z",
+    "fetched": "2026-10-16T23:46:01.586480736Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "onlyoffice"
+    ],
+    "cves": [
+      "CVE-2021-3199"
+    ]
+  },
+  {
+    "id": "89169f17ebe2d348f4b5e2702c9d8b53",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2015-3306 — ProFTPD ProFTPD: ProFTPD Improper Access Control Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3306",
+    "summary": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
+    "published": "2026-10-08T00:00:00Z",
+    "fetched": "2026-10-16T23:46:01.586480736Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "proftpd"
+    ],
+    "cves": [
+      "CVE-2015-3306"
+    ]
+  },
+  {
+    "id": "105114ec97391d8374ffcb36b512908f",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2015-5477 — ISC BIND:  ISC BIND Data Processing Errors Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477",
+    "summary": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
+    "published": "2026-10-08T00:00:00Z",
     "fetched": "2026-10-09T01:19:49.367091403Z",
     "tags": [
       "kev",
@@ -1021,48 +1227,6 @@
     ]
   },
   {
-    "id": "d0186094e2901176da28285b35d9f38f",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Fortinet warns of critical FortiMail flaw exploited in zero-day attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/",
-    "summary": "Fortinet is warning customers of a critical FortiMail vulnerability, tracked as CVE-2026-104286, that is being actively exploited in zero-day attacks to execute unauthorized code or commands on vulnerable devices. [...]",
-    "published": "2026-10-01T22:42:49Z",
-    "fetched": "2026-10-02T01:01:44.689848934Z",
-    "tags": [
-      "fortinet",
-      "watch",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "fortinet"
-    ],
-    "cves": [
-      "CVE-2026-104286"
-    ]
-  },
-  {
-    "id": "703e67b35d3d7ef38723d5c66fa7e648",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "ThreatsDay: AI-Powered Zero-Day Chain, 543K Live Secrets, Model Inspection RCE and 13 More Stories",
-    "url": "https://thehackernews.com/2026/10/threatsday-ai-powered-zero-day-chain.html",
-    "summary": "This week, the useful words are boring ones: inspect, cache, compile, store, trust. Each sounds harmless. Each can become an attack path when a system does a little more than people expect. A model check can run code. A cache can mix up requests. A public secret can stay useful for years. That is the lesson running through the list. Attackers do not always need a brilliant new trick. They can",
-    "published": "2026-10-01T16:45:38Z",
-    "fetched": "2026-10-02T01:01:44.689848934Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 78
-  },
-  {
     "id": "4e2276106cae534bf22347e33d09acc5",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -1071,7 +1235,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286",
     "summary": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-04",
     "published": "2026-10-01T00:00:00Z",
-    "fetched": "2026-10-09T01:19:49.367091403Z",
+    "fetched": "2026-10-16T23:46:01.586480736Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1097,7 +1261,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286",
     "summary": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-04",
     "published": "2026-10-01T00:00:00Z",
-    "fetched": "2026-10-02T01:01:44.689848934Z",
+    "fetched": "2026-10-09T01:19:49.367091403Z",
     "tags": [
       "kev",
       "actively-exploited",

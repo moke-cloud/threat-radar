@@ -1,5 +1,51 @@
 [
   {
+    "id": "ff28e74c906a9a6f27844ed5dba782d5",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Hackers exploit SiteGuard WAF flaw to run commands as admins",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/",
+    "summary": "Attackers are targeting an OS command injection vulnerability in SiteGuard Server Edition that lets them execute commands as root or SYSTEM on affected servers. [...]",
+    "published": "2026-10-18T14:23:16Z",
+    "fetched": "2026-10-18T23:31:57.092555114Z",
+    "severity": "low",
+    "score": 27
+  },
+  {
+    "id": "70ec49b2f34ef575507504d51812d780",
+    "source": "sans-isc",
+    "source_name": "SANS Internet Storm Center",
+    "category": "news",
+    "title": "Orphaned VBA Projects Inside DWG Files: YARA Rule, (Sun, Oct 18th)",
+    "url": "https://isc.sans.edu/diary/rss/33434",
+    "summary": "Here is the YARA rule I used to detect \"Orphaned VBA Projects Inside DWG Files\".&#xd;",
+    "published": "2026-10-18T12:59:30Z",
+    "fetched": "2026-10-18T23:31:57.092555114Z",
+    "severity": "medium",
+    "score": 30
+  },
+  {
+    "id": "6fa935d663fc5cbd5612b39530061383",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants",
+    "url": "https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html",
+    "summary": "ConnectWise on Saturday said it has disabled seven ConnectWise application identities as it continues its investigation into an incident in which unknown threat actors obtained unauthorized access to the application identities and compromised Microsoft 365 tenants. The disabled identities are listed below - ConnectWise Cloud Backup - 506e08f9-6e9a-4da4-942b-a099a03644ae ConnectWise",
+    "published": "2026-10-18T08:23:02Z",
+    "fetched": "2026-10-18T23:31:57.092555114Z",
+    "tags": [
+      "microsoft",
+      "watch"
+    ],
+    "severity": "low",
+    "score": 28,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
     "id": "f138dea5e8a8fed37ed7d41072cfc6f2",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -7106,6 +7152,27 @@
     "url": "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/",
     "summary": "Microsoft Threat Intelligence identified NeedyMantis, a modular post-compromise malware framework used in targeted intrusions that combines custom loaders, encrypted archives, and extensible components to maintain long-term access and support follow-on operations. The post NeedyMantis: Unpacking a post-compromise malware family used in targeted operations appeared first on Microsoft Security Blog.",
     "published": "2026-09-28T15:00:00Z",
+    "fetched": "2026-10-18T23:31:57.092555114Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "malware"
+    ],
+    "severity": "medium",
+    "score": 31,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "7fcf8ae4bb6fb35fdd0085198d51a8e3",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "NeedyMantis: Unpacking a post-compromise malware family used in targeted operations",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/",
+    "summary": "Microsoft Threat Intelligence identified NeedyMantis, a modular post-compromise malware framework used in targeted intrusions that combines custom loaders, encrypted archives, and extensible components to maintain long-term access and support follow-on operations. The post NeedyMantis: Unpacking a post-compromise malware family used in targeted operations appeared first on Microsoft Security Blog.",
+    "published": "2026-09-28T15:00:00Z",
     "fetched": "2026-10-06T01:49:57.279277801Z",
     "tags": [
       "microsoft",
@@ -8978,89 +9045,6 @@
     ],
     "cves": [
       "CVE-2026-93244"
-    ]
-  },
-  {
-    "id": "3565ac25a424d599f7c52b724c70ee27",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "CVE-2026-93231 — In the Linux kernel, the following vulnerability has been resolved:\n\nlockd: fix swapped arguments in…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93231",
-    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nlockd: fix swapped arguments in nlmsvc_match_ip()\n\nWhen releasing locks by server IP address via /proc/fs/nfsd/unlock_ip,\nnlmsvc_unlock_all_by_ip() calls nlm_traverse_files() with the server\nsockaddr as the opaque @data argument:\n\n\tnlm_traverse_files(server_addr, nlmsvc_match_ip, NULL);\n\nThe match callback is later invoked from nlm_traverse_locks() as:\n\n\tmatch(lockhost, host);\n\nwhere the first argument is the nlm_host that owns the lock, and the\nsecond argument is the @data that was originally passed down (here the\nserver sockaddr).  This is the convention every other match callback\nrelies on (nlmsvc_mark_host(), nlmsvc_same_host(), nlmsvc_is_client()):\narg1 is the real nlm_host, arg2 is the caller-supplied reference value.\n\nnlmsvc_match_ip() has had these two arguments reversed ever since the\nunlock-by-IP feature was introduced in commit 4373ea84c84d (\"lockd:\nunlock lockd locks associated with a given server ip\"):\n\n\treturn rpc_cmp_addr(nlm_srcaddr(host), datap);\n\nHere @host is actually the server sockaddr, so nlm_srcaddr(host)\ndereferences a struct sockaddr as a struct nlm_host and reads garbage\nat the offset of h_srcaddr; meanwhile @datap is actually the lock\nowner's nlm_host but is compared as a sockaddr.  As a result the\ncomparison practically never matches and locks are not released for the\nrequested IP.\n\nSwap the arguments so the lock owner's source address is compared\nagainst the requested server address:\n\n\treturn rpc_cmp_addr(nlm_srcaddr(datap), (struct sockaddr *)host);\n\n[ cel: fix the misleading typedef parameter names too ]",
-    "published": "2026-09-24T16:17:18.637Z",
-    "fetched": "2026-10-05T00:04:41.377450935Z",
-    "tags": [
-      "linux",
-      "watch",
-      "rce"
-    ],
-    "severity": "medium",
-    "score": 55,
-    "vendors": [
-      "linux"
-    ],
-    "cves": [
-      "CVE-2026-93231"
-    ]
-  },
-  {
-    "id": "71298df2fd62ddf3eb4bf0cef575eff9",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "Beyond the ransomware: Tracking Storm-2570’s consistent tradecraft across deployments",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/",
-    "summary": "Storm-2570 is a ransomware affiliate that uses consistent post-compromise tools and techniques across deployments involving Qilin, DragonForce, Anubis, and BERT ransomware, and provides guidance to help defenders detect and disrupt this activity before ransomware deployment. The post Beyond the ransomware: Tracking Storm-2570’s consistent tradecraft across deployments appeared first on Microsoft Security Blog.",
-    "published": "2026-09-24T16:00:00Z",
-    "fetched": "2026-10-12T00:41:13.37600561Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "ransomware"
-    ],
-    "severity": "medium",
-    "score": 56,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "043503978f4125163bb53dfec0796c48",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "When Business Email Compromise Starts Rewriting Reality",
-    "url": "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve",
-    "summary": "Business Email Compromise (BEC) operates on a familiar playbook. Threat actors breach a mailbox, silently monitor operations, map approval chains, and ultimately exploit that access to divert funds or exfiltrate sensitive assets.This dynamic is central to our analysis as we kick off a series around Rapid7's collaborative research with Zimbra; upcoming installments will explore technical details and broader findings based within the Zimbra Collaboration Suite. Our investigation disrupted the traditional BEC model in unexpected ways. We uncovered over 50 vulnerabilities, and found that several a...",
-    "published": "2026-09-24T13:00:00Z",
-    "fetched": "2026-10-08T01:11:33.549405193Z",
-    "severity": "info",
-    "score": 6
-  },
-  {
-    "id": "e52efff83dda508cff7e9cb23378f9ff",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-5430 — WSO2 Multiple Products: WSO2 Multiple Products Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5430",
-    "summary": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-27",
-    "published": "2026-09-24T00:00:00Z",
-    "fetched": "2026-10-15T00:01:24.489888301Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "wso2"
-    ],
-    "cves": [
-      "CVE-2026-5430"
     ]
   }
 ]

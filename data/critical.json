@@ -1,5 +1,21 @@
 [
   {
+    "id": "722b80571ebaea9749d8ddb1b30e26c2",
+    "source": "krebs",
+    "source_name": "Krebs on Security",
+    "category": "news",
+    "title": "Widespread PHP Flaw May Cause Many Site Outages Today",
+    "url": "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+    "summary": "Expect to see quite a few websites serving \"404\" or \"Page Not Found\" errors today: Nearly 70 percent of websites need to update their core software to fix a pair of vulnerabilities that allow an attacker to seize full control over affected servers. Experts say there are working exploits for the flaws, and that these critical bugs are already being exploited in the wild.",
+    "published": "2026-10-21T15:26:07Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 70
+  },
+  {
     "id": "713670bbc3c27fbd44fb3f506296e2d2",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -295,6 +311,50 @@
     "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-771/",
     "summary": "This vulnerability allows remote attackers to bypass authentication on affected installations of Fortinet FortiSandbox. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.3. The following CVEs are assigned: CVE-2026-107656.",
     "published": "2026-10-15T05:00:00Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
+    "tags": [
+      "fortinet",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "fortinet"
+    ],
+    "cves": [
+      "CVE-2026-107656"
+    ]
+  },
+  {
+    "id": "aff96673adc98022015feac69b83226a",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-757: (0Day) Telegram rlottie Numeric Truncation Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-757/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Telegram. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.0. The following CVEs are assigned: CVE-2026-111105.",
+    "published": "2026-10-15T05:00:00Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 81,
+    "cves": [
+      "CVE-2026-111105"
+    ]
+  },
+  {
+    "id": "3691b27e3f38749c9e4340c4071fc4fd",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-771: Fortinet FortiSandbox login_user_profile Hard-Coded Credentials Authentication Bypass Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-771/",
+    "summary": "This vulnerability allows remote attackers to bypass authentication on affected installations of Fortinet FortiSandbox. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.3. The following CVEs are assigned: CVE-2026-107656.",
+    "published": "2026-10-15T05:00:00Z",
     "fetched": "2026-10-15T23:45:17.021982916Z",
     "tags": [
       "fortinet",
@@ -328,6 +388,32 @@
     "score": 81,
     "cves": [
       "CVE-2026-111105"
+    ]
+  },
+  {
+    "id": "320f5ce97cd9f70d4b20fa1a85e29566",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-21589 — Atlassian Multiple Products: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21589",
+    "summary": "Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessible to external parties vulnerability which could allow an unauthenticated attacker to access specific files within the web application root directory in affected versions.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-18",
+    "published": "2026-10-15T00:00:00Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "confluence",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "atlassian",
+      "confluence"
+    ],
+    "cves": [
+      "CVE-2026-21589"
     ]
   },
   {
@@ -447,6 +533,106 @@
     ],
     "cves": [
       "CVE-2026-104935"
+    ]
+  },
+  {
+    "id": "1cc61304769ab9aeab30bf52835420b8",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-105134 — Ahsay AhsayCBS: Ahsay AhsayCBS Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134",
+    "summary": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
+    "published": "2026-10-14T00:00:00Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "ahsay"
+    ],
+    "cves": [
+      "CVE-2026-105134",
+      "CVE-2026-105133"
+    ]
+  },
+  {
+    "id": "92d7439d2c421711df3e55d483fd9d79",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-76519 — Cisco Secure Email Gateway: Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519",
+    "summary": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
+    "published": "2026-10-14T00:00:00Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "cisco",
+      "watch",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-76519"
+    ]
+  },
+  {
+    "id": "627a8a83a89977cc63f18e9fb5a03ec1",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-105133 — Ahsay AhsayCBS: Ahsay AhsayCBS Improper Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105133",
+    "summary": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be chained with CVE-2026-105134.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
+    "published": "2026-10-14T00:00:00Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "ahsay"
+    ],
+    "cves": [
+      "CVE-2026-105133",
+      "CVE-2026-105134"
+    ]
+  },
+  {
+    "id": "afb31de8ca68d03d736767802e5c5a7c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-0322 — Palo Alto Networks PAN-OS: Palo Alto Networks PAN-OS Code Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322",
+    "summary": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
+    "published": "2026-10-14T00:00:00Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "paloalto",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "palo",
+      "paloalto"
+    ],
+    "cves": [
+      "CVE-2026-0322"
     ]
   },
   {
@@ -1439,31 +1625,6 @@
     ]
   },
   {
-    "id": "654b625d0e1d28cd72cb02494c45b1ff",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Critical Cisco Catalyst SD-WAN Manager API authentication bypass exploited in the wild (CVE-2026-76504)",
-    "url": "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504",
-    "summary": "OverviewOn September 30, 2026, Cisco published a security advisory for CVE-2026-76504, a critical API authentication bypass vulnerability affecting Cisco Catalyst SD-WAN Manager. The vulnerability has a CVSSv3.1 score of 9.8 and results from improper handling of URL encoding (CWE-177). An unauthenticated, remote attacker can send a crafted HTTP request that bypasses an authentication rule for a specific API endpoint, gaining access to the API with the privileges of the admin user.According to Cisco, CVE-2026-76504 is being actively exploited in the wild; Cisco PSIRT became aware of the activit...",
-    "published": "2026-09-30T15:09:22Z",
-    "fetched": "2026-10-08T01:11:33.549405193Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "auth-bypass",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 91,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-76504"
-    ]
-  },
-  {
     "id": "58c1020c58afc723e561535de16bde5f",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -1472,7 +1633,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504",
     "summary": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP request.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-03",
     "published": "2026-09-30T00:00:00Z",
-    "fetched": "2026-10-15T00:01:24.489888301Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1497,7 +1658,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504",
     "summary": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP request.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-03",
     "published": "2026-09-30T00:00:00Z",
-    "fetched": "2026-10-08T01:11:33.549405193Z",
+    "fetched": "2026-10-15T00:01:24.489888301Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1741,6 +1902,27 @@
     "url": "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/",
     "summary": "Microsoft details JADEPUFFER-linked Azure reconnaissance, resource deletion, and credential access using compromised service principals, identifying the activity as associated with Storm-3168 and providing guidance for defenders. The post Storm-3168: Agentic-driven cloud attacks using compromised service principals appeared first on Microsoft Security Blog.",
     "published": "2026-09-25T15:35:08Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "6514638f4b1f4975ea6014d773a22c48",
+    "source": "msrc",
+    "source_name": "Microsoft Security Blog",
+    "category": "advisory",
+    "title": "Storm-3168: Agentic-driven cloud attacks using compromised service principals",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/",
+    "summary": "Microsoft details JADEPUFFER-linked Azure reconnaissance, resource deletion, and credential access using compromised service principals, identifying the activity as associated with Storm-3168 and providing guidance for defenders. The post Storm-3168: Agentic-driven cloud attacks using compromised service principals appeared first on Microsoft Security Blog.",
+    "published": "2026-09-25T15:35:08Z",
     "fetched": "2026-10-12T00:41:13.37600561Z",
     "tags": [
       "microsoft",
@@ -1912,7 +2094,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5430",
     "summary": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-27",
     "published": "2026-09-24T00:00:00Z",
-    "fetched": "2026-10-15T00:01:24.489888301Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1937,7 +2119,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71362",
     "summary": "Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-27",
     "published": "2026-09-24T00:00:00Z",
-    "fetched": "2026-10-15T00:01:24.489888301Z",
+    "fetched": "2026-10-22T00:07:34.175157893Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1962,7 +2144,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5430",
     "summary": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-27",
     "published": "2026-09-24T00:00:00Z",
-    "fetched": "2026-10-08T01:11:33.549405193Z",
+    "fetched": "2026-10-15T00:01:24.489888301Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1976,31 +2158,6 @@
     ],
     "cves": [
       "CVE-2026-5430"
-    ]
-  },
-  {
-    "id": "fa12b15eb53e4197b5d3476e0991e2ed",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-71362 — Adobe Commerce and Magento : Adobe Commerce and Magento Incorrect Authorization Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71362",
-    "summary": "Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-27",
-    "published": "2026-09-24T00:00:00Z",
-    "fetched": "2026-10-08T01:11:33.549405193Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "adobe",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-71362"
     ]
   }
 ]

@@ -1,5 +1,53 @@
 [
   {
+    "id": "20a3c82d8a75bd9cc248ba1172505a4f",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-114625 — Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625",
+    "summary": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-26",
+    "published": "2026-10-23T00:00:00Z",
+    "fetched": "2026-10-23T23:55:14.106300592Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "sqli"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "arista"
+    ],
+    "cves": [
+      "CVE-2026-114625"
+    ]
+  },
+  {
+    "id": "9d3207889d068f585c3eddb3bf7b7a59",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-110447 — Collabora Collabora Online – Built-in CODE Server: Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447",
+    "summary": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-26",
+    "published": "2026-10-23T00:00:00Z",
+    "fetched": "2026-10-23T23:55:14.106300592Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "collabora"
+    ],
+    "cves": [
+      "CVE-2026-110447"
+    ]
+  },
+  {
     "id": "9c9456926a91128d893aad960b7166c5",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -32,6 +80,30 @@
     ],
     "severity": "high",
     "score": 67
+  },
+  {
+    "id": "e8d876c7ee6056e2d3232e9c69a2f4ce",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-788: Cisco Snort OLE VBA Decompression Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-788/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco Snort. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-20218.",
+    "published": "2026-10-22T05:00:00Z",
+    "fetched": "2026-10-23T23:55:14.106300592Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20218"
+    ]
   },
   {
     "id": "722b80571ebaea9749d8ddb1b30e26c2",
@@ -1657,302 +1729,6 @@
     "cves": [
       "CVE-2026-102489",
       "CVE-2026-102490"
-    ]
-  },
-  {
-    "id": "4e2276106cae534bf22347e33d09acc5",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-104286 — Fortinet FortiMail: Fortinet FortiMail Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286",
-    "summary": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-04",
-    "published": "2026-10-01T00:00:00Z",
-    "fetched": "2026-10-23T00:05:03.78536044Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "fortinet",
-      "watch",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "fortinet"
-    ],
-    "cves": [
-      "CVE-2026-104286"
-    ]
-  },
-  {
-    "id": "4e2276106cae534bf22347e33d09acc5",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-104286 — Fortinet FortiMail: Fortinet FortiMail Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104286",
-    "summary": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-04",
-    "published": "2026-10-01T00:00:00Z",
-    "fetched": "2026-10-16T23:46:01.586480736Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "fortinet",
-      "watch",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "fortinet"
-    ],
-    "cves": [
-      "CVE-2026-104286"
-    ]
-  },
-  {
-    "id": "58c1020c58afc723e561535de16bde5f",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-76504 — Cisco Catalyst SD-WAN Manager: Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504",
-    "summary": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP request.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-03",
-    "published": "2026-09-30T00:00:00Z",
-    "fetched": "2026-10-22T00:07:34.175157893Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-76504"
-    ]
-  },
-  {
-    "id": "58c1020c58afc723e561535de16bde5f",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-76504 — Cisco Catalyst SD-WAN Manager: Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76504",
-    "summary": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP request.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-03",
-    "published": "2026-09-30T00:00:00Z",
-    "fetched": "2026-10-15T00:01:24.489888301Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-76504"
-    ]
-  },
-  {
-    "id": "11804e9f137ed3a6e713df9a6105e505",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "​​Beyond source code: A path to the keys to the kingdom",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/29/beyond-source-code-a-path-to-the-keys-to-the-kingdom/",
-    "summary": "Explore how Storm-3068 turned a compromised identity into broader cloud access and the steps organizations can take to defend their identities, pipelines, and cloud infrastructure. The post ​​Beyond source code: A path to the keys to the kingdom appeared first on Microsoft Security Blog.",
-    "published": "2026-09-29T16:00:00Z",
-    "fetched": "2026-10-21T00:02:09.349287421Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "11804e9f137ed3a6e713df9a6105e505",
-    "source": "msrc",
-    "source_name": "Microsoft Security Blog",
-    "category": "advisory",
-    "title": "​​Beyond source code: A path to the keys to the kingdom",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/29/beyond-source-code-a-path-to-the-keys-to-the-kingdom/",
-    "summary": "Explore how Storm-3068 turned a compromised identity into broader cloud access and the steps organizations can take to defend their identities, pipelines, and cloud infrastructure. The post ​​Beyond source code: A path to the keys to the kingdom appeared first on Microsoft Security Blog.",
-    "published": "2026-09-29T16:00:00Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "251f22643c6cdfde9e7ea3f28a597274",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-86950 — Apple Multiple Products: Apple Multiple Products Out-of-Bounds Write Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86950",
-    "summary": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-13",
-    "published": "2026-09-29T00:00:00Z",
-    "fetched": "2026-10-21T00:02:09.349287421Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "apple"
-    ],
-    "cves": [
-      "CVE-2026-86950"
-    ]
-  },
-  {
-    "id": "251f22643c6cdfde9e7ea3f28a597274",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-86950 — Apple Multiple Products: Apple Multiple Products Out-of-Bounds Write Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86950",
-    "summary": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-13",
-    "published": "2026-09-29T00:00:00Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "apple"
-    ],
-    "cves": [
-      "CVE-2026-86950"
-    ]
-  },
-  {
-    "id": "b1ed5cc43be0e2a475f32c32205128bd",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Zero-Day Exploitation of Citrix NetScaler ADC and Gateway: CVE-2026-88771 and CVE-2026-88772",
-    "url": "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772",
-    "summary": "OverviewOn September 27, 2026, Citrix disclosed eight new vulnerabilities affecting NetScaler ADC and NetScaler Gateway, including two critical remote code execution (RCE) vulnerabilities: CVE-2026-88771 and CVE-2026-88772. Both of these RCE vulnerabilities carry a critical CVSSv4 score of 9.5, and both have been confirmed as being actively exploited in the wild as zero-days prior to the vendor disclosure. CVE-2026-88771 affects vulnerable NetScaler deployments in their default configuration, with no additional product features required. The vendor has also indicated that the attack complexit...",
-    "published": "2026-09-28T10:05:00Z",
-    "fetched": "2026-10-13T02:40:25.58236277Z",
-    "tags": [
-      "citrix",
-      "watch",
-      "rce",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 91,
-    "vendors": [
-      "citrix"
-    ],
-    "cves": [
-      "CVE-2026-88771",
-      "CVE-2026-88772"
-    ]
-  },
-  {
-    "id": "dfac9ffbf017410c06d61fbf8aaf2697",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-88772 — Citrix NetScaler: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88772",
-    "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-30",
-    "published": "2026-09-27T00:00:00Z",
-    "fetched": "2026-10-20T00:31:38.651019531Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "citrix",
-      "watch",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "citrix"
-    ],
-    "cves": [
-      "CVE-2026-88772"
-    ]
-  },
-  {
-    "id": "da99820829057cbb74772dd920feea19",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-88771 — Citrix NetScaler: Citrix NetScaler Improper Input Validation Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88771",
-    "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-30",
-    "published": "2026-09-27T00:00:00Z",
-    "fetched": "2026-10-20T00:31:38.651019531Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "citrix",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "citrix"
-    ],
-    "cves": [
-      "CVE-2026-88771"
-    ]
-  },
-  {
-    "id": "dfac9ffbf017410c06d61fbf8aaf2697",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-88772 — Citrix NetScaler: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88772",
-    "summary": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-09-30",
-    "published": "2026-09-27T00:00:00Z",
-    "fetched": "2026-10-12T00:41:13.37600561Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "citrix",
-      "watch",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "citrix"
-    ],
-    "cves": [
-      "CVE-2026-88772"
     ]
   }
 ]

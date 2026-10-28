@@ -1,5 +1,85 @@
 [
   {
+    "id": "9f52bfde32ccb4b6bdfd78ed342ce58a",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Apple backports CoreGraphics zero-day patches to older iPhones",
+    "url": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
+    "summary": "​Apple has backported security patches released last month to older iPhones and iPads, addressing a zero-day bug exploited in \"extremely sophisticated\" targeted attacks on iOS devices. [...]",
+    "published": "2026-10-27T10:36:12Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "47a22918fbeb10ef924ad715bb21b03b",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA confirms PHP2Shell vulnerabilities now exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added the PHP2Shell vulnerabilities to its catalog of actively exploited security flaws and ordered federal agencies to patch their systems by Thursday. [...]",
+    "published": "2026-10-27T08:20:54Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "f129e718cb7493c83881ea0eff3c9261",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48356 — Adobe Commerce and Magento: Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356",
+    "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-10",
+    "published": "2026-10-27T00:00:00Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "adobe",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "adobe"
+    ],
+    "cves": [
+      "CVE-2026-48356"
+    ]
+  },
+  {
+    "id": "10013bdee737aa1d10b459814861db54",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-111497 — Google Brotli: Google Brotli Unchecked Return Value Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497",
+    "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-10",
+    "published": "2026-10-27T00:00:00Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "google"
+    ],
+    "cves": [
+      "CVE-2026-111497"
+    ]
+  },
+  {
     "id": "bb0a9eadcbd84a6aea5f5098a2f6b3ea",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -238,6 +318,158 @@
     ],
     "cves": [
       "CVE-2026-0257"
+    ]
+  },
+  {
+    "id": "d4d94c542a5108c15926db42e0c7bbf1",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-106931 — EG Secure Solutions SiteGuard Server Edition: EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106931",
+    "summary": "EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-23",
+    "published": "2026-10-20T00:00:00Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "eg"
+    ],
+    "cves": [
+      "CVE-2026-106931"
+    ]
+  },
+  {
+    "id": "417c66557493926f1b5c2313a81afd78",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-96656 — Plex Media Server: Plex Media Server External Control of File Name or Path Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96656",
+    "summary": "Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96655.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-23",
+    "published": "2026-10-20T00:00:00Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "plex"
+    ],
+    "cves": [
+      "CVE-2026-96656",
+      "CVE-2026-96652",
+      "CVE-2026-96654",
+      "CVE-2026-96655"
+    ]
+  },
+  {
+    "id": "9df977490410882b8e83d08f05053e6b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-96655 — Plex Media Server: Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96655",
+    "summary": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-03",
+    "published": "2026-10-20T00:00:00Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "plex"
+    ],
+    "cves": [
+      "CVE-2026-96655",
+      "CVE-2026-96652",
+      "CVE-2026-96654",
+      "CVE-2026-96656"
+    ]
+  },
+  {
+    "id": "4151db203993bd08a59d8b77ee68b3f6",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-96654 — Plex Media Server: Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96654",
+    "summary": "Plex Media Server contains an improper neutralization of encoded URI schemes in a web page vulnerability that could allow an attacker to call other plugins' functions and supply their own parameters. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96655, and CVE-2026-96656.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-23",
+    "published": "2026-10-20T00:00:00Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "plex"
+    ],
+    "cves": [
+      "CVE-2026-96654",
+      "CVE-2026-96652",
+      "CVE-2026-96655",
+      "CVE-2026-96656"
+    ]
+  },
+  {
+    "id": "ac17fb0d33c4a681d8cce2bb8c1feba9",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-96652 — Plex Media Server: Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96652",
+    "summary": "Plex Media Server contains a server-side request forgery (SSRF) vulnerability which could allow an attacker using any X-Plex-Token value to include a full URL in the 'protocol' parameter and force the Plex server to POST to the attacker's chosen destination. This vulnerability can be chained with CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-03",
+    "published": "2026-10-20T00:00:00Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "plex"
+    ],
+    "cves": [
+      "CVE-2026-96652",
+      "CVE-2026-96654",
+      "CVE-2026-96655",
+      "CVE-2026-96656"
+    ]
+  },
+  {
+    "id": "90c1f1f9a98f1968820db2f130a967a1",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-110936 — Siemens Software Center: Siemens Software Center Uncontrolled Search Path Element Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110936",
+    "summary": "Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-03",
+    "published": "2026-10-20T00:00:00Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "siemens"
+    ],
+    "cves": [
+      "CVE-2026-110936"
     ]
   },
   {
@@ -980,117 +1212,39 @@
     ]
   },
   {
-    "id": "f36fa0c10fa28bcc1634853cf010dfe7",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Patch Tuesday - October 2026",
-    "url": "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026",
-    "summary": "Microsoft is publishing 1,413 own-product vulnerabilities on October 2026 Patch Tuesday, including 1,102 vulnerabilities in Windows. Anyone who enjoyed last month’s record-setting Patch Tuesday will love the October 2026 edition, because it’s much bigger still. As Rapid7 has noted over the course of 2026, there is every reason to suppose that vulnerability volumes will continue to rise. Microsoft is aware of exploitation in the wild for just one of the vulnerabilities published today, as well as public disclosure for two others.Windows Shell: zero-day security feature bypassThe Windows She...",
-    "published": "2026-10-13T21:40:27Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
+    "id": "9caaa0e980e790ef044247ab7064b08d",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-756: (0Day) Genesis World load_checkpoint Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-756/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Genesis World. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-10-13T05:00:00Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
     "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited",
+      "rce",
       "0day"
     ],
     "severity": "high",
-    "score": 71,
-    "vendors": [
-      "microsoft"
-    ]
+    "score": 66
   },
   {
-    "id": "c296a467aacbbb32679bd9b4246a30f5",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Microsoft October 2026 Patch Tuesday fixes 1,411 flaws, 3 zero-days",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/",
-    "summary": "Today is Microsoft's October 2026 Patch Tuesday, with security updates addressing a record-breaking 1,411 flaws, including one actively exploited and two publicly disclosed zero-day vulnerabilities. [...]",
-    "published": "2026-10-13T19:56:09Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
+    "id": "fda4114b4dd4bd6450192425d861d078",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-752: (0Day) Genesis World decompress_usdz Directory Traversal Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-752/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Genesis World. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-10-13T05:00:00Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
     "tags": [
-      "microsoft",
-      "watch",
-      "actively-exploited",
+      "rce",
+      "path-traversal",
       "0day"
     ],
     "severity": "high",
-    "score": 77,
-    "vendors": [
-      "microsoft"
-    ]
-  },
-  {
-    "id": "b48869eae815024851f53372a1c73c67",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Attacker Chains Three Ivanti Connect Secure Zero-Days for Root Access, Only Two Patched So Far",
-    "url": "https://thehackernews.com/2026/10/attacker-chains-three-ivanti-connect.html",
-    "summary": "An attacker chained three zero-day flaws in Ivanti Connect Secure, a VPN appliance, to run commands as root without logging in, security firm Volexity said on October 13. Ivanti has released fixes for two of the flaws and told customers on affected versions to \"act immediately.\" A fix for the third is still pending, according to Volexity. Volexity, which reported the flaws to Ivanti,",
-    "published": "2026-10-13T17:33:11Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
-    "tags": [
-      "ivanti",
-      "watch",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 68,
-    "vendors": [
-      "ivanti"
-    ]
-  },
-  {
-    "id": "1a9a9e327238b2660dfa1cdfe0f87044",
-    "source": "rapid7",
-    "source_name": "Rapid7 Blog",
-    "category": "research",
-    "title": "Ivanti Connect Secure zero-day exploited in the wild (CVE-2026-104935)",
-    "url": "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935",
-    "summary": "OverviewOn October 13, 2026, Ivanti published a security advisory for CVE-2026-104935, a high-severity authentication bypass by spoofing (CWE-290) affecting Ivanti Connect Secure (ICS). The vulnerability has a CVSSv3.0 score of 8.6 and allows a remote, unauthenticated attacker to execute arbitrary commands.Ivanti reports that exploitation in the wild has already occurred prior to disclosure, affecting a limited number of customers. This indicates that exploitation has been occurring as a zero-day vulnerability. The U.S. Cybersecurity and Infrastructure Security Agency (CISA) confirms exploitat...",
-    "published": "2026-10-13T17:06:05Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
-    "tags": [
-      "ivanti",
-      "watch",
-      "auth-bypass",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 91,
-    "vendors": [
-      "ivanti"
-    ],
-    "cves": [
-      "CVE-2026-104935"
-    ]
-  },
-  {
-    "id": "d1d4ab404fe4c5ecff6c04a6f5048dc2",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Ivanti warns of Connect Secure zero-day exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-connect-secure-zero-day-exploited-in-attacks/",
-    "summary": "Ivanti urged customers on Tuesday to immediately patch an actively exploited zero-day vulnerability in the Ivanti Connect Secure (ICS) remote access gateway. [...]",
-    "published": "2026-10-13T15:45:50Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
-    "tags": [
-      "ivanti",
-      "watch",
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 77,
-    "vendors": [
-      "ivanti"
-    ]
+    "score": 74
   },
   {
     "id": "9caaa0e980e790ef044247ab7064b08d",
@@ -1128,91 +1282,6 @@
     "score": 74
   },
   {
-    "id": "9caaa0e980e790ef044247ab7064b08d",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-756: (0Day) Genesis World load_checkpoint Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-756/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Genesis World. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-10-13T05:00:00Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 81
-  },
-  {
-    "id": "0cf96de26fed33974fc6b76bebce7bd3",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-755: (0Day) Genesis World glTF Server-Side Request Forgery Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-755/",
-    "summary": "This vulnerability allows remote attackers to initiate arbitrary server-side requests on affected installations of Genesis World. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 6.1.",
-    "published": "2026-10-13T05:00:00Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 61
-  },
-  {
-    "id": "fb687ab49ca84f9bc174791c6a630b5e",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-754: (0Day) Genesis World URDF Directory Traversal Information Disclosure Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-754/",
-    "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Genesis World. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 5.5.",
-    "published": "2026-10-13T05:00:00Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
-    "tags": [
-      "path-traversal",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 69
-  },
-  {
-    "id": "8164bc1d959829a390891816c884e760",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-753: (0Day) Genesis World MJCF Directory Traversal Information Disclosure Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-753/",
-    "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Genesis World. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 5.5.",
-    "published": "2026-10-13T05:00:00Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
-    "tags": [
-      "path-traversal",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 69
-  },
-  {
-    "id": "fda4114b4dd4bd6450192425d861d078",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-752: (0Day) Genesis World decompress_usdz Directory Traversal Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-752/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Genesis World. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-10-13T05:00:00Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
-    "tags": [
-      "rce",
-      "path-traversal",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 89
-  },
-  {
     "id": "8c7ad10f4b62addacd2224edd5a7231b",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -1221,7 +1290,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
     "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-16",
     "published": "2026-10-13T00:00:00Z",
-    "fetched": "2026-10-21T00:02:09.349287421Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1247,7 +1316,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951",
     "summary": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-16",
     "published": "2026-10-13T00:00:00Z",
-    "fetched": "2026-10-21T00:02:09.349287421Z",
+    "fetched": "2026-10-28T00:39:19.706965836Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1272,7 +1341,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
     "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-16",
     "published": "2026-10-13T00:00:00Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
+    "fetched": "2026-10-21T00:02:09.349287421Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1298,7 +1367,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951",
     "summary": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-16",
     "published": "2026-10-13T00:00:00Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
+    "fetched": "2026-10-21T00:02:09.349287421Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1554,72 +1623,6 @@
     ],
     "cves": [
       "CVE-2015-3306"
-    ]
-  },
-  {
-    "id": "23b28a1cd106d52ebfffd5bafd9627dc",
-    "source": "sans-isc",
-    "source_name": "SANS Internet Storm Center",
-    "category": "news",
-    "title": "More RMM Tools In the Wild, (Tue, Oct 6th)",
-    "url": "https://isc.sans.edu/diary/rss/33400",
-    "summary": "It seems that a trend started&#x26;#xe2;&#x26;#x80;&#x26;#xa6; I continue my journey discovering more RMM (\"Remote Management &#x26; Monitoring\") tools abused by threat actors&#x21; A few days ago, I wrote a diary&#x5b;1&#x5d; about ScreenConnect used in the wild. Today, I found another one.&#xd;",
-    "published": "2026-10-06T13:16:02Z",
-    "fetched": "2026-10-14T00:29:07.959563656Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 70
-  },
-  {
-    "id": "c91c8e1c3445256cbf32d0f9ac96cd9a",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-88779 — Citrix NetScaler: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88779",
-    "summary": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-07",
-    "published": "2026-10-04T00:00:00Z",
-    "fetched": "2026-10-27T00:41:04.156778577Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "citrix",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "citrix"
-    ],
-    "cves": [
-      "CVE-2026-88779"
-    ]
-  },
-  {
-    "id": "c91c8e1c3445256cbf32d0f9ac96cd9a",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-88779 — Citrix NetScaler: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88779",
-    "summary": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-07",
-    "published": "2026-10-04T00:00:00Z",
-    "fetched": "2026-10-20T00:31:38.651019531Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "citrix",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "citrix"
-    ],
-    "cves": [
-      "CVE-2026-88779"
     ]
   }
 ]

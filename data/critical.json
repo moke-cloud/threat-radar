@@ -1,5 +1,145 @@
 [
   {
+    "id": "0243d8026d10ccdf940905ab84feb6ba",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA warns of Fragnesia Linux flaw chained in PHP2Shell attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) warned federal agencies to patch a high-severity Linux kernel privilege escalation bug that attackers are chaining with the PHP2Shell flaws in the wild. [...]",
+    "published": "2026-10-29T13:59:48Z",
+    "fetched": "2026-10-30T01:15:47.209445384Z",
+    "tags": [
+      "linux",
+      "watch",
+      "lpe",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "linux"
+    ]
+  },
+  {
+    "id": "08690e324fbe54d7523e36cc58751b3c",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
+    "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
+    "summary": "Cisco released security updates to patch a denial-of-service zero-day in Adaptive Security Appliance (ASA) and Threat Defense (FTD) software that attackers are exploiting to remotely crash vulnerable firewall devices. [...]",
+    "published": "2026-10-29T11:10:13Z",
+    "fetched": "2026-10-30T01:15:47.209445384Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "cisco"
+    ]
+  },
+  {
+    "id": "cb335dfc5a9018d9dfabad73ac038196",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
+    "url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
+    "summary": "Cisco has released patches to address a high-severity security flaw in Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software that it said has been exploited in the wild. The vulnerability, tracked as CVE-2026-76418, is rated 8.6 on the CVSS scoring system. Successful exploitation could allow an unauthenticated, remote attacker to cause the",
+    "published": "2026-10-29T10:44:46Z",
+    "fetched": "2026-10-30T01:15:47.209445384Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-76418"
+    ]
+  },
+  {
+    "id": "cd3b4037374f3ba7a8c46c41c682824b",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "China-Linked Hackers Exploited VMware ESX Zero-Day to Reduce Audit Trail Visibility",
+    "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a security flaw impacting Broadcom VMware ESX to its Known Exploited Vulnerabilities (KEV) catalog, after CrowdStrike revealed that it had been weaponized by a China-nexus threat actor known as Warp Panda in attacks targeting the U.S. legal sector. The vulnerability in question is CVE-2026-41709 (CVSS score:",
+    "published": "2026-10-29T06:22:33Z",
+    "fetched": "2026-10-30T01:15:47.209445384Z",
+    "tags": [
+      "vmware",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 68,
+    "vendors": [
+      "vmware"
+    ],
+    "cves": [
+      "CVE-2026-41709"
+    ]
+  },
+  {
+    "id": "d8d3585eb29782bf18265b0afd2ba302",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-97229 — GitLab Community Edition and Enterprise Edition: GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97229",
+    "summary": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-01",
+    "published": "2026-10-29T00:00:00Z",
+    "fetched": "2026-10-30T01:15:47.209445384Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "gitlab"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "gitlab"
+    ],
+    "cves": [
+      "CVE-2026-97229"
+    ]
+  },
+  {
+    "id": "bbb80b0838de84b8521f1e22f4f744a8",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-76418 — Cisco Secure Firewall ASA Software and Cisco Secure FTD Software: Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76418",
+    "summary": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-01",
+    "published": "2026-10-29T00:00:00Z",
+    "fetched": "2026-10-30T01:15:47.209445384Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "cisco",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-76418"
+    ]
+  },
+  {
     "id": "2453f2a66e9444ccc67394a930197dbb",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -585,6 +725,54 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625",
     "summary": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-26",
     "published": "2026-10-23T00:00:00Z",
+    "fetched": "2026-10-30T01:15:47.209445384Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "sqli"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "arista"
+    ],
+    "cves": [
+      "CVE-2026-114625"
+    ]
+  },
+  {
+    "id": "9d3207889d068f585c3eddb3bf7b7a59",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-110447 — Collabora Collabora Online – Built-in CODE Server: Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447",
+    "summary": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-26",
+    "published": "2026-10-23T00:00:00Z",
+    "fetched": "2026-10-30T01:15:47.209445384Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "collabora"
+    ],
+    "cves": [
+      "CVE-2026-110447"
+    ]
+  },
+  {
+    "id": "20a3c82d8a75bd9cc248ba1172505a4f",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-114625 — Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625",
+    "summary": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-26",
+    "published": "2026-10-23T00:00:00Z",
     "fetched": "2026-10-23T23:55:14.106300592Z",
     "tags": [
       "kev",
@@ -1069,22 +1257,6 @@
     ]
   },
   {
-    "id": "c3f6408f9006f22236bad7becba2a71e",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "BeyondTrust patches zero-day exploited in attacks since August",
-    "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/",
-    "summary": "BeyondTrust warned customers on Thursday to patch a critical flaw in its Remote Support (RS) that has been exploited in zero-day attacks since late August. [...]",
-    "published": "2026-10-16T06:18:08Z",
-    "fetched": "2026-10-16T23:46:01.586480736Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67
-  },
-  {
     "id": "a8fe7391561edc88912ab1e4e7d6bdf9",
     "source": "zdi",
     "source_name": "Zero Day Initiative — Published",
@@ -1094,25 +1266,6 @@
     "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Sparx Systems Enterprise Architect. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 5.5. The following CVEs are assigned: CVE-2026-88794.",
     "published": "2026-10-16T05:00:00Z",
     "fetched": "2026-10-23T00:05:03.78536044Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 61,
-    "cves": [
-      "CVE-2026-88794"
-    ]
-  },
-  {
-    "id": "a8fe7391561edc88912ab1e4e7d6bdf9",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-779: (0Day) Sparx Systems Enterprise Architect XSLT Debugger XML External Entity Processing Information Disclosure Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-779/",
-    "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Sparx Systems Enterprise Architect. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 5.5. The following CVEs are assigned: CVE-2026-88794.",
-    "published": "2026-10-16T05:00:00Z",
-    "fetched": "2026-10-16T23:46:01.586480736Z",
     "tags": [
       "0day"
     ],
@@ -1131,7 +1284,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764",
     "summary": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-19",
     "published": "2026-10-16T00:00:00Z",
-    "fetched": "2026-10-23T00:05:03.78536044Z",
+    "fetched": "2026-10-30T01:15:47.209445384Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1155,7 +1308,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61624",
     "summary": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-19",
     "published": "2026-10-16T00:00:00Z",
-    "fetched": "2026-10-23T00:05:03.78536044Z",
+    "fetched": "2026-10-30T01:15:47.209445384Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1181,7 +1334,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102764",
     "summary": "BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-19",
     "published": "2026-10-16T00:00:00Z",
-    "fetched": "2026-10-16T23:46:01.586480736Z",
+    "fetched": "2026-10-23T00:05:03.78536044Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1205,7 +1358,7 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61624",
     "summary": "FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-19",
     "published": "2026-10-16T00:00:00Z",
-    "fetched": "2026-10-16T23:46:01.586480736Z",
+    "fetched": "2026-10-23T00:05:03.78536044Z",
     "tags": [
       "kev",
       "actively-exploited",
@@ -1589,515 +1742,5 @@
     ],
     "severity": "high",
     "score": 66
-  },
-  {
-    "id": "fda4114b4dd4bd6450192425d861d078",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-752: (0Day) Genesis World decompress_usdz Directory Traversal Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-752/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Genesis World. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-10-13T05:00:00Z",
-    "fetched": "2026-10-21T00:02:09.349287421Z",
-    "tags": [
-      "rce",
-      "path-traversal",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 74
-  },
-  {
-    "id": "8c7ad10f4b62addacd2224edd5a7231b",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-104935 — Ivanti Connect Secure: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
-    "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-16",
-    "published": "2026-10-13T00:00:00Z",
-    "fetched": "2026-10-28T00:39:19.706965836Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "ivanti",
-      "watch",
-      "auth-bypass"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "ivanti"
-    ],
-    "cves": [
-      "CVE-2026-104935"
-    ]
-  },
-  {
-    "id": "a67023552d3cb82ec44c1a51ede8410f",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-96951 — Microsoft Windows: Microsoft Windows Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951",
-    "summary": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-16",
-    "published": "2026-10-13T00:00:00Z",
-    "fetched": "2026-10-28T00:39:19.706965836Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-96951"
-    ]
-  },
-  {
-    "id": "8c7ad10f4b62addacd2224edd5a7231b",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-104935 — Ivanti Connect Secure: Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104935",
-    "summary": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-16",
-    "published": "2026-10-13T00:00:00Z",
-    "fetched": "2026-10-21T00:02:09.349287421Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "ivanti",
-      "watch",
-      "auth-bypass"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "ivanti"
-    ],
-    "cves": [
-      "CVE-2026-104935"
-    ]
-  },
-  {
-    "id": "a67023552d3cb82ec44c1a51ede8410f",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-96951 — Microsoft Windows: Microsoft Windows Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96951",
-    "summary": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-16",
-    "published": "2026-10-13T00:00:00Z",
-    "fetched": "2026-10-21T00:02:09.349287421Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-96951"
-    ]
-  },
-  {
-    "id": "105114ec97391d8374ffcb36b512908f",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2015-5477 — ISC BIND:  ISC BIND Data Processing Errors Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477",
-    "summary": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
-    "published": "2026-10-08T00:00:00Z",
-    "fetched": "2026-10-23T00:05:03.78536044Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "isc"
-    ],
-    "cves": [
-      "CVE-2015-5477"
-    ]
-  },
-  {
-    "id": "197f74bc27771d9232dfcb9702081582",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2016-3081 — Apache Struts: Apache Struts Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3081",
-    "summary": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
-    "published": "2026-10-08T00:00:00Z",
-    "fetched": "2026-10-23T00:05:03.78536044Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "apache",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2016-3081"
-    ]
-  },
-  {
-    "id": "8a10003c58970fea530b0ba378bfd24e",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2023-22894 — Strapi Strapi: Strapi Cleartext Storage of Sensitive Information Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22894",
-    "summary": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with CVE-2023-22621 to achieve remote code execution. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
-    "published": "2026-10-08T00:00:00Z",
-    "fetched": "2026-10-23T00:05:03.78536044Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "strapi"
-    ],
-    "cves": [
-      "CVE-2023-22894",
-      "CVE-2023-22621"
-    ]
-  },
-  {
-    "id": "4fe3c2e0b1fe91e6c1823f45df85cca0",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2021-3199 — ONLYOFFICE Docs: ONLYOFFICE Docs Server Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3199",
-    "summary": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
-    "published": "2026-10-08T00:00:00Z",
-    "fetched": "2026-10-23T00:05:03.78536044Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "onlyoffice"
-    ],
-    "cves": [
-      "CVE-2021-3199"
-    ]
-  },
-  {
-    "id": "89169f17ebe2d348f4b5e2702c9d8b53",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2015-3306 — ProFTPD ProFTPD: ProFTPD Improper Access Control Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3306",
-    "summary": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
-    "published": "2026-10-08T00:00:00Z",
-    "fetched": "2026-10-23T00:05:03.78536044Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "proftpd"
-    ],
-    "cves": [
-      "CVE-2015-3306"
-    ]
-  },
-  {
-    "id": "105114ec97391d8374ffcb36b512908f",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2015-5477 — ISC BIND:  ISC BIND Data Processing Errors Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5477",
-    "summary": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
-    "published": "2026-10-08T00:00:00Z",
-    "fetched": "2026-10-16T23:46:01.586480736Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "isc"
-    ],
-    "cves": [
-      "CVE-2015-5477"
-    ]
-  },
-  {
-    "id": "197f74bc27771d9232dfcb9702081582",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2016-3081 — Apache Struts: Apache Struts Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3081",
-    "summary": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
-    "published": "2026-10-08T00:00:00Z",
-    "fetched": "2026-10-16T23:46:01.586480736Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "apache",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2016-3081"
-    ]
-  },
-  {
-    "id": "8a10003c58970fea530b0ba378bfd24e",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2023-22894 — Strapi Strapi: Strapi Cleartext Storage of Sensitive Information Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22894",
-    "summary": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with CVE-2023-22621 to achieve remote code execution. \nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
-    "published": "2026-10-08T00:00:00Z",
-    "fetched": "2026-10-16T23:46:01.586480736Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "strapi"
-    ],
-    "cves": [
-      "CVE-2023-22894",
-      "CVE-2023-22621"
-    ]
-  },
-  {
-    "id": "4fe3c2e0b1fe91e6c1823f45df85cca0",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2021-3199 — ONLYOFFICE Docs: ONLYOFFICE Docs Server Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3199",
-    "summary": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
-    "published": "2026-10-08T00:00:00Z",
-    "fetched": "2026-10-16T23:46:01.586480736Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "onlyoffice"
-    ],
-    "cves": [
-      "CVE-2021-3199"
-    ]
-  },
-  {
-    "id": "89169f17ebe2d348f4b5e2702c9d8b53",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2015-3306 — ProFTPD ProFTPD: ProFTPD Improper Access Control Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3306",
-    "summary": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-11",
-    "published": "2026-10-08T00:00:00Z",
-    "fetched": "2026-10-16T23:46:01.586480736Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "proftpd"
-    ],
-    "cves": [
-      "CVE-2015-3306"
-    ]
-  },
-  {
-    "id": "c91c8e1c3445256cbf32d0f9ac96cd9a",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-88779 — Citrix NetScaler: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88779",
-    "summary": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-07",
-    "published": "2026-10-04T00:00:00Z",
-    "fetched": "2026-10-27T00:41:04.156778577Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "citrix",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "citrix"
-    ],
-    "cves": [
-      "CVE-2026-88779"
-    ]
-  },
-  {
-    "id": "c91c8e1c3445256cbf32d0f9ac96cd9a",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-88779 — Citrix NetScaler: Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88779",
-    "summary": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-07",
-    "published": "2026-10-04T00:00:00Z",
-    "fetched": "2026-10-20T00:31:38.651019531Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "citrix",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "citrix"
-    ],
-    "cves": [
-      "CVE-2026-88779"
-    ]
-  },
-  {
-    "id": "dee56b5f12370c4a113471e4edf3f702",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-102490 — Zammad GmbH Zammad: Zammad GmbH Zammad Improper Privilege Management Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
-    "summary": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-05",
-    "published": "2026-10-02T00:00:00Z",
-    "fetched": "2026-10-24T23:32:25.041816395Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "zammad"
-    ],
-    "cves": [
-      "CVE-2026-102490",
-      "CVE-2026-102489"
-    ]
-  },
-  {
-    "id": "a3ace7e966b91a999a99c98980ca6b9b",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-102489 — Zammad GmbH Zammad: Zammad GmbH Zammad Session Fixation Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102489",
-    "summary": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-05",
-    "published": "2026-10-02T00:00:00Z",
-    "fetched": "2026-10-24T23:32:25.041816395Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "zammad"
-    ],
-    "cves": [
-      "CVE-2026-102489",
-      "CVE-2026-102490"
-    ]
-  },
-  {
-    "id": "dee56b5f12370c4a113471e4edf3f702",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-102490 — Zammad GmbH Zammad: Zammad GmbH Zammad Improper Privilege Management Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
-    "summary": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-05",
-    "published": "2026-10-02T00:00:00Z",
-    "fetched": "2026-10-17T23:18:34.104311885Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "zammad"
-    ],
-    "cves": [
-      "CVE-2026-102490",
-      "CVE-2026-102489"
-    ]
-  },
-  {
-    "id": "a3ace7e966b91a999a99c98980ca6b9b",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-102489 — Zammad GmbH Zammad: Zammad GmbH Zammad Session Fixation Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102489",
-    "summary": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-05",
-    "published": "2026-10-02T00:00:00Z",
-    "fetched": "2026-10-17T23:18:34.104311885Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "zammad"
-    ],
-    "cves": [
-      "CVE-2026-102489",
-      "CVE-2026-102490"
-    ]
   }
 ]

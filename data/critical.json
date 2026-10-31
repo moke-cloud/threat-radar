@@ -1,5 +1,123 @@
 [
   {
+    "id": "d1d1885b1b2797085270f40fe83122e1",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "CISA says max severity GitLab flaw now exploited in the wild",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/",
+    "summary": "Attackers have started exploiting a maximum-severity GitLab vulnerability patched earlier this month, according to the US Cybersecurity and Infrastructure Security Agency (CISA). [...]",
+    "published": "2026-10-30T13:00:32Z",
+    "fetched": "2026-10-31T00:57:44.433879752Z",
+    "tags": [
+      "gitlab",
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "gitlab"
+    ]
+  },
+  {
+    "id": "2839d28ff9722e277903dcd6ea38a698",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Drupal warns of critical Commerce Core flaw exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/",
+    "summary": "Drupal warned admins to patch a critical access bypass vulnerability in the Commerce Core module that attackers are exploiting in the wild. [...]",
+    "published": "2026-10-30T10:16:07Z",
+    "fetched": "2026-10-31T00:57:44.433879752Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 87
+  },
+  {
+    "id": "670fb1a210515b4cd044f73c19bbcfb9",
+    "source": "thehackernews",
+    "source_name": "The Hacker News",
+    "category": "news",
+    "title": "CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV",
+    "url": "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added two security flaws impacting Cisco and GitLab software to its Known Exploited Vulnerabilities (KEV), citing evidence of active exploitation. The vulnerabilities are listed below - CVE-2026-97229 (CVSS score: 10.0) - An integer overflow or wraparound vulnerability in GitLab Community Edition and Enterprise",
+    "published": "2026-10-30T07:27:05Z",
+    "fetched": "2026-10-31T00:57:44.433879752Z",
+    "tags": [
+      "gitlab",
+      "cisco",
+      "watch",
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 88,
+    "vendors": [
+      "gitlab",
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-97229"
+    ]
+  },
+  {
+    "id": "8fff3b1ffdbb2973d3c101895d6d76d9",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-118527 — Ivanti Connect Secure: Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118527",
+    "summary": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-111357.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-13",
+    "published": "2026-10-30T00:00:00Z",
+    "fetched": "2026-10-31T00:57:44.433879752Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "ivanti",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "ivanti"
+    ],
+    "cves": [
+      "CVE-2026-118527",
+      "CVE-2026-104935",
+      "CVE-2026-111357"
+    ]
+  },
+  {
+    "id": "3c8163522c20233cffa053624cbc2f65",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-111357 — Ivanti Connect Secure: Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111357",
+    "summary": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-02",
+    "published": "2026-10-30T00:00:00Z",
+    "fetched": "2026-10-31T00:57:44.433879752Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "ivanti",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "ivanti"
+    ],
+    "cves": [
+      "CVE-2026-111357",
+      "CVE-2026-104935",
+      "CVE-2026-118527"
+    ]
+  },
+  {
     "id": "0243d8026d10ccdf940905ab84feb6ba",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1490,257 +1608,5 @@
     "cves": [
       "CVE-2026-21589"
     ]
-  },
-  {
-    "id": "1cc61304769ab9aeab30bf52835420b8",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-105134 — Ahsay AhsayCBS: Ahsay AhsayCBS Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134",
-    "summary": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
-    "published": "2026-10-14T00:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "ahsay"
-    ],
-    "cves": [
-      "CVE-2026-105134",
-      "CVE-2026-105133"
-    ]
-  },
-  {
-    "id": "92d7439d2c421711df3e55d483fd9d79",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-76519 — Cisco Secure Email Gateway: Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519",
-    "summary": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
-    "published": "2026-10-14T00:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-76519"
-    ]
-  },
-  {
-    "id": "627a8a83a89977cc63f18e9fb5a03ec1",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-105133 — Ahsay AhsayCBS: Ahsay AhsayCBS Improper Authentication Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105133",
-    "summary": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be chained with CVE-2026-105134.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
-    "published": "2026-10-14T00:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "ahsay"
-    ],
-    "cves": [
-      "CVE-2026-105133",
-      "CVE-2026-105134"
-    ]
-  },
-  {
-    "id": "afb31de8ca68d03d736767802e5c5a7c",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-0322 — Palo Alto Networks PAN-OS: Palo Alto Networks PAN-OS Code Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322",
-    "summary": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
-    "published": "2026-10-14T00:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "paloalto",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "palo",
-      "paloalto"
-    ],
-    "cves": [
-      "CVE-2026-0322"
-    ]
-  },
-  {
-    "id": "1cc61304769ab9aeab30bf52835420b8",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-105134 — Ahsay AhsayCBS: Ahsay AhsayCBS Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105134",
-    "summary": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
-    "published": "2026-10-14T00:00:00Z",
-    "fetched": "2026-10-22T00:07:34.175157893Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "ahsay"
-    ],
-    "cves": [
-      "CVE-2026-105134",
-      "CVE-2026-105133"
-    ]
-  },
-  {
-    "id": "92d7439d2c421711df3e55d483fd9d79",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-76519 — Cisco Secure Email Gateway: Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76519",
-    "summary": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
-    "published": "2026-10-14T00:00:00Z",
-    "fetched": "2026-10-22T00:07:34.175157893Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "cisco",
-      "watch",
-      "path-traversal"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-76519"
-    ]
-  },
-  {
-    "id": "627a8a83a89977cc63f18e9fb5a03ec1",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-105133 — Ahsay AhsayCBS: Ahsay AhsayCBS Improper Authentication Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105133",
-    "summary": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be chained with CVE-2026-105134.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
-    "published": "2026-10-14T00:00:00Z",
-    "fetched": "2026-10-22T00:07:34.175157893Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "ahsay"
-    ],
-    "cves": [
-      "CVE-2026-105133",
-      "CVE-2026-105134"
-    ]
-  },
-  {
-    "id": "afb31de8ca68d03d736767802e5c5a7c",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-0322 — Palo Alto Networks PAN-OS: Palo Alto Networks PAN-OS Code Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0322",
-    "summary": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-17",
-    "published": "2026-10-14T00:00:00Z",
-    "fetched": "2026-10-22T00:07:34.175157893Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "paloalto",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "palo",
-      "paloalto"
-    ],
-    "cves": [
-      "CVE-2026-0322"
-    ]
-  },
-  {
-    "id": "9caaa0e980e790ef044247ab7064b08d",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-756: (0Day) Genesis World load_checkpoint Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-756/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Genesis World. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-10-13T05:00:00Z",
-    "fetched": "2026-10-28T00:39:19.706965836Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 66
-  },
-  {
-    "id": "fda4114b4dd4bd6450192425d861d078",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-752: (0Day) Genesis World decompress_usdz Directory Traversal Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-752/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Genesis World. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-10-13T05:00:00Z",
-    "fetched": "2026-10-28T00:39:19.706965836Z",
-    "tags": [
-      "rce",
-      "path-traversal",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 74
-  },
-  {
-    "id": "9caaa0e980e790ef044247ab7064b08d",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-756: (0Day) Genesis World load_checkpoint Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-756/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Genesis World. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-10-13T05:00:00Z",
-    "fetched": "2026-10-21T00:02:09.349287421Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 66
   }
 ]

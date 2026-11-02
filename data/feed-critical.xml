@@ -5,7 +5,7 @@
     <link>https://moke-cloud.github.io/threat-radar/</link>
     <description>Critical and high-severity entries only. Updated daily 06:30 JST.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 00:18:36 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 00:58:08 +0000</lastBuildDate>
     <item>
       <title>[HIGH] Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access</title>
       <link>https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html</link>
@@ -20,6 +20,71 @@
       <category>ivanti</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 7.4 HIGH] CVE-2026-116755 — Improper Neutralization of Special Elements used in a Command (&#39;Command Injectio…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116755</link>
+      <guid isPermaLink="false">2d837df46eb07a181ed37b7eec3b9175</guid>
+      <pubDate>Sat, 31 Oct 2026 02:17:33 +0000</pubDate>
+      <description>Improper Neutralization of Special Elements used in a Command (&#39;Command Injection&#39;) in the Orchestrator component of SoftIron HyperCloud allows an authenticated user with access to the management plane to execute arbitrary operating system commands on hypervisor hosts as the privileged orchestration user. Attacker-controlled virtual machine template content (for example, the VM DESCRIPTION field) is delivered to hosts through a shell here-document whose terminator is not quoted, so shell expansion and here-document terminator injection are performed on that content during virtual machine lifecycle operations such as deploy, migrate, and network setup. Exploitation requires valid credentials, access to the management plane (owning a virtual machine alone is not sufficient), and a lifecycle operation that reaches the affected host. This issue affects the Orchestrator component of SoftIron HyperCloud from 1.0 through 2.6.17 and is fixed in 2.6.18.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-110176 — The File Force Download module for Drupal 7 implements hook_file_download() to add a Content-Disposi…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110176</link>
+      <guid isPermaLink="false">a09ea0c84d8f9dbb366ad94a67930079</guid>
+      <pubDate>Sat, 31 Oct 2026 01:17:05 +0000</pubDate>
+      <description>The File Force Download module for Drupal 7 implements hook_file_download() to add a Content-Disposition header when a file URL carries the download query parameter. In Drupal 7, returning a non-empty header array from that hook is itself a grant of access to the file.&#xA;&#xA;&#xA;&#xA;In versions 7.1.0 through 7.1.2, the module only delegated to other modules&#39; hook_file_download() implementations when the file was in the private scheme. For every other scheme it returned its headers without any check. An unauthenticated visitor who appended download=1 to the URL of a file in the temporary:// scheme, or in a stream wrapper supplied by another module, could retrieve the file, overriding the access checks that would otherwise have applied. Files in the public and private schemes are not affected.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.5 HIGH] CVE-2026-111578 — The PDF Invoices &amp; Packing Slips for WooCommerce WordPress plugin from 5.16.2 be…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111578</link>
+      <guid isPermaLink="false">fe416bd6d0bd766500af8bedcc797718</guid>
+      <pubDate>Fri, 30 Oct 2026 22:16:53 +0000</pubDate>
+      <description>The PDF Invoices &amp; Packing Slips for WooCommerce WordPress plugin from 5.16.2 before 5.16.5 does not properly escape several customer-supplied order fields — including the billing and shipping address values and the customer order note — before they are output in generated invoice and packing-slip documents, allowing unauthenticated users placing guest orders to store a malicious script that executes when a shop administrator views the document, leading to Stored Cross-Site Scripting.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>xss</category>
+      <category>wordpress</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>wordpress</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.0 HIGH] CVE-2026-84243 — The gettext family of functions in the GNU C Library version 2.0 and later accep…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84243</link>
+      <guid isPermaLink="false">e12b7210609c4cf8fba7c2b588637873</guid>
+      <pubDate>Fri, 30 Oct 2026 18:18:13 +0000</pubDate>
+      <description>The gettext family of functions in the GNU C Library version 2.0 and later accept LANGUAGE environment variable entries that contain &#39;/&#39; or that are equal to &#34;..&#34;, unless the program is setuid or setgid (AT_SECURE).  An attacker who can set LANGUAGE in the environment of a program that uses gettext can make it load a message catalog (.mo file) from an arbitrary location in the file system.  A crafted .mo file can crash the program through out-of-range offsets, or supply translations whose format directives do not match the arguments passed by the program.  That causes undefined behaviour in the printf family of functions and may allow arbitrary code execution with the privileges of the program.  The safety of message catalogs relies on them being installed in trusted, read-only locations, and the directory traversal bypasses this.&#xA;&#xA;The fix for CVE-2014-0475 rejects &#34;..&#34; path components in locale names passed to setlocale or taken from the LC_ALL, LC_* and LANG environment variables.  gettext reads LANGUAGE directly and appends each colon-separated entry to the message catalog directory, so that fix did not cover LANGUAGE.&#xA;&#xA;LANGUAGE is only used when the LC_MESSAGES locale is not &#34;C&#34;, &#34;C.&lt;encoding&gt;&#34; or &#34;POSIX&#34;, so the attacker must also be able to select another installed locale, for example through LANG or LC_ALL.  Exploitation also requires that the attacker can place the crafted file in a location readable by the target program, and that the environment crosses a trust boundary without the program running as AT_SECURE.  An example is an SSH server that accepts LANGUAGE and LANG from clients through the AcceptEnv directive and restricts an account to a forced command; the attacker may use this to escape the restriction.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>path-traversal</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-91913 — Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutra…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91913</link>
+      <guid isPermaLink="false">3b3f4586c9ec8d9a575aba9e27003faa</guid>
+      <pubDate>Fri, 30 Oct 2026 14:17:10 +0000</pubDate>
+      <description>Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Command execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-119528 — A flaw was found in GIMP. The PSD plug-in’s image resource header loader uses …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119528</link>
+      <guid isPermaLink="false">f6aa7c1c365d6476fabe3305256c6671</guid>
+      <pubDate>Fri, 30 Oct 2026 14:16:45 +0000</pubDate>
+      <description>A flaw was found in GIMP. The PSD plug-in’s image resource header loader uses an incorrect destination size when copying a converted resource name into a fixed stack buffer. Opening a crafted PSD file can cause a stack-based buffer overflow, leading to a crash and potentially arbitrary code execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[HIGH] CISA says max severity GitLab flaw now exploited in the wild</title>
       <link>https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/</link>
       <guid isPermaLink="false">d1d1885b1b2797085270f40fe83122e1</guid>
@@ -30,6 +95,36 @@
       <category>gitlab</category>
       <category>actively-exploited</category>
       <category>gitlab</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-111505 — Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutra…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111505</link>
+      <guid isPermaLink="false">c9ae3c16efd46f9559ce80bed2f1fbaf</guid>
+      <pubDate>Fri, 30 Oct 2026 12:16:35 +0000</pubDate>
+      <description>Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Command execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-101214 — Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutra…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101214</link>
+      <guid isPermaLink="false">f3051bcdea6cd6ff5a2a66a8578df7b2</guid>
+      <pubDate>Fri, 30 Oct 2026 12:16:34 +0000</pubDate>
+      <description>Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Command execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-101210 — Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutra…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101210</link>
+      <guid isPermaLink="false">699d56558cbc4b681dbac8e1c813812c</guid>
+      <pubDate>Fri, 30 Oct 2026 12:16:34 +0000</pubDate>
+      <description>Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutralization of Special Elements used in an OS Command (&#39;OS Command Injection&#39;) vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Command execution.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
     </item>
     <item>
       <title>[CRIT] Drupal warns of critical Commerce Core flaw exploited in attacks</title>
@@ -57,6 +152,270 @@
       <category>actively-exploited</category>
       <category>gitlab</category>
       <category>cisco</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.5 MEDIUM] CVE-2026-118539 — Missing Authorization vulnerability in Drupal Commerce Core allows Forceful Brow…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118539</link>
+      <guid isPermaLink="false">a1c42fc404a576379669a3d554a99456</guid>
+      <pubDate>Fri, 30 Oct 2026 04:18:18 +0000</pubDate>
+      <description>Missing Authorization vulnerability in Drupal Commerce Core allows Forceful Browsing. This issue affects Commerce Core versions: from 0.0.0 to 2.41, from 3.0.0 to 3.3.13.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-76031 — Use after free in Input in Google Chrome prior to 156.0.8078.79 allowed a remote…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76031</link>
+      <guid isPermaLink="false">4b0ee3480c97670d17b4ba8e01d62e51</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:47 +0000</pubDate>
+      <description>Use after free in Input in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-76030 — Memory corruption in FileSystem in Google Chrome prior to 156.0.8078.79 allowed …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76030</link>
+      <guid isPermaLink="false">b9591130968811d4fa22c7ca7f416149</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:47 +0000</pubDate>
+      <description>Memory corruption in FileSystem in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-76029 — Memory corruption in Network in Google Chrome prior to 156.0.8078.79 allowed a r…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76029</link>
+      <guid isPermaLink="false">c69fe120fc38745c3fcdb10792ac4e7c</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:47 +0000</pubDate>
+      <description>Memory corruption in Network in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-76028 — Use after free in FileSystem in Google Chrome prior to 156.0.8078.79 allowed a r…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76028</link>
+      <guid isPermaLink="false">a8e92eb5b94d56f2370fb4660bd758de</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:47 +0000</pubDate>
+      <description>Use after free in FileSystem in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-76026 — Memory corruption in Autofill in Google Chrome prior to 156.0.8078.79 allowed a …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76026</link>
+      <guid isPermaLink="false">4916d11e5fef8f30319e7c3299a5398f</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:47 +0000</pubDate>
+      <description>Memory corruption in Autofill in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-76025 — Use after free in FileSystem in Google Chrome prior to 156.0.8078.79 allowed a r…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76025</link>
+      <guid isPermaLink="false">15d0e38d08131fe9a7cbbb7da3fd13fe</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:46 +0000</pubDate>
+      <description>Use after free in FileSystem in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-119271 — Use after free in Skia in Google Chrome prior to 156.0.8078.79 allowed a remote …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119271</link>
+      <guid isPermaLink="false">6db0bfa9389cfbd2fdeceb3e48b85619</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:46 +0000</pubDate>
+      <description>Use after free in Skia in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-119270 — Improper input validation in CacheStorage in Google Chrome prior to 156.0.8078.7…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119270</link>
+      <guid isPermaLink="false">78293841fc253a8c2c354c50a8f7bbe2</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:45 +0000</pubDate>
+      <description>Improper input validation in CacheStorage in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-119269 — Use after free in Blink in Google Chrome prior to 156.0.8078.79 allowed a remote…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119269</link>
+      <guid isPermaLink="false">ec5b1f4d0b976249579c458e927efb97</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:45 +0000</pubDate>
+      <description>Use after free in Blink in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-119268 — Integer overflow in Editing in Google Chrome prior to 156.0.8078.79 allowed a re…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119268</link>
+      <guid isPermaLink="false">e0675f57210a4bfef7d1512412a8c9dc</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:45 +0000</pubDate>
+      <description>Integer overflow in Editing in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-119267 — Memory corruption in DOM in Google Chrome prior to 156.0.8078.79 allowed a remot…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119267</link>
+      <guid isPermaLink="false">940428268a4e24f39d6dc618164dddcf</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:45 +0000</pubDate>
+      <description>Memory corruption in DOM in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-119266 — Use after free in Quota in Google Chrome prior to 156.0.8078.79 allowed a remote…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119266</link>
+      <guid isPermaLink="false">d2f2478a7ec5d9839ab7519a093707c5</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:45 +0000</pubDate>
+      <description>Use after free in Quota in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-119265 — Memory corruption in Quota in Google Chrome prior to 156.0.8078.79 allowed a rem…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119265</link>
+      <guid isPermaLink="false">5288d0d5e78e84d096df91bd626241c3</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:45 +0000</pubDate>
+      <description>Memory corruption in Quota in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-119264 — Memory corruption in Dawn in Google Chrome prior to 156.0.8078.79 allowed a remo…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119264</link>
+      <guid isPermaLink="false">01d1483242717877040a4d8f35c46056</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:45 +0000</pubDate>
+      <description>Memory corruption in Dawn in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 9.6 CRITICAL] CVE-2026-119263 — Memory corruption in GarbageCollection in Google Chrome prior to 156.0.8078.79 a…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119263</link>
+      <guid isPermaLink="false">4e7d456b018439d8c99f77669e52c711</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:45 +0000</pubDate>
+      <description>Memory corruption in GarbageCollection in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-119262 — Improper input validation in V8 in Google Chrome prior to 156.0.8078.79 allowed …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119262</link>
+      <guid isPermaLink="false">55d092fd54d9bec1d82059adffd72dda</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:44 +0000</pubDate>
+      <description>Improper input validation in V8 in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[CRIT] [CVSS 9.6 CRITICAL] CVE-2026-119261 — Improper input validation in Skia in Google Chrome prior to 156.0.8078.79 allowe…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119261</link>
+      <guid isPermaLink="false">a86ac40bd977f7dae410a362d498e26e</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:44 +0000</pubDate>
+      <description>Improper input validation in Skia in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>critical</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-119260 — Use after free in Frames in Google Chrome prior to 156.0.8078.79 allowed a remot…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119260</link>
+      <guid isPermaLink="false">60778098810f1bac2d5c5598fb536878</guid>
+      <pubDate>Fri, 30 Oct 2026 01:16:44 +0000</pubDate>
+      <description>Use after free in Frames in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>chrome</category>
+      <category>watch</category>
+      <category>google</category>
+      <category>chrome</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2026-118527 — Ivanti Connect Secure: Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability</title>
@@ -175,6 +534,45 @@
       <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
       <category>high</category>
       <category>0day</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.1 HIGH] CVE-2026-99123 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;vsock/virti…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99123</link>
+      <guid isPermaLink="false">87c0e27bc8a59d4de6f8a6c38c24e3b0</guid>
+      <pubDate>Wed, 28 Oct 2026 11:17:31 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;vsock/virtio: validate packet source for connected sockets&#xA;&#xA;virtio_transport_recv_pkt() looks up sockets first by the full source and&#xA;destination tuple, then by destination only in the bound table. The&#xA;fallback is needed for listening and connecting sockets, but sockets remain&#xA;in the bound table after connect(), so it can also return a non-listening&#xA;socket.&#xA;&#xA;The fallback does not validate the source address. In TCP_SYN_SENT, a&#xA;RESPONSE from an unrelated source can transition the victim socket to&#xA;TCP_ESTABLISHED while its stored remote address remains unchanged.&#xA;Subsequent RW packets from that source are delivered through the same&#xA;destination-only fallback.&#xA;&#xA;This was reproduced with capability-empty processes under different UIDs.&#xA;The attacker discovered the target tuple through unprivileged AF_VSOCK&#xA;sock_diag and caused the victim socket to read 16 attacker-chosen bytes;&#xA;the intended peer-side socket read 0 of those 16 bytes.&#xA;&#xA;Add vsock_check_source() to validate the transport, source port and source&#xA;CID against the peer stored in a non-listening socket. The local transport&#xA;is the CID exception because its packets are generated internally with&#xA;VMADDR_CID_LOCAL as their source, including connections using CID aliases.&#xA;&#xA;Use the helper after lock_sock() in the virtio receive path.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.3 HIGH] CVE-2026-99122 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;vsock/vmci:…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99122</link>
+      <guid isPermaLink="false">1f59ad40541edc4a48366b910f8c8b47</guid>
+      <pubDate>Wed, 28 Oct 2026 11:17:31 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;vsock/vmci: validate packet source for connected sockets&#xA;&#xA;vmci_transport_recv_stream_cb() looks up sockets first by the full source&#xA;and destination tuple, then by destination only in the bound table. The&#xA;fallback can select a non-listening socket without checking whether the&#xA;packet came from its stored peer.&#xA;&#xA;This was reproduced with two VMCI contexts. A RST from the context not&#xA;stored in a TCP_SYN_SENT socket reset that socket after it was selected by&#xA;the destination-only lookup.&#xA;&#xA;VMCI can process notification packets in bottom-half context when the&#xA;socket is not owned by user context, or defer packets to a workqueue. Use&#xA;vsock_check_source() after taking the socket lock in the bottom-half path,&#xA;and recheck after lock_sock() in the workqueue path. Listening sockets&#xA;continue to accept packets from any source.&#xA;&#xA;Reply with a RST addressed from the received packet before dropping a&#xA;source that fails validation. This preserves the existing reset behavior&#xA;for bound non-listening and concurrently closed sockets without directing&#xA;the reset to a connected socket&#39;s stored peer.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.8 HIGH] CVE-2026-99109 — In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;smb: client…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99109</link>
+      <guid isPermaLink="false">9efa7370a77bab6667494bc9bae30d41</guid>
+      <pubDate>Wed, 28 Oct 2026 11:17:30 +0000</pubDate>
+      <description>In the Linux kernel, the following vulnerability has been resolved:&#xA;&#xA;smb: client: reject SetEA requests that do not fit the request buffer&#xA;&#xA;CIFSSMBSetEA() copies the caller&#39;s extended attribute value into the&#xA;SMB request buffer without checking that it fits.  The requirement is&#xA;stated in the source but was never implemented:&#xA;&#xA;&#x9;/*BB add length check to see if it would fit in&#xA;&#x9;     negotiated SMB buffer size BB */&#xA;&#x9;/* if (ea_value_len &gt; buffer_size - 512 (enough for header)) */&#xA;&#x9;if (ea_value_len)&#xA;&#x9;&#x9;memcpy(parm_data-&gt;list.name + name_len + 1,&#xA;&#x9;&#x9;       ea_value, ea_value_len);&#xA;&#xA;The only bound applied on the way in is in cifs_xattr_set():&#xA;&#xA;&#x9;#define MAX_EA_VALUE_SIZE CIFSMaxBufSize&#xA;&#x9;...&#xA;&#x9;if (size &gt; MAX_EA_VALUE_SIZE)&#xA;&#xA;CIFSMaxBufSize is the full payload capacity of the buffer, so a value&#xA;of exactly that size leaves no room for the SMB header, the TRANS2&#xA;parameter block, the fealist header and the EA name that are written&#xA;ahead of it in the same object.&#xA;&#xA;SendReceive() already enforces the correct limit on this very length:&#xA;&#xA;&#x9;if (in_len &gt; CIFSMaxBufSize + MAX_CIFS_HDR_SIZE)&#xA;&#xA;but it is called after the copy has taken place.  An unprivileged&#xA;setxattr(2) on an SMB1 mount with a 250-byte name and a 16384-byte&#xA;value writes 16384 bytes starting 345 bytes into a 16588-byte&#xA;cifs_request object, ending 141 bytes past it:&#xA;&#xA;  BUG: KASAN: slab-out-of-bounds in CIFSSMBSetEA+0xabc/0xde0&#xA;  Write of size 16384 at addr ffff888003aa0159 by task init/68&#xA;   __asan_memcpy+0x3c/0x60&#xA;   CIFSSMBSetEA+0xabc/0xde0&#xA;   cifs_xattr_set+0xd3a/0xff0&#xA;   __vfs_setxattr+0x13e/0x1a0&#xA;  The buggy address is located 345 bytes inside of&#xA;   allocated 16588-byte region&#xA;&#xA;Apply SendReceive()&#39;s limit to the assembled request before the copy&#xA;rather than after it, and widen the byte counters so the sum cannot&#xA;wrap before it is tested.&#xA;&#xA;byte_count is also tested against U16_MAX, because it is stored in the&#xA;16-bit pSMB-&gt;ByteCount.  That becomes reachable when CIFSMaxBufSize is&#xA;raised at module load, where it may be set as high as 1024*127: with a&#xA;5-byte EA name and a 65521-byte value, count is exactly U16_MAX while&#xA;byte_count is 65556, and cpu_to_le16() would truncate it to 20 and&#xA;transmit a frame whose ByteCount does not match its length.  Testing&#xA;byte_count covers count as well, since byte_count is the larger of the&#xA;two and count&#39;s only 16-bit consumer is written after this point.&#xA;&#xA;check_add_overflow() is evaluated first so that total_len is assigned&#xA;before it is reported.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>linux</category>
+      <category>watch</category>
+      <category>rce</category>
+      <category>linux</category>
     </item>
     <item>
       <title>[CRIT] ZDI-26-829: (0Day) (Pwn2Own) Alpine iLX-F511 Bluetooth OBEX Packet Handling Heap-based Buffer Overflow Remote Code Execution Vulnerability</title>
@@ -403,6 +801,27 @@
       <category>linux</category>
     </item>
     <item>
+      <title>[HIGH] [CVSS 9.8 CRITICAL] CVE-2026-78845 — Aidot products Linkind Matter Smart Plug 1.01.32, OREiN Matter Smart Light Bulb …</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78845</link>
+      <guid isPermaLink="false">31d5776f1c074c44655bbfcf55ec414c</guid>
+      <pubDate>Tue, 27 Oct 2026 15:17:00 +0000</pubDate>
+      <description>Aidot products Linkind Matter Smart Plug 1.01.32, OREiN Matter Smart Light Bulb 3.15.21, and Linkind Wi-Fi Smart Light Bulb 3.30.17 are vulnerable to Remote Code Execution (RCE) via UPnP root description parsing.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.1 HIGH] CVE-2026-116880 — Semantic MediaWiki from 3.0.0 before 7.3.1 contains a cross-site request forgery…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116880</link>
+      <guid isPermaLink="false">ab006a70c0895a2f6c2d257df641b2aa</guid>
+      <pubDate>Tue, 27 Oct 2026 11:17:30 +0000</pubDate>
+      <description>Semantic MediaWiki from 3.0.0 before 7.3.1 contains a cross-site request forgery vulnerability in Special:SMWAdmin because it overwrites the wpEditToken with a freshly generated valid token. Attackers can lure an authenticated smw-admin user to a malicious page that triggers schema setup, entity-disposal, or job actions, causing semantic data loss and resource exhaustion.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
       <title>[HIGH] Apple backports CoreGraphics zero-day patches to older iPhones</title>
       <link>https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/</link>
       <guid isPermaLink="false">9f52bfde32ccb4b6bdfd78ed342ce58a</guid>
@@ -421,6 +840,16 @@
       <source url="https://moke-cloud.github.io/threat-radar/">Bleeping Computer</source>
       <category>high</category>
       <category>actively-exploited</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 8.8 HIGH] CVE-2026-116811 — OpenPanel before 3.0.0 contains a sandbox escape vulnerability in the js-runtime…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116811</link>
+      <guid isPermaLink="false">2fd5c92c039ee70b7883298b1c734a2e</guid>
+      <pubDate>Tue, 27 Oct 2026 00:17:14 +0000</pubDate>
+      <description>OpenPanel before 3.0.0 contains a sandbox escape vulnerability in the js-runtime validator that allows a project member to bypass the AST allowlist by aliasing the Function constructor. Attackers with write access can read payload.constructor.constructor into a local and call it to run arbitrary code in the worker process.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
     </item>
     <item>
       <title>[CRIT] [KEV] CVE-2026-48356 — Adobe Commerce and Magento: Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability</title>
@@ -447,6 +876,76 @@
       <category>kev</category>
       <category>actively-exploited</category>
       <category>google</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 5.5 MEDIUM] CVE-2026-116728 — libfvde through 20260923 contains a heap out-of-bounds read vulnerability in lib…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116728</link>
+      <guid isPermaLink="false">726df68892a4c56696e51573fc901023</guid>
+      <pubDate>Mon, 26 Oct 2026 22:16:56 +0000</pubDate>
+      <description>libfvde through 20260923 contains a heap out-of-bounds read vulnerability in libfvde_encrypted_metadata_read_type_0x0024() because xml_plist_data_size is not checked against the source metadata block. Attackers can supply a crafted FileVault 2 Core Storage volume that makes libfvde_volume_open() copy past the heap block buffer, crashing the application.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.1 CRITICAL] CVE-2026-116505 — A vulnerability was found in TOTOLINK A950RG 4.1.2cu.5268_B20221104. This impact…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116505</link>
+      <guid isPermaLink="false">efb620b67c953ce9a722015aed22656a</guid>
+      <pubDate>Mon, 26 Oct 2026 21:18:12 +0000</pubDate>
+      <description>A vulnerability was found in TOTOLINK A950RG 4.1.2cu.5268_B20221104. This impacts the function getDeviceInfo of the file /var/lib/misc/udhcpd.leases of the component device-information Handler. The manipulation of the argument MAC address results in command injection. The attack can be launched remotely. The exploit has been made public and could be used.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] CVE-2026-57193 — Asterisk is an open source private branch exchange and telephony toolkit. Prior to Asterisk 20.20.1,…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57193</link>
+      <guid isPermaLink="false">2ca117dc5eb2cea0386f32ceb58f34d5</guid>
+      <pubDate>Mon, 26 Oct 2026 20:17:56 +0000</pubDate>
+      <description>Asterisk is an open source private branch exchange and telephony toolkit. Prior to Asterisk 20.20.1, 21.12.3, 22.10.1, 23.4.1 and Certified Asterisk 20.7-cert11, 22.8-cert3, the LDAP realtime driver `res_config_ldap` may permit `LDAP filter injection` through a `SIP username`, allowing an unauthenticated attacker to make arbitrary LDAP queries using carefully crafted SIP packets and disclose information. The `res_config_ldap` module must be loaded and configured to access an LDAP server, which is not the default. This issue is fixed in Asterisk 20.20.1, 21.12.3, 22.10.1, 23.4.1 and Certified Asterisk 20.7-cert11, 22.8-cert3.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 9.9 CRITICAL] CVE-2026-102649 — Burrito is a Terraform Automation Collaboration Software (TACoS) Kubernetes oper…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102649</link>
+      <guid isPermaLink="false">b405822ac6caba27cc52042f7e9c4f0f</guid>
+      <pubDate>Mon, 26 Oct 2026 18:17:21 +0000</pubDate>
+      <description>Burrito is a Terraform Automation Collaboration Software (TACoS) Kubernetes operator. Prior to 0.13.0, `POST /api/webhook` accepts unsigned GitHub and GitLab events when a `TerraformRepository`&#39;s credentials omit `webhookSecret` or set it to an empty value, including credentials configured for git authentication and polling. `Credential.WebhookSecret` is optional, and `go-playground/webhooks` skips signature or token verification when the secret is empty. Anyone who can reach `burrito-server`&#39;s endpoint and knows a tracked repository&#39;s URL can forge events to create or delete `TerraformPullRequest` custom resources with attacker-chosen `Branch`, `Base`, and `ID` fields. For GitHub `pull_request` events, the controller fetches changed files using the real pull request number but does not cross-check the payload&#39;s branch against that pull request. Pairing a real, existing pull request number with an unrelated existing branch in the same repository can therefore cause an unauthorized `terraform plan` for affected layers using the operator&#39;s stored git and cloud credentials. Code analysis also indicates that the resulting plan can be posted to the real pull request&#39;s comment thread, exposing and misattributing another branch&#39;s infrastructure changes. Auto-apply is disabled for these temporary layers, so this vulnerability alone cannot force a `terraform apply`; plan-time provider and data-source code execution depends on the selected branch&#39;s contents. This issue is fixed in version 0.13.0.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>critical-cvss</category>
+      <category>kubernetes</category>
+      <category>github</category>
+      <category>gitlab</category>
+      <category>rce</category>
+      <category>kubernetes</category>
+      <category>github</category>
+      <category>gitlab</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 6.3 MEDIUM] CVE-2026-116369 — A vulnerability was identified in Sunwood-ai-labs github-kanban-mcp-server up to…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116369</link>
+      <guid isPermaLink="false">3be85c16b3536cdcf6ef4c8c3873f5c0</guid>
+      <pubDate>Mon, 26 Oct 2026 16:17:18 +0000</pubDate>
+      <description>A vulnerability was identified in Sunwood-ai-labs github-kanban-mcp-server up to 0.4.0. Impacted is the function handleListIssues of the file src/handlers/issue-handlers.ts. Such manipulation of the argument state/labels leads to os command injection. The attack can be launched remotely. Upgrading to version 0.4.1 is recommended to address this issue. The name of the patch is 253d93bbdf7ee9fe42bd8fdf15feea93ae59cbae. It is suggested to upgrade the affected component.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
+      <category>github</category>
+      <category>github</category>
+    </item>
+    <item>
+      <title>[HIGH] [CVSS 7.2 HIGH] CVE-2026-116219 — Dolibarr ERP CRM before 24.0.0 contains an OS command injection vulnerability in…</title>
+      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116219</link>
+      <guid isPermaLink="false">e714ac11c8693222ef5cd83922a2c5bc</guid>
+      <pubDate>Mon, 26 Oct 2026 14:16:35 +0000</pubDate>
+      <description>Dolibarr ERP CRM before 24.0.0 contains an OS command injection vulnerability in htdocs/admin/tools/export.php that lets authenticated administrators bypass the restrict_os_commands allowlist. Attackers can submit a mysqldump value chaining commands with &amp; characters around an allowlisted basename to execute operating system commands as the web server user.</description>
+      <source url="https://moke-cloud.github.io/threat-radar/">NVD CVE recent</source>
+      <category>high</category>
+      <category>rce</category>
     </item>
     <item>
       <title>[CRIT] PHP2Shell security flaws now sucessfully exploited in the wild</title>
@@ -591,298 +1090,6 @@
       <source url="https://moke-cloud.github.io/threat-radar/">Krebs on Security</source>
       <category>high</category>
       <category>actively-exploited</category>
-    </item>
-    <item>
-      <title>[HIGH] Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution</title>
-      <link>https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html</link>
-      <guid isPermaLink="false">713670bbc3c27fbd44fb3f506296e2d2</guid>
-      <pubDate>Tue, 20 Oct 2026 15:38:52 +0000</pubDate>
-      <description>Cybersecurity researchers have released a proof-of-concept (PoC) exploit for a recently patched critical security flaw impacting Fortinet FortiSIEM that could result in arbitrary code execution. The vulnerability, tracked as CVE-2026-106173 (CVSS score: 9.4), is a critical path traversal flaw that could allow an unauthenticated attacker to execute unauthorized code or commands via specially</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>rce</category>
-      <category>path-traversal</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[HIGH] Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA</title>
-      <link>https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html</link>
-      <guid isPermaLink="false">0416e997260f45d1d9b1ebb1c52ef627</guid>
-      <pubDate>Tue, 20 Oct 2026 15:32:27 +0000</pubDate>
-      <description>Palo Alto Networks has disclosed that it&#39;s continuing to observe exploitation of a now-patched security flaw impacting PAN-OS and Prisma Access by ransomware actors. The activity relates to CVE-2026-0257 (CVSS score: 7.8), an authentication bypass flaw that could be exploited by bad actors to set up unauthorized VPN connections. It was patched by Palo Alto Networks in May 2026 and was</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">The Hacker News</source>
-      <category>high</category>
-      <category>paloalto</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>ransomware</category>
-      <category>paloalto</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-106931 — EG Secure Solutions SiteGuard Server Edition: EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106931</link>
-      <guid isPermaLink="false">d4d94c542a5108c15926db42e0c7bbf1</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-23</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>eg</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-96656 — Plex Media Server: Plex Media Server External Control of File Name or Path Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96656</link>
-      <guid isPermaLink="false">417c66557493926f1b5c2313a81afd78</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96655.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-23</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>plex</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-96655 — Plex Media Server: Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96655</link>
-      <guid isPermaLink="false">9df977490410882b8e83d08f05053e6b</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the &#39;/video/:/transcode/universal&#39; path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-11-03</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>plex</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-96654 — Plex Media Server: Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96654</link>
-      <guid isPermaLink="false">4151db203993bd08a59d8b77ee68b3f6</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Plex Media Server contains an improper neutralization of encoded URI schemes in a web page vulnerability that could allow an attacker to call other plugins&#39; functions and supply their own parameters. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96655, and CVE-2026-96656.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-23</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>plex</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-96652 — Plex Media Server: Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96652</link>
-      <guid isPermaLink="false">ac17fb0d33c4a681d8cce2bb8c1feba9</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Plex Media Server contains a server-side request forgery (SSRF) vulnerability which could allow an attacker using any X-Plex-Token value to include a full URL in the &#39;protocol&#39; parameter and force the Plex server to POST to the attacker&#39;s chosen destination. This vulnerability can be chained with CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656. &#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-11-03</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>rce</category>
-      <category>plex</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-110936 — Siemens Software Center: Siemens Software Center Uncontrolled Search Path Element Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110936</link>
-      <guid isPermaLink="false">90c1f1f9a98f1968820db2f130a967a1</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-11-03</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>rce</category>
-      <category>siemens</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-106931 — EG Secure Solutions SiteGuard Server Edition: EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106931</link>
-      <guid isPermaLink="false">d4d94c542a5108c15926db42e0c7bbf1</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-23</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>eg</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-96656 — Plex Media Server: Plex Media Server External Control of File Name or Path Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96656</link>
-      <guid isPermaLink="false">417c66557493926f1b5c2313a81afd78</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96655.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-23</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>plex</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-96655 — Plex Media Server: Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96655</link>
-      <guid isPermaLink="false">9df977490410882b8e83d08f05053e6b</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the &#39;/video/:/transcode/universal&#39; path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-11-03</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>plex</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-96654 — Plex Media Server: Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96654</link>
-      <guid isPermaLink="false">4151db203993bd08a59d8b77ee68b3f6</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Plex Media Server contains an improper neutralization of encoded URI schemes in a web page vulnerability that could allow an attacker to call other plugins&#39; functions and supply their own parameters. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96655, and CVE-2026-96656.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-23</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>plex</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-96652 — Plex Media Server: Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96652</link>
-      <guid isPermaLink="false">ac17fb0d33c4a681d8cce2bb8c1feba9</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Plex Media Server contains a server-side request forgery (SSRF) vulnerability which could allow an attacker using any X-Plex-Token value to include a full URL in the &#39;protocol&#39; parameter and force the Plex server to POST to the attacker&#39;s chosen destination. This vulnerability can be chained with CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656. &#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-11-03</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>rce</category>
-      <category>plex</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-110936 — Siemens Software Center: Siemens Software Center Uncontrolled Search Path Element Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110936</link>
-      <guid isPermaLink="false">90c1f1f9a98f1968820db2f130a967a1</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-11-03</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>rce</category>
-      <category>siemens</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-779: (0Day) Sparx Systems Enterprise Architect XSLT Debugger XML External Entity Processing Information Disclosure Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-779/</link>
-      <guid isPermaLink="false">a8fe7391561edc88912ab1e4e7d6bdf9</guid>
-      <pubDate>Fri, 16 Oct 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to disclose sensitive information on affected installations of Sparx Systems Enterprise Architect. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 5.5. The following CVEs are assigned: CVE-2026-88794.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-102764 — BeyondTrust Remote Support: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102764</link>
-      <guid isPermaLink="false">3445ee46f24edad9791162bd05ec50f8</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-19</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>auth-bypass</category>
-      <category>beyondtrust</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2025-61624 — Fortinet Multiple Products: Fortinet Multiple Products Path Traversal Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-61624</link>
-      <guid isPermaLink="false">ef6e641d5ecfe0bee1f6225fd5660904</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-19</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>path-traversal</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-102764 — BeyondTrust Remote Support: BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102764</link>
-      <guid isPermaLink="false">3445ee46f24edad9791162bd05ec50f8</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>BeyondTrust Remote Support contains an authentication bypass by spoofing vulnerability that could allow a remote attacker to perform file operations on the appliance.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-19</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>auth-bypass</category>
-      <category>beyondtrust</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2025-61624 — Fortinet Multiple Products: Fortinet Multiple Products Path Traversal Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2025-61624</link>
-      <guid isPermaLink="false">ef6e641d5ecfe0bee1f6225fd5660904</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <description>FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-19</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>path-traversal</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-757: (0Day) Telegram rlottie Numeric Truncation Remote Code Execution Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-757/</link>
-      <guid isPermaLink="false">aff96673adc98022015feac69b83226a</guid>
-      <pubDate>Thu, 15 Oct 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of Telegram. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.0. The following CVEs are assigned: CVE-2026-111105.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>rce</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[HIGH] ZDI-26-771: Fortinet FortiSandbox login_user_profile Hard-Coded Credentials Authentication Bypass Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-771/</link>
-      <guid isPermaLink="false">3691b27e3f38749c9e4340c4071fc4fd</guid>
-      <pubDate>Thu, 15 Oct 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to bypass authentication on affected installations of Fortinet FortiSandbox. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.3. The following CVEs are assigned: CVE-2026-107656.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>high</category>
-      <category>fortinet</category>
-      <category>watch</category>
-      <category>auth-bypass</category>
-      <category>fortinet</category>
-    </item>
-    <item>
-      <title>[CRIT] ZDI-26-757: (0Day) Telegram rlottie Numeric Truncation Remote Code Execution Vulnerability</title>
-      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-757/</link>
-      <guid isPermaLink="false">aff96673adc98022015feac69b83226a</guid>
-      <pubDate>Thu, 15 Oct 2026 05:00:00 +0000</pubDate>
-      <description>This vulnerability allows remote attackers to execute arbitrary code on affected installations of Telegram. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.0. The following CVEs are assigned: CVE-2026-111105.</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">Zero Day Initiative — Published</source>
-      <category>critical</category>
-      <category>rce</category>
-      <category>0day</category>
-    </item>
-    <item>
-      <title>[CRIT] [KEV] CVE-2026-21589 — Atlassian Multiple Products: Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability</title>
-      <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21589</link>
-      <guid isPermaLink="false">320f5ce97cd9f70d4b20fa1a85e29566</guid>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-      <description>Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessible to external parties vulnerability which could allow an unauthenticated attacker to access specific files within the web application root directory in affected versions.&#xA;Required: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset&#39;s internet exposure and ensuring adherence to BOD 26-04 patching guidelines.&#xA;Due: 2026-10-18</description>
-      <source url="https://moke-cloud.github.io/threat-radar/">CISA Known Exploited Vulnerabilities</source>
-      <category>critical</category>
-      <category>kev</category>
-      <category>actively-exploited</category>
-      <category>confluence</category>
-      <category>watch</category>
-      <category>atlassian</category>
-      <category>confluence</category>
     </item>
   </channel>
 </rss>

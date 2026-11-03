@@ -1,5 +1,110 @@
 [
   {
+    "id": "9cd0f019d311baedca76ec74e8cc1df8",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
+    "summary": "Over 1,000 Internet-exposed GitLab servers are still unpatched against a maximum-severity flaw actively exploited in remote code execution attacks. [...]",
+    "published": "2026-11-02T12:47:00Z",
+    "fetched": "2026-11-03T02:59:51.427013261Z",
+    "tags": [
+      "gitlab",
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 87,
+    "vendors": [
+      "gitlab"
+    ]
+  },
+  {
+    "id": "f9cc1d56cfa77259806dadf080301bcb",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Ivanti patches two more Connect Secure zero-days chained in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/",
+    "summary": "Ivanti released security updates to patch two more Connect Secure (ICS) remote access gateway flaws that have been chained in zero-day attacks since at least October 1. [...]",
+    "published": "2026-11-02T09:33:26Z",
+    "fetched": "2026-11-03T02:59:51.427013261Z",
+    "tags": [
+      "ivanti",
+      "watch",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "ivanti"
+    ]
+  },
+  {
+    "id": "4a4eaf068ca180d993467f499e4fb2de",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-850: Microsoft Qlib MLflowRecorder Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-850/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft Qlib. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-02T06:00:00Z",
+    "fetched": "2026-11-03T02:59:51.427013261Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "3a625f36f6b76d214f814fab773453bd",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-849: Microsoft Qlib RestrictedUnpickler Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-849/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft Qlib. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-02T06:00:00Z",
+    "fetched": "2026-11-03T02:59:51.427013261Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "6b56fad1476534955e1cefd83f4bfc15",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-848: Microsoft Qlib StaticDataLoader Deserialization of Untrusted Data Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-848/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft Qlib. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-02T06:00:00Z",
+    "fetched": "2026-11-03T02:59:51.427013261Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
     "id": "e1ae62c597fb8c56ea69f6d0783400a8",
     "source": "thehackernews",
     "source_name": "The Hacker News",
@@ -1727,6 +1832,54 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
     "summary": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-29",
     "published": "2026-10-26T00:00:00Z",
+    "fetched": "2026-11-03T02:59:51.427013261Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "php"
+    ],
+    "cves": [
+      "CVE-2026-109618"
+    ]
+  },
+  {
+    "id": "db250716bb9a0b7c24688ee8bdd464a2",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-109619 — PHP Group PHP: PHP Stale Internal Request-State Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619",
+    "summary": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-29",
+    "published": "2026-10-26T00:00:00Z",
+    "fetched": "2026-11-03T02:59:51.427013261Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "php"
+    ],
+    "cves": [
+      "CVE-2026-109619"
+    ]
+  },
+  {
+    "id": "efb63da4a766926b7240f31e0e952661",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-109618 — PHP Group PHP: PHP Memory Corruption Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
+    "summary": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-29",
+    "published": "2026-10-26T00:00:00Z",
     "fetched": "2026-10-27T00:41:04.156778577Z",
     "tags": [
       "kev",
@@ -1895,61 +2048,5 @@
     ],
     "severity": "high",
     "score": 67
-  },
-  {
-    "id": "e8d876c7ee6056e2d3232e9c69a2f4ce",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-788: Cisco Snort OLE VBA Decompression Stack-based Buffer Overflow Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-788/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco Snort. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-20218.",
-    "published": "2026-10-22T05:00:00Z",
-    "fetched": "2026-10-23T23:55:14.106300592Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 61,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-20218"
-    ]
-  },
-  {
-    "id": "722b80571ebaea9749d8ddb1b30e26c2",
-    "source": "krebs",
-    "source_name": "Krebs on Security",
-    "category": "news",
-    "title": "Widespread PHP Flaw May Cause Many Site Outages Today",
-    "url": "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
-    "summary": "Expect to see quite a few websites serving \"404\" or \"Page Not Found\" errors today: Nearly 70 percent of websites need to update their core software to fix a pair of vulnerabilities that allow an attacker to seize full control over affected servers. Experts say there are working exploits for the flaws, and that these critical bugs are already being exploited in the wild.",
-    "published": "2026-10-21T15:26:07Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 70
-  },
-  {
-    "id": "722b80571ebaea9749d8ddb1b30e26c2",
-    "source": "krebs",
-    "source_name": "Krebs on Security",
-    "category": "news",
-    "title": "Widespread PHP Flaw May Cause Many Site Outages Today",
-    "url": "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
-    "summary": "Expect to see quite a few websites serving \"404\" or \"Page Not Found\" errors today: Nearly 70 percent of websites need to update their core software to fix a pair of vulnerabilities that allow an attacker to seize full control over affected servers. Experts say there are working exploits for the flaws, and that these critical bugs are already being exploited in the wild.",
-    "published": "2026-10-21T15:26:07Z",
-    "fetched": "2026-10-22T00:07:34.175157893Z",
-    "tags": [
-      "actively-exploited"
-    ],
-    "severity": "high",
-    "score": 70
   }
 ]

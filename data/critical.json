@@ -1,5 +1,54 @@
 [
   {
+    "id": "6b8856a8b25f043ae9f0312b0c0e0749",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-867: Cisco Snort sf_unfold_header Out-Of-Bounds Write Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-867/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Cisco Snort. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.8. The following CVEs are assigned: CVE-2026-20043.",
+    "published": "2026-11-03T06:00:00Z",
+    "fetched": "2026-11-04T01:33:47.948968783Z",
+    "tags": [
+      "cisco",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 61,
+    "vendors": [
+      "cisco"
+    ],
+    "cves": [
+      "CVE-2026-20043"
+    ]
+  },
+  {
+    "id": "7fa888b96bb4b9a478c41b80b96f05ee",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-119977 — WordPress WordPress Core: WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119977",
+    "summary": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-06",
+    "published": "2026-11-03T00:00:00Z",
+    "fetched": "2026-11-04T01:33:47.948968783Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-119977"
+    ]
+  },
+  {
     "id": "9cd0f019d311baedca76ec74e8cc1df8",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1635,6 +1684,54 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356",
     "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-10",
     "published": "2026-10-27T00:00:00Z",
+    "fetched": "2026-11-04T01:33:47.948968783Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "adobe",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 100,
+    "vendors": [
+      "adobe"
+    ],
+    "cves": [
+      "CVE-2026-48356"
+    ]
+  },
+  {
+    "id": "10013bdee737aa1d10b459814861db54",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-111497 — Google Brotli: Google Brotli Unchecked Return Value Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497",
+    "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-10",
+    "published": "2026-10-27T00:00:00Z",
+    "fetched": "2026-11-04T01:33:47.948968783Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "google"
+    ],
+    "cves": [
+      "CVE-2026-111497"
+    ]
+  },
+  {
+    "id": "f129e718cb7493c83881ea0eff3c9261",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-48356 — Adobe Commerce and Magento: Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356",
+    "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-10",
+    "published": "2026-10-27T00:00:00Z",
     "fetched": "2026-10-28T00:39:19.706965836Z",
     "tags": [
       "kev",
@@ -1918,135 +2015,5 @@
     "cves": [
       "CVE-2026-109619"
     ]
-  },
-  {
-    "id": "20a3c82d8a75bd9cc248ba1172505a4f",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-114625 — Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator SQL Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625",
-    "summary": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-26",
-    "published": "2026-10-23T00:00:00Z",
-    "fetched": "2026-10-30T01:15:47.209445384Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "sqli"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "arista"
-    ],
-    "cves": [
-      "CVE-2026-114625"
-    ]
-  },
-  {
-    "id": "9d3207889d068f585c3eddb3bf7b7a59",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-110447 — Collabora Collabora Online – Built-in CODE Server: Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447",
-    "summary": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-26",
-    "published": "2026-10-23T00:00:00Z",
-    "fetched": "2026-10-30T01:15:47.209445384Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "collabora"
-    ],
-    "cves": [
-      "CVE-2026-110447"
-    ]
-  },
-  {
-    "id": "20a3c82d8a75bd9cc248ba1172505a4f",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-114625 — Arista VeloCloud Orchestrator: Arista VeloCloud Orchestrator SQL Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625",
-    "summary": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-26",
-    "published": "2026-10-23T00:00:00Z",
-    "fetched": "2026-10-23T23:55:14.106300592Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "sqli"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "arista"
-    ],
-    "cves": [
-      "CVE-2026-114625"
-    ]
-  },
-  {
-    "id": "9d3207889d068f585c3eddb3bf7b7a59",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-110447 — Collabora Collabora Online – Built-in CODE Server: Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447",
-    "summary": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-26",
-    "published": "2026-10-23T00:00:00Z",
-    "fetched": "2026-10-23T23:55:14.106300592Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "collabora"
-    ],
-    "cves": [
-      "CVE-2026-110447"
-    ]
-  },
-  {
-    "id": "9c9456926a91128d893aad960b7166c5",
-    "source": "thehackernews",
-    "source_name": "The Hacker News",
-    "category": "news",
-    "title": "Arista Warns of Critical VeloCloud SQL Injection Zero-Day Exploited in Attacks",
-    "url": "https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html",
-    "summary": "Attackers are exploiting a zero-day SQL injection flaw in Arista's VeloCloud Orchestrator (VCO), the central management system for VeloCloud SD-WAN networks, the company said in an advisory on October 22. The flaw lets anyone who can log in to the orchestrator, even with a read-only customer account, gain operator privileges, the top level of control over it. For",
-    "published": "2026-10-22T19:05:17Z",
-    "fetched": "2026-10-23T00:05:03.78536044Z",
-    "tags": [
-      "sqli",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 66
-  },
-  {
-    "id": "04dca8fd8880b9dc0785c072bd0aa0ec",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Arista patches new VeloCloud Orchestrator zero-day exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/",
-    "summary": "Arista Networks released security updates to patch an actively exploited zero-day vulnerability affecting VeloCloud Orchestrator (VCO) On-Prem deployments. [...]",
-    "published": "2026-10-22T17:18:22Z",
-    "fetched": "2026-10-23T00:05:03.78536044Z",
-    "tags": [
-      "actively-exploited",
-      "0day"
-    ],
-    "severity": "high",
-    "score": 67
   }
 ]

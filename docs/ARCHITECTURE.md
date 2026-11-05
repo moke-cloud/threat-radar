@@ -137,7 +137,6 @@ severity ラベル:
 - ダーク/ライトトグル (デフォルトはシステム preferred-color-scheme)
 - スター (localStorage)
 - 既読 (localStorage)
-- RSS 出力ボタン (現在のフィルタ条件で `feed.xml` を動的生成 → ダウンロード or `data:` URI)
 
 ---
 

@@ -297,36 +297,6 @@
     $("#quick-stats").innerHTML = html;
   }
 
-  // ---------- RSS export --------------------------------------------------
-
-  function buildRSSDataURI() {
-    const items = applyFilters(state.items).slice(0, 50);
-    const xmlEscape = (s) => String(s ?? "")
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;").replace(/'/g, "&apos;");
-    const parts = [
-      '<?xml version="1.0" encoding="UTF-8"?>',
-      '<rss version="2.0"><channel>',
-      '<title>ThreatRadar (filtered)</title>',
-      '<link>about:blank</link>',
-      '<description>Filtered feed from ThreatRadar dashboard</description>',
-    ];
-    for (const it of items) {
-      parts.push(
-        '<item>',
-        `<title>${xmlEscape(it.title)}</title>`,
-        `<link>${xmlEscape(it.url)}</link>`,
-        `<guid isPermaLink="false">${xmlEscape(it.id)}</guid>`,
-        `<pubDate>${new Date(it.published).toUTCString()}</pubDate>`,
-        `<description>${xmlEscape(it.summary || "")}</description>`,
-        '</item>',
-      );
-    }
-    parts.push('</channel></rss>');
-    const blob = new Blob([parts.join("")], { type: "application/rss+xml" });
-    return URL.createObjectURL(blob);
-  }
-
   // ---------- Helpers ------------------------------------------------------
 
   function timeOf(it) { return new Date(it.published).getTime() || 0; }
@@ -395,16 +365,6 @@
       b.classList.add("active");
       state.filters.severity = b.dataset.value;
       render();
-    });
-
-    $("#btn-rss").addEventListener("click", (e) => {
-      e.preventDefault();
-      const url = buildRSSDataURI();
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "threat-radar.xml";
-      a.click();
-      setTimeout(() => URL.revokeObjectURL(url), 5000);
     });
 
     load();

@@ -43,7 +43,7 @@ jobs:
         run: go test ./...
 
       - name: Test dashboard helpers
-        run: node --test web/test
+        run: node --test web/test/*.test.js
 
       - name: Build collector
         working-directory: collector

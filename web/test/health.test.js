@@ -1,4 +1,4 @@
-// Run: node --test web/test
+// Run: node --test web/test/*.test.js
 const test = require("node:test");
 const assert = require("node:assert/strict");
 const H = require("../assets/health.js");

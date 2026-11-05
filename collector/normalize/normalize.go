@@ -6,6 +6,7 @@ package normalize
 import (
 	"crypto/sha256"
 	"encoding/hex"
+	"net/url"
 	"strings"
 	"time"
 
@@ -28,8 +29,12 @@ type Item struct {
 	Score      int       `json:"score"`
 	Vendors    []string  `json:"vendors,omitempty"`
 	CVEs       []string  `json:"cves,omitempty"`
-	TitleJa    string    `json:"title_ja,omitempty"`
-	SummaryJa  string    `json:"summary_ja,omitempty"`
+	// EPSS is FIRST's exploit-prediction probability (0-1) for the
+	// highest-scoring CVE in the item; zero when unknown.
+	EPSS           float64 `json:"epss,omitempty"`
+	EPSSPercentile float64 `json:"epss_percentile,omitempty"`
+	TitleJa        string  `json:"title_ja,omitempty"`
+	SummaryJa      string  `json:"summary_ja,omitempty"`
 }
 
 // Normalize converts a raw item to a canonical Item. Tags / Severity / Score
@@ -42,7 +47,7 @@ func Normalize(r sources.RawItem, fetched time.Time) Item {
 		SourceName: r.SourceName,
 		Category:   r.Category,
 		Title:      strings.TrimSpace(r.Title),
-		URL:        r.URL,
+		URL:        SafeURL(r.URL),
 		Summary:    strings.TrimSpace(r.Summary),
 		Published:  r.Published,
 		Fetched:    fetched,
@@ -50,6 +55,22 @@ func Normalize(r sources.RawItem, fetched time.Time) Item {
 		CVEs:       dedupUpper(r.CVEs),
 		Tags:       dedupLower(r.Hints),
 	}
+}
+
+// SafeURL returns the trimmed link when it is an absolute http(s) URL with a
+// host, and "" otherwise. Feed links are untrusted: a "javascript:" or
+// "data:" link would run script when clicked on the dashboard.
+func SafeURL(raw string) string {
+	s := strings.TrimSpace(raw)
+	u, err := url.Parse(s)
+	if err != nil || u.Host == "" {
+		return ""
+	}
+	switch strings.ToLower(u.Scheme) {
+	case "http", "https":
+		return s
+	}
+	return ""
 }
 
 // StableID produces a deterministic ID for an item so the same article from

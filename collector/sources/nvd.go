@@ -7,6 +7,7 @@ import (
 	"io"
 	"net/http"
 	"net/url"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -17,14 +18,41 @@ import (
 //
 // Reference: https://nvd.nist.gov/developers/vulnerabilities
 type NVD struct {
-	cfg    Config
-	client *http.Client
-	ua     string
+	cfg       Config
+	client    *http.Client
+	ua        string
+	pageDelay time.Duration
 }
+
+const (
+	nvdDefaultLookbackHours = 48
+	nvdDefaultPerPage       = 200
+	nvdDefaultMaxPages      = 5
+	// NVD allows 5 requests per rolling 30 s without an API key.
+	nvdPageDelay = 6 * time.Second
+)
 
 // NewNVD constructs the NVD adapter.
 func NewNVD(c Config, h HTTPClientConfig) *NVD {
-	return &NVD{cfg: c, client: NewHTTPClient(h), ua: h.UserAgent}
+	return &NVD{cfg: c, client: NewHTTPClient(h), ua: h.UserAgent, pageDelay: nvdPageDelay}
+}
+
+// floatOption accepts YAML ints (8) and floats (8.0).
+func (n *NVD) floatOption(key string, def float64) float64 {
+	switch v := n.cfg.Options[key].(type) {
+	case float64:
+		return v
+	case int:
+		return float64(v)
+	}
+	return def
+}
+
+func (n *NVD) intOption(key string, def int) int {
+	if v, ok := n.cfg.Options[key].(int); ok && v > 0 {
+		return v
+	}
+	return def
 }
 
 // ID returns the source ID.
@@ -32,13 +60,13 @@ func (n *NVD) ID() string { return n.cfg.ID }
 
 // nvdResponse mirrors the relevant subset of the NVD CVE 2.0 schema.
 type nvdResponse struct {
-	ResultsPerPage  int                `json:"resultsPerPage"`
-	StartIndex      int                `json:"startIndex"`
-	TotalResults    int                `json:"totalResults"`
-	Format          string             `json:"format"`
-	Version         string             `json:"version"`
-	Timestamp       string             `json:"timestamp"`
-	Vulnerabilities []nvdVulnWrap      `json:"vulnerabilities"`
+	ResultsPerPage  int           `json:"resultsPerPage"`
+	StartIndex      int           `json:"startIndex"`
+	TotalResults    int           `json:"totalResults"`
+	Format          string        `json:"format"`
+	Version         string        `json:"version"`
+	Timestamp       string        `json:"timestamp"`
+	Vulnerabilities []nvdVulnWrap `json:"vulnerabilities"`
 }
 
 type nvdVulnWrap struct {
@@ -46,15 +74,15 @@ type nvdVulnWrap struct {
 }
 
 type nvdCVE struct {
-	ID            string         `json:"id"`
-	SourceIdentifier string      `json:"sourceIdentifier"`
-	Published     string         `json:"published"`
-	LastModified  string         `json:"lastModified"`
-	VulnStatus    string         `json:"vulnStatus"`
-	Descriptions  []nvdDesc      `json:"descriptions"`
-	Metrics       nvdMetrics     `json:"metrics"`
-	References    []nvdReference `json:"references"`
-	Configurations []nvdConfig   `json:"configurations,omitempty"`
+	ID               string         `json:"id"`
+	SourceIdentifier string         `json:"sourceIdentifier"`
+	Published        string         `json:"published"`
+	LastModified     string         `json:"lastModified"`
+	VulnStatus       string         `json:"vulnStatus"`
+	Descriptions     []nvdDesc      `json:"descriptions"`
+	Metrics          nvdMetrics     `json:"metrics"`
+	References       []nvdReference `json:"references"`
+	Configurations   []nvdConfig    `json:"configurations,omitempty"`
 }
 
 type nvdDesc struct {
@@ -69,10 +97,10 @@ type nvdMetrics struct {
 }
 
 type nvdCVSSWrap struct {
-	Source     string         `json:"source"`
-	Type       string         `json:"type"`
-	CvssData   nvdCVSS        `json:"cvssData"`
-	BaseSeverity string       `json:"baseSeverity"`
+	Source       string  `json:"source"`
+	Type         string  `json:"type"`
+	CvssData     nvdCVSS `json:"cvssData"`
+	BaseSeverity string  `json:"baseSeverity"`
 }
 
 type nvdCVSS struct {
@@ -100,26 +128,53 @@ type nvdCPEMatch struct {
 	Criteria   string `json:"criteria"`
 }
 
-// Fetch retrieves CVEs published or last-modified in the lookback window.
-// The window is read from cfg.Options["lookback_hours"] (default 48).
+// Fetch retrieves CVEs first published in the lookback window, following
+// pages up to max_pages. Options: lookback_hours (48), results_per_page
+// (200), max_pages (5), min_cvss (0 = keep all; otherwise unscored CVEs
+// are dropped too). A failure after the first page returns the items
+// collected so far together with an error, so the run is marked degraded.
 func (n *NVD) Fetch(ctx context.Context) ([]RawItem, error) {
-	lookback := 48
-	if v, ok := n.cfg.Options["lookback_hours"]; ok {
-		if i, ok := v.(int); ok && i > 0 {
-			lookback = i
-		}
-	}
+	lookback := n.intOption("lookback_hours", nvdDefaultLookbackHours)
+	perPage := n.intOption("results_per_page", nvdDefaultPerPage)
+	maxPages := n.intOption("max_pages", nvdDefaultMaxPages)
+	minCVSS := n.floatOption("min_cvss", 0)
 	end := time.Now().UTC()
 	start := end.Add(-time.Duration(lookback) * time.Hour)
-	// NVD requires ISO8601 with explicit UTC offset; the literal "+" must be
-	// URL-encoded so it isn't read as a space in the query string.
-	q := url.Values{}
-	q.Set("lastModStartDate", start.Format("2006-01-02T15:04:05.000")+"+00:00")
-	q.Set("lastModEndDate", end.Format("2006-01-02T15:04:05.000")+"+00:00")
-	q.Set("resultsPerPage", "200")
-	endpoint := n.cfg.URL + "?" + q.Encode()
 
-	body, err := n.get(ctx, endpoint)
+	var out []RawItem
+	for page, index := 0, 0; page < maxPages; page++ {
+		if page > 0 && n.pageDelay > 0 {
+			select {
+			case <-ctx.Done():
+				return out, nil
+			case <-time.After(n.pageDelay):
+			}
+		}
+		resp, err := n.fetchPage(ctx, start, end, index, perPage)
+		if err != nil {
+			if page == 0 {
+				return nil, err
+			}
+			return out, fmt.Errorf("nvd: partial result, page %d failed: %w", page+1, err)
+		}
+		out = append(out, n.toRawItems(resp, minCVSS)...)
+		index += len(resp.Vulnerabilities)
+		if len(resp.Vulnerabilities) == 0 || index >= resp.TotalResults {
+			break
+		}
+	}
+	return out, nil
+}
+
+func (n *NVD) fetchPage(ctx context.Context, start, end time.Time, index, perPage int) (*nvdResponse, error) {
+	// NVD requires ISO8601 with explicit UTC offset; url.Values encodes the
+	// literal "+" so it isn't read as a space.
+	q := url.Values{}
+	q.Set("pubStartDate", start.Format("2006-01-02T15:04:05.000")+"+00:00")
+	q.Set("pubEndDate", end.Format("2006-01-02T15:04:05.000")+"+00:00")
+	q.Set("resultsPerPage", strconv.Itoa(perPage))
+	q.Set("startIndex", strconv.Itoa(index))
+	body, err := n.get(ctx, n.cfg.URL+"?"+q.Encode())
 	if err != nil {
 		return nil, err
 	}
@@ -127,13 +182,19 @@ func (n *NVD) Fetch(ctx context.Context) ([]RawItem, error) {
 	if err := json.Unmarshal(body, &resp); err != nil {
 		return nil, fmt.Errorf("nvd: parse: %w", err)
 	}
+	return &resp, nil
+}
 
+func (n *NVD) toRawItems(resp *nvdResponse, minCVSS float64) []RawItem {
 	out := make([]RawItem, 0, len(resp.Vulnerabilities))
 	for _, w := range resp.Vulnerabilities {
 		v := w.CVE
 		desc := pickEnglishDesc(v.Descriptions)
 		published, _ := time.Parse("2006-01-02T15:04:05.000", v.Published)
 		score, sev := pickCVSS(v.Metrics)
+		if minCVSS > 0 && score < minCVSS {
+			continue
+		}
 
 		title := fmt.Sprintf("%s — %s", v.ID, truncateTo(desc, 100))
 		if score > 0 {
@@ -165,7 +226,7 @@ func (n *NVD) Fetch(ctx context.Context) ([]RawItem, error) {
 			Hints:      hints,
 		})
 	}
-	return out, nil
+	return out
 }
 
 func (n *NVD) get(ctx context.Context, url string) ([]byte, error) {
@@ -249,7 +310,8 @@ func pickVendors(cfgs []nvdConfig) []string {
 }
 
 // vendorFromCPE extracts the vendor field from a CPE 2.3 string:
-//   cpe:2.3:a:vendor:product:...
+//
+//	cpe:2.3:a:vendor:product:...
 func vendorFromCPE(cpe string) string {
 	parts := strings.Split(cpe, ":")
 	if len(parts) >= 4 {

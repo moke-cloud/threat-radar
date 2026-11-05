@@ -37,17 +37,39 @@ func (r *RSS) Fetch(ctx context.Context) ([]RawItem, error) {
 		return nil, err
 	}
 
-	// Try each format. Whichever yields items wins.
-	if items := tryRSS(body); len(items) > 0 {
-		return r.toRawItems(items), nil
+	items := parseFeed(body)
+	if len(items) == 0 {
+		return nil, errors.New("rss: no items recognised in feed")
 	}
-	if items := tryAtom(body); len(items) > 0 {
-		return r.toRawItems(items), nil
+	return r.toRawItems(items), nil
+}
+
+// parseFeed strips bytes that XML 1.0 forbids, then tries RSS, Atom and RDF
+// in turn. Whichever yields items wins.
+func parseFeed(body []byte) []genericItem {
+	clean := stripInvalidXMLBytes(body)
+	for _, try := range []func([]byte) []genericItem{tryRSS, tryAtom, tryRDF} {
+		if items := try(clean); len(items) > 0 {
+			return items
+		}
 	}
-	if items := tryRDF(body); len(items) > 0 {
-		return r.toRawItems(items), nil
+	return nil
+}
+
+// stripInvalidXMLBytes returns a copy of b without the C0 control bytes that
+// XML 1.0 forbids (everything below 0x20 except tab, LF and CR). Some feeds
+// (Rapid7 since 2026-10) embed U+000B, which makes encoding/xml abort.
+// Working on bytes keeps non-UTF-8 feeds intact: multi-byte sequences in
+// UTF-8, Shift_JIS and EUC-JP never use bytes below 0x20.
+func stripInvalidXMLBytes(b []byte) []byte {
+	out := make([]byte, 0, len(b))
+	for _, c := range b {
+		if c < 0x20 && c != '\t' && c != '\n' && c != '\r' {
+			continue
+		}
+		out = append(out, c)
 	}
-	return nil, errors.New("rss: no items recognised in feed")
+	return out
 }
 
 func (r *RSS) get(ctx context.Context, url string) ([]byte, error) {
@@ -260,6 +282,7 @@ func parseDate(s string) time.Time {
 	for _, layout := range []string{
 		time.RFC1123Z, time.RFC1123,
 		time.RFC3339, time.RFC3339Nano,
+		"2006-01-02T15:04Z07:00", // JPCERT/CC dc:date has no seconds
 		"2006-01-02T15:04:05Z",
 		"2006-01-02T15:04:05-07:00",
 		"Mon, 2 Jan 2006 15:04:05 -0700",

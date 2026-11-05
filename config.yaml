@@ -3,16 +3,24 @@
 # - sources : list of feeds / APIs to poll
 # - watch   : vendors / tags that get a score boost
 # - retain  : how much history to keep per file
-# - enrich  : optional LLM enrichment (off by default)
+# - epss    : FIRST EPSS lookup for CVEs (public API, no key)
+#
+# Source policy (2026-11 review): keyless, machine-readable, primary or
+# research-grade. Weight 1.0 = +30 base score points. See docs/SOURCES.md.
 
 http:
-  user_agent: "ThreatRadar/1.0 (+https://github.com/moke-cloud/SHIGOTOBA)"
-  timeout_seconds: 30
+  user_agent: "ThreatRadar/1.1 (+https://github.com/moke-cloud/threat-radar)"
+  timeout_seconds: 60
   parallel: 8
 
 retain:
   index_max_items: 500    # data/index.json keeps only the most recent N items
   daily_files_keep: 90    # delete data/items/YYYY-MM-DD.ndjson older than N days
+  max_item_age_days: 30   # drop items published earlier than N days ago (KEV catalog, blog archives)
+
+# FIRST EPSS (exploit prediction) for every CVE in new items. Public API, no key.
+epss:
+  enabled: true
 
 # Note: an earlier draft included optional LLM-driven JP translation. Removed
 # to avoid managing API keys in CI. Translate manually as needed — each
@@ -73,22 +81,25 @@ sources:
     url: https://services.nvd.nist.gov/rest/json/cves/2.0
     category: vuln
     weight: 1.0
+    index_limit: 150   # at most 150 of the 500 index slots
     options:
       lookback_hours: 48
+      max_pages: 8
+      min_cvss: 8.0   # ~1000 new CVEs / 48h; keep the high-impact ones (CNA score used when NVD has none)
 
   - id: jpcert-at
     name: "JPCERT/CC 注意喚起"
     type: rss
     url: https://www.jpcert.or.jp/rss/jpcert.rdf
     category: advisory
-    weight: 1.4
+    weight: 1.2
 
   - id: jpcert-wr
     name: "JPCERT/CC 全フィード"
     type: rss
     url: https://www.jpcert.or.jp/rss/jpcert-all.rdf
     category: advisory
-    weight: 0.8
+    weight: 0.6
 
   - id: ipa-alert
     name: "IPA セキュリティセンター"
@@ -97,14 +108,152 @@ sources:
     category: advisory
     weight: 1.2
 
-  # -- Major news / analysis --
-
-  - id: thehackernews
-    name: "The Hacker News"
+  - id: jc3
+    name: "JC3 脅威情報"
     type: rss
-    url: https://feeds.feedburner.com/TheHackersNews
-    category: news
+    url: https://www.jc3.or.jp/threats/atom.xml
+    category: advisory
+    weight: 1.0
+
+  - id: antiphishing
+    name: "フィッシング対策協議会"
+    type: rss
+    url: https://www.antiphishing.jp/atom.xml
+    category: advisory
+    weight: 0.8
+
+  # -- Exploitation evidence / telemetry --
+
+  - id: greynoise
+    name: "GreyNoise Threat Briefs"
+    type: rss
+    url: https://api.greynoise.io/v3/articles/rss
+    category: research
+    weight: 1.1
+
+  - id: cloudflare-ti
+    name: "Cloudflare Threat Intelligence (incl. Zero Wire)"
+    type: rss
+    url: https://blog.cloudflare.com/tag/threat-intelligence/rss/
+    category: research
+    weight: 1.0
+
+  - id: exploit-db
+    name: "Exploit-DB"
+    type: rss
+    url: https://www.exploit-db.com/rss.xml
+    category: vuln
+    weight: 0.8
+
+  - id: zdi
+    name: "Zero Day Initiative — Published"
+    type: rss
+    url: https://www.zerodayinitiative.com/rss/published/
+    category: vuln
+    weight: 1.0
+    index_limit: 100
+
+  # -- Vendor threat research --
+
+  - id: gtig
+    name: "Google Threat Intelligence (Mandiant)"
+    type: rss
+    url: https://feeds.feedburner.com/threatintelligence/pvexyqv7v0v
+    category: research
+    weight: 1.1
+
+  - id: ms-threat-intel
+    name: "Microsoft Threat Intelligence"
+    type: rss
+    url: https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/feed/
+    category: research
+    weight: 1.2
+
+  - id: unit42
+    name: "Palo Alto Networks Unit 42"
+    type: rss
+    url: https://unit42.paloaltonetworks.com/feed/
+    category: research
+    weight: 1.0
+
+  - id: talos
+    name: "Cisco Talos"
+    type: rss
+    url: https://blog.talosintelligence.com/rss/
+    category: research
+    weight: 1.0
+
+  - id: project-zero
+    name: "Google Project Zero"
+    type: rss
+    url: https://projectzero.google/feed.xml
+    category: research
+    weight: 1.0
+
+  - id: watchtowr
+    name: "watchTowr Labs"
+    type: rss
+    url: https://labs.watchtowr.com/rss/
+    category: research
+    weight: 1.0
+
+  - id: securelist
+    name: "Kaspersky Securelist"
+    type: rss
+    url: https://securelist.com/feed/
+    category: research
+    weight: 0.9
+
+  - id: checkpoint
+    name: "Check Point Research"
+    type: rss
+    url: https://research.checkpoint.com/category/threat-research/feed/
+    category: research
+    weight: 0.9
+
+  - id: sekoia
+    name: "Sekoia TDR"
+    type: rss
+    url: https://blog.sekoia.io/feed/
+    category: research
+    weight: 0.9
+
+  - id: dfir-report
+    name: "The DFIR Report"
+    type: rss
+    url: https://thedfirreport.com/feed/
+    category: research
+    weight: 0.9
+
+  - id: rapid7
+    name: "Rapid7 Blog"
+    type: rss
+    url: https://www.rapid7.com/rss.xml
+    category: research
+    weight: 0.9
+
+  - id: eset
+    name: "ESET WeLiveSecurity"
+    type: rss
+    url: https://www.welivesecurity.com/en/rss/feed/
+    category: research
+    weight: 0.8
+
+  - id: google-security
+    name: "Google Online Security Blog"
+    type: rss
+    url: https://blog.google/security/rss/
+    category: research
+    weight: 0.8
+
+  - id: trailofbits
+    name: "Trail of Bits Blog"
+    type: rss
+    url: https://blog.trailofbits.com/feed/
+    category: research
     weight: 0.7
+
+  # -- News --
 
   - id: bleeping
     name: "Bleeping Computer"
@@ -127,60 +276,16 @@ sources:
     category: news
     weight: 1.0
 
-  - id: schneier
-    name: "Schneier on Security"
+  - id: piyolog
+    name: "piyolog"
     type: rss
-    url: https://www.schneier.com/feed/atom/
-    category: analysis
-    weight: 0.6
-
-  # -- Vendor / research --
-
-  - id: project-zero
-    name: "Google Project Zero"
-    type: rss
-    url: https://googleprojectzero.blogspot.com/feeds/posts/default
-    category: research
-    weight: 1.1
-
-  - id: msrc
-    name: "Microsoft Security Blog"
-    type: rss
-    url: https://www.microsoft.com/en-us/security/blog/feed/
-    category: advisory
-    weight: 1.2
-
-  - id: google-security
-    name: "Google Online Security Blog"
-    type: rss
-    url: https://security.googleblog.com/feeds/posts/default
-    category: research
-    weight: 0.9
-
-  - id: mandiant
-    name: "Google Threat Intelligence (Mandiant)"
-    type: rss
-    url: https://www.mandiant.com/resources/blog/rss.xml
-    category: research
-    weight: 1.1
-
-  - id: zdi
-    name: "Zero Day Initiative — Published"
-    type: rss
-    url: https://www.zerodayinitiative.com/rss/published/
-    category: vuln
+    url: https://piyolog.hatenadiary.jp/rss
+    category: news
     weight: 1.0
 
-  - id: rapid7
-    name: "Rapid7 Blog"
+  - id: security-next
+    name: "Security NEXT"
     type: rss
-    url: https://www.rapid7.com/blog/rss/
-    category: research
-    weight: 0.9
-
-  - id: trailofbits
-    name: "Trail of Bits Blog"
-    type: rss
-    url: https://blog.trailofbits.com/feed/
-    category: research
-    weight: 0.9
+    url: https://www.security-next.com/feed
+    category: news
+    weight: 0.7

@@ -15,7 +15,10 @@ RSS リーダーや Twitter を巡回して「KEV に何が入った? CVE-2026-X
 - :red_circle: **CRITICAL バー**: KEV 新規 / CVSS 9+ / 既知の悪用観測のみ抽出
 - :calendar: **今日の追加分**: 過去 24 時間の新着だけ
 - :mag: **検索 + フィルタ**: ベンダー / タグ / ソース / 時期で絞り込み
-- :star: **スター**: あとで読む
+- :star: **スター**: あとで読む。「スターのみ」で絞り込み
+- :chart_with_upwards_trend: **EPSS**: CVE ごとに悪用予測の確率を表示。EPSS 順にも並べられる
+- :link: **複数ソースの印**: 同じ CVE を報じたソースの数を表示し、押すとその CVE で絞り込む
+- :satellite: **ソースの状態**: 取得失敗や更新停止のフィードを画面上部に表示
 - :globe_with_meridians: **UI は JP/EN 切替** (項目本文は英語のまま — 翻訳が要るときは各カードの「コピー」ボタンから DeepL 等に貼り付け)
 
 ---
@@ -85,25 +88,18 @@ threat-radar/
 
 ---
 
-## ソース一覧 (v1)
+## ソース一覧 (v2, 2026-11)
 
-| # | ソース | 形式 | 種別 |
-|---:|---|---|---|
-| 1 | CISA KEV (Known Exploited Vulnerabilities) | JSON | vuln |
-| 2 | CISA Advisories | RSS | advisory |
-| 3 | NVD CVE recent | JSON | vuln |
-| 4 | JPCERT/CC 注意喚起 | RSS | advisory |
-| 5 | JPCERT/CC Weekly Report | RSS | advisory |
-| 6 | IPA セキュリティセンター | RSS | advisory |
-| 7 | The Hacker News | RSS | news |
-| 8 | Bleeping Computer | RSS | news |
-| 9 | Krebs on Security | RSS | news |
-| 10 | SANS Internet Storm Center | RSS | news |
-| 11 | Schneier on Security | RSS | analysis |
-| 12 | Project Zero | Atom | research |
-| 13 | Microsoft Security Response Center | RSS | advisory |
-| 14 | Google Online Security Blog | RSS | research |
+31 ソースをキー不要の公開フィードで集めています。
 
+| 種別 | ソース |
+|---|---|
+| 政府機関・CSIRT | CISA KEV / CISA Advisories / NVD / JPCERT/CC (注意喚起・全フィード) / IPA / JC3 / フィッシング対策協議会 |
+| 悪用の観測・PoC | GreyNoise / Cloudflare Threat Intelligence (Zero Wire) / ZDI / Exploit-DB |
+| ベンダーの脅威リサーチ | Google Threat Intelligence (Mandiant) / Microsoft Threat Intelligence / Unit 42 / Cisco Talos / Project Zero / watchTowr Labs / Securelist / Check Point Research / Sekoia / The DFIR Report / Rapid7 / ESET / Google Online Security Blog / Trail of Bits |
+| ニュース | BleepingComputer / Krebs on Security / SANS ISC / piyolog / Security NEXT |
+
+CVE には FIRST EPSS（30日以内に悪用される確率の予測）を付けます。
 詳細は [docs/SOURCES.md](docs/SOURCES.md)。
 追加・除外は `config.yaml` の `sources:` リストを編集するだけ。
 

@@ -94,7 +94,7 @@ func (s *Store) AppendDaily(items []normalize.Item) error {
 // RebuildIndex reads the past M days of NDJSON, merges them with the new items,
 // sorts by published-date desc and writes data/index.json (capped at
 // IndexMaxItems) plus data/critical.json (severity in {critical, high}).
-func (s *Store) RebuildIndex(daysBack int) error {
+func (s *Store) RebuildIndex(daysBack int, opt IndexOptions) error {
 	if daysBack <= 0 {
 		daysBack = 14
 	}
@@ -133,9 +133,7 @@ func (s *Store) RebuildIndex(daysBack int) error {
 		return ai.After(aj)
 	})
 
-	if len(all) > s.IndexMaxItems {
-		all = all[:s.IndexMaxItems]
-	}
+	all = SelectIndex(all, s.IndexMaxItems, opt)
 	if err := s.writeJSON("index.json", all); err != nil {
 		return err
 	}

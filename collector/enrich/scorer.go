@@ -1,6 +1,7 @@
 package enrich
 
 import (
+	"math"
 	"strings"
 	"time"
 
@@ -12,13 +13,24 @@ type ScoreOptions struct {
 	WatchVendors []string
 	WatchTags    []string
 	Now          time.Time // override for tests; defaults to time.Now() if zero
+	// SourceWeight is the source's `weight` from config.yaml. Zero or
+	// negative falls back to defaultSourceWeight.
+	SourceWeight float64
 }
+
+const (
+	defaultSourceWeight = 0.7
+	pointsPerWeight     = 30
+	epssHigh            = 0.5 // FIRST EPSS probability, 0-1
+	epssElevated        = 0.1
+)
 
 // Score computes a 0-100 threat score and assigns the severity label.
 //
 // The score blends:
 //
 //   - The source's configured weight (1.0 → +30, 1.5 → +45)
+//   - FIRST EPSS probability (≥0.1 → +8, ≥0.5 → +15)
 //   - Hints from the source adapter (kev / actively-exploited / 0day)
 //   - Heuristic tags (rce / auth-bypass / supply-chain)
 //   - CVSS extracted from KEV / NVD pre-tagged hints
@@ -30,7 +42,8 @@ func Score(it *normalize.Item, opt ScoreOptions) {
 		score += 15
 	}
 
-	score += scoreFromSourceID(it.Source)
+	score += baseFromWeight(opt.SourceWeight)
+	score += epssPoints(it.EPSS)
 
 	if hasAny(it.Tags, []string{"actively-exploited", "kev", "0day"}) {
 		score += 30
@@ -90,22 +103,23 @@ func Score(it *normalize.Item, opt ScoreOptions) {
 	}
 }
 
-// scoreFromSourceID maps known source IDs to a base contribution. Falls back
-// to 21 (≈ weight 0.7) for unrecognised sources.
-func scoreFromSourceID(sourceID string) int {
-	switch sourceID {
-	case "cisa-kev":
-		return 45
-	case "cisa-advisories", "msrc", "jpcert-at", "ipa-alert":
-		return 36
-	case "nvd-recent", "krebs", "sans-isc", "project-zero":
-		return 30
-	case "bleeping", "google-security":
-		return 27
-	case "thehackernews", "schneier", "jpcert-wr":
-		return 18
+// baseFromWeight converts a config weight into base points.
+func baseFromWeight(w float64) int {
+	if w <= 0 {
+		w = defaultSourceWeight
 	}
-	return 21
+	return int(math.Round(w * pointsPerWeight))
+}
+
+// epssPoints rewards CVEs that FIRST predicts are likely to be exploited.
+func epssPoints(p float64) int {
+	switch {
+	case p >= epssHigh:
+		return 15
+	case p >= epssElevated:
+		return 8
+	}
+	return 0
 }
 
 func hasAny(haystack, needles []string) bool {

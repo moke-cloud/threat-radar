@@ -38,6 +38,13 @@ jobs:
           go-version: "1.22"
           cache-dependency-path: collector/go.sum
 
+      - name: Test collector
+        working-directory: collector
+        run: go test ./...
+
+      - name: Test dashboard helpers
+        run: node --test web/test
+
       - name: Build collector
         working-directory: collector
         run: go build -o ../collector-bin ./cmd/collector
@@ -89,6 +96,7 @@ jobs:
           cp data/index.json _site/data/ 2>/dev/null || true
           cp data/critical.json _site/data/ 2>/dev/null || true
           cp data/stats.json _site/data/ 2>/dev/null || true
+          cp data/sources.json _site/data/ 2>/dev/null || true
 
       - uses: actions/upload-pages-artifact@v3
         with:

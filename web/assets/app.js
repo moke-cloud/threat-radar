@@ -14,10 +14,15 @@
   const $  = (s, r=document) => r.querySelector(s);
   const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
   const i18n = window.__i18n;
+  const H = window.__sourceHealth;
+  const EMPTY_FILTERS = Object.freeze({ severity: "", category: "", source: "", tag: "", vendor: "" });
 
   const state = {
     items: [],
-    filters: { severity: "", category: "", source: "", tag: "", vendor: "" },
+    health: null,
+    cveSources: new Map(),
+    starredOnly: false,
+    filters: { ...EMPTY_FILTERS },
     search: "",
     sort: "published",
     starred: new Set(JSON.parse(localStorage.getItem("tr_starred") || "[]")),
@@ -27,9 +32,9 @@
 
   // GH Pages layout: data/ inside the served root (workflow stages it there).
   // Local dev: data/ may be one level up. Try both before giving up.
-  async function fetchIndex() {
+  async function fetchData(name) {
     let lastErr;
-    for (const path of ["data/index.json", "../data/index.json"]) {
+    for (const path of ["data/" + name, "../data/" + name]) {
       try {
         const r = await fetch(path, { cache: "no-store" });
         if (r.ok) return await r.json();
@@ -38,13 +43,21 @@
         lastErr = err;
       }
     }
-    throw lastErr || new Error("data/index.json not found");
+    throw lastErr || new Error("data/" + name + " not found");
   }
 
   async function load() {
     try {
-      state.items = await fetchIndex();
+      const [items, health] = await Promise.all([
+        fetchData("index.json"),
+        // sources.json is optional: older deployments do not have it.
+        fetchData("sources.json").catch(() => null),
+      ]);
+      state.items = items;
+      state.health = health;
+      state.cveSources = H.crossSourceIndex(items);
       renderQuickStats();
+      renderHealth();
       buildFilterChips();
       render();
     } catch (err) {
@@ -95,17 +108,23 @@
 
     bindItemEvents();
 
-    // Last updated
-    if (state.items.length) {
+    renderLastUpdated(sorted);
+  }
+
+  function renderLastUpdated(sorted) {
+    let dt = null;
+    if (state.health && state.health.generated_at) {
+      dt = new Date(state.health.generated_at);
+    } else if (state.items.length) {
       const newest = sorted[0] || state.items[0];
-      const dt = new Date(newest.fetched || newest.published);
-      $("#last-updated").textContent = "updated " + formatDateShort(dt);
+      dt = new Date(newest.fetched || newest.published);
     }
+    if (dt) $("#last-updated").textContent = i18n.t("stats.updated") + " " + formatDateShort(dt);
   }
 
   function itemCardHTML(it) {
     const sev = it.severity || "info";
-    const cls = "item sev-" + sev + (state.starred.has(it.id) ? " starred" : "");
+    const cls = "item sev-" + escapeAttr(sev) + (state.starred.has(it.id) ? " starred" : "");
     const tags = (it.tags || []).slice(0, 6).map((t) =>
       `<span class="tag ${escapeAttr(t)}">${escapeHTML(t)}</span>`).join("");
     const cves = (it.cves || []).slice(0, 3).map((c) =>
@@ -113,6 +132,8 @@
     const summary = it.summary
       ? `<div class="item-summary">${escapeHTML(it.summary)}</div>`
       : "";
+    const epss = epssHTML(it);
+    const corroboration = corroborationHTML(it);
     const star = state.starred.has(it.id) ? "★" : "☆";
     return `
       <article class="${cls}" data-id="${escapeAttr(it.id)}">
@@ -121,15 +142,15 @@
           <div class="item-meta">
             <span class="source">${escapeHTML(it.source_name || it.source)}</span>
             <span class="pub">${escapeHTML(formatDateShort(new Date(it.published)))}</span>
+            ${corroboration}
           </div>
-          <h3 class="item-title">
-            <a href="${escapeAttr(it.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(it.title)}</a>
-          </h3>
+          <h3 class="item-title">${titleHTML(it)}</h3>
           ${summary}
           <div class="item-tags">${cves}${tags}</div>
         </div>
         <div class="item-aside">
-          <span class="score-pill ${sev}">${it.score}</span>
+          <span class="score-pill ${escapeAttr(sev)}">${escapeHTML(it.score)}</span>
+          ${epss}
           <div class="item-actions">
             <button class="btn-icon" data-action="copy" title="${escapeAttr(i18n.t("action.copy"))}">⧉</button>
             <button class="btn-icon btn-star ${state.starred.has(it.id) ? "starred" : ""}" data-action="star" title="${escapeAttr(i18n.t("action.star"))}">${star}</button>
@@ -138,7 +159,71 @@
       </article>`;
   }
 
+  function titleHTML(it) {
+    const href = H.safeHref(it.url);
+    if (!href) return escapeHTML(it.title);
+    return `<a href="${escapeAttr(href)}" target="_blank" rel="noopener noreferrer">${escapeHTML(it.title)}</a>`;
+  }
+
+  // EPSS >= 0.1 is flagged; >= 0.5 means FIRST predicts likely exploitation.
+  function epssHTML(it) {
+    if (!it.epss) return "";
+    const level = it.epss >= 0.5 ? "high" : it.epss >= 0.1 ? "elevated" : "";
+    const title = i18n.t("epss.title") + " / percentile " + H.formatEPSS(it.epss_percentile);
+    return `<span class="epss-pill ${level}" title="${escapeAttr(title)}">EPSS ${escapeHTML(H.formatEPSS(it.epss))}</span>`;
+  }
+
+  // How many distinct sources mention any of this item's CVEs.
+  function corroborationHTML(it) {
+    let best = null;
+    for (const c of it.cves || []) {
+      const set = state.cveSources.get(c);
+      if (set && set.size > 1 && (!best || set.size > best.size)) best = { cve: c, size: set.size, set };
+    }
+    if (!best) return "";
+    const names = [...best.set].join(", ");
+    const label = i18n.t("corroboration").replace("{n}", best.size);
+    return `<button class="corroboration" data-action="cve" data-cve="${escapeAttr(best.cve)}" title="${escapeAttr(names)}">${escapeHTML(label)}</button>`;
+  }
+
+  function renderHealth() {
+    const box = $("#source-health");
+    if (!box) return;
+    const sum = H.summarize(state.health, Date.now());
+    if (!sum.total) {
+      box.classList.add("hidden");
+      return;
+    }
+    box.classList.remove("hidden");
+    box.classList.toggle("has-problems", sum.problems > 0);
+    $("#health-summary").textContent = sum.problems
+      ? i18n.t("health.problems").replace("{n}", sum.problems).replace("{total}", sum.total)
+      : i18n.t("health.all_ok").replace("{total}", sum.total);
+    $("#health-list").innerHTML = sum.rows.map(healthRowHTML).join("");
+  }
+
+  function healthRowHTML(r) {
+    const last = r.lastItem ? formatDateShort(new Date(r.lastItem)).slice(0, 10) : "-";
+    const detail = r.status === "error" ? (r.error || "") : `${i18n.t("health.last_item")} ${last}`;
+    return `
+      <li class="health-row ${r.status}">
+        <span class="health-dot" aria-hidden="true"></span>
+        <span class="health-name">${escapeHTML(r.name || r.id)}</span>
+        <span class="health-state">${escapeHTML(i18n.t("health." + r.status))}</span>
+        <span class="health-detail">${escapeHTML(detail)}</span>
+      </li>`;
+  }
+
   function bindItemEvents() {
+    $$("[data-action=cve]").forEach((b) => {
+      b.addEventListener("click", (e) => {
+        e.preventDefault();
+        state.search = b.dataset.cve;
+        $("#search").value = b.dataset.cve;
+        render();
+        $("#all-feed").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
     $$("[data-action=star]").forEach((b) => {
       b.addEventListener("click", (e) => {
         e.preventDefault();
@@ -215,6 +300,7 @@
     const f = state.filters;
     const q = state.search.trim().toLowerCase();
     return items.filter((it) => {
+      if (state.starredOnly && !state.starred.has(it.id)) return false;
       if (f.severity && it.severity !== f.severity) return false;
       if (f.category && it.category !== f.category) return false;
       if (f.source && it.source !== f.source) return false;
@@ -230,7 +316,9 @@
 
   function sortItems(items, mode) {
     const copy = items.slice();
-    if (mode === "score") {
+    if (mode === "epss") {
+      copy.sort((a, b) => ((b.epss || 0) - (a.epss || 0)) || (b.score - a.score));
+    } else if (mode === "score") {
       copy.sort((a, b) => (b.score - a.score) || (timeOf(b) - timeOf(a)));
     } else {
       copy.sort((a, b) => (timeOf(b) - timeOf(a)) || (b.score - a.score));
@@ -260,7 +348,12 @@
     root.innerHTML = all + entries.map(([k, v]) =>
       `<button class="chip" data-filter="${kind}" data-value="${escapeAttr(k)}">${escapeHTML(k)}<span class="count">${v}</span></button>`
     ).join("");
-    root.addEventListener("click", (e) => {
+  }
+
+  // One delegated listener per chip group, bound once at init, so rebuilding
+  // the chips on reset no longer stacks duplicate listeners.
+  function bindChipGroup(sel) {
+    $(sel).addEventListener("click", (e) => {
       const b = e.target.closest(".chip");
       if (!b) return;
       const kind = b.dataset.filter;
@@ -268,7 +361,7 @@
       b.classList.add("active");
       state.filters[kind] = b.dataset.value;
       render();
-    }, { once: false });
+    });
   }
 
   function tally(items, fn) {
@@ -328,6 +421,7 @@
       $("#toggle-lang").textContent = next === "ja" ? "EN" : "JA";
       render();
       renderQuickStats();
+      renderHealth();
     });
 
     $("#toggle-theme").addEventListener("click", () => {
@@ -347,8 +441,19 @@
       render();
     });
 
+    ["#filter-severity", "#filter-category", "#filter-source", "#filter-tag", "#filter-vendor"]
+      .forEach(bindChipGroup);
+
+    $("#starred-only").addEventListener("click", () => {
+      state.starredOnly = !state.starredOnly;
+      setStarredButton();
+      render();
+    });
+
     $("#reset-filters").addEventListener("click", () => {
-      state.filters = { severity: "", category: "", source: "", tag: "", vendor: "" };
+      state.filters = { ...EMPTY_FILTERS };
+      state.starredOnly = false;
+      setStarredButton();
       state.search = "";
       $("#search").value = "";
       $$(".chip[data-value='']").forEach((b) => b.classList.add("active"));
@@ -357,17 +462,13 @@
       render();
     });
 
-    // Severity chips bind manually since they're in HTML, not generated
-    $("#filter-severity").addEventListener("click", (e) => {
-      const b = e.target.closest(".chip");
-      if (!b) return;
-      $$(`#filter-severity .chip`).forEach((x) => x.classList.remove("active"));
-      b.classList.add("active");
-      state.filters.severity = b.dataset.value;
-      render();
-    });
-
     load();
+  }
+
+  function setStarredButton() {
+    const b = $("#starred-only");
+    b.classList.toggle("active", state.starredOnly);
+    b.setAttribute("aria-pressed", String(state.starredOnly));
   }
 
   function debounce(fn, ms) {

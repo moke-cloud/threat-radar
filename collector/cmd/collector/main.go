@@ -22,16 +22,19 @@ import (
 	"os"
 	"os/signal"
 	"strings"
-	"sync"
 	"syscall"
 	"time"
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/moke-cloud/SHIGOTOBA/threat-radar/collector/enrich"
-	"github.com/moke-cloud/SHIGOTOBA/threat-radar/collector/normalize"
 	"github.com/moke-cloud/SHIGOTOBA/threat-radar/collector/sources"
 	"github.com/moke-cloud/SHIGOTOBA/threat-radar/collector/store"
+)
+
+const (
+	defaultMaxItemAgeDays = 30
+	defaultParallel       = 8
+	indexDaysBack         = 14
 )
 
 type appConfig struct {
@@ -43,7 +46,11 @@ type appConfig struct {
 	Retain struct {
 		IndexMaxItems  int `yaml:"index_max_items"`
 		DailyFilesKeep int `yaml:"daily_files_keep"`
+		MaxItemAgeDays int `yaml:"max_item_age_days"`
 	} `yaml:"retain"`
+	EPSS struct {
+		Enabled bool `yaml:"enabled"`
+	} `yaml:"epss"`
 	Watch struct {
 		Vendors []string `yaml:"vendors"`
 		Tags    []string `yaml:"tags"`
@@ -59,96 +66,135 @@ func main() {
 	verbose := flag.Bool("verbose", false, "per-source progress")
 	flag.Parse()
 
-	logh := slog.NewTextHandler(os.Stderr, &slog.HandlerOptions{Level: slog.LevelInfo})
-	slog.SetDefault(slog.New(logh))
+	slog.SetDefault(slog.New(slog.NewTextHandler(os.Stderr, &slog.HandlerOptions{Level: slog.LevelInfo})))
 
 	cfg, err := loadConfig(*cfgPath)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "load config:", err)
 		os.Exit(2)
 	}
+	if err := run(cfg, *outDir, splitCSVSet(*only), *dry, *verbose); err != nil {
+		slog.Error("collector failed", "err", err)
+		os.Exit(1)
+	}
+}
 
+func run(cfg *appConfig, outDir string, only map[string]struct{}, dry, verbose bool) error {
 	httpCfg := sources.HTTPClientConfig{
 		UserAgent:      cfg.HTTP.UserAgent,
 		TimeoutSeconds: cfg.HTTP.TimeoutSeconds,
 	}
-
-	wantSet := splitCSVSet(*only)
-	srcs := make([]sources.Source, 0, len(cfg.Sources))
-	for _, sc := range cfg.Sources {
-		if len(wantSet) > 0 {
-			if _, ok := wantSet[sc.ID]; !ok {
-				continue
-			}
-		}
-		s, err := sources.Build(sc, httpCfg)
-		if err != nil {
-			slog.Warn("skipping source", "id", sc.ID, "err", err)
-			continue
-		}
-		srcs = append(srcs, s)
-	}
-
-	parallel := cfg.HTTP.Parallel
-	if parallel <= 0 {
-		parallel = 8
-	}
+	now := time.Now().UTC()
+	srcs, buildFailures := buildSources(cfg.Sources, httpCfg, only, now)
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
 
-	collected, srcErrors := fetchAll(ctx, srcs, parallel, *verbose)
-	slog.Info("collection done", "items", len(collected), "errors", len(srcErrors))
+	parallel := cfg.HTTP.Parallel
+	if parallel <= 0 {
+		parallel = defaultParallel
+	}
+	results := fetchAll(ctx, srcs, parallel, verbose)
 
-	st := store.New(*outDir, cfg.Retain.IndexMaxItems)
-
-	// Dedup against last 7 days of items.
-	seen, _ := st.LoadSeenIDs(7)
-
-	now := time.Now().UTC()
-	items := make([]normalize.Item, 0, len(collected))
-	for _, raw := range collected {
-		it := normalize.Normalize(raw, now)
-		enrich.Tag(&it, cfg.Watch.Vendors)
-		enrich.Score(&it, enrich.ScoreOptions{
-			WatchVendors: cfg.Watch.Vendors,
-			WatchTags:    cfg.Watch.Tags,
-			Now:          now,
-		})
-		items = append(items, it)
+	maxAge := cfg.Retain.MaxItemAgeDays
+	if maxAge <= 0 {
+		maxAge = defaultMaxItemAgeDays
+	}
+	st := store.New(outDir, cfg.Retain.IndexMaxItems)
+	seen, err := st.LoadSeenIDs(maxAge + 1)
+	if err != nil {
+		slog.Warn("load seen ids", "err", err)
 	}
 
-	items = enrich.Dedupe(items, seen)
-	slog.Info("after dedup", "items", len(items))
+	out := process(ctx, results, pipelineOptions{
+		Now:          now,
+		Cutoff:       now.AddDate(0, 0, -maxAge),
+		Seen:         seen,
+		WatchVendors: cfg.Watch.Vendors,
+		WatchTags:    cfg.Watch.Tags,
+		EPSS:         epssLookup(cfg, httpCfg),
+	})
+	out.Health = append(out.Health, buildFailures...)
+	out.Errors += len(buildFailures)
+	slog.Info("pipeline done", "fetched", out.Fetched, "new", len(out.Items), "source_errors", out.Errors)
 
-	if *dry {
-		for _, it := range items[:min(5, len(items))] {
-			fmt.Printf("%-12s %-8s %3d  %s\n", it.Source, it.Severity, it.Score, it.Title)
+	if dry {
+		printDry(out)
+		return nil
+	}
+	return persist(st, out, now, cfg.Retain.DailyFilesKeep, indexOptions(cfg.Sources))
+}
+
+// indexOptions derives index shaping from the full source list (not the
+// -only subset), so a partial run never drops other sources from the index.
+func indexOptions(cfgs []sources.Config) store.IndexOptions {
+	opt := store.IndexOptions{Allowed: map[string]struct{}{}, PerSource: map[string]int{}}
+	for _, c := range cfgs {
+		opt.Allowed[c.ID] = struct{}{}
+		if c.IndexLimit > 0 {
+			opt.PerSource[c.ID] = c.IndexLimit
 		}
-		fmt.Printf("(dry-run: %d items, no writes)\n", len(items))
-		return
 	}
+	return opt
+}
 
-	if err := st.AppendDaily(items); err != nil {
-		slog.Error("append daily failed", "err", err)
-		os.Exit(1)
+func persist(st *store.Store, out pipelineResult, now time.Time, keepDays int, idx store.IndexOptions) error {
+	if err := st.AppendDaily(out.Items); err != nil {
+		return fmt.Errorf("append daily: %w", err)
 	}
-	if err := st.RebuildIndex(14); err != nil {
-		slog.Error("rebuild index failed", "err", err)
-		os.Exit(1)
+	if err := st.RebuildIndex(indexDaysBack, idx); err != nil {
+		return fmt.Errorf("rebuild index: %w", err)
 	}
-	if err := st.PurgeOlderThan(cfg.Retain.DailyFilesKeep); err != nil {
+	prev, err := st.LoadHealth()
+	if err != nil {
+		slog.Warn("load source health", "err", err)
+	}
+	if err := st.WriteHealth(store.MergeHealth(prev, out.Health, idx.Allowed), now); err != nil {
+		return fmt.Errorf("write source health: %w", err)
+	}
+	if err := st.PurgeOlderThan(keepDays); err != nil {
 		slog.Warn("purge failed", "err", err)
 	}
+	slog.Info("threat-radar collection complete", "new_items", len(out.Items), "errors", out.Errors)
+	return nil
+}
 
-	slog.Info("threat-radar collection complete",
-		"new_items", len(items), "errors", len(srcErrors), "out", *outDir)
-
-	if len(srcErrors) > 0 && *verbose {
-		for id, err := range srcErrors {
-			slog.Warn("source error", "id", id, "err", err)
+func printDry(out pipelineResult) {
+	for _, it := range out.Items[:min(5, len(out.Items))] {
+		fmt.Printf("%-16s %-8s %3d  epss=%.3f  %s\n", it.Source, it.Severity, it.Score, it.EPSS, it.Title)
+	}
+	for _, h := range out.Health {
+		if !h.OK {
+			fmt.Printf("FAILED %-16s %s\n", h.ID, h.Error)
 		}
 	}
+	fmt.Printf("(dry-run: %d new items, no writes)\n", len(out.Items))
+}
+
+// buildSources constructs the adapters to run. Sources whose adapter cannot
+// be built are returned as failed health records so they show up in the UI
+// instead of silently vanishing.
+func buildSources(cfgs []sources.Config, h sources.HTTPClientConfig, only map[string]struct{}, now time.Time) ([]sourceEntry, []store.SourceStatus) {
+	out := make([]sourceEntry, 0, len(cfgs))
+	var failed []store.SourceStatus
+	for _, sc := range cfgs {
+		if len(only) > 0 {
+			if _, ok := only[sc.ID]; !ok {
+				continue
+			}
+		}
+		s, err := sources.Build(sc, h)
+		if err != nil {
+			slog.Warn("skipping source", "id", sc.ID, "err", err)
+			failed = append(failed, store.SourceStatus{
+				ID: sc.ID, Name: sc.Name, Category: sc.Category, URL: sc.URL,
+				Error: store.TruncateError(err.Error()), CheckedAt: now,
+			})
+			continue
+		}
+		out = append(out, sourceEntry{cfg: sc, src: s})
+	}
+	return out, failed
 }
 
 func loadConfig(path string) (*appConfig, error) {
@@ -163,63 +209,15 @@ func loadConfig(path string) (*appConfig, error) {
 	return &cfg, nil
 }
 
-// fetchAll runs all source.Fetch calls in parallel with a semaphore.
-func fetchAll(ctx context.Context, srcs []sources.Source, parallel int, verbose bool) ([]sources.RawItem, map[string]error) {
-	sem := make(chan struct{}, parallel)
-	var (
-		wg      sync.WaitGroup
-		muOut   sync.Mutex
-		out     []sources.RawItem
-		muErr   sync.Mutex
-		srcErrs = map[string]error{}
-	)
-
-	for _, s := range srcs {
-		s := s
-		wg.Add(1)
-		sem <- struct{}{}
-		go func() {
-			defer wg.Done()
-			defer func() { <-sem }()
-			start := time.Now()
-			items, err := s.Fetch(ctx)
-			dur := time.Since(start)
-			if err != nil {
-				muErr.Lock()
-				srcErrs[s.ID()] = err
-				muErr.Unlock()
-				slog.Warn("fetch failed", "source", s.ID(), "err", err, "ms", dur.Milliseconds())
-				return
-			}
-			if verbose {
-				slog.Info("fetched", "source", s.ID(), "items", len(items), "ms", dur.Milliseconds())
-			}
-			muOut.Lock()
-			out = append(out, items...)
-			muOut.Unlock()
-		}()
-	}
-	wg.Wait()
-	return out, srcErrs
-}
-
 func splitCSVSet(s string) map[string]struct{} {
 	if s == "" {
 		return nil
 	}
 	out := map[string]struct{}{}
 	for _, p := range strings.Split(s, ",") {
-		p = strings.TrimSpace(p)
-		if p != "" {
+		if p = strings.TrimSpace(p); p != "" {
 			out[p] = struct{}{}
 		}
 	}
 	return out
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
 }

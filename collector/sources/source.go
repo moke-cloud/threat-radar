@@ -19,6 +19,8 @@ type Config struct {
 	URL      string         `yaml:"url"`
 	Category string         `yaml:"category"`
 	Weight   float64        `yaml:"weight"`
+	// IndexLimit caps this source's share of data/index.json (0 = no cap).
+	IndexLimit int `yaml:"index_limit,omitempty"`
 	Options  map[string]any `yaml:"options,omitempty"`
 }
 

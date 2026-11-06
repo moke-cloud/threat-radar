@@ -1,5 +1,647 @@
 [
   {
+    "id": "14598aeada3de7d7d63baadbea3b25e6",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-113663 — AG2 is an open-source AgentOS. From 0.13.2 until ag2 1.1.1, and from autogen 0.1…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113663",
+    "summary": "AG2 is an open-source AgentOS. From 0.13.2 until ag2 1.1.1, and from autogen 0.13.2 to 0.14.1, SandboxShellTool configurations using allowed=[...] or readonly=True rely on ShellAdapter._filter and contains_shell_operator in ag2/tools/sandbox/filter.py and ag2/tools/sandbox/adapter/shell.py to validate a command prefix and reject selected shell syntax. The filter omits newline and carriage-return separators, while the accepted raw string is passed to sh -c, allowing an attacker-influenced agent command to execute an additional arbitrary statement. With the default LocalEnvironment backend, the injected statement runs as a host subprocess with the privileges of the agent process and can affect confidentiality, integrity, and availability. This issue is fixed in ag2 version 1.1.1.",
+    "published": "2026-11-05T23:16:50.523Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-113663"
+    ]
+  },
+  {
+    "id": "f5315dcc7723d7e37742ba46cbc46784",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-33944 — Dolibarr is an open-source enterprise resource planning and customer relationshi…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33944",
+    "summary": "Dolibarr is an open-source enterprise resource planning and customer relationship management application. Prior to 22.0.5 and 23.0.1, there is a SQL injection vulnerability in the Third Party company update functionality. The application concatenates the  localtax1_value  and  localtax2_value  properties into an SQL UPDATE statement without numeric conversion or other appropriate sanitization. An authenticated user with Third Party create or edit permission can submit crafted  lt1  or  lt2  POST parameters to read sensitive database information, including password hashes, API keys, and business data, or modify third-party records. This issue is fixed in versions 22.0.5 and 23.0.2.",
+    "published": "2026-11-05T22:18:41.777Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "sqli",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-33944"
+    ]
+  },
+  {
+    "id": "0212524092b3a05a43ad5d3a5e958df7",
+    "source": "watchtowr",
+    "source_name": "watchTowr Labs",
+    "category": "research",
+    "title": "Barracuda Networks is your new best friend (Barracuda Email Security Gateway Pre-Auth Remote Root RCE CVE-2026-116606 / CVE-2026-111560)",
+    "url": "https://labs.watchtowr.com/barracuda-networks-is-your-new-best-friend-barracuda-email-security-gateway-pre-auth-remote-root-rce-cve-2026-116606-cve-2026-111560/",
+    "summary": "Yes, that's right! Today we're at the aquarium.Welcome back to yet another watchTowr Labs blog post. You can begin preparing your comments now. What Is A Barracuda, And Why? Must We?Barracuda&#x2019;s Email Security Gateway solution (ESG) is no stranger to love, for",
+    "published": "2026-11-05T21:19:58Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-116606",
+      "CVE-2026-111560"
+    ]
+  },
+  {
+    "id": "6bafc36244b0cb9ddeee9aa0f0f08927",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2026-116788 — FreeSWITCH is an open-source software telecommunications platform. Before versio…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116788",
+    "summary": "FreeSWITCH is an open-source software telecommunications platform. Before version 1.11.2, an integer underflow in  switch_xml_decode()  can cause an undersized heap allocation when an XML document declares an entity with an empty replacement value. Subsequent copying overruns the allocated buffer. An unauthenticated attacker who can reach a SIP profile with presence management enabled and DTD processing permitted can trigger the vulnerability through a crafted SIP PUBLISH request. Exploitation can corrupt heap memory and terminate the FreeSWITCH process, interrupting all active calls. This vulnerability is fixed in version 1.11.2.",
+    "published": "2026-11-05T20:17:46.24Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-116788"
+    ]
+  },
+  {
+    "id": "623e2895d5d507688645bf71607babe8",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-116785 — FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformati…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116785",
+    "summary": "FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, ws_read_frame() decoded a WebSocket frame's 64-bit extended payload length with a 32-bit byte swap and narrowed the result into a signed length. A value whose surviving low word became negative bypassed the signed size check and was reinterpreted as an enormous unsigned count, causing client bytes to overwrite memory beyond the 64 KiB receive buffer. Any client completing a /socket WebSocket upgrade on an enabled mod_xml_rpc endpoint reached the parser before HTTP authentication; both the module and WebSocket endpoint are disabled by default. The heap overwrite can corrupt connection pointers and crash FreeSWITCH, ending every concurrent session, although remote code execution has not been demonstrated. This issue is fixed in version 1.11.2.",
+    "published": "2026-11-05T20:17:45.73Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-116785"
+    ]
+  },
+  {
+    "id": "37670470c7b444db46df358ca6738fbb",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2026-116783 — FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformati…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116783",
+    "summary": "FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, udptl_rx_packet() used a peer-controlled FEC entry count directly to fill five-entry FEC arrays in a mod_spandsp T.38 session. A larger count wrote sender-controlled error-recovery data beyond those arrays and persisted the oversized count for a later reconstruction pass. Any peer able to deliver UDPTL to an established T.38 fax session can reach the parser, including deployments using fax applications or a T.38 gateway. The memory corruption can crash FreeSWITCH and end every active call, although remote code execution has not been demonstrated. This issue is fixed in version 1.11.2.",
+    "published": "2026-11-05T20:17:45.4Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-116783"
+    ]
+  },
+  {
+    "id": "536413a7f8a0bb2400fe7af41ea68b50",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-116779 — FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformati…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116779",
+    "summary": "FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.3, sofia_presence_handle_sip_i_message() split the To user of an inbound SIP MESSAGE on a plus sign and treated the left side as a chat protocol selector. Selecting the api chat proto reached switch_api_execute(), allowing a peer whose MESSAGE was accepted to run FreeSWITCH API commands, including operating-system command sinks, with the daemon's privileges. Inbound chat is enabled on the stock internal and external profiles, and any authenticated profile account is sufficient; stock directory users without password material can also remove that barrier in affected configurations. The flaw permits configuration and credential disclosure, arbitrary call control, and command execution, and exploitation has been observed in the wild. This issue is fixed in version 1.11.3.",
+    "published": "2026-11-05T20:17:44.79Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "critical-cvss",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "cves": [
+      "CVE-2026-116779"
+    ]
+  },
+  {
+    "id": "4bc7f4f860d76fa8454174bfd45757fa",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-115573 — OpenEMR is a free and open source electronic health records and medical practice…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115573",
+    "summary": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, library/classes/Controller.class.php allows explicit controller.php dispatch to controllers missing from CONTROLLER_ACL_MAP, and checkControllerAcl() returns without enforcing any permission for those entries. A low-privilege authenticated user can invoke C_X12Partner::edit_action_process() to create or alter insurance-routing hosts and credentials, or invoke C_PatientFinder::find_action_process() to enumerate patient names, dates of birth, and identifiers. The shared fail-open dispatcher root cause also exposes other administrative controllers that were intended to be reached through ACL-gated Practice Settings routes. This issue is fixed in version 8.3.0.",
+    "published": "2026-11-05T20:17:42.803Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-115573"
+    ]
+  },
+  {
+    "id": "c96e4858b01b780cbc215c3134277dd6",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-103935 — OpenEMR is a free and open source electronic health records and medical practice…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103935",
+    "summary": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, interface/forms/transfer_summary/new.php and interface/forms/functional_cognitive_status/new.php render stored transfer_to, code, and codetext values with text(), which uses ENT_NOQUOTES, inside double-quoted HTML value attributes. An authenticated clinical user can store a value containing a double quote that escapes the attribute and injects event-handler markup when another clinician opens the form. Successful exploitation can expose session data and protected health information or permit patient-record actions in the victim's session. This issue is fixed in version 8.3.0.",
+    "published": "2026-11-05T20:17:38.19Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-103935"
+    ]
+  },
+  {
+    "id": "ddeccb989a3116cd327f75534fa9e2cf",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.6 CRITICAL] CVE-2026-102940 — OpenEMR is a free and open source electronic health records and medical practice…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102940",
+    "summary": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.4.0, controllers/C_Document.class.php write actions, including move_action_process(), do not verify the caller's access to the source document, current patient and category, or destination patient and category before Document::change_patient() performs the mutation. A low-privilege authenticated user can reassign an arbitrary document to a patient or category the user can access and then retrieve it through the normally protected read path. The reassignment occurs before a later list rendering check, so a final HTTP 403 response does not mean the unauthorized write was blocked. This issue is fixed in version 8.4.0.",
+    "published": "2026-11-05T20:17:37.543Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-102940"
+    ]
+  },
+  {
+    "id": "5e3fc30a9a7a6fb45df5b6b4c7536159",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.0 HIGH] CVE-2026-123272 — Mark3labs mcp-go before v1.2.1 contains an improper validation vulnerability in …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123272",
+    "summary": "Mark3labs mcp-go before v1.2.1 contains an improper validation vulnerability in OAuthHandler.fetchServerMetadata that allows malicious MCP servers to obtain tokens for other resources by declaring arbitrary resources in well-known metadata. Attackers can declare a different MCP server as the RFC 8707 resource indicator, causing the authorization server to mint tokens the attacker replays against that resource.",
+    "published": "2026-11-05T19:17:20.713Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-123272"
+    ]
+  },
+  {
+    "id": "b7af4583652d3d152f97a1f738f7d937",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.0 HIGH] CVE-2026-123271 — ChatCLI before v1.215.2 contains an improper validation vulnerability in the MCP…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123271",
+    "summary": "ChatCLI before v1.215.2 contains an improper validation vulnerability in the MCP OAuth login flow that uses server-supplied Protected Resource Metadata as the resource indicator without checking it matches the configured server URL. A malicious MCP server can declare another resource on the same authorization server, obtain the user's bearer token for it, and replay that token against the other resource.",
+    "published": "2026-11-05T19:17:20.543Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-123271"
+    ]
+  },
+  {
+    "id": "f45d9cfa17a24b1807c0dce1fc417e98",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-82413 — ntopng is a web-based network traffic monitoring application. Prior to 6.7.26071…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82413",
+    "summary": "ntopng is a web-based network traffic monitoring application. Prior to 6.7.260717, scripts/lua/rest/v2/add/host/to_scan.lua and scripts/lua/rest/v2/exec/host/schedule_vulnerability_scan.lua accept scan_ports from any authenticated session, including non-administrator users, while deployments with login disabled expose the same request without authentication. The endpoints validate scan_ports with validateSingleWord, which permits shell metacharacters, and persist the value for the minute vulnerability-scan scheduler. The scheduler concatenates the value into an nmap command through nmap_scan_host and executes it through ntop.execCmd or ntop.execCmdAsync using popen. For the tcp_portscan and cve modules, a preliminary nmap -sn probe must first report the target as up before the attacker-controlled ports are used. When nmap is installed, this command injection allows arbitrary operating-system commands to execute as the ntopng service account without further user interaction. This issue is fixed in version 6.7.260717.",
+    "published": "2026-11-05T17:18:21.137Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-82413"
+    ]
+  },
+  {
+    "id": "395b49cd2c6611f2d549c5a020c8b059",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-76077 — ASN1SCC is an open source ASN.1 compiler for embedded systems. Prior to 4.7.0.1,…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76077",
+    "summary": "ASN1SCC is an open source ASN.1 compiler for embedded systems. Prior to 4.7.0.1, the XER tokenizer NT() in asn1crt/asn1crt_encoding_xer.c, which is reached by all XER decode paths, copies tag characters into a fixed char Value[100] field without a length bound and reads input and lookahead bytes without checking the buffer count. A crafted XER message with an overlong tag can overwrite the tokenizer's stack frame, while a truncated tag or unterminated processing-instruction or comment sequence can read beyond the input and may cause a CPU spin. The flaws can disclose adjacent memory, corrupt stack data, crash or hang the decoder, and potentially permit code execution. This issue is fixed in version 4.7.0.1.",
+    "published": "2026-11-05T17:18:20.83Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-76077"
+    ]
+  },
+  {
+    "id": "389f74b658b4e14c32e64648698c57d5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-75614 — ASN1SCC is an open source ASN.1 compiler for embedded systems. Prior to 4.7.0.1,…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75614",
+    "summary": "ASN1SCC is an open source ASN.1 compiler for embedded systems. Prior to 4.7.0.1, BitStream_DecodeConstraintWholeNumber in asn1crt/asn1crt_encoding.c reads enough bits for a constrained integer but does not reject values above the declared range when the encoded range is not a power of two. Generated uPER and ACN decoders for variable-size SEQUENCE OF, OCTET STRING, BIT STRING, and string values use the invalid result as a loop or copy length, so a crafted over-range size field can write beyond a destination buffer. Decoding untrusted affected data can corrupt heap or stack memory, cause a crash, or potentially permit code execution. This issue is fixed in version 4.7.0.1.",
+    "published": "2026-11-05T17:18:20.497Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-75614"
+    ]
+  },
+  {
+    "id": "6258507b141f9ec65226df956fd6b87c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-54146 — OpenHuman is an open-source agent harness available as a desktop application and…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54146",
+    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. From 0.53.15 before 0.57.5 on macOS, core_process.rs in the Tauri desktop process publishes the per-launch OPENHUMAN_CORE_TOKEN bearer credential in its process environment even though the core now runs as an in-process task. Another process running as the same user can read that environment through the macOS KERN_PROCARGS2 process-inspection interface, recover the token together with the local host and port, and authenticate to the core JSON-RPC service with the authority of the desktop frontend. The attacker can read agent memory and integrated-account data, invoke privileged actions, change configuration, and stop or disrupt services without root access, developer mode, or changes to System Integrity Protection. This issue affects Intel and Apple Silicon macOS systems. This issue is fixed in version 0.57.5.",
+    "published": "2026-11-05T17:18:20.013Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-54146"
+    ]
+  },
+  {
+    "id": "e7ee56c96f5b79458b6f910f26513833",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-54145 — OpenHuman is an open-source agent harness available as a desktop application and…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54145",
+    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. In affected versions before 0.57.5, the approval gate uses the JSON-RPC bearer token as an approval session identifier. This exposes the credential through persisted approval records, events, debug logs, and RPC responses, including during normal desktop operation. An attacker who obtains these artifacts can recover the token and access the core RPC interface while it remains valid. This can expose sensitive agent and integration data and permit privileged operations. Stable tokens remain usable until rotated; launch-specific tokens remain usable while the corresponding core instance is active. The fix is included in version 0.57.5.",
+    "published": "2026-11-05T17:18:19.85Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-54145"
+    ]
+  },
+  {
+    "id": "8778a2516886398029e86dc3c68aa7ec",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-54143 — OpenHuman is an open-source agent harness available as a desktop application and…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54143",
+    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before version 0.57.13, an attacker who can send messages to a configured external channel can cause the agent to create persistent shell cron jobs without human approval. The scheduler later executes these jobs with the privileges of the OpenHuman runtime user. Command validation also permits leading environment assignments that can redirect allowed commands to executable helpers. The demonstrated exploit requires a suitable helper executable already present on the host. This can lead to unauthorized persistent command execution and compromise data and resources accessible to OpenHuman. This issue is fixed in version 0.57.13.",
+    "published": "2026-11-05T17:18:19.487Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-54143"
+    ]
+  },
+  {
+    "id": "6fd349990807b29304e293300fd89685",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.7 HIGH] CVE-2026-54142 — OpenHuman is an open-source agent harness available as a desktop application and…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54142",
+    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.57.13, background synchronization for connected services such as email, Slack, and Notion stores raw external content and later places it in the model context of autonomous background agents without neutralizing embedded instructions. ApprovalGate treats tool calls without an interactive chat context as pre-authorized automation, so attacker-authored content processed during a background tick can influence the model to invoke Composio actions without presenting an approval request. An attacker who can deliver content to a connected account can use this path to send or forward data, post messages, create or modify third-party content, or disclose information from OpenHuman memory and integrations. The issue requires an active integration and successful model interpretation of the injected instructions. This issue is fixed in version 0.57.13.",
+    "published": "2026-11-05T17:18:19.303Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-54142"
+    ]
+  },
+  {
+    "id": "27cc513152eee5327a6d7812b798188a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.0 CRITICAL] CVE-2026-54141 — OpenHuman is an open-source agent harness available as a desktop application and…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54141",
+    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.57.13, a remote direct message received through a configured Yuanbao channel is converted into a generic channel AgentTurnRequest that uses the default tool policy without establishing an interactive approval context. Under the default Supervised autonomy policy with Node enabled, node_exec is classified as a write operation that should prompt for approval, but ApprovalGate treats missing APPROVAL_CHAT_CONTEXT as a non-interactive turn and allows execution. Because Yuanbao direct messages are open by default, an external sender who can message the connected bot can influence the agent to execute JavaScript and operating-system commands as the OpenHuman user without an approval prompt. The issue requires a configured Yuanbao channel, the default approval-requiring policy state, Node availability, and successful model selection of node_exec. This issue is fixed in version 0.57.13.",
+    "published": "2026-11-05T17:18:19.103Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-54141"
+    ]
+  },
+  {
+    "id": "d66838869793d6431e930b6d6349de3e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.3 HIGH] CVE-2026-54140 — OpenHuman is an open-source agent harness available as a desktop application and…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54140",
+    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.57.13, OpenHuman places names, descriptions, titles, and parameter definitions returned by configured external MCP servers into the agent model context without neutralizing instructions or bounding the descriptive fields. The McpRemoteTool records produced by list_tools preserve this remote content, while tool filtering considers the tool name and the prompt-injection detector screens user messages rather than MCP definitions. A malicious or compromised MCP server can therefore return a poisoned description that is evaluated on every agent turn and may direct the model to invoke other available tools, disclose accessible data, or perform unauthorized actions without a separate malicious user message. The issue affects users who configure an attacker-controlled or compromised MCP server. This issue is fixed in version 0.57.13.",
+    "published": "2026-11-05T17:18:18.91Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-54140"
+    ]
+  },
+  {
+    "id": "d3e38ad90831458141c909c2ba6ff2ab",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.4 HIGH] CVE-2026-49393 — OpenHuman is an open-source agent harness available as a desktop application and…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49393",
+    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.56.0, the core server protects HTTP POST requests to /rpc with bearer middleware but exposes Socket.IO rpc:request and chat:start handlers without equivalent transport or handler-level authentication. A local unauthenticated client can connect to the Socket.IO namespace and dispatch requests through the same protected controller path that rejects a missing bearer on /rpc. Depending on the selected method, the attacker can read configuration or health data, start agent flows, interact with integrated account APIs, alter local data, or stop and restart services. This issue is fixed in version 0.56.0.",
+    "published": "2026-11-05T17:18:16.687Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-49393"
+    ]
+  },
+  {
+    "id": "3c30df3a69899bbd0b75b7ed7286cb9e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-121997 — A heap buffer overflow in gdbserver's QTDPsrc packet handler allows an unauthent…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121997",
+    "summary": "A heap buffer overflow in gdbserver's QTDPsrc packet handler allows an unauthenticated remote attacker to achieve native code execution in the gdbserver process. The vulnerability results from a mismatch between a packet's declared source length and the actual data length, causing hex2bin to write beyond the allocated heap buffer.",
+    "published": "2026-11-05T17:18:01.053Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-121997"
+    ]
+  },
+  {
+    "id": "d0d612b16683d8495af0ae3e3a331067",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-121994 — A stack buffer overflow in the GDB client's remote protocol handler allows an at…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121994",
+    "summary": "A stack buffer overflow in the GDB client's remote protocol handler allows an attacker-controlled debug target to execute arbitrary code in the GDB process. The vulnerability exists in fetch_register_using_p, which decodes a stub's register reply into an alloca-sized buffer without bounding writes by the register width.",
+    "published": "2026-11-05T17:18:00.503Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-121994"
+    ]
+  },
+  {
+    "id": "7b568ee4b428166d7c63053250d6498c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-112208 — A flaw was found in the Organization identity-first login flow of the Keycloak a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112208",
+    "summary": "A flaw was found in the Organization identity-first login flow of the Keycloak authentication server. Keycloak is an open-source identity and access management solution used to secure modern applications and services. The issue occurs when an attacker who belongs to multiple organizations initiates a login and then switches to a registration or password reset path. During this process, a flag indicating a successful login is not properly cleared when the user is removed from the session. An attacker can then provide a victim's username, and the system incorrectly treats the stale flag as proof of the victim's identity. This allows the attacker to bypass authentication and gain full access to the victim's account and connected applications.",
+    "published": "2026-11-05T17:17:38.283Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-112208"
+    ]
+  },
+  {
+    "id": "d8ddd584246c347402c65be9ab3ec497",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-123158 — sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lack…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123158",
+    "summary": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lacks a workaround for a password authentication bypass (related to misinterpretation of whether a string is intended to be a password hash). For some configurations of accounts, any password between 256 and 1024 characters succeeds. An example of a platform using musl libc without PAM is Alpine Linux.",
+    "published": "2026-11-05T16:17:47.11Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-123158"
+    ]
+  },
+  {
+    "id": "13ae260b6cd5b010dcd8c2a771231789",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-71901 — Improper Control of Resource Identifiers ('Resource Injection') vulnerability in…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71901",
+    "summary": "Improper Control of Resource Identifiers ('Resource Injection') vulnerability in Apache OFBiz.\n\n\n\nAn authenticate user with access to sfa component can override the service to use on vcard import and access to other service.\n\n\n\nThis issue affects Apache OFBiz: before 24.09.08.\n\n\n\nUsers are recommended to upgrade to version 24.09.08, which fixes the issue.",
+    "published": "2026-11-05T15:17:22.22Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "apache",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-71901"
+    ]
+  },
+  {
+    "id": "e13665407137af1f82c6cbc716530c5f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-119744 — Cendio ThinLinc contains an improper authentication vulnerability in its browser…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119744",
+    "summary": "Cendio ThinLinc contains an improper authentication vulnerability in its browser-based web client (tlwebaccess) that allows an authenticated attacker to impersonate any other user, including root, by exploiting flaws in multi-step authentication flows such as one-time passwords, login banners, or expired password prompts. Attackers can leverage this authentication bypass during the multi-step login process to gain unauthorized access to other user accounts, including administrative privileges, in versions from 4.1.0 through 4.20.0.",
+    "published": "2026-11-05T15:17:20.557Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-119744"
+    ]
+  },
+  {
+    "id": "5786c76be85e4cf04327db90053af100",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-84183 — Incorrect Authorization in the updateLayout simple-method in applications/conten…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84183",
+    "summary": "Incorrect Authorization in the updateLayout simple-method in applications/content/minilang/layout/LayoutEvents.xml in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote authenticated attacker holding only OFBTOOLS_VIEW and CONTENTMGR_VIEW to execute arbitrary commands as the OFBiz process user, by using updateLayout's authorization check — which validates only the fixed CONTENT_CREATE operation rather than an update permission on the actual Content record and an independently selected DataResource — to relink an existing RESPONSE-purpose Content record and convert an arbitrary, independently selected DataResource into an OFBIZ_FILE/FTL resource pointed at the OFBiz access log, poisoned via a crafted User-Agent header and evaluated through the normal authenticated showContent route. Users are recommended to upgrade to version 24.09.08, which fixes this issue.",
+    "published": "2026-11-05T14:17:06.953Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "apache",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-84183"
+    ]
+  },
+  {
+    "id": "70cc49681ffc467b3a4445958d4c9e97",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-83542 — Improper Control of Generation of Code ('Code Injection') in Apache OFBiz 24.09 …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83542",
+    "summary": "Improper Control of Generation of Code ('Code Injection') in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote unauthenticated attacker to execute arbitrary code on the server by staging crafted widget XML in a multipart upload and overriding the mainDecoratorLocation used by a manager login route through an anonymous JSON request, causing OFBiz to load the staged XML through its live screen descriptor mechanism and evaluate an unsandboxed Groovy expression while rendering the authentication-failure page. Further validation established the following:\n\n-- The exploit does not require a malformed or incomplete multipart body: a well-formed multipart request that is kept in flight and then allowed to complete normally is sufficient.\n\n-- The screen loader reads the widget XML from a live process file descriptor while the upload is streaming, rather than from any file the attacker persists to disk.\n\n-- The same underlying issue is also reachable through the public, explicitly unauthenticated /sfa/control/editPortalPageColumnWidth route, returning command output directly in an HTTP 200 response — it is not limited to the login-failure rendering path used in the original report.\n\nUsers are recommended to upgrade to version 24.09.08, which fixes this issue.",
+    "published": "2026-11-05T14:17:06.82Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "apache",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-83542"
+    ]
+  },
+  {
+    "id": "1a60b9d49b4e4c86528ce94bdcdd4110",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-82910 — Improper Neutralization of Special Elements Used in a Template Engine ('Server-S…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82910",
+    "summary": "Improper Neutralization of Special Elements Used in a Template Engine ('Server-Side Template Injection') in MacroScreenRenderer in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote authenticated attacker holding only the two view permissions of a control-servlet webapp (e.g. CATALOG_VIEW and OFBTOOLS_VIEW on /catalog, held by OFBiz's own shipped order-entry clerk role) to execute arbitrary operating system commands as the OFBiz service account with a single GET request, by placing an apostrophe followed by FreeMarker expression source in a screen link parameter value, because renderLink concatenates link parameter values verbatim between apostrophes into an unquoted, unescaped template-source string that is compiled and evaluated at render time, allowing the injected expression to reach the allow-listed FlexibleStringExpander.expandString call and, through a runtime-assembled Groovy interpolation, unsandboxed code execution. Users are recommended to upgrade to version 24.09.08, which fixes this issue.",
+    "published": "2026-11-05T14:17:05.86Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "apache",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-82910"
+    ]
+  },
+  {
+    "id": "3078eea6d55c2ec9ef5356ba2e15d511",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-82907 — Authentication Bypass by Capture-replay in ExternalLoginKeysManager in Apache OF…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82907",
+    "summary": "Authentication Bypass by Capture-replay in ExternalLoginKeysManager in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote unauthenticated attacker who captures a live externalLoginKey value to obtain a complete, cookie-free, reusable session as the user who issued it, in every webapp that user can reach, because checkExternalLoginKey runs as a global preprocessor ahead of both the CSRF and authentication checks and accepts the key as a bearer credential that is never bound to a client, never expires, and is not invalidated after use, while the framework itself both appends live keys to every cross-webapp link it renders and, via WidgetWorker's unvalidated inter-app link target, lets an authenticated user's key be attached to an attacker-chosen absolute URL and delivered directly to the attacker's own server. Users are recommended to upgrade to version 24.09.08, which fixes this issue.",
+    "published": "2026-11-05T14:17:05.7Z",
+    "fetched": "2026-11-06T01:42:59.743725761Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass",
+      "apache",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-82907"
+    ]
+  },
+  {
     "id": "e9a8878b3c2fefcae8ffaaa68f53f2d9",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -604,48 +1246,6 @@
     ]
   },
   {
-    "id": "481a3fb091e5e94812a40332fba247c2",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.3 HIGH] CVE-2026-87040 — The nRF link-layer receive paths of the open-source Bluetooth LE Controller did …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87040",
-    "summary": "The nRF link-layer receive paths of the open-source Bluetooth LE Controller did not validate the on-air LENGTH field of a received PDU against the maximum receive length that was used to program the radio. isr_rx_pdu() in subsys/bluetooth/controller/ll_sw/nordic/lll/lll_conn.c enqueued any non-empty data PDU after only the sequence-number and (for encrypted links) MIC checks, and the corresponding isr_rx() handlers in lll_central_iso.c, lll_peripheral_iso.c, lll_sync_iso.c and lll_scan_aux.c did the same for ISO and extended-advertising PDUs. The nRF radio stores the received header verbatim and truncates only the payload at PCNF1.MAXLEN, so a frame declaring more octets than were configured leaves a node buffer whose len field describes more data than the buffer holds.\n\nAn attacker within radio range that can emit a hand-crafted link-layer PDU — for a connection, any peer that establishes an unencrypted LE connection to a connectable advertiser; for CONFIG_BT_CTLR_SYNC_ISO, any broadcaster the device is synchronised to — can set the length byte up to 255 while the controller has programmed a much smaller maximum (lll->dle.eff.max_rx_octets, which is 27 until a Data Length Update, or the negotiated cis_lll->rx.max_pdu). No pairing, authentication or user interaction is required. On encrypted links the CCM MIC check normally rejects such a frame first, so the exposure is on unencrypted traffic, which is why the added check is placed after decryption.\n\nThe unchecked length reaches hci_acl_encode() in subsys/bluetooth/controller/hci/hci.c, which performs net_buf_add(buf, pdu_data->len) followed by a memcpy() of that many bytes out of the node_rx pool element. Because CONFIG_BT_CTLR_DATA_LENGTH_MAX and CONFIG_BT_BUF_ACL_RX_SIZE both default to 27, this is an out-of-bounds read of up to roughly 228 bytes past the received PDU and a corresponding out-of-bounds write past the HCI ACL buffer into neighbouring buffers of the same pool; the tailroom test in net_buf_simple_add() is only enforced when CONFIG_NET_BUF_HARDENING (or CONFIG_ASSERT) is enabled. On the ISO paths the same unchecked length makes isoal_rx_append_to_sdu() read past the ISO node buffer and emit adjacent controller RAM to the host as ISO data. The practical result is remote memory corruption and controller crashes, plus disclosure of controller memory into the host data path.\n\nThe fix rejects any received PDU whose length exceeds the value that was used to configure the radio reception. Note that lll_sync.c (periodic advertising sync reception) was not changed and still enqueues received PDUs without an equivalent bound.",
-    "published": "2026-11-04T06:17:06.773Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-87040"
-    ],
-    "epss": 0.00287,
-    "epss_percentile": 0.21309
-  },
-  {
-    "id": "268f18b2dd30e5053e33f306336b43ef",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-77690 — ZohoCorp ManageEngine Key Manager Plus versions before 7151 were vulnerable to a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77690",
-    "summary": "ZohoCorp ManageEngine Key Manager Plus versions before 7151 were vulnerable to a Command Injection vulnerability that allowed authenticated users with certificate deployment privileges to execute arbitrary commands through specially crafted input when configuring a deployment target.",
-    "published": "2026-11-04T06:17:05.94Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-77690"
-    ],
-    "epss": 0.15584,
-    "epss_percentile": 0.96848
-  },
-  {
     "id": "254e71c37f8d839bbe8d54d80fcab1c6",
     "source": "zdi",
     "source_name": "Zero Day Initiative — Published",
@@ -746,312 +1346,6 @@
     ]
   },
   {
-    "id": "c37f83514ca2da815964b6906f28e782",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 10.0 CRITICAL] CVE-2026-121607 — A vulnerability was found in Qihoo 360 D603-2, D600-2, D606-6 and D706 up to 6.4…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121607",
-    "summary": "A vulnerability was found in Qihoo 360 D603-2, D600-2, D606-6 and D706 up to 6.4.9. This affects the function testspeed_command of the file /fs2/bin/iscm. Performing a manipulation of the argument host results in os command injection. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-11-04T02:17:19.753Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-121607"
-    ],
-    "epss": 0.01989,
-    "epss_percentile": 0.80695
-  },
-  {
-    "id": "379c627369eeb6853a0cc36c5f57c936",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.2 HIGH] CVE-2026-92198 — Quest Foglight for Databases getSource XML External Entity Processing Informatio…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92198",
-    "summary": "Quest Foglight for Databases getSource XML External Entity Processing Information Disclosure Vulnerability. This vulnerability allows remote attackers to initiate arbitrary server-side requests on affected installations of Quest Foglight for Databases. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the getSource method. Due to the improper restriction of XML External Entity (XXE) references, a crafted document specifying a URI causes the XML parser to access the URI and embed the contents back into the XML document for further processing. An attacker can leverage this vulnerability to disclose information in the context of the application. Was ZDI-CAN-29934.",
-    "published": "2026-11-04T00:17:30.827Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-92198"
-    ],
-    "epss": 0.02798,
-    "epss_percentile": 0.86489
-  },
-  {
-    "id": "fff9e3c2915d90c990f32e6c12fc6e7c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-92197 — Quest Foglight for Databases unzipFile Directory Traversal Remote Code Execution…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92197",
-    "summary": "Quest Foglight for Databases unzipFile Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the unzipFile method. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29901.",
-    "published": "2026-11-04T00:17:30.677Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-92197"
-    ],
-    "epss": 0.01273,
-    "epss_percentile": 0.69956
-  },
-  {
-    "id": "0a1518e435ba0e395403707059061718",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-92195 — Quest Foglight for Databases loadEvolveLicense Directory Traversal Remote Code E…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92195",
-    "summary": "Quest Foglight for Databases loadEvolveLicense Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the loadEvolveLicense script. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29232.",
-    "published": "2026-11-04T00:17:30.39Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-92195"
-    ],
-    "epss": 0.01273,
-    "epss_percentile": 0.69957
-  },
-  {
-    "id": "10b4810030a873ab8d28b8f5bfed057e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-92194 — Quest Foglight for Databases loadManageServerLicense Directory Traversal Remote …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92194",
-    "summary": "Quest Foglight for Databases loadManageServerLicense Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the loadManageServerLicense script. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29231.",
-    "published": "2026-11-04T00:17:30.06Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-92194"
-    ],
-    "epss": 0.01273,
-    "epss_percentile": 0.69956
-  },
-  {
-    "id": "b6bdd4959c59542c43a3ea246d21eee6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-92192 — Quest Foglight for Databases installLicense Directory Traversal Remote Code Exec…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92192",
-    "summary": "Quest Foglight for Databases installLicense Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the installLicense script. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29215.",
-    "published": "2026-11-04T00:17:29.65Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-92192"
-    ],
-    "epss": 0.01273,
-    "epss_percentile": 0.69956
-  },
-  {
-    "id": "aae42ca6c265ca0cbdfd9a75acede860",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-92191 — Quest Foglight for Databases runScript Incorrect Authorization Remote Code Execu…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92191",
-    "summary": "Quest Foglight for Databases runScript Incorrect Authorization Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the runScript function. The issue results from incorrect authorization prior to allowing access to functionality. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29192.",
-    "published": "2026-11-04T00:17:29.517Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-92191"
-    ],
-    "epss": 0.00509,
-    "epss_percentile": 0.43559
-  },
-  {
-    "id": "824d3642b89c5044b0cf6cd016a7b9c8",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-92190 — Quest Foglight for Databases baseRmiServiceExporter Deserialization of Untrusted…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92190",
-    "summary": "Quest Foglight for Databases baseRmiServiceExporter Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the configuration of the baseRmiServiceExporter bean. The issue results from the lack of proper validation of user-supplied data prior to deserializing it. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29170.",
-    "published": "2026-11-04T00:17:29.39Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "deserialization"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-92190"
-    ],
-    "epss": 0.00621,
-    "epss_percentile": 0.49907
-  },
-  {
-    "id": "2a267e02be24f12cdb20312968c4921c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-92189 — Quest Foglight for Databases writeTopologySectionToFile External Control of File…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92189",
-    "summary": "Quest Foglight for Databases writeTopologySectionToFile External Control of File Path Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the writeTopologySectionToFile method. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29169.",
-    "published": "2026-11-04T00:17:29.26Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-92189"
-    ],
-    "epss": 0.00608,
-    "epss_percentile": 0.49232
-  },
-  {
-    "id": "875beabff64b471a618bd021dfce1140",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-92188 — Quest Foglight for Databases ForgeMBeanServerSupport Missing Authentication Remo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92188",
-    "summary": "Quest Foglight for Databases ForgeMBeanServerSupport Missing Authentication Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the ForgeMBeanServerSupport module. The issue results from the lack of authentication prior to allowing access to functionality. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29168.",
-    "published": "2026-11-04T00:17:29.13Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-92188"
-    ],
-    "epss": 0.00599,
-    "epss_percentile": 0.48799
-  },
-  {
-    "id": "311d3668821c28da33c5b89643c9de13",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-92187 — Quest Foglight for Databases extractAndCreateUploadInfoList Directory Traversal …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92187",
-    "summary": "Quest Foglight for Databases extractAndCreateUploadInfoList Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the extractAndCreateUploadInfoList method. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29039.",
-    "published": "2026-11-04T00:17:28.993Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-92187"
-    ],
-    "epss": 0.01273,
-    "epss_percentile": 0.69956
-  },
-  {
-    "id": "c93db4df1e568cfb2918b934671b7b87",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-92186 — Quest Foglight for Databases paFnUploadFileAndCreateInfo Directory Traversal Rem…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92186",
-    "summary": "Quest Foglight for Databases paFnUploadFileAndCreateInfo Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Quest Foglight for Databases. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the paFnUploadFileAndCreateInfo script. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-29038.",
-    "published": "2026-11-04T00:17:28.867Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "path-traversal"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-92186"
-    ],
-    "epss": 0.01273,
-    "epss_percentile": 0.69955
-  },
-  {
-    "id": "69a467c533b19c58675d21a8ee541318",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-114550 — libwebsockets MQTT Protocol PUBACK Packet Handling Out-Of-Bounds Write Remote Co…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114550",
-    "summary": "libwebsockets MQTT Protocol PUBACK Packet Handling Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of libwebsockets. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the handling of PUBACK packets. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-31039.",
-    "published": "2026-11-04T00:17:22.783Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-114550"
-    ],
-    "epss": 0.00842,
-    "epss_percentile": 0.58041
-  },
-  {
-    "id": "183e3709d7d8b955d31fd432c93bff85",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-114549 — NoMachine nxwebrunner Heap-based Buffer Overflow Remote Code Execution Vulnerabi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114549",
-    "summary": "NoMachine nxwebrunner Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of NoMachine. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the web service, which listens on TCP port 4443 by default. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the service account. Was ZDI-CAN-30685.",
-    "published": "2026-11-04T00:17:22.627Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-114549"
-    ],
-    "epss": 0.00584,
-    "epss_percentile": 0.48022
-  },
-  {
     "id": "1eb7ce45cb388917699dd1d582f87c99",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -1073,976 +1367,6 @@
     "cves": [
       "CVE-2024-27834"
     ]
-  },
-  {
-    "id": "bb367a7d09a8d53dc775a602bda244b8",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-120931 — Out of bounds write in WebGL in Google Chrome on on Android prior to 156.0.8078.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120931",
-    "summary": "Out of bounds write in WebGL in Google Chrome on on Android prior to 156.0.8078.47 allowed a remote attacker to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)",
-    "published": "2026-11-03T22:19:31.9Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-120931"
-    ],
-    "epss": 0.00441,
-    "epss_percentile": 0.38465
-  },
-  {
-    "id": "aaf91b4eca617859ee23759fdf05e449",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-119084 — Unsafe reflection in the connection parameter and credentials profile handling o…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119084",
-    "summary": "Unsafe reflection in the connection parameter and credentials profile handling of Amazon Redshift JDBC Driver before 2.3.0 might allow an actor who can influence the JDBC connection URL or the AWS credentials profile to execute arbitrary code in the application context, provided a suitable class is available on the application classpath.\n\n\n\nTo remediate this issue, users should upgrade to version 2.3.0 or later.",
-    "published": "2026-11-03T22:19:29.22Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-119084"
-    ],
-    "epss": 0.00445,
-    "epss_percentile": 0.38813
-  },
-  {
-    "id": "c102149a925fb7f0c786ee765c9cb97f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121621 — A command injection vulnerability was found in Argo CD Image Updater, where a pr…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121621",
-    "summary": "A command injection vulnerability was found in Argo CD Image Updater, where a proxy URL configured on an SSH Git repository is passed unsanitized into a shell-interpreted SSH command. An attacker able to set a malicious proxy value can inject shell metacharacters to execute arbitrary commands and access credentials in the context of the Image Updater process.",
-    "published": "2026-11-03T21:17:37.857Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-121621"
-    ],
-    "epss": 0.01762,
-    "epss_percentile": 0.78088
-  },
-  {
-    "id": "e6248427da0e854eb97abbead06e7c9c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121257 — Use after free in TabStrip in Google Chrome prior to 157.0.8103.38 allowed a rem…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121257",
-    "summary": "Use after free in TabStrip in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted Chrome extension. (Chromium security severity: Medium)",
-    "published": "2026-11-03T21:17:36.603Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121257"
-    ],
-    "epss": 0.00211,
-    "epss_percentile": 0.11371
-  },
-  {
-    "id": "fe5d327dd30d766fd94dbc28d6a96974",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.3 HIGH] CVE-2026-121256 — Use of released resource in GPU in Google Chrome prior to 157.0.8103.38 allowed …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121256",
-    "summary": "Use of released resource in GPU in Google Chrome prior to 157.0.8103.38 allowed a remote attacker who had compromised the renderer process to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-11-03T21:17:36.47Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121256"
-    ],
-    "epss": 0.00282,
-    "epss_percentile": 0.20835
-  },
-  {
-    "id": "be6fa2b4578ec4828a7dc69fa298771c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121250 — Use after free in Extensions in Google Chrome prior to 157.0.8103.38 allowed a r…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121250",
-    "summary": "Use after free in Extensions in Google Chrome prior to 157.0.8103.38 allowed a remote attacker leveraging social engineering to potentially execute arbitrary code outside the sandbox via a crafted Chrome extension. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:35.653Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121250"
-    ],
-    "epss": 0.0021,
-    "epss_percentile": 0.11337
-  },
-  {
-    "id": "35bcef78893021bae7ad348cd04fe204",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121249 — Buffer overflow in ANGLE in Google Chrome prior to 157.0.8103.38 allowed a remot…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121249",
-    "summary": "Buffer overflow in ANGLE in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:35.493Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121249"
-    ],
-    "epss": 0.00397,
-    "epss_percentile": 0.34144
-  },
-  {
-    "id": "b8235e828d02e281ec10f37cc0a979dd",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121247 — Buffer overflow in Dawn in Google Chrome on on Android prior to 157.0.8103.38 al…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121247",
-    "summary": "Buffer overflow in Dawn in Google Chrome on on Android prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)",
-    "published": "2026-11-03T21:17:35.22Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121247"
-    ],
-    "epss": 0.00397,
-    "epss_percentile": 0.34145
-  },
-  {
-    "id": "fd2ca4def926b3b453fe51382247116c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121246 — Use after free in WebGL in Google Chrome on on Android prior to 157.0.8103.38 al…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121246",
-    "summary": "Use after free in WebGL in Google Chrome on on Android prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)",
-    "published": "2026-11-03T21:17:35.093Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121246"
-    ],
-    "epss": 0.00365,
-    "epss_percentile": 0.30514
-  },
-  {
-    "id": "561b26cb2a60d9fff2210ae4984c45ef",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121241 — Use after free in Navigation in Google Chrome on on Android prior to 157.0.8103.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121241",
-    "summary": "Use after free in Navigation in Google Chrome on on Android prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:34.42Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121241"
-    ],
-    "epss": 0.00299,
-    "epss_percentile": 0.22714
-  },
-  {
-    "id": "8ea5f04783ab593386eedbdb0dd27f17",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121238 — Use after free in Source in Google Chrome prior to 157.0.8103.38 allowed a remot…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121238",
-    "summary": "Use after free in Source in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-11-03T21:17:34.027Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121238"
-    ],
-    "epss": 0.00327,
-    "epss_percentile": 0.25917
-  },
-  {
-    "id": "3927261d3f91f321c92dcc4c2885dad3",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121234 — Privilege elevation in Contacts in Google Chrome on on Android prior to 157.0.81…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121234",
-    "summary": "Privilege elevation in Contacts in Google Chrome on on Android prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-11-03T21:17:33.503Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121234"
-    ],
-    "epss": 0.00299,
-    "epss_percentile": 0.22714
-  },
-  {
-    "id": "9ca1dc6d2623b450e30cd393ba4167a1",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121233 — Type confusion in CacheStorage in Google Chrome prior to 157.0.8103.38 allowed a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121233",
-    "summary": "Type confusion in CacheStorage in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:33.37Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121233"
-    ],
-    "epss": 0.00357,
-    "epss_percentile": 0.29524
-  },
-  {
-    "id": "f9bc6338dab71f5773959d11dc00f5db",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.3 HIGH] CVE-2026-121230 — Race condition in ANGLE in Google Chrome prior to 157.0.8103.38 allowed a remote…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121230",
-    "summary": "Race condition in ANGLE in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Low)",
-    "published": "2026-11-03T21:17:32.973Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121230"
-    ],
-    "epss": 0.0019,
-    "epss_percentile": 0.08711
-  },
-  {
-    "id": "dd7ff771e475ec6a35684df8185efdbe",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121229 — Memory corruption in ANGLE in Google Chrome on on Android prior to 157.0.8103.38…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121229",
-    "summary": "Memory corruption in ANGLE in Google Chrome on on Android prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)",
-    "published": "2026-11-03T21:17:32.837Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121229"
-    ],
-    "epss": 0.00365,
-    "epss_percentile": 0.30514
-  },
-  {
-    "id": "bc9426e26114566a617b845743745cba",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121228 — Type confusion in V8 in Google Chrome prior to 157.0.8103.38 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121228",
-    "summary": "Type confusion in V8 in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:32.707Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121228"
-    ],
-    "epss": 0.00357,
-    "epss_percentile": 0.29525
-  },
-  {
-    "id": "67a0ef23b40c91641ed6cc075342f45d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121226 — Type confusion in V8 in Google Chrome prior to 157.0.8103.38 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121226",
-    "summary": "Type confusion in V8 in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:32.447Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121226"
-    ],
-    "epss": 0.00357,
-    "epss_percentile": 0.29525
-  },
-  {
-    "id": "4e8de587ce22f983184b7712612f84e5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-121224 — Security issue in Desktop in Google Chrome on on Mac prior to 157.0.8103.38 allo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121224",
-    "summary": "Security issue in Desktop in Google Chrome on on Mac prior to 157.0.8103.38 allowed a remote attacker who had compromised the renderer process to potentially execute arbitrary code outside the sandbox via crafted network traffic. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:32.19Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121224"
-    ],
-    "epss": 0.00226,
-    "epss_percentile": 0.13367
-  },
-  {
-    "id": "024bf68965fe4ea57591f0cf5e86d62f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121221 — Type confusion in V8 in Google Chrome prior to 157.0.8103.38 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121221",
-    "summary": "Type confusion in V8 in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:31.793Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121221"
-    ],
-    "epss": 0.00357,
-    "epss_percentile": 0.29523
-  },
-  {
-    "id": "9bea47da14723a44829493573d207fc6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.3 HIGH] CVE-2026-121219 — Integer overflow in GPU in Google Chrome prior to 157.0.8103.38 allowed a remote…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121219",
-    "summary": "Integer overflow in GPU in Google Chrome prior to 157.0.8103.38 allowed a remote attacker who had compromised the renderer process to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-11-03T21:17:31.513Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121219"
-    ],
-    "epss": 0.00276,
-    "epss_percentile": 0.2015
-  },
-  {
-    "id": "31dff748c87e5ddbcea4c309b18bf033",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121218 — Type confusion in V8 in Google Chrome prior to 157.0.8103.38 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121218",
-    "summary": "Type confusion in V8 in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-11-03T21:17:31.383Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121218"
-    ],
-    "epss": 0.00357,
-    "epss_percentile": 0.29524
-  },
-  {
-    "id": "d318adffc5aae5b1859924babb0aeccc",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121214 — Use after free in Passwords in Google Chrome prior to 157.0.8103.38 allowed a re…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121214",
-    "summary": "Use after free in Passwords in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:30.847Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121214"
-    ],
-    "epss": 0.00365,
-    "epss_percentile": 0.30514
-  },
-  {
-    "id": "879e7b710054fb796328eff567fa682a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.3 HIGH] CVE-2026-121211 — Use after free in PowerBookmarks in Google Chrome prior to 157.0.8103.38 allowed…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121211",
-    "summary": "Use after free in PowerBookmarks in Google Chrome prior to 157.0.8103.38 allowed a remote attacker who had compromised the renderer process and leveraged social engineering to execute arbitrary code outside the sandbox via a crafted Chrome extension. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:30.413Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121211"
-    ],
-    "epss": 0.0021,
-    "epss_percentile": 0.11337
-  },
-  {
-    "id": "44612735f8ff3347caa2c6da8361bccc",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121210 — Type confusion in V8 in Google Chrome prior to 157.0.8103.38 allowed a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121210",
-    "summary": "Type confusion in V8 in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:30.28Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121210"
-    ],
-    "epss": 0.00357,
-    "epss_percentile": 0.29523
-  },
-  {
-    "id": "e70e3d00d720e6cfe29e786054a4f4aa",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121208 — Out of bounds read in Media in Google Chrome prior to 157.0.8103.38 allowed a re…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121208",
-    "summary": "Out of bounds read in Media in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:30.013Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121208"
-    ],
-    "epss": 0.00327,
-    "epss_percentile": 0.25917
-  },
-  {
-    "id": "f743f229439eaea1a857312376dc9c3b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121203 — Use after free in Geometry in Google Chrome prior to 157.0.8103.38 allowed a rem…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121203",
-    "summary": "Use after free in Geometry in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Critical)",
-    "published": "2026-11-03T21:17:29.347Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121203"
-    ],
-    "epss": 0.00327,
-    "epss_percentile": 0.25916
-  },
-  {
-    "id": "75c0449cc31903dde489f1c668950ff5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121202 — Use after free in Autofill in Google Chrome prior to 157.0.8103.38 allowed a rem…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121202",
-    "summary": "Use after free in Autofill in Google Chrome prior to 157.0.8103.38 allowed a remote attacker leveraging social engineering to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-11-03T21:17:29.203Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121202"
-    ],
-    "epss": 0.00299,
-    "epss_percentile": 0.22715
-  },
-  {
-    "id": "49635cee51622864195e96007ae06429",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121201 — Use after free in Animation in Google Chrome prior to 157.0.8103.38 allowed a re…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121201",
-    "summary": "Use after free in Animation in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:29.033Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121201"
-    ],
-    "epss": 0.00327,
-    "epss_percentile": 0.25917
-  },
-  {
-    "id": "b9008d8091ee53f7cf0d6c543f6e0836",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121200 — Incorrect reference resolution in DevTools in Google Chrome prior to 157.0.8103.…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121200",
-    "summary": "Incorrect reference resolution in DevTools in Google Chrome prior to 157.0.8103.38 allowed a remote attacker leveraging social engineering to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-11-03T21:17:28.887Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121200"
-    ],
-    "epss": 0.00326,
-    "epss_percentile": 0.25818
-  },
-  {
-    "id": "88e5278dc9473d869e206a9a5d001baa",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121189 — Use after free in Browser in Google Chrome prior to 157.0.8103.38 allowed a remo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121189",
-    "summary": "Use after free in Browser in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Low)",
-    "published": "2026-11-03T21:17:27.693Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121189"
-    ],
-    "epss": 0.00365,
-    "epss_percentile": 0.30515
-  },
-  {
-    "id": "968ceca9fd91d3f99d0eefe4bf259c6b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121188 — Use after free in PerformanceAPIs in Google Chrome prior to 157.0.8103.38 allowe…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121188",
-    "summary": "Use after free in PerformanceAPIs in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:27.563Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121188"
-    ],
-    "epss": 0.00327,
-    "epss_percentile": 0.25912
-  },
-  {
-    "id": "f93001b189842aa47020a192d04922fc",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-121185 — Use after free in PictureInPicture in Google Chrome prior to 157.0.8103.38 allow…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121185",
-    "summary": "Use after free in PictureInPicture in Google Chrome prior to 157.0.8103.38 allowed a remote attacker leveraging social engineering to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:27.177Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121185"
-    ],
-    "epss": 0.00365,
-    "epss_percentile": 0.30515
-  },
-  {
-    "id": "9a1dfac7de5984ee98dd3983fdab3b91",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121184 — Out of bounds read in Media in Google Chrome prior to 157.0.8103.38 allowed a re…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121184",
-    "summary": "Out of bounds read in Media in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-11-03T21:17:27.047Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121184"
-    ],
-    "epss": 0.00327,
-    "epss_percentile": 0.25917
-  },
-  {
-    "id": "9553f4f16fa40513b82a39b6f3275989",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.3 HIGH] CVE-2026-121183 — Incorrect authorization in Extensions in Google Chrome prior to 157.0.8103.38 al…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121183",
-    "summary": "Incorrect authorization in Extensions in Google Chrome prior to 157.0.8103.38 allowed a remote attacker who had compromised the renderer process to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
-    "published": "2026-11-03T21:17:26.917Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121183"
-    ],
-    "epss": 0.00324,
-    "epss_percentile": 0.25625
-  },
-  {
-    "id": "2613e0f5ade194914e3523d3661ba6d6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121182 — Use after free in DOM in Google Chrome prior to 157.0.8103.38 allowed a remote a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121182",
-    "summary": "Use after free in DOM in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:26.787Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121182"
-    ],
-    "epss": 0.00327,
-    "epss_percentile": 0.25916
-  },
-  {
-    "id": "cbc740ffe94a64c47aa376c841f23c71",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121181 — Use after free in Editing in Google Chrome prior to 157.0.8103.38 allowed a remo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121181",
-    "summary": "Use after free in Editing in Google Chrome prior to 157.0.8103.38 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-    "published": "2026-11-03T21:17:26.66Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "chrome",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "google",
-      "chrome"
-    ],
-    "cves": [
-      "CVE-2026-121181"
-    ],
-    "epss": 0.00327,
-    "epss_percentile": 0.25916
   },
   {
     "id": "6b8856a8b25f043ae9f0312b0c0e0749",
@@ -3404,102 +2728,6 @@
     "score": 87,
     "cves": [
       "CVE-2026-109618",
-      "CVE-2026-109619"
-    ]
-  },
-  {
-    "id": "efb63da4a766926b7240f31e0e952661",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-109618 — PHP Group PHP: PHP Memory Corruption Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
-    "summary": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-29",
-    "published": "2026-10-26T00:00:00Z",
-    "fetched": "2026-11-03T02:59:51.427013261Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "php"
-    ],
-    "cves": [
-      "CVE-2026-109618"
-    ]
-  },
-  {
-    "id": "db250716bb9a0b7c24688ee8bdd464a2",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-109619 — PHP Group PHP: PHP Stale Internal Request-State Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619",
-    "summary": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-29",
-    "published": "2026-10-26T00:00:00Z",
-    "fetched": "2026-11-03T02:59:51.427013261Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "php"
-    ],
-    "cves": [
-      "CVE-2026-109619"
-    ]
-  },
-  {
-    "id": "efb63da4a766926b7240f31e0e952661",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-109618 — PHP Group PHP: PHP Memory Corruption Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
-    "summary": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-29",
-    "published": "2026-10-26T00:00:00Z",
-    "fetched": "2026-10-27T00:41:04.156778577Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "php"
-    ],
-    "cves": [
-      "CVE-2026-109618"
-    ]
-  },
-  {
-    "id": "db250716bb9a0b7c24688ee8bdd464a2",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-109619 — PHP Group PHP: PHP Stale Internal Request-State Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619",
-    "summary": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-10-29",
-    "published": "2026-10-26T00:00:00Z",
-    "fetched": "2026-10-27T00:41:04.156778577Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "php"
-    ],
-    "cves": [
       "CVE-2026-109619"
     ]
   }

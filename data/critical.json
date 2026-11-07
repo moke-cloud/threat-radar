@@ -1,5 +1,811 @@
 [
   {
+    "id": "0692497f7625460cef94fe38268eb7df",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-68935 — Chartbrew is an open-source web application for creating charts from databases a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68935",
+    "summary": "Chartbrew is an open-source web application for creating charts from databases and APIs. In versions 4.8.5 through 5.2.2, API connection creation and update operations accept the internal  allowPrivateHost  field from user input. An authenticated user with permission to manage API connections can enable this field to bypass private and reserved-network destination restrictions. An upgrade migration also enables the override on pre-existing API connections. The per-connection setting takes precedence over  CB_ALLOW_PRIVATE_NETWORK_CALLS , so disabling that instance option does not protect connections with the override enabled. Successful exploitation allows requests to internal HTTP services reachable from the Chartbrew server, potentially disclosing information or triggering unauthorized actions depending on the target service. Recognized cloud metadata endpoints remain separately blocked. This issue is fixed in version 5.2.3.",
+    "published": "2026-11-06T22:17:59.39Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-68935"
+    ]
+  },
+  {
+    "id": "a18b4518395cbc0a6ac4b0deb5390ef5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-59104 — UgCS server before 6.2 contains an authentication bypass in the HCI protocol log…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59104",
+    "summary": "UgCS server before 6.2 contains an authentication bypass in the HCI protocol login handler (LoginHandler) exposed on TCP port 3334. When the user database contains exactly one user (the default single-operator installation), a LoginRequest with empty userLogin and userPassword fields is interpreted as \\\"use the only user\\\" rather than as invalid credentials, and the server returns a fully authenticated session. Because the service listens on all interfaces (0.0.0.0) without TLS by default, an unauthenticated remote attacker with network access to port 3334 can obtain an authenticated session without knowing any credential and then issue privileged commands, including commanding connected drones and uploading flight routes.",
+    "published": "2026-11-06T22:17:59.043Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-59104"
+    ]
+  },
+  {
+    "id": "6cb9a163640110a2b1ce83496b50dcc3",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-50240 — A flaw was found in OpenShift Pipelines-as-Code (PAC). PAC does not verify wheth…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50240",
+    "summary": "A flaw was found in OpenShift Pipelines-as-Code (PAC). PAC does not verify whether the creator of a Repository custom resource has permission to create PipelineRuns. A namespace user with only Repository and Secret create/delete permissions can cause PAC to execute attacker-controlled PipelineRuns as the auto-provisioned pipeline ServiceAccount, which carries ClusterRole/edit by default. This results in namespace-scoped privilege escalation, enabling Secret read, resource creation/modification/deletion, and potential supply chain injection in CI/CD namespaces.",
+    "published": "2026-11-06T22:17:58.757Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "lpe",
+      "supply-chain",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-50240"
+    ]
+  },
+  {
+    "id": "7b343ae36ec68a1a7a9dda0737ba6fc8",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.6 CRITICAL] CVE-2026-86044 — JupyterLab Desktop is the cross-platform desktop application for JupyterLab. Pri…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86044",
+    "summary": "JupyterLab Desktop is the cross-platform desktop application for JupyterLab. Prior to 4.6.2-1, JupyterLab Desktop exposed getServerInfo to the renderer without confirming that the current page still had the local Jupyter server origin. In a local managed session using JupyterLab before 4.4.8, an attacker can place a crafted MathJax link in an untrusted notebook. If a victim opens the notebook and clicks the link, the existing renderer navigates to an attacker-controlled site while retaining access to the preload bridge. The site can call getServerInfo to obtain the local server URL and authentication token, then use the Jupyter REST API to create and trust a notebook that executes arbitrary code as the victim. Users whose environment already uses JupyterLab 4.4.8 or later are unaffected because the corrected link handling breaks the first step of the chain. This vulnerability is fixed in 4.6.2-1.",
+    "published": "2026-11-06T21:17:12.297Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-86044"
+    ]
+  },
+  {
+    "id": "a64c1d9d79afe1a21690577a40de2cc6",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-85736 — Chartbrew is an open-source web application that can connect directly to databas…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85736",
+    "summary": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, connection creation or update stored attacker-chosen absolute SSL and SSH file paths, and later connection cleanup passed those stored paths to fs.unlink without a path restriction. The vulnerable surface is data-connection certificate and SSH-key cleanup when a connection is removed. A user with createOwn and deleteOwn permissions on their own team stores a target path in a connection and then deletes the connection to trigger cleanup; default self-signup grants teamOwner these permissions. The cleanup routine treats the stored SSL or SSH path as a managed certificate path and unlinks the referenced file; duplicateConnection provides a second advisory-identified trigger. The attacker must be able to create or update and then delete a connection on their own team. The default container runs Chartbrew as uid 0, while deployments with a less-privileged process are limited by that process's deletion permissions. The attacker can delete files such as /code/.env or application source, causing integrity loss and service disruption. This issue is fixed in version 5.2.3.",
+    "published": "2026-11-06T21:17:11.757Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-85736"
+    ]
+  },
+  {
+    "id": "372fcb8a50668f56fe9a827398d912a0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-85712 — Chartbrew is an open-source web application that can connect directly to databas…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85712",
+    "summary": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, the shared project permission check trusted a caller-controlled team_id and let the teamOwner/teamAdmin branch continue without confirming that the target project belonged to that team. The vulnerable surface is project routes and related authorization checks that accepted user-controlled project identifiers. An authenticated user who is an owner or admin of their own team submits a victim project id together with the attacker's own team_id in the request body; default self-signup grants the required role on the user's own team. Authorization is evaluated against the attacker-selected team instead of the target project's team, and the update path mass-assigns the request body without a project field allow-list. The attacker needs a valid Chartbrew account, an owner or admin role on their own team, and a victim project identifier; requests without the body team_id trick are rejected. The attacker can re-parent the victim project into their own team, gain full read and write access, expose it publicly, remove password protection, and cause the victim to lose it; the shared delete route also permits cross-tenant deletion. This issue is fixed in version 5.2.3.",
+    "published": "2026-11-06T21:17:11.373Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-85712"
+    ]
+  },
+  {
+    "id": "ab8df82d1cf7c28a504c62b81f766757",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-85295 — Chartbrew is an open-source web application that can connect directly to databas…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85295",
+    "summary": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, four authentication helpers accepted session tokens signed with CB_SECRET, including known, weak, or shipped-default values. The vulnerable surface is session JWT fallback in server/modules/verifyToken.js, verifyUser.js, getUserFromToken.js, and socketManager.js across the API and socket layer. A stock source or repository Docker Compose deployment retains a known, weak, or default CB_SECRET and an attacker submits a forged HS256 token decoding to a target user id. Knowing the symmetric secret lets the attacker create a token that the legacy verification fallback accepts as the target user without that user's password or two-factor authentication. The condition includes stock source and repository Docker Compose installs and any otherwise known or weak CB_SECRET; a bare container where CB_SECRET is undefined is not affected by this fallback path. A forged session impersonates the chosen user across the entire API and socket layer and exercises that user's Chartbrew privileges. This issue is fixed in version 5.2.3.",
+    "published": "2026-11-06T21:17:10.89Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "critical-cvss",
+      "docker",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "vendors": [
+      "docker"
+    ],
+    "cves": [
+      "CVE-2026-85295"
+    ]
+  },
+  {
+    "id": "79e2dbddbf0e7773487ff6f1b9438751",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-54349 — Chartbrew is an open-source web application that can connect directly to databas…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54349",
+    "summary": "Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.1, SQL dashboard-variable substitution used attacker-controlled JavaScript replacement strings unsafely across SQL connectors and separately failed to escape backslashes for MySQL and MariaDB quoted contexts. The vulnerable surface is public and embedded dashboard/chart requests that call applyMysqlOrPostgresVariables. An unauthenticated user sends crafted URL filter values to a public or embedded chart backed by a stored SQL query. Replacement-string dollar sequences can alter SQL independently of the database engine, while MySQL and MariaDB backslash handling provides a second quoted-string escape path. The target must expose a public or embedded chart using URL-controlled variables in a SQL query; only the backslash branch is specific to MySQL and MariaDB. Injected SQL can read, modify, or delete data available to the configured database account. This issue is fixed in version 5.2.1.",
+    "published": "2026-11-06T21:17:08.947Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "critical-cvss",
+      "postgres",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "vendors": [
+      "postgres"
+    ],
+    "cves": [
+      "CVE-2026-54349"
+    ]
+  },
+  {
+    "id": "e52311cf78beca6c9f6fa12bb50146ff",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-58490 — Tracecat is an open-source security automation platform for teams and AI agents.…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58490",
+    "summary": "Tracecat is an open-source security automation platform for teams and AI agents. From version 0.37.0 until 1.0.0-beta.49, Docker Compose deployments with SAML enabled can render SAML_SIGNED_ASSERTIONS and SAML_SIGNED_RESPONSES as empty values, overriding secure application defaults and disabling both signature requirements. An unauthenticated attacker who can reach the SAML assertion consumer endpoint can submit a forged unsigned response for an existing Tracecat user email address and obtain that user’s session. Targeting an existing superadmin can result in superadmin account takeover. Exploitation does not create users when SAML user creation is disabled and does not affect default Fargate or Helm deployments. Version 1.0.0-beta.49 removes the insecure deployment pass-through and requires signed assertions and responses.",
+    "published": "2026-11-06T20:17:23.253Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "critical-cvss",
+      "docker",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "vendors": [
+      "docker"
+    ],
+    "cves": [
+      "CVE-2026-58490"
+    ]
+  },
+  {
+    "id": "b098dfb325693ea8e4299c8ba0830cd3",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.3 HIGH] CVE-2026-123998 — Hisense VIDAA Smart TV firmware V0000.01.00a.P0220 contains an authentication by…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123998",
+    "summary": "Hisense VIDAA Smart TV firmware V0000.01.00a.P0220 contains an authentication bypass vulnerability in its remote-control MQTT broker on TCP port 36669, which accepts publicly documented default credentials and an ineffective 4-digit pairing PIN with no rate limiting or lockout, allowing a brute force of the entire code space in about five seconds, while some actions require no pairing at all. A LAN-adjacent attacker can exploit this to inject key events, change volume, switch input sources, enumerate inputs, launch arbitrary installed applications, and monitor pairing activity, posing a significant risk in hotel deployments where untrusted LAN access is common.",
+    "published": "2026-11-06T19:17:45.427Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "auth-bypass",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-123998"
+    ]
+  },
+  {
+    "id": "60e504593d3648e95f3ac6555fda70c9",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-123993 — Hisense VIDAA Smart TV firmware V0000.01.00a.P0220 contains an unauthenticated a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123993",
+    "summary": "Hisense VIDAA Smart TV firmware V0000.01.00a.P0220 contains an unauthenticated access vulnerability where a QA build of the Google Cobalt browser engine exposes the WebDriver automation server on TCP port 4444 across all network interfaces without any authentication or pairing requirement. A LAN-adjacent attacker can connect to the exposed WebDriver service to execute arbitrary JavaScript, read and exfiltrate sensitive localStorage data including ACR telemetry, MAC addresses, ad-service credentials, and location data, inject persistent content onto the display, and access the window.hisense native bridge to perform filesystem read/write and system-state operations.",
+    "published": "2026-11-06T19:17:44.55Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-123993"
+    ]
+  },
+  {
+    "id": "6ca37cc4c05943018ba497bcb11f6c8d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-118670 — OHIF Viewers is a zero-footprint DICOM viewer with shared extension packages. Fr…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118670",
+    "summary": "OHIF Viewers is a zero-footprint DICOM viewer with shared extension packages. From 3.5.0-beta.0 until 3.12.15, 3.13.7, and 3.14.0-beta.19, the dicom-pdf extension reads the attacker-controlled MIMETypeOfEncapsulatedDocument value in extensions/dicom-pdf/src/getSopClassHandlerModule.js and uses it as the Blob media type for the attacker-controlled EncapsulatedDocument bytes. When a victim opens Encapsulated PDF SOP Class 1.2.840.10008.5.1.4.1.1.104.1, extensions/dicom-pdf/src/viewports/OHIFCornerstonePdfViewport.tsx embeds the Blob URL in an object element. A Blob labeled as HTML is handled as HTML despite the application/pdf object hint, and the Blob inherits the OHIF origin, allowing embedded script to access session storage, authentication tokens, and same-origin PACS requests. The malicious DICOM object may be opened locally, uploaded to a shared PACS, or supplied by a DICOMweb source. This issue is fixed in source versions 3.12.15, 3.13.7, and 3.14.0-beta.19.",
+    "published": "2026-11-06T18:17:57.34Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-118670"
+    ]
+  },
+  {
+    "id": "fc1fa493d63a0a59e2bcb05668e6e29b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2026-85743 — FreeScout is a self-hosted help desk and shared mailbox. Prior to 1.8.230, multi…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85743",
+    "summary": "FreeScout is a self-hosted help desk and shared mailbox. Prior to 1.8.230, multiple outbound paths in Helper::downloadRemoteFile(), Helper::checkPort(), Helper::sanitizeRemoteUrl(), MailboxesController.php, and ModulesController.php do not consistently enforce a sink-level restricted-host policy. An authenticated administrator, or another authenticated user permitted to change mailbox connection settings or trigger module update or installation paths, can supply attacker-controlled URLs or hosts. The independent download and port-test sinks can reach encoded or otherwise uncovered loopback and internal addresses. The redirect-validation bypass additionally requires a configured whitelist that permits the original and final hosts while a restricted internal host appears only as an intermediate redirect hop. No unauthenticated SSRF path is established. The server can consequently contact loopback and internal services, provide a blind internal port oracle, and retrieve internal HTTP responses into application-controlled download sinks. This issue is fixed in version 1.8.230.",
+    "published": "2026-11-06T17:20:02.567Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "oracle",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "oracle"
+    ],
+    "cves": [
+      "CVE-2026-85743"
+    ]
+  },
+  {
+    "id": "06046f61802c43b31443ac617a535056",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-122193 — OS command injection in the example SSM document provisioning script in Trusted …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122193",
+    "summary": "OS command injection in the example SSM document provisioning script in Trusted Remote Execution (REX) before 2026-07-28 might allow an authenticated remote user who is permitted to invoke the Rex-RO or Rex-RW SSM document to execute arbitrary commands as root on the managed instance, bypassing Cedar policy enforcement.\n\n\n\nTo remediate this issue, users should delete any Rex-RO and Rex-RW SSM documents created from the example script, in each account and Region where it was run.",
+    "published": "2026-11-06T17:17:20.313Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-122193"
+    ]
+  },
+  {
+    "id": "385943d5064dceaa9c5c034acbe5092b",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "D-Link warns of multiple zero-days in DGS-3130 Series switches",
+    "url": "https://www.bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches/",
+    "summary": "D-Link shared mitigation measures for multiple unpatched security flaws affecting DGS-3130 series managed Gigabit stackable switches. [...]",
+    "published": "2026-11-06T12:37:22Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 67
+  },
+  {
+    "id": "0afddba74f25e8343c872ce3a6899e31",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-92895 — The Live2DWebCanvas plugin for WordPress is vulnerable to Arbitrary File Upload …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92895",
+    "summary": "The Live2DWebCanvas plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.2.1 via the download_one_file function. This is due to missing file extension whitelist and MIME type validation in download_one_file() when writing files derived from attacker-controlled manifest entries to the web-served plugin directory. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible when the plugin's apiType setting is configured as custom-local (self-hosted model mode), a non-default option that requires a paid license and prints the REST nonce and one-time session tokens into every front-end page.",
+    "published": "2026-11-06T12:17:24.82Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-92895"
+    ]
+  },
+  {
+    "id": "14362ff74dcd5914083054777ebe4e3c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-114630 — The ELEX WordPress HelpDesk & Customer Ticketing System plugin for WordPress is …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114630",
+    "summary": "The ELEX WordPress HelpDesk & Customer Ticketing System plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the factory_reset function in all versions up to, and including, 3.3.8 This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). This vulnerability is exploitable via a two-step chain: an unauthenticated attacker first stores an arbitrary ticket_attachment_path value by submitting a ticket through the nopriv eh_crm_new_ticket_post AJAX endpoint (whose nonce is publicly exposed via the [wsdesk_support] shortcode), then triggers the factory_reset routine via a GET request to wp-admin/admin.php?page=wsdesk_factory_reset, which is guarded only by is_admin() — a request-type check — rather than a capability check, causing unlink() to be called on the attacker-supplied path.",
+    "published": "2026-11-06T12:17:16.503Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-114630"
+    ]
+  },
+  {
+    "id": "b57bbe4b60dbd9480ed75355246af3b3",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-107622 — The BuddyForms plugin for WordPress is vulnerable to Privilege Escalation in all…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107622",
+    "summary": "The BuddyForms plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.10.5 via a form-type confusion attack through the `bf_post_type` parameter. This is due to the public frontend submission handler `buddyforms_form_response_no_ajax()` authorizing logged-out submissions based solely on the target form's `public_submit` flag while independently trusting the attacker-supplied `$_POST['bf_post_type']` to determine the post type of the newly created object — a cross-check introduced in 2.10.2 applies only to existing posts (`post_id != 0`) and is completely bypassed for new-object creation — combined with the `save_post` listener `buddyforms_edit_form_save_meta_box_data()` lacking both a `current_user_can()` capability check and a form-builder nonce, causing it to unconditionally persist attacker-supplied `$_POST['buddyforms_options']` for any newly inserted `buddyforms` CPT post. This makes it possible for unauthenticated attackers to insert a rogue BuddyForms form configuration with an attacker-controlled `new_user_role` value into the live global form registry, then submit a registration through that form to create a new WordPress account with administrator-level privileges and achieve full site takeover. Exploitation requires the WordPress site to have \"Anyone can register\" enabled and at least one public BuddyForms form attached to a page, both of which are standard BuddyForms deployment configurations.",
+    "published": "2026-11-06T12:17:16.02Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "critical-cvss",
+      "lpe",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 63,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-107622"
+    ]
+  },
+  {
+    "id": "8ca90327739809795fee3ca1794fc255",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 10.0 CRITICAL] CVE-2026-118423 — The WP Libre Form WordPress plugin 1.5.0.1 does not validate the type of files u…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118423",
+    "summary": "The WP Libre Form WordPress plugin 1.5.0.1 does not validate the type of files uploaded through its form submissions, allowing unauthenticated attackers to upload PHP files to a web-accessible location and execute them, leading to remote code execution.",
+    "published": "2026-11-06T08:17:18.55Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-118423"
+    ],
+    "epss": 0.00569,
+    "epss_percentile": 0.47318
+  },
+  {
+    "id": "4969ec30a94191654ca6966eec77ae2e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-113615 — The GS JWT Authentication for WP REST API WordPress plugin through 1.0.0 does no…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113615",
+    "summary": "The GS JWT Authentication for WP REST API WordPress plugin through 1.0.0 does not sanitize or parameterize a request value before using it in SQL queries on several unauthenticated REST routes, allowing unauthenticated attackers to perform SQL injection and obtain an administrator session.",
+    "published": "2026-11-06T06:16:40.053Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "critical-cvss",
+      "sqli",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 63,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-113615"
+    ],
+    "epss": 0.00246,
+    "epss_percentile": 0.15959
+  },
+  {
+    "id": "976aa387ee4661e3bae32709452509d0",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-895: LibreOffice dBase File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-895/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of LibreOffice. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-76181.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-76181"
+    ]
+  },
+  {
+    "id": "6c9f1148dc0554dc74b57f3d6e10bd05",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-894: Docker Sandboxes Inclusion of Functionality from Untrusted Control Sphere Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-894/",
+    "summary": "This vulnerability allows local attackers to execute arbitrary code on affected installations of Docker Sandboxes. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-121614.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "docker",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "docker"
+    ],
+    "cves": [
+      "CVE-2026-121614"
+    ]
+  },
+  {
+    "id": "ad3e27c0d67b26c395572a7d449b9a03",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-893: Trimble SketchUp SKP File Parsing Use-After-Free Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-893/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Trimble SketchUp. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-121741.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-121741"
+    ]
+  },
+  {
+    "id": "e4b7f7c2d0bc29a36f97eb28c8380e65",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-892: Philips Hue Bridge Pro Protection Mechanism Failure Authentication Bypass Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-892/",
+    "summary": "This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of Philips Hue Bridge Pro. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-122044.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-122044"
+    ]
+  },
+  {
+    "id": "d2217fb31df805bd08573dbdc2e635b1",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-891: Philips Hue Bridge Pro SQL Injection Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-891/",
+    "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Philips Hue Bridge Pro. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The ZDI has assigned a CVSS rating of 8.0. The following CVEs are assigned: CVE-2026-118632.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce",
+      "sqli"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-118632"
+    ]
+  },
+  {
+    "id": "f0f0d82cb59f5ae4bdc7fa0d005455a1",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-887: libilbm ILBM File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-887/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of libilbm. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2025-10935.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2025-10935"
+    ]
+  },
+  {
+    "id": "8f97adfcd4150dbc7554647f377c3670",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-886: OriginLab Origin Viewer OPJU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-886/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114558.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114558"
+    ]
+  },
+  {
+    "id": "35734f2c2fe88bda3a833313fdabdd76",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-885: OriginLab Origin Viewer OPJ File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-885/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114568.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114568"
+    ]
+  },
+  {
+    "id": "09e9cdae28c3624f83b30747f3721dc1",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-884: OriginLab Origin Viewer OGWU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-884/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114567.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114567"
+    ]
+  },
+  {
+    "id": "2c6f0d353dd0087bdc0aa430b61bc267",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-883: OriginLab Origin Viewer OGM File Parsing Memory Corruption Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-883/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114566.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114566"
+    ]
+  },
+  {
+    "id": "9f5f8fe26e0173ec39b581a721ee105b",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-882: OriginLab Origin Viewer OGG File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-882/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114565.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114565"
+    ]
+  },
+  {
+    "id": "06cbe2cab602e4b823090a5014b69b48",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-881: OriginLab Origin Viewer OGG File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-881/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114564.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114564"
+    ]
+  },
+  {
+    "id": "d8c62cd57be532edb90075385056ef74",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-880: OriginLab Origin Viewer OGWU File Parsing Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-880/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114563.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114563"
+    ]
+  },
+  {
+    "id": "98e853c199cc9f22a5c7033f504389dd",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-879: OriginLab Origin Viewer OGWU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-879/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114562.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114562"
+    ]
+  },
+  {
+    "id": "8242e78de7592a8019486fbd5ebc67ea",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-878: OriginLab Origin Viewer OPJU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-878/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114561.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114561"
+    ]
+  },
+  {
+    "id": "62676b87f5a6bdb3cbdb6aa4f306f574",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-877: OriginLab Origin Viewer OPJ File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-877/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114560.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114560"
+    ]
+  },
+  {
+    "id": "7e8349f2585469288d7908cc8e6c57ea",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-876: OriginLab Origin Viewer OGG File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-876/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114559.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114559"
+    ]
+  },
+  {
+    "id": "ecb224c1dd94621307b7b12a52a57dcb",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-875: OriginLab Origin Viewer OGWU File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-875/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-114569.",
+    "published": "2026-11-06T06:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-114569"
+    ]
+  },
+  {
+    "id": "f215070a43348e026bfaf594ee0dfd54",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-19868 — SonicWall SonicOS SSLVPN: SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19868",
+    "summary": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-20",
+    "published": "2026-11-06T00:00:00Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "sonicwall"
+    ],
+    "cves": [
+      "CVE-2026-19868"
+    ]
+  },
+  {
     "id": "14598aeada3de7d7d63baadbea3b25e6",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -544,6 +1350,32 @@
     ]
   },
   {
+    "id": "a295808db339609ea27261fc7b0ecdd5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-85627 — Improper Neutralization of Special Elements Used in a Template Engine ('Server-S…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85627",
+    "summary": "Improper Neutralization of Special Elements Used in a Template Engine ('Server-Side Template Injection') in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote authenticated attacker holding only a stock non-administrative account to execute arbitrary operating system commands as the OFBiz process user, by using the updateLayoutImage event, which writes DataResource fields with no permission check, to retype an attacker-created DataResource as an FTL template evaluating its own primary key, then using the resulting FreeMarker evaluation to plant an OFBiz Form Widget whose use-when attribute runs unsandboxed Groovy. Users are recommended to upgrade to version 24.09.08, which fixes this issue.",
+    "published": "2026-11-05T14:17:07.217Z",
+    "fetched": "2026-11-07T01:03:21.99292232Z",
+    "tags": [
+      "apache",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-85627"
+    ],
+    "epss": 0.00266,
+    "epss_percentile": 0.1886
+  },
+  {
     "id": "5786c76be85e4cf04327db90053af100",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -593,443 +1425,6 @@
     ]
   },
   {
-    "id": "1a60b9d49b4e4c86528ce94bdcdd4110",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-82910 — Improper Neutralization of Special Elements Used in a Template Engine ('Server-S…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82910",
-    "summary": "Improper Neutralization of Special Elements Used in a Template Engine ('Server-Side Template Injection') in MacroScreenRenderer in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote authenticated attacker holding only the two view permissions of a control-servlet webapp (e.g. CATALOG_VIEW and OFBTOOLS_VIEW on /catalog, held by OFBiz's own shipped order-entry clerk role) to execute arbitrary operating system commands as the OFBiz service account with a single GET request, by placing an apostrophe followed by FreeMarker expression source in a screen link parameter value, because renderLink concatenates link parameter values verbatim between apostrophes into an unquoted, unescaped template-source string that is compiled and evaluated at render time, allowing the injected expression to reach the allow-listed FlexibleStringExpander.expandString call and, through a runtime-assembled Groovy interpolation, unsandboxed code execution. Users are recommended to upgrade to version 24.09.08, which fixes this issue.",
-    "published": "2026-11-05T14:17:05.86Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "apache",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2026-82910"
-    ]
-  },
-  {
-    "id": "3078eea6d55c2ec9ef5356ba2e15d511",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-82907 — Authentication Bypass by Capture-replay in ExternalLoginKeysManager in Apache OF…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82907",
-    "summary": "Authentication Bypass by Capture-replay in ExternalLoginKeysManager in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote unauthenticated attacker who captures a live externalLoginKey value to obtain a complete, cookie-free, reusable session as the user who issued it, in every webapp that user can reach, because checkExternalLoginKey runs as a global preprocessor ahead of both the CSRF and authentication checks and accepts the key as a bearer credential that is never bound to a client, never expires, and is not invalidated after use, while the framework itself both appends live keys to every cross-webapp link it renders and, via WidgetWorker's unvalidated inter-app link target, lets an authenticated user's key be attached to an attacker-chosen absolute URL and delivered directly to the attacker's own server. Users are recommended to upgrade to version 24.09.08, which fixes this issue.",
-    "published": "2026-11-05T14:17:05.7Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "critical-cvss",
-      "auth-bypass",
-      "apache",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2026-82907"
-    ]
-  },
-  {
-    "id": "e9a8878b3c2fefcae8ffaaa68f53f2d9",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-118869 — An OS command injection vulnerability exists in SHIRASAGI, which may allow an au…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118869",
-    "summary": "An OS command injection vulnerability exists in SHIRASAGI, which may allow an authenticated attacker to execute arbitrary OS commands on the system running the product.",
-    "published": "2026-11-05T09:17:05.143Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-118869"
-    ]
-  },
-  {
-    "id": "6fc888bb32320484a8cda97aa608b174",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-100109 — The Security For WooCommerce WordPress plugin from 1.0.10 to 1.0.16 does not per…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100109",
-    "summary": "The Security For WooCommerce WordPress plugin from 1.0.10 to 1.0.16 does not perform capability checks when creating users through an action available to unauthenticated visitors, and lets the caller choose the new account's role, allowing unauthenticated attackers to create administrator accounts and take over the site.",
-    "published": "2026-11-05T08:17:01.87Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-100109"
-    ]
-  },
-  {
-    "id": "688e3669f20a9b382c9edc6d5d6a340d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.3 HIGH] CVE-2026-123033 — Authentication bypass in the HA heartbeat origin check in middlewared in TrueNAS…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123033",
-    "summary": "Authentication bypass in the HA heartbeat origin check in middlewared in TrueNAS SCALE before 25.10.8 (and in release trains before their respective fixes) allows an attacker on the same network segment to achieve unauthenticated full-administrator API access and execute commands as root. middlewared registers the HA peer-authentication hook (ha_permission) unconditionally, with no failover-licence or heartbeat-interface check. An unauthenticated connection whose TCP peer address is a hardcoded HA heartbeat address (169.254.10.1 or 169.254.10.2) and whose peer port is <= 1024 is granted a node credential that is authorized for every API method and treated as full administrator. Both conditions are properties of the attacker's own socket, and thus an attacker on the same layer-2 segment satisfies them without forging anything. The hook is present on non-HA, unlicensed, single-node Community Edition installations. The fix additionally requires that the connection terminate on the HA heartbeat listener (a local address/port the attacker cannot control).",
-    "published": "2026-11-05T07:17:26.207Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-123033"
-    ]
-  },
-  {
-    "id": "32af99a6284f3db4da33ee7972791dc0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.2 HIGH] CVE-2026-93389 — The LiteSpeed Cache plugin for WordPress is vulnerable to unauthenticated disclo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93389",
-    "summary": "The LiteSpeed Cache plugin for WordPress is vulnerable to unauthenticated disclosure of sensitive WooCommerce customer data in all versions up to, and including, 7.9.1 With Cache REST enabled (the shipped default cache-rest=1), LiteSpeed stores WooCommerce Store API GET responses (/wc/store/v1/cart and /wc/store/v1/checkout) as PUBLIC cache objects and does not vary the cache on the Cart-Token or WooCommerce session. A shopper's personalized cart/checkout response is therefore served to any later, cookie-less and token-less client as an LSCache HIT. This makes it possible for unauthenticated attackers to read another shopper's billing and shipping details (name, company, street address, email, phone), cart contents and totals, and the shopper's live Cart-Token session JWT and nonce (enabling cart/checkout-session hijack), plus order_key on the checkout endpoint.",
-    "published": "2026-11-05T05:18:40.127Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-93389"
-    ]
-  },
-  {
-    "id": "f8363f6c05fcefc6aa53d4c0b024938a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-122311 — Kyverno from 1.16.0 before 1.19.2 fails to validate path segments in the resourc…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122311",
-    "summary": "Kyverno from 1.16.0 before 1.19.2 fails to validate path segments in the resource argument of resource.get() and resource.post(), allowing namespaced CEL policies to escape their namespace. Tenants who can create a NamespacedValidatingPolicy can insert .. segments to read and write arbitrary cluster objects using the admission controller's ServiceAccount, leading to cluster takeover.",
-    "published": "2026-11-05T03:17:23.497Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-122311"
-    ]
-  },
-  {
-    "id": "be4bf6cd6d20a49940610975b92161fa",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 10.0 CRITICAL] CVE-2026-122051 — A flaw has been found in Edimax BR-6208AC 1.32. Affected by this vulnerability i…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122051",
-    "summary": "A flaw has been found in Edimax BR-6208AC 1.32. Affected by this vulnerability is an unknown functionality of the file /goform/mp. Executing a manipulation can lead to command injection. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-11-05T00:17:24.013Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-122051"
-    ]
-  },
-  {
-    "id": "28bc8db0f6adf548fc9a4eea18039cfe",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-54384 — VitaFit cloud API before 2026-10-30 contained an authentication bypass vulnerabi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54384",
-    "summary": "VitaFit cloud API before 2026-10-30 contained an authentication bypass vulnerability that allows remote attackers to obtain a full session for a victim's account by submitting a linked Google or Facebook account identifier to the POST /front/login/sns/ endpoint without providing proof of ownership from the identity provider. Attackers can forge a login using an identifier exposed through account enumeration to read and modify the victim's profile and delete the account's authentication record, preventing the legitimate user from logging in.",
-    "published": "2026-11-04T23:17:48.523Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-54384"
-    ]
-  },
-  {
-    "id": "59d7f956dcf318ebdbbcd14839f65d14",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.2 HIGH] CVE-2026-54376 — VitaFit Android application (com.vt.vitafit) before 2.8.1.0 contains an insecure…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54376",
-    "summary": "VitaFit Android application (com.vt.vitafit) before 2.8.1.0 contains an insecure custom URI scheme vulnerability that allows a malicious application to intercept Fitbit login tokens by registering the same callback scheme (vitafit://vtio.cn). Attackers can capture the 30-day Fitbit authorization token with weight scope delivered in the callback URL to read, create, and delete the victim's weight and body-fat records via the Fitbit Body API.",
-    "published": "2026-11-04T22:18:05.407Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "0day"
-    ],
-    "severity": "high",
-    "score": 70,
-    "cves": [
-      "CVE-2026-54376"
-    ]
-  },
-  {
-    "id": "24b0dff81d73d934aa5af0104ae83bc8",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-103002 — GPUStack is an open-source GPU cluster manager for AI model serving and GPU inst…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103002",
-    "summary": "GPUStack is an open-source GPU cluster manager for AI model serving and GPU instance provisioning. From 2.2.0 until 2.2.2, cluster_apiserver_proxy forwarded an authenticated non-administrator's requests to a selected Kubernetes cluster without a resource-level authorization check. The proxy used a reachable worker's Kubernetes ServiceAccount credentials, so the caller could read sensitive resources, create or modify workloads, or delete resources according to that ServiceAccount's permissions. Exploitation required a Kubernetes-provider cluster with a reachable worker, and attacker-controlled workloads could result in code execution in the target cluster. This issue is fixed in version 2.2.2.",
-    "published": "2026-11-04T22:17:44.783Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "kubernetes",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "kubernetes"
-    ],
-    "cves": [
-      "CVE-2026-103002"
-    ]
-  },
-  {
-    "id": "c134161cd2b92598a35439e7cea2fed6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-102895 — GPUStack is an open-source GPU cluster manager for AI model serving and GPU inst…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102895",
-    "summary": "GPUStack is an open-source GPU cluster manager for AI model serving and GPU instance provisioning. Prior to 2.2.0, get_current_user in gpustack/api/auth.py treated a loopback request source as the built-in administrator when force_auth_localhost was false, which was the default. A remote request could appear to originate from 127.0.0.1 because client_ip_getter accepted a same-host reverse proxy peer or a client-supplied X-GPUStack-Real-IP loopback value. The bypass allowed unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml. Exploitation was observed in the wild against a 2.1.1 deployment. This issue is fixed in version 2.2.0.",
-    "published": "2026-11-04T22:17:44.613Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "actively-exploited",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "cves": [
-      "CVE-2026-102895"
-    ]
-  },
-  {
-    "id": "c902965badc4de4f43956327acda490e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-102894 — GPUStack is an open-source GPU cluster manager for AI model serving and GPU inst…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102894",
-    "summary": "GPUStack is an open-source GPU cluster manager for AI model serving and GPU instance provisioning. From 0.7.1 until 2.2.2, the /auth/saml/callback endpoint decoded SAML XML, used its NameID and attributes to resolve or provision a user, and minted a gpustack_session JWT without calling OneLogin_Saml2_Auth.process_response to verify the signature, issuer, audience, destination, or time conditions. Any network client could submit an identity for an existing user, including an administrator, or provision a new non-administrator account, even when SAML was not configured. Response and Assertion identifiers were not consumed, so captured signed responses could also be replayed. This issue is fixed in version 2.2.2.",
-    "published": "2026-11-04T22:17:44.44Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-102894"
-    ]
-  },
-  {
-    "id": "dc5a115e9a608357dbffb83b7759bb39",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-82418 — IBM Watson Speech Services Cartridge 4.0.0 through 5.4.0 could allow a remote at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82418",
-    "summary": "IBM Watson Speech Services Cartridge 4.0.0 through 5.4.0 could allow a remote attacker to execute arbitrary code due to a use-after-free vulnerability.",
-    "published": "2026-11-04T21:18:14.94Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-82418"
-    ]
-  },
-  {
-    "id": "6b6fa16f6071727ef88772fa11a7df7b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-13292 — IBM MQ 9.2.0.0 through 9.2.0.44 LTS, 9.3.0.0 through 9.3.0.42 LTS, 9.4.0.0 throu…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13292",
-    "summary": "IBM MQ 9.2.0.0 through 9.2.0.44 LTS, 9.3.0.0 through 9.3.0.42 LTS, 9.4.0.0 through 9.4.0.26 LTS, 9.4.0.0 through 9.4.5.1 CD, and 10.0.0.0 through 10.0.0.5 LTS and CD could allow an authenticated attacker to execute arbitrary code by injecting malicious environment variables through transfer request metadata.",
-    "published": "2026-11-04T21:18:12.29Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-13292"
-    ]
-  },
-  {
-    "id": "4347d1e8b802837d4bf1fe27fce6a73f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-122135 — Mistral Vibe before 3.0.3 contains a remote code execution vulnerability that al…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122135",
-    "summary": "Mistral Vibe before 3.0.3 contains a remote code execution vulnerability that allows attackers to run commands by abusing repository-configured gpg.program during project context collection. A crafted repository setting gpg.program and log.showSignature with a signed commit makes git log execute the attacker's program at session start, before any trust prompt.",
-    "published": "2026-11-04T21:18:09.423Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-122135"
-    ]
-  },
-  {
-    "id": "67fbdc8af20284f7827aeaa70bc9b976",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-122134 — Mistral Vibe before 2.25.7 contains a remote code execution vulnerability that a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122134",
-    "summary": "Mistral Vibe before 2.25.7 contains a remote code execution vulnerability that allows attackers to run commands by configuring malicious Git clean or process filter drivers in a repository. When a user opens a crafted repository, ProjectContextProvider._fetch_git_status runs git status at startup, invoking the filters and executing commands with user privileges before any trust prompt.",
-    "published": "2026-11-04T21:18:09.26Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-122134"
-    ]
-  },
-  {
-    "id": "f2465dc19cc070518edbcd3c27725c88",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.5 HIGH] CVE-2026-11724 — IBM MQ 9.2.0.0 through 9.2.0.44 LTS, 9.3.0.0 through 9.3.0.42 LTS, 9.4.0.0 throu…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11724",
-    "summary": "IBM MQ 9.2.0.0 through 9.2.0.44 LTS, 9.3.0.0 through 9.3.0.42 LTS, 9.4.0.0 through 9.4.0.26 LTS, 9.4.0.0 through 9.4.5.1 CD, and 10.0.0.0 through 10.0.0.5 LTS and CD could allow an authenticated attacker to execute arbitrary code on a Managed File Transfer agent host due to improper validation of metadata used during script execution.",
-    "published": "2026-11-04T21:17:56.573Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-11724"
-    ]
-  },
-  {
-    "id": "6648135e428410aa409c1436462d92f5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-11376 — IBM MQ 9.2.0.0 through 9.2.0.44 LTS, 9.3.0.0 through 9.3.0.42 LTS, 9.4.0.0 throu…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11376",
-    "summary": "IBM MQ 9.2.0.0 through 9.2.0.44 LTS, 9.3.0.0 through 9.3.0.42 LTS, 9.4.0.0 through 9.4.0.26 LTS, 9.4.0.0 through 9.4.5.1 CD, and 10.0.0.0 through 10.0.0.5 LTS and CD could allow an authenticated attacker to cause a denial of service or potentially execute arbitrary code due to an integer overflow when processing subscription requests with crafted buffer size values.",
-    "published": "2026-11-04T21:17:56.403Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-11376"
-    ]
-  },
-  {
-    "id": "87cb5682ba512b409b94c5982aab4c7d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.2 HIGH] CVE-2026-102339 — Telepresence enables local development against a remote Kubernetes or OpenShift …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102339",
-    "summary": "Telepresence enables local development against a remote Kubernetes or OpenShift cluster. Prior to 2.31.0, the Traffic Manager Tunnel gRPC streaming endpoint parses a session ID from the first bytes of a caller-controlled message in pkg/tunnel/message.go and passes it to state.Tunnel without verifying that the caller owns the active session. An attacker who obtains a valid active session ID through log leakage, cluster-internal channels, or the unauthenticated ArriveAsClient endpoint can attach a routed tunnel to that session and gain its network routing capabilities. UUID4 session IDs make cold brute force impractical. This vulnerability is fixed in 2.31.0.",
-    "published": "2026-11-04T21:17:40.5Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "kubernetes",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "kubernetes"
-    ],
-    "cves": [
-      "CVE-2026-102339"
-    ]
-  },
-  {
-    "id": "7af8927f8487ec0ae7f6d743472ec0fb",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2025-71457 — vtenext 25.02 before 25.02.1 contains an authentication bypass vulnerability tha…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71457",
-    "summary": "vtenext 25.02 before 25.02.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to change any account password via hub/rpwd.php without token verification. Attackers knowing a valid user_name can send action=change_password to RecoverPwd::displayChangePwd() and log in as administrators lacking two-factor authentication.",
-    "published": "2026-11-04T21:17:40.34Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2025-71457"
-    ]
-  },
-  {
     "id": "945e10fffa14cdbe73491ee247878f49",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1044,129 +1439,6 @@
     ],
     "severity": "high",
     "score": 67
-  },
-  {
-    "id": "f0558cbb32f1642435d7363aed021238",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.0 CRITICAL] CVE-2026-122120 — In Yealink Plug-in Softwares before 2.35.219.0, there is an unauthorized file wr…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122120",
-    "summary": "In Yealink Plug-in Softwares before 2.35.219.0, there is an unauthorized file write vulnerability under specific scenarios, which may be exploited by attackers to achieve remote code execution.",
-    "published": "2026-11-04T19:17:39.56Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-122120"
-    ]
-  },
-  {
-    "id": "817b32d7a9219cbc173996cf3d981706",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 10.0 CRITICAL] CVE-2026-121932 — A vulnerability was detected in Linksys E5350 1.0.00.037. This affects the funct…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121932",
-    "summary": "A vulnerability was detected in Linksys E5350 1.0.00.037. This affects the function system of the file /wizard/apply.cgi. Performing a manipulation of the argument ping_ip/traceroute_ip results in os command injection. The attack may be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-11-04T19:17:33.44Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-121932"
-    ]
-  },
-  {
-    "id": "f52737fdcb09b340bfbfb1bfa23952b0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-121931 — A security vulnerability has been detected in Linksys WRT54GL 4.30.18. The impac…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121931",
-    "summary": "A security vulnerability has been detected in Linksys WRT54GL 4.30.18. The impacted element is the function system of the file apply.cgi of the component Traceroute Diagnostic Function. Such manipulation of the argument traceroute_ip leads to os command injection. The attack can be launched remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
-    "published": "2026-11-04T19:17:33.157Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-121931"
-    ]
-  },
-  {
-    "id": "c7f3545af808fc02e12639c0705ac179",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-121930 — A weakness has been identified in Linksys WRT54GL 4.30.18. The affected element …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121930",
-    "summary": "A weakness has been identified in Linksys WRT54GL 4.30.18. The affected element is the function system of the file apply.cgi of the component Ping Diagnostic. This manipulation of the argument ping_ip causes os command injection. The attack can be initiated remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
-    "published": "2026-11-04T19:17:32.883Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-121930"
-    ]
-  },
-  {
-    "id": "516b892e811a15f21b9a52edf432e0aa",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-57853 — DataGerry before 3.3.0 contains a server-side template injection vulnerability t…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57853",
-    "summary": "DataGerry before 3.3.0 contains a server-side template injection vulnerability that allows authenticated attackers with base.docapi.template.add permission to store arbitrary Jinja2 payloads in the template_data field via POST /rest/docapi/template, which is later rendered in a non-sandboxed Jinja2 environment when a user calls GET /rest/docapi/template/<id>/render/<object_id>. Attackers can exploit the standard cycler.__init__.__globals__.os gadget chain to execute arbitrary operating system commands as the DataGerry web process user, confirmed as root in default Docker deployments, achieving remote code execution.",
-    "published": "2026-11-04T18:17:44.877Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "rce",
-      "docker"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "docker"
-    ],
-    "cves": [
-      "CVE-2026-57853"
-    ]
-  },
-  {
-    "id": "22ad90d42f07a3eeb253d7fc73cee30a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-121952 — FreeRDP before 3.32.2 has an out-of-bounds write in the proxy because rdp_read_b…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121952",
-    "summary": "FreeRDP before 3.32.2 has an out-of-bounds write in the proxy because rdp_read_bitmap_cache_v2_capability_set rejects only numCellCaches values above 5, yet the bitmap cache v2 cell array is later accessed at fixed indices 0 through 4. A client connecting to the proxy can declare fewer than five cell caches in its Confirm Active, causing heap corruption, heap data leakage to the backend, or a crash.",
-    "published": "2026-11-04T16:17:47.53Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "critical-cvss",
-      "breach"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-121952"
-    ]
   },
   {
     "id": "39b8fb97da640190ee1d2e0f34e27867",
@@ -1202,25 +1474,6 @@
     "score": 60,
     "cves": [
       "CVE-2000-0411"
-    ]
-  },
-  {
-    "id": "32977e7ee3555d6becbf9e3cbc8f75f9",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-121939 — Databasement before 1.10.9 contains an authentication bypass vulnerability in OA…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121939",
-    "summary": "Databasement before 1.10.9 contains an authentication bypass vulnerability in OAuthService::findOrCreateLocalUser() that links OIDC identities to local users by email without checking email_verified. Attackers can register an identity provider account with a victim's unverified email to log in as any user, including the super-admin, and retain access after password resets.",
-    "published": "2026-11-04T13:17:28.21Z",
-    "fetched": "2026-11-05T14:17:21.540298053Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-121939"
     ]
   },
   {
@@ -2316,167 +2569,6 @@
     ]
   },
   {
-    "id": "bf1992d61c6c0f16c5f2a003e6fe0b7f",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-819: (0Day) (Pwn2Own) Alpine iLX-F511 SSH Hard-Coded Credentials Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-819/",
-    "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Alpine iLX-F511 devices. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.3. The following CVEs are assigned: CVE-2026-118601.",
-    "published": "2026-10-28T05:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 81,
-    "cves": [
-      "CVE-2026-118601"
-    ]
-  },
-  {
-    "id": "fc4fbbeeb66d05cd3b7c91a13785a866",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-818: (0Day) Ultralytics Google Drive Download Path Traversal Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-818/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ultralytics. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-118619.",
-    "published": "2026-10-28T05:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "rce",
-      "path-traversal",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 89,
-    "cves": [
-      "CVE-2026-118619"
-    ]
-  },
-  {
-    "id": "cd8ecb5ae07522e3fc0d09866ff73ad3",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-817: (0Day) Ultralytics parse_model Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-817/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ultralytics. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-118618.",
-    "published": "2026-10-28T05:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 81,
-    "cves": [
-      "CVE-2026-118618"
-    ]
-  },
-  {
-    "id": "b14e13087b227ad34a082bbb45ee1e6e",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-816: (0Day) Ultralytics load_dataset_cache_file Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-816/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ultralytics. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-118617.",
-    "published": "2026-10-28T05:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 81,
-    "cves": [
-      "CVE-2026-118617"
-    ]
-  },
-  {
-    "id": "e4b752dfe9ca985c6f1a921d51ce250b",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-815: (0Day) Ultralytics parse_model Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-815/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ultralytics. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-118616.",
-    "published": "2026-10-28T05:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 81,
-    "cves": [
-      "CVE-2026-118616"
-    ]
-  },
-  {
-    "id": "ca1e84833ea4de2069d14b19d253b286",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-814: (0Day) Ultralytics torch_safe_load Command Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-814/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ultralytics. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-118615.",
-    "published": "2026-10-28T05:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 81,
-    "cves": [
-      "CVE-2026-118615"
-    ]
-  },
-  {
-    "id": "2ceba170db710b0809401f7a03782c44",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-813: (0Day) Ultralytics check_det_dataset Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-813/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ultralytics. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-118614.",
-    "published": "2026-10-28T05:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 81,
-    "cves": [
-      "CVE-2026-118614"
-    ]
-  },
-  {
-    "id": "38ac3c6754f75e2faa15cb8387c02d24",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-812: (0Day) Ultralytics torch_load Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-812/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ultralytics. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-118613.",
-    "published": "2026-10-28T05:00:00Z",
-    "fetched": "2026-10-29T01:08:44.565657705Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 81,
-    "cves": [
-      "CVE-2026-118613"
-    ]
-  },
-  {
     "id": "eba1776d7f054c91e27695accbc122b1",
     "source": "cisa-kev",
     "source_name": "CISA Known Exploited Vulnerabilities",
@@ -2613,122 +2705,5 @@
     ],
     "severity": "high",
     "score": 67
-  },
-  {
-    "id": "f129e718cb7493c83881ea0eff3c9261",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-48356 — Adobe Commerce and Magento: Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356",
-    "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-10",
-    "published": "2026-10-27T00:00:00Z",
-    "fetched": "2026-11-04T01:33:47.948968783Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "adobe",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-48356"
-    ]
-  },
-  {
-    "id": "10013bdee737aa1d10b459814861db54",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-111497 — Google Brotli: Google Brotli Unchecked Return Value Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497",
-    "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-10",
-    "published": "2026-10-27T00:00:00Z",
-    "fetched": "2026-11-04T01:33:47.948968783Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google"
-    ],
-    "cves": [
-      "CVE-2026-111497"
-    ]
-  },
-  {
-    "id": "f129e718cb7493c83881ea0eff3c9261",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-48356 — Adobe Commerce and Magento: Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356",
-    "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-10",
-    "published": "2026-10-27T00:00:00Z",
-    "fetched": "2026-10-28T00:39:19.706965836Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "adobe",
-      "rce"
-    ],
-    "severity": "critical",
-    "score": 100,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-48356"
-    ]
-  },
-  {
-    "id": "10013bdee737aa1d10b459814861db54",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-111497 — Google Brotli: Google Brotli Unchecked Return Value Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497",
-    "summary": "Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-10",
-    "published": "2026-10-27T00:00:00Z",
-    "fetched": "2026-10-28T00:39:19.706965836Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "google"
-    ],
-    "cves": [
-      "CVE-2026-111497"
-    ]
-  },
-  {
-    "id": "bb0a9eadcbd84a6aea5f5098a2f6b3ea",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "PHP2Shell security flaws now sucessfully exploited in the wild",
-    "url": "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
-    "summary": "Two critical RCE vulnerabilities (CVE-2026-109618 and CVE-2026-109619), collectively tracked as PHP2Shell, have been successfully exploited in the wild. [...]",
-    "published": "2026-10-26T09:19:57Z",
-    "fetched": "2026-10-27T00:41:04.156778577Z",
-    "tags": [
-      "rce",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 87,
-    "cves": [
-      "CVE-2026-109618",
-      "CVE-2026-109619"
-    ]
   }
 ]

@@ -230,10 +230,22 @@ func (c Client) complete(ctx context.Context, user string) (string, error) {
 	}
 	var cr chatResponse
 	if err := json.Unmarshal(data, &cr); err != nil {
-		return "", fmt.Errorf("decode response: %w", err)
+		// A non-JSON 200 means we are not talking to the API we expect;
+		// more requests would fail the same way.
+		return "", fmt.Errorf("%w: decode response (%s, %q): %v", errStop,
+			resp.Header.Get("Content-Type"), snippet(data), err)
 	}
 	if len(cr.Choices) == 0 {
 		return "", errors.New("empty response")
 	}
 	return cr.Choices[0].Message.Content, nil
+}
+
+// snippet returns the start of a response body for error messages.
+func snippet(b []byte) string {
+	r := []rune(string(b))
+	if len(r) > 120 {
+		r = r[:120]
+	}
+	return string(r)
 }

@@ -170,3 +170,18 @@ func TestTranslateRespectsMaxRequests(t *testing.T) {
 		t.Fatalf("calls=%d got=%d stats=%+v", calls, len(got), st)
 	}
 }
+
+func TestTranslateStopsOnNonJSONResponse(t *testing.T) {
+	var calls int32
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		atomic.AddInt32(&calls, 1)
+		w.Header().Set("Content-Type", "text/plain")
+		_, _ = w.Write([]byte("OK"))
+	}))
+	defer srv.Close()
+	c := Client{Endpoint: srv.URL, Token: "tok", HTTP: srv.Client(), BatchSize: 1, MaxRequests: 10}
+	_, st := c.Translate(context.Background(), []normalize.Item{item("a", "one", ""), item("b", "two", "")})
+	if calls != 1 || st.Err == nil || !strings.Contains(st.Err.Error(), `"OK"`) {
+		t.Fatalf("calls=%d err=%v", calls, st.Err)
+	}
+}

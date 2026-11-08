@@ -57,7 +57,7 @@ type Item struct {
     Score      int       `json:"score"`        // 0-100
     Vendors    []string  `json:"vendors,omitempty"`
     CVEs       []string  `json:"cves,omitempty"`
-    // title_ja / summary_ja: GitHub Models による日本語訳 (data/translations.json から付与)
+    // title_ja / summary_ja: runner 上の llama.cpp + Qwen3-4B による日本語訳 (data/translations.json から付与)
     Raw        string    `json:"raw,omitempty"`         // デバッグ用 (本番は省略)
 }
 ```
@@ -75,7 +75,7 @@ type Item struct {
 3. **Tag**: `enrich/tagger.go` がタイトル + サマリから RegExp でタグを付与 (CVE ID, ベンダー名, 攻撃クラス)
 4. **Score**: `enrich/scorer.go` が決定論的に severity を判定
 5. **Dedup**: `enrich/deduper.go` が既存 NDJSON との ID 重複を除外
-6. **日本語訳 (jatrans)**: index を作り直すときに、訳の無い英語記事だけを GitHub Models (GITHUB_TOKEN・models: read) で訳し、data/translations.json にキャッシュして title_ja / summary_ja を付ける。1 回の実行あたりのリクエスト数に上限あり。失敗しても収集は止めず、状態は sources.json の github-models-ja に出る
+6. **日本語訳 (jatrans)**: index を作り直すときに、訳の無い英語記事だけを runner 上の llama-server (OpenAI 互換 API・127.0.0.1 限定) で訳し、data/translations.json にキャッシュして title_ja / summary_ja を付ける。1 回の実行あたりの時間とリクエスト数に上限あり。失敗しても収集は止めず、状態は sources.json の local-llm-ja に出る
 7. **Persist**: `store/store.go` が NDJSON / index.json / critical.json / stats.json を書き出し
 
 ### スコアリング詳細
@@ -196,4 +196,4 @@ GH Pages はそのブランチを見ているので即反映。
 - **ビルドステップなしのフロント**: メンテナンス対象を増やしたくない。ブラウザがネイティブで読める HTML+JS で十分速い。
 - **GitHub Pages**: 別ホスティング不要。クレデンシャル不要。
 - **Go**: ユーザーが既に eml-analyzer で Go を使っており継続性がある。HTTP 並列・JSON・YAML が標準ライブラリで十分。
-- **翻訳は GitHub Models**: Actions の GITHUB_TOKEN だけで呼べるので、API キーを管理しなくて済む。フィード文面は信頼できない入力として扱い、出力は機械的に検査してから使う。
+- **翻訳は runner 上の小型 LLM**: API キーが要らず、文面も外に出ない。GitHub Models は 2026-07-30 に提供終了したため使えない。フィード文面は信頼できない入力として扱い、出力は機械的に検査してから使う。

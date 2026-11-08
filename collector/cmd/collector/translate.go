@@ -3,9 +3,8 @@ package main
 import (
 	"context"
 	"log/slog"
-	"os"
+	"net/url"
 	"path/filepath"
-	"strings"
 	"time"
 
 	"github.com/moke-cloud/SHIGOTOBA/threat-radar/collector/jatrans"
@@ -15,11 +14,10 @@ import (
 )
 
 const (
-	translateStatusID = "github-models-ja"
-	translationsFile  = "translations.json"
-	// tokenEnv holds the workflow's GITHUB_TOKEN. Read only here, never logged.
-	tokenEnv              = "GITHUB_TOKEN"
-	allowedEndpointPrefix = "https://models.github.ai/"
+	translateStatusID   = "local-llm-ja"
+	translationsFile    = "translations.json"
+	defaultMaxMinutes   = 30
+	requestTimeoutFloor = 600 // seconds; a CPU-only batch can take minutes
 )
 
 type translateConfig struct {
@@ -28,6 +26,7 @@ type translateConfig struct {
 	Model       string `yaml:"model"`
 	BatchSize   int    `yaml:"batch_size"`
 	MaxRequests int    `yaml:"max_requests"`
+	MaxMinutes  int    `yaml:"max_minutes"`
 }
 
 // translator attaches Japanese text to index items. Each call loads the cache,
@@ -35,9 +34,24 @@ type translateConfig struct {
 type translator struct {
 	ctx    context.Context
 	client *jatrans.Client // nil: apply cached translations only
+	budget time.Duration
 	path   string
 	now    time.Time
 	status *store.SourceStatus
+}
+
+// loopbackEndpoint accepts only a llama-server on this machine: feed text is
+// never sent anywhere else.
+func loopbackEndpoint(raw string) bool {
+	u, err := url.Parse(raw)
+	if err != nil || u.Scheme != "http" {
+		return false
+	}
+	switch u.Hostname() {
+	case "127.0.0.1", "localhost", "::1":
+		return true
+	}
+	return false
 }
 
 func newTranslator(ctx context.Context, cfg translateConfig, h sources.HTTPClientConfig, outDir string, now time.Time) *translator {
@@ -49,26 +63,25 @@ func newTranslator(ctx context.Context, cfg translateConfig, h sources.HTTPClien
 		path: filepath.Join(outDir, translationsFile),
 		now:  now,
 		status: &store.SourceStatus{
-			ID: translateStatusID, Name: "GitHub Models (日本語訳)", Category: "enrichment",
-			URL: jatrans.DefaultEndpoint, CheckedAt: now,
+			ID: translateStatusID, Name: "llama.cpp (日本語訳)", Category: "enrichment",
+			URL: cfg.Model, CheckedAt: now,
 		},
 	}
-	// The token must only ever go to GitHub Models.
-	if cfg.Endpoint != "" && !strings.HasPrefix(cfg.Endpoint, allowedEndpointPrefix) {
-		t.status.Error = "translate.endpoint must start with " + allowedEndpointPrefix
-		return t
-	}
-	token := os.Getenv(tokenEnv)
-	if token == "" {
-		t.status.Error = tokenEnv + " not set: existing translations only"
+	if !loopbackEndpoint(cfg.Endpoint) {
+		t.status.Error = "translate.endpoint must be http://127.0.0.1 or localhost"
 		return t
 	}
 	httpCfg := h
-	httpCfg.TimeoutSeconds = max(h.TimeoutSeconds, 90)
+	httpCfg.TimeoutSeconds = max(h.TimeoutSeconds, requestTimeoutFloor)
 	t.client = &jatrans.Client{
-		Endpoint: cfg.Endpoint, Token: token, Model: cfg.Model,
+		Endpoint: cfg.Endpoint, Model: cfg.Model,
 		HTTP: sources.NewHTTPClient(httpCfg), BatchSize: cfg.BatchSize, MaxRequests: cfg.MaxRequests,
 	}
+	minutes := cfg.MaxMinutes
+	if minutes <= 0 {
+		minutes = defaultMaxMinutes
+	}
+	t.budget = time.Duration(minutes) * time.Minute
 	return t
 }
 
@@ -79,7 +92,9 @@ func (t *translator) decorate(items []normalize.Item) []normalize.Item {
 	}
 	if t.client != nil {
 		missing := jatrans.Missing(items, cache)
-		got, st := t.client.Translate(t.ctx, missing)
+		ctx, cancel := context.WithTimeout(t.ctx, t.budget)
+		got, st := t.client.Translate(ctx, missing)
+		cancel()
 		cache = jatrans.Merge(cache, got)
 		t.record(len(missing), st)
 	}
@@ -93,13 +108,14 @@ func (t *translator) decorate(items []normalize.Item) []normalize.Item {
 func (t *translator) record(missing int, st jatrans.Stats) {
 	t.status.Fetched = missing
 	t.status.Kept = st.Translated
-	t.status.OK = st.Err == nil
-	if st.Err != nil {
+	// Running out of the time budget is expected; the rest waits for the next run.
+	t.status.OK = st.Err == nil || jatrans.IsBudgetExhausted(st.Err)
+	if !t.status.OK {
 		t.status.Error = store.TruncateError(st.Err.Error())
 	}
 	if st.Translated > 0 || missing == 0 {
 		t.status.LastItemAt = t.now
 	}
 	slog.Info("translation", "missing", missing, "requests", st.Requests,
-		"translated", st.Translated, "rejected", st.Rejected, "deferred", st.Remaining, "err", st.Err)
+		"translated", st.Translated, "rejected", st.Rejected, "unmatched", st.Unmatched, "deferred", st.Remaining, "err", st.Err)
 }

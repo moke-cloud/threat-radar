@@ -19,7 +19,6 @@ permissions:
   contents: write
   pages: write
   id-token: write
-  models: read
 
 concurrency:
   group: threat-radar-collect
@@ -28,6 +27,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
         with:
@@ -50,11 +50,21 @@ jobs:
         working-directory: collector
         run: go build -o ../collector-bin ./cmd/collector
 
+      # Japanese translation runs on a local model (llama.cpp + Qwen3-4B,
+      # pinned and checksum-verified). Cached between runs. If it fails to
+      # start, collection still runs and the status panel shows the error.
+      - name: Cache translation model
+        uses: actions/cache@v4
+        with:
+          path: ~/llm
+          key: llm-${{ hashFiles('scripts/start-llm.sh') }}
+
+      - name: Start translation model
+        continue-on-error: true
+        run: bash scripts/start-llm.sh
+
       - name: Run collector
-        # No extra secrets. Feeds are public; Japanese translation calls
-        # GitHub Models with the job's own GITHUB_TOKEN ("models: read").
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # No secrets. Feeds are public and translation stays on this runner.
         run: |
           ARGS="-config config.yaml -out data"
           if [ -n "${{ github.event.inputs.only }}" ]; then

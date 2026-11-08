@@ -1,5 +1,6 @@
-// Package jatrans adds Japanese titles / summaries to items with GitHub
-// Models (chat completions), authenticated by the workflow's GITHUB_TOKEN.
+// Package jatrans adds Japanese titles / summaries to items with a local
+// LLM served by llama.cpp's OpenAI-compatible llama-server (no API key, the
+// text never leaves the machine running the collector).
 //
 // Translations are kept in data/translations.json keyed by item ID plus a
 // hash of the source text, and applied whenever the index is rebuilt. Items
@@ -29,7 +30,7 @@ type Entry struct {
 type Cache map[string]Entry
 
 // SummaryMax caps how much of a summary is sent (and shown) per item.
-const SummaryMax = 600
+const SummaryMax = 450
 
 func isJapaneseRune(r rune) bool {
 	return unicode.In(r, unicode.Hiragana, unicode.Katakana, unicode.Han)

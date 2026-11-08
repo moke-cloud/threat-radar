@@ -185,3 +185,75 @@ func TestTranslateStopsOnNonJSONResponse(t *testing.T) {
 		t.Fatalf("calls=%d err=%v", calls, st.Err)
 	}
 }
+
+func TestTranslateStopsWhenBudgetRunsOut(t *testing.T) {
+	var calls int32
+	srv := fakeModels(t, &calls, http.StatusOK)
+	defer srv.Close()
+	ctx, cancel := context.WithTimeout(context.Background(), 0)
+	defer cancel()
+	c := Client{Endpoint: srv.URL, Token: "tok", HTTP: srv.Client(), BatchSize: 1}
+	got, st := c.Translate(ctx, []normalize.Item{item("a", "one", ""), item("b", "two", "")})
+	if len(got) != 0 || !IsBudgetExhausted(st.Err) || st.Remaining != 1 {
+		t.Fatalf("got=%v stats=%+v", got, st)
+	}
+}
+
+func TestTranslateStopsWhenServerUnreachable(t *testing.T) {
+	c := Client{Endpoint: "http://127.0.0.1:1/v1/chat/completions", HTTP: http.DefaultClient, BatchSize: 1}
+	_, st := c.Translate(context.Background(), []normalize.Item{item("a", "one", ""), item("b", "two", "")})
+	if st.Requests != 1 || st.Err == nil || IsBudgetExhausted(st.Err) {
+		t.Fatalf("stats=%+v", st)
+	}
+}
+
+func TestTitleDerivedFromSummaryWhenTitleRepeatsIt(t *testing.T) {
+	var calls int32
+	srv := fakeModels(t, &calls, http.StatusOK)
+	defer srv.Close()
+	c := Client{Endpoint: srv.URL, Token: "tok", HTTP: srv.Client(), BatchSize: 4}
+	it := item("n", "[CVSS 9.8 CRITICAL] CVE-2026-12345 — imgproxy has an integer overflow in…",
+		"imgproxy has an integer overflow in ICO.")
+	got, st := c.Translate(context.Background(), []normalize.Item{it})
+	if st.Translated != 1 {
+		t.Fatalf("stats = %+v", st)
+	}
+	// The fake echoes "訳:"+text; the title must come from the summary.
+	want := "[CVSS 9.8 CRITICAL] CVE-2026-12345 — 訳:imgproxy has an integer overflow in ICO."
+	if got["n"].Title != want {
+		t.Fatalf("title = %q", got["n"].Title)
+	}
+}
+
+func TestHeadline(t *testing.T) {
+	if got := headline("最初の文です。次の文。"); got != "最初の文です。" {
+		t.Fatalf("got %q", got)
+	}
+	long := strings.Repeat("あ", 200)
+	if got := headline(long); len([]rune(got)) != headlineMax+1 || !strings.HasSuffix(got, "…") {
+		t.Fatalf("got %q", got)
+	}
+}
+
+func TestSameItemRejectsSwappedTranslation(t *testing.T) {
+	src := "OpenAM before 16.1.4 contains an authentication bypass in the SAML v2.0 service provider."
+	if !sameItem(src, "OpenAM 16.1.4 より前の SAML v2.0 サービスプロバイダーに認証回避がある。") {
+		t.Fatal("matching translation rejected")
+	}
+	if sameItem(src, "Vikunja 2.7.1 より前に page=0 によるリソース消費の問題がある。") {
+		t.Fatal("translation of a different item must be rejected")
+	}
+	if !sameItem("Hackers steal money from a bank", "ハッカーが銀行から資金を盗んだ") {
+		t.Fatal("text without identifiers cannot be checked and must pass")
+	}
+}
+
+func TestBatchEntryAcceptsNumericID(t *testing.T) {
+	var p batchPayload
+	if err := json.Unmarshal([]byte(`{"items":[{"id":0,"title":"a","summary":""},{"id":"1","title":"b"}]}`), &p); err != nil {
+		t.Fatal(err)
+	}
+	if p.Items[0].ID != "0" || p.Items[1].ID != "1" {
+		t.Fatalf("ids = %q %q", p.Items[0].ID, p.Items[1].ID)
+	}
+}

@@ -22,18 +22,20 @@ retain:
 epss:
   enabled: true
 
-# Japanese titles / summaries via GitHub Models. Auth is the workflow's own
-# GITHUB_TOKEN (permission "models: read"); no extra secret. Results are
-# cached in data/translations.json and only missing items are sent, in
-# batches. max_requests bounds one run so the free daily quota is never
-# exhausted; anything left over is picked up on the next run. Without a
-# token (local runs) only cached translations are applied.
+# Japanese titles / summaries from a local model: llama.cpp's llama-server
+# with Qwen3-4B-Instruct (started by scripts/start-llm.sh in the workflow).
+# No API key, and feed text never leaves the runner; the endpoint must be
+# loopback. Only items without a cached translation (data/translations.json)
+# are sent, newest first, until max_requests or max_minutes is reached; the
+# rest waits for the next run. Without a running server (local runs) only
+# cached translations are applied.
 translate:
   enabled: true
-  endpoint: https://models.github.ai/inference/chat/completions
-  model: openai/gpt-4.1-mini
-  batch_size: 8
-  max_requests: 30
+  endpoint: http://127.0.0.1:8080/v1/chat/completions
+  model: Qwen3-4B-Instruct-2507-Q4_K_M
+  batch_size: 4
+  max_requests: 60
+  max_minutes: 30
 
 watch:
   vendors:

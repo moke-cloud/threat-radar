@@ -1,5 +1,21 @@
 [
   {
+    "id": "e1066283d86b55bb904b2350d54a2bc6",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.6 HIGH] CVE-2026-114713 — The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape t…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114713",
+    "summary": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+    "published": "2026-11-08T03:16:33.41Z",
+    "fetched": "2026-11-08T08:07:16.939697205Z",
+    "severity": "medium",
+    "score": 30,
+    "cves": [
+      "CVE-2026-114713"
+    ]
+  },
+  {
     "id": "545ce3f30100769d33ba77035567bc4c",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -3114,22 +3130,6 @@
     ],
     "cves": [
       "CVE-2026-54349"
-    ]
-  },
-  {
-    "id": "1ffe6e308e49021bdad57b2c56acdc21",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-102344 — Lavish is the new editor for your HTML artifacts. Prior to 0.1.43, the lavish-ax…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102344",
-    "summary": "Lavish is the new editor for your HTML artifacts. Prior to 0.1.43, the lavish-axi loopback HTTP server did not authenticate requests or validate Host and Origin values on session, artifact, prompt, and polling routes. A website visited while the server is running can use DNS rebinding to send same-origin browser requests to the local service. POST /api/sessions accepts a caller-selected file path and returns its deterministic session key; GET /artifact/:key/index.html then returns the file contents, allowing disclosure of any file readable by the server process without an existing session. An attacker can also queue text through POST /api/:key/prompts for an active agent session when the artifact path is known or guessed. Visiting the attacker-controlled website is the required user interaction. This vulnerability is fixed in 0.1.43.",
-    "published": "2026-11-06T21:17:05.323Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-102344"
     ]
   },
   {

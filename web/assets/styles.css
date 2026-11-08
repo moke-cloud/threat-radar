@@ -55,7 +55,7 @@ a:hover { text-decoration: underline; }
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.6rem 1.25rem;
+  padding: 0.55rem 1.25rem;
   background: var(--bg-1);
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -63,38 +63,82 @@ a:hover { text-decoration: underline; }
   z-index: 10;
   backdrop-filter: blur(6px);
 }
-.brand { display: flex; align-items: center; gap: 0.5rem; }
+.brand { display: flex; align-items: center; gap: 0.7rem; min-width: 0; }
 .brand-mark {
-  font-family: var(--mono);
-  font-size: 1.2rem;
+  width: 34px;
+  height: 34px;
+  flex: none;
   color: var(--accent);
-  display: inline-block;
-  width: 1.4rem;
-  text-align: center;
+  overflow: visible;
 }
+.brand-mark .ring { fill: none; stroke: currentColor; stroke-width: 1.4; opacity: 0.9; }
+.brand-mark .ring.faint { stroke-width: 1; opacity: 0.35; }
+.brand-mark .axis { stroke: currentColor; stroke-width: 0.8; opacity: 0.25; }
+.brand-mark .sweep {
+  transform-box: view-box;
+  transform-origin: 16px 16px;
+  animation: radar-sweep 1.8s cubic-bezier(0.45, 0, 0.2, 1) 0.2s 1 both;
+}
+.brand:hover .brand-mark .sweep { animation: radar-sweep 1.8s cubic-bezier(0.45, 0, 0.2, 1) 1; }
+@keyframes radar-sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+/* Blip = data health: accent when all sources are fine, orange when not. */
+.brand-mark .blip { fill: var(--accent); }
+.brand[data-health="problems"] .brand-mark .blip { fill: var(--high); }
+.brand[data-health="unknown"] .brand-mark .blip { fill: var(--text-muted); }
+.brand-text { display: flex; flex-direction: column; line-height: 1.1; min-width: 0; }
 .brand-name {
   margin: 0;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
   font-family: var(--mono);
+  font-size: 1.08rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: baseline;
+}
+.bn-a { font-weight: 400; color: var(--text-mid); letter-spacing: 0.14em; }
+.bn-b {
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: 0.14em;
+  margin-left: 0.18em;
+  padding-left: 0.32em;
+  border-left: 2px solid var(--accent);
 }
 .brand-update {
+  margin-top: 0.22rem;
   font-family: var(--mono);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   color: var(--text-muted);
-  margin-left: 0.5rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 .quick-stats {
   display: flex;
-  gap: 1rem;
   flex: 1;
   justify-content: center;
   font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--text-mid);
 }
-.quick-stats span strong { color: var(--text); margin-right: 0.25rem; }
+.quick-stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 1.1rem;
+  border-left: 1px solid var(--border);
+  line-height: 1.1;
+}
+.quick-stats .stat:first-child { border-left: none; }
+.quick-stats strong {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.quick-stats .stat-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
 .quick-stats .sev-critical strong { color: var(--critical); }
 .topbar-actions { display: flex; gap: 0.4rem; align-items: center; }
 #search {
@@ -501,7 +545,7 @@ main { min-width: 0; }
 button, a, .chip { touch-action: manipulation; }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
 
 .only-narrow { display: none; }

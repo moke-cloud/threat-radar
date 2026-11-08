@@ -33,7 +33,8 @@
     sort: fromURL.sort,
     starredOnly: fromURL.starredOnly,
     starred: new Set(readJSON("tr_starred", [])),
-    autoJa: store.getItem("tr_auto_ja") === "1",
+    // Japanese by default: translations now ship with the data.
+    autoJa: store.getItem("tr_auto_ja") !== "0",
     override: new Map(), // id -> "ja" | "orig" (per-card toggle)
   };
 
@@ -193,14 +194,19 @@
     return o ? o === "ja" : state.autoJa;
   }
 
+  // Collector translation first, then this browser's on-device one.
+  function translationFor(it) {
+    return TR.fromItem(it) || svc.cached(it) || null;
+  }
+
   function shownTranslation(it) {
     if (!TR.needsTranslation(it) || !wantsJa(it)) return null;
-    return svc.cached(it) || null;
+    return translationFor(it);
   }
 
   function translateButtonHTML(it, tr) {
     if (!TR.needsTranslation(it)) return "";
-    if (!svc.supported()) {
+    if (!translationFor(it) && !svc.supported()) {
       const url = TR.googleTranslateURL([it.title, it.summary].filter(Boolean).join("\n\n"));
       return `<a class="btn-icon btn-tr" href="${escapeAttr(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(i18n.t("action.translate_ext"))}" title="${escapeAttr(i18n.t("action.translate_ext"))}">訳</a>`;
     }
@@ -248,21 +254,16 @@
     const byId = new Map(state.items.map((it) => [it.id, it]));
     $$("article.item[data-id]").forEach((el) => {
       const it = byId.get(el.dataset.id);
-      if (it && TR.needsTranslation(it) && wantsJa(it) && !svc.cached(it)) observer.observe(el);
+      if (it && TR.needsTranslation(it) && wantsJa(it) && !translationFor(it)) observer.observe(el);
     });
   }
 
+  // The on-device translator only fills gaps the collector has not
+  // translated yet, so failing to start it is not fatal.
   async function setAutoJa(on) {
-    if (on && !svc.supported()) {
-      toast(i18n.t("toast.translate_unsupported"), "error");
-      return;
-    }
-    if (on && !svc.ready()) {
+    if (on && svc.supported() && !svc.ready()) {
       try { await svc.ensure(onDownloadProgress); }
-      catch (err) {
-        toast(i18n.t("toast.translate_failed") + ": " + String(err.message || err), "error");
-        return;
-      }
+      catch { /* collector translations still apply */ }
     }
     state.autoJa = on;
     state.override.clear();
@@ -276,6 +277,11 @@
     const box = $("#source-health");
     if (!box) return;
     const sum = H.summarize(state.health, Date.now());
+    const brand = $("#brand");
+    if (brand) {
+      brand.dataset.health = !sum.total ? "unknown" : sum.problems ? "problems" : "ok";
+      brand.title = sum.total ? $("#health-summary").textContent || "" : "";
+    }
     if (!sum.total) {
       box.classList.add("hidden");
       return;
@@ -286,6 +292,7 @@
       ? i18n.t("health.problems").replace("{n}", sum.problems).replace("{total}", sum.total)
       : i18n.t("health.all_ok").replace("{total}", sum.total);
     $("#health-list").innerHTML = sum.rows.map(healthRowHTML).join("");
+    if (brand) brand.title = i18n.t("health.title") + ": " + $("#health-summary").textContent;
   }
 
   function healthRowHTML(r) {
@@ -336,7 +343,7 @@
       const btn = $(`#${section} [data-id="${CSS.escape(id)}"] [data-action=translate]`);
       if (btn) btn.focus({ preventScroll: true });
     };
-    if (showing || svc.cached(it)) { patchCard(it); refocus(); }
+    if (showing || translationFor(it)) { patchCard(it); refocus(); }
     else translateCard(id, true).then(refocus);
   }
 
@@ -487,10 +494,12 @@
     const total = state.items.length;
     const today = state.items.filter((it) => timeOf(it) >= now - DAY_MS).length;
     const crit  = state.items.filter((it) => it.severity === "critical").length;
+    const stat = (n, key, cls) =>
+      `<span class="stat${cls ? " " + cls : ""}"><strong>${n}</strong><span class="stat-label">${escapeHTML(i18n.t(key))}</span></span>`;
     $("#quick-stats").innerHTML = [
-      `<span><strong>${total}</strong>${escapeHTML(i18n.t("stats.total"))}</span>`,
-      `<span><strong>${today}</strong>${escapeHTML(i18n.t("stats.last24h"))}</span>`,
-      `<span class="sev-critical"><strong>${crit}</strong>${escapeHTML(i18n.t("stats.critical"))}</span>`,
+      stat(total, "stats.total"),
+      stat(today, "stats.last24h"),
+      stat(crit, "stats.critical", "sev-critical"),
     ].join("");
   }
 
@@ -601,10 +610,6 @@
     });
 
     $("#auto-ja").addEventListener("click", () => setAutoJa(!state.autoJa));
-    if (!svc.supported()) {
-      $("#auto-ja").disabled = true;
-      $("#auto-ja").title = i18n.t("toast.translate_unsupported");
-    }
 
     $("#reset-filters").addEventListener("click", () => {
       state.filters = { ...F.EMPTY_FILTERS };

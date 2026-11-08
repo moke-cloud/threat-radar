@@ -22,10 +22,18 @@ retain:
 epss:
   enabled: true
 
-# Note: an earlier draft included optional LLM-driven JP translation. Removed
-# to avoid managing API keys in CI. Translate manually as needed — each
-# dashboard card has a "copy" button that yields title + URL + summary
-# in plain text, ready to paste into a translator.
+# Japanese titles / summaries via GitHub Models. Auth is the workflow's own
+# GITHUB_TOKEN (permission "models: read"); no extra secret. Results are
+# cached in data/translations.json and only missing items are sent, in
+# batches. max_requests bounds one run so the free daily quota is never
+# exhausted; anything left over is picked up on the next run. Without a
+# token (local runs) only cached translations are applied.
+translate:
+  enabled: true
+  endpoint: https://models.github.ai/inference/chat/completions
+  model: openai/gpt-4.1-mini
+  batch_size: 8
+  max_requests: 30
 
 watch:
   vendors:

@@ -57,7 +57,7 @@ type Item struct {
     Score      int       `json:"score"`        // 0-100
     Vendors    []string  `json:"vendors,omitempty"`
     CVEs       []string  `json:"cves,omitempty"`
-    // (項目本文の翻訳はブラウザ内蔵 Translator API で行う — 収集側は持たない)
+    // title_ja / summary_ja: GitHub Models による日本語訳 (data/translations.json から付与)
     Raw        string    `json:"raw,omitempty"`         // デバッグ用 (本番は省略)
 }
 ```
@@ -75,7 +75,7 @@ type Item struct {
 3. **Tag**: `enrich/tagger.go` がタイトル + サマリから RegExp でタグを付与 (CVE ID, ベンダー名, 攻撃クラス)
 4. **Score**: `enrich/scorer.go` が決定論的に severity を判定
 5. **Dedup**: `enrich/deduper.go` が既存 NDJSON との ID 重複を除外
-6. **(任意) LLM enrichment**: 不採用 — API キー管理コストを避ける。日本語化は閲覧側のブラウザ内蔵翻訳 (web/assets/translate.js) で行う
+6. **日本語訳 (jatrans)**: index を作り直すときに、訳の無い英語記事だけを GitHub Models (GITHUB_TOKEN・models: read) で訳し、data/translations.json にキャッシュして title_ja / summary_ja を付ける。1 回の実行あたりのリクエスト数に上限あり。失敗しても収集は止めず、状態は sources.json の github-models-ja に出る
 7. **Persist**: `store/store.go` が NDJSON / index.json / critical.json / stats.json を書き出し
 
 ### スコアリング詳細
@@ -133,7 +133,7 @@ severity ラベル:
 - フィルタ (severity / category / source / vendor / tag)。全セクションに効く。件数は他の条件を掛けた後の数。状態は URL クエリに残る (共有・再読み込み可)
 - 並び替え (日付 / score / EPSS)
 - UI 言語切替 (フィルタ・見出しの JP/EN)
-- 英語記事の日本語表示 (Chrome 内蔵 Translator API・端末内処理・localStorage キャッシュ。非対応ブラウザは Google 翻訳リンク)
+- 英語記事の日本語表示 (収集時の title_ja / summary_ja を優先。無い記事は Chrome 内蔵 Translator API で補い、それも無ければ Google 翻訳リンク)
 - アイテムごとのコピー (タイトル + 概要 + URL) — 翻訳ツールへ貼り付け用
 - ダーク/ライトトグル (デフォルトはシステム preferred-color-scheme)
 - スター (localStorage)
@@ -173,7 +173,7 @@ GH Pages はそのブランチを見ているので即反映。
 | 専用フォーマットのソース | `sources/foo.go` 新規 + `Source` interface 実装 | 1 時間 |
 | ベンダー検出ルール追加 | `enrich/tagger.go` のリスト | 5 分 |
 | 重要度ロジック調整 | `enrich/scorer.go` | 30 分 |
-| 収集側で翻訳 (全ブラウザ対応にしたい場合) | `enrich/translator.go` で GitHub Models (Actions の GITHUB_TOKEN、`permissions: models: read`) を呼び `title_ja` / `summary_ja` を保存、`web/assets/translate.js` は `*_ja` を優先 | 半日 (無料枠の回数制限あり) |
+| 翻訳モデルの変更 | config.yaml の `translate.model` | 1 分 |
 | Slack / Discord 通知 | `cmd/collector/notify.go` 追加 | 1-2 時間 |
 | CSV 出力 | `store/csv.go` 追加 | 30 分 |
 | 過去ログ全文検索 (lunr.js) | `web/assets/search.js` 追加 | 半日 |
@@ -196,4 +196,4 @@ GH Pages はそのブランチを見ているので即反映。
 - **ビルドステップなしのフロント**: メンテナンス対象を増やしたくない。ブラウザがネイティブで読める HTML+JS で十分速い。
 - **GitHub Pages**: 別ホスティング不要。クレデンシャル不要。
 - **Go**: ユーザーが既に eml-analyzer で Go を使っており継続性がある。HTTP 並列・JSON・YAML が標準ライブラリで十分。
-- **収集側で LLM は使わない**: API キー管理コストと外部依存を避ける。日本語化はブラウザ内蔵の翻訳 API で閲覧側が行う (キー不要・端末内)。
+- **翻訳は GitHub Models**: Actions の GITHUB_TOKEN だけで呼べるので、API キーを管理しなくて済む。フィード文面は信頼できない入力として扱い、出力は機械的に検査してから使う。

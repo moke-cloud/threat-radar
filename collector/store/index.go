@@ -10,6 +10,9 @@ type IndexOptions struct {
 	// PerSource caps how many items one source may contribute, so a
 	// high-volume feed such as NVD cannot crowd out the rest.
 	PerSource map[string]int
+	// Decorate, when set, transforms the selected items before they are
+	// written (e.g. to attach translations). It must not mutate its input.
+	Decorate func([]normalize.Item) []normalize.Item
 }
 
 // SelectIndex walks sorted (newest first) and returns a new slice of at most

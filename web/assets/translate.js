@@ -84,6 +84,13 @@
     return it.id + ":" + h.toString(36);
   }
 
+  // Translation produced by the collector (GitHub Models), if any.
+  function fromItem(it) {
+    const title = typeof it.title_ja === "string" ? it.title_ja : "";
+    const summary = typeof it.summary_ja === "string" ? it.summary_ja : "";
+    return title || summary ? { title, summary } : null;
+  }
+
   // ---------- Browser-only part ------------------------------------------
 
   function createService(storage) {
@@ -168,7 +175,7 @@
     }
   }
 
-  const exported = { isJapanese, splitProtected, cacheKey, needsTranslation, clip, createCache, googleTranslateURL, createService };
+  const exported = { isJapanese, splitProtected, cacheKey, fromItem, needsTranslation, clip, createCache, googleTranslateURL, createService };
   if (typeof module !== "undefined" && module.exports) module.exports = exported;
   else root.__translate = exported;
 })(typeof window !== "undefined" ? window : globalThis);

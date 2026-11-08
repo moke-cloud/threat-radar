@@ -19,6 +19,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  models: read
 
 concurrency:
   group: threat-radar-collect
@@ -50,8 +51,10 @@ jobs:
         run: go build -o ../collector-bin ./cmd/collector
 
       - name: Run collector
-        # No secrets are required. The collector only fetches public RSS / JSON
-        # feeds; it does not call any authenticated API.
+        # No extra secrets. Feeds are public; Japanese translation calls
+        # GitHub Models with the job's own GITHUB_TOKEN ("models: read").
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ARGS="-config config.yaml -out data"
           if [ -n "${{ github.event.inputs.only }}" ]; then

@@ -51,6 +51,7 @@ type appConfig struct {
 	EPSS struct {
 		Enabled bool `yaml:"enabled"`
 	} `yaml:"epss"`
+	Translate translateConfig `yaml:"translate"`
 	Watch struct {
 		Vendors []string `yaml:"vendors"`
 		Tags    []string `yaml:"tags"`
@@ -122,7 +123,15 @@ func run(cfg *appConfig, outDir string, only map[string]struct{}, dry, verbose b
 		printDry(out)
 		return nil
 	}
-	return persist(st, out, now, cfg.Retain.DailyFilesKeep, indexOptions(cfg.Sources))
+	idx := indexOptions(cfg.Sources)
+	tr := newTranslator(ctx, cfg.Translate, httpCfg, outDir, now)
+	if tr != nil {
+		idx.Decorate = tr.decorate
+	}
+	if err := persist(st, out, now, cfg.Retain.DailyFilesKeep, idx, tr); err != nil {
+		return err
+	}
+	return nil
 }
 
 // indexOptions derives index shaping from the full source list (not the
@@ -138,12 +147,15 @@ func indexOptions(cfgs []sources.Config) store.IndexOptions {
 	return opt
 }
 
-func persist(st *store.Store, out pipelineResult, now time.Time, keepDays int, idx store.IndexOptions) error {
+func persist(st *store.Store, out pipelineResult, now time.Time, keepDays int, idx store.IndexOptions, tr *translator) error {
 	if err := st.AppendDaily(out.Items); err != nil {
 		return fmt.Errorf("append daily: %w", err)
 	}
 	if err := st.RebuildIndex(indexDaysBack, idx); err != nil {
 		return fmt.Errorf("rebuild index: %w", err)
+	}
+	if tr != nil {
+		out.Health = append(out.Health, *tr.status)
 	}
 	prev, err := st.LoadHealth()
 	if err != nil {

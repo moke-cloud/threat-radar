@@ -134,6 +134,9 @@ func (s *Store) RebuildIndex(daysBack int, opt IndexOptions) error {
 	})
 
 	all = SelectIndex(all, s.IndexMaxItems, opt)
+	if opt.Decorate != nil {
+		all = opt.Decorate(all)
+	}
 	if err := s.writeJSON("index.json", all); err != nil {
 		return err
 	}

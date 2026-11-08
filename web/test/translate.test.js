@@ -51,3 +51,9 @@ test("cacheKey changes when the source text changes", () => {
   assert.equal(a, T.cacheKey({ id: "x", title: "t", summary: "s" }));
   assert.notEqual(a, T.cacheKey({ id: "x", title: "t2", summary: "s" }));
 });
+
+test("fromItem returns collector translations only when present", () => {
+  assert.deepEqual(T.fromItem({ title_ja: "訳", summary_ja: "" }), { title: "訳", summary: "" });
+  assert.equal(T.fromItem({ title: "x" }), null);
+  assert.equal(T.fromItem({ title_ja: 5 }), null);
+});

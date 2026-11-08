@@ -68,3 +68,15 @@ func TestRebuildIndexAppliesOptions(t *testing.T) {
 		t.Fatalf("index len=%d", len(got))
 	}
 }
+
+func TestSelectIndexDropsDuplicateIDs(t *testing.T) {
+	in := []normalize.Item{
+		{ID: "x", Source: "zdi", Title: "newer copy"},
+		{ID: "x", Source: "zdi", Title: "older copy"},
+		{ID: "y", Source: "zdi"},
+	}
+	got := SelectIndex(in, 10, IndexOptions{PerSource: map[string]int{"zdi": 2}})
+	if len(got) != 2 || got[0].Title != "newer copy" || got[1].ID != "y" {
+		t.Fatalf("got %+v", got)
+	}
+}

@@ -1,5 +1,8 @@
 /* ThreatRadar — vanilla CSS, dark-first ops dashboard. */
 
+html { color-scheme: dark; }
+[data-theme="light"] { color-scheme: light; }
+
 :root {
   --bg-0: #0a0d12;
   --bg-1: #11161d;
@@ -70,6 +73,8 @@ a:hover { text-decoration: underline; }
   text-align: center;
 }
 .brand-name {
+  margin: 0;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   font-family: var(--mono);
@@ -102,7 +107,7 @@ a:hover { text-decoration: underline; }
   font-size: 0.85rem;
   width: 240px;
 }
-#search:focus { outline: none; border-color: var(--accent); }
+#search:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
 .btn-ghost {
   background: transparent;
   color: var(--text-mid);
@@ -114,6 +119,8 @@ a:hover { text-decoration: underline; }
   font-size: 0.8rem;
 }
 .btn-ghost:hover { color: var(--text); border-color: var(--accent-dim); }
+.btn-ghost:disabled { opacity: 0.45; cursor: default; }
+.btn-ghost:disabled:hover { color: var(--text-mid); border-color: var(--border); }
 
 /* === Layout === */
 .layout {
@@ -171,12 +178,15 @@ a:hover { text-decoration: underline; }
   padding: 0.05rem 0.3rem;
   border-radius: 4px;
 }
+.chip.zero { opacity: 0.45; }
+.chip:disabled { opacity: 0.45; cursor: not-allowed; }
 .chip.active .count { color: var(--accent); background: rgba(0,0,0,0.2); }
 .full-width { width: 100%; }
 
 main { min-width: 0; }
 
 /* === Sections === */
+.section-title { scroll-margin-top: 72px; }
 .section-title, .wall-title {
   display: flex;
   align-items: center;
@@ -231,6 +241,8 @@ main { min-width: 0; }
 
 /* === Item card === */
 .item {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 88px;
   display: grid;
   grid-template-columns: 4px 1fr auto;
   gap: 0.75rem;
@@ -312,6 +324,7 @@ main { min-width: 0; }
 }
 .score-pill {
   display: inline-block;
+  font-variant-numeric: tabular-nums;
   padding: 0.1rem 0.4rem;
   border-radius: 3px;
   font-weight: 700;
@@ -337,7 +350,16 @@ main { min-width: 0; }
   text-align: center;
   transition: color 0.1s;
 }
-.btn-icon:hover { color: var(--text); }
+.btn-icon:hover { color: var(--text); text-decoration: none; }
+.btn-tr { font-size: 0.75rem; font-family: inherit; display: inline-block; }
+.btn-tr.on { color: var(--accent); }
+.mt-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+  border-radius: 3px;
+  padding: 0 0.3rem;
+}
 .btn-icon.ok { color: var(--low); }
 .btn-star.starred, .btn-star:hover { color: var(--medium); }
 
@@ -368,7 +390,8 @@ main { min-width: 0; }
 /* === Responsive === */
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
-  .sidebar { position: static; max-height: none; }
+  .sidebar { position: static; max-height: none; display: none; }
+  .sidebar.open { display: block; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
   .quick-stats { display: none; }
   #search { width: 160px; }
 }
@@ -456,3 +479,41 @@ main { min-width: 0; }
   .topbar-actions { flex: 1 1 100%; }
   #search { flex: 1; min-width: 0; width: auto; }
 }
+
+/* === Focus / a11y === */
+.chip:focus-visible, .btn-ghost:focus-visible, .btn-icon:focus-visible,
+.select-inline:focus-visible, .item-title a:focus-visible, .skip-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  z-index: 40;
+  padding: 0.4rem 0.7rem;
+  background: var(--bg-1);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+}
+.skip-link:focus { top: 0.5rem; }
+.item-title { text-wrap: pretty; }
+button, a, .chip { touch-action: manipulation; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+}
+
+.only-narrow { display: none; }
+@media (max-width: 900px) { .only-narrow { display: inline-block; } }
+#toggle-filters[data-count]:not([data-count="0"])::after {
+  content: attr(data-count);
+  margin-left: 0.35rem;
+  padding: 0 0.3rem;
+  border-radius: 3px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+}
+.chip { text-align: left; }

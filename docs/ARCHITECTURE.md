@@ -57,7 +57,7 @@ type Item struct {
     Score      int       `json:"score"`        // 0-100
     Vendors    []string  `json:"vendors,omitempty"`
     CVEs       []string  `json:"cves,omitempty"`
-    // (項目本文の自動翻訳はあえて持たない — 設計判断 §設計判断 参照)
+    // (項目本文の翻訳はブラウザ内蔵 Translator API で行う — 収集側は持たない)
     Raw        string    `json:"raw,omitempty"`         // デバッグ用 (本番は省略)
 }
 ```
@@ -75,7 +75,7 @@ type Item struct {
 3. **Tag**: `enrich/tagger.go` がタイトル + サマリから RegExp でタグを付与 (CVE ID, ベンダー名, 攻撃クラス)
 4. **Score**: `enrich/scorer.go` が決定論的に severity を判定
 5. **Dedup**: `enrich/deduper.go` が既存 NDJSON との ID 重複を除外
-6. **(任意) LLM enrichment**: 不採用 — 機械翻訳に伴う品質劣化と API キー管理コストを避け、UI 側の "コピー" ボタンで DeepL 等への手動翻訳を促す
+6. **(任意) LLM enrichment**: 不採用 — API キー管理コストを避ける。日本語化は閲覧側のブラウザ内蔵翻訳 (web/assets/translate.js) で行う
 7. **Persist**: `store/store.go` が NDJSON / index.json / critical.json / stats.json を書き出し
 
 ### スコアリング詳細
@@ -129,10 +129,11 @@ severity ラベル:
 
 機能:
 
-- 検索 (タイトル + サマリ)
-- フィルタ (severity / category / source / vendor / tag)
-- 並び替え (日付 / score)
-- UI 言語切替 (フィルタ・見出しの JP/EN — 項目本文は英語のまま)
+- 検索 (タイトル・要約・CVE・ソース名・タグ・ベンダー。空白区切りで AND)
+- フィルタ (severity / category / source / vendor / tag)。全セクションに効く。件数は他の条件を掛けた後の数。状態は URL クエリに残る (共有・再読み込み可)
+- 並び替え (日付 / score / EPSS)
+- UI 言語切替 (フィルタ・見出しの JP/EN)
+- 英語記事の日本語表示 (Chrome 内蔵 Translator API・端末内処理・localStorage キャッシュ。非対応ブラウザは Google 翻訳リンク)
 - アイテムごとのコピー (タイトル + 概要 + URL) — 翻訳ツールへ貼り付け用
 - ダーク/ライトトグル (デフォルトはシステム preferred-color-scheme)
 - スター (localStorage)
@@ -172,7 +173,7 @@ GH Pages はそのブランチを見ているので即反映。
 | 専用フォーマットのソース | `sources/foo.go` 新規 + `Source` interface 実装 | 1 時間 |
 | ベンダー検出ルール追加 | `enrich/tagger.go` のリスト | 5 分 |
 | 重要度ロジック調整 | `enrich/scorer.go` | 30 分 |
-| 翻訳機能を後付け | `enrich/translator.go` 追加 + `web/app.js` で `title_ja` 優先 | 半日 (要 API キー管理) |
+| 収集側で翻訳 (全ブラウザ対応にしたい場合) | `enrich/translator.go` で GitHub Models (Actions の GITHUB_TOKEN、`permissions: models: read`) を呼び `title_ja` / `summary_ja` を保存、`web/assets/translate.js` は `*_ja` を優先 | 半日 (無料枠の回数制限あり) |
 | Slack / Discord 通知 | `cmd/collector/notify.go` 追加 | 1-2 時間 |
 | CSV 出力 | `store/csv.go` 追加 | 30 分 |
 | 過去ログ全文検索 (lunr.js) | `web/assets/search.js` 追加 | 半日 |
@@ -195,4 +196,4 @@ GH Pages はそのブランチを見ているので即反映。
 - **ビルドステップなしのフロント**: メンテナンス対象を増やしたくない。ブラウザがネイティブで読める HTML+JS で十分速い。
 - **GitHub Pages**: 別ホスティング不要。クレデンシャル不要。
 - **Go**: ユーザーが既に eml-analyzer で Go を使っており継続性がある。HTTP 並列・JSON・YAML が標準ライブラリで十分。
-- **LLM 不採用**: API キー管理コスト・翻訳品質バラつき・外部依存を避けたい。翻訳が必要な利用者向けにはアイテムごとのコピー機能を提供。
+- **収集側で LLM は使わない**: API キー管理コストと外部依存を避ける。日本語化はブラウザ内蔵の翻訳 API で閲覧側が行う (キー不要・端末内)。

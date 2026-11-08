@@ -1,6 +1,25 @@
 window.__i18n = (function () {
   const dict = {
     ja: {
+      "filter.all": "すべて",
+      "action.filters": "フィルター",
+      "filter.label": "フィルター",
+      "state.retry": "時間をおいて再読み込みしてください。続く場合は GitHub Actions の実行結果を確認してください。",
+      "mt.label": "機械翻訳",
+      "score.title": "スコア (ソースの重み + CVSS + タグ + EPSS)",
+      "action.translate": "日本語に翻訳 (ブラウザ内蔵翻訳)",
+      "action.original": "原文に戻す",
+      "action.translate_ext": "Google 翻訳で開く (このブラウザは内蔵翻訳に非対応)",
+      "action.auto_ja": "英語の記事を日本語で表示",
+      "action.lang": "表示言語の切り替え",
+      "action.theme": "配色の切り替え",
+      "toast.translate_failed": "翻訳できませんでした",
+      "toast.model_download": "翻訳モデルを取得中… {p}%",
+      "toast.translate_unsupported": "このブラウザは内蔵翻訳に非対応です (Chrome 138 以降のデスクトップ版で使えます)",
+      "toast.copy_failed": "コピーできませんでした。テキストを選択してコピーしてください",
+      "a11y.skip": "一覧へ移動",
+      "search.label": "検索 (タイトル・要約・CVE・ソース・タグ。空白区切りで AND)",
+      "sort.label": "並び順",
       "filter.severity": "重要度",
       "filter.category": "カテゴリ",
       "filter.source": "ソース",
@@ -37,6 +56,25 @@ window.__i18n = (function () {
       "health.empty": "0 件",
     },
     en: {
+      "filter.all": "all",
+      "action.filters": "filters",
+      "filter.label": "filters",
+      "state.retry": "Reload in a while. If it persists, check the GitHub Actions run.",
+      "mt.label": "machine-translated",
+      "score.title": "score (source weight + CVSS + tags + EPSS)",
+      "action.translate": "translate to Japanese (built-in browser translator)",
+      "action.original": "show original",
+      "action.translate_ext": "open in Google Translate (no built-in translator here)",
+      "action.auto_ja": "show English items in Japanese",
+      "action.lang": "switch language",
+      "action.theme": "switch theme",
+      "toast.translate_failed": "translation failed",
+      "toast.model_download": "downloading translation model… {p}%",
+      "toast.translate_unsupported": "built-in translator not available (Chrome 138+ desktop)",
+      "toast.copy_failed": "copy failed — select the text and copy it manually",
+      "a11y.skip": "skip to items",
+      "search.label": "search (title, summary, CVE, source, tag; spaces = AND)",
+      "sort.label": "sort order",
       "filter.severity": "severity",
       "filter.category": "category",
       "filter.source": "source",
@@ -73,13 +111,15 @@ window.__i18n = (function () {
       "health.empty": "empty",
     },
   };
-  let current = localStorage.getItem("tr_lang") || "ja";
+  function lsGet(k) { try { return localStorage.getItem(k); } catch { return null; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch { /* storage blocked: keep in memory */ } }
+  let current = lsGet("tr_lang") || "ja";
   function t(key) {
     return (dict[current] && dict[current][key]) || dict.ja[key] || key;
   }
   function setLang(c) {
     current = c === "en" ? "en" : "ja";
-    localStorage.setItem("tr_lang", current);
+    lsSet("tr_lang", current);
     document.documentElement.lang = current;
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       el.textContent = t(el.dataset.i18n);

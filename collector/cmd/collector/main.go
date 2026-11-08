@@ -27,6 +27,7 @@ import (
 
 	"gopkg.in/yaml.v3"
 
+	"github.com/moke-cloud/SHIGOTOBA/threat-radar/collector/normalize"
 	"github.com/moke-cloud/SHIGOTOBA/threat-radar/collector/sources"
 	"github.com/moke-cloud/SHIGOTOBA/threat-radar/collector/store"
 )
@@ -52,7 +53,7 @@ type appConfig struct {
 		Enabled bool `yaml:"enabled"`
 	} `yaml:"epss"`
 	Translate translateConfig `yaml:"translate"`
-	Watch struct {
+	Watch     struct {
 		Vendors []string `yaml:"vendors"`
 		Tags    []string `yaml:"tags"`
 	} `yaml:"watch"`
@@ -65,6 +66,8 @@ func main() {
 	only := flag.String("only", "", "comma-separated source IDs to limit to")
 	dry := flag.Bool("dry", false, "do not write outputs")
 	verbose := flag.Bool("verbose", false, "per-source progress")
+	skipFetch := flag.Bool("skip-fetch", false, "fetch no sources; only rebuild the index (and translate)")
+	translateMode := flag.String("translate", translateRun, "run: call the local model; cache: apply cached translations only")
 	flag.Parse()
 
 	slog.SetDefault(slog.New(slog.NewTextHandler(os.Stderr, &slog.HandlerOptions{Level: slog.LevelInfo})))
@@ -74,13 +77,31 @@ func main() {
 		fmt.Fprintln(os.Stderr, "load config:", err)
 		os.Exit(2)
 	}
-	if err := run(cfg, *outDir, splitCSVSet(*only), *dry, *verbose); err != nil {
+	if *translateMode != translateRun && *translateMode != translateCache {
+		fmt.Fprintln(os.Stderr, "-translate must be run or cache")
+		os.Exit(2)
+	}
+	opts := runOptions{only: splitCSVSet(*only), dry: *dry, verbose: *verbose, skipFetch: *skipFetch, translate: *translateMode}
+	if err := run(cfg, *outDir, opts); err != nil {
 		slog.Error("collector failed", "err", err)
 		os.Exit(1)
 	}
 }
 
-func run(cfg *appConfig, outDir string, only map[string]struct{}, dry, verbose bool) error {
+type runOptions struct {
+	only      map[string]struct{}
+	dry       bool
+	verbose   bool
+	skipFetch bool
+	translate string
+}
+
+func run(cfg *appConfig, outDir string, o runOptions) error {
+	only, dry, verbose := o.only, o.dry, o.verbose
+	if o.skipFetch {
+		// An ID no source has: nothing is fetched, everything else runs.
+		only = map[string]struct{}{"(skip-fetch)": {}}
+	}
 	httpCfg := sources.HTTPClientConfig{
 		UserAgent:      cfg.HTTP.UserAgent,
 		TimeoutSeconds: cfg.HTTP.TimeoutSeconds,
@@ -113,7 +134,7 @@ func run(cfg *appConfig, outDir string, only map[string]struct{}, dry, verbose b
 		Seen:         seen,
 		WatchVendors: cfg.Watch.Vendors,
 		WatchTags:    cfg.Watch.Tags,
-		EPSS:         epssLookup(cfg, httpCfg),
+		EPSS:         epssUnlessSkipped(cfg, httpCfg, o.skipFetch),
 	})
 	out.Health = append(out.Health, buildFailures...)
 	out.Errors += len(buildFailures)
@@ -124,10 +145,12 @@ func run(cfg *appConfig, outDir string, only map[string]struct{}, dry, verbose b
 		return nil
 	}
 	idx := indexOptions(cfg.Sources)
-	tr := newTranslator(ctx, cfg.Translate, httpCfg, outDir, now)
+	tr := newTranslator(ctx, cfg.Translate, o.translate, httpCfg, outDir, now)
+	var translate func([]normalize.Item) []normalize.Item
 	if tr != nil {
-		idx.Decorate = tr.decorate
+		translate = tr.decorate
 	}
+	idx.Decorate = chainDecorators(backfillFacts, translate)
 	if err := persist(st, out, now, cfg.Retain.DailyFilesKeep, idx, tr); err != nil {
 		return err
 	}
@@ -154,7 +177,7 @@ func persist(st *store.Store, out pipelineResult, now time.Time, keepDays int, i
 	if err := st.RebuildIndex(indexDaysBack, idx); err != nil {
 		return fmt.Errorf("rebuild index: %w", err)
 	}
-	if tr != nil {
+	if tr != nil && tr.status != nil {
 		out.Health = append(out.Health, *tr.status)
 	}
 	prev, err := st.LoadHealth()

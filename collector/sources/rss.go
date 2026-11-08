@@ -238,7 +238,7 @@ func (r *RSS) toRawItems(g []genericItem) []RawItem {
 		if len(summary) > 600 {
 			summary = summary[:600] + "..."
 		}
-		out = append(out, RawItem{
+		raw := RawItem{
 			Source:     r.cfg.ID,
 			SourceName: r.cfg.Name,
 			Category:   r.cfg.Category,
@@ -247,7 +247,12 @@ func (r *RSS) toRawItems(g []genericItem) []RawItem {
 			URL:        it.Link,
 			Summary:    summary,
 			Published:  it.Published,
-		})
+		}
+		// ZDI advisories follow a fixed title / summary template.
+		if f := ZDIFacts(it.Title, summary); f.Product != "" {
+			raw.Product, raw.Impact, raw.CWEs, raw.Attack = f.Product, f.Impact, f.CWEs, f.Attack
+		}
+		out = append(out, raw)
 	}
 	return out
 }

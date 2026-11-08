@@ -69,8 +69,8 @@ func TestCacheApplyMissingPrune(t *testing.T) {
 		"c":    {Hash: "stale", Title: "古い訳"},
 		"gone": {Hash: "x", Title: "消える"},
 	}
-	missing := Missing([]normalize.Item{a, b, c}, cache)
-	if len(missing) != 1 || missing[0].ID != "c" {
+	missing := Plan([]normalize.Item{a, b, c}, cache)
+	if len(missing) != 1 || missing[0].Item.ID != "c" {
 		t.Fatalf("missing = %+v", missing)
 	}
 	out := Apply([]normalize.Item{a, b, c}, cache)
@@ -124,15 +124,15 @@ func TestTranslateBatchesAndKeepsPrefix(t *testing.T) {
 	var calls int32
 	srv := fakeModels(t, &calls, http.StatusOK)
 	defer srv.Close()
-	c := Client{Endpoint: srv.URL, Token: "tok", Model: "m", HTTP: srv.Client(), BatchSize: 2, MaxRequests: 10}
+	c := Client{Endpoint: srv.URL, Token: "tok", Model: "m", HTTP: srv.Client(), MaxRequests: 10}
 	items := []normalize.Item{
 		item("a", "[CVSS 9.8 CRITICAL] CVE-2026-12345 — Flaw in Foo", "Foo has CVE-2026-12345."),
 		item("b", "Bar breach", ""),
 		item("c", "Baz bug", "details"),
 	}
-	got, st := c.Translate(context.Background(), items)
-	if calls != 2 {
-		t.Fatalf("calls = %d, want 2 batches", calls)
+	got, st := c.Run(context.Background(), full(items))
+	if calls != 3 {
+		t.Fatalf("calls = %d, want one per item", calls)
 	}
 	if st.Translated != 3 || st.Err != nil {
 		t.Fatalf("stats = %+v", st)
@@ -152,8 +152,8 @@ func TestTranslateStopsOnRateLimit(t *testing.T) {
 	var calls int32
 	srv := fakeModels(t, &calls, http.StatusTooManyRequests)
 	defer srv.Close()
-	c := Client{Endpoint: srv.URL, Token: "tok", Model: "m", HTTP: srv.Client(), BatchSize: 1, MaxRequests: 10}
-	got, st := c.Translate(context.Background(), []normalize.Item{item("a", "x one", ""), item("b", "y two", "")})
+	c := Client{Endpoint: srv.URL, Token: "tok", Model: "m", HTTP: srv.Client(), MaxRequests: 10}
+	got, st := c.Run(context.Background(), full([]normalize.Item{item("a", "x one", ""), item("b", "y two", "")}))
 	if calls != 1 || len(got) != 0 || st.Err == nil {
 		t.Fatalf("calls=%d got=%v stats=%+v", calls, got, st)
 	}
@@ -163,9 +163,9 @@ func TestTranslateRespectsMaxRequests(t *testing.T) {
 	var calls int32
 	srv := fakeModels(t, &calls, http.StatusOK)
 	defer srv.Close()
-	c := Client{Endpoint: srv.URL, Token: "tok", Model: "m", HTTP: srv.Client(), BatchSize: 1, MaxRequests: 2}
+	c := Client{Endpoint: srv.URL, Token: "tok", Model: "m", HTTP: srv.Client(), MaxRequests: 2}
 	items := []normalize.Item{item("a", "one", ""), item("b", "two", ""), item("c", "three", "")}
-	got, st := c.Translate(context.Background(), items)
+	got, st := c.Run(context.Background(), full(items))
 	if calls != 2 || len(got) != 2 || st.Remaining != 1 {
 		t.Fatalf("calls=%d got=%d stats=%+v", calls, len(got), st)
 	}
@@ -179,8 +179,8 @@ func TestTranslateStopsOnNonJSONResponse(t *testing.T) {
 		_, _ = w.Write([]byte("OK"))
 	}))
 	defer srv.Close()
-	c := Client{Endpoint: srv.URL, Token: "tok", HTTP: srv.Client(), BatchSize: 1, MaxRequests: 10}
-	_, st := c.Translate(context.Background(), []normalize.Item{item("a", "one", ""), item("b", "two", "")})
+	c := Client{Endpoint: srv.URL, Token: "tok", HTTP: srv.Client(), MaxRequests: 10}
+	_, st := c.Run(context.Background(), full([]normalize.Item{item("a", "one", ""), item("b", "two", "")}))
 	if calls != 1 || st.Err == nil || !strings.Contains(st.Err.Error(), `"OK"`) {
 		t.Fatalf("calls=%d err=%v", calls, st.Err)
 	}
@@ -192,16 +192,16 @@ func TestTranslateStopsWhenBudgetRunsOut(t *testing.T) {
 	defer srv.Close()
 	ctx, cancel := context.WithTimeout(context.Background(), 0)
 	defer cancel()
-	c := Client{Endpoint: srv.URL, Token: "tok", HTTP: srv.Client(), BatchSize: 1}
-	got, st := c.Translate(ctx, []normalize.Item{item("a", "one", ""), item("b", "two", "")})
+	c := Client{Endpoint: srv.URL, Token: "tok", HTTP: srv.Client()}
+	got, st := c.Run(ctx, full([]normalize.Item{item("a", "one", ""), item("b", "two", "")}))
 	if len(got) != 0 || !IsBudgetExhausted(st.Err) || st.Remaining != 1 {
 		t.Fatalf("got=%v stats=%+v", got, st)
 	}
 }
 
 func TestTranslateStopsWhenServerUnreachable(t *testing.T) {
-	c := Client{Endpoint: "http://127.0.0.1:1/v1/chat/completions", HTTP: http.DefaultClient, BatchSize: 1}
-	_, st := c.Translate(context.Background(), []normalize.Item{item("a", "one", ""), item("b", "two", "")})
+	c := Client{Endpoint: "http://127.0.0.1:1/v1/chat/completions", HTTP: http.DefaultClient}
+	_, st := c.Run(context.Background(), full([]normalize.Item{item("a", "one", ""), item("b", "two", "")}))
 	if st.Requests != 1 || st.Err == nil || IsBudgetExhausted(st.Err) {
 		t.Fatalf("stats=%+v", st)
 	}
@@ -211,10 +211,10 @@ func TestTitleDerivedFromSummaryWhenTitleRepeatsIt(t *testing.T) {
 	var calls int32
 	srv := fakeModels(t, &calls, http.StatusOK)
 	defer srv.Close()
-	c := Client{Endpoint: srv.URL, Token: "tok", HTTP: srv.Client(), BatchSize: 4}
+	c := Client{Endpoint: srv.URL, Token: "tok", HTTP: srv.Client()}
 	it := item("n", "[CVSS 9.8 CRITICAL] CVE-2026-12345 — imgproxy has an integer overflow in…",
 		"imgproxy has an integer overflow in ICO.")
-	got, st := c.Translate(context.Background(), []normalize.Item{it})
+	got, st := c.Run(context.Background(), full([]normalize.Item{it}))
 	if st.Translated != 1 {
 		t.Fatalf("stats = %+v", st)
 	}
@@ -269,12 +269,20 @@ func TestSummaryAnsweredInTitleFieldIsAccepted(t *testing.T) {
 		_ = json.NewEncoder(w).Encode(resp)
 	}))
 	defer srv.Close()
-	c := Client{Endpoint: srv.URL, HTTP: srv.Client(), BatchSize: 1}
+	c := Client{Endpoint: srv.URL, HTTP: srv.Client()}
 	it := item("n", "[CVSS 9.8 CRITICAL] CVE-2026-12345 — imgproxy has an integer overflow in…",
 		"imgproxy has an integer overflow in ICO.")
-	got, st := c.Translate(context.Background(), []normalize.Item{it})
+	got, st := c.Run(context.Background(), full([]normalize.Item{it}))
 	if st.Translated != 1 || got["n"].Summary != "imgproxy に整数オーバーフローがある。" ||
 		got["n"].Title != "[CVSS 9.8 CRITICAL] CVE-2026-12345 — imgproxy に整数オーバーフローがある。" {
 		t.Fatalf("got %+v stats %+v", got["n"], st)
 	}
+}
+
+func full(items []normalize.Item) []Task {
+	out := make([]Task, len(items))
+	for i, it := range items {
+		out[i] = Task{Item: it, Kind: KindFull}
+	}
+	return out
 }

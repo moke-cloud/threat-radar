@@ -83,6 +83,12 @@ type nvdCVE struct {
 	Metrics          nvdMetrics     `json:"metrics"`
 	References       []nvdReference `json:"references"`
 	Configurations   []nvdConfig    `json:"configurations,omitempty"`
+	Weaknesses       []nvdWeakness  `json:"weaknesses,omitempty"`
+}
+
+type nvdWeakness struct {
+	Source      string    `json:"source"`
+	Description []nvdDesc `json:"description"`
 }
 
 type nvdDesc struct {
@@ -191,7 +197,7 @@ func (n *NVD) toRawItems(resp *nvdResponse, minCVSS float64) []RawItem {
 		v := w.CVE
 		desc := pickEnglishDesc(v.Descriptions)
 		published, _ := time.Parse("2006-01-02T15:04:05.000", v.Published)
-		score, sev := pickCVSS(v.Metrics)
+		score, sev, vector := pickCVSS(v.Metrics)
 		if minCVSS > 0 && score < minCVSS {
 			continue
 		}
@@ -224,6 +230,9 @@ func (n *NVD) toRawItems(resp *nvdResponse, minCVSS float64) []RawItem {
 			CVEs:       []string{v.ID},
 			Vendors:    vendors,
 			Hints:      hints,
+			CWEs:       pickCWEs(v.Weaknesses),
+			CVSSVector: vector,
+			Attack:     ParseCVSSVector(vector),
 		})
 	}
 	return out
@@ -261,31 +270,26 @@ func pickEnglishDesc(ds []nvdDesc) string {
 	return ""
 }
 
-func pickCVSS(m nvdMetrics) (float64, string) {
-	for _, v := range m.V31 {
-		if v.CvssData.BaseScore > 0 {
-			sev := v.CvssData.BaseSeverity
-			if sev == "" {
-				sev = v.BaseSeverity
+// pickCVSS returns the first scored metric, preferring v3.1, then v3.0,
+// then v2, with its vector string.
+func pickCVSS(m nvdMetrics) (float64, string, string) {
+	for _, group := range [][]nvdCVSSWrap{m.V31, m.V30} {
+		for _, v := range group {
+			if v.CvssData.BaseScore > 0 {
+				sev := v.CvssData.BaseSeverity
+				if sev == "" {
+					sev = v.BaseSeverity
+				}
+				return v.CvssData.BaseScore, sev, v.CvssData.Vector
 			}
-			return v.CvssData.BaseScore, sev
-		}
-	}
-	for _, v := range m.V30 {
-		if v.CvssData.BaseScore > 0 {
-			sev := v.CvssData.BaseSeverity
-			if sev == "" {
-				sev = v.BaseSeverity
-			}
-			return v.CvssData.BaseScore, sev
 		}
 	}
 	for _, v := range m.V2 {
 		if v.CvssData.BaseScore > 0 {
-			return v.CvssData.BaseScore, v.BaseSeverity
+			return v.CvssData.BaseScore, v.BaseSeverity, v.CvssData.Vector
 		}
 	}
-	return 0, ""
+	return 0, "", ""
 }
 
 func pickVendors(cfgs []nvdConfig) []string {

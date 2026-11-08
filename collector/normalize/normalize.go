@@ -35,6 +35,13 @@ type Item struct {
 	EPSSPercentile float64 `json:"epss_percentile,omitempty"`
 	TitleJa        string  `json:"title_ja,omitempty"`
 	SummaryJa      string  `json:"summary_ja,omitempty"`
+	// Structured vulnerability facts; the dashboard renders them in the
+	// viewer's language instead of translating the prose.
+	CWEs       []string        `json:"cwe,omitempty"`
+	CVSSVector string          `json:"cvss_vector,omitempty"`
+	Product    string          `json:"product,omitempty"`
+	Impact     string          `json:"impact,omitempty"`
+	Attack     *sources.Attack `json:"attack,omitempty"`
 }
 
 // Normalize converts a raw item to a canonical Item. Tags / Severity / Score
@@ -54,6 +61,11 @@ func Normalize(r sources.RawItem, fetched time.Time) Item {
 		Vendors:    dedupLower(r.Vendors),
 		CVEs:       dedupUpper(r.CVEs),
 		Tags:       dedupLower(r.Hints),
+		CWEs:       dedupUpper(r.CWEs),
+		CVSSVector: strings.TrimSpace(r.CVSSVector),
+		Product:    strings.TrimSpace(r.Product),
+		Impact:     r.Impact,
+		Attack:     r.Attack,
 	}
 }
 

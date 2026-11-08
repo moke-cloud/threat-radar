@@ -13,15 +13,15 @@ import (
 
 // Config is one source definition from config.yaml.
 type Config struct {
-	ID       string         `yaml:"id"`
-	Name     string         `yaml:"name"`
-	Type     string         `yaml:"type"`
-	URL      string         `yaml:"url"`
-	Category string         `yaml:"category"`
-	Weight   float64        `yaml:"weight"`
+	ID       string  `yaml:"id"`
+	Name     string  `yaml:"name"`
+	Type     string  `yaml:"type"`
+	URL      string  `yaml:"url"`
+	Category string  `yaml:"category"`
+	Weight   float64 `yaml:"weight"`
 	// IndexLimit caps this source's share of data/index.json (0 = no cap).
-	IndexLimit int `yaml:"index_limit,omitempty"`
-	Options  map[string]any `yaml:"options,omitempty"`
+	IndexLimit int            `yaml:"index_limit,omitempty"`
+	Options    map[string]any `yaml:"options,omitempty"`
 }
 
 // HTTPClientConfig is the shared HTTP behaviour for every source.
@@ -42,10 +42,10 @@ func NewHTTPClient(c HTTPClientConfig) *http.Client {
 // RawItem is the lossy intermediate representation every adapter returns.
 // normalize.Normalize converts it into the canonical Item.
 type RawItem struct {
-	Source     string    // adapter ID
-	Category   string    // copied from Config.Category
-	SourceName string    // human-readable name
-	Weight     float64   // for downstream scoring
+	Source     string  // adapter ID
+	Category   string  // copied from Config.Category
+	SourceName string  // human-readable name
+	Weight     float64 // for downstream scoring
 	Title      string
 	URL        string
 	Summary    string    // plain-text description (HTML-stripped)
@@ -53,6 +53,13 @@ type RawItem struct {
 	Vendors    []string  // optional pre-tagged vendors
 	CVEs       []string  // optional pre-tagged CVE IDs
 	Hints      []string  // optional pre-tagged hints (e.g. "kev", "actively-exploited")
+
+	// Structured vulnerability facts (NVD / KEV / ZDI); empty elsewhere.
+	CWEs       []string
+	CVSSVector string
+	Product    string
+	Impact     string
+	Attack     *Attack
 }
 
 // Source is the contract every adapter implements.

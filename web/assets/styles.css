@@ -561,3 +561,71 @@ button, a, .chip { touch-action: manipulation; }
   font-size: 0.7rem;
 }
 .chip { text-align: left; }
+
+/* === Vulnerability cards (structured) === */
+.item.vuln .item-title { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.45rem; }
+.vuln-subject { font-weight: 600; }
+.vuln-kind { color: var(--text-mid); font-weight: 500; }
+.vuln-kind::before { content: "—"; margin-right: 0.45rem; color: var(--text-muted); }
+.vuln-facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+}
+.fact {
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text-mid);
+}
+.fact.strong { color: var(--high); border-color: rgba(255,140,66,0.45); }
+.fact-num, .fact-id {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  padding: 0 0.2rem;
+}
+.fact-id { color: var(--accent); }
+.item-desc {
+  margin: 0.3rem 0 0;
+  font-size: 0.78rem;
+  color: var(--text-mid);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* === Article cards: original title under the Japanese one === */
+.item-orig-title {
+  margin: 0.1rem 0 0;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item-orig {
+  margin: 0.45rem 0 0;
+  padding-left: 0.6rem;
+  border-left: 2px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: pre-line;
+}
+
+/* === Expanded card (▾) === */
+.item.open .item-summary,
+.item.open .item-desc { -webkit-line-clamp: unset; display: block; white-space: pre-line; }
+.item.open .item-orig-title { white-space: normal; }
+.btn-expand { font-size: 0.85rem; }
+/* Narrow cards (critical wall, phones): weakness on its own line. */
+.wall-items .item.vuln .vuln-kind { flex-basis: 100%; }
+.wall-items .item.vuln .vuln-kind::before { content: none; }
+@media (max-width: 720px) {
+  .item.vuln .vuln-kind { flex-basis: 100%; }
+  .item.vuln .vuln-kind::before { content: none; }
+}

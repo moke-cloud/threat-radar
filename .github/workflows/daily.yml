@@ -25,9 +25,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # 1) Fetch feeds, apply cached translations, publish. Takes ~2 minutes,
+  #    so new items appear without waiting for translation.
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -50,23 +52,10 @@ jobs:
         working-directory: collector
         run: go build -o ../collector-bin ./cmd/collector
 
-      # Japanese translation runs on a local model (llama.cpp + Qwen3-4B,
-      # pinned and checksum-verified). Cached between runs. If it fails to
-      # start, collection still runs and the status panel shows the error.
-      - name: Cache translation model
-        uses: actions/cache@v4
-        with:
-          path: ~/llm
-          key: llm-${{ hashFiles('scripts/start-llm.sh') }}
-
-      - name: Start translation model
-        continue-on-error: true
-        run: bash scripts/start-llm.sh
-
       - name: Run collector
-        # No secrets. Feeds are public and translation stays on this runner.
+        # No secrets. Feeds are public.
         run: |
-          ARGS="-config config.yaml -out data"
+          ARGS="-config config.yaml -out data -translate cache"
           if [ -n "${{ github.event.inputs.only }}" ]; then
             ARGS="$ARGS -only ${{ github.event.inputs.only }}"
           fi
@@ -77,43 +66,57 @@ jobs:
 
       - name: Commit data
         if: github.event.inputs.dry != 'true'
-        run: |
-          if [ -z "$(git status --porcelain data)" ]; then
-            echo "No data changes."
-            exit 0
-          fi
-          git config user.name  "threat-radar-bot"
-          git config user.email "threat-radar-bot@users.noreply.github.com"
-          git add data
-          git commit -m "data: threat-radar update $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push
+        run: bash scripts/commit-data.sh "data: threat-radar update"
 
   deploy-pages:
     needs: collect
-    runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    uses: ./.github/workflows/deploy-pages.yml
+    with:
+      artifact-name: github-pages-collect
+
+  # 2) Translate on a local model (llama.cpp + Qwen3, pinned and
+  #    checksum-verified, cached), then publish again. Feed text never
+  #    leaves the runner. A failure here leaves the published data as is.
+  translate:
+    needs: collect
+    if: github.event.inputs.dry != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
           ref: ${{ github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Stage site
-        run: |
-          mkdir -p _site
-          cp -r web/* _site/
-          mkdir -p _site/data
-          cp data/index.json _site/data/ 2>/dev/null || true
-          cp data/critical.json _site/data/ 2>/dev/null || true
-          cp data/stats.json _site/data/ 2>/dev/null || true
-          cp data/sources.json _site/data/ 2>/dev/null || true
-
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/setup-go@v5
         with:
-          path: _site
+          go-version: "1.22"
+          cache-dependency-path: collector/go.sum
 
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Build collector
+        working-directory: collector
+        run: go build -o ../collector-bin ./cmd/collector
+
+      - name: Cache translation model
+        uses: actions/cache@v4
+        with:
+          path: ~/llm
+          key: llm-${{ hashFiles('scripts/start-llm.sh') }}
+
+      - name: Start translation model
+        run: bash scripts/start-llm.sh
+
+      - name: Translate
+        run: ./collector-bin -config config.yaml -out data -skip-fetch -translate run
+
+      - name: Commit translations
+        run: bash scripts/commit-data.sh "data: translations"
+
+  deploy-pages-translated:
+    needs: [translate, deploy-pages]
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/deploy-pages.yml
+    with:
+      artifact-name: github-pages-translated

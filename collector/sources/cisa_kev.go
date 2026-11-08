@@ -27,24 +27,24 @@ func (c *CISAKEV) ID() string { return c.cfg.ID }
 
 // kevFeed mirrors the JSON shape of the CISA KEV feed (subset).
 type kevFeed struct {
-	Title          string         `json:"title"`
-	CatalogVersion string         `json:"catalogVersion"`
-	DateReleased   string         `json:"dateReleased"`
-	Count          int            `json:"count"`
-	Vulnerabilities []kevVuln     `json:"vulnerabilities"`
+	Title           string    `json:"title"`
+	CatalogVersion  string    `json:"catalogVersion"`
+	DateReleased    string    `json:"dateReleased"`
+	Count           int       `json:"count"`
+	Vulnerabilities []kevVuln `json:"vulnerabilities"`
 }
 
 type kevVuln struct {
-	CveID                      string `json:"cveID"`
-	VendorProject              string `json:"vendorProject"`
-	Product                    string `json:"product"`
-	VulnerabilityName          string `json:"vulnerabilityName"`
-	DateAdded                  string `json:"dateAdded"`
-	ShortDescription           string `json:"shortDescription"`
-	RequiredAction             string `json:"requiredAction"`
-	DueDate                    string `json:"dueDate"`
-	KnownRansomwareCampaignUse string `json:"knownRansomwareCampaignUse"`
-	Notes                      string `json:"notes"`
+	CveID                      string   `json:"cveID"`
+	VendorProject              string   `json:"vendorProject"`
+	Product                    string   `json:"product"`
+	VulnerabilityName          string   `json:"vulnerabilityName"`
+	DateAdded                  string   `json:"dateAdded"`
+	ShortDescription           string   `json:"shortDescription"`
+	RequiredAction             string   `json:"requiredAction"`
+	DueDate                    string   `json:"dueDate"`
+	KnownRansomwareCampaignUse string   `json:"knownRansomwareCampaignUse"`
+	Notes                      string   `json:"notes"`
 	CWEs                       []string `json:"cwes"`
 }
 
@@ -86,6 +86,8 @@ func (c *CISAKEV) Fetch(ctx context.Context) ([]RawItem, error) {
 			Vendors:    []string{normalizeVendor(v.VendorProject)},
 			CVEs:       []string{v.CveID},
 			Hints:      hints,
+			CWEs:       v.CWEs,
+			Product:    kevProduct(v.VendorProject, v.Product),
 		})
 	}
 	return out, nil

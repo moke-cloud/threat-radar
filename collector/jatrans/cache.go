@@ -24,6 +24,11 @@ type Entry struct {
 	Hash    string `json:"hash"`
 	Title   string `json:"title,omitempty"`
 	Summary string `json:"summary,omitempty"`
+	// Product is the affected product extracted from a CVE description.
+	Product string `json:"product,omitempty"`
+	// Tried marks a product extraction that gave nothing usable, so the
+	// same text is not sent again on every run.
+	Tried bool `json:"tried,omitempty"`
 }
 
 // Cache maps item ID to its translation.
@@ -57,28 +62,18 @@ func SourceHash(it normalize.Item) string {
 	return hex.EncodeToString(sum[:8])
 }
 
-// Missing returns the items that need a (new) translation, in input order.
-func Missing(items []normalize.Item, c Cache) []normalize.Item {
-	var out []normalize.Item
-	for _, it := range items {
-		if !NeedsTranslation(it) {
-			continue
-		}
-		if e, ok := c[it.ID]; ok && e.Hash == SourceHash(it) {
-			continue
-		}
-		out = append(out, it)
-	}
-	return out
-}
-
 // Apply returns a copy of items with TitleJa / SummaryJa filled from c.
 func Apply(items []normalize.Item, c Cache) []normalize.Item {
 	out := make([]normalize.Item, len(items))
 	for i, it := range items {
-		if e, ok := c[it.ID]; ok && e.Hash == SourceHash(it) && NeedsTranslation(it) {
-			it.TitleJa = e.Title
-			it.SummaryJa = e.Summary
+		if e, ok := c[it.ID]; ok && e.Hash == SourceHash(it) {
+			if NeedsTranslation(it) {
+				it.TitleJa = e.Title
+				it.SummaryJa = e.Summary
+			}
+			if it.Product == "" {
+				it.Product = e.Product
+			}
 		}
 		out[i] = it
 	}

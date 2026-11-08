@@ -2,6 +2,8 @@ window.__i18n = (function () {
   const dict = {
     ja: {
       "filter.all": "すべて",
+      "action.expand": "全文を表示",
+      "action.collapse": "閉じる",
       "action.filters": "フィルター",
       "filter.label": "フィルター",
       "state.retry": "時間をおいて再読み込みしてください。続く場合は GitHub Actions の実行結果を確認してください。",
@@ -57,6 +59,8 @@ window.__i18n = (function () {
     },
     en: {
       "filter.all": "all",
+      "action.expand": "show full text",
+      "action.collapse": "collapse",
       "action.filters": "filters",
       "filter.label": "filters",
       "state.retry": "Reload in a while. If it persists, check the GitHub Actions run.",

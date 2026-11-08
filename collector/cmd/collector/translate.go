@@ -24,7 +24,6 @@ type translateConfig struct {
 	Enabled     bool   `yaml:"enabled"`
 	Endpoint    string `yaml:"endpoint"`
 	Model       string `yaml:"model"`
-	BatchSize   int    `yaml:"batch_size"`
 	MaxRequests int    `yaml:"max_requests"`
 	MaxMinutes  int    `yaml:"max_minutes"`
 }
@@ -54,7 +53,13 @@ func loopbackEndpoint(raw string) bool {
 	return false
 }
 
-func newTranslator(ctx context.Context, cfg translateConfig, h sources.HTTPClientConfig, outDir string, now time.Time) *translator {
+// Translate modes (-translate flag).
+const (
+	translateRun   = "run"   // call the local model
+	translateCache = "cache" // apply cached translations only (no server needed)
+)
+
+func newTranslator(ctx context.Context, cfg translateConfig, mode string, h sources.HTTPClientConfig, outDir string, now time.Time) *translator {
 	if !cfg.Enabled {
 		return nil
 	}
@@ -67,6 +72,11 @@ func newTranslator(ctx context.Context, cfg translateConfig, h sources.HTTPClien
 			URL: cfg.Model, CheckedAt: now,
 		},
 	}
+	if mode == translateCache {
+		// No status row: this run did not try the model.
+		t.status = nil
+		return t
+	}
 	if !loopbackEndpoint(cfg.Endpoint) {
 		t.status.Error = "translate.endpoint must be http://127.0.0.1 or localhost"
 		return t
@@ -75,7 +85,7 @@ func newTranslator(ctx context.Context, cfg translateConfig, h sources.HTTPClien
 	httpCfg.TimeoutSeconds = max(h.TimeoutSeconds, requestTimeoutFloor)
 	t.client = &jatrans.Client{
 		Endpoint: cfg.Endpoint, Model: cfg.Model,
-		HTTP: sources.NewHTTPClient(httpCfg), BatchSize: cfg.BatchSize, MaxRequests: cfg.MaxRequests,
+		HTTP: sources.NewHTTPClient(httpCfg), MaxRequests: cfg.MaxRequests,
 	}
 	minutes := cfg.MaxMinutes
 	if minutes <= 0 {
@@ -91,12 +101,12 @@ func (t *translator) decorate(items []normalize.Item) []normalize.Item {
 		slog.Warn("load translations", "err", err)
 	}
 	if t.client != nil {
-		missing := jatrans.Missing(items, cache)
+		tasks := jatrans.Plan(items, cache)
 		ctx, cancel := context.WithTimeout(t.ctx, t.budget)
-		got, st := t.client.Translate(ctx, missing)
+		got, st := t.client.Run(ctx, tasks)
 		cancel()
 		cache = jatrans.Merge(cache, got)
-		t.record(len(missing), st)
+		t.record(len(tasks), st)
 	}
 	cache = jatrans.Prune(cache, items)
 	if err := jatrans.Save(t.path, cache); err != nil {

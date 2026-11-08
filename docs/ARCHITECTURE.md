@@ -75,7 +75,7 @@ type Item struct {
 3. **Tag**: `enrich/tagger.go` がタイトル + サマリから RegExp でタグを付与 (CVE ID, ベンダー名, 攻撃クラス)
 4. **Score**: `enrich/scorer.go` が決定論的に severity を判定
 5. **Dedup**: `enrich/deduper.go` が既存 NDJSON との ID 重複を除外
-6. **日本語訳 (jatrans)**: index を作り直すときに、訳の無い英語記事だけを runner 上の llama-server (OpenAI 互換 API・127.0.0.1 限定) で訳し、data/translations.json にキャッシュして title_ja / summary_ja を付ける。1 回の実行あたりの時間とリクエスト数に上限あり。失敗しても収集は止めず、状態は sources.json の local-llm-ja に出る
+6. **構造化と日本語化**: NVD (CWE・CVSS ベクトル)・CISA KEV (vendorProject / product / cwes)・ZDI (タイトルと要約の定型文) から `cwe` / `cvss_vector` / `attack` / `product` / `impact` を取り出す。index を作り直すときに、ZDI の古い記事にも同じ情報を補う (backfill)。翻訳ジョブ (`-skip-fetch -translate run`) は runner 上の llama-server (127.0.0.1 限定) を使い、脆弱性レコードは製品名の抽出だけ、記事は全文の翻訳を、スコアの高い順に行う。結果は data/translations.json にキャッシュし、`product` / `title_ja` / `summary_ja` として付ける。状態は sources.json の local-llm-ja に出る
 7. **Persist**: `store/store.go` が NDJSON / index.json / critical.json / stats.json を書き出し
 
 ### スコアリング詳細
@@ -133,7 +133,8 @@ severity ラベル:
 - フィルタ (severity / category / source / vendor / tag)。全セクションに効く。件数は他の条件を掛けた後の数。状態は URL クエリに残る (共有・再読み込み可)
 - 並び替え (日付 / score / EPSS)
 - UI 言語切替 (フィルタ・見出しの JP/EN)
-- 英語記事の日本語表示 (収集時の title_ja / summary_ja を優先。無い記事は Chrome 内蔵 Translator API で補い、それも無ければ Google 翻訳リンク)
+- 脆弱性カード: 「製品名 — CWE の日本語名」と攻撃条件のチップ (web/assets/vuln.js)。本文は原文
+- 記事カード: 日本語の見出し + 原文の見出し (小さく常時表示)。▾ で全文と原文を開く。訳は収集時の title_ja / summary_ja を優先し、無い記事は Chrome 内蔵 Translator API、それも無ければ Google 翻訳リンク
 - アイテムごとのコピー (タイトル + 概要 + URL) — 翻訳ツールへ貼り付け用
 - ダーク/ライトトグル (デフォルトはシステム preferred-color-scheme)
 - スター (localStorage)

@@ -1,0 +1,44 @@
+name: Deploy Pages (reusable)
+
+on:
+  workflow_call:
+    inputs:
+      artifact-name:
+        description: "Unique artifact name per deployment within one run"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          ref: ${{ github.ref }}
+
+      - name: Stage site
+        run: |
+          mkdir -p _site/data
+          cp -r web/* _site/
+          for f in index.json critical.json stats.json sources.json; do
+            cp "data/$f" _site/data/ 2>/dev/null || true
+          done
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+          name: ${{ inputs.artifact-name }}
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ inputs.artifact-name }}

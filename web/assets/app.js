@@ -16,6 +16,7 @@
   const H = window.__sourceHealth;
   const F = window.__filters;
   const TR = window.__translate;
+  const V = window.__vuln;
   const store = safeStorage();
   const svc = TR.createService(store);
 
@@ -36,6 +37,7 @@
     // Japanese by default: translations now ship with the data.
     autoJa: store.getItem("tr_auto_ja") !== "0",
     override: new Map(), // id -> "ja" | "orig" (per-card toggle)
+    expanded: new Set(), // ids of cards opened with ▾
   };
 
   // ---------- Data load ----------------------------------------------------
@@ -123,19 +125,17 @@
   function itemCardHTML(it) {
     const sev = it.severity || "info";
     const starred = state.starred.has(it.id);
+    const open = state.expanded.has(it.id);
     const tr = shownTranslation(it);
-    const title = tr && tr.title ? tr.title : it.title;
-    const summaryText = tr && tr.summary ? tr.summary : it.summary;
-    const tags = (it.tags || []).slice(0, 6).map((t) =>
+    const head = V.vulnHeadline(it, i18n.getLang());
+    const body = head ? vulnBodyHTML(it, head, tr, open) : articleBodyHTML(it, tr, open);
+    const tags = (it.tags || []).filter((t) => t !== "critical-cvss").slice(0, 6).map((t) =>
       `<span class="tag ${escapeAttr(t)}" translate="no">${escapeHTML(t)}</span>`).join("");
-    const cves = (it.cves || []).slice(0, 3).map((c) =>
+    const cves = head ? "" : (it.cves || []).slice(0, 3).map((c) =>
       `<span class="tag cve" translate="no">${escapeHTML(c)}</span>`).join("");
-    const summary = summaryText
-      ? `<div class="item-summary"${tr ? ` title="${escapeAttr(it.summary || "")}"` : ""}>${escapeHTML(summaryText)}</div>`
-      : "";
-    const mt = tr ? `<span class="mt-label">${escapeHTML(i18n.t("mt.label"))}</span>` : "";
+    const mt = tr && !head ? `<span class="mt-label">${escapeHTML(i18n.t("mt.label"))}</span>` : "";
     return `
-      <article class="item sev-${escapeAttr(sev)}${starred ? " starred" : ""}" data-id="${escapeAttr(it.id)}">
+      <article class="item sev-${escapeAttr(sev)}${starred ? " starred" : ""}${open ? " open" : ""}${head ? " vuln" : ""}" data-id="${escapeAttr(it.id)}">
         <div class="sev-bar" aria-hidden="true"></div>
         <div class="item-body">
           <div class="item-meta">
@@ -144,20 +144,61 @@
             ${corroborationHTML(it)}
             ${mt}
           </div>
-          <h3 class="item-title"${tr ? ` title="${escapeAttr(it.title)}"` : ""}>${titleHTML(it, title)}</h3>
-          ${summary}
+          ${body}
           <div class="item-tags">${cves}${tags}</div>
         </div>
         <div class="item-aside">
           <span class="score-pill ${escapeAttr(sev)}" title="${escapeAttr(i18n.t("score.title"))}">${escapeHTML(it.score)}</span>
           ${epssHTML(it)}
           <div class="item-actions">
+            ${expandButtonHTML(it, open)}
             ${translateButtonHTML(it, tr)}
             <button class="btn-icon" data-action="copy" aria-label="${escapeAttr(i18n.t("action.copy"))}" title="${escapeAttr(i18n.t("action.copy"))}">⧉</button>
             <button class="btn-icon btn-star${starred ? " starred" : ""}" data-action="star" aria-pressed="${starred}" aria-label="${escapeAttr(i18n.t("action.star"))}" title="${escapeAttr(i18n.t("action.star"))}">${starred ? "★" : "☆"}</button>
           </div>
         </div>
       </article>`;
+  }
+
+  // Vulnerability record: headline and facts come from structured fields,
+  // the description stays in its original language (translated on request).
+  function vulnBodyHTML(it, head, tr, open) {
+    const chips = V.attackChips(it.attack, i18n.getLang()).map((c) =>
+      `<span class="fact${c.strong ? " strong" : ""}">${escapeHTML(c.label)}</span>`).join("");
+    const cvss = V.cvssFromTitle(it.title);
+    const cvssHTML = cvss ? `<span class="fact-num" title="CVSS">CVSS ${escapeHTML(cvss.toFixed(1))}</span>` : "";
+    const cve = head.cve && head.cve !== head.subject
+      ? `<span class="fact-id" translate="no">${escapeHTML(head.cve)}</span>` : "";
+    const desc = tr && tr.summary ? tr.summary : it.summary;
+    const descHTML = desc
+      ? `<p class="item-desc"${tr ? "" : ' lang="en"'}>${escapeHTML(desc)}${tr ? ` <span class="mt-label">${escapeHTML(i18n.t("mt.label"))}</span>` : ""}</p>`
+      : "";
+    const orig = open && tr && it.summary ? `<p class="item-orig" lang="en">${escapeHTML(it.summary)}</p>` : "";
+    return `
+          <h3 class="item-title"><span class="vuln-subject" translate="no">${titleHTML(it, head.subject)}</span><span class="vuln-kind">${escapeHTML(head.kind)}</span></h3>
+          <div class="vuln-facts">${chips}${cvssHTML}${cve}</div>
+          ${descHTML}${orig}`;
+  }
+
+  // News / research: Japanese first, the original title always visible.
+  function articleBodyHTML(it, tr, open) {
+    const title = tr && tr.title ? tr.title : it.title;
+    const summaryText = tr && tr.summary ? tr.summary : it.summary;
+    const origTitle = tr && tr.title ? `<p class="item-orig-title" lang="en">${escapeHTML(it.title)}</p>` : "";
+    const summary = summaryText ? `<div class="item-summary">${escapeHTML(summaryText)}</div>` : "";
+    const orig = open && tr && tr.summary && it.summary ? `<p class="item-orig" lang="en">${escapeHTML(it.summary)}</p>` : "";
+    return `
+          <h3 class="item-title">${titleHTML(it, title)}</h3>
+          ${origTitle}${summary}${orig}`;
+  }
+
+  // Only offer ▾ when there is more to read than the clamped preview.
+  function expandButtonHTML(it, open) {
+    const tr = shownTranslation(it);
+    const more = (it.summary || "").length > 110 || Boolean(tr && tr.summary && it.summary);
+    if (!more) return "";
+    const label = open ? i18n.t("action.collapse") : i18n.t("action.expand");
+    return `<button class="btn-icon btn-expand" data-action="expand" aria-expanded="${open}" aria-label="${escapeAttr(label)}" title="${escapeAttr(label)}">${open ? "▴" : "▾"}</button>`;
   }
 
   function titleHTML(it, text) {
@@ -330,6 +371,9 @@
       case "translate":
         onTranslateClick(id, e);
         break;
+      case "expand":
+        toggleExpand(id, e);
+        break;
     }
   }
 
@@ -350,6 +394,17 @@
   function sectionOf(el) {
     const host = el.closest("#critical-items, #today-feed, #all-feed");
     return host ? host.id : "all-feed";
+  }
+
+  function toggleExpand(id, e) {
+    const it = state.items.find((x) => x.id === id);
+    if (!it) return;
+    if (state.expanded.has(id)) state.expanded.delete(id);
+    else state.expanded.add(id);
+    const section = sectionOf(e.target);
+    patchCard(it);
+    const btn = $(`#${section} [data-id="${CSS.escape(id)}"] [data-action=expand]`);
+    if (btn) btn.focus({ preventScroll: true });
   }
 
   // Star without re-rendering everything, so focus and scroll stay put.

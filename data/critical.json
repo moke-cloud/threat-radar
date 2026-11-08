@@ -1,5 +1,600 @@
 [
   {
+    "id": "772ac1ea461acf86a374ea2c47f5c72b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-120984 — A flaw was found in the Keycloak server's client management component. When a cl…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120984",
+    "summary": "A flaw was found in the Keycloak server's client management component. When a client is created or imported with authorization services enabled, the system fails to properly clear an internal session attribute used during the setup process. This allows an authenticated attacker with client management permissions to bypass security controls and upload a malicious JavaScript policy, which is then executed on the server when an authorization request is made. Successful exploitation could allow the attacker to run arbitrary code on the server, potentially compromising the entire system.",
+    "published": "2026-11-07T14:17:01.58Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-120984"
+    ]
+  },
+  {
+    "id": "124d9be520617267118e2c7944ab504a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-122041 — The Checkout Field Editor for WooCommerce (Pro) plugin for WordPress is vulnerab…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122041",
+    "summary": "The Checkout Field Editor for WooCommerce (Pro) plugin for WordPress is vulnerable to unauthorized deletion of arbitrary attachments due to a missing capability/ownership check in the ajax_remove_uploaded() function in versions up to, and including, 3.8.0. The handler is registered for both wp_ajax and wp_ajax_nopriv and is gated solely by the 'file_handling_nonce' nonce, which is emitted inside the public checkout page markup (data-nonce attribute) whenever a File Upload checkout field is configured. This makes it possible for unauthenticated attackers to delete arbitrary attachments (including those belonging to other users or posts) by submitting a crafted attachment_id, which can lead to loss of important media and potential denial of service.",
+    "published": "2026-11-07T13:16:36.067Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-122041"
+    ]
+  },
+  {
+    "id": "d93e4f5d71e804284a6f5e0546419861",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-119075 — The Registration Form for WooCommerce plugin for WordPress is vulnerable to priv…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119075",
+    "summary": "The Registration Form for WooCommerce plugin for WordPress is vulnerable to privilege escalation due to a missing allow-list check in the FormHandler::validate_checkout_fields() function in versions up to, and including, 1.1.4 The My Account registration path (validate_fields()) validates a submitted 'tgwcfb/user-roles' value against the form's configured allowed roles, but the checkout registration path (validate_checkout_fields(), hooked to woocommerce_after_checkout_validation) stores the raw $_POST['user_roles'] value in $this->valid_data without any allow-list enforcement, and add_user_data() then injects that value into woocommerce_new_customer_data as the new account's role. This makes it possible for unauthenticated attackers to elevate their privileges to Administrator by supplying a user_roles=administrator parameter when creating an account during checkout, resulting in full site takeover.",
+    "published": "2026-11-07T12:17:44.033Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "lpe",
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-119075"
+    ]
+  },
+  {
+    "id": "afcfa627189ddcf5cad565cf18debcdd",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-118066 — The Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPre…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118066",
+    "summary": "The Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPress plugin for WordPress is vulnerable to Authentication Bypass via Account Takeover in all versions up to, and including, 5.7.6. This is due to the `OsModel::build_conditions_query()` function in `lib/models/model.php` comparing WHERE-clause values against the literal strings `'IS NULL'` and `'IS NOT NULL'` and concatenating a match directly into SQL without binding it as a parameter, a flaw that neither `sanitize_text_field()` nor the 5.7.5 `is_scalar()` hardening guard closes, since both pass the scalar sentinel through unchanged. This makes it possible for unauthenticated attackers to send `params[password_reset_token]=IS NOT NULL` to the public `customer_cabinet__change_password` AJAX route to match every non-null `account_nonse` value, resolving to the lowest-id customer and overwriting that customer's password to an attacker-chosen value — granting full access to their bookings, orders, and PII, and, when the `wp_users_as_customers` option is enabled, takeover of the linked WordPress subscriber or customer-role account. The attacker can first identify the target customer's email by sending `params[order_intent_key]=IS NOT NULL` to the public `steps__start_from_order_intent` route, which returns the name and email from the first matching order intent, and can then self-arm the required 15-minute password-reset freshness window by triggering a reset for that customer directly.",
+    "published": "2026-11-07T12:17:43.717Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-118066"
+    ]
+  },
+  {
+    "id": "aaebd2d12e7609834417272aa48e7b09",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-104746 — The Motors – Car Dealership & Classified Listings Plugin plugin for WordPress …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104746",
+    "summary": "The Motors – Car Dealership & Classified Listings Plugin plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the stm_listings_ajax_save_user_data function in all versions up to, and including, 1.4.125 This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). Although deletion is bounded to wp-content/uploads (preventing removal of wp-config.php), any authenticated Subscriber can trivially exploit this because the required AJAX nonce is printed on every front-end page and the handler's stm_user_avatar_path meta is writable by any logged-in user against their own account.",
+    "published": "2026-11-07T12:17:41.48Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-104746"
+    ]
+  },
+  {
+    "id": "6f3318b43cea871c20589316cc7db115",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-104014 — The Naimur Email OTP Verification for WooCommerce plugin for WordPress is vulner…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104014",
+    "summary": "The Naimur Email OTP Verification for WooCommerce plugin for WordPress is vulnerable to authentication bypass in versions up to, and including, 2.1.0. This is due to the plugin's password-reset finalization endpoint (the wp_ajax_nopriv_ceovw_update_new_password action handled by CEOVW_AJAX::update_new_password()) authorizing the reset solely by the presence of a database row marking an email as 'VERIFIED', with no timestamp check, no session binding, and no per-reset token — combined with mark_otp_as_verified_for_reset() leaving the row in that state after a user enters their code (abandoning the flow leaves the row behind), and a scheduled 'ceovw_cleanup_expired_otps_event' cron that has no add_action() handler anywhere in the plugin so cleanup never runs. This makes it possible for unauthenticated attackers to take over any account whose owner previously requested and verified a password-reset code and did not immediately finish choosing a new password — the attacker needs only the victim's email address and a nonce that the plugin itself localizes publicly into the CEOVW_APP global on the WooCommerce account page for logged-out visitors, after which they call the endpoint, overwrite the victim's password, and are returned a live wordpress_logged_in_ session cookie for that user (full site takeover if the account is an administrator).",
+    "published": "2026-11-07T12:17:41.313Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass",
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-104014"
+    ]
+  },
+  {
+    "id": "885ac8d33072699d3526824fd77a55ac",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-87112 — The QA Assistants – Driven by data plugin for WordPress is vulnerable to PHP O…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87112",
+    "summary": "The QA Assistants – Driven by data plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 5.3.0 via the 'dlevent_ver' parameter. This is due to unrestricted PHP deserialization via wrap_unserialize_static() calling unserialize() without an allowed_classes restriction, combined with serialize_escape() failing to sanitize path traversal sequences in the raw_name parameter. This makes it possible for unauthenticated attackers to inject a PHP Object. The Guzzle FileCookieJar gadget present in the plugin's bundled Composer dependencies can be leveraged to perform an Arbitrary File Write, writing attacker-controlled content to an attacker-chosen filename, which can result in Remote Code Execution. Exploitation requires triggering the qahm_cron_data_manage scheduled event via wp-cron.php to invoke the deserialization sink against a planted queue file, but this endpoint requires no authentication and fires automatically on a two-minute schedule.",
+    "published": "2026-11-07T07:17:05.09Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "rce",
+      "path-traversal",
+      "deserialization",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 78,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-87112"
+    ],
+    "epss": 0.00795,
+    "epss_percentile": 0.56647
+  },
+  {
+    "id": "bdcca449bebc4a30a1599773a0806b7b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-122001 — The Komfortkasse for WooCommerce WordPress plugin before 1.4.9 does not properly…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122001",
+    "summary": "The Komfortkasse for WooCommerce WordPress plugin before 1.4.9 does not properly validate the authenticity of REST API requests, overriding WordPress's own nonce verification so that a request forged in a logged-in administrator's browser is accepted, which can be used to create a new administrator account and fully take over the site.",
+    "published": "2026-11-07T06:16:59.077Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-122001"
+    ],
+    "epss": 0.00097,
+    "epss_percentile": 0.00732
+  },
+  {
+    "id": "9d8d00bb1062d15d889aa42b523c0da3",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.0 CRITICAL] CVE-2026-121491 — The Fiber Admin WordPress plugin before 4.0.1 does not validate or escape a requ…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121491",
+    "summary": "The Fiber Admin WordPress plugin before 4.0.1 does not validate or escape a request header before writing it into a PHP file it regenerates on an unprotected admin hook, allowing unauthenticated attackers to execute arbitrary code when its custom database error page is enabled and they win a race against an administrator saving its settings.",
+    "published": "2026-11-07T06:16:58.28Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-121491"
+    ],
+    "epss": 0.00224,
+    "epss_percentile": 0.13142
+  },
+  {
+    "id": "df963a65c047b30120c1ceeb4eb0bd31",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-17408 — IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17408",
+    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to execute arbitrary code due to improper neutralization of special elements in an OS command.",
+    "published": "2026-11-07T05:18:57.917Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-17408"
+    ],
+    "epss": 0.00926,
+    "epss_percentile": 0.60691
+  },
+  {
+    "id": "f1690c25f41b040b7e22e95c3d068b67",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-17402 — IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17402",
+    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary commands due to OS command injection. User-supplied input is not properly neutralized before it is passed to the operating system, which could allow commands to run on the underlying host.",
+    "published": "2026-11-07T05:18:56.46Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-17402"
+    ],
+    "epss": 0.01908,
+    "epss_percentile": 0.79889
+  },
+  {
+    "id": "5a5ab8fdf24958c2e2a03a00f7f57fb5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-17399 — IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17399",
+    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to insufficient validation of uploaded content. Content uploaded to the product is not sufficiently checked before it is processed, which could allow code to run on the server.",
+    "published": "2026-11-07T05:18:55.79Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-17399"
+    ],
+    "epss": 0.00786,
+    "epss_percentile": 0.56372
+  },
+  {
+    "id": "e310b0b4e980342965744ae90633396c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-17359 — IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17359",
+    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to improper control of generation of code. A user-supplied value can influence code that the product generates, which could lead to code execution.",
+    "published": "2026-11-07T05:18:48.017Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-17359"
+    ],
+    "epss": 0.0085,
+    "epss_percentile": 0.58405
+  },
+  {
+    "id": "df0dd9cbc9d565f4e6fa1fc9a1dca037",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-17342 — IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17342",
+    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to improper control of generation of code.",
+    "published": "2026-11-07T05:18:45.943Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-17342"
+    ],
+    "epss": 0.0085,
+    "epss_percentile": 0.58405
+  },
+  {
+    "id": "72a0087cc2a9d32c204f0026d911e0ab",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-17340 — IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to execu…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17340",
+    "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to execute arbitrary code due to a path traversal vulnerability.",
+    "published": "2026-11-07T05:18:45.51Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 83,
+    "cves": [
+      "CVE-2026-17340"
+    ],
+    "epss": 0.00922,
+    "epss_percentile": 0.6055
+  },
+  {
+    "id": "e081be17689c2afd3f9d9654f1ed1a9b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-17335 — IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated att…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17335",
+    "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to path traversal. File paths in uploaded content are not sufficiently validated, which could allow files to be written outside the intended location and code to be executed.",
+    "published": "2026-11-07T05:18:44.453Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "rce",
+      "path-traversal"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-17335"
+    ],
+    "epss": 0.00835,
+    "epss_percentile": 0.57922
+  },
+  {
+    "id": "e8b5746f45f93b0c07622a7504fb43ab",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-17313 — IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtai…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17313",
+    "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information and take control of gateway configuration due to authentication bypass via an alternate path.",
+    "published": "2026-11-07T05:18:40.163Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-17313"
+    ],
+    "epss": 0.0078,
+    "epss_percentile": 0.56157
+  },
+  {
+    "id": "5a98bbd3ef556f8db52b194bec533381",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.9 HIGH] CVE-2026-17280 — IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17280",
+    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to perform unauthenticated brute-force attacks to obtain valid credentials due to improper restriction of excessive authentication attempts.",
+    "published": "2026-11-07T05:18:33.853Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-17280"
+    ],
+    "epss": 0.00548,
+    "epss_percentile": 0.46114
+  },
+  {
+    "id": "e7f104f5e6b1733b44ba0001cd39a2c3",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-17239 — IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated att…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17239",
+    "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to a path traversal vulnerability.",
+    "published": "2026-11-07T05:18:32.657Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 83,
+    "cves": [
+      "CVE-2026-17239"
+    ],
+    "epss": 0.00835,
+    "epss_percentile": 0.57921
+  },
+  {
+    "id": "8e79298af74b7f0c3bf70d4fdb509d17",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-17150 — IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17150",
+    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code and access sensitive information from other tenants due to insufficient input validation. Uploaded custom module content is not sufficiently validated before it is processed, which could allow code to run with access beyond the user's own tenant.",
+    "published": "2026-11-07T05:18:28.23Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-17150"
+    ],
+    "epss": 0.00786,
+    "epss_percentile": 0.56372
+  },
+  {
+    "id": "25730d61031161b14eb7ac4d9e7e53f2",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-17147 — IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17147",
+    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code and perform unauthorized administrative actions due to a path traversal vulnerability.",
+    "published": "2026-11-07T05:18:28.037Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 83,
+    "cves": [
+      "CVE-2026-17147"
+    ],
+    "epss": 0.00899,
+    "epss_percentile": 0.59857
+  },
+  {
+    "id": "2ad64402204067fd43d30c20e6cb7447",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-17117 — IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17117",
+    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to improperly controlled modification of object attributes. A user could set a field that should only be controlled by the system, which could lead to code execution.",
+    "published": "2026-11-07T05:18:25.647Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-17117"
+    ],
+    "epss": 0.00803,
+    "epss_percentile": 0.56945
+  },
+  {
+    "id": "47373f52364684efd3c59384067186fd",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-19803 — The Printcart Store – Web to Print Product Designer for WooCommerce plugin for…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19803",
+    "summary": "The Printcart Store – Web to Print Product Designer for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.13.2. This is due to the `nbu_crop_image` AJAX handler accepting a user-supplied `url` parameter that `Nbdesigner_IO::convert_url_to_path()` concatenates onto the uploads base directory without normalizing or stripping `../` sequences, and then deriving both the output directory and output file extension via `pathinfo()` from the same attacker-controlled path — with no `stripImage()` call before `writeImage()` is invoked. This makes it possible for unauthenticated attackers to write attacker-controlled PHP content to arbitrary locations outside the uploads directory, resulting in remote code execution when the written file is subsequently requested. This vulnerability is only exploitable when the `nbdesigner_upload_popup_style` site option is set to `a` (Advanced Upload Popup), which causes the handler to be registered for unauthenticated requests; however, the required `save-design` nonce is printed on the fully public frontend `upload-design-file` page, making it trivially obtainable by any anonymous visitor once that configuration is active.",
+    "published": "2026-11-07T04:17:29.233Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-19803"
+    ],
+    "epss": 0.00962,
+    "epss_percentile": 0.61819
+  },
+  {
+    "id": "a46d735a67a61146ef046bdcaa0e9b11",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-93754 — The payever – WooCommerce Gateway plugin for WordPress is vulnerable to arbitr…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93754",
+    "summary": "The payever – WooCommerce Gateway plugin for WordPress is vulnerable to arbitrary file upload leading to remote code execution in various versions up to, and including, 4.8.0. Three WooCommerce-API callbacks (payever_set_sandbox_api_keys, payever_toggle_subscription, payever_synchronization_incoming) are registered with no authentication, capability check, or nonce, and the upload_image() routine writes a remotely fetched file to the public uploads directory using an attacker-controlled basename() BEFORE validating the file type. This makes it possible for unauthenticated attackers to write an executable PHP file and achieve remote code execution. NOTE: the token-recovery leg of the full chain depends on the plugin's outbound validateToken() call to Payever's service; the unauthenticated hard-coded-credential identity overwrite (CWE-862/CWE-798) is independently exploitable.",
+    "published": "2026-11-07T03:17:08.41Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-93754"
+    ],
+    "epss": 0.00872,
+    "epss_percentile": 0.59118
+  },
+  {
+    "id": "e9c862ab4b444fbb2a0ed932d4061473",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-104913 — The Interactive Real Estate – Floor Plan & Building Visualizer plugin for Word…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104913",
+    "summary": "The Interactive Real Estate – Floor Plan & Building Visualizer plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.6.0 via the extract_zip_data function. This is due to missing capability check, nonce verification, and file extension or MIME type validation before copying attacker-supplied ZIP members to the uploads directory. This makes it possible for authenticated attackers, with subscriber-level access and above, to upload files that may be executable, which makes remote code execution possible. This vulnerability is only exploitable on sites where the plugin's Freemius Premium license or trial is active, as the sole gate in the handler is a site-level license check rather than a per-user capability check.",
+    "published": "2026-11-07T03:16:59.167Z",
+    "fetched": "2026-11-08T00:50:48.689547464Z",
+    "tags": [
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-104913"
+    ],
+    "epss": 0.00516,
+    "epss_percentile": 0.44149
+  },
+  {
     "id": "0692497f7625460cef94fe38268eb7df",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -230,68 +825,6 @@
     ]
   },
   {
-    "id": "6ca37cc4c05943018ba497bcb11f6c8d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-118670 — OHIF Viewers is a zero-footprint DICOM viewer with shared extension packages. Fr…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118670",
-    "summary": "OHIF Viewers is a zero-footprint DICOM viewer with shared extension packages. From 3.5.0-beta.0 until 3.12.15, 3.13.7, and 3.14.0-beta.19, the dicom-pdf extension reads the attacker-controlled MIMETypeOfEncapsulatedDocument value in extensions/dicom-pdf/src/getSopClassHandlerModule.js and uses it as the Blob media type for the attacker-controlled EncapsulatedDocument bytes. When a victim opens Encapsulated PDF SOP Class 1.2.840.10008.5.1.4.1.1.104.1, extensions/dicom-pdf/src/viewports/OHIFCornerstonePdfViewport.tsx embeds the Blob URL in an object element. A Blob labeled as HTML is handled as HTML despite the application/pdf object hint, and the Blob inherits the OHIF origin, allowing embedded script to access session storage, authentication tokens, and same-origin PACS requests. The malicious DICOM object may be opened locally, uploaded to a shared PACS, or supplied by a DICOMweb source. This issue is fixed in source versions 3.12.15, 3.13.7, and 3.14.0-beta.19.",
-    "published": "2026-11-06T18:17:57.34Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-118670"
-    ]
-  },
-  {
-    "id": "fc1fa493d63a0a59e2bcb05668e6e29b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.2 HIGH] CVE-2026-85743 — FreeScout is a self-hosted help desk and shared mailbox. Prior to 1.8.230, multi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85743",
-    "summary": "FreeScout is a self-hosted help desk and shared mailbox. Prior to 1.8.230, multiple outbound paths in Helper::downloadRemoteFile(), Helper::checkPort(), Helper::sanitizeRemoteUrl(), MailboxesController.php, and ModulesController.php do not consistently enforce a sink-level restricted-host policy. An authenticated administrator, or another authenticated user permitted to change mailbox connection settings or trigger module update or installation paths, can supply attacker-controlled URLs or hosts. The independent download and port-test sinks can reach encoded or otherwise uncovered loopback and internal addresses. The redirect-validation bypass additionally requires a configured whitelist that permits the original and final hosts while a restricted internal host appears only as an intermediate redirect hop. No unauthenticated SSRF path is established. The server can consequently contact loopback and internal services, provide a blind internal port oracle, and retrieve internal HTTP responses into application-controlled download sinks. This issue is fixed in version 1.8.230.",
-    "published": "2026-11-06T17:20:02.567Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "tags": [
-      "oracle",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-85743"
-    ]
-  },
-  {
-    "id": "06046f61802c43b31443ac617a535056",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-122193 — OS command injection in the example SSM document provisioning script in Trusted …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122193",
-    "summary": "OS command injection in the example SSM document provisioning script in Trusted Remote Execution (REX) before 2026-07-28 might allow an authenticated remote user who is permitted to invoke the Rex-RO or Rex-RW SSM document to execute arbitrary commands as root on the managed instance, bypassing Cedar policy enforcement.\n\n\n\nTo remediate this issue, users should delete any Rex-RO and Rex-RW SSM documents created from the example script, in each account and Region where it was run.",
-    "published": "2026-11-06T17:17:20.313Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-122193"
-    ]
-  },
-  {
     "id": "385943d5064dceaa9c5c034acbe5092b",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -306,134 +839,6 @@
     ],
     "severity": "high",
     "score": 67
-  },
-  {
-    "id": "0afddba74f25e8343c872ce3a6899e31",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-92895 — The Live2DWebCanvas plugin for WordPress is vulnerable to Arbitrary File Upload …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92895",
-    "summary": "The Live2DWebCanvas plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.2.1 via the download_one_file function. This is due to missing file extension whitelist and MIME type validation in download_one_file() when writing files derived from attacker-controlled manifest entries to the web-served plugin directory. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible when the plugin's apiType setting is configured as custom-local (self-hosted model mode), a non-default option that requires a paid license and prints the REST nonce and one-time session tokens into every front-end page.",
-    "published": "2026-11-06T12:17:24.82Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "tags": [
-      "rce",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-92895"
-    ]
-  },
-  {
-    "id": "14362ff74dcd5914083054777ebe4e3c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-114630 — The ELEX WordPress HelpDesk & Customer Ticketing System plugin for WordPress is …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114630",
-    "summary": "The ELEX WordPress HelpDesk & Customer Ticketing System plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the factory_reset function in all versions up to, and including, 3.3.8 This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). This vulnerability is exploitable via a two-step chain: an unauthenticated attacker first stores an arbitrary ticket_attachment_path value by submitting a ticket through the nopriv eh_crm_new_ticket_post AJAX endpoint (whose nonce is publicly exposed via the [wsdesk_support] shortcode), then triggers the factory_reset routine via a GET request to wp-admin/admin.php?page=wsdesk_factory_reset, which is guarded only by is_admin() — a request-type check — rather than a capability check, causing unlink() to be called on the attacker-supplied path.",
-    "published": "2026-11-06T12:17:16.503Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-114630"
-    ]
-  },
-  {
-    "id": "b57bbe4b60dbd9480ed75355246af3b3",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-107622 — The BuddyForms plugin for WordPress is vulnerable to Privilege Escalation in all…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107622",
-    "summary": "The BuddyForms plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.10.5 via a form-type confusion attack through the `bf_post_type` parameter. This is due to the public frontend submission handler `buddyforms_form_response_no_ajax()` authorizing logged-out submissions based solely on the target form's `public_submit` flag while independently trusting the attacker-supplied `$_POST['bf_post_type']` to determine the post type of the newly created object — a cross-check introduced in 2.10.2 applies only to existing posts (`post_id != 0`) and is completely bypassed for new-object creation — combined with the `save_post` listener `buddyforms_edit_form_save_meta_box_data()` lacking both a `current_user_can()` capability check and a form-builder nonce, causing it to unconditionally persist attacker-supplied `$_POST['buddyforms_options']` for any newly inserted `buddyforms` CPT post. This makes it possible for unauthenticated attackers to insert a rogue BuddyForms form configuration with an attacker-controlled `new_user_role` value into the live global form registry, then submit a registration through that form to create a new WordPress account with administrator-level privileges and achieve full site takeover. Exploitation requires the WordPress site to have \"Anyone can register\" enabled and at least one public BuddyForms form attached to a page, both of which are standard BuddyForms deployment configurations.",
-    "published": "2026-11-06T12:17:16.02Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "tags": [
-      "critical-cvss",
-      "lpe",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 63,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-107622"
-    ]
-  },
-  {
-    "id": "8ca90327739809795fee3ca1794fc255",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 10.0 CRITICAL] CVE-2026-118423 — The WP Libre Form WordPress plugin 1.5.0.1 does not validate the type of files u…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118423",
-    "summary": "The WP Libre Form WordPress plugin 1.5.0.1 does not validate the type of files uploaded through its form submissions, allowing unauthenticated attackers to upload PHP files to a web-accessible location and execute them, leading to remote code execution.",
-    "published": "2026-11-06T08:17:18.55Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-118423"
-    ],
-    "epss": 0.00569,
-    "epss_percentile": 0.47318
-  },
-  {
-    "id": "4969ec30a94191654ca6966eec77ae2e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-113615 — The GS JWT Authentication for WP REST API WordPress plugin through 1.0.0 does no…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113615",
-    "summary": "The GS JWT Authentication for WP REST API WordPress plugin through 1.0.0 does not sanitize or parameterize a request value before using it in SQL queries on several unauthenticated REST routes, allowing unauthenticated attackers to perform SQL injection and obtain an administrator session.",
-    "published": "2026-11-06T06:16:40.053Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "tags": [
-      "critical-cvss",
-      "sqli",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 63,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-113615"
-    ],
-    "epss": 0.00246,
-    "epss_percentile": 0.15959
   },
   {
     "id": "976aa387ee4661e3bae32709452509d0",
@@ -806,45 +1211,6 @@
     ]
   },
   {
-    "id": "14598aeada3de7d7d63baadbea3b25e6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-113663 — AG2 is an open-source AgentOS. From 0.13.2 until ag2 1.1.1, and from autogen 0.1…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113663",
-    "summary": "AG2 is an open-source AgentOS. From 0.13.2 until ag2 1.1.1, and from autogen 0.13.2 to 0.14.1, SandboxShellTool configurations using allowed=[...] or readonly=True rely on ShellAdapter._filter and contains_shell_operator in ag2/tools/sandbox/filter.py and ag2/tools/sandbox/adapter/shell.py to validate a command prefix and reject selected shell syntax. The filter omits newline and carriage-return separators, while the accepted raw string is passed to sh -c, allowing an attacker-influenced agent command to execute an additional arbitrary statement. With the default LocalEnvironment backend, the injected statement runs as a host subprocess with the privileges of the agent process and can affect confidentiality, integrity, and availability. This issue is fixed in ag2 version 1.1.1.",
-    "published": "2026-11-05T23:16:50.523Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-113663"
-    ]
-  },
-  {
-    "id": "f5315dcc7723d7e37742ba46cbc46784",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-33944 — Dolibarr is an open-source enterprise resource planning and customer relationshi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33944",
-    "summary": "Dolibarr is an open-source enterprise resource planning and customer relationship management application. Prior to 22.0.5 and 23.0.1, there is a SQL injection vulnerability in the Third Party company update functionality. The application concatenates the  localtax1_value  and  localtax2_value  properties into an SQL UPDATE statement without numeric conversion or other appropriate sanitization. An authenticated user with Third Party create or edit permission can submit crafted  lt1  or  lt2  POST parameters to read sensitive database information, including password hashes, API keys, and business data, or modify third-party records. This issue is fixed in versions 22.0.5 and 23.0.2.",
-    "published": "2026-11-05T22:18:41.777Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "sqli",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-33944"
-    ]
-  },
-  {
     "id": "0212524092b3a05a43ad5d3a5e958df7",
     "source": "watchtowr",
     "source_name": "watchTowr Labs",
@@ -862,566 +1228,6 @@
     "cves": [
       "CVE-2026-116606",
       "CVE-2026-111560"
-    ]
-  },
-  {
-    "id": "6bafc36244b0cb9ddeee9aa0f0f08927",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.2 HIGH] CVE-2026-116788 — FreeSWITCH is an open-source software telecommunications platform. Before versio…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116788",
-    "summary": "FreeSWITCH is an open-source software telecommunications platform. Before version 1.11.2, an integer underflow in  switch_xml_decode()  can cause an undersized heap allocation when an XML document declares an entity with an empty replacement value. Subsequent copying overruns the allocated buffer. An unauthenticated attacker who can reach a SIP profile with presence management enabled and DTD processing permitted can trigger the vulnerability through a crafted SIP PUBLISH request. Exploitation can corrupt heap memory and terminate the FreeSWITCH process, interrupting all active calls. This vulnerability is fixed in version 1.11.2.",
-    "published": "2026-11-05T20:17:46.24Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-116788"
-    ]
-  },
-  {
-    "id": "623e2895d5d507688645bf71607babe8",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-116785 — FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformati…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116785",
-    "summary": "FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, ws_read_frame() decoded a WebSocket frame's 64-bit extended payload length with a 32-bit byte swap and narrowed the result into a signed length. A value whose surviving low word became negative bypassed the signed size check and was reinterpreted as an enormous unsigned count, causing client bytes to overwrite memory beyond the 64 KiB receive buffer. Any client completing a /socket WebSocket upgrade on an enabled mod_xml_rpc endpoint reached the parser before HTTP authentication; both the module and WebSocket endpoint are disabled by default. The heap overwrite can corrupt connection pointers and crash FreeSWITCH, ending every concurrent session, although remote code execution has not been demonstrated. This issue is fixed in version 1.11.2.",
-    "published": "2026-11-05T20:17:45.73Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-116785"
-    ]
-  },
-  {
-    "id": "37670470c7b444db46df358ca6738fbb",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.2 HIGH] CVE-2026-116783 — FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformati…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116783",
-    "summary": "FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, udptl_rx_packet() used a peer-controlled FEC entry count directly to fill five-entry FEC arrays in a mod_spandsp T.38 session. A larger count wrote sender-controlled error-recovery data beyond those arrays and persisted the oversized count for a later reconstruction pass. Any peer able to deliver UDPTL to an established T.38 fax session can reach the parser, including deployments using fax applications or a T.38 gateway. The memory corruption can crash FreeSWITCH and end every active call, although remote code execution has not been demonstrated. This issue is fixed in version 1.11.2.",
-    "published": "2026-11-05T20:17:45.4Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-116783"
-    ]
-  },
-  {
-    "id": "536413a7f8a0bb2400fe7af41ea68b50",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-116779 — FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformati…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116779",
-    "summary": "FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.3, sofia_presence_handle_sip_i_message() split the To user of an inbound SIP MESSAGE on a plus sign and treated the left side as a chat protocol selector. Selecting the api chat proto reached switch_api_execute(), allowing a peer whose MESSAGE was accepted to run FreeSWITCH API commands, including operating-system command sinks, with the daemon's privileges. Inbound chat is enabled on the stock internal and external profiles, and any authenticated profile account is sufficient; stock directory users without password material can also remove that barrier in affected configurations. The flaw permits configuration and credential disclosure, arbitrary call control, and command execution, and exploitation has been observed in the wild. This issue is fixed in version 1.11.3.",
-    "published": "2026-11-05T20:17:44.79Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "critical-cvss",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "cves": [
-      "CVE-2026-116779"
-    ]
-  },
-  {
-    "id": "4bc7f4f860d76fa8454174bfd45757fa",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-115573 — OpenEMR is a free and open source electronic health records and medical practice…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115573",
-    "summary": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, library/classes/Controller.class.php allows explicit controller.php dispatch to controllers missing from CONTROLLER_ACL_MAP, and checkControllerAcl() returns without enforcing any permission for those entries. A low-privilege authenticated user can invoke C_X12Partner::edit_action_process() to create or alter insurance-routing hosts and credentials, or invoke C_PatientFinder::find_action_process() to enumerate patient names, dates of birth, and identifiers. The shared fail-open dispatcher root cause also exposes other administrative controllers that were intended to be reached through ACL-gated Practice Settings routes. This issue is fixed in version 8.3.0.",
-    "published": "2026-11-05T20:17:42.803Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-115573"
-    ]
-  },
-  {
-    "id": "c96e4858b01b780cbc215c3134277dd6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-103935 — OpenEMR is a free and open source electronic health records and medical practice…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103935",
-    "summary": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, interface/forms/transfer_summary/new.php and interface/forms/functional_cognitive_status/new.php render stored transfer_to, code, and codetext values with text(), which uses ENT_NOQUOTES, inside double-quoted HTML value attributes. An authenticated clinical user can store a value containing a double quote that escapes the attribute and injects event-handler markup when another clinician opens the form. Successful exploitation can expose session data and protected health information or permit patient-record actions in the victim's session. This issue is fixed in version 8.3.0.",
-    "published": "2026-11-05T20:17:38.19Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-103935"
-    ]
-  },
-  {
-    "id": "ddeccb989a3116cd327f75534fa9e2cf",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-102940 — OpenEMR is a free and open source electronic health records and medical practice…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102940",
-    "summary": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.4.0, controllers/C_Document.class.php write actions, including move_action_process(), do not verify the caller's access to the source document, current patient and category, or destination patient and category before Document::change_patient() performs the mutation. A low-privilege authenticated user can reassign an arbitrary document to a patient or category the user can access and then retrieve it through the normally protected read path. The reassignment occurs before a later list rendering check, so a final HTTP 403 response does not mean the unauthorized write was blocked. This issue is fixed in version 8.4.0.",
-    "published": "2026-11-05T20:17:37.543Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-102940"
-    ]
-  },
-  {
-    "id": "5e3fc30a9a7a6fb45df5b6b4c7536159",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.0 HIGH] CVE-2026-123272 — Mark3labs mcp-go before v1.2.1 contains an improper validation vulnerability in …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123272",
-    "summary": "Mark3labs mcp-go before v1.2.1 contains an improper validation vulnerability in OAuthHandler.fetchServerMetadata that allows malicious MCP servers to obtain tokens for other resources by declaring arbitrary resources in well-known metadata. Attackers can declare a different MCP server as the RFC 8707 resource indicator, causing the authorization server to mint tokens the attacker replays against that resource.",
-    "published": "2026-11-05T19:17:20.713Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-123272"
-    ]
-  },
-  {
-    "id": "b7af4583652d3d152f97a1f738f7d937",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.0 HIGH] CVE-2026-123271 — ChatCLI before v1.215.2 contains an improper validation vulnerability in the MCP…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123271",
-    "summary": "ChatCLI before v1.215.2 contains an improper validation vulnerability in the MCP OAuth login flow that uses server-supplied Protected Resource Metadata as the resource indicator without checking it matches the configured server URL. A malicious MCP server can declare another resource on the same authorization server, obtain the user's bearer token for it, and replay that token against the other resource.",
-    "published": "2026-11-05T19:17:20.543Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-123271"
-    ]
-  },
-  {
-    "id": "f45d9cfa17a24b1807c0dce1fc417e98",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-82413 — ntopng is a web-based network traffic monitoring application. Prior to 6.7.26071…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82413",
-    "summary": "ntopng is a web-based network traffic monitoring application. Prior to 6.7.260717, scripts/lua/rest/v2/add/host/to_scan.lua and scripts/lua/rest/v2/exec/host/schedule_vulnerability_scan.lua accept scan_ports from any authenticated session, including non-administrator users, while deployments with login disabled expose the same request without authentication. The endpoints validate scan_ports with validateSingleWord, which permits shell metacharacters, and persist the value for the minute vulnerability-scan scheduler. The scheduler concatenates the value into an nmap command through nmap_scan_host and executes it through ntop.execCmd or ntop.execCmdAsync using popen. For the tcp_portscan and cve modules, a preliminary nmap -sn probe must first report the target as up before the attacker-controlled ports are used. When nmap is installed, this command injection allows arbitrary operating-system commands to execute as the ntopng service account without further user interaction. This issue is fixed in version 6.7.260717.",
-    "published": "2026-11-05T17:18:21.137Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-82413"
-    ]
-  },
-  {
-    "id": "395b49cd2c6611f2d549c5a020c8b059",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-76077 — ASN1SCC is an open source ASN.1 compiler for embedded systems. Prior to 4.7.0.1,…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76077",
-    "summary": "ASN1SCC is an open source ASN.1 compiler for embedded systems. Prior to 4.7.0.1, the XER tokenizer NT() in asn1crt/asn1crt_encoding_xer.c, which is reached by all XER decode paths, copies tag characters into a fixed char Value[100] field without a length bound and reads input and lookahead bytes without checking the buffer count. A crafted XER message with an overlong tag can overwrite the tokenizer's stack frame, while a truncated tag or unterminated processing-instruction or comment sequence can read beyond the input and may cause a CPU spin. The flaws can disclose adjacent memory, corrupt stack data, crash or hang the decoder, and potentially permit code execution. This issue is fixed in version 4.7.0.1.",
-    "published": "2026-11-05T17:18:20.83Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-76077"
-    ]
-  },
-  {
-    "id": "389f74b658b4e14c32e64648698c57d5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-75614 — ASN1SCC is an open source ASN.1 compiler for embedded systems. Prior to 4.7.0.1,…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75614",
-    "summary": "ASN1SCC is an open source ASN.1 compiler for embedded systems. Prior to 4.7.0.1, BitStream_DecodeConstraintWholeNumber in asn1crt/asn1crt_encoding.c reads enough bits for a constrained integer but does not reject values above the declared range when the encoded range is not a power of two. Generated uPER and ACN decoders for variable-size SEQUENCE OF, OCTET STRING, BIT STRING, and string values use the invalid result as a loop or copy length, so a crafted over-range size field can write beyond a destination buffer. Decoding untrusted affected data can corrupt heap or stack memory, cause a crash, or potentially permit code execution. This issue is fixed in version 4.7.0.1.",
-    "published": "2026-11-05T17:18:20.497Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-75614"
-    ]
-  },
-  {
-    "id": "6258507b141f9ec65226df956fd6b87c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-54146 — OpenHuman is an open-source agent harness available as a desktop application and…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54146",
-    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. From 0.53.15 before 0.57.5 on macOS, core_process.rs in the Tauri desktop process publishes the per-launch OPENHUMAN_CORE_TOKEN bearer credential in its process environment even though the core now runs as an in-process task. Another process running as the same user can read that environment through the macOS KERN_PROCARGS2 process-inspection interface, recover the token together with the local host and port, and authenticate to the core JSON-RPC service with the authority of the desktop frontend. The attacker can read agent memory and integrated-account data, invoke privileged actions, change configuration, and stop or disrupt services without root access, developer mode, or changes to System Integrity Protection. This issue affects Intel and Apple Silicon macOS systems. This issue is fixed in version 0.57.5.",
-    "published": "2026-11-05T17:18:20.013Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-54146"
-    ]
-  },
-  {
-    "id": "e7ee56c96f5b79458b6f910f26513833",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-54145 — OpenHuman is an open-source agent harness available as a desktop application and…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54145",
-    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. In affected versions before 0.57.5, the approval gate uses the JSON-RPC bearer token as an approval session identifier. This exposes the credential through persisted approval records, events, debug logs, and RPC responses, including during normal desktop operation. An attacker who obtains these artifacts can recover the token and access the core RPC interface while it remains valid. This can expose sensitive agent and integration data and permit privileged operations. Stable tokens remain usable until rotated; launch-specific tokens remain usable while the corresponding core instance is active. The fix is included in version 0.57.5.",
-    "published": "2026-11-05T17:18:19.85Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-54145"
-    ]
-  },
-  {
-    "id": "8778a2516886398029e86dc3c68aa7ec",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-54143 — OpenHuman is an open-source agent harness available as a desktop application and…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54143",
-    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before version 0.57.13, an attacker who can send messages to a configured external channel can cause the agent to create persistent shell cron jobs without human approval. The scheduler later executes these jobs with the privileges of the OpenHuman runtime user. Command validation also permits leading environment assignments that can redirect allowed commands to executable helpers. The demonstrated exploit requires a suitable helper executable already present on the host. This can lead to unauthorized persistent command execution and compromise data and resources accessible to OpenHuman. This issue is fixed in version 0.57.13.",
-    "published": "2026-11-05T17:18:19.487Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-54143"
-    ]
-  },
-  {
-    "id": "6fd349990807b29304e293300fd89685",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.7 HIGH] CVE-2026-54142 — OpenHuman is an open-source agent harness available as a desktop application and…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54142",
-    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.57.13, background synchronization for connected services such as email, Slack, and Notion stores raw external content and later places it in the model context of autonomous background agents without neutralizing embedded instructions. ApprovalGate treats tool calls without an interactive chat context as pre-authorized automation, so attacker-authored content processed during a background tick can influence the model to invoke Composio actions without presenting an approval request. An attacker who can deliver content to a connected account can use this path to send or forward data, post messages, create or modify third-party content, or disclose information from OpenHuman memory and integrations. The issue requires an active integration and successful model interpretation of the injected instructions. This issue is fixed in version 0.57.13.",
-    "published": "2026-11-05T17:18:19.303Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-54142"
-    ]
-  },
-  {
-    "id": "27cc513152eee5327a6d7812b798188a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.0 CRITICAL] CVE-2026-54141 — OpenHuman is an open-source agent harness available as a desktop application and…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54141",
-    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.57.13, a remote direct message received through a configured Yuanbao channel is converted into a generic channel AgentTurnRequest that uses the default tool policy without establishing an interactive approval context. Under the default Supervised autonomy policy with Node enabled, node_exec is classified as a write operation that should prompt for approval, but ApprovalGate treats missing APPROVAL_CHAT_CONTEXT as a non-interactive turn and allows execution. Because Yuanbao direct messages are open by default, an external sender who can message the connected bot can influence the agent to execute JavaScript and operating-system commands as the OpenHuman user without an approval prompt. The issue requires a configured Yuanbao channel, the default approval-requiring policy state, Node availability, and successful model selection of node_exec. This issue is fixed in version 0.57.13.",
-    "published": "2026-11-05T17:18:19.103Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-54141"
-    ]
-  },
-  {
-    "id": "d66838869793d6431e930b6d6349de3e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.3 HIGH] CVE-2026-54140 — OpenHuman is an open-source agent harness available as a desktop application and…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54140",
-    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.57.13, OpenHuman places names, descriptions, titles, and parameter definitions returned by configured external MCP servers into the agent model context without neutralizing instructions or bounding the descriptive fields. The McpRemoteTool records produced by list_tools preserve this remote content, while tool filtering considers the tool name and the prompt-injection detector screens user messages rather than MCP definitions. A malicious or compromised MCP server can therefore return a poisoned description that is evaluated on every agent turn and may direct the model to invoke other available tools, disclose accessible data, or perform unauthorized actions without a separate malicious user message. The issue affects users who configure an attacker-controlled or compromised MCP server. This issue is fixed in version 0.57.13.",
-    "published": "2026-11-05T17:18:18.91Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-54140"
-    ]
-  },
-  {
-    "id": "d3e38ad90831458141c909c2ba6ff2ab",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.4 HIGH] CVE-2026-49393 — OpenHuman is an open-source agent harness available as a desktop application and…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49393",
-    "summary": "OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.56.0, the core server protects HTTP POST requests to /rpc with bearer middleware but exposes Socket.IO rpc:request and chat:start handlers without equivalent transport or handler-level authentication. A local unauthenticated client can connect to the Socket.IO namespace and dispatch requests through the same protected controller path that rejects a missing bearer on /rpc. Depending on the selected method, the attacker can read configuration or health data, start agent flows, interact with integrated account APIs, alter local data, or stop and restart services. This issue is fixed in version 0.56.0.",
-    "published": "2026-11-05T17:18:16.687Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-49393"
-    ]
-  },
-  {
-    "id": "3c30df3a69899bbd0b75b7ed7286cb9e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-121997 — A heap buffer overflow in gdbserver's QTDPsrc packet handler allows an unauthent…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121997",
-    "summary": "A heap buffer overflow in gdbserver's QTDPsrc packet handler allows an unauthenticated remote attacker to achieve native code execution in the gdbserver process. The vulnerability results from a mismatch between a packet's declared source length and the actual data length, causing hex2bin to write beyond the allocated heap buffer.",
-    "published": "2026-11-05T17:18:01.053Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-121997"
-    ]
-  },
-  {
-    "id": "d0d612b16683d8495af0ae3e3a331067",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121994 — A stack buffer overflow in the GDB client's remote protocol handler allows an at…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121994",
-    "summary": "A stack buffer overflow in the GDB client's remote protocol handler allows an attacker-controlled debug target to execute arbitrary code in the GDB process. The vulnerability exists in fetch_register_using_p, which decodes a stub's register reply into an alloca-sized buffer without bounding writes by the register width.",
-    "published": "2026-11-05T17:18:00.503Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-121994"
-    ]
-  },
-  {
-    "id": "7b568ee4b428166d7c63053250d6498c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-112208 — A flaw was found in the Organization identity-first login flow of the Keycloak a…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112208",
-    "summary": "A flaw was found in the Organization identity-first login flow of the Keycloak authentication server. Keycloak is an open-source identity and access management solution used to secure modern applications and services. The issue occurs when an attacker who belongs to multiple organizations initiates a login and then switches to a registration or password reset path. During this process, a flag indicating a successful login is not properly cleared when the user is removed from the session. An attacker can then provide a victim's username, and the system incorrectly treats the stale flag as proof of the victim's identity. This allows the attacker to bypass authentication and gain full access to the victim's account and connected applications.",
-    "published": "2026-11-05T17:17:38.283Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-112208"
-    ]
-  },
-  {
-    "id": "d8ddd584246c347402c65be9ab3ec497",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-123158 — sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lack…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123158",
-    "summary": "sshd in OpenSSH before 10.6p2 on Linux, when musl libc is used without PAM, lacks a workaround for a password authentication bypass (related to misinterpretation of whether a string is intended to be a password hash). For some configurations of accounts, any password between 256 and 1024 characters succeeds. An example of a platform using musl libc without PAM is Alpine Linux.",
-    "published": "2026-11-05T16:17:47.11Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-123158"
-    ]
-  },
-  {
-    "id": "13ae260b6cd5b010dcd8c2a771231789",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.1 HIGH] CVE-2026-71901 — Improper Control of Resource Identifiers ('Resource Injection') vulnerability in…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71901",
-    "summary": "Improper Control of Resource Identifiers ('Resource Injection') vulnerability in Apache OFBiz.\n\n\n\nAn authenticate user with access to sfa component can override the service to use on vcard import and access to other service.\n\n\n\nThis issue affects Apache OFBiz: before 24.09.08.\n\n\n\nUsers are recommended to upgrade to version 24.09.08, which fixes the issue.",
-    "published": "2026-11-05T15:17:22.22Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "apache",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2026-71901"
-    ]
-  },
-  {
-    "id": "e13665407137af1f82c6cbc716530c5f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-119744 — Cendio ThinLinc contains an improper authentication vulnerability in its browser…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119744",
-    "summary": "Cendio ThinLinc contains an improper authentication vulnerability in its browser-based web client (tlwebaccess) that allows an authenticated attacker to impersonate any other user, including root, by exploiting flaws in multi-step authentication flows such as one-time passwords, login banners, or expired password prompts. Attackers can leverage this authentication bypass during the multi-step login process to gain unauthorized access to other user accounts, including administrative privileges, in versions from 4.1.0 through 4.20.0.",
-    "published": "2026-11-05T15:17:20.557Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-119744"
-    ]
-  },
-  {
-    "id": "a295808db339609ea27261fc7b0ecdd5",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-85627 — Improper Neutralization of Special Elements Used in a Template Engine ('Server-S…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85627",
-    "summary": "Improper Neutralization of Special Elements Used in a Template Engine ('Server-Side Template Injection') in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote authenticated attacker holding only a stock non-administrative account to execute arbitrary operating system commands as the OFBiz process user, by using the updateLayoutImage event, which writes DataResource fields with no permission check, to retype an attacker-created DataResource as an FTL template evaluating its own primary key, then using the resulting FreeMarker evaluation to plant an OFBiz Form Widget whose use-when attribute runs unsandboxed Groovy. Users are recommended to upgrade to version 24.09.08, which fixes this issue.",
-    "published": "2026-11-05T14:17:07.217Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "tags": [
-      "apache",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2026-85627"
-    ],
-    "epss": 0.00266,
-    "epss_percentile": 0.1886
-  },
-  {
-    "id": "5786c76be85e4cf04327db90053af100",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-84183 — Incorrect Authorization in the updateLayout simple-method in applications/conten…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84183",
-    "summary": "Incorrect Authorization in the updateLayout simple-method in applications/content/minilang/layout/LayoutEvents.xml in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote authenticated attacker holding only OFBTOOLS_VIEW and CONTENTMGR_VIEW to execute arbitrary commands as the OFBiz process user, by using updateLayout's authorization check — which validates only the fixed CONTENT_CREATE operation rather than an update permission on the actual Content record and an independently selected DataResource — to relink an existing RESPONSE-purpose Content record and convert an arbitrary, independently selected DataResource into an OFBIZ_FILE/FTL resource pointed at the OFBiz access log, poisoned via a crafted User-Agent header and evaluated through the normal authenticated showContent route. Users are recommended to upgrade to version 24.09.08, which fixes this issue.",
-    "published": "2026-11-05T14:17:06.953Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "apache",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2026-84183"
-    ]
-  },
-  {
-    "id": "70cc49681ffc467b3a4445958d4c9e97",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-83542 — Improper Control of Generation of Code ('Code Injection') in Apache OFBiz 24.09 …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83542",
-    "summary": "Improper Control of Generation of Code ('Code Injection') in Apache OFBiz 24.09 before 24.09.08 on all platforms allows a remote unauthenticated attacker to execute arbitrary code on the server by staging crafted widget XML in a multipart upload and overriding the mainDecoratorLocation used by a manager login route through an anonymous JSON request, causing OFBiz to load the staged XML through its live screen descriptor mechanism and evaluate an unsandboxed Groovy expression while rendering the authentication-failure page. Further validation established the following:\n\n-- The exploit does not require a malformed or incomplete multipart body: a well-formed multipart request that is kept in flight and then allowed to complete normally is sufficient.\n\n-- The screen loader reads the widget XML from a live process file descriptor while the upload is streaming, rather than from any file the attacker persists to disk.\n\n-- The same underlying issue is also reachable through the public, explicitly unauthenticated /sfa/control/editPortalPageColumnWidth route, returning command output directly in an HTTP 200 response — it is not limited to the login-failure rendering path used in the original report.\n\nUsers are recommended to upgrade to version 24.09.08, which fixes this issue.",
-    "published": "2026-11-05T14:17:06.82Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "apache",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2026-83542"
     ]
   },
   {
@@ -2686,22 +2492,6 @@
     "fetched": "2026-10-28T00:39:19.706965836Z",
     "tags": [
       "0day"
-    ],
-    "severity": "high",
-    "score": 67
-  },
-  {
-    "id": "47a22918fbeb10ef924ad715bb21b03b",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "CISA confirms PHP2Shell vulnerabilities now exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added the PHP2Shell vulnerabilities to its catalog of actively exploited security flaws and ordered federal agencies to patch their systems by Thursday. [...]",
-    "published": "2026-10-27T08:20:54Z",
-    "fetched": "2026-10-28T00:39:19.706965836Z",
-    "tags": [
-      "actively-exploited"
     ],
     "severity": "high",
     "score": 67

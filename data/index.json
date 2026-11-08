@@ -3691,7 +3691,17 @@
     "score": 30,
     "cves": [
       "CVE-2026-91131"
-    ]
+    ],
+    "cwe": [
+      "CWE-918"
+    ],
+    "product": "Home Assistant Green aiohttp_client",
+    "impact": "ssrf",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "af6b578bc02084b5625f96185bbc3556",
@@ -3712,7 +3722,17 @@
       "CVE-2026-91131"
     ],
     "title_ja": "ZDI-26-896: (Pwn2Own) Home Assistant Green の認証情報の明文保存によるローカル権限昇格脆弱性",
-    "summary_ja": "この脆弱性は、影響を受けた Home Assistant Green のインストールにおいて、ローカル攻撃者が権限を昇格できるようにするものである。この脆弱性を活用するには、まずターゲットシステム上のコンテナ内で低権限のコードを実行できる状態を取得する必要がある。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与した。以下の CVE が割り当てられている: CVE-2026-91131。"
+    "summary_ja": "この脆弱性は、影響を受けた Home Assistant Green のインストールにおいて、ローカル攻撃者が権限を昇格できるようにするものである。この脆弱性を活用するには、まずターゲットシステム上のコンテナ内で低権限のコードを実行できる状態を取得する必要がある。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与した。以下の CVE が割り当てられている: CVE-2026-91131。",
+    "cwe": [
+      "CWE-256"
+    ],
+    "product": "Home Assistant Green",
+    "impact": "lpe",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "976aa387ee4661e3bae32709452509d0",
@@ -3731,7 +3751,17 @@
     "score": 60,
     "cves": [
       "CVE-2026-76181"
-    ]
+    ],
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "LibreOffice dBase File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "6c9f1148dc0554dc74b57f3d6e10bd05",
@@ -3754,7 +3784,17 @@
     ],
     "cves": [
       "CVE-2026-121614"
-    ]
+    ],
+    "cwe": [
+      "CWE-829"
+    ],
+    "product": "Docker Sandboxes",
+    "impact": "rce",
+    "attack": {
+      "av": "L",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "ad3e27c0d67b26c395572a7d449b9a03",
@@ -3775,7 +3815,17 @@
       "CVE-2026-121741"
     ],
     "title_ja": "ZDI-26-893: トリムブリ SketchUp SKP ファイル解析における使用後解放（Use-After-Free）によるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた Trimble SketchUp のインストール上で任意のコードを実行できるようになります。この脆弱性を活用するには、ターゲットが悪意あるページを閲覧または悪意あるファイルを開くことによりユーザーの介入が必要です。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与しています。以下の CVE が割り当てられています：CVE-2026-121741。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた Trimble SketchUp のインストール上で任意のコードを実行できるようになります。この脆弱性を活用するには、ターゲットが悪意あるページを閲覧または悪意あるファイルを開くことによりユーザーの介入が必要です。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与しています。以下の CVE が割り当てられています：CVE-2026-121741。",
+    "cwe": [
+      "CWE-416"
+    ],
+    "product": "Trimble SketchUp SKP File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "e4b7f7c2d0bc29a36f97eb28c8380e65",
@@ -3794,7 +3844,17 @@
     "score": 60,
     "cves": [
       "CVE-2026-122044"
-    ]
+    ],
+    "cwe": [
+      "CWE-693"
+    ],
+    "product": "Philips Hue Bridge Pro",
+    "impact": "auth-bypass",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "d2217fb31df805bd08573dbdc2e635b1",
@@ -3814,7 +3874,17 @@
     "score": 68,
     "cves": [
       "CVE-2026-118632"
-    ]
+    ],
+    "cwe": [
+      "CWE-89"
+    ],
+    "product": "Philips Hue Bridge Pro",
+    "impact": "rce",
+    "attack": {
+      "av": "A",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "e4c5ddcf74899df46b377b0995a94554",
@@ -3830,7 +3900,17 @@
     "score": 30,
     "cves": [
       "CVE-2026-118631"
-    ]
+    ],
+    "cwe": [
+      "CWE-88"
+    ],
+    "product": "Philips Hue Bridge Pro",
+    "impact": "file-write",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "f584c1835ebefed53287ec2d52217339",
@@ -3846,7 +3926,17 @@
     "score": 30,
     "cves": [
       "CVE-2026-13270"
-    ]
+    ],
+    "cwe": [
+      "CWE-191"
+    ],
+    "product": "Quest NetVault Backup nvpmgr",
+    "impact": "dos",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "55b9f47ab5fca27bbb3e4ee58d24cd99",
@@ -3864,7 +3954,17 @@
       "CVE-2026-13269"
     ],
     "title_ja": "ZDI-26-888: Quest NetVault Backup StnzCreateKey 数値切り捨てエラーによる拒否サービス脆弱性",
-    "summary_ja": "この脆弱性は、影響を受けるQuest NetVault Backupのインストールにおいて、リモート攻撃者が拒否サービス状態を引き起こすことを可能にします。この脆弱性を悪用するには認証が不要です。ZDIはこの脆弱性に対してCVSSスコア7.5を付与しています。以下のCVEが割り当てられています：CVE-2026-13269。"
+    "summary_ja": "この脆弱性は、影響を受けるQuest NetVault Backupのインストールにおいて、リモート攻撃者が拒否サービス状態を引き起こすことを可能にします。この脆弱性を悪用するには認証が不要です。ZDIはこの脆弱性に対してCVSSスコア7.5を付与しています。以下のCVEが割り当てられています：CVE-2026-13269。",
+    "cwe": [
+      "CWE-197"
+    ],
+    "product": "Quest NetVault Backup StnzCreateKey",
+    "impact": "dos",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "f0f0d82cb59f5ae4bdc7fa0d005455a1",
@@ -3885,7 +3985,17 @@
       "CVE-2025-10935"
     ],
     "title_ja": "ZDI-26-887: libilbm ILBMファイルのパースにおけるヒープベースのバッファオーバーフローによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けたlibilbmのインストール上で任意のコードを実行できるようになります。この脆弱性を活用するには、ターゲットが悪意あるページを閲覧または悪意あるファイルを開くことが必要です。ZDIはこの脆弱性に対してCVSSスコア7.8を付与しています。以下のCVEが割り当てられています：CVE-2025-10935。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けたlibilbmのインストール上で任意のコードを実行できるようになります。この脆弱性を活用するには、ターゲットが悪意あるページを閲覧または悪意あるファイルを開くことが必要です。ZDIはこの脆弱性に対してCVSSスコア7.8を付与しています。以下のCVEが割り当てられています：CVE-2025-10935。",
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "libilbm ILBM File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "8f97adfcd4150dbc7554647f377c3670",
@@ -3906,7 +4016,17 @@
       "CVE-2026-114558"
     ],
     "title_ja": "ZDI-26-886: OriginLab Origin Viewer OPJUファイルのパースにおけるオフバウンド書き込みによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けたOriginLab Origin Viewerのインストール上で任意のコードを実行できるようになります。この脆弱性を活用するにはユーザーの介入が必要であり、ターゲットが悪意のあるページを閲覧または悪意のあるファイルを開く必要があります。ZDIはこの脆弱性に対してCVSSスコア7.8を付与しています。以下のCVEが割り当てられています：CVE-2026-114558。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けたOriginLab Origin Viewerのインストール上で任意のコードを実行できるようになります。この脆弱性を活用するにはユーザーの介入が必要であり、ターゲットが悪意のあるページを閲覧または悪意のあるファイルを開く必要があります。ZDIはこの脆弱性に対してCVSSスコア7.8を付与しています。以下のCVEが割り当てられています：CVE-2026-114558。",
+    "cwe": [
+      "CWE-787"
+    ],
+    "product": "OriginLab Origin Viewer OPJU File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "35734f2c2fe88bda3a833313fdabdd76",
@@ -3927,7 +4047,17 @@
       "CVE-2026-114568"
     ],
     "title_ja": "ZDI-26-885: OriginLab Origin Viewer OPJファイル解析時のヒープベースバッファオーバーフローによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けたOriginLab Origin Viewerのインストール上で任意のコードを実行できるようになります。この脆弱性を活用するには、攻撃対象者が悪意あるページを閲覧または悪意あるファイルを開くことによりユーザーの介入が求められます。ZDIはこの脆弱性に対してCVSSスコア7.8を付与しています。以下のCVEが割り当てられています：CVE-2026-114568。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けたOriginLab Origin Viewerのインストール上で任意のコードを実行できるようになります。この脆弱性を活用するには、攻撃対象者が悪意あるページを閲覧または悪意あるファイルを開くことによりユーザーの介入が求められます。ZDIはこの脆弱性に対してCVSSスコア7.8を付与しています。以下のCVEが割り当てられています：CVE-2026-114568。",
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "OriginLab Origin Viewer OPJ File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "09e9cdae28c3624f83b30747f3721dc1",
@@ -3948,7 +4078,17 @@
       "CVE-2026-114567"
     ],
     "title_ja": "ZDI-26-884: OriginLab Origin Viewer OGWU ファイル解析時におけるバウンド書き込みによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、リモート攻撃者が影響を受けた OriginLab Origin Viewer のインストール上で任意のコードを実行できるようになります。この脆弱性を活用するにはユーザーの介入が必要であり、ターゲットが悪意あるページを表示するか、悪意あるファイルを開く必要があります。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与しています。関連する CVE は CVE-2026-114567 です。"
+    "summary_ja": "この脆弱性により、リモート攻撃者が影響を受けた OriginLab Origin Viewer のインストール上で任意のコードを実行できるようになります。この脆弱性を活用するにはユーザーの介入が必要であり、ターゲットが悪意あるページを表示するか、悪意あるファイルを開く必要があります。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与しています。関連する CVE は CVE-2026-114567 です。",
+    "cwe": [
+      "CWE-787"
+    ],
+    "product": "OriginLab Origin Viewer OGWU File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "2c6f0d353dd0087bdc0aa430b61bc267",
@@ -3969,7 +4109,17 @@
       "CVE-2026-114566"
     ],
     "title_ja": "ZDI-26-883: OriginLab Origin Viewer OGMファイルの解析におけるメモリ腐食によるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けたOriginLab Origin Viewerのインストール上で任意のコードを実行できる。この脆弱性を活用するには、ターゲットが悪意あるページを閲覧または悪意あるファイルを開くことが必要である。ZDIはこの脆弱性に対してCVSSスコア7.8を付与した。以下のCVEが割り当てられている：CVE-2026-114566。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けたOriginLab Origin Viewerのインストール上で任意のコードを実行できる。この脆弱性を活用するには、ターゲットが悪意あるページを閲覧または悪意あるファイルを開くことが必要である。ZDIはこの脆弱性に対してCVSSスコア7.8を付与した。以下のCVEが割り当てられている：CVE-2026-114566。",
+    "cwe": [
+      "CWE-119"
+    ],
+    "product": "OriginLab Origin Viewer OGM File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "9f5f8fe26e0173ec39b581a721ee105b",
@@ -3988,7 +4138,17 @@
     "score": 60,
     "cves": [
       "CVE-2026-114565"
-    ]
+    ],
+    "cwe": [
+      "CWE-787"
+    ],
+    "product": "OriginLab Origin Viewer OGG File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "06cbe2cab602e4b823090a5014b69b48",
@@ -4007,7 +4167,17 @@
     "score": 60,
     "cves": [
       "CVE-2026-114564"
-    ]
+    ],
+    "cwe": [
+      "CWE-787"
+    ],
+    "product": "OriginLab Origin Viewer OGG File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "d8c62cd57be532edb90075385056ef74",
@@ -4028,7 +4198,17 @@
       "CVE-2026-114563"
     ],
     "title_ja": "ZDI-26-880: OriginLab Origin Viewer OGWU ファイル解析時のスタックベースのバッファオーバーフローによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける OriginLab Origin Viewer のインストール上で任意のコードを実行できる。この脆弱性を活用するには、ターゲットが悪意あるページを表示するか、悪意あるファイルを開くなどのユーザーの介入が必要である。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与した。関連する CVE は CVE-2026-114563 である。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける OriginLab Origin Viewer のインストール上で任意のコードを実行できる。この脆弱性を活用するには、ターゲットが悪意あるページを表示するか、悪意あるファイルを開くなどのユーザーの介入が必要である。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与した。関連する CVE は CVE-2026-114563 である。",
+    "cwe": [
+      "CWE-121"
+    ],
+    "product": "OriginLab Origin Viewer OGWU File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "98e853c199cc9f22a5c7033f504389dd",
@@ -4049,7 +4229,17 @@
       "CVE-2026-114562"
     ],
     "title_ja": "ZDI-26-879: OriginLab Origin Viewer OGWU ファイル解析時におけるバウンド書き込みによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける OriginLab Origin Viewer のインストール上で任意のコードを実行できるようになります。この脆弱性を活用するには、ターゲットが悪意あるページを表示するか、悪意あるファイルを開くなどのユーザー行動が求められます。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与しています。関連する CVE は CVE-2026-114562 です。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける OriginLab Origin Viewer のインストール上で任意のコードを実行できるようになります。この脆弱性を活用するには、ターゲットが悪意あるページを表示するか、悪意あるファイルを開くなどのユーザー行動が求められます。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与しています。関連する CVE は CVE-2026-114562 です。",
+    "cwe": [
+      "CWE-787"
+    ],
+    "product": "OriginLab Origin Viewer OGWU File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "8242e78de7592a8019486fbd5ebc67ea",
@@ -4068,7 +4258,17 @@
     "score": 60,
     "cves": [
       "CVE-2026-114561"
-    ]
+    ],
+    "cwe": [
+      "CWE-787"
+    ],
+    "product": "OriginLab Origin Viewer OPJU File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "62676b87f5a6bdb3cbdb6aa4f306f574",
@@ -4087,7 +4287,17 @@
     "score": 60,
     "cves": [
       "CVE-2026-114560"
-    ]
+    ],
+    "cwe": [
+      "CWE-787"
+    ],
+    "product": "OriginLab Origin Viewer OPJ File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "7e8349f2585469288d7908cc8e6c57ea",
@@ -4106,7 +4316,17 @@
     "score": 60,
     "cves": [
       "CVE-2026-114559"
-    ]
+    ],
+    "cwe": [
+      "CWE-787"
+    ],
+    "product": "OriginLab Origin Viewer OGG File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "ecb224c1dd94621307b7b12a52a57dcb",
@@ -4127,7 +4347,17 @@
       "CVE-2026-114569"
     ],
     "title_ja": "ZDI-26-875: OriginLab Origin Viewer OGWU ファイル解析時のヒープベースバッファオーバーフローによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた OriginLab Origin Viewer のインストール上で任意のコードを実行できるようになります。この脆弱性を活用するにはユーザーのインタラクションが必要であり、ターゲットが悪意あるページを表示するか、悪意あるファイルを開く必要があります。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与しています。関連する CVE は CVE-2026-114569 です。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた OriginLab Origin Viewer のインストール上で任意のコードを実行できるようになります。この脆弱性を活用するにはユーザーのインタラクションが必要であり、ターゲットが悪意あるページを表示するか、悪意あるファイルを開く必要があります。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与しています。関連する CVE は CVE-2026-114569 です。",
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "OriginLab Origin Viewer OGWU File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "af8e57ebe47e0f7f9c6fd6d0ee5e3449",
@@ -5182,7 +5412,17 @@
     "score": 81,
     "cves": [
       "CVE-2026-121742"
-    ]
+    ],
+    "cwe": [
+      "CWE-416"
+    ],
+    "product": "Ashlar-Vellum Cobalt XE File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "1ba16af202eae70d2164cf4cc214b9e2",
@@ -5202,7 +5442,17 @@
     "score": 81,
     "cves": [
       "CVE-2026-121743"
-    ]
+    ],
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "Ashlar-Vellum Cobalt AR File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "ceb3199952f84521575daf712f096ef9",
@@ -5224,7 +5474,17 @@
       "CVE-2026-121753"
     ],
     "title_ja": "ZDI-26-872: (0Day) Ashlar-Vellum Cobalt XE ファイル解析時のUse-After-Freeによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けたAshlar-Vellum Cobaltのインストール上で任意のコードを実行できるようになります。この脆弱性を活用するには、ターゲットが悪意のあるページを表示するか、悪意のあるファイルを開く必要があります。ZDIはこの脆弱性に対してCVSSスコア7.8を付与しています。以下のCVEが割り当てられています：CVE-2026-121753。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けたAshlar-Vellum Cobaltのインストール上で任意のコードを実行できるようになります。この脆弱性を活用するには、ターゲットが悪意のあるページを表示するか、悪意のあるファイルを開く必要があります。ZDIはこの脆弱性に対してCVSSスコア7.8を付与しています。以下のCVEが割り当てられています：CVE-2026-121753。",
+    "cwe": [
+      "CWE-416"
+    ],
+    "product": "Ashlar-Vellum Cobalt XE File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "4d5c99b06a986ba57979e6c665da8a02",
@@ -5244,7 +5504,17 @@
     "score": 81,
     "cves": [
       "CVE-2026-121752"
-    ]
+    ],
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "Ashlar-Vellum Cobalt LI File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "b60d36054bd5e646f85dbf00145755f0",
@@ -5266,7 +5536,17 @@
       "CVE-2026-121744"
     ],
     "title_ja": "ZDI-26-870: (0Day) Ashlar-Vellum Cobalt XE ファイル解析時のスタックベースのバッファオーバーフローによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性は、影響を受ける Ashlar-Vellum Cobalt のインストールにおいて、遠隔攻撃者が任意のコードを実行できるようにするものである。この脆弱性を活用するには、ターゲットが悪意のあるページを表示するか、悪意のあるファイルを開くなどのユーザーの介入が必要となる。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与している。以下の CVE が割り当てられている：CVE-2026-121744。"
+    "summary_ja": "この脆弱性は、影響を受ける Ashlar-Vellum Cobalt のインストールにおいて、遠隔攻撃者が任意のコードを実行できるようにするものである。この脆弱性を活用するには、ターゲットが悪意のあるページを表示するか、悪意のあるファイルを開くなどのユーザーの介入が必要となる。ZDI はこの脆弱性に対して CVSS 7.8 の評価を付与している。以下の CVE が割り当てられている：CVE-2026-121744。",
+    "cwe": [
+      "CWE-121"
+    ],
+    "product": "Ashlar-Vellum Cobalt XE File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "fcaf16bdcc4173348109c85734075355",
@@ -5285,7 +5565,17 @@
     "score": 29,
     "cves": [
       "CVE-2026-114556"
-    ]
+    ],
+    "cwe": [
+      "CWE-22"
+    ],
+    "product": "MailEnable Save",
+    "impact": "file-write",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "f7132d9471559a09151545bba823f3c8",
@@ -5766,7 +6056,17 @@
       "microsoft"
     ],
     "title_ja": "ZDI-26-868: Microsoft Windows Aero テーマのエラー条件の不正処理による拒否サービス脆弱性",
-    "summary_ja": "この脆弱性は、影響を受けるMicrosoft Windowsのインストールにおいて、ローカル攻撃者が拒否サービス状態を引き起こすことができるものです。この脆弱性を活用するには、ターゲットシステム上で低権限のコードを実行できる必要があります。ZDIはこの脆弱性に対してCVSSスコア4.7を付与しています。"
+    "summary_ja": "この脆弱性は、影響を受けるMicrosoft Windowsのインストールにおいて、ローカル攻撃者が拒否サービス状態を引き起こすことができるものです。この脆弱性を活用するには、ターゲットシステム上で低権限のコードを実行できる必要があります。ZDIはこの脆弱性に対してCVSSスコア4.7を付与しています。",
+    "cwe": [
+      "CWE-755"
+    ],
+    "product": "Microsoft Windows Aero Theme",
+    "impact": "dos",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "6b8856a8b25f043ae9f0312b0c0e0749",
@@ -5790,7 +6090,17 @@
     ],
     "cves": [
       "CVE-2026-20043"
-    ]
+    ],
+    "cwe": [
+      "CWE-787"
+    ],
+    "product": "Cisco Snort sf_unfold_header",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "e80b71a99f7985fcb3c8919f288d5b54",
@@ -5809,7 +6119,17 @@
     "score": 51,
     "cves": [
       "CVE-2026-92196"
-    ]
+    ],
+    "cwe": [
+      "CWE-1336"
+    ],
+    "product": "Quest Foglight for Databases renderTemplateString",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "678f201d6d5cdff1cc80327e303e1f3c",
@@ -5828,7 +6148,17 @@
     "score": 29,
     "cves": [
       "CVE-2026-92200"
-    ]
+    ],
+    "cwe": [
+      "CWE-732"
+    ],
+    "product": "Quest Foglight for Databases",
+    "impact": "lpe",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "5066fa84591ed9a480c26f265fb5daee",
@@ -5849,7 +6179,17 @@
       "CVE-2026-92198"
     ],
     "title_ja": "ZDI-26-864: Quest Foglight for Databases の getSource XML 外部エレメント処理による情報漏洩脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた Quest Foglight for Databases のインストールに対して、任意のサーバー側リクエストを実行できる。この脆弱性を悪用するには認証が不要である。ZDI はこの脆弱性に対して CVSS 8.2 の評価を付与した。以下の CVE が割り当てられている：CVE-2026-92198。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた Quest Foglight for Databases のインストールに対して、任意のサーバー側リクエストを実行できる。この脆弱性を悪用するには認証が不要である。ZDI はこの脆弱性に対して CVSS 8.2 の評価を付与した。以下の CVE が割り当てられている：CVE-2026-92198。",
+    "cwe": [
+      "CWE-611"
+    ],
+    "product": "Quest Foglight for Databases getSource",
+    "impact": "info",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "13b93a5294a3c39add5d9a8d3179b0bf",
@@ -5868,7 +6208,17 @@
     "score": 29,
     "cves": [
       "CVE-2026-92199"
-    ]
+    ],
+    "cwe": [
+      "CWE-321"
+    ],
+    "product": "Quest Foglight for Databases EncryptionUtil",
+    "impact": "lpe",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "87cff79f8050edaa8fe07d476dfac8fc",
@@ -5886,7 +6236,17 @@
       "CVE-2026-92185"
     ],
     "title_ja": "ZDI-26-862: Quest Foglight for Databases AbstractParser XML 外部エンティティ処理による情報漏洩脆弱性",
-    "summary_ja": "この脆弱性は、Quest Foglight for Databases の影響を受けるインストールにおいて、リモート攻撃者がセンシティブな情報を漏洩できるようにします。この脆弱性を悪用するには認証が不要です。ZDIはこの脆弱性に対してCVSSスコア7.2を付与しています。以下のCVEが割り当てられています：CVE-2026-92185。"
+    "summary_ja": "この脆弱性は、Quest Foglight for Databases の影響を受けるインストールにおいて、リモート攻撃者がセンシティブな情報を漏洩できるようにします。この脆弱性を悪用するには認証が不要です。ZDIはこの脆弱性に対してCVSSスコア7.2を付与しています。以下のCVEが割り当てられています：CVE-2026-92185。",
+    "cwe": [
+      "CWE-611"
+    ],
+    "product": "Quest Foglight for Databases AbstractParser",
+    "impact": "info",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "3965d3f53f4a1026c64992c8bc170c88",
@@ -5907,7 +6267,17 @@
       "CVE-2026-92189"
     ],
     "title_ja": "ZDI-26-861: Quest Foglight for Databases writeTopologySectionToFile ファイルパスの外部制御によるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける Quest Foglight for Databases のインストールに対して任意のコードを実行できる。この脆弱性を悪用するには認証が不要である。ZDI はこの脆弱性に対して CVSS 9.8 の評価を付与した。以下の CVE が割り当てられている: CVE-2026-92189。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける Quest Foglight for Databases のインストールに対して任意のコードを実行できる。この脆弱性を悪用するには認証が不要である。ZDI はこの脆弱性に対して CVSS 9.8 の評価を付与した。以下の CVE が割り当てられている: CVE-2026-92189。",
+    "cwe": [
+      "CWE-73"
+    ],
+    "product": "Quest Foglight for Databases writeTopologySectionToFile",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "214bc6c840eb3b6b402073885e3bc6ec",
@@ -5929,7 +6299,17 @@
       "CVE-2026-92197"
     ],
     "title_ja": "ZDI-26-860: Quest Foglight for Databases unzipFile ファイルパスのトラバースによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた Quest Foglight for Databases のインストールに対して任意のコードを実行できる。この脆弱性を活用するには認証が必要である。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与した。以下の CVE が割り当てられている：CVE-2026-92197。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた Quest Foglight for Databases のインストールに対して任意のコードを実行できる。この脆弱性を活用するには認証が必要である。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与した。以下の CVE が割り当てられている：CVE-2026-92197。",
+    "cwe": [
+      "CWE-22"
+    ],
+    "product": "Quest Foglight for Databases unzipFile",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "91ceb2240248b949bd4256314b6a8ee0",
@@ -5950,7 +6330,17 @@
       "CVE-2026-92191"
     ],
     "title_ja": "ZDI-26-859: Quest Foglight for Databases の runScript 機能における不正認可によるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性は、影響を受ける Quest Foglight for Databases のインストールに対して、リモート攻撃者が任意のコードを実行できるようにします。この脆弱性を活用するには認証が必要です。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与しています。関連する CVE は CVE-2026-92191 です。"
+    "summary_ja": "この脆弱性は、影響を受ける Quest Foglight for Databases のインストールに対して、リモート攻撃者が任意のコードを実行できるようにします。この脆弱性を活用するには認証が必要です。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与しています。関連する CVE は CVE-2026-92191 です。",
+    "cwe": [
+      "CWE-863"
+    ],
+    "product": "Quest Foglight for Databases runScript",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "c57be49dd1a15ad7860a9c020b18f02f",
@@ -5972,7 +6362,17 @@
       "CVE-2026-92186"
     ],
     "title_ja": "ZDI-26-858: Quest Foglight for Databases paFnUploadFileAndCreateInfo ディレクトリトラバース リモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける Quest Foglight for Databases のインストールに対して任意のコードを実行できる。この脆弱性を活用するには認証が必要である。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与している。以下の CVE が割り当てられている: CVE-2026-92186。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける Quest Foglight for Databases のインストールに対して任意のコードを実行できる。この脆弱性を活用するには認証が必要である。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与している。以下の CVE が割り当てられている: CVE-2026-92186。",
+    "cwe": [
+      "CWE-22"
+    ],
+    "product": "Quest Foglight for Databases paFnUploadFileAndCreateInfo",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "712ec64ac8c9ced04884f769a0a24851",
@@ -5994,7 +6394,17 @@
       "CVE-2026-92194"
     ],
     "title_ja": "ZDI-26-857: Quest Foglight for Databases loadManageServerLicense ディレクトリトラバースによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた Quest Foglight for Databases のインストール上で任意のコードを実行できる。この脆弱性を活用するには認証が必要である。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与した。以下の CVE が割り当てられている：CVE-2026-92194。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた Quest Foglight for Databases のインストール上で任意のコードを実行できる。この脆弱性を活用するには認証が必要である。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与した。以下の CVE が割り当てられている：CVE-2026-92194。",
+    "cwe": [
+      "CWE-22"
+    ],
+    "product": "Quest Foglight for Databases loadManageServerLicense",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "1ce1761364d89a9cf4e0a9f8bcddca14",
@@ -6016,7 +6426,17 @@
       "CVE-2026-92195"
     ],
     "title_ja": "ZDI-26-856: Quest Foglight for Databases の loadEvolveLicense ディレクトリトラバースによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、影響を受ける Quest Foglight for Databases のインストールにおいて、リモート攻撃者が任意のコードを実行できるようになります。この脆弱性を活用するには認証が必要です。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与しています。関連する CVE は CVE-2026-92195 です。"
+    "summary_ja": "この脆弱性により、影響を受ける Quest Foglight for Databases のインストールにおいて、リモート攻撃者が任意のコードを実行できるようになります。この脆弱性を活用するには認証が必要です。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与しています。関連する CVE は CVE-2026-92195 です。",
+    "cwe": [
+      "CWE-22"
+    ],
+    "product": "Quest Foglight for Databases loadEvolveLicense",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "bc15680d870cd3d368d4a1b471ea2180",
@@ -6038,7 +6458,17 @@
       "CVE-2026-92192"
     ],
     "title_ja": "ZDI-26-855: Quest Foglight for Databases の installLicense ディレクトリへのトラバースによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、影響を受ける Quest Foglight for Databases のインストールにおいて、リモート攻撃者が任意のコードを実行できるようになります。この脆弱性を活用するには認証が必要です。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与しています。関連する CVE は CVE-2026-92192 です。"
+    "summary_ja": "この脆弱性により、影響を受ける Quest Foglight for Databases のインストールにおいて、リモート攻撃者が任意のコードを実行できるようになります。この脆弱性を活用するには認証が必要です。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与しています。関連する CVE は CVE-2026-92192 です。",
+    "cwe": [
+      "CWE-22"
+    ],
+    "product": "Quest Foglight for Databases installLicense",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "bc3b39c5508e8a3896f650c991dc5283",
@@ -6059,7 +6489,17 @@
       "CVE-2026-92188"
     ],
     "title_ja": "ZDI-26-854: Quest Foglight for Databases の ForgeMBeanServerSupport における認証の欠如によるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける Quest Foglight for Databases のインストール上で任意のコードを実行できる。この脆弱性を悪用するには認証が不要である。ZDI はこの脆弱性に対して CVSS 9.8 の評価を付与した。関連する CVE は CVE-2026-92188 である。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける Quest Foglight for Databases のインストール上で任意のコードを実行できる。この脆弱性を悪用するには認証が不要である。ZDI はこの脆弱性に対して CVSS 9.8 の評価を付与した。関連する CVE は CVE-2026-92188 である。",
+    "cwe": [
+      "CWE-306"
+    ],
+    "product": "Quest Foglight for Databases ForgeMBeanServerSupport",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "e3c2b9e4378fbbfe3eb93f162c26b31a",
@@ -6077,7 +6517,17 @@
       "CVE-2026-92193"
     ],
     "title_ja": "ZDI-26-853: Quest Foglight for Databases FileServlet ファイルパスの外部制御による情報漏洩脆弱性",
-    "summary_ja": "この脆弱性は、Quest Foglight for Databases の影響を受けるインストールにおいて、リモート攻撃者がセンシティブな情報を漏洩できるようにします。この脆弱性を活用するには認証が必要です。ZDIはこの脆弱性に対してCVSSスコア6.5を付与しています。以下のCVEが割り当てられています：CVE-2026-92193。"
+    "summary_ja": "この脆弱性は、Quest Foglight for Databases の影響を受けるインストールにおいて、リモート攻撃者がセンシティブな情報を漏洩できるようにします。この脆弱性を活用するには認証が必要です。ZDIはこの脆弱性に対してCVSSスコア6.5を付与しています。以下のCVEが割り当てられています：CVE-2026-92193。",
+    "cwe": [
+      "CWE-73"
+    ],
+    "product": "Quest Foglight for Databases FileServlet",
+    "impact": "info",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "f6249412db813f9366ebc50b25ff7ae0",
@@ -6099,7 +6549,17 @@
       "CVE-2026-92187"
     ],
     "title_ja": "ZDI-26-852: Quest Foglight for Databases の extractAndCreateUploadInfoList ディレクトリトラバースによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける Quest Foglight for Databases のインストール上で任意のコードを実行できる。この脆弱性を活用するには認証が必要である。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与した。以下の CVE が割り当てられている：CVE-2026-92187。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受ける Quest Foglight for Databases のインストール上で任意のコードを実行できる。この脆弱性を活用するには認証が必要である。ZDI はこの脆弱性に対して CVSS 8.8 の評価を付与した。以下の CVE が割り当てられている：CVE-2026-92187。",
+    "cwe": [
+      "CWE-22"
+    ],
+    "product": "Quest Foglight for Databases extractAndCreateUploadInfoList",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "985e200d5cf04ee625ed8bd90b45ac71",
@@ -6120,7 +6580,17 @@
       "CVE-2026-92190"
     ],
     "title_ja": "ZDI-26-851: Quest Foglight for Databases の baseRmiServiceExporter における不信任データのデシリアライズによるリモートコード実行脆弱性",
-    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた Quest Foglight for Databases のインストール上で任意のコードを実行できる。この脆弱性を悪用するには認証が不要である。ZDI はこの脆弱性に対して CVSS 9.8 の評価を付与した。関連する CVE は CVE-2026-92190 である。"
+    "summary_ja": "この脆弱性により、遠隔攻撃者が影響を受けた Quest Foglight for Databases のインストール上で任意のコードを実行できる。この脆弱性を悪用するには認証が不要である。ZDI はこの脆弱性に対して CVSS 9.8 の評価を付与した。関連する CVE は CVE-2026-92190 である。",
+    "cwe": [
+      "CWE-502"
+    ],
+    "product": "Quest Foglight for Databases baseRmiServiceExporter",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "ab240375891976c8435d99e3684af8a9",
@@ -6567,7 +7037,17 @@
     "score": 61,
     "vendors": [
       "microsoft"
-    ]
+    ],
+    "cwe": [
+      "CWE-502"
+    ],
+    "product": "Microsoft Qlib MLflowRecorder",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "3a625f36f6b76d214f814fab773453bd",
@@ -6588,7 +7068,17 @@
     "score": 61,
     "vendors": [
       "microsoft"
-    ]
+    ],
+    "cwe": [
+      "CWE-502"
+    ],
+    "product": "Microsoft Qlib RestrictedUnpickler",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "6b56fad1476534955e1cefd83f4bfc15",
@@ -6609,7 +7099,17 @@
     "score": 61,
     "vendors": [
       "microsoft"
-    ]
+    ],
+    "cwe": [
+      "CWE-502"
+    ],
+    "product": "Microsoft Qlib StaticDataLoader",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "4445288d182f49d3fe20d154ecc5055c",
@@ -7662,7 +8162,17 @@
     "score": 21,
     "cves": [
       "CVE-2026-71211"
-    ]
+    ],
+    "cwe": [
+      "CWE-918"
+    ],
+    "product": "MLflow AI Gateway",
+    "impact": "info",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "3803d08e6c253f085ac77512b3f54dae",
@@ -7678,7 +8188,17 @@
     "score": 21,
     "cves": [
       "CVE-2026-64849"
-    ]
+    ],
+    "cwe": [
+      "CWE-918"
+    ],
+    "product": "MLflow Webhook",
+    "impact": "ssrf",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "def6b85f52681fac774432c0baf966ba",
@@ -7697,7 +8217,17 @@
     "score": 51,
     "cves": [
       "CVE-2024-37052"
-    ]
+    ],
+    "cwe": [
+      "CWE-502"
+    ],
+    "product": "MLflow Statsmodels _load_model",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "76eee5de99500f8a0b5c5d7cf7c4956f",
@@ -7713,7 +8243,17 @@
     "score": 21,
     "cves": [
       "CVE-2026-118628"
-    ]
+    ],
+    "cwe": [
+      "CWE-918"
+    ],
+    "product": "MLflow get-artifacts",
+    "impact": "info",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "7d0d66e013af1ec332654b18c3fe5563",
@@ -7732,7 +8272,17 @@
     "score": 51,
     "cves": [
       "CVE-2026-118627"
-    ]
+    ],
+    "cwe": [
+      "CWE-502"
+    ],
+    "product": "MLflow SHAP load_explainer",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "535dbc221d41ed59f6c19cd381d4f690",
@@ -7751,7 +8301,17 @@
     "score": 29,
     "cves": [
       "CVE-2026-118626"
-    ]
+    ],
+    "cwe": [
+      "CWE-862"
+    ],
+    "product": "MLflow Tracking Server Issues",
+    "impact": "lpe",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "88e04aeaaa8ab0d20b73898ae9e15f70",
@@ -7770,7 +8330,17 @@
     "score": 29,
     "cves": [
       "CVE-2026-118625"
-    ]
+    ],
+    "cwe": [
+      "CWE-862"
+    ],
+    "product": "MLflow Tracking Server",
+    "impact": "lpe",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "3b0fc9a7233f248fd09375286d8371cd",
@@ -7786,7 +8356,17 @@
     "score": 21,
     "cves": [
       "CVE-2026-118624"
-    ]
+    ],
+    "cwe": [
+      "CWE-862"
+    ],
+    "product": "MLflow Tracking Server Jobs",
+    "impact": "info",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "3a1994cd59fe4c2f31663f917c140a90",
@@ -7805,7 +8385,17 @@
     "score": 51,
     "cves": [
       "CVE-2026-118623"
-    ]
+    ],
+    "cwe": [
+      "CWE-502"
+    ],
+    "product": "MLflow PickleEvaluationArtifact",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "4a0de3c721bb1a2049293989f96fbee4",
@@ -7824,7 +8414,17 @@
     "score": 29,
     "cves": [
       "CVE-2026-58093"
-    ]
+    ],
+    "cwe": [
+      "CWE-362"
+    ],
+    "product": "FreeBSD Kernel TTY",
+    "impact": "lpe",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "91d71cbf07b0cf4bdec24bee55ba15c2",
@@ -7848,7 +8448,17 @@
     ],
     "cves": [
       "CVE-2026-98231"
-    ]
+    ],
+    "cwe": [
+      "CWE-416"
+    ],
+    "product": "Linux Kernel XFRM Subsystem",
+    "impact": "lpe",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "18f28d48452276db94a8a7eff6650307",
@@ -7872,7 +8482,12 @@
     ],
     "cves": [
       "CVE-2026-72315"
-    ]
+    ],
+    "cwe": [
+      "CWE-416"
+    ],
+    "product": "Linux Kernel CIFS File System",
+    "impact": "lpe"
   },
   {
     "id": "b0063d3e6e55294401130f4b45f1c068",
@@ -7896,7 +8511,17 @@
     ],
     "cves": [
       "CVE-2026-93826"
-    ]
+    ],
+    "cwe": [
+      "CWE-416"
+    ],
+    "product": "Linux Kernel Logitech HIDPP Protocol",
+    "impact": "lpe",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "1fec9f940a12df7df56cf06c310dcb5b",
@@ -7920,7 +8545,17 @@
     ],
     "cves": [
       "CVE-2026-80844"
-    ]
+    ],
+    "cwe": [
+      "CWE-191"
+    ],
+    "product": "Linux Kernel IPv6 AH Routing Header",
+    "impact": "lpe",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "4db595d36f17bca0aac7c83422b98dec",
@@ -8358,7 +8993,17 @@
       "rce"
     ],
     "severity": "medium",
-    "score": 36
+    "score": 36,
+    "cwe": [
+      "CWE-197"
+    ],
+    "product": "Valkey clusterCreatePublishMsgBlock",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "5ebb811399fb64505a368e9371800929",
@@ -8377,7 +9022,17 @@
     "score": 14,
     "cves": [
       "CVE-2026-6064"
-    ]
+    ],
+    "cwe": [
+      "CWE-59"
+    ],
+    "product": "AVG Internet Security avgToolsSvc",
+    "impact": "lpe",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "423130cc344d84efa1310b7070c5520d",
@@ -8393,7 +9048,17 @@
     "score": 6,
     "cves": [
       "CVE-2026-112656"
-    ]
+    ],
+    "cwe": [
+      "CWE-125"
+    ],
+    "product": "Apple macOS CoreText GDEF LigCaretList",
+    "impact": "info",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "cf6a5c10f92fac31d59e985292819175",
@@ -8412,7 +9077,17 @@
     "score": 36,
     "cves": [
       "CVE-2026-86974"
-    ]
+    ],
+    "cwe": [
+      "CWE-843"
+    ],
+    "product": "Apple Safari jsToWasm IC Entrypoint",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "6a4e1a3acca9c28848e85b640b1cfc7a",
@@ -8432,7 +9107,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118611"
-    ]
+    ],
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "Alpine iLX-F511 Bluetooth OBEX Packet Handling",
+    "impact": "rce",
+    "attack": {
+      "av": "P",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "728ce7ee5af188df19751f0b1be40376",
@@ -8452,7 +9137,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118610"
-    ]
+    ],
+    "cwe": [
+      "CWE-121"
+    ],
+    "product": "Alpine iLX-F511 Android Auto Service",
+    "impact": "rce",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "254c1a7ef968c3980496c4dd588d5501",
@@ -8472,7 +9167,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118609"
-    ]
+    ],
+    "cwe": [
+      "CWE-121"
+    ],
+    "product": "Alpine iLX-F511 Android Auto Connection Handler",
+    "impact": "rce",
+    "attack": {
+      "av": "P",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "a4690c8773029ad199217d4be0e456b5",
@@ -8491,7 +9196,12 @@
     "score": 46,
     "cves": [
       "CVE-2026-118608"
-    ]
+    ],
+    "cwe": [
+      "CWE-125"
+    ],
+    "product": "Alpine iLX-F511 libanwbtstack.so prh_rfcomm_cc_process_test",
+    "impact": "info"
   },
   {
     "id": "237e91bbe52803af6a78eb4f72c68c1a",
@@ -8510,7 +9220,17 @@
     "score": 46,
     "cves": [
       "CVE-2026-118607"
-    ]
+    ],
+    "cwe": [
+      "CWE-77"
+    ],
+    "product": "Alpine iLX-F511 diagapp",
+    "impact": "command-injection",
+    "attack": {
+      "av": "P",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "692cc65949907e9c8e553a858190c78f",
@@ -8530,7 +9250,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118606"
-    ]
+    ],
+    "cwe": [
+      "CWE-749"
+    ],
+    "product": "Alpine iLX-F511 Framework Service",
+    "impact": "rce",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "8c867c63a8c41a0fd14b6aa41fcc6b01",
@@ -8550,7 +9280,12 @@
     "score": 66,
     "cves": [
       "CVE-2026-118605"
-    ]
+    ],
+    "cwe": [
+      "CWE-121"
+    ],
+    "product": "Alpine iLX-F511 prh_sdp_service_search_decode",
+    "impact": "rce"
   },
   {
     "id": "56cc0e0994e1bb0e3d197feb59da23e0",
@@ -8570,7 +9305,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118604"
-    ]
+    ],
+    "cwe": [
+      "CWE-121"
+    ],
+    "product": "Alpine iLX-F511 Framework Service",
+    "impact": "rce",
+    "attack": {
+      "av": "P",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "0695ba1e50780b64bb9864c9ef04f56f",
@@ -8590,7 +9335,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118603"
-    ]
+    ],
+    "cwe": [
+      "CWE-121"
+    ],
+    "product": "Alpine iLX-F511 vCard Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "A",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "5a55e23ea688737ba080c47cff733f34",
@@ -8610,7 +9365,17 @@
     "score": 54,
     "cves": [
       "CVE-2026-118602"
-    ]
+    ],
+    "cwe": [
+      "CWE-749"
+    ],
+    "product": "Alpine iLX-F511 Fiv.System",
+    "impact": "lpe",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "bf1992d61c6c0f16c5f2a003e6fe0b7f",
@@ -8630,7 +9395,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118601"
-    ]
+    ],
+    "cwe": [
+      "CWE-798"
+    ],
+    "product": "Alpine iLX-F511 SSH",
+    "impact": "rce",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "fc4fbbeeb66d05cd3b7c91a13785a866",
@@ -8651,7 +9426,17 @@
     "score": 74,
     "cves": [
       "CVE-2026-118619"
-    ]
+    ],
+    "cwe": [
+      "CWE-22"
+    ],
+    "product": "Ultralytics Google Drive Download",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "cd8ecb5ae07522e3fc0d09866ff73ad3",
@@ -8671,7 +9456,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118618"
-    ]
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "product": "Ultralytics parse_model",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "b14e13087b227ad34a082bbb45ee1e6e",
@@ -8691,7 +9486,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118617"
-    ]
+    ],
+    "cwe": [
+      "CWE-502"
+    ],
+    "product": "Ultralytics load_dataset_cache_file",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "e4b752dfe9ca985c6f1a921d51ce250b",
@@ -8711,7 +9516,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118616"
-    ]
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "product": "Ultralytics parse_model",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "ca1e84833ea4de2069d14b19d253b286",
@@ -8731,7 +9546,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118615"
-    ]
+    ],
+    "cwe": [
+      "CWE-77"
+    ],
+    "product": "Ultralytics torch_safe_load",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "2ceba170db710b0809401f7a03782c44",
@@ -8751,7 +9576,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118614"
-    ]
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "product": "Ultralytics check_det_dataset",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "38ac3c6754f75e2faa15cb8387c02d24",
@@ -8771,7 +9606,17 @@
     "score": 66,
     "cves": [
       "CVE-2026-118613"
-    ]
+    ],
+    "cwe": [
+      "CWE-502"
+    ],
+    "product": "Ultralytics torch_load",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
   },
   {
     "id": "2e1fc22a7f9fe0a3a1c8bdab2545a728",
@@ -9189,7 +10034,17 @@
     "score": 6,
     "cves": [
       "CVE-2026-114552"
-    ]
+    ],
+    "cwe": [
+      "CWE-611"
+    ],
+    "product": "MailEnable parseObjectResponse",
+    "impact": "info",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
   },
   {
     "id": "3f1aabd73944083f2fc1515cb7825b82",
@@ -9205,7 +10060,17 @@
     "score": 6,
     "cves": [
       "CVE-2026-114551"
-    ]
+    ],
+    "cwe": [
+      "CWE-312"
+    ],
+    "product": "MailEnable Auth",
+    "impact": "info",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "bc42b6a78437b058bafb7915449820a3",

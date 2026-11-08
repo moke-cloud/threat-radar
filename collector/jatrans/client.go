@@ -19,8 +19,11 @@ import (
 const DefaultEndpoint = "http://127.0.0.1:8080/v1/chat/completions"
 
 const (
-	defaultModel       = "local"
-	defaultBatchSize   = 4
+	defaultModel = "local"
+	// One item per request: batched answers from a small model drop or
+	// swap items. llama-server caches the shared system prompt, so the
+	// per-request overhead is small.
+	defaultBatchSize   = 1
 	defaultMaxRequests = 30
 	maxResponseBytes   = 1 << 20
 	maxOutputTokens    = 3500
@@ -35,6 +38,7 @@ Rules:
 - Use common Japanese security terms (e.g. remote code execution = リモートコード実行, privilege escalation = 権限昇格).
 - Version ranges: "before Y" / "prior to Y" = 「Y より前」, "through Y" = 「Y 以下」, "from X before Y" = 「X 以上 Y より前」.
 - Do not add, drop or summarize information. An empty string stays empty.
+- Answer every item, using the same keys as the input (an item may have only "title" or only "summary").
 - Reply with JSON only: {"items":[{"id":"<same id>","title":"<Japanese>","summary":"<Japanese>"}]}`
 
 // Client calls an OpenAI-compatible chat completions endpoint (llama-server).
@@ -81,8 +85,8 @@ type chatResponse struct {
 
 type batchEntry struct {
 	ID      flexID `json:"id"`
-	Title   string `json:"title"`
-	Summary string `json:"summary"`
+	Title   string `json:"title,omitempty"`
+	Summary string `json:"summary,omitempty"`
 }
 
 // flexID accepts "0" or 0: small models do not always keep the type.
@@ -197,6 +201,14 @@ func (c Client) translateBatch(ctx context.Context, batch []normalize.Item) (Cac
 		}
 		in := payload.Items[i]
 		title, summary := sanitize(strings.TrimSpace(e.Title)), sanitize(strings.TrimSpace(e.Summary))
+		// With only one field sent, small models sometimes answer it under the
+		// other key. Move it back before validating.
+		if in.Title == "" && summary == "" && title != "" {
+			title, summary = "", title
+		}
+		if in.Summary == "" && title == "" && summary != "" {
+			title, summary = summary, ""
+		}
 		// Nothing to translate means nothing to keep, whatever the model said.
 		if in.Title == "" {
 			title = ""

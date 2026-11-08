@@ -257,3 +257,24 @@ func TestBatchEntryAcceptsNumericID(t *testing.T) {
 		t.Fatalf("ids = %q %q", p.Items[0].ID, p.Items[1].ID)
 	}
 }
+
+func TestSummaryAnsweredInTitleFieldIsAccepted(t *testing.T) {
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		body, _ := io.ReadAll(r.Body)
+		if strings.Contains(string(body), `\"title\":\"\"`) {
+			t.Errorf("empty title must not be sent: %s", body)
+		}
+		content := `{"items":[{"id":"0","title":"imgproxy に整数オーバーフローがある。"}]}`
+		resp := map[string]any{"choices": []any{map[string]any{"message": map[string]any{"content": content}}}}
+		_ = json.NewEncoder(w).Encode(resp)
+	}))
+	defer srv.Close()
+	c := Client{Endpoint: srv.URL, HTTP: srv.Client(), BatchSize: 1}
+	it := item("n", "[CVSS 9.8 CRITICAL] CVE-2026-12345 — imgproxy has an integer overflow in…",
+		"imgproxy has an integer overflow in ICO.")
+	got, st := c.Translate(context.Background(), []normalize.Item{it})
+	if st.Translated != 1 || got["n"].Summary != "imgproxy に整数オーバーフローがある。" ||
+		got["n"].Title != "[CVSS 9.8 CRITICAL] CVE-2026-12345 — imgproxy に整数オーバーフローがある。" {
+		t.Fatalf("got %+v stats %+v", got["n"], st)
+	}
+}

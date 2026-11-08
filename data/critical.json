@@ -37,7 +37,9 @@
     "score": 75,
     "cves": [
       "CVE-2026-123549"
-    ]
+    ],
+    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-123549 — OpenAM 16.1.4 以前では、自己登録時に Valid Creation Attributes リストが適用されていないため、匿名攻撃者が制限された属性…",
+    "summary_ja": "OpenAM 16.1.4 以前では、自己登録時に Valid Creation Attributes リストが適用されていないため、匿名攻撃者が制限された属性（包括してグループメンバーシップ）を設定できる。攻撃者は、古い自己サービス REST エンドポイントまたは User Self-Service フローを通じて登録を行い、管理グループに参加し、OpenAM の完全な管理権限を得ることができる。"
   },
   {
     "id": "20e2f37b1c838d21c3d2c0931ab11b7c",
@@ -56,7 +58,9 @@
     "score": 60,
     "cves": [
       "CVE-2026-123531"
-    ]
+    ],
+    "title_ja": "[CVSS 8.8 HIGH] CVE-2026-123531 — Vikunja 1.0.0 から 2.7.1 までのバージョンでは、認証されたユーザーが /api/v1 list エンドポイントに page=0 を送信するこ…",
+    "summary_ja": "Vikunja 1.0.0 から 2.7.1 までのバージョンでは、認証されたユーザーが /api/v1 list エンドポイントに page=0 を送信することで service.maxitemsperpage の制限を回避できる未制御のリソース消費の脆弱性が存在します。攻撃者は自身で登録し、繰り返し page=0 を要求することで、未制御のSQLクエリ、メモリ材料化、および1行あたりのクエリの扇出を引き起こし、他のユーザーの可用性を低下させることができます。"
   },
   {
     "id": "772ac1ea461acf86a374ea2c47f5c72b",
@@ -76,7 +80,9 @@
     "score": 75,
     "cves": [
       "CVE-2026-120984"
-    ]
+    ],
+    "title_ja": "[CVSS 9.1 CRITICAL] CVE-2026-120984 — Keycloakサーバーのクライアント管理機能における脆弱性が発見されました。",
+    "summary_ja": "Keycloakサーバーのクライアント管理機能における脆弱性が発見されました。クライアントが作成またはインポートされ、認許サービスが有効になっている場合、システムはセットアッププロセス中に使用される内部セッション属性を適切にクリアしないことになります。これにより、クライアント管理権限を持つ認証済み攻撃者がセキュリティ制御を回避し、悪意あるJavaScriptポリシーをアップロードでき、そのポリシーが認許処理時にサーバー上で実行されるようになります。"
   },
   {
     "id": "124d9be520617267118e2c7944ab504a",
@@ -127,7 +133,9 @@
     ],
     "cves": [
       "CVE-2026-119075"
-    ]
+    ],
+    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-119075 — WooCommerceプラグインの登録フォームが、version 1.1.4 までに、FormHandler::validate_checkout_fields…",
+    "summary_ja": "WooCommerceプラグインの登録フォームが、version 1.1.4 までに、FormHandler::validate_checkout_fields() 関数においてallow-listチェックの欠如により権限昇格が可能である。My Accountの登録パス（validate_fields()）は、送信された'tgwcfb/user-roles'値をフォームで設定された許可されたロールと比較しているが、チェックアウト登録パス（validate_checkout_fields()、hooked to…）では同様のチェックが行われていない。"
   },
   {
     "id": "afcfa627189ddcf5cad565cf18debcdd",
@@ -152,7 +160,9 @@
     ],
     "cves": [
       "CVE-2026-118066"
-    ]
+    ],
+    "title_ja": "[CVSS 9.1 CRITICAL] CVE-2026-118066 — Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPress プラグ…",
+    "summary_ja": "Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPress プラグインは、すべてのバージョン（5.7.6 まで）において、アカウントの取得による認証回避が可能である。これは、`lib/models/model.php` 内の `OsModel::build_conditions_query()` 関数が、WHERE句の値を `'IS NULL'` および `'IS NOT NULL'` という文字列と比較し、その結果をSQLに直接結合しているため、バインドせずに実行していることによる。"
   },
   {
     "id": "aaebd2d12e7609834417272aa48e7b09",
@@ -176,7 +186,9 @@
     ],
     "cves": [
       "CVE-2026-104746"
-    ]
+    ],
+    "title_ja": "[CVSS 8.1 HIGH] CVE-2026-104746 — Motors – Car Dealership & Classified Listings Plugin プラグインは、すべてのバージョン（1.4.125 まで…",
+    "summary_ja": "Motors – Car Dealership & Classified Listings Plugin プラグインは、すべてのバージョン（1.4.125 まで）において、ファイルパスの検証が不十分なため、任意のファイル削除が可能である。これは、認証済みの攻撃者が、サブスクライバー権限以上のアクセスを持つ場合、stm_listings_ajax_save_user_data 関数を通じて任意のサーバー上のファイルを削除できるため、適切な条件下ではリモートコード実行が可能になる。"
   },
   {
     "id": "6f3318b43cea871c20589316cc7db115",
@@ -202,7 +214,9 @@
     ],
     "cves": [
       "CVE-2026-104014"
-    ]
+    ],
+    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-104014 — WordPressに配備されているNaimur Email OTP Verification for WooCommerceプラグインでは、バージョン2.1.0…",
+    "summary_ja": "WordPressに配備されているNaimur Email OTP Verification for WooCommerceプラグインでは、バージョン2.1.0までに認証回避の脆弱性が存在します。これは、パスワードリセットの最終化エンドポイント（wp_ajax_nopriv_ceovw_update_new_passwordアクションがCEOVW_AJAX::update_new_password()で処理される）が、メールが「VERIFIED」と記録されたデータベース行の存在のみで認証を実施しており、タイムスタンプのチェックやセッションの確認が行われていないためです。"
   },
   {
     "id": "885ac8d33072699d3526824fd77a55ac",
@@ -230,7 +244,9 @@
       "CVE-2026-87112"
     ],
     "epss": 0.00795,
-    "epss_percentile": 0.56647
+    "epss_percentile": 0.56647,
+    "title_ja": "[CVSS 8.8 HIGH] CVE-2026-87112 — WordPressのQA Assistants – Driven by dataプラグインは、すべてのバージョン（5.3.0まで含む）で、'dlevent_ve…",
+    "summary_ja": "WordPressのQA Assistants – Driven by dataプラグインは、すべてのバージョン（5.3.0まで含む）で、'dlevent_ver'パラメータを通じてPHPオブジェクト注入が可能になっています。これは、wrap_unserialize_static()関数がallowed_classesの制限なしでunserialize()を呼び出し、raw_nameパラメータにおけるパストラバーサルシーケンスがserialize_escape()によって正しくスクリーンされないためです。これにより、未認証の攻撃者が…"
   },
   {
     "id": "bdcca449bebc4a30a1599773a0806b7b",
@@ -256,7 +272,9 @@
       "CVE-2026-122001"
     ],
     "epss": 0.00097,
-    "epss_percentile": 0.00732
+    "epss_percentile": 0.00732,
+    "title_ja": "[CVSS 8.8 HIGH] CVE-2026-122001 — WooCommerce WordPressプラグインのKomfortkasse（1.4.9以前）は、REST APIリクエストの正当性を適切に検証していません。",
+    "summary_ja": "WooCommerce WordPressプラグインのKomfortkasse（1.4.9以前）は、REST APIリクエストの正当性を適切に検証していません。WordPressのオリジナルのnonce検証を上書きしており、ログイン済みの管理者ブラウザで生成された偽のリクエストが受け入れられるようになります。これにより、新しい管理者アカウントを作成し、サイト全体を完全に制御できるようになります。"
   },
   {
     "id": "9d8d00bb1062d15d889aa42b523c0da3",
@@ -283,7 +301,9 @@
       "CVE-2026-121491"
     ],
     "epss": 0.00224,
-    "epss_percentile": 0.13142
+    "epss_percentile": 0.13142,
+    "title_ja": "[CVSS 9.0 CRITICAL] CVE-2026-121491 — Fiber Admin WordPress プラグイン（4.0.1 以前）は、保護されていない管理ホイールで再生成される PHP ファイルに、リクエストヘッダー…",
+    "summary_ja": "Fiber Admin WordPress プラグイン（4.0.1 以前）は、保護されていない管理ホイールで再生成される PHP ファイルに、リクエストヘッダーを検証またはエスケープしていません。これにより、未認証の攻撃者がカスタムデータベースエラーページが有効になっている場合、管理者が設定を保存する前に攻撃者がランスを勝ち取って任意のコードを実行できるようになります。"
   },
   {
     "id": "df963a65c047b30120c1ceeb4eb0bd31",
@@ -393,7 +413,9 @@
       "CVE-2026-17342"
     ],
     "epss": 0.0085,
-    "epss_percentile": 0.58405
+    "epss_percentile": 0.58405,
+    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17342 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 まででは、リモート認証された攻撃者…",
+    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 まででは、リモート認証された攻撃者がコード生成の制御が不適切であるため、任意のコードを実行できる可能性があります。"
   },
   {
     "id": "72a0087cc2a9d32c204f0026d911e0ab",
@@ -416,7 +438,9 @@
       "CVE-2026-17340"
     ],
     "epss": 0.00922,
-    "epss_percentile": 0.6055
+    "epss_percentile": 0.6055,
+    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-17340 — IBM API Connect 12.1.0.0 から 12.1.1.2 まででは、パストラバーサルの脆弱性により、リモート攻撃者が任意のコードを実行できる可能…",
+    "summary_ja": "IBM API Connect 12.1.0.0 から 12.1.1.2 まででは、パストラバーサルの脆弱性により、リモート攻撃者が任意のコードを実行できる可能性があります。"
   },
   {
     "id": "e081be17689c2afd3f9d9654f1ed1a9b",
@@ -460,7 +484,9 @@
       "CVE-2026-17313"
     ],
     "epss": 0.0078,
-    "epss_percentile": 0.56157
+    "epss_percentile": 0.56157,
+    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-17313 — IBM API Connect 12.1.0.0 から 12.1.1.2 まででは、代替パスを通じた認証回避により、リモート攻撃者がセンシティブな情報を取得し、…",
+    "summary_ja": "IBM API Connect 12.1.0.0 から 12.1.1.2 まででは、代替パスを通じた認証回避により、リモート攻撃者がセンシティブな情報を取得し、ゲートウェイ構成を制御できる可能性があります。"
   },
   {
     "id": "5a98bbd3ef556f8db52b194bec533381",
@@ -481,7 +507,9 @@
       "CVE-2026-17280"
     ],
     "epss": 0.00548,
-    "epss_percentile": 0.46114
+    "epss_percentile": 0.46114,
+    "title_ja": "[CVSS 8.9 HIGH] CVE-2026-17280 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、認証試行の制限が不十分なため…",
+    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、認証試行の制限が不十分なため、リモート攻撃者が未認証状態でブレースフォース攻撃を実行し、有効な認証情報を取得できる可能性があります。"
   },
   {
     "id": "e7f104f5e6b1733b44ba0001cd39a2c3",
@@ -504,7 +532,9 @@
       "CVE-2026-17239"
     ],
     "epss": 0.00835,
-    "epss_percentile": 0.57921
+    "epss_percentile": 0.57921,
+    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17239 — IBM API Connect 12.1.0.0 から 12.1.1.2 では、パストラバースの脆弱性により、リモートに認証された攻撃者が任意のコードを実行でき…",
+    "summary_ja": "IBM API Connect 12.1.0.0 から 12.1.1.2 では、パストラバースの脆弱性により、リモートに認証された攻撃者が任意のコードを実行できる可能性があります。"
   },
   {
     "id": "8e79298af74b7f0c3bf70d4fdb509d17",
@@ -549,7 +579,9 @@
       "CVE-2026-17147"
     ],
     "epss": 0.00899,
-    "epss_percentile": 0.59857
+    "epss_percentile": 0.59857,
+    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17147 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者が…",
+    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者が任意のコードを実行し、不正な管理操作を行う可能性があります。これはパストラバース脆弱性によるものです。"
   },
   {
     "id": "2ad64402204067fd43d30c20e6cb7447",
@@ -571,7 +603,9 @@
       "CVE-2026-17117"
     ],
     "epss": 0.00803,
-    "epss_percentile": 0.56945
+    "epss_percentile": 0.56945,
+    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17117 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 において、リモートに認証された攻撃…",
+    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 において、リモートに認証された攻撃者がオブジェクト属性の不適切な制御により任意のコードを実行できる可能性があります。ユーザーがシステムが制御すべきフィールドを設定することで、コード実行が発生する可能性があります。"
   },
   {
     "id": "47373f52364684efd3c59384067186fd",

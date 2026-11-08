@@ -18,8 +18,7 @@
     "cves": [
       "CVE-2026-123550"
     ],
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-123550 — OpenAM 16.1.4 以前では、SAML v2.0 サービスプロバイダーにおいて、WantAssertionsSigned が false の場合に、EC…",
-    "summary_ja": "OpenAM 16.1.4 以前では、SAML v2.0 サービスプロバイダーにおいて、WantAssertionsSigned が false の場合に、ECP (PAOS) および HTTP-Artifact バインディングで署名されていないアサーションを受け入れるという認証回避の脆弱性が存在する。未認証のリモート攻撃者が偽のアサーションを送信することで、マップされたユーザー（包括して管理者）としてセッションを取得し、依存アプリケーションへのシングルサインオンをハイジャックできる。"
+    "product": "OpenAM"
   },
   {
     "id": "23b767da026ee22e0f68d268bd9f86da",
@@ -40,8 +39,7 @@
     "cves": [
       "CVE-2026-123549"
     ],
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-123549 — OpenAM 16.1.4 以前では、自己登録時に Valid Creation Attributes リストが適用されていないため、匿名攻撃者が制限された属性…",
-    "summary_ja": "OpenAM 16.1.4 以前では、自己登録時に Valid Creation Attributes リストが適用されていないため、匿名攻撃者が制限された属性（包括してグループメンバーシップ）を設定できる。攻撃者は、古い自己サービス REST エンドポイントまたは User Self-Service フローを通じて登録を行い、管理グループに参加し、OpenAM の完全な管理権限を得ることができる。"
+    "product": "OpenAM"
   },
   {
     "id": "20e2f37b1c838d21c3d2c0931ab11b7c",
@@ -61,8 +59,7 @@
     "cves": [
       "CVE-2026-123531"
     ],
-    "title_ja": "[CVSS 8.8 HIGH] CVE-2026-123531 — Vikunja 1.0.0 から 2.7.1 までのバージョンでは、認証されたユーザーが /api/v1 list エンドポイントに page=0 を送信するこ…",
-    "summary_ja": "Vikunja 1.0.0 から 2.7.1 までのバージョンでは、認証されたユーザーが /api/v1 list エンドポイントに page=0 を送信することで service.maxitemsperpage の制限を回避できる未制御のリソース消費の脆弱性が存在します。攻撃者は自身で登録し、繰り返し page=0 を要求することで、未制御のSQLクエリ、メモリ材料化、および1行あたりのクエリの扇出を引き起こし、他のユーザーの可用性を低下させることができます。"
+    "product": "Vikunja"
   },
   {
     "id": "772ac1ea461acf86a374ea2c47f5c72b",
@@ -83,8 +80,7 @@
     "cves": [
       "CVE-2026-120984"
     ],
-    "title_ja": "[CVSS 9.1 CRITICAL] CVE-2026-120984 — Keycloakサーバーのクライアント管理機能における脆弱性が発見されました。",
-    "summary_ja": "Keycloakサーバーのクライアント管理機能における脆弱性が発見されました。クライアントが作成またはインポートされ、認許サービスが有効になっている場合、システムはセットアッププロセス中に使用される内部セッション属性を適切にクリアしないことになります。これにより、クライアント管理権限を持つ認証済み攻撃者がセキュリティ制御を回避し、悪意あるJavaScriptポリシーをアップロードでき、そのポリシーが認許処理時にサーバー上で実行されるようになります。"
+    "product": "Keycloak"
   },
   {
     "id": "124d9be520617267118e2c7944ab504a",
@@ -110,8 +106,7 @@
     "cves": [
       "CVE-2026-122041"
     ],
-    "title_ja": "[CVSS 9.1 CRITICAL] CVE-2026-122041 — WordPressのWooCommerce（Pro）向けCheckout Field Editorプラグインでは、ajax_remove_uploaded()関…",
-    "summary_ja": "WordPressのWooCommerce（Pro）向けCheckout Field Editorプラグインでは、ajax_remove_uploaded()関数において、アタッチメントの削除に必要な権限または所有者チェックが欠如しているため、任意のアタッチメントが不正に削除される可能性があります。この問題はバージョン3.8.0まで（含む）に影響を及ぼします。削除ハンドラはwp_ajaxおよびwp_ajax_noprivに登録されており、'file_handling_nonce'というノンスのみで制御されています。このノンスは公開のチェックアウトページのマーカー（data-nonce…）内で発行されています。"
+    "product": "Checkout Field Editor for WooCommerce"
   },
   {
     "id": "d93e4f5d71e804284a6f5e0546419861",
@@ -138,8 +133,7 @@
     "cves": [
       "CVE-2026-119075"
     ],
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-119075 — WooCommerceプラグインの登録フォームが、version 1.1.4 までに、FormHandler::validate_checkout_fields…",
-    "summary_ja": "WooCommerceプラグインの登録フォームが、version 1.1.4 までに、FormHandler::validate_checkout_fields() 関数においてallow-listチェックの欠如により権限昇格が可能である。My Accountの登録パス（validate_fields()）は、送信された'tgwcfb/user-roles'値をフォームで設定された許可されたロールと比較しているが、チェックアウト登録パス（validate_checkout_fields()、hooked to…）では同様のチェックが行われていない。"
+    "product": "Registration Form for WooCommerce"
   },
   {
     "id": "afcfa627189ddcf5cad565cf18debcdd",
@@ -165,8 +159,7 @@
     "cves": [
       "CVE-2026-118066"
     ],
-    "title_ja": "[CVSS 9.1 CRITICAL] CVE-2026-118066 — Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPress プラグ…",
-    "summary_ja": "Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPress プラグインは、すべてのバージョン（5.7.6 まで）において、アカウントの取得による認証回避が可能である。これは、`lib/models/model.php` 内の `OsModel::build_conditions_query()` 関数が、WHERE句の値を `'IS NULL'` および `'IS NOT NULL'` という文字列と比較し、その結果をSQLに直接結合しているため、バインドせずに実行していることによる。"
+    "product": "Appointment Booking Plugin"
   },
   {
     "id": "aaebd2d12e7609834417272aa48e7b09",
@@ -191,8 +184,7 @@
     "cves": [
       "CVE-2026-104746"
     ],
-    "title_ja": "[CVSS 8.1 HIGH] CVE-2026-104746 — Motors – Car Dealership & Classified Listings Plugin プラグインは、すべてのバージョン（1.4.125 まで…",
-    "summary_ja": "Motors – Car Dealership & Classified Listings Plugin プラグインは、すべてのバージョン（1.4.125 まで）において、ファイルパスの検証が不十分なため、任意のファイル削除が可能である。これは、認証済みの攻撃者が、サブスクライバー権限以上のアクセスを持つ場合、stm_listings_ajax_save_user_data 関数を通じて任意のサーバー上のファイルを削除できるため、適切な条件下ではリモートコード実行が可能になる。"
+    "product": "The Motors – Car Dealership & Classified Listings Plugin"
   },
   {
     "id": "6f3318b43cea871c20589316cc7db115",
@@ -219,8 +211,7 @@
     "cves": [
       "CVE-2026-104014"
     ],
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-104014 — WordPressに配備されているNaimur Email OTP Verification for WooCommerceプラグインでは、バージョン2.1.0…",
-    "summary_ja": "WordPressに配備されているNaimur Email OTP Verification for WooCommerceプラグインでは、バージョン2.1.0までに認証回避の脆弱性が存在します。これは、パスワードリセットの最終化エンドポイント（wp_ajax_nopriv_ceovw_update_new_passwordアクションがCEOVW_AJAX::update_new_password()で処理される）が、メールが「VERIFIED」と記録されたデータベース行の存在のみで認証を実施しており、タイムスタンプのチェックやセッションの確認が行われていないためです。"
+    "product": "Naimur Email OTP Verification for WooCommerce"
   },
   {
     "id": "885ac8d33072699d3526824fd77a55ac",
@@ -249,8 +240,7 @@
     ],
     "epss": 0.00795,
     "epss_percentile": 0.56647,
-    "title_ja": "[CVSS 8.8 HIGH] CVE-2026-87112 — WordPressのQA Assistants – Driven by dataプラグインは、すべてのバージョン（5.3.0まで含む）で、'dlevent_ve…",
-    "summary_ja": "WordPressのQA Assistants – Driven by dataプラグインは、すべてのバージョン（5.3.0まで含む）で、'dlevent_ver'パラメータを通じてPHPオブジェクト注入が可能になっています。これは、wrap_unserialize_static()関数がallowed_classesの制限なしでunserialize()を呼び出し、raw_nameパラメータにおけるパストラバーサルシーケンスがserialize_escape()によって正しくスクリーンされないためです。これにより、未認証の攻撃者が…"
+    "product": "QA Assistants – Driven by data plugin for WordPress"
   },
   {
     "id": "bdcca449bebc4a30a1599773a0806b7b",
@@ -277,8 +267,7 @@
     ],
     "epss": 0.00097,
     "epss_percentile": 0.00732,
-    "title_ja": "[CVSS 8.8 HIGH] CVE-2026-122001 — WooCommerce WordPressプラグインのKomfortkasse（1.4.9以前）は、REST APIリクエストの正当性を適切に検証していません。",
-    "summary_ja": "WooCommerce WordPressプラグインのKomfortkasse（1.4.9以前）は、REST APIリクエストの正当性を適切に検証していません。WordPressのオリジナルのnonce検証を上書きしており、ログイン済みの管理者ブラウザで生成された偽のリクエストが受け入れられるようになります。これにより、新しい管理者アカウントを作成し、サイト全体を完全に制御できるようになります。"
+    "product": "Komfortkasse for WooCommerce"
   },
   {
     "id": "9d8d00bb1062d15d889aa42b523c0da3",
@@ -306,8 +295,7 @@
     ],
     "epss": 0.00224,
     "epss_percentile": 0.13142,
-    "title_ja": "[CVSS 9.0 CRITICAL] CVE-2026-121491 — Fiber Admin WordPress プラグイン（4.0.1 以前）は、保護されていない管理ホイールで再生成される PHP ファイルに、リクエストヘッダー…",
-    "summary_ja": "Fiber Admin WordPress プラグイン（4.0.1 以前）は、保護されていない管理ホイールで再生成される PHP ファイルに、リクエストヘッダーを検証またはエスケープしていません。これにより、未認証の攻撃者がカスタムデータベースエラーページが有効になっている場合、管理者が設定を保存する前に攻撃者がランスを勝ち取って任意のコードを実行できるようになります。"
+    "product": "Fiber Admin"
   },
   {
     "id": "df963a65c047b30120c1ceeb4eb0bd31",
@@ -330,8 +318,7 @@
     ],
     "epss": 0.00926,
     "epss_percentile": 0.60691,
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-17408 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、OS コマンドに特殊要素が適…",
-    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、OS コマンドに特殊要素が適切に中立化されていないため、リモート攻撃者が任意のコードを実行できる可能性がある。"
+    "product": "IBM API Connect"
   },
   {
     "id": "f1690c25f41b040b7e22e95c3d068b67",
@@ -354,8 +341,7 @@
     ],
     "epss": 0.01908,
     "epss_percentile": 0.79889,
-    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17402 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者が…",
-    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者がOSコマンド注入により任意のコマンドを実行できる可能性があります。ユーザーが入力したデータが適切に中立化されず、OSに渡されることで、その結果、ホスト上でコマンドが実行される可能性があります。"
+    "product": "IBM API Connect"
   },
   {
     "id": "5a5ab8fdf24958c2e2a03a00f7f57fb5",
@@ -378,8 +364,7 @@
     ],
     "epss": 0.00786,
     "epss_percentile": 0.56372,
-    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17399 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者が…",
-    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者がアップロードされたコンテンツの検証が不十分なため、任意のコードを実行できる可能性があります。製品にアップロードされたコンテンツが処理される前に十分に検証されていないため、サーバー上でコードが実行される可能性があります。"
+    "product": "IBM API Connect"
   },
   {
     "id": "e310b0b4e980342965744ae90633396c",
@@ -402,8 +387,7 @@
     ],
     "epss": 0.0085,
     "epss_percentile": 0.58405,
-    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17359 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者が…",
-    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者が任意のコードを実行できる可能性があります。ユーザーが提供する値が製品が生成するコードに影響を与えるため、コード実行が発生する可能性があります。"
+    "product": "IBM API Connect"
   },
   {
     "id": "df0dd9cbc9d565f4e6fa1fc9a1dca037",
@@ -426,8 +410,7 @@
     ],
     "epss": 0.0085,
     "epss_percentile": 0.58405,
-    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17342 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 まででは、リモート認証された攻撃者…",
-    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 まででは、リモート認証された攻撃者がコード生成の制御が不適切であるため、任意のコードを実行できる可能性があります。"
+    "product": "IBM API Connect"
   },
   {
     "id": "72a0087cc2a9d32c204f0026d911e0ab",
@@ -451,8 +434,7 @@
     ],
     "epss": 0.00922,
     "epss_percentile": 0.6055,
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-17340 — IBM API Connect 12.1.0.0 から 12.1.1.2 まででは、パストラバーサルの脆弱性により、リモート攻撃者が任意のコードを実行できる可能…",
-    "summary_ja": "IBM API Connect 12.1.0.0 から 12.1.1.2 まででは、パストラバーサルの脆弱性により、リモート攻撃者が任意のコードを実行できる可能性があります。"
+    "product": "IBM API Connect"
   },
   {
     "id": "e081be17689c2afd3f9d9654f1ed1a9b",
@@ -475,8 +457,7 @@
     ],
     "epss": 0.00835,
     "epss_percentile": 0.57922,
-    "title_ja": "[CVSS 8.8 HIGH] CVE-2026-17335 — IBM API Connect 12.1.0.0 から 12.1.1.2 まででは、リモートに認証された攻撃者がパストラバースの影響を受け、任意のコードを実行で…",
-    "summary_ja": "IBM API Connect 12.1.0.0 から 12.1.1.2 まででは、リモートに認証された攻撃者がパストラバースの影響を受け、任意のコードを実行できる可能性があります。アップロードされたコンテンツ内のファイルパスが十分に検証されていないため、意図された場所外にファイルが書き込まれ、コードが実行される可能性があります。"
+    "product": "IBM API Connect"
   },
   {
     "id": "e8b5746f45f93b0c07622a7504fb43ab",
@@ -499,8 +480,7 @@
     ],
     "epss": 0.0078,
     "epss_percentile": 0.56157,
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-17313 — IBM API Connect 12.1.0.0 から 12.1.1.2 まででは、代替パスを通じた認証回避により、リモート攻撃者がセンシティブな情報を取得し、…",
-    "summary_ja": "IBM API Connect 12.1.0.0 から 12.1.1.2 まででは、代替パスを通じた認証回避により、リモート攻撃者がセンシティブな情報を取得し、ゲートウェイ構成を制御できる可能性があります。"
+    "product": "IBM API Connect"
   },
   {
     "id": "5a98bbd3ef556f8db52b194bec533381",
@@ -522,8 +502,7 @@
     ],
     "epss": 0.00548,
     "epss_percentile": 0.46114,
-    "title_ja": "[CVSS 8.9 HIGH] CVE-2026-17280 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、認証試行の制限が不十分なため…",
-    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、認証試行の制限が不十分なため、リモート攻撃者が未認証状態でブレースフォース攻撃を実行し、有効な認証情報を取得できる可能性があります。"
+    "product": "IBM API Connect"
   },
   {
     "id": "e7f104f5e6b1733b44ba0001cd39a2c3",
@@ -547,8 +526,7 @@
     ],
     "epss": 0.00835,
     "epss_percentile": 0.57921,
-    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17239 — IBM API Connect 12.1.0.0 から 12.1.1.2 では、パストラバースの脆弱性により、リモートに認証された攻撃者が任意のコードを実行でき…",
-    "summary_ja": "IBM API Connect 12.1.0.0 から 12.1.1.2 では、パストラバースの脆弱性により、リモートに認証された攻撃者が任意のコードを実行できる可能性があります。"
+    "product": "IBM API Connect"
   },
   {
     "id": "8e79298af74b7f0c3bf70d4fdb509d17",
@@ -571,8 +549,7 @@
     ],
     "epss": 0.00786,
     "epss_percentile": 0.56372,
-    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17150 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者が…",
-    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者が任意のコードを実行し、他のテナントのセンシティブな情報をアクセスできる可能性があります。アップロードされたカスタムモジュールの内容が十分に検証されていないため、ユーザー自身のテナントを超えてコードが実行される可能性があります。"
+    "product": "IBM API Connect"
   },
   {
     "id": "25730d61031161b14eb7ac4d9e7e53f2",
@@ -596,8 +573,7 @@
     ],
     "epss": 0.00899,
     "epss_percentile": 0.59857,
-    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17147 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者が…",
-    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 では、リモートに認証された攻撃者が任意のコードを実行し、不正な管理操作を行う可能性があります。これはパストラバース脆弱性によるものです。"
+    "product": "IBM API Connect"
   },
   {
     "id": "2ad64402204067fd43d30c20e6cb7447",
@@ -620,8 +596,7 @@
     ],
     "epss": 0.00803,
     "epss_percentile": 0.56945,
-    "title_ja": "[CVSS 9.9 CRITICAL] CVE-2026-17117 — IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 において、リモートに認証された攻撃…",
-    "summary_ja": "IBM API Connect 10.0.8.0 から 10.0.8.12 および 12.1.0.0 から 12.1.1.2 において、リモートに認証された攻撃者がオブジェクト属性の不適切な制御により任意のコードを実行できる可能性があります。ユーザーがシステムが制御すべきフィールドを設定することで、コード実行が発生する可能性があります。"
+    "product": "IBM API Connect"
   },
   {
     "id": "47373f52364684efd3c59384067186fd",
@@ -648,9 +623,7 @@
       "CVE-2026-19803"
     ],
     "epss": 0.00962,
-    "epss_percentile": 0.61819,
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-19803 — The Printcart Store – Web to Print Product Designer for WooCommerce プラグイン（WordPr…",
-    "summary_ja": "The Printcart Store – Web to Print Product Designer for WooCommerce プラグイン（WordPress用）は、すべてのバージョン（2.13.2 まで）において、任意のファイルアップロードの脆弱性が存在します。これは、`nbu_crop_image` AJAX ハンドラーがユーザー入力された `url` パラメータを受け取り、`Nbdesigner_IO::convert_url_to_path()` がその値をアップロードベースディレクトリに連結し、`../` シーケンスを正規化または削除しないことにより、出力ディレクトリを導出するためです。"
+    "epss_percentile": 0.61819
   },
   {
     "id": "a46d735a67a61146ef046bdcaa0e9b11",
@@ -678,8 +651,7 @@
     ],
     "epss": 0.00872,
     "epss_percentile": 0.59118,
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-93754 — WordPress用のpayever – WooCommerce Gatewayプラグインが、バージョン4.8.0までに任意のファイルアップロードが可能となり、…",
-    "summary_ja": "WordPress用のpayever – WooCommerce Gatewayプラグインが、バージョン4.8.0までに任意のファイルアップロードが可能となり、リモートコード実行が発生する可能性がある。WooCommerce-APIの3つのコールバック関数（payever_set_sandbox_api_keys、payever_toggle_subscription、payever_synchronization_incoming）は認証、権限チェック、またはノンスの確認が行われていないため、アップロードされた画像ファイルが公開ディレクトリにリモートから書き込まれる可能性がある。"
+    "product": "payever – WooCommerce Gateway"
   },
   {
     "id": "e9c862ab4b444fbb2a0ed932d4061473",
@@ -706,8 +678,7 @@
     ],
     "epss": 0.00516,
     "epss_percentile": 0.44149,
-    "title_ja": "[CVSS 8.8 HIGH] CVE-2026-104913 — WordPress の Interactive Real Estate – Floor Plan ＆ Building Visualizer プラグインでは、す…",
-    "summary_ja": "WordPress の Interactive Real Estate – Floor Plan ＆ Building Visualizer プラグインでは、すべてのバージョン 2.6.0 までに、extract_zip_data 関数を通じて任意のファイルのアップロードが可能である。これは、アップロードされた ZIP ファイルのメンバーをアップロードディレクトリにコピーする際に、権限チェック、ノンスの検証、ファイル拡張子または MIME タイプの検証が行われていないためである。これにより、認証済みの攻撃者が、アップロードされた ZIP ファイルのメンバーをアップロードディレクトリにコピーできるようになり、リモートコード実行や権限昇格などの攻撃が可能になる。"
+    "product": "Interactive Real Estate – Floor Plan & Building Visualizer"
   },
   {
     "id": "0692497f7625460cef94fe38268eb7df",
@@ -728,8 +699,7 @@
     "cves": [
       "CVE-2026-68935"
     ],
-    "title_ja": "[CVSS 9.1 CRITICAL] CVE-2026-68935 — Chartbrew は、データベースやAPIからチャートを作成できるオープンソースのウェブアプリケーションです。",
-    "summary_ja": "Chartbrew は、データベースやAPIからチャートを作成できるオープンソースのウェブアプリケーションです。バージョン 4.8.5 から 5.2.2 まで、API接続の作成および更新操作において、ユーザー入力から内部の allowPrivateHost フィールドが受け入れられます。API接続を管理できる認証ユーザーがこのフィールドを有効にすることで、プライベートネットワークおよび予約ネットワークの制限を回避できる可能性があります。アップグレード遷移プロセスにおいても、既存のAPI接続に対してこのオーバーライドが有効になります。"
+    "product": "Chartbrew"
   },
   {
     "id": "a18b4518395cbc0a6ac4b0deb5390ef5",
@@ -750,8 +720,7 @@
     "cves": [
       "CVE-2026-59104"
     ],
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-59104 — UgCS サーバー 6.2 以前では、HCI プロトコルのログインハンドラー（LoginHandler）が TCP ポート 3334 に公開されており、ユーザー…",
-    "summary_ja": "UgCS サーバー 6.2 以前では、HCI プロトコルのログインハンドラー（LoginHandler）が TCP ポート 3334 に公開されており、ユーザーデータベースにちょうど1人のユーザー（デフォルトの単一操作者インストール）がある場合、LoginRequest に userLogin および userPassword フィールドが空である場合、システムは「唯一のユーザーを使用する」と解釈し、認証済みセッションを返す。このサービスはすべてのインターフェースにリスニングしているため…"
+    "product": "UgCS server"
   },
   {
     "id": "6cb9a163640110a2b1ce83496b50dcc3",
@@ -773,8 +742,7 @@
     "cves": [
       "CVE-2026-50240"
     ],
-    "title_ja": "[CVSS 8.8 HIGH] CVE-2026-50240 — OpenShift Pipelines-as-Code (PAC) において、Repository カスタムリソースの作成者にその作成権限があるかどうかを確認し…",
-    "summary_ja": "OpenShift Pipelines-as-Code (PAC) において、Repository カスタムリソースの作成者にその作成権限があるかどうかを確認しない脆弱性が発見されました。Namespace に Repository および Secret の作成・削除権限のみを持つユーザーが、PAC が自動プロビジョニングされたパイプライン ServiceAccount として攻撃者によって制御された PipelineRun を実行できるようになります。この ServiceAccount はデフォルトで ClusterRole/edit を持ち、結果として namespace スコープでの権限昇格が発生します。"
+    "product": "OpenShift Pipelines-as-Code"
   },
   {
     "id": "7b343ae36ec68a1a7a9dda0737ba6fc8",
@@ -795,8 +763,7 @@
     "cves": [
       "CVE-2026-86044"
     ],
-    "title_ja": "[CVSS 9.6 CRITICAL] CVE-2026-86044 — JupyterLab Desktop は、JupyterLab 用のクロスプラットフォームデスクトップアプリケーションです。",
-    "summary_ja": "JupyterLab Desktop は、JupyterLab 用のクロスプラットフォームデスクトップアプリケーションです。4.6.2-1 以前のバージョンでは、レンダラーに getServerInfo を暴露しており、現在のページがローカル Jupyter サーバーのオリジンを持っているかどうかを確認していませんでした。JupyterLab 4.4.8 以前のローカルマネージドセッションにおいて、攻撃者は信頼できないノートブックに仕組みのされた MathJax リンクを配置できます。被害者がそのノートブックを開き、リンクをクリックした場合、既存のレンダラーがナビゲートし、リモートコード実行が可能になります。"
+    "product": "JupyterLab Desktop"
   },
   {
     "id": "a64c1d9d79afe1a21690577a40de2cc6",
@@ -815,7 +782,8 @@
     "score": 60,
     "cves": [
       "CVE-2026-85736"
-    ]
+    ],
+    "product": "Chartbrew"
   },
   {
     "id": "372fcb8a50668f56fe9a827398d912a0",
@@ -835,8 +803,7 @@
     "cves": [
       "CVE-2026-85712"
     ],
-    "title_ja": "[CVSS 8.8 HIGH] CVE-2026-85712 — Chartbrew は、データベースやAPIに直接接続し、そのデータを使ってチャートを作成できるオープンソースのウェブアプリケーションです。",
-    "summary_ja": "Chartbrew は、データベースやAPIに直接接続し、そのデータを使ってチャートを作成できるオープンソースのウェブアプリケーションです。5.2.3 以前では、共有プロジェクトの権限チェックが呼び出し側が制御する team_id を信頼し、teamOwner/teamAdmin ブランチが対象プロジェクトがそのチームに属していることを確認せずに継続していました。脆弱性の影響範囲は、プロジェクトルートおよび関連する認可チェックでユーザーが制御するプロジェクトが受け入れられた部分です。"
+    "product": "Chartbrew"
   },
   {
     "id": "ab8df82d1cf7c28a504c62b81f766757",
@@ -861,8 +828,7 @@
     "cves": [
       "CVE-2026-85295"
     ],
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-85295 — Chartbrewは、データベースやAPIに直接接続し、そのデータをチャートとして表示できるオープンソースのウェブアプリケーションです。",
-    "summary_ja": "Chartbrewは、データベースやAPIに直接接続し、そのデータをチャートとして表示できるオープンソースのウェブアプリケーションです。5.2.3以前では、4つの認証ヘルパーがCB_SECRETで署名されたセッショントークンを受け入れており、既知の弱い値またはデフォルトで提供された値が使用されていたため、脆弱性が存在しました。脆弱性の影響範囲は、APIおよびソケット層におけるserver/modules/verifyToken.js、verifyUser.js、getUserFromToken.js、socketManager.jsでのセッションJWTのフォールバックにあります。攻撃者がこの問題を活用することで、"
+    "product": "Chartbrew"
   },
   {
     "id": "79e2dbddbf0e7773487ff6f1b9438751",
@@ -887,8 +853,7 @@
     "cves": [
       "CVE-2026-54349"
     ],
-    "title_ja": "[CVSS 9.8 CRITICAL] CVE-2026-54349 — Chartbrew は、データベースやAPIに直接接続し、そのデータを使ってチャートを作成できるオープンソースのウェブアプリケーションです。",
-    "summary_ja": "Chartbrew は、データベースやAPIに直接接続し、そのデータを使ってチャートを作成できるオープンソースのウェブアプリケーションです。5.2.1 以前では、SQLダッシュボードの変数置換において、攻撃者が制御できるJavaScript文字列がSQLコンネクタにおいて不適切に使用されており、MySQLおよびMariaDBの引用文コンテキストにおいてバックスラッシュがエスケープされませんでした。脆弱性の影響範囲は公開されており、埋め込まれたダッシュボードやチャートリクエストが呼び出される場面にあります。"
+    "product": "Chartbrew"
   },
   {
     "id": "385943d5064dceaa9c5c034acbe5092b",
@@ -1475,8 +1440,7 @@
     "cves": [
       "CVE-2026-19868"
     ],
-    "title_ja": "[KEV] CVE-2026-19868 — SonicWall SonicOS SSLVPN：SonicWall SonicOS SSLVPNにおける単一要因認証の使用に関する脆弱性",
-    "summary_ja": "SonicWall SonicOS SSLVPN には、代替認証方法の有効な資格情報をもつユーザーが SAML 認証制御を回避できる単一要因認証の使用に関する脆弱性があります。この脆弱性が成功的に利用されると、SAMLで強制された多要因認証（MFA）も回避される可能性があります。\n対策：ベンダーの指示に従って対策を適用し、CISAのBOD 26-04「セキュリティ更新の優先順位を決定するための」に準拠してコンプライアンスを確保してください。"
+    "product": "SonicOS SSLVPN"
   },
   {
     "id": "0212524092b3a05a43ad5d3a5e958df7",
@@ -1758,8 +1722,7 @@
     "cves": [
       "CVE-2024-27834"
     ],
-    "title_ja": "[KEV] CVE-2024-27834 — Apple 多様な製品：不正認証脆弱性の発見",
-    "summary_ja": "Apple の iOS、iPadOS、macOS、Safari、tvOS および watchOS 10.5 では、任意の読み取りおよび書き込み権限を持つ攻撃者が指標認証を回避できる不正認証の脆弱性が存在します。\n対応：ベンダーの指示に従って対策を適用し、CISA の BOD 26-04 「リスクに基づくセキュリティ更新の優先順位設定」（注記に記載のURLを参照）および「フォレインス・トリージ要件」（注記に記載のURLを参照）のガイドラインに従ってコンプライアンスを確保してください。"
+    "product": "iOS"
   },
   {
     "id": "6b8856a8b25f043ae9f0312b0c0e0749",
@@ -1819,8 +1782,7 @@
     "cves": [
       "CVE-2026-119977"
     ],
-    "title_ja": "[KEV] CVE-2026-119977 — WordPress WordPress Core: WordPress WordPress Coreにおけるタイム・オブ・チェック・タイム・オブ・ユース（TOCTOU）レース条件の脆弱性",
-    "summary_ja": "WordPress WordPress Core には、フルパッケージのコアアップグレード中に使用される予測可能でウェブにアクセス可能なスタージングパスが原因で、未認証の攻撃者がサーバー上でコードを実行できるタイム・オブ・チェック・タイム・オブ・ユース（TOCTOU）レース条件の脆弱性が存在します。\n対応：ベンダーの指示に従って対策を適用し、CISAのBOD 26-04「セキュリティ更新の優先順位を決定するための」に準拠してコンプライアンスを確保してください。"
+    "product": "WordPress"
   },
   {
     "id": "4cc8492440ac8980f9ddda28021ab41b",
@@ -1904,7 +1866,9 @@
     "score": 77,
     "vendors": [
       "ivanti"
-    ]
+    ],
+    "title_ja": "Ivanti 2つのConnect Secureゼロデイをパッチ、ゼロデイ攻撃で連鎖的に悪用されている",
+    "summary_ja": "Ivantiは、少なくとも10月1日以降、ゼロデイ攻撃で連鎖的に悪用されている2つのConnect Secure（ICS）リモートアクセスゲートウェイの脆弱性を修正するためのセキュリティ更新を公開しました。 [...]"
   },
   {
     "id": "f0e7861d6749d24db7220da3c8eb3a88",
@@ -1920,7 +1884,9 @@
       "actively-exploited"
     ],
     "severity": "high",
-    "score": 67
+    "score": 67,
+    "title_ja": "CyberStrikeAI が実際の攻撃で悪用される：AIを用いた組織への実際の攻撃",
+    "summary_ja": "我々は、教育機関への一連の攻撃において、ペネトレーションテストフレームワークであるCyberStrikeAIを用いて完全に自動化された侵入後フェーズの攻撃を分析した。"
   },
   {
     "id": "4a4eaf068ca180d993467f499e4fb2de",
@@ -2033,7 +1999,9 @@
     "score": 67,
     "vendors": [
       "gitlab"
-    ]
+    ],
+    "title_ja": "CISAは最大深刻度のGitLabの脆弱性が実際の攻撃で悪用されていると発表",
+    "summary_ja": "アメリカのサイバーセキュリティおよびインフラストラクチャセキュリティ庁（CISA）によると、攻撃者らが先月パッチを適用した最大深刻度のGitLabの脆弱性をすでに実際の攻撃で悪用している。 [...]"
   },
   {
     "id": "2839d28ff9722e277903dcd6ea38a698",
@@ -2050,7 +2018,9 @@
       "actively-exploited"
     ],
     "severity": "critical",
-    "score": 87
+    "score": 87,
+    "title_ja": "ドロップルが、Commerce Coreモジュールの重大なアクセス回避脆弱性のexploitが実際の攻撃で悪用されていることについて警告",
+    "summary_ja": "ドロップルは、Commerce Coreモジュールにおける重大なアクセス回避脆弱性のパッチを適用すべきであると管理者に警告しており、攻撃者が実際にその脆弱性を悪用していると報告されています。 [...]"
   },
   {
     "id": "8fff3b1ffdbb2973d3c101895d6d76d9",
@@ -2077,7 +2047,8 @@
       "CVE-2026-118527",
       "CVE-2026-104935",
       "CVE-2026-111357"
-    ]
+    ],
+    "product": "Ivanti Connect Secure"
   },
   {
     "id": "3c8163522c20233cffa053624cbc2f65",
@@ -2104,7 +2075,8 @@
       "CVE-2026-111357",
       "CVE-2026-104935",
       "CVE-2026-118527"
-    ]
+    ],
+    "product": "Ivanti Connect Secure"
   },
   {
     "id": "63edef88ee8f47c9ad517eb7a0d3e6df",
@@ -2120,7 +2092,9 @@
       "rce"
     ],
     "severity": "high",
-    "score": 60
+    "score": 60,
+    "title_ja": "情報セキュリティの静かな週間 <.<",
+    "summary_ja": "Threat Sourceニュースレターのこの号では、ウィリアムがPHPが話題を占め、Node.jsも参加していることについて述べますが、その中でも依然として良い人々が良い仕事をしていることを強調しています。"
   },
   {
     "id": "0243d8026d10ccdf940905ab84feb6ba",
@@ -2142,7 +2116,9 @@
     "score": 85,
     "vendors": [
       "linux"
-    ]
+    ],
+    "title_ja": "CISAがFragnesia Linuxの脆弱性がPHP2Shell攻撃で連鎖的に悪用されていること警告",
+    "summary_ja": "米国サイバーセキュリティおよびインフラストラクチャセキュリティ庁（CISA）は、政府機関に高 Severity のLinuxカーネル権限昇格バグのパッチを適用するよう警告。この脆弱性が、実際の攻撃で悪用されており、PHP2Shellの脆弱性と連鎖的に利用されている。 [...]"
   },
   {
     "id": "08690e324fbe54d7523e36cc58751b3c",
@@ -2208,7 +2184,8 @@
     ],
     "cves": [
       "CVE-2026-97229"
-    ]
+    ],
+    "product": "GitLab"
   },
   {
     "id": "bbb80b0838de84b8521f1e22f4f744a8",
@@ -2233,7 +2210,8 @@
     ],
     "cves": [
       "CVE-2026-76418"
-    ]
+    ],
+    "product": "Cisco Secure Firewall ASA Software"
   },
   {
     "id": "2453f2a66e9444ccc67394a930197dbb",
@@ -2249,7 +2227,9 @@
       "0day"
     ],
     "severity": "high",
-    "score": 67
+    "score": 67,
+    "title_ja": "Volt Typhoon が 'Silent Train' フレームワークを用いてゼロデイ攻撃を隠している",
+    "summary_ja": "中国の国家支援型ハッキンググループ Volt Typhoon は、必要に応じて即座にコンピュータを侵害し、接続されたデバイスの回転するチェーンを構築するフレームワークを用いており、高価値システムをターゲットとしたゼロデイ攻撃も含まれている。 [...]"
   },
   {
     "id": "6a4e1a3acca9c28848e85b640b1cfc7a",
@@ -2721,7 +2701,8 @@
     ],
     "cves": [
       "CVE-2026-41709"
-    ]
+    ],
+    "product": "VMWare ESX"
   },
   {
     "id": "729f48f65e2fa0d2d06c04bcfd3698e5",
@@ -2748,7 +2729,8 @@
       "CVE-2026-46300",
       "CVE-2026-109618",
       "CVE-2026-109619"
-    ]
+    ],
+    "product": "Linux Kernel"
   },
   {
     "id": "9f52bfde32ccb4b6bdfd78ed342ce58a",
@@ -2780,7 +2762,9 @@
       "actively-exploited"
     ],
     "severity": "high",
-    "score": 67
+    "score": 67,
+    "title_ja": "CISAがPHP2Shellの脆弱性が現在攻撃で悪用されていることを確認",
+    "summary_ja": "アメリカのサイバーセキュリティおよびインフラストラクチャセキュリティ庁（CISA）は、PHP2Shellの脆弱性を実際に攻撃で悪用されているものとして、その脆弱性を積極的に悪用されているセキュリティ上の問題としてカタログに追加し、政府機関に4日までにシステムのパッチを適用することを指示した。 [...]"
   },
   {
     "id": "f129e718cb7493c83881ea0eff3c9261",
@@ -2805,7 +2789,8 @@
     ],
     "cves": [
       "CVE-2026-48356"
-    ]
+    ],
+    "product": "Adobe Commerce"
   },
   {
     "id": "10013bdee737aa1d10b459814861db54",
@@ -2828,6 +2813,7 @@
     ],
     "cves": [
       "CVE-2026-111497"
-    ]
+    ],
+    "product": "Brotli"
   }
 ]

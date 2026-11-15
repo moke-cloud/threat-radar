@@ -1,5 +1,31 @@
 [
   {
+    "id": "12f6a21bc562b6c4c5b10501b27bbba8",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Cursor confirms security breach led to malicious Claude Code extension",
+    "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+    "summary": "Cursor confirmed it suffered a security breach that let hackers distribute a malicious Claude Code extension through its marketplace after stealing credentials from AI infrastructure provider Fireworks AI. [...]",
+    "published": "2026-11-14T17:27:25Z",
+    "fetched": "2026-11-15T01:08:45.459651153Z",
+    "severity": "low",
+    "score": 27
+  },
+  {
+    "id": "6eeba073b3e1cc4c8b82954bfed9444f",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "US disrupts North Korean campaign behind $400 million crypto theft",
+    "url": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
+    "summary": "The U.S. government has disrupted a North Korean social engineering campaign called 'FaceStealer', responsible for stealing more than $400 million in cryptocurrency. [...]",
+    "published": "2026-11-14T15:15:49Z",
+    "fetched": "2026-11-15T01:08:45.459651153Z",
+    "severity": "low",
+    "score": 27
+  },
+  {
     "id": "189fe772753e273301fbcdf930dc7d04",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -3571,6 +3597,22 @@
       "pr": "N",
       "ui": "N"
     }
+  },
+  {
+    "id": "c9e151c0c36a1a57a084e91ba79612af",
+    "source": "eset",
+    "source_name": "ESET WeLiveSecurity",
+    "category": "research",
+    "title": "GTA VI isn’t out yet – and the scams are already in full swing",
+    "url": "https://www.welivesecurity.com/en/cybersecurity/gta-vi-isnt-out-yet-scams-full-swing/",
+    "summary": "Cybercriminals attempt to cash in on the hype around the game, luring fans with malware-laced downloads and ‘early access’ that doesn’t exist",
+    "published": "2026-11-13T10:00:00Z",
+    "fetched": "2026-11-15T01:08:45.459651153Z",
+    "tags": [
+      "malware"
+    ],
+    "severity": "low",
+    "score": 24
   },
   {
     "id": "cc966b74f96b8115992941c75de21de2",
@@ -11461,70 +11503,5 @@
     "vendors": [
       "firefox"
     ]
-  },
-  {
-    "id": "f215070a43348e026bfaf594ee0dfd54",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-19868 — SonicWall SonicOS SSLVPN: SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19868",
-    "summary": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-20",
-    "published": "2026-11-06T00:00:00Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "sonicwall"
-    ],
-    "cves": [
-      "CVE-2026-19868"
-    ],
-    "product": "SonicOS SSLVPN"
-  },
-  {
-    "id": "c1b1c5a7a77720a30830fa46a7c5f2ca",
-    "source": "greynoise",
-    "source_name": "GreyNoise Threat Briefs",
-    "category": "research",
-    "title": "SSHole (CVE-2026-123158): Live Activity Report",
-    "url": "https://sshole.events.greynoise.io/?utm_source=threat-briefs",
-    "summary": "",
-    "published": "2026-11-06T00:00:00Z",
-    "fetched": "2026-11-07T01:03:21.99292232Z",
-    "severity": "medium",
-    "score": 33,
-    "cves": [
-      "CVE-2026-123158"
-    ],
-    "title_ja": "SSHole (CVE-2026-123158): ライブアクティビティレポート"
-  },
-  {
-    "id": "56c9e89873b18dcbfa8bb811198d57e9",
-    "source": "ms-threat-intel",
-    "source_name": "Microsoft Threat Intelligence",
-    "category": "research",
-    "title": "Threat actors use agentic AI tooling to find and abuse exposed secrets",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/",
-    "summary": "Microsoft Threat Intelligence has observed threat actors using the agentic offensive security framework ARTEX to search GitHub for OAuth application secrets, which can be used to compromise the associated OAuth application and perform authenticated actions in the application’s tenant. Agents operating on behalf of threat actors then used the compromised OAuth applications to perform a variety of subsequent actions within compromised organizations. The post Threat actors use agentic AI tooling to find and abuse exposed secrets appeared first on Microsoft Security Blog.",
-    "published": "2026-11-05T23:46:50Z",
-    "fetched": "2026-11-06T01:42:59.743725761Z",
-    "tags": [
-      "microsoft",
-      "github",
-      "watch"
-    ],
-    "severity": "medium",
-    "score": 46,
-    "vendors": [
-      "microsoft",
-      "github"
-    ],
-    "title_ja": "脅威行為者は暴露されたシークレットを検索・利用するためのアグエントAIツールを活用",
-    "summary_ja": "マイクロソフトの脅威インテリジェンスが観察したところ、脅威行為者はオフensiveセキュリティフレームワークARTEXを用いてGitHubでOAuthアプリケーションのシークレットを検索し、それらを用いて関連するOAuthアプリケーションを侵害し、アプリケーションのテナント内で認証された操作を実行している。脅威行為者を代表するアグエントが、侵害されたOAuthアプリケーションを活用して、その後のさまざまな操作を実行している。"
   }
 ]

@@ -1,5 +1,1597 @@
 [
   {
+    "id": "624f35e0f72021edd6e2ba20aa7f1508",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2022-51027 — MeterSphere versions 1.13.0 before 1.14.7 and 1.15.0 before 1.16.4 contain a pre…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-51027",
+    "summary": "MeterSphere versions 1.13.0 before 1.14.7 and 1.15.0 before 1.16.4 contain a pre-authentication code injection vulnerability due to the /plugin/** endpoints being exposed with anonymous access. Attackers can upload a malicious jar via POST /plugin/add and invoke it through POST /plugin/customMethod using the 'entry' and 'request' parameters, which are passed to Class.forName and method invocation for remote code execution. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-14.",
+    "published": "2026-11-18T16:17:51.58Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2022-51027"
+    ],
+    "cwe": [
+      "CWE-306"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "3c9aaaff369ecf1ebd395995ccf5896b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2021-48023 — Weaver E-cology 9.0 contains an unrestricted file upload vulnerability in /page/…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-48023",
+    "summary": "Weaver E-cology 9.0 contains an unrestricted file upload vulnerability in /page/exportImport/uploadOperation.jsp that allows unauthenticated attackers to upload arbitrary JSP files. Attackers can send a crafted multipart POST request with a JSP webshell written to /page/exportImport/fileTransfer/ to achieve remote code execution. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-20.",
+    "published": "2026-11-18T16:17:50.763Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2021-48023"
+    ],
+    "cwe": [
+      "CWE-434"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "e1fcf79d6ebc438493b10519825f99d2",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2018-25443 — Baidu UEditor 1.4.0 through 1.4.3.3 contains an unrestricted file upload vulnera…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25443",
+    "summary": "Baidu UEditor 1.4.0 through 1.4.3.3 contains an unrestricted file upload vulnerability in the catchimage action of /ueditor/net/controller.ashx that only validates the Content-Type header. Unauthenticated attackers can supply a source[] URL like x.jpg?.aspx to retain a malicious extension and write an executable .aspx file for remote code execution. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-17.",
+    "published": "2026-11-18T16:17:48.5Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2018-25443"
+    ],
+    "cwe": [
+      "CWE-434"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "c36c074f9a2f6772345b564b78eacaa8",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2012-20007 — ThinkPHP 2.0 through 2.2 and 3.0 Lite mode contains an eval injection vulnerabil…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-20007",
+    "summary": "ThinkPHP 2.0 through 2.2 and 3.0 Lite mode contains an eval injection vulnerability in the Dispatcher PATH_INFO parsing, which uses preg_replace with the /e modifier and a double-quoted replacement. Unauthenticated attackers can send crafted requests to index.php with a malicious 's' parameter containing PHP expressions to execute arbitrary code on the server. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-14.",
+    "published": "2026-11-18T16:17:47.56Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2012-20007"
+    ],
+    "cwe": [
+      "CWE-95"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "5befabb56f2c07a85d5bf65470fb8fd5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-116448 — Dell PowerStore SDNAS contains an OS Command Injection vulnerability that could …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116448",
+    "summary": "Dell PowerStore SDNAS contains an OS Command Injection vulnerability that could allow an attacker with internal network access to execute arbitrary commands as root on the NAS node.",
+    "published": "2026-11-18T15:17:33.083Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-116448"
+    ],
+    "cwe": [
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "7872f14d857a6c04b896e85ae65c8ee9",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-110811 — The Trust Payments Gateway for WooCommerce (JavaScript Library) plugin for WordP…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110811",
+    "summary": "The Trust Payments Gateway for WooCommerce (JavaScript Library) plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.3.8. The vulnerability exists because the `new_customer_account()` function stores the raw return value of `wp_create_user()` — including a `WP_Error` object returned on username collision — into the order's `tp_userid` post meta before the `is_wp_error()` guard is evaluated; the `add_customer_details_to_thankyou_page()` callback subsequently reads that meta and casts it with `(int)`, causing PHP to coerce any object to integer `1`, after which `wp_set_current_user(1)` and `wp_set_auth_cookie(1)` are called unconditionally. This makes it possible for unauthenticated attackers to authenticate as WordPress user ID 1 — the bootstrap site administrator or, on multisite, a network super-admin — by supplying the `new_username` parameter matching any existing login during checkout and visiting the resulting thank-you page. Exploitation requires the Trust Payments gateway to be active and the attacker to complete a paid order on their own account; the ID 1 administrator username is additionally enumerable via standard WordPress user enumeration techniques.",
+    "published": "2026-11-18T14:17:26.02Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass",
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-110811"
+    ],
+    "cwe": [
+      "CWE-287"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "08295395f167694de417b123ffb7ab70",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-110009 — The Unzer Payments plugin for WordPress is vulnerable to Authentication Bypass l…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110009",
+    "summary": "The Unzer Payments plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 2.2.1. The vulnerability exists because the Google Pay Express Checkout endpoint (`/?wc-api=google_pay_express`), handled by `startCheckoutDataWithNormalizedCustomerData`, accepts an attacker-controlled `paymentData.email` value and passes it to `createOrGetGuestCustomer()`, which resolves the submitted email to any existing WordPress user via `get_user_by('email', ...)` and then calls `wp_set_current_user()` and `wp_set_auth_cookie()` for the resolved user ID without verifying ownership of the email address, a password, a nonce, an authentication token, or any proof of payment from the payment provider. This makes it possible for unauthenticated attackers to log in as any existing WordPress user — including administrators — by submitting that user's known email address, receiving valid `wordpress_logged_in_*` session cookies for the targeted account and achieving full site takeover. The endpoint is entirely unprotected with no capability check, nonce validation, or payment-provider signature verification applied, and administrator email addresses are frequently discoverable via the WordPress REST API user enumeration endpoint (`/wp-json/wp/v2/users`), author archive pages, Gravatar lookups, or site contact footers.",
+    "published": "2026-11-18T14:17:25.86Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-110009"
+    ],
+    "cwe": [
+      "CWE-287"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "ead154bb9a197b096d6da029f9b270da",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-87789 — Latvijas Valsts radio un televīzijas centrs (LVRTC)\neParakstītājs 3.0 version…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87789",
+    "summary": "Latvijas Valsts radio un televīzijas centrs (LVRTC)\neParakstītājs 3.0 version 1.10.0 for macOS allows an unauthenticated remote\nattacker to execute arbitrary commands with the privileges of the current user\nby convincing the user to open a PDF with a crafted filename and select Send.\nThe application embeds the attachment path in AppleScript source without\nneutralizing AppleScript syntax, allowing injected do shell script expressions\nto execute.",
+    "published": "2026-11-18T12:17:23.593Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-87789"
+    ],
+    "cwe": [
+      "CWE-73",
+      "CWE-78",
+      "CWE-94",
+      "CWE-116"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "0dac1e214ac207f46b44cfee94dca5dd",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-130747 — Grav before 1.7.53.7 and 2.x before 2.2.18 contains an authentication bypass vul…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130747",
+    "summary": "Grav before 1.7.53.7 and 2.x before 2.2.18 contains an authentication bypass vulnerability that allows anonymous visitors to create super-admin accounts because UserCollection::count() uses an unescaped glob() pattern. On installs whose path contains brackets or a backslash, the account count returns zero, so attackers can send requests to POST /api/v1/auth/setup or the classic admin registration form to create or overwrite administrator accounts.",
+    "published": "2026-11-18T12:17:22.197Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-130747"
+    ],
+    "cwe": [
+      "CWE-155"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "aca7c4b2b79e16a0578d477a50a2226a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-130744 — Grav from 2.0.0 before 2.2.18 contains a remote code execution vulnerability tha…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130744",
+    "summary": "Grav from 2.0.0 before 2.2.18 contains a remote code execution vulnerability that allows page editors to escape the Twig sandbox by sending requests with a Host: pages header. Attackers can write configuration YAML through page folders and media .meta.yaml sidecars to register an unsandboxed Twig namespace and run shell commands as the web server user.",
+    "published": "2026-11-18T12:17:21.66Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-130744"
+    ],
+    "cwe": [
+      "CWE-15"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "01359fdec7938c0d6d8719fda4b86f55",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-130736 — Grav from 2.0.0 before 2.2.18 contains a remote code execution vulnerability tha…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130736",
+    "summary": "Grav from 2.0.0 before 2.2.18 contains a remote code execution vulnerability that allows publishers to bypass the media action allowlist using scoped method names in Markdown image URLs. Attackers can chain actions like self::addMetaFile into static calls such as Process::fromShellCommandline to read files and run shell commands as the web server user.",
+    "published": "2026-11-18T12:17:20.213Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-130736"
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "f6a7d0a6e9d57b664892e8426178af50",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.7 HIGH] CVE-2026-130730 — NocoDB before 2026.10.1 contains an authentication bypass vulnerability that all…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130730",
+    "summary": "NocoDB before 2026.10.1 contains an authentication bypass vulnerability that allows OAuth token holders to act as full sessions because OAuth access tokens are signed with the instance JWT secret. Attackers can present a narrowly scoped OAuth token to the session strategy, short-lived-token exchange, or NocoSocket handshake to gain the granting user's full privileges.",
+    "published": "2026-11-18T12:17:19.13Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-130730"
+    ],
+    "cwe": [
+      "CWE-287"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:N",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "8fa517983a6c081bba755b7f84fe2997",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-130721 — NocoDB from 2026.06.2 before 2026.08.0 contains an authorization bypass vulnerab…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130721",
+    "summary": "NocoDB from 2026.06.2 before 2026.08.0 contains an authorization bypass vulnerability that allows authenticated base Editors to write to data-read-only sources by abusing the internal batch endpoint. Attackers can name a writable decoy table on the batch envelope and target a read-only source table in dataUpdate, dataInsert or dataDelete sub-operations to modify or destroy records.",
+    "published": "2026-11-18T12:17:17.767Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-130721"
+    ],
+    "cwe": [
+      "CWE-863"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "94ac5ff5fb1bc77343349840c837480d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.6 CRITICAL] CVE-2026-130712 — NocoDB before 2026.08.1 contains an authorization bypass vulnerability that allo…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130712",
+    "summary": "NocoDB before 2026.08.1 contains an authorization bypass vulnerability that allows authenticated Creators to access another tenant's external database by reusing a victim source id when adding a source. Because NcConnectionMgrv2 caches connections by bare source id, attackers can reflect the victim's cached database schema and read, update, and insert records through their own base models.",
+    "published": "2026-11-18T12:17:16.39Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-130712"
+    ],
+    "cwe": [
+      "CWE-639"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "2a9d2df8df0f3b0e3365b130b22c615e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.6 CRITICAL] CVE-2026-130682 — SiYuan before 3.8.10 persists a table block's caption attribute into IAL propert…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130682",
+    "summary": "SiYuan before 3.8.10 persists a table block's caption attribute into IAL properties without HTML sanitization, causing stored cross-site scripting upon import or sync. Attackers can inject an entity-encoded caption with an onerror handler that executes in the Electron client's nodeIntegration context to achieve remote code execution.",
+    "published": "2026-11-18T12:17:11.99Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "xss"
+    ],
+    "severity": "critical",
+    "score": 83,
+    "cves": [
+      "CVE-2026-130682"
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "5b35b1eaabd4585be3d0afe37f0aeed5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-130675 — Craft CMS from 5.0.0 before 5.11.4 contains a remote code execution vulnerabilit…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130675",
+    "summary": "Craft CMS from 5.0.0 before 5.11.4 contains a remote code execution vulnerability in ImageTransforms::normalizeTransform() that allows attackers to instantiate arbitrary classes by supplying class:null with a __class key. Attackers can reach the method through Craft Commerce's payments/pay redirect template calling customer.photo.getUrl() with a crafted transform to instantiate classes like yii\\rbac\\PhpManager and execute PHP.",
+    "published": "2026-11-18T12:17:10.783Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-130675"
+    ],
+    "cwe": [
+      "CWE-697"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "9987322a3b0af1d5957578070f2a3ea7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-130674 — Craft CMS from 5.0.0 before 5.11.4 contains an incomplete blocklist fix that all…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130674",
+    "summary": "Craft CMS from 5.0.0 before 5.11.4 contains an incomplete blocklist fix that allows attackers who can author entry type title formats to write arbitrary files using ZipArchive or XMLWriter classes. Attackers can abuse the non-sandboxed renderObjectTemplate() renderer to write attacker-controlled content into the web docroot, achieving remote code execution.",
+    "published": "2026-11-18T12:17:10.403Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-130674"
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "6e930de40a2b1244860c5ad4fa909940",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-111508 — Dell PowerStore contains an OS Command Injection vulnerability. Exploitation cou…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111508",
+    "summary": "Dell PowerStore contains an OS Command Injection vulnerability. Exploitation could lead to arbitrary command execution with root privileges on the appliance.",
+    "published": "2026-11-18T12:17:01.917Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-111508"
+    ],
+    "cwe": [
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "H",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "8f75d6889f6acd5da69d4e75cb0aeddd",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-110486 — In Eclipse Mosquitto versions 2.1 through 2.1.2, a listener configured with `pro…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110486",
+    "summary": "In Eclipse Mosquitto versions 2.1 through 2.1.2, a listener configured with `protocol websockets` mishandles empty WebSocket data frames. `net__read_ws()` in `lib/net_ws.c` returns the number of framing bytes consumed (the 4 masking-key bytes) for a data frame with a zero-length payload, without writing any bytes to the caller’s buffer. The MQTT packet reader in `packet__read_single()` (`lib/packet_mosq.c`) trusts that return value as a payload byte count. A remote client can therefore advance the read position over an uninitialised heap allocation, causing the broker to process and forward uninitialised heap memory (information disclosure, including heap and libc pointers), and can underflow the unsigned `to_process` counter so that subsequent attacker-controlled frame data is written past the end of the allocation (heap out-of-bounds write). The out-of-bounds write is reachable from the CONNECT packet before any authentication check, so an unauthenticated client can corrupt the heap and crash the broker even when `allow_anonymous false` is set. Combining the disclosure and the write allows remote code execution as the broker’s user by any client able to establish a session.",
+    "published": "2026-11-18T11:17:37.963Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "adobe"
+    ],
+    "severity": "high",
+    "score": 75,
+    "vendors": [
+      "adobe"
+    ],
+    "cves": [
+      "CVE-2026-110486"
+    ],
+    "cwe": [
+      "CWE-191",
+      "CWE-787",
+      "CWE-908"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "9c764da0524490f5195cf61ea70ab870",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Apache warns of Roller RCE vulnerability exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/",
+    "summary": "Apache has released security updates to address a critical Roller flaw that threat actors are exploiting to gain code execution on vulnerable servers. [...]",
+    "published": "2026-11-18T10:35:05Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "apache",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "apache"
+    ]
+  },
+  {
+    "id": "3e1bf4c3ef0eccec4d3458d5f9fbe64d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-95645 — Zohocorp Manageengine DDI Central build below 6500 are affected by a authentic…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95645",
+    "summary": "Zohocorp Manageengine DDI Central build below 6500 are affected by a authenticated command injection vulnerability in the Windows DDI Agent's clear_blocked_domains functionality, allowing specially crafted blocked-domain values to trigger arbitrary command execution on Windows systems.",
+    "published": "2026-11-18T09:17:44.81Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-95645"
+    ],
+    "cwe": [
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "H",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "035c497db07a072ef973b40e215ebdfa",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-95643 — Zohocorp Manageengine DDI Central build below 6500 are affected by a authentic…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95643",
+    "summary": "Zohocorp Manageengine DDI Central build below 6500 are affected by a authenticated PowerShell command injection vulnerability in the Telnet connectivity feature, allowing specially crafted IPv6 scope identifiers to execute arbitrary commands on managed Windows nodes.",
+    "published": "2026-11-18T09:17:44.657Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "microsoft",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "microsoft"
+    ],
+    "cves": [
+      "CVE-2026-95643"
+    ],
+    "cwe": [
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "H",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "9b9ec6c9221f7e501122a747b61ba18d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-125820 — Deserialization of Untrusted Data vulnerability in Rymera Web Co Product Feed PR…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125820",
+    "summary": "Deserialization of Untrusted Data vulnerability in Rymera Web Co Product Feed PRO for WooCommerce woo-product-feed-pro allows Object Injection.This issue affects Product Feed PRO for WooCommerce: from n/a through 13.5.8.",
+    "published": "2026-11-18T08:17:19.303Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "deserialization",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-125820"
+    ],
+    "cwe": [
+      "CWE-502"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "debe785812281cb07eab353c5ab5532c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-127021 — The Flamix: Bitrix24 and WooCommerce Products Sync WordPress plugin before 1.7.0…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-127021",
+    "summary": "The Flamix: Bitrix24 and WooCommerce Products Sync WordPress plugin before 1.7.0 does not restrict or validate an unauthenticated file-exchange request, allowing anyone to write a file with an attacker-chosen name, extension and path to a web-served location and thereby execute arbitrary PHP.",
+    "published": "2026-11-18T06:17:29.803Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-127021"
+    ],
+    "epss": 0.0019,
+    "epss_percentile": 0.08755,
+    "cwe": [
+      "CWE-434"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "a9ed5c6904302a6db55df7a4c449f6c3",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1037: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP Backend Configuration Authentication Bypass Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1037/",
+    "summary": "This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.6. The following CVEs are assigned: CVE-2026-131809.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "auth-bypass",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cves": [
+      "CVE-2026-131809"
+    ],
+    "product": "United Chargers Grizzl-E Smart 40A OCPP Backend Configuration",
+    "impact": "auth-bypass",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "4473beb7d08ab8c7cbfddbfc474d829b",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1036: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A Wi-Fi Configuration Server Missing Authentication Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1036/",
+    "summary": "This vulnerability allows network-adjacent attackers to modify Wi-Fi configuration on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.3. The following CVEs are assigned: CVE-2026-131808.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 70,
+    "cves": [
+      "CVE-2026-131808"
+    ],
+    "cwe": [
+      "CWE-306"
+    ],
+    "product": "United Chargers Grizzl-E Smart 40A Wi-Fi Configuration Server",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "a7aa322902b2cbf417b8706bbdd3adf6",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1035: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A Download of Code Without Integrity Check Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1035/",
+    "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131810.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cves": [
+      "CVE-2026-131810"
+    ],
+    "product": "United Chargers Grizzl-E Smart 40A Download of Code Without Integrity Check",
+    "impact": "rce",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "7d1e215256c62dc2f263eef1de6f57cc",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1034: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A FTP URL Path Parsing Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1034/",
+    "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131812.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cves": [
+      "CVE-2026-131812"
+    ],
+    "cwe": [
+      "CWE-121"
+    ],
+    "product": "United Chargers Grizzl-E Smart 40A FTP URL Path Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "9a3364e8fe8903b5ef995c2089232390",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1033: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP GetConfiguration Stack-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1033/",
+    "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131807.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cves": [
+      "CVE-2026-131807"
+    ],
+    "cwe": [
+      "CWE-121"
+    ],
+    "product": "United Chargers Grizzl-E Smart 40A OCPP GetConfiguration",
+    "impact": "rce",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "796f5b6bcaeaeb33584b36f8455474fe",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1032: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP Backend Configuration Hard-Coded Credentials Authentication Bypass Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1032/",
+    "summary": "This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.6. The following CVEs are assigned: CVE-2026-131811.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "auth-bypass",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cves": [
+      "CVE-2026-131811"
+    ],
+    "cwe": [
+      "CWE-798"
+    ],
+    "product": "United Chargers Grizzl-E Smart 40A OCPP Backend Configuration",
+    "impact": "auth-bypass",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "c21ca05a279af5c0deb80932241e2e81",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1031: (0Day) LiteLLM MCP Command Injection Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1031/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of LiteLLM. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cwe": [
+      "CWE-77"
+    ],
+    "product": "LiteLLM MCP",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "51317ea15710ff80c9c653024ee1ce6b",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1030: (0Day) G DATA Total Security TSNxGService Link Following Local Privilege Escalation Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1030/",
+    "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-19776.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "lpe",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-19776"
+    ],
+    "cwe": [
+      "CWE-59"
+    ],
+    "product": "G DATA Total Security TSNxGService",
+    "impact": "lpe",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "8015e4914a6521af960ac488d99b5374",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1029: (0Day) G DATA Total Security AVKProxy Link Following Denial-of-Service Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1029/",
+    "summary": "This vulnerability allows local attackers to create a denial-of-service condition on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.1. The following CVEs are assigned: CVE-2026-19777.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 70,
+    "cves": [
+      "CVE-2026-19777"
+    ],
+    "cwe": [
+      "CWE-59"
+    ],
+    "product": "G DATA Total Security AVKProxy",
+    "impact": "dos",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "49e5d3ccac42fc203613d27e9b1d5a30",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1028: (0Day) G DATA Total Security Backup Service Uncontrolled Search Path Element Local Privilege Escalation Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1028/",
+    "summary": "This vulnerability allows local attackers to escalate privileges on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.3. The following CVEs are assigned: CVE-2026-19779.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "lpe",
+      "0day"
+    ],
+    "severity": "high",
+    "score": 78,
+    "cves": [
+      "CVE-2026-19779"
+    ],
+    "product": "G DATA Total Security Backup Service Uncontrolled Search Path Element",
+    "impact": "lpe",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "cf4b7a1bc3ca3d2ea58641044c653490",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1027: (0Day) Open Robotics RViz fillIndexBuffer Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1027/",
+    "summary": "This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "Open Robotics RViz fillIndexBuffer",
+    "impact": "rce",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "c265208b7b62ab09ed42539d7a0d8a96",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1026: (0Day) Open Robotics RViz XYZPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1026/",
+    "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 70,
+    "cwe": [
+      "CWE-125"
+    ],
+    "product": "Open Robotics RViz XYZPCTransformer PointField",
+    "impact": "dos",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "0212e0697769db68c35fc241a41513d7",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1025: (0Day) Open Robotics RViz AxisColorPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1025/",
+    "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 70,
+    "cwe": [
+      "CWE-125"
+    ],
+    "product": "Open Robotics RViz AxisColorPCTransformer PointField",
+    "impact": "dos",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "d7fc4fe55559083a31ffae857fabc278",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1024: (0Day) Open Robotics RViz RGBF32PCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1024/",
+    "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 70,
+    "cwe": [
+      "CWE-125"
+    ],
+    "product": "Open Robotics RViz RGBF32PCTransformer PointField",
+    "impact": "dos",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "faaadf78ad254baa756ed22933bb286c",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1023: (0Day) Open Robotics RViz RGB8PCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1023/",
+    "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 70,
+    "cwe": [
+      "CWE-125"
+    ],
+    "product": "Open Robotics RViz RGB8PCTransformer PointField",
+    "impact": "dos",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "217d500a4eb07bddac70fabd9a533b0f",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1022: (0Day) Open Robotics RViz IntensityPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1022/",
+    "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 70,
+    "cwe": [
+      "CWE-125"
+    ],
+    "product": "Open Robotics RViz IntensityPCTransformer PointField",
+    "impact": "dos",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "265dca8b5440c99cf2889195ea489ba8",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1021: (0Day) Open Robotics RViz MapDisplay OccupancyGridUpdate Out-Of-Bounds Read Denial-of-Service Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1021/",
+    "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 70,
+    "cwe": [
+      "CWE-125"
+    ],
+    "product": "Open Robotics RViz MapDisplay OccupancyGridUpdate",
+    "impact": "dos",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "7190c742525940099ca98647fa9d2768",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1020: (0Day) Open Robotics RViz PointCloud2Display PointField Out-of-Bounds Read Denial-of-Service Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1020/",
+    "summary": "This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 70,
+    "cwe": [
+      "CWE-125"
+    ],
+    "product": "Open Robotics RViz PointCloud2Display PointField",
+    "impact": "dos",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "c8edadfb26b7bb3c6cb97108d2f5a07f",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1019: (0Day) Open Robotics ROS 2 sros2 load_policy XML External Entity Processing Information Disclosure Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1019/",
+    "summary": "This vulnerability allows remote attackers to disclose sensitive information on affected installations of Open Robotics ROS 2. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 5.5.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "0day"
+    ],
+    "severity": "high",
+    "score": 70,
+    "cwe": [
+      "CWE-611"
+    ],
+    "product": "Open Robotics ROS 2 sros2 load_policy",
+    "impact": "info",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "a99cf0540caf4b350d53017f2068356c",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1018: (0Day) Krita TIF File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1018/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "Krita TIF File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "e134817a5f5bae14b6db29745af80c11",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1017: (0Day) Krita HEIC File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1017/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cwe": [
+      "CWE-787"
+    ],
+    "product": "Krita HEIC File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "08761e3bbdb65b05658ccad369f4be65",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1016: (0Day) Krita EXR File Parsing Integer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1016/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cwe": [
+      "CWE-190"
+    ],
+    "product": "Krita EXR File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "fce7b405feeb0961005b35ce5fcd4eca",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1015: (0Day) Krita HEIC File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1015/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "Krita HEIC File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "ed0ae21acf19e324f7cf236571453ccf",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1014: (0Day) Krita TIFF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1014/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cwe": [
+      "CWE-787"
+    ],
+    "product": "Krita TIFF File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "05112e5a56eee7eab784df3460c35285",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1013: (0Day) Krita PSB File Parsing Integer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1013/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cwe": [
+      "CWE-190"
+    ],
+    "product": "Krita PSB File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "5c5f5190bcae7ba9c0e6d20ab79a6636",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1012: (0Day) Krita ASL File Parsing Integer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1012/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cwe": [
+      "CWE-190"
+    ],
+    "product": "Krita ASL File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "869e9a8c5eb44c3ef83331fcdc36251d",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1011: (0Day) Krita ABR File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1011/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "Krita ABR File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "9ab0d4676fc1231fca434ba6ecc9f8e0",
+    "source": "zdi",
+    "source_name": "Zero Day Initiative — Published",
+    "category": "vuln",
+    "title": "ZDI-26-1010: (0Day) Krita JC2 File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability",
+    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-1010/",
+    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
+    "published": "2026-11-18T06:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "0day"
+    ],
+    "severity": "critical",
+    "score": 90,
+    "cwe": [
+      "CWE-122"
+    ],
+    "product": "Krita JC2 File Parsing",
+    "impact": "rce",
+    "attack": {
+      "av": "N",
+      "pr": "",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "ca51b26399b20c53f51927d9e5da10f1",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-130644 — A path traversal flaw was found in ansible-core. When installing a collection wi…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130644",
+    "summary": "A path traversal flaw was found in ansible-core. When installing a collection with ansible-galaxy collection install, the install destination directory is derived from the namespace and name fields declared inside the collection artifact's own metadata, which are not validated as well-formed collection identifiers or checked for path containment. A malicious collection artifact -- delivered as a local file, a remote URL, a source directory, a git repository, or as a dependency -- can use a crafted name value to redirect the install destination outside the configured collections path, causing ansible-galaxy to delete an existing directory writable by the invoking user and then write attacker-controlled files to that location.",
+    "published": "2026-11-18T04:17:14.71Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "path-traversal",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-130644"
+    ],
+    "epss": 0.00453,
+    "epss_percentile": 0.39968,
+    "cwe": [
+      "CWE-22"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "cac3eda6f2f2e7039e2831fc27398e66",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2026-107950 — An XML External Entity (XXE) vulnerability affects a Storefront REST API in HCL …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107950",
+    "summary": "An XML External Entity (XXE) vulnerability affects a Storefront REST API in HCL Commerce versions 8, 9.0.1 and 9.1.x.  A remote attacker, using a specially crafted XML, could potentially view internal files or consume memory resources.",
+    "published": "2026-11-18T03:17:40.153Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-107950"
+    ],
+    "epss": 0.00573,
+    "epss_percentile": 0.48073,
+    "cwe": [
+      "CWE-611"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "cb4e28640d71a7600bf03dadb8e5b106",
+    "source": "krebs",
+    "source_name": "Krebs on Security",
+    "category": "news",
+    "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
+    "url": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/",
+    "summary": "At least 178 top web destinations unwittingly served a variety of malware exploits against visitors over the past 24 hours thanks to a security vulnerability involving Optimizely, a company that helps websites customize user experiences and test out new features. Experts say the incident, which saw data-stealing malicious software silently injected into sites like the BBC, CNN, Equifax, Ledger and Zoom, was exacerbated by the reality that few popular websites enforce strict rules on the sources of third-party content.",
+    "published": "2026-11-18T02:52:04Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce",
+      "malware"
+    ],
+    "severity": "high",
+    "score": 60
+  },
+  {
+    "id": "63b2486e2ba7c8bcd67e3c03e9cd178d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-105929 — A path traversal vulnerability (CWE-22) was found in ansible-core's ansible-gala…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105929",
+    "summary": "A path traversal vulnerability (CWE-22) was found in ansible-core's ansible-galaxy role installation. An explicit role \"name\" taken from a role's meta/requirements.yml is used to construct the on-disk installation path without validating that the resulting destination stays within the selected roles directory. A name containing \"../\" escapes that directory, and an absolute name replaces it entirely. Because ansible-galaxy processes transitive dependencies from an installed role's meta/requirements.yml, a malicious role publisher can cause attacker-supplied files to be written outside the operator's chosen roles directory when the operator installs the role, and, when --force is used, can cause an existing role directory outside that path to be removed and replaced. The impact is bounded by the invoking user's filesystem permissions and requires the operator to install the attacker-influenced content.",
+    "published": "2026-11-18T02:17:38.693Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "path-traversal",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-105929"
+    ],
+    "epss": 0.00453,
+    "epss_percentile": 0.39968,
+    "cwe": [
+      "CWE-22"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "R"
+    }
+  },
+  {
     "id": "d0a22d7f44ad075c9ce7671e5792bae7",
     "source": "talos",
     "source_name": "Cisco Talos",
@@ -24,6 +1616,67 @@
     ],
     "title_ja": "CVE-2026-114938: OpenJDK JAVAにおける重大な脆弱性",
     "summary_ja": "Cisco Talosは、OpenJDK Java（CVE-2026-114938）における重大な脆弱性、「Java4Shell」と呼ばれるものについての公開を追跡しています。この脆弱性はCVSSスコア9.2（4.0）で、未認証リモートコード実行（RCE）を引き起こす可能性があります。"
+  },
+  {
+    "id": "0488a449349439aec77450a7a2575dad",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-92182 — Netgate pfSense CE XMLRPC Incorrect Authorization Remote Code Execution Vulnerab…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92182",
+    "summary": "Netgate pfSense CE XMLRPC Incorrect Authorization Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Netgate pfSense. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the XMLRPC endpoint. The issue results from incorrect authorization prior to allowing access to functionality. An attacker can leverage this vulnerability to execute code within the context of the root. Was ZDI-CAN-32353.",
+    "published": "2026-11-18T00:18:49.28Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-92182"
+    ],
+    "epss": 0.03272,
+    "epss_percentile": 0.88663,
+    "cwe": [
+      "CWE-863"
+    ],
+    "cvss_vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "05bc4dc5df3522e26a3aedf9d7edb4cc",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-129892 — IO::Socket::SSL::PublicSuffix versions through 2.099 for Perl allow code injecti…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129892",
+    "summary": "IO::Socket::SSL::PublicSuffix versions through 2.099 for Perl allow code injection via a fetched list line that closes the built-in data heredoc when update_self_from_url rewrites the module's source.\n\nThe rewrite copies the module's source down to the built-in list's heredoc and appends each fetched line below it. Nothing checks that a line looks like a domain. A line that is not a comment loses only what follows a `//` and its trailing whitespace, so a line reading END_BUILTIN_DATA is appended as it stands and ends the data block in the rewritten file. Every fetched line after it is Perl.\n\nArbitrary Perl runs in every process that loads IO::Socket::SSL, which loads this module unconditionally, until the file is reinstalled. The attacker must control the fetched list, through the cleartext default URL or a caller-supplied one, and the updater must run with write access to the installed module.",
+    "published": "2026-11-18T00:18:40.417Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-129892"
+    ],
+    "epss": 0.00232,
+    "epss_percentile": 0.14237,
+    "cwe": [
+      "CWE-94"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "2d5faa357cb9e8ba2fafaf541976fea3",
@@ -228,6 +1881,161 @@
     "attack": {
       "av": "L",
       "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "9fd3c9cfd1c95f0bcfc74e76a4ae8acd",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2024-10441 — Synology DiskStation Manager (DSM): Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-10441",
+    "summary": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-21",
+    "published": "2026-11-18T00:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "synology"
+    ],
+    "cves": [
+      "CVE-2024-10441"
+    ],
+    "epss": 0.01251,
+    "epss_percentile": 0.70014,
+    "cwe": [
+      "CWE-116"
+    ],
+    "product": "Synology DiskStation Manager (DSM)"
+  },
+  {
+    "id": "8f3b031876cd227d13e3e75f3e283618",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-40217 — BerriAI LiteLLM: BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40217",
+    "summary": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-12-02",
+    "published": "2026-11-18T00:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "berriai"
+    ],
+    "cves": [
+      "CVE-2026-40217"
+    ],
+    "epss": 0.1702,
+    "epss_percentile": 0.97134,
+    "cwe": [
+      "CWE-420"
+    ],
+    "product": "BerriAI LiteLLM"
+  },
+  {
+    "id": "e0c010e5b5bf38674e6f5b09ea432b3b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-90817 — Vanderbilt University Research Electronic Data Capture (REDCap): Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817",
+    "summary": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-21",
+    "published": "2026-11-18T00:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "vanderbilt"
+    ],
+    "cves": [
+      "CVE-2026-90817"
+    ],
+    "epss": 0.03749,
+    "epss_percentile": 0.90092,
+    "cwe": [
+      "CWE-73",
+      "CWE-94"
+    ],
+    "product": "Vanderbilt University Research Electronic Data Capture (REDCap)"
+  },
+  {
+    "id": "6b28d0c1bebddd1060dbdc203e2672a6",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-90436 — Apache Axis: Apache Axis Unsafe Reflection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436",
+    "summary": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-21",
+    "published": "2026-11-18T00:00:00Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "apache",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 95,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-90436"
+    ],
+    "epss": 0.01128,
+    "epss_percentile": 0.67007,
+    "cwe": [
+      "CWE-470"
+    ],
+    "product": "Apache Axis"
+  },
+  {
+    "id": "feb93717490d43f7b055c58a6fcd8abe",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-130020 — Privilege escalation due to incorrect boundary conditions in the Graphics: Canva…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130020",
+    "summary": "Privilege escalation due to incorrect boundary conditions in the Graphics: CanvasWebGL component on Android. This vulnerability was fixed in Firefox 160.0.1.",
+    "published": "2026-11-17T23:17:52.08Z",
+    "fetched": "2026-11-19T02:41:45.409286828Z",
+    "tags": [
+      "critical-cvss",
+      "lpe",
+      "firefox",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 63,
+    "vendors": [
+      "firefox"
+    ],
+    "cves": [
+      "CVE-2026-130020"
+    ],
+    "epss": 0.00179,
+    "epss_percentile": 0.07534,
+    "cwe": [
+      "CWE-119"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
       "ui": "N"
     }
   },
@@ -715,37 +2523,6 @@
     "attack": {
       "av": "N",
       "pr": "N",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "dac561f699a3f94f6c0c958b91b19049",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-114980 — Vulnerability in the Oracle AutoVue product of Oracle Supply Chain (component: S…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114980",
-    "summary": "Vulnerability in the Oracle AutoVue product of Oracle Supply Chain (component: Security Related Issues).   The supported version that is affected is 21.1.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle AutoVue.  While the vulnerability is in Oracle AutoVue, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle AutoVue. CVSS 3.1 Base Score 9.9 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H).",
-    "published": "2026-11-17T22:18:28.903Z",
-    "fetched": "2026-11-18T02:59:13.567408358Z",
-    "tags": [
-      "critical-cvss",
-      "supply-chain",
-      "oracle"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "oracle"
-    ],
-    "cves": [
-      "CVE-2026-114980"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Oracle AutoVue",
-    "attack": {
-      "av": "N",
-      "pr": "L",
       "ui": "N"
     }
   },
@@ -1809,1214 +3586,5 @@
     ],
     "title_ja": "CISAがCisco BroadWorksの脆弱性を積極的に攻撃で悪用中と指摘",
     "summary_ja": "米国サイバーセキュリティおよびインフラストラクチャセキュリティ庁（CISA）は、火曜日に、ハッカーが高 Severity のCisco BroadWorksの脆弱性を攻撃で悪用していることを警告した。 [...]"
-  },
-  {
-    "id": "80a5893d6f9d7306690647db45b3a307",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-953: (0Day) Meta FAIRChem utils load_inference_model Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-953/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta FAIRChem. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta FAIRChem utils load_inference_model",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "d989222ff49054e696430947d1c60e54",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-952: (0Day) Meta FAIRChem _cli YAML File Parsing Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-952/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta FAIRChem. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta FAIRChem _cli YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "0a1fe8655829e71876c7cf262bedbc8f",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-951: (0Day) Meta FAIRChem utils load_tasks Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-951/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta FAIRChem. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta FAIRChem utils load_tasks",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "459cc299a5545969e5e2164311542c2d",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-950: (0Day) Meta FAIRChem migrate_checkpoint Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-950/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta FAIRChem. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta FAIRChem migrate_checkpoint",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "b7ac7783cb04dc2e1e725d441334fc64",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-949: (0Day) Meta FAIRChem utils load_model_and_weights_from_checkpoint Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-949/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta FAIRChem. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta FAIRChem utils load_model_and_weights_from_checkpoint",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "3a42037a9e31004f258373d9c734eda9",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-948: (0Day) Meta FAIRChem MLIPPredictUnit Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-948/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta FAIRChem. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta FAIRChem MLIPPredictUnit",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "611f53eb91026609ff81dabd1a70b49e",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-947: (0Day) Meta FAIRChem make_submission_file NPZ File Parsing Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-947/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta FAIRChem. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta FAIRChem make_submission_file NPZ File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "1004181cfe9f8ac495f9313da592084a",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-946: (0Day) Meta FAIRChem make_challenge_submission_file NPZ File Parsing Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-946/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta FAIRChem. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta FAIRChem make_challenge_submission_file NPZ File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "fae080bc7744206583c8dcb687c8fd2d",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-945: (0Day) Meta FAIRChem convert_fine_tune_checkpoint Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-945/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta FAIRChem. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta FAIRChem convert_fine_tune_checkpoint",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "5bd5d5705084c622c3ae791e37f9a2af",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-944: (0Day) Meta fairseq load_ema_from_checkpoint Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-944/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta fairseq load_ema_from_checkpoint",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "7420c7c446ceb9bdda6263b05f585061",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-943: (0Day) Meta fairseq load_checkpoint_to_cpu Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-943/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta fairseq load_checkpoint_to_cpu",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "a7a98c91071c5d665f2872f5114c4de8",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-942: (0Day) Meta fairseq rerank Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-942/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq rerank",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "2e6fbb903ff67758368f9955c722e17e",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-941: (0Day) Meta fairseq FConvModel YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-941/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq FConvModel YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "c429d0b58e64b15799e493364a1201cd",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-940: (0Day) Meta fairseq dump_km_label Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-940/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta fairseq dump_km_label",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "c1506723a29460a439d04cae9b01e4fa",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-939: (0Day) Meta fairseq2 FileCheckpointManager _load_state_dict Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-939/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq2. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta fairseq2 FileCheckpointManager _load_state_dict",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "7b812d32b40b096193d92484bba8550d",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-938: (0Day) Meta fairseq parse_manifest Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-938/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq parse_manifest",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "83709c68f6a59d3ac676875fbc79eca2",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-937: (0Day) Meta fairseq quantize_with_kmeans Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-937/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta fairseq quantize_with_kmeans",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "bdb6eca081ba60bd5321bffb6be9df84",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-936: (0Day) Meta fairseq FairseqCPUAdam YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-936/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq FairseqCPUAdam YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "5200f52877e8f8270e3cd8456b165e8f",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-935: (0Day) Meta fairseq FConvModelSelfAtt YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-935/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq FConvModelSelfAtt YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "8f225be4eb80c238ee8136fda404369e",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-934: (0Day) Meta fairseq FConvLanguageModel YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-934/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq FConvLanguageModel YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "d2c4a0b2f374bee329d97c090e2cb548",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-933: (0Day) Meta fairseq MultiresHubertModel YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-933/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq MultiresHubertModel YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "4ff687a5bb5fc1a72a07b32ad3df8dc4",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-932: (0Day) Meta fairseq CtcCriterion YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-932/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq CtcCriterion YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "1146e506d449de1a02d9ece0d7cefab2",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-931: (0Day) Meta fairseq AudioModalityConfig YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-931/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq AudioModalityConfig YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "4dcf0f4d4c7ad721cb85f0376bcd9b82",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-930: (0Day) Meta fairseq LightConvLanguageModel YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-930/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq LightConvLanguageModel YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "f7a9032bc5c123766a01fdd9b5f31ac3",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-929: (0Day) Meta fairseq FairseqAdamax YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-929/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq FairseqAdamax YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "83a901f7820026c1b8639545c482a6fe",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-928: (0Day) Meta fairseq W2lConvGluEncoder YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-928/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq W2lConvGluEncoder YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "6569cda3d778be2f81aa602bc9c772e0",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-927: (0Day) Meta fairseq FairseqAdam YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-927/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq FairseqAdam YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "024bfe5f1acb0afa899170db88169126",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-926: (0Day) Meta fairseq RawAudioDataset YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-926/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq RawAudioDataset YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "4279e81bf10062369b49f5b0865800fa",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-925: (0Day) Meta fairseq FairseqLAMB YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-925/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq FairseqLAMB YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "d7e8ba26dc02d71718730e1e48f30242",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-924: (0Day) Meta fairseq S2TWavTransformerEncoder YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-924/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq S2TWavTransformerEncoder YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "381a3c221fc2e12e5344e2382e97016d",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-923: (0Day) Meta fairseq HubertModel YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-923/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq HubertModel YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "886aac6337fa7e049cf65db9ef6b5c5b",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-922: (0Day) Meta fairseq Wav2Vec2Model YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-922/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq Wav2Vec2Model YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "2eafda98651bf9f075f138d64982f3a3",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-921: (0Day) Meta fairseq TransformerLanguageModel YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-921/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq TransformerLanguageModel YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "19585fbc595ae395b6b3f8186da34034",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-920: (0Day) Meta fairseq Data2VecAudioModel YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-920/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq Data2VecAudioModel YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "281dc54151621a59397123e57ea21c32",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-919: (0Day) Meta fairseq FairseqAdafactor YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-919/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq FairseqAdafactor YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "11eda648e681bf74bc2b3f32fc2d65b3",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-918: (0Day) Meta fairseq VGGTransformerModel YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-918/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq VGGTransformerModel YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "dd6dc4c03c5c85357a773d6fc2edb6cc",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-917: (0Day) Meta fairseq load_speaker Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-917/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq load_speaker",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "588bb64161048dcc23282b2de8ae301c",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-916: (0Day) Meta fairseq split_by_lang Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-916/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq split_by_lang",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "84bcfe1cd90f313740a0ac792b694674",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-915: (0Day) Meta fairseq FilterNamesDataset Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-915/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq FilterNamesDataset",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "f4578a002df5e7686cb040e4aea287a3",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-914: (0Day) Meta fairseq Wav2VecModel YAML File Parsing Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-914/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq Wav2VecModel YAML File Parsing",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "a018325046cdb71919a572440489a2ab",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-913: (0Day) Meta fairseq load_audio_path Code Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-913/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta fairseq. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-94"
-    ],
-    "product": "Meta fairseq load_audio_path",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "b7a79a3fc7531255434620c42bbe98e6",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-912: (0Day) Meta Detectron2 detection_checkpoint Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-912/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta Detectron2. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta Detectron2 detection_checkpoint",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "53c29ab4ea545f7749ce26d8b2756734",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-911: (0Day) Meta Detectron2 DensePose Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-911/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta Detectron2. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta Detectron2 DensePose",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "a11a151b432f1231ea831a80a513d3e1",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-910: (0Day) Meta Detectron2 LazyConfig Deserialization of Untrusted Data Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-910/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Meta Detectron2. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8.",
-    "published": "2026-11-11T06:00:00Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "rce",
-      "0day"
-    ],
-    "severity": "critical",
-    "score": 90,
-    "cwe": [
-      "CWE-502"
-    ],
-    "product": "Meta Detectron2 LazyConfig",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "31e12929d047f84dc3a51f3909fc88e9",
-    "source": "talos",
-    "source_name": "Cisco Talos",
-    "category": "research",
-    "title": "Microsoft Patch Tuesday for November 2026 — Snort rules and prominent vulnerabilities",
-    "url": "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-november-2026/",
-    "summary": "Microsoft has released its monthly security update for November 2026, which includes 1328 vulnerabilities affecting a range of products, including 60 that Microsoft marked as \"critical.\" Out of 60 \"critical\" vulnerabilities, 45 are remote code execution (RCE) vulnerabilities.",
-    "published": "2026-11-11T01:41:17Z",
-    "fetched": "2026-11-12T02:20:36.601876808Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ]
   }
 ]

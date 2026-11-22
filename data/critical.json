@@ -19,6 +19,75 @@
     "summary_ja": "脅威アクターはオープンソースのAIペネトレーションテストフレームワークCairnを用いて、医療画像アプリケーションに存在する以前に知られていなかった脆弱性を発見。 [...]"
   },
   {
+    "id": "d134d183ff62446d6abd108cb7ecd683",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-82675 — The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82675",
+    "summary": "The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to donor account account takeover in all versions up to, and including, 4.17.0. This is due to the plugin not properly validating a donor's identity prior to updating the password of a linked WordPress account. The donation receipt processes an attacker-controlled first name through the V3 template engine and then reprocesses the result through the legacy `{meta_donor_*}` engine, which can disclose the donor's email-access bearer token. The donor-dashboard password endpoint accepts that token by itself and calls `wp_set_password()` for the WordPress user linked to the donor. This makes it possible for unauthenticated attackers to reset the password of any WordPress account linked to a GiveWP donor record and gain access to that account. If the linked account is an administrator, the attacker can achieve full site compromise and remote code execution through standard administrator functionality. A published GiveWP form with a usable gateway, enabled donor email access (enabled by default), knowledge of the donor email address, and an account already linked to the targeted donor record are required. NOTE: This vulnerability can be chained with CVE-2026-82676 to satisfy the administrator donor pre-requisite for a targeted administrator user attack.",
+    "published": "2026-11-20T17:18:27.703Z",
+    "fetched": "2026-11-22T01:27:14.492819872Z",
+    "tags": [
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-82675",
+      "CVE-2026-82676"
+    ],
+    "epss": 0.0089,
+    "epss_percentile": 0.6023,
+    "cwe": [
+      "CWE-287"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "552913e01b02950a5c44f27cdf531269",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2026-122247 — Budibase is an open-source low-code platform. Prior to 3.50.0, the public POST /…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122247",
+    "summary": "Budibase is an open-source low-code platform. Prior to 3.50.0, the public POST /api/global/users/init endpoint on a self-hosted single-tenant deployment accepts an attacker-controlled tenantId and evaluates checkAnyUserExists() in the selected tenant database instead of the legitimate default tenant. An unauthenticated attacker can select an unused tenant namespace to bypass the one-time initialization guard, causing packages/worker/src/api/controllers/global/users.ts to create a tenant-specific CouchDB database and a global-administrator document without a session or CSRF token. Repeating this operation with unique tenant identifiers can exhaust datastore resources and leave latent privileged records. The created administrator cannot log into the default tenant while multi-tenancy remains disabled, which limits the immediate impact to persistent writes, denial of service, and records that may become usable during later multi-tenant operation or migration. This issue is fixed in versions 3.50.0 and 4.0.0.",
+    "published": "2026-11-20T17:18:08.17Z",
+    "fetched": "2026-11-22T01:27:14.492819872Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-122247"
+    ],
+    "epss": 0.00838,
+    "epss_percentile": 0.58705,
+    "cwe": [
+      "CWE-284",
+      "CWE-306",
+      "CWE-770",
+      "CWE-863"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
     "id": "7db2fb8c8937f411e8c29c1606ba9d9b",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -3174,95 +3243,6 @@
       "av": "N",
       "pr": "",
       "ui": "R"
-    }
-  },
-  {
-    "id": "93d3a9e96aa0a85216c8913d63e977cf",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-968: (Pwn2Own) OpenAI Codex GUI OpenProjectInCodex Argument Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-968/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OpenAI Codex. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-110930.",
-    "published": "2026-11-13T06:00:00Z",
-    "fetched": "2026-11-14T01:31:53.509566885Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-110930"
-    ],
-    "cwe": [
-      "CWE-88"
-    ],
-    "product": "OpenAI Codex GUI OpenProjectInCodex",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "8d4ba59d637418d483cc174a8b3b756f",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-967: Microsoft Windows Remote Desktop Connection Client Link Following Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-967/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft Windows. User interaction is required to exploit this vulnerability in that the target must connect to a malicious server. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-119824.",
-    "published": "2026-11-13T06:00:00Z",
-    "fetched": "2026-11-14T01:31:53.509566885Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-119824"
-    ],
-    "cwe": [
-      "CWE-59"
-    ],
-    "product": "Microsoft Windows Remote Desktop Connection Client",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "c2c8086a5e932a28e3ff6295180b6b15",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-966: (Pwn2Own) Philips Hue Bridge HomeKit Authentication Bypass Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-966/",
-    "summary": "This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of Philips Hue Bridge. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-126981.",
-    "published": "2026-11-13T06:00:00Z",
-    "fetched": "2026-11-14T01:31:53.509566885Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-126981"
-    ],
-    "product": "Philips Hue Bridge HomeKit",
-    "impact": "auth-bypass",
-    "attack": {
-      "av": "A",
-      "pr": "N",
-      "ui": "N"
     }
   }
 ]

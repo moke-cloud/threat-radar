@@ -1,5 +1,74 @@
 [
   {
+    "id": "daec222750c5548c9583bab74930939c",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+    "url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
+    "summary": "Rackspace warned customers that hackers breached its Rackspace Spot cloud platform using compromised credentials, allowing them to deploy unauthorized workloads and access Kubernetes secrets in customer clusters. [...]",
+    "published": "2026-11-21T22:59:58Z",
+    "fetched": "2026-11-22T01:27:14.492819872Z",
+    "tags": [
+      "kubernetes"
+    ],
+    "severity": "low",
+    "score": 27,
+    "vendors": [
+      "kubernetes"
+    ]
+  },
+  {
+    "id": "c38abd7990d2f5e4d39a7259c735c018",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
+    "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
+    "summary": "Microsoft is warning organizations that it suffered a data breach after attackers exploited a vulnerability in its Entra Connect Health service to gain unauthorized access to administrator email addresses and tenant configuration information. [...]",
+    "published": "2026-11-21T18:01:58Z",
+    "fetched": "2026-11-22T01:27:14.492819872Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "breach"
+    ],
+    "severity": "medium",
+    "score": 52,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "5312a4c5cb6d34797cbb9a117a1400e5",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "BADBOX botnet returns with record-breaking 40 billion daily ad requests",
+    "url": "https://www.bleepingcomputer.com/news/security/badbox-30-botnet-returns-with-record-breaking-40-billion-daily-ad-requests/",
+    "summary": "The BADBOX malware found in a broad range of generic Android TV boxes has returned to large-scale ad-fraud operations following last year's disruptions. [...]",
+    "published": "2026-11-21T15:17:27Z",
+    "fetched": "2026-11-22T01:27:14.492819872Z",
+    "tags": [
+      "malware"
+    ],
+    "severity": "low",
+    "score": 27
+  },
+  {
+    "id": "6a9a5a7150f92c2ba8c4231ac2d7e729",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "FBI reportedly hacked again, this time targeting nationwide police database",
+    "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
+    "summary": "FBI systems have reportedly been breached for the second time in two months, this time targeting the agency's National Crime Information Center (NCIC), which is used to share information between local, state, and federal law enforcement agencies. [...]",
+    "published": "2026-11-21T14:26:04Z",
+    "fetched": "2026-11-22T01:27:14.492819872Z",
+    "severity": "low",
+    "score": 27
+  },
+  {
     "id": "cbf727634a1824c8fe95bc3635a22961",
     "source": "krebs",
     "source_name": "Krebs on Security",
@@ -46,6 +115,36 @@
     "summary_ja": "ベルカナダは、2026年11月17日に「アグエント」型脅威アクターがシステムに侵入し、企業顧客データを盗難したことを確認した。このデータには、通信回線の注文およびプロビジョニングを行うシステム内の情報が含まれている。..."
   },
   {
+    "id": "60344f99e20d062b21f7b45cd618cfe4",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.0 CRITICAL] CVE-2026-133212 — @fastify/reply-from is a Fastify plugin that forwards an incoming HTTP request t…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133212",
+    "summary": "@fastify/reply-from is a Fastify plugin that forwards an incoming HTTP request to an upstream server. In versions before 12.9.1, when the plugin forwards a request whose body is not written to the upstream connection, such as a GET, HEAD, or TRACE request that carried a body, or a request with a falsy JSON body, it still forwards the client's Content-Length header while sending no body. The upstream server then treats the bytes of the following request as the unfinished body, which an attacker can use to desynchronize the connection and smuggle a request. The issue is fixed in @fastify/reply-from 12.9.1, and users should upgrade to 12.9.1 or later.",
+    "published": "2026-11-20T18:18:47.127Z",
+    "fetched": "2026-11-22T01:27:14.492819872Z",
+    "tags": [
+      "critical-cvss"
+    ],
+    "severity": "medium",
+    "score": 45,
+    "cves": [
+      "CVE-2026-133212"
+    ],
+    "epss": 0.0059,
+    "epss_percentile": 0.49092,
+    "cwe": [
+      "CWE-444"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
     "id": "20516c7e3962698f82d70d8e0cddaf8e",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -63,6 +162,129 @@
     "score": 87,
     "title_ja": "ハッカーが自動AIツールCairnを用いてゼロデイを発見し、サーバーを制御",
     "summary_ja": "脅威アクターはオープンソースのAIペネトレーションテストフレームワークCairnを用いて、医療画像アプリケーションに存在する以前に知られていなかった脆弱性を発見。 [...]"
+  },
+  {
+    "id": "d134d183ff62446d6abd108cb7ecd683",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-82675 — The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82675",
+    "summary": "The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to donor account account takeover in all versions up to, and including, 4.17.0. This is due to the plugin not properly validating a donor's identity prior to updating the password of a linked WordPress account. The donation receipt processes an attacker-controlled first name through the V3 template engine and then reprocesses the result through the legacy `{meta_donor_*}` engine, which can disclose the donor's email-access bearer token. The donor-dashboard password endpoint accepts that token by itself and calls `wp_set_password()` for the WordPress user linked to the donor. This makes it possible for unauthenticated attackers to reset the password of any WordPress account linked to a GiveWP donor record and gain access to that account. If the linked account is an administrator, the attacker can achieve full site compromise and remote code execution through standard administrator functionality. A published GiveWP form with a usable gateway, enabled donor email access (enabled by default), knowledge of the donor email address, and an account already linked to the targeted donor record are required. NOTE: This vulnerability can be chained with CVE-2026-82676 to satisfy the administrator donor pre-requisite for a targeted administrator user attack.",
+    "published": "2026-11-20T17:18:27.703Z",
+    "fetched": "2026-11-22T01:27:14.492819872Z",
+    "tags": [
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-82675",
+      "CVE-2026-82676"
+    ],
+    "epss": 0.0089,
+    "epss_percentile": 0.6023,
+    "cwe": [
+      "CWE-287"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "f98a77873469a36f4fd0f507542b63fb",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-133874 — Iceburg CRM through 5.0.0 contains an incorrect authorization vulnerability in M…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133874",
+    "summary": "Iceburg CRM through 5.0.0 contains an incorrect authorization vulnerability in Module::saveRecord() that allows authenticated users to write to unauthorized modules by prefixing request body keys with another module id. Attackers with write access to one module can submit crafted requests to POST /data/save or PUT /api/crm/{id} to set their role_id to Admin and access administrative data.",
+    "published": "2026-11-20T17:18:24.647Z",
+    "fetched": "2026-11-22T01:27:14.492819872Z",
+    "severity": "medium",
+    "score": 30,
+    "cves": [
+      "CVE-2026-133874"
+    ],
+    "epss": 0.00536,
+    "epss_percentile": 0.46084,
+    "cwe": [
+      "CWE-863"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "c92b9f9e9274df9e02f22378765edcee",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.5 HIGH] CVE-2026-133199 — Incorrect privilege assignment in the user and group reconciliation logic in AWS…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133199",
+    "summary": "Incorrect privilege assignment in the user and group reconciliation logic in AWS ssosync before 2.9.5 might allow an authenticated remote user who is assigned a reused Google Workspace e-mail address or group name to inherit the IAM Identity Center group memberships and permission set assignments of a previously synchronized, unrelated identity, via automatic synchronization of that Google Workspace account or group.\n\n\n\nTo remediate this issue, users should upgrade to version 2.9.5 or later.",
+    "published": "2026-11-20T17:18:17.783Z",
+    "fetched": "2026-11-22T01:27:14.492819872Z",
+    "severity": "medium",
+    "score": 30,
+    "cves": [
+      "CVE-2026-133199"
+    ],
+    "epss": 0.0071,
+    "epss_percentile": 0.54434,
+    "cwe": [
+      "CWE-266"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "552913e01b02950a5c44f27cdf531269",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2026-122247 — Budibase is an open-source low-code platform. Prior to 3.50.0, the public POST /…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122247",
+    "summary": "Budibase is an open-source low-code platform. Prior to 3.50.0, the public POST /api/global/users/init endpoint on a self-hosted single-tenant deployment accepts an attacker-controlled tenantId and evaluates checkAnyUserExists() in the selected tenant database instead of the legitimate default tenant. An unauthenticated attacker can select an unused tenant namespace to bypass the one-time initialization guard, causing packages/worker/src/api/controllers/global/users.ts to create a tenant-specific CouchDB database and a global-administrator document without a session or CSRF token. Repeating this operation with unique tenant identifiers can exhaust datastore resources and leave latent privileged records. The created administrator cannot log into the default tenant while multi-tenancy remains disabled, which limits the immediate impact to persistent writes, denial of service, and records that may become usable during later multi-tenant operation or migration. This issue is fixed in versions 3.50.0 and 4.0.0.",
+    "published": "2026-11-20T17:18:08.17Z",
+    "fetched": "2026-11-22T01:27:14.492819872Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-122247"
+    ],
+    "epss": 0.00838,
+    "epss_percentile": 0.58705,
+    "cwe": [
+      "CWE-284",
+      "CWE-306",
+      "CWE-770",
+      "CWE-863"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
   },
   {
     "id": "18dc5e6f8bf72988beca2b79018e78f8",
@@ -5666,179 +5888,6 @@
     ]
   },
   {
-    "id": "50ec82d8f13b7c7048fe4788607a9708",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-129991 — Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129991",
-    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, the backup prefix field is only checked for a nonempty value, and normalizeS3Path preserves shell metacharacters before the prefix is interpolated into rclone upload and retention-cleanup command strings. An authenticated organization member with backup permission for a service can execute arbitrary commands as root on the Dokploy host or configured remote server when a PostgreSQL, MySQL, MariaDB, MongoDB, libSQL, Compose, or web-server backup runs manually, on schedule, or performs retention cleanup. This issue is fixed in version 0.31.1.",
-    "published": "2026-11-18T23:17:19.09Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "critical-cvss",
-      "postgres",
-      "mongodb"
-    ],
-    "severity": "medium",
-    "score": 45,
-    "vendors": [
-      "postgres",
-      "mongodb"
-    ],
-    "cves": [
-      "CVE-2026-129991"
-    ],
-    "epss": 0.00921,
-    "epss_percentile": 0.61057,
-    "cwe": [
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Dokploy",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "cfbac7faa234deb382b3dbfa11436c34",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.3 HIGH] CVE-2026-129990 — Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129990",
-    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, every network.* procedure is only authentication-protected and does not require the Docker permission, allowing a standard member to list, inspect, create, import, recreate, resynchronize, and delete Docker networks. A member can disrupt service connectivity or alter network configuration, and create/import operations can target an unchecked serverId. This issue is fixed in version 0.31.1.",
-    "published": "2026-11-18T23:17:18.917Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "docker"
-    ],
-    "severity": "medium",
-    "score": 30,
-    "vendors": [
-      "docker"
-    ],
-    "cves": [
-      "CVE-2026-129990"
-    ],
-    "epss": 0.00647,
-    "epss_percentile": 0.51839,
-    "cwe": [
-      "CWE-862"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H",
-    "product": "Dokploy",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "c983ca9392ed46ec3b5da21935005e74",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-129989 — Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129989",
-    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, the Nixpacks publishDirectory build setting accepts shell metacharacters and is interpolated into a docker cp command executed through child_process.exec. An authenticated user with access to an application can execute arbitrary commands on the Dokploy host when triggering a Nixpacks deployment, leading to host compromise through the privileged Docker environment. This issue is fixed in version 0.31.1.",
-    "published": "2026-11-18T23:17:18.737Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "critical-cvss",
-      "docker"
-    ],
-    "severity": "medium",
-    "score": 45,
-    "vendors": [
-      "docker"
-    ],
-    "cves": [
-      "CVE-2026-129989"
-    ],
-    "epss": 0.00921,
-    "epss_percentile": 0.61057,
-    "cwe": [
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Dokploy",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "6057b2dccd411f2e48d40a720545334f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-129986 — Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129986",
-    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, mount.deleteFileMount passes a path containing the user-controlled filePath to the local removeFileOrDirectory helper, which interpolates it unquoted into rm -rf, while the remote branch is quoted. An authenticated member with file-mount create and delete permissions can execute arbitrary commands in the host context immediately when deleting a local file mount, without requiring a running container. This issue is fixed in version 0.31.1.",
-    "published": "2026-11-18T23:17:18.55Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "critical-cvss"
-    ],
-    "severity": "medium",
-    "score": 45,
-    "cves": [
-      "CVE-2026-129986"
-    ],
-    "epss": 0.00921,
-    "epss_percentile": 0.61057,
-    "cwe": [
-      "CWE-77",
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Dokploy",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "3fe2a521c99eb481b958aad619ec571a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-129316 — Dokploy is a free, self-hostable Platform as a Service (PaaS). From 0.29.13 unti…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129316",
-    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). From 0.29.13 until 0.31.0, the Docker terminal, container-log, and monitoring WebSocket handlers accept a caller-controlled serviceId as authorization but do not consistently bind the requested containerId or appName to that service. A member with read access to any service can consequently target unrelated containers, obtain a root shell in the Dokploy panel container, read other tenants' logs and statistics, and use the mounted Docker socket to compromise the host. This issue is fixed in version 0.31.0.",
-    "published": "2026-11-18T23:17:18.187Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "critical-cvss",
-      "docker"
-    ],
-    "severity": "medium",
-    "score": 45,
-    "vendors": [
-      "docker"
-    ],
-    "cves": [
-      "CVE-2026-129316"
-    ],
-    "epss": 0.0072,
-    "epss_percentile": 0.54701,
-    "cwe": [
-      "CWE-862"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Dokploy",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
     "id": "886b1d690a7b8192fbfd29beedbe1f12",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -11051,118 +11100,6 @@
       "av": "N",
       "pr": "",
       "ui": "R"
-    }
-  },
-  {
-    "id": "93d3a9e96aa0a85216c8913d63e977cf",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-968: (Pwn2Own) OpenAI Codex GUI OpenProjectInCodex Argument Injection Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-968/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of OpenAI Codex. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-110930.",
-    "published": "2026-11-13T06:00:00Z",
-    "fetched": "2026-11-14T01:31:53.509566885Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-110930"
-    ],
-    "cwe": [
-      "CWE-88"
-    ],
-    "product": "OpenAI Codex GUI OpenProjectInCodex",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "8d4ba59d637418d483cc174a8b3b756f",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-967: Microsoft Windows Remote Desktop Connection Client Link Following Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-967/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft Windows. User interaction is required to exploit this vulnerability in that the target must connect to a malicious server. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-119824.",
-    "published": "2026-11-13T06:00:00Z",
-    "fetched": "2026-11-14T01:31:53.509566885Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-119824"
-    ],
-    "cwe": [
-      "CWE-59"
-    ],
-    "product": "Microsoft Windows Remote Desktop Connection Client",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "c2c8086a5e932a28e3ff6295180b6b15",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-966: (Pwn2Own) Philips Hue Bridge HomeKit Authentication Bypass Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-966/",
-    "summary": "This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of Philips Hue Bridge. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-126981.",
-    "published": "2026-11-13T06:00:00Z",
-    "fetched": "2026-11-14T01:31:53.509566885Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-126981"
-    ],
-    "product": "Philips Hue Bridge HomeKit",
-    "impact": "auth-bypass",
-    "attack": {
-      "av": "A",
-      "pr": "N",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "77eb2dba971d22b00c9cc49b7dcfb4d6",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-965: (Pwn2Own) Philips Hue Bridge HomeKit Observable Discrepancy Information Disclosure Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-965/",
-    "summary": "This vulnerability allows network-adjacent attackers to disclose sensitive information on affected installations of Philips Hue Bridge. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-126980.",
-    "published": "2026-11-13T06:00:00Z",
-    "fetched": "2026-11-14T01:31:53.509566885Z",
-    "severity": "medium",
-    "score": 30,
-    "cves": [
-      "CVE-2026-126980"
-    ],
-    "product": "Philips Hue Bridge HomeKit Observable Discrepancy",
-    "impact": "info",
-    "attack": {
-      "av": "A",
-      "pr": "N",
-      "ui": "N"
     }
   }
 ]

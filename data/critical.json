@@ -1,5 +1,215 @@
 [
   {
+    "id": "54eec83819a58390f31b14712daeeeae",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
+    "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
+    "summary": "E-commerce platform Cleverbridge is warning that hackers breached its systems and stole customers' payment card information, including credit card numbers and CVV security codes. [...]",
+    "published": "2026-11-22T15:43:04Z",
+    "fetched": "2026-11-23T01:51:44.078798174Z",
+    "tags": [
+      "rce",
+      "breach"
+    ],
+    "severity": "high",
+    "score": 72
+  },
+  {
+    "id": "4ad887f7ab299c2e2de0a7715ef23c3b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-125294 — The Nexter Blocks Pro plugin for WordPress is vulnerable to Privilege Escalation…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125294",
+    "summary": "The Nexter Blocks Pro plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 5.0.10 via the `tpgb_ajax_register_user()` function. This is due to a byte-level denylist on the `tpgb_acf_key[]` and `tpgb_acf[]` parameters that fails to block Unicode look-alike characters — such as U+1E87 and U+00E7 in a key like `ẇp_çapabilities` — whose UTF-8 byte sequences do not match any ASCII-based pattern check, while the database's default accent-insensitive collation (`utf8mb4_unicode_ci` / `utf8mb4_0900_ai_ci`) treats the decorated key as equivalent to the canonical `wp_capabilities` row, causing `update_user_meta()` to overwrite the newly registered user's role with `administrator`. This makes it possible for unauthenticated attackers to register a new account bearing the full Administrator role, gaining complete control over the WordPress site including the ability to install plugins, modify files, and execute arbitrary code. The nonce required by the handler is publicly emitted on any page containing the tp-login-register block, making the full exploit chain — nonce retrieval, a single crafted registration POST, and the plugin's own `autologin` flow — trivially reachable on any default install where user registration is enabled. Successful exploitation causes the attacker's own account to receive the complete Administrator role.",
+    "published": "2026-11-21T19:16:31.403Z",
+    "fetched": "2026-11-23T01:51:44.078798174Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "lpe",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-125294"
+    ],
+    "epss": 0.00801,
+    "epss_percentile": 0.57566,
+    "cwe": [
+      "CWE-269"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "96ab252a7359a8102c8a85fb05dabe88",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.5 HIGH] CVE-2026-134433 — Frappe ERPNext before 15.124.2 and 16.x before 16.53.0 fails to enforce record-l…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134433",
+    "summary": "Frappe ERPNext before 15.124.2 and 16.x before 16.53.0 fails to enforce record-level authorization in several endpoints, reports and forms, allowing authenticated low-privilege users to access data beyond their role. Attackers can send crafted requests naming out-of-scope records to read other companies' financial, stock, pricing and contact data or make constrained changes to those records.",
+    "published": "2026-11-21T17:17:08.95Z",
+    "fetched": "2026-11-23T01:51:44.078798174Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-134433"
+    ],
+    "epss": 0.00312,
+    "epss_percentile": 0.24593,
+    "cwe": [
+      "CWE-862"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "4d702daeb707b057540e75e1fb99011e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.5 HIGH] CVE-2026-134389 — Frappe ERPNext 6.18.0 before 15.124.0 and 16.x before 16.52.0 contains a missing…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134389",
+    "summary": "Frappe ERPNext 6.18.0 before 15.124.0 and 16.x before 16.52.0 contains a missing authorization vulnerability in Payment Requests that lets authenticated Accounts User role holders read source documents they lack permission to access. Attackers can create a Payment Request through the generic record interface that references another company's document, then email its loaded content to an address they choose.",
+    "published": "2026-11-21T17:17:01.62Z",
+    "fetched": "2026-11-23T01:51:44.078798174Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-134389"
+    ],
+    "epss": 0.00178,
+    "epss_percentile": 0.0738,
+    "cwe": [
+      "CWE-862"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "5cd14cdc9ab6bef59be031aedf5c1774",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-134352 — Rclone from 1.51.0 before 1.76.0 contains an authentication bypass vulnerability…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134352",
+    "summary": "Rclone from 1.51.0 before 1.76.0 contains an authentication bypass vulnerability in serve sftp --auth-proxy because the generateCacheKey cache key omits the authentication method. Attackers knowing a victim's base64 public key can submit it as a password from the same client IP to reuse the cached entry and gain read-write VFS access.",
+    "published": "2026-11-21T17:16:56.2Z",
+    "fetched": "2026-11-23T01:51:44.078798174Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-134352"
+    ],
+    "epss": 0.00395,
+    "epss_percentile": 0.34517,
+    "cwe": [
+      "CWE-287"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "3b55aa52017ba307ac1b0c3e2d7ac6de",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-134253 — Grav API plugin from 1.0.0 before 1.1.4 contains a remote code execution vulnera…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134253",
+    "summary": "Grav API plugin from 1.0.0 before 1.1.4 contains a remote code execution vulnerability that allows publishers with media and page write rights to write theme template files through the blueprint-upload endpoint. Attackers can upload a file into a theme's Twig templates folder and include it from sandboxed page Twig to execute commands as the web-server user.",
+    "published": "2026-11-21T17:16:42.87Z",
+    "fetched": "2026-11-23T01:51:44.078798174Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-134253"
+    ],
+    "epss": 0.01255,
+    "epss_percentile": 0.70244,
+    "cwe": [
+      "CWE-94"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "a935afd746676a17219479686d452f8f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-120539 — The Restrictions for BuddyPress plugin for WordPress is vulnerable to Remote Cod…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120539",
+    "summary": "The Restrictions for BuddyPress plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.5.4 This is due to the plugin splicing the attacker-controlled request URI into a PHP expression inside a double-quoted string and evaluating it with eval(). Because PHP interpolates double-quoted strings, a payload of the form {${...}} in the URL path is executed during interpolation, so no quote breakout is required and WordPress' slashing does not mitigate it. This makes it possible for unauthenticated attackers to execute arbitrary code on the server with a single GET request. The affected conditions ship enabled by default and are evaluated before any logged-in check, so no plugin configuration is needed; the site must have BuddyPress and Paid Memberships Pro active alongside this plugin.",
+    "published": "2026-11-21T06:16:33.227Z",
+    "fetched": "2026-11-23T01:51:44.078798174Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-120539"
+    ],
+    "epss": 0.02157,
+    "epss_percentile": 0.82645,
+    "cwe": [
+      "CWE-95"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
     "id": "20516c7e3962698f82d70d8e0cddaf8e",
     "source": "bleeping",
     "source_name": "Bleeping Computer",
@@ -1090,99 +1300,6 @@
     }
   },
   {
-    "id": "0067813de77253bf8941b3992526aef1",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-133189 — A command injection vulnerability was found in OpenStack Cinder's SSH-based stor…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133189",
-    "summary": "A command injection vulnerability was found in OpenStack Cinder's SSH-based storage-driver support. Incomplete validation of shell metacharacters allows an authenticated user who owns a volume on an affected backend to supply crafted connection information and inject additional commands into the storage array's management interface. Commands execute with the privileges of Cinder's configured backend account. This can disclose storage configuration information and, where that account has administrative permissions, could allow changes that affect the integrity or availability of other tenants' storage.",
-    "published": "2026-11-19T17:18:36.627Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-133189"
-    ],
-    "cwe": [
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
-    "product": "Cinder",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "e93190d4b9b08a8b300327499d157c08",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-133172 — Cozy Cloud cozy-stack 1.6.62 before 1.6.69 contains an authorization bypass vuln…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133172",
-    "summary": "Cozy Cloud cozy-stack 1.6.62 before 1.6.69 contains an authorization bypass vulnerability in the shared-drive move handler that allows authenticated users to access other instances' files. Attackers owning a shared drive can name another instance's domain and any directory ID as the move source to copy and delete the victim's file tree.",
-    "published": "2026-11-19T15:17:37.253Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-133172"
-    ],
-    "cwe": [
-      "CWE-639"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "a64d42f14ad9b8cace94cb8cc46f1215",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-123890 — VMware vCenter contains an authentication bypass vulnerability in the VMware Dir…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123890",
-    "summary": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service.\nAffected versions: 9.1.x (fixed in 9.1.1.0200); 9.0.x (fixed in 9.0.2.0200); 8.0 (fixed in 8.0 U3m); 5.x (fixed in 5.2.5).\nTelco Cloud Platform 3.0, 4.x, 5.0.x, 5.1.x, 5.2 and Telco Cloud Infrastructure 3.0 are also affected (see KB463116).",
-    "published": "2026-11-19T15:17:25.407Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "critical-cvss",
-      "auth-bypass",
-      "vmware",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "vmware"
-    ],
-    "cves": [
-      "CVE-2026-123890"
-    ],
-    "cwe": [
-      "CWE-288"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "product": "vCenter",
-    "attack": {
-      "av": "N",
-      "pr": "N",
-      "ui": "N"
-    }
-  },
-  {
     "id": "651743a2df63fbbf466396b27151995d",
     "source": "gtig",
     "source_name": "Google Threat Intelligence (Mandiant)",
@@ -1202,494 +1319,6 @@
     ],
     "title_ja": "ARMORY CASTLE が vSphere をexploit",
     "summary_ja": "執筆者：Jayson Frost, Bryce Greathouse, Dhanesh Kizhakkinan, John Palmisano, Steve Rasch, Daniel Sislo, John Wolfram\n紹介\n2026年10月15日、MandiantおよびGoogle Threat Intelligence Group（GTIG）が、PRC-nexus系の脅威アクターARMORY CASTLE（以前はUNC5221と記録されていた）が、BeyondTrust Remote Supportにおけるゼロデイ脆弱性CVE-2026-102764を悪用した活動について、ブログ記事を公開しました。この脆弱性は、パッチが適用された後も、依然として悪用されたとされています。"
-  },
-  {
-    "id": "ee0b3ec4fcd4ff8b21b3c2ec9c88b5bf",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.2 HIGH] CVE-2026-133117 — WebToffee Product Feed before 2.4.4 for WordPress contains a use of hard-coded c…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133117",
-    "summary": "WebToffee Product Feed before 2.4.4 for WordPress contains a use of hard-coded cryptographic key vulnerability that allows unauthenticated attackers to bypass the URL-cron signature check by computing a valid hash using the publicly known constant salt embedded in the plugin source. Attackers can send forged GET requests with attacker-controlled parameters to the unauthenticated init-hooked endpoint to repeatedly trigger product-feed generation, causing CPU/database resource exhaustion and overwriting of the generated feed file.",
-    "published": "2026-11-19T13:17:32.84Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "wordpress",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-133117"
-    ],
-    "cwe": [
-      "CWE-798"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
-    "product": "WebToffee Product Feed",
-    "attack": {
-      "av": "N",
-      "pr": "N",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "db0432e9da0d623a05ca94210c1fc7fc",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-133092 — In JetBrains TeamCity before 2026.2.2, 2026.1.6 remote code execution was possib…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133092",
-    "summary": "In JetBrains TeamCity before 2026.2.2, 2026.1.6 remote code execution was possible via Git submodule URLs",
-    "published": "2026-11-19T13:17:30.49Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-133092"
-    ],
-    "cwe": [
-      "CWE-88"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "608f6bd7faff55d032a879613597441b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-133087 — In JetBrains TeamCity before 2026.2.2, 2026.1.6 remote code execution was possib…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133087",
-    "summary": "In JetBrains TeamCity before 2026.2.2, 2026.1.6 remote code execution was possible via a time zone callback in the Kotlin DSL sandbox",
-    "published": "2026-11-19T13:17:29.843Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-133087"
-    ],
-    "cwe": [
-      "CWE-250"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "JetBrains TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "869cd02774a49e232b7140360ec58aea",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-133086 — In JetBrains TeamCity before 2026.2.2, 2026.1.6 remote code execution was possib…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133086",
-    "summary": "In JetBrains TeamCity before 2026.2.2, 2026.1.6 remote code execution was possible via a URL stream handler in the Kotlin DSL sandbox",
-    "published": "2026-11-19T13:17:29.717Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-133086"
-    ],
-    "cwe": [
-      "CWE-250"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "JetBrains TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "8fcb63c36c781b5e17898ae9bd2ff721",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-133080 — In JetBrains TeamCity before 2026.2.2, 2026.1.6 remote code execution was possib…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133080",
-    "summary": "In JetBrains TeamCity before 2026.2.2, 2026.1.6 remote code execution was possible via Maven repository settings",
-    "published": "2026-11-19T13:17:28.947Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-133080"
-    ],
-    "cwe": [
-      "CWE-23"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "ce316bbcefab3937fc3e635c3f221b83",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-133019 — In JetBrains TeamCity before 2026.2.1, 2026.1.5 remote code execution was possib…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133019",
-    "summary": "In JetBrains TeamCity before 2026.2.1, 2026.1.5 remote code execution was possible via a context parameters callback in the Kotlin DSL sandbox",
-    "published": "2026-11-19T12:18:42.903Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-133019"
-    ],
-    "cwe": [
-      "CWE-250"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "JetBrains TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "4fa09b2944202a2bbbd100dd87811008",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-133018 — In JetBrains TeamCity before 2026.2.1, 2026.1.5 remote code execution was possib…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133018",
-    "summary": "In JetBrains TeamCity before 2026.2.1, 2026.1.5 remote code execution was possible via a UI patches callback in the Kotlin DSL sandbox",
-    "published": "2026-11-19T12:18:42.783Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-133018"
-    ],
-    "cwe": [
-      "CWE-250"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "JetBrains TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "58ff966e75f1365b91102d3339fe5720",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.0 HIGH] CVE-2026-133017 — In JetBrains TeamCity before 2026.2.1, 2026.1.5 remote code execution was possib…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133017",
-    "summary": "In JetBrains TeamCity before 2026.2.1, 2026.1.5 remote code execution was possible via Git VCS root settings",
-    "published": "2026-11-19T12:18:42.66Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-133017"
-    ],
-    "cwe": [
-      "CWE-15"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
-    "product": "TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "H",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "e33c3d1f28f7c4d1034f49c44d1dc17c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-133016 — In JetBrains TeamCity before 2026.2.1, 2026.1.5 remote code execution was possib…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133016",
-    "summary": "In JetBrains TeamCity before 2026.2.1, 2026.1.5 remote code execution was possible via script definitions in the Kotlin DSL settings repository",
-    "published": "2026-11-19T12:18:42.533Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-133016"
-    ],
-    "cwe": [
-      "CWE-829"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "8a0d4765a021863eb246afd97c3c1b58",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-133015 — In JetBrains TeamCity before 2026.2.1, 2026.1.5 remote code execution was possib…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133015",
-    "summary": "In JetBrains TeamCity before 2026.2.1, 2026.1.5 remote code execution was possible via boot classpath libraries in the Kotlin DSL sandbox",
-    "published": "2026-11-19T12:18:42.413Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-133015"
-    ],
-    "cwe": [
-      "CWE-266"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "JetBrains TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "d90cdb2bac4ac66f4dd9a2c2f850965b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-132917 — In JetBrains TeamCity before 2026.2, 2026.1.4, 2025.11.8 remote code execution w…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132917",
-    "summary": "In JetBrains TeamCity before 2026.2, 2026.1.4, 2025.11.8 remote code execution was possible via a file write bypass in the Kotlin DSL sandbox",
-    "published": "2026-11-19T11:16:58.4Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-132917"
-    ],
-    "cwe": [
-      "CWE-59"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "JetBrains TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "2318901c9f89967626ef51913020a311",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-132909 — In JetBrains TeamCity before 2026.2, 2026.1.4, 2025.11.8 remote code execution w…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132909",
-    "summary": "In JetBrains TeamCity before 2026.2, 2026.1.4, 2025.11.8 remote code execution was possible via Mercurial repository contents",
-    "published": "2026-11-19T11:16:57.443Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-132909"
-    ],
-    "cwe": [
-      "CWE-88"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "JetBrains TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "52bad0447f6b6e21cb38b820af24153d",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-132906 — In JetBrains TeamCity before 2026.2, 2026.1.4, 2025.11.8 remote code execution w…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132906",
-    "summary": "In JetBrains TeamCity before 2026.2, 2026.1.4, 2025.11.8 remote code execution was possible via native code loading in the Kotlin DSL sandbox",
-    "published": "2026-11-19T11:16:57.087Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-132906"
-    ],
-    "cwe": [
-      "CWE-183"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "JetBrains TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "5c23f000924b90d91f4488ae8aa2f44f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-132891 — In JetBrains TeamCity before 2026.2, 2026.1.4, 2025.11.8 remote code execution w…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132891",
-    "summary": "In JetBrains TeamCity before 2026.2, 2026.1.4, 2025.11.8 remote code execution was possible via external pull requests",
-    "published": "2026-11-19T11:16:55.263Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-132891"
-    ],
-    "cwe": [
-      "CWE-696"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "product": "TeamCity",
-    "attack": {
-      "av": "N",
-      "pr": "N",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "797549295baf0d780bf04ddaadb61d06",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-14492 — The WP Duplicate – WordPress Migration Plugin plugin for WordPress is vulnerab…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14492",
-    "summary": "The WP Duplicate – WordPress Migration Plugin plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.1.11 via the save_single_batch_file function. This is due to a PHP type-juggling authentication bypass via loose != comparison with no is_string() guard, combined with unsanitized base64-decoded path construction in save_single_batch_file() lacking any directory traversal containment. This makes it possible for authenticated attackers, with custom-level access and above, to execute code on the server. Exploitation requires that the site owner has completed the plugin's initial setup so that the site_type and prod_key_random_id options are non-empty, though any non-empty secret value is bypassable via the type-juggling flaw.",
-    "published": "2026-11-19T10:17:28.927Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "auth-bypass",
-      "path-traversal",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-14492"
-    ],
-    "epss": 0.02356,
-    "epss_percentile": 0.84104,
-    "cwe": [
-      "CWE-434"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "product": "WP Duplicate – WordPress Migration Plugin",
-    "attack": {
-      "av": "N",
-      "pr": "N",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "f086b11c983cc3ad08043dab40d0353f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.0 HIGH] CVE-2026-109555 — The WP STAGING and WP STAGING Pro plugins for WordPress are vulnerable to PHP Ob…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109555",
-    "summary": "The WP STAGING and WP STAGING Pro plugins for WordPress are vulnerable to PHP Object Injection in all versions up to, and including, 4.17.0 and 6.17.0, respectively, via deserialization of untrusted input during database restore and staging reset. This is due to the database importer treating attacker-controlled text beginning with {WPSTG_BINARY} as trusted internal binary data and decoding its hexadecimal suffix into serialized bytes. This makes it possible for authenticated attackers, with Subscriber-level access and above, to plant a malicious serialized object in their own profile. When an Administrator later performs an ordinary database-including restore or staging reset containing that value, and the restored profile metadata is loaded, either during the restore or in a later request, a built-in POP chain can be used to execute arbitrary code on the server. Additional built-in gadget chains allow arbitrary local file read in both WP STAGING and WP STAGING Pro and arbitrary file deletion in WP STAGING Pro. The attacker does not require Administrator credentials or a copy of a backup, but exploitation does require the later privileged restore or reset.",
-    "published": "2026-11-19T06:16:52.89Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "rce",
-      "deserialization",
-      "wordpress",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "wordpress"
-    ],
-    "cves": [
-      "CVE-2026-109555"
-    ],
-    "epss": 0.00319,
-    "epss_percentile": 0.25383,
-    "cwe": [
-      "CWE-502"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-    "product": "WP STAGING",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "R"
-    }
   },
   {
     "id": "c20f29746eb8e93f9773c86e663ae508",
@@ -1751,71 +1380,6 @@
     "attack": {
       "av": "A",
       "pr": "N",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "3e7f9f63cbe6920ead68fb3b82141321",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-132802 — A malicious actor with access to the network and low privileges could exploit an…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132802",
-    "summary": "A malicious actor with access to the network and low privileges could exploit an Improper Link Resolution Before File Access vulnerability found in UniFi Access Application to execute arbitrary code with root privileges on the host device.",
-    "published": "2026-11-19T05:18:38.507Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-132802"
-    ],
-    "epss": 0.00418,
-    "epss_percentile": 0.36825,
-    "cwe": [
-      "CWE-59"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "UniFi Access Application",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "6f39c1b666039d6b45d6356955e70e36",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-132622 — A vulnerability was found in GearUP Hyperev up to 20261020. This impacts the fun…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132622",
-    "summary": "A vulnerability was found in GearUP Hyperev up to 20261020. This impacts the function get_wlan_sitesurvey of the file ld/utils.lua of the component WLAN Site Survey. Performing a manipulation of the argument line results in os command injection. The attack is possible to be carried out remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-11-19T04:17:27.7Z",
-    "fetched": "2026-11-20T02:27:27.305627582Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-132622"
-    ],
-    "epss": 0.02336,
-    "epss_percentile": 0.83947,
-    "cwe": [
-      "CWE-77",
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-    "product": "GearUP Hyperev",
-    "attack": {
-      "av": "N",
-      "pr": "H",
       "ui": "N"
     }
   },
@@ -3217,34 +2781,6 @@
       "av": "A",
       "pr": "N",
       "ui": "N"
-    }
-  },
-  {
-    "id": "3e250f38e6b45bb0d4b59c97c412146a",
-    "source": "zdi",
-    "source_name": "Zero Day Initiative — Published",
-    "category": "vuln",
-    "title": "ZDI-26-971: Signal for Windows Insufficient UI Warning Remote Code Execution Vulnerability",
-    "url": "http://www.zerodayinitiative.com/advisories/ZDI-26-971/",
-    "summary": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Signal for Windows. User interaction is required to exploit this vulnerability in that the target must accept a malicious attachment. The ZDI has assigned a CVSS rating of 7.5.",
-    "published": "2026-11-13T06:00:00Z",
-    "fetched": "2026-11-14T01:31:53.509566885Z",
-    "tags": [
-      "microsoft",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "microsoft"
-    ],
-    "product": "Signal for Windows Insufficient UI Warning",
-    "impact": "rce",
-    "attack": {
-      "av": "N",
-      "pr": "",
-      "ui": "R"
     }
   }
 ]

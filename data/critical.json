@@ -1,5 +1,1232 @@
 [
   {
+    "id": "250c1645d818999d582ccca77be3b7d2",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-123685 — A remote code execution vulnerability exists in the patch apply functionality of…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123685",
+    "summary": "A remote code execution vulnerability exists in the patch apply functionality of StellarProtect Linux and Stellar Agent (Linux) due to insufficient validation of uploaded patch packages before extraction. An attacker with low-privileged web access can upload a crafted patch package to execute arbitrary programs with root privileges on the server. This issue affects StellarProtect Linux: 1.0 and earlier; Stellar Agent (Linux): before 1.2.54. *Note: Stellar Agent (Linux) is the new name for StellarProtect Linux.",
+    "published": "2026-11-26T03:16:35.517Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-123685"
+    ],
+    "cwe": [
+      "CWE-345"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "335c40b0b907e1e438493bad74afa7cb",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.7 HIGH] CVE-2026-66784 — A flaw was found in Submariner. In its default Pre-Shared Key (PSK) mode, all ga…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66784",
+    "summary": "A flaw was found in Submariner. In its default Pre-Shared Key (PSK) mode, all gateways within a broker set utilize the same PSK. An attacker, by knowing this shared PSK, can forge an Endpoint Custom Resource (CR) to impersonate another cluster's identity. This enables the attacker to establish an Internet Protocol Security (IPsec) tunnel under the false identity, leading to a Man-in-the-Middle (MITM) attack on network traffic between clusters.",
+    "published": "2026-11-26T01:17:11.88Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-66784"
+    ],
+    "cwe": [
+      "CWE-1295"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
+    "attack": {
+      "av": "N",
+      "pr": "H",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "9539fe48584ce5d587821b0d527789b9",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-133973 — A command injection vulnerability exists in the web-based management interface o…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133973",
+    "summary": "A command injection vulnerability exists in the web-based management interface of HPE Networking Management Software (Airwave). Successful exploitation could allow an unauthenticated remote attacker to execute arbitrary commands on the underlying operating system of the affected system, impacting the confidentiality, integrity and availability of HPE Networking Management Software (AirWave).",
+    "published": "2026-11-25T23:17:21.787Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-133973"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "46db54ae4ff9aed23e8c55194e0443dd",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-133971 — An authentication bypass vulnerability exists in the web management interface of…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133971",
+    "summary": "An authentication bypass vulnerability exists in the web management interface of HPE Networking Management Software (Airwave). Successful exploitation could allow an unauthenticated remote attacker to gain unauthorized administrative access to the affected system, impacting the confidentiality and integrity of AirWave.",
+    "published": "2026-11-25T23:17:21.57Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-133971"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "225e0b2cab3a5149638caafc8c2b8288",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-69695 — Handesk through 1.5 contains an unrestricted file upload vulnerability in Attach…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69695",
+    "summary": "Handesk through 1.5 contains an unrestricted file upload vulnerability in Attachment::storeAttachmentFromRequest() that allows authenticated agents to upload files with arbitrary extensions by attaching them to ticket comments without extension, MIME type, or size validation. Attackers can upload a PHP file via POST /tickets/{ticket}/comments, which is stored under storage/app/public/attachments and served from /storage/attachments/, to achieve remote code execution as the web server user or serve malicious HTML/SVG content from the application origin.",
+    "published": "2026-11-25T22:17:21.8Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-69695"
+    ],
+    "cwe": [
+      "CWE-434"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "121017eabdc36b230cde5c729ab0dd13",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 10.0 CRITICAL] CVE-2026-136823 — A vulnerability was found in D-Link R32 1.10B02. This affects an unknown functio…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136823",
+    "summary": "A vulnerability was found in D-Link R32 1.10B02. This affects an unknown function of the file /usr/bin/httpd of the component flupl self Endpoint. Performing a manipulation of the argument fpath results in os command injection. The attack can be initiated remotely. The exploit has been made public and could be used.",
+    "published": "2026-11-25T22:17:20.717Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-136823"
+    ],
+    "cwe": [
+      "CWE-77",
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "03540ed55c1ff70797b858cc70fd59c4",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-136822 — A vulnerability has been found in D-Link R32 1.10B02. The impacted element is th…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136822",
+    "summary": "A vulnerability has been found in D-Link R32 1.10B02. The impacted element is the function SetDeviceSettings of the file /usr/bin/httpd of the component DHMAPI Action Handler. Such manipulation of the argument TZLocation leads to os command injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.",
+    "published": "2026-11-25T21:17:19.85Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-136822"
+    ],
+    "cwe": [
+      "CWE-77",
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "1dcb88c389e4a1009157b5a123de696c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.9 CRITICAL] CVE-2026-136821 — A flaw has been found in D-Link R32 1.10B02. The affected element is the functio…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136821",
+    "summary": "A flaw has been found in D-Link R32 1.10B02. The affected element is the function SetTimeSettings of the component DHMAPI Action Handler. This manipulation of the argument TZLocation causes os command injection. It is possible to initiate the attack remotely. The exploit has been published and may be used.",
+    "published": "2026-11-25T21:17:19.63Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-136821"
+    ],
+    "cwe": [
+      "CWE-77",
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "073688bbee91debcdf1ce93ad85f18b2",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-131817 — ChargePoint Home Flex wpa_passphrase Command Injection Remote Code Execution Vul…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131817",
+    "summary": "ChargePoint Home Flex wpa_passphrase Command Injection Remote Code Execution Vulnerability. This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of ChargePoint Home Flex EV chargers. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the PSK parameter passed to the wpa_passphrase endpoint. The issue results from the lack of proper validation of a user-supplied string before using it to execute a system call. An attacker can leverage this vulnerability to execute arbitrary code in the context of root. Was ZDI-CAN-29000.",
+    "published": "2026-11-25T21:17:16.85Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-131817"
+    ],
+    "cwe": [
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "A",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "0e3fbca7cb08dcd368d0abee6a4be456",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-137090 — build-git-clone before 1.0.4 contains an OS command injection vulnerability in t…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137090",
+    "summary": "build-git-clone before 1.0.4 contains an OS command injection vulnerability in the clone() function that allows attackers to execute commands by supplying crafted repository URLs. Attackers can embed shell metacharacters such as ; or $() in the url argument, which is concatenated into a sh -c command, to execute operating system commands with Node.js process privileges.",
+    "published": "2026-11-25T20:18:46.22Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-137090"
+    ],
+    "cwe": [
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "cb656f6c7084d9f4788a47be68b9566c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-137086 — Teracom TCW122B-CM firmware before 4.07 contains a predictable session cookie vu…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137086",
+    "summary": "Teracom TCW122B-CM firmware before 4.07 contains a predictable session cookie vulnerability that allows unauthenticated remote attackers to hijack administrator sessions by guessing tick-counter-derived cookies. Attackers can predict or brute-force the 32-bit cookie from device uptime and login timing to control relays, settings, and administrator credentials.",
+    "published": "2026-11-25T20:18:45.607Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-137086"
+    ],
+    "cwe": [
+      "CWE-341"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "183abed68e3649e204bed961eec7bede",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-133467 — CodeSafe is an open-source Python library for code encryption, decryption, and s…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133467",
+    "summary": "CodeSafe is an open-source Python library for code encryption, decryption, and safe evaluation using Python's AST module. From versions 0.0.1 through 0.0.4, the safe_eval() function can be bypassed with indirect subscript calls such as builtins'exec', because AST validation blocks only direct calls to dangerous built-ins. An attacker who controls an expression passed to safe_eval() can execute arbitrary Python code with the permissions of the host application. This issue is fixed in version 0.0.5.",
+    "published": "2026-11-25T20:18:34.46Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-133467"
+    ],
+    "cwe": [
+      "CWE-95",
+      "CWE-693"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "ea9186c36bd2fa90e5569015625a246b",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-73517 — KubeSphere 4.0.0 through 4.1.3 contains a command injection vulnerability in the…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73517",
+    "summary": "KubeSphere 4.0.0 through 4.1.3 contains a command injection vulnerability in the terminal v1alpha2 file download endpoint where the path query parameter is inserted via fmt.Sprintf into sh -c tar commands executed inside the target container, and the DownloadFile handler fails to perform its own pods/exec authorization check. Attackers with only pod get permission, including built-in read-only project-viewer, workspace-viewer and cluster-viewer roles, can supply shell metacharacters in the path parameter to execute arbitrary commands inside any viewable container without holding pod exec permission.",
+    "published": "2026-11-25T17:17:59.92Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-73517"
+    ],
+    "cwe": [
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "613da27620d026644b0be101772a7322",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-136837 — Jenkins Warnings Plugin 13.10251.va_452d3553728 through 13.10365.v85cd7a_c8110b_…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136837",
+    "summary": "Jenkins Warnings Plugin 13.10251.va_452d3553728 through 13.10365.v85cd7a_c8110b_ (both inclusive) allows defining inline Groovy parsers whose Groovy scripts are compiled on the Jenkins controller without sandbox protection, allowing attackers able to define inline Groovy parsers to execute arbitrary code in the context of the Jenkins controller JVM.",
+    "published": "2026-11-25T17:17:50.813Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce",
+      "jenkins",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "jenkins"
+    ],
+    "cves": [
+      "CVE-2026-136837"
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "6643937fb1cc348ffa17b3dc57d00872",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-136834 — Sandbox protection in Jenkins Pipeline: Groovy Plugin 4403.v471713a_cea_19 and e…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136834",
+    "summary": "Sandbox protection in Jenkins Pipeline: Groovy Plugin 4403.v471713a_cea_19 and earlier can be circumvented through interface field initializers, allowing attackers with permission to define and run sandboxed Pipelines to bypass the sandbox protection and execute arbitrary code in the context of the Jenkins controller JVM.",
+    "published": "2026-11-25T17:17:50.41Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce",
+      "jenkins",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "jenkins"
+    ],
+    "cves": [
+      "CVE-2026-136834"
+    ],
+    "cwe": [
+      "CWE-284"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "d92958a09906a885f41f65d8baaa6eb1",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.6 HIGH] CVE-2026-135402 — Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135402",
+    "summary": "Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS, and project management. Prior to 111.42.13, POST /api/integration/github/webhook in packages/plugins/integration-github/src/lib/probot/probot.discovery.ts passes request bodies through ProbotDiscovery.receiveHook to probot.receive without verifying x-hub-signature-256 against the configured webhook secret. Because the route is public and uses the attacker-controlled installation.id to locate integrations, an unauthenticated remote attacker who knows or guesses an installation identifier can forge installation deletion events that remove a tenant's GitHub integration or forge issues events that insert fabricated issue data into the tenant's automation pipeline. This issue is fixed in version 111.42.13.",
+    "published": "2026-11-25T17:17:45.563Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "github",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "github"
+    ],
+    "cves": [
+      "CVE-2026-135402"
+    ],
+    "cwe": [
+      "CWE-345",
+      "CWE-347"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "31b9d1cf4f07b801af50f643570f5967",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-135400 — Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135400",
+    "summary": "Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS, and project management. Prior to 111.44.3, per-request JWT validation in packages/core/src/lib/auth/strategies/jwt.strategy.ts accepts the result of UserService.getIfExists in packages/core/src/lib/user/user.service.ts without requiring User.isActive to be true and User.isArchived to be false. When a token contains an organizationId claim, the active and archived status check applies to the UserOrganization record rather than the User entity. After an administrator deactivates an account through PATCH /api/user/:id, an existing access token can continue to authenticate API requests at the account's previous privilege level until expiration, up to 24 hours by default. This issue is fixed in version 111.44.3.",
+    "published": "2026-11-25T17:17:45.25Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-135400"
+    ],
+    "cwe": [
+      "CWE-613"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "c785076788c79302723102435c90a509",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-135399 — Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135399",
+    "summary": "Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS, and project management. Prior to 111.42.10, RoleGuard authorizes requests using the role claim embedded in an access token instead of the user's current database role in packages/core/src/lib/core/context/request-context.ts through RequestContext.hasRoles. After an administrator demotes a user, an already-issued token can continue to pass role checks for up to the token's 24-hour default lifetime, including on DELETE /api/tenant and other RolesEnum.SUPER_ADMIN or ADMIN guarded routes, which can preserve tenant-destructive and billing privileges after revocation. This issue is fixed in version 111.42.10.",
+    "published": "2026-11-25T17:17:45.087Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-135399"
+    ],
+    "cwe": [
+      "CWE-613"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "bed0fd6efe88e271566df479fe2726a4",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-82493 — openIMIS before 2026-10 contains a remote code execution vulnerability in the re…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82493",
+    "summary": "openIMIS before 2026-10 contains a remote code execution vulnerability in the report module's overrideReport GraphQL mutation, which stores submitted report definitions without proper validation before rendering them with the simpleeval expression evaluator. An attacker holding only limited report add, edit, or query privileges can craft a printIf expression that leverages the datetime module to reach os.system functions, bypassing the name-prefix blocklist to execute arbitrary operating-system commands as root whenever the malicious report is later rendered by any viewer, including administrators or scheduled jobs.",
+    "published": "2026-11-25T15:17:52.64Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-82493"
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "d078ee18dcee136fe6e4eb0fef134450",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-82489 — openIMIS before 2026-10 contains an unauthenticated remote code execution vulner…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82489",
+    "summary": "openIMIS before 2026-10 contains an unauthenticated remote code execution vulnerability in the report module (openimis-be-report_py) where the /api/report/reportbro/preview endpoint evaluates printIf expressions server-side using simpleeval with an insufficient name-prefix blocklist. An attacker can craft an expression that reaches sys.modules['os'] via datetime.sys to execute arbitrary operating-system commands as root, and can also exploit the same endpoint's key parameter for unauthenticated arbitrary file read, enabling full host compromise including exposure of database credentials and JWT signing keys.",
+    "published": "2026-11-25T15:17:52.04Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-82489"
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "4c96795a26e72797e90768623091f243",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-134945 — Cross-Site Request Forgery (CSRF) vulnerability in Brainstorm Force SureForms su…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134945",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in Brainstorm Force SureForms sureforms allows Cross Site Request Forgery.This issue affects SureForms: from n/a through 2.14.1.",
+    "published": "2026-11-25T15:17:39.147Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-134945"
+    ],
+    "cwe": [
+      "CWE-352"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "0f5f17241d727bcef65ff75603a3ef94",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-134873 — Cross-Site Request Forgery (CSRF) vulnerability in Brainstorm Force CartFlows ca…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134873",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in Brainstorm Force CartFlows cartflows allows Cross Site Request Forgery.This issue affects CartFlows: from n/a through 3.3.3.",
+    "published": "2026-11-25T15:17:38.907Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-134873"
+    ],
+    "cwe": [
+      "CWE-352"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "37837380b9a279096e40894e6e6326d7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2026-133742 — Incorrect permission assignment for critical resource in the media management fu…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133742",
+    "summary": "Incorrect permission assignment for critical resource in the media management functionality of Progress Software Sitefinity versions before 14.4.8154, from 15.0.8200 before 15.0.8236, from 15.1.8300 before 15.1.8337, from 15.2.8400 before 15.2.8444, from 15.3.8500 before 15.3.8533, and from 15.4.8600 before 15.4.8642 allows unauthorized modification of media library content under certain configurations.",
+    "published": "2026-11-25T15:17:38.073Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-133742"
+    ],
+    "cwe": [
+      "CWE-732"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "eb5f7d9ed55e3aae8ac4eb993cb18488",
+    "source": "rapid7",
+    "source_name": "Rapid7 Blog",
+    "category": "research",
+    "title": "CVE-2026-123903: Critical VMware Directory Service Authentication Bypass affects vCenter",
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-123903-critical-vmware-directory-service-authentication-bypass-affects-vcenter",
+    "summary": "OverviewOn November 24, 2026, Broadcom released VMware Security Advisory VMSA-2026-0011 to address several new vulnerabilities, including CVE-2026-123903, a critical authentication bypass in the VMware Directory Service component of vCenter. Broadcom assigned it a CVSSv3.1 score of 9.8 Critical. An attacker who can reach an affected vCenter’s VMware Directory Service (vmdir) over the network can gain access without authenticating.Broadcom's supplemental FAQ distinguishes CVE-2026-123903 from an older vulnerability CVE-2026-123890, which Rapid7 covered previously when CVE-2026-123890 was repo...",
+    "published": "2026-11-25T12:19:20Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "vmware",
+      "watch",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "vmware"
+    ],
+    "cves": [
+      "CVE-2026-123903",
+      "CVE-2026-123890"
+    ]
+  },
+  {
+    "id": "a93fd43bd72a10564c67d3dbfbdfce31",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2026-78102 — Denial of Service in DefaultPluginManager in Apache JSPWIKI versions prior to th…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78102",
+    "summary": "Denial of Service in DefaultPluginManager in Apache JSPWIKI versions prior to the fixed version on all platforms allows an attacker to spawn multiple threads until resource exhaustion or to class load any class on the classpath and creating an instance of it.\nUsers are recommended to upgrade to version 3.0.1, which fixes this issue.",
+    "published": "2026-11-25T11:17:13.59Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "apache",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "apache"
+    ],
+    "cves": [
+      "CVE-2026-78102"
+    ],
+    "cwe": [
+      "CWE-470"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "d704060c5520712f9b1443f93e3824f5",
+    "source": "talos",
+    "source_name": "Cisco Talos",
+    "category": "research",
+    "title": "The Great Escape: Tradecraft insights from an agentic swarm",
+    "url": "https://blog.talosintelligence.com/the-great-escape-tradecraft-insights-from-an-agentic-swarm/",
+    "summary": "The OpenAI-linked swarm activity in 2026 is fully traceable through public records. This blog analyzes its tradecraft and compares it to early signals and behaviors from current agentic attack activity seen in the wild.",
+    "published": "2026-11-25T11:00:00Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "actively-exploited"
+    ],
+    "severity": "high",
+    "score": 70
+  },
+  {
+    "id": "3a31110e0c7ed288a9ff0cd5a36e4f61",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.4 HIGH] CVE-2026-80273 — Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16,…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80273",
+    "summary": "Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. An attacker with local access to the appliance could potentially exploit this vulnerability, leading to arbitrary command execution and privilege escalation, resulting in complete compromise of confidentiality, integrity, and availability of the appliance.",
+    "published": "2026-11-25T10:17:16.29Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce",
+      "lpe"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-80273"
+    ],
+    "epss": 0.02031,
+    "epss_percentile": 0.81683,
+    "cwe": [
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "L",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "f49acc7177403d584bfe4860e3097d0b",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Hackers now exploit critical Drupal RCE flaw to hijack sites",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-drupal-rce-flaw-to-hijack-sites/",
+    "summary": "The Drupal security team has confirmed that a critical vulnerability that lets attackers hijack unpatched sites has been actively exploited since at least Thursday. [...]",
+    "published": "2026-11-25T10:10:20Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 87
+  },
+  {
+    "id": "fa553d6fd108cfbb546ff837815ce01a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-135049 — Cross-Site Request Forgery (CSRF) vulnerability in Brainstorm Force Presto Playe…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135049",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in Brainstorm Force Presto Player presto-player allows Cross Site Request Forgery.This issue affects Presto Player: from n/a through 4.5.6.",
+    "published": "2026-11-25T09:17:19.763Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-135049"
+    ],
+    "epss": 0.00311,
+    "epss_percentile": 0.16406,
+    "cwe": [
+      "CWE-352"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "f50f4568364ff3ac9b31885f4ee3358b",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Microsoft confirms authentication issues after November updates",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-authentication-issues-after-november-updates/",
+    "summary": "Microsoft has confirmed that customers may experience authentication issues after installing November security updates that address a high-severity remote code execution vulnerability. [...]",
+    "published": "2026-11-25T09:02:57Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "5dbf5d4e0067f834175becea0c5c83b5",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-136552 — A security vulnerability has been detected in Tenda RX3 16.03.13.11_multi. This …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136552",
+    "summary": "A security vulnerability has been detected in Tenda RX3 16.03.13.11_multi. This impacts the function formSetIPv6status of the file /goform/setIPv6Status of the component multiWAN. Such manipulation of the argument remoteIP leads to command injection. The attack may be performed from remote. The exploit has been disclosed publicly and may be used.",
+    "published": "2026-11-25T07:17:18.643Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-136552"
+    ],
+    "epss": 0.03022,
+    "epss_percentile": 0.8818,
+    "cwe": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "H",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "a2a81c36080ca9a27cf03d29cf981381",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-136550 — A weakness has been identified in Tenda RX3 16.03.13.11_multi. This affects the …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136550",
+    "summary": "A weakness has been identified in Tenda RX3 16.03.13.11_multi. This affects the function fromAdvSetMacMtuWan of the file /goform/AdvSetMacMtuWan. This manipulation of the argument mac causes command injection. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks.",
+    "published": "2026-11-25T06:17:15.807Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-136550"
+    ],
+    "epss": 0.03022,
+    "epss_percentile": 0.8818,
+    "cwe": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "H",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "a438631ebd42219e1d48cfb4b5a44f2f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 10.0 CRITICAL] CVE-2026-136549 — A security flaw has been discovered in Tenda RX3 16.03.13.11_multi. The impacted…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136549",
+    "summary": "A security flaw has been discovered in Tenda RX3 16.03.13.11_multi. The impacted element is the function formSetSafeWanWebMan of the file /goform/SetRemoteWebCfg. The manipulation of the argument remoteIp results in command injection. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks.",
+    "published": "2026-11-25T06:17:15.597Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-136549"
+    ],
+    "epss": 0.02206,
+    "epss_percentile": 0.8326,
+    "cwe": [
+      "CWE-74",
+      "CWE-77"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "0f90802a8a99d0ef7ec217f5b686569b",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-103406 — Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router: Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103406",
+    "summary": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-28",
+    "published": "2026-11-25T00:00:00Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "hewlett"
+    ],
+    "cves": [
+      "CVE-2026-103406"
+    ],
+    "epss": 0.0086,
+    "epss_percentile": 0.56019,
+    "cwe": [
+      "CWE-78"
+    ],
+    "product": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router"
+  },
+  {
+    "id": "9f4e348faffbb5dddbcd7e6518fa84d7",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-133469 — Vates Xen Orchestra: Vates Xen Orchestra Improper Validation of Specified Type of Input Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133469",
+    "summary": "Vates Xen Orchestra contains an improper validation of specified type of input vulnerability that could allow an unauthenticated attacker to bypass authentication and perform actions with administrative privileges via a specially crafted authentication token containing an empty JSON object.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-28",
+    "published": "2026-11-25T00:00:00Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "vates"
+    ],
+    "cves": [
+      "CVE-2026-133469"
+    ],
+    "epss": 0.01101,
+    "epss_percentile": 0.65258,
+    "cwe": [
+      "CWE-287",
+      "CWE-1287"
+    ],
+    "product": "Vates Xen Orchestra"
+  },
+  {
+    "id": "cc0cbe0f2f3f584124291ec68615261e",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2025-41450 — Danfoss AK-SM 800A Series: Danfoss AK-SM 800A Series Improper Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41450",
+    "summary": "Danfoss AK-SM 800A Series contains an improper authentication vulnerability that could allow an attacker to generate a web report exposing sensitive information, including internal IP addresses, usernames, and store names.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-12-09",
+    "published": "2026-11-25T00:00:00Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "danfoss"
+    ],
+    "cves": [
+      "CVE-2025-41450"
+    ],
+    "epss": 0.00513,
+    "epss_percentile": 0.37031,
+    "cwe": [
+      "CWE-305"
+    ],
+    "product": "Danfoss AK-SM 800A Series"
+  },
+  {
+    "id": "ba6a3713a4d79aa73842886b9c151a18",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2023-25914 — Danfoss AK-SM 800A Series: Danfoss AK-SM 800A Series Path Traversal Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-25914",
+    "summary": "Danfoss AK-SM 800A Series contains a path traversal vulnerability that could allow an attacker to access and read underlying server system files via the XML interface.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-28",
+    "published": "2026-11-25T00:00:00Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "kev",
+      "actively-exploited",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "danfoss"
+    ],
+    "cves": [
+      "CVE-2023-25914"
+    ],
+    "epss": 0.01078,
+    "epss_percentile": 0.64585,
+    "cwe": [
+      "CWE-22"
+    ],
+    "product": "Danfoss AK-SM 800A Series"
+  },
+  {
+    "id": "82a3ccd802a5cfccec509ca76e9df11d",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2023-25915 — Danfoss AK-SM 800A Series: Danfoss AK-SM 800A Series Improper Input Validation Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-25915",
+    "summary": "Danfoss AK-SM 800A Series contains an improper input validation vulnerability that could allow a remote attacker to run arbitrary commands on the affected system.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-28",
+    "published": "2026-11-25T00:00:00Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "danfoss"
+    ],
+    "cves": [
+      "CVE-2023-25915"
+    ],
+    "epss": 0.01431,
+    "epss_percentile": 0.73235,
+    "cwe": [
+      "CWE-20"
+    ],
+    "product": "Danfoss AK-SM 800A Series"
+  },
+  {
+    "id": "ff21d3257927e9052dfa2a1b555743a3",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-133324 — Mitel MiCollab: Mitel MiCollab Not Failing Securely Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133324",
+    "summary": "Mitel MiCollab contains a not failing securely vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to bypass authentication controls and perform unauthorized actions.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-28",
+    "published": "2026-11-25T00:00:00Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "mitel"
+    ],
+    "cves": [
+      "CVE-2026-133324"
+    ],
+    "epss": 0.00414,
+    "epss_percentile": 0.273,
+    "cwe": [
+      "CWE-636"
+    ],
+    "product": "Mitel MiCollab"
+  },
+  {
+    "id": "d2766b4d25a7929c24843e4ad80cada3",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-133275 — Mitel MiCollab: Mitel MiCollab Unrestricted Upload of File with Dangerous Type Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133275",
+    "summary": "Mitel MiCollab contains an unrestricted upload of file with dangerous type vulnerability in the Audio, Web and Video Conferencing (AWV) component due to insufficient file type validation that could allow an unauthenticated attacker to upload arbitrary files.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-28",
+    "published": "2026-11-25T00:00:00Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "mitel"
+    ],
+    "cves": [
+      "CVE-2026-133275"
+    ],
+    "epss": 0.00315,
+    "epss_percentile": 0.1686,
+    "cwe": [
+      "CWE-434"
+    ],
+    "product": "Mitel MiCollab"
+  },
+  {
+    "id": "9d5711313a3908f2279f414d7287c2a6",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-133311 — Mitel MiCollab: Mitel MiCollab Weak Authentication Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133311",
+    "summary": "Mitel MiCollab contains a weak authentication vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to access sensitive information using a specific system-generated random identifier or pre-staged content.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-12-09",
+    "published": "2026-11-25T00:00:00Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "mitel"
+    ],
+    "cves": [
+      "CVE-2026-133311"
+    ],
+    "epss": 0.00396,
+    "epss_percentile": 0.2537,
+    "cwe": [
+      "CWE-1390"
+    ],
+    "product": "Mitel MiCollab"
+  },
+  {
+    "id": "8fd49f84dd831a3ee00d679aeaa82b9c",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-133303 — Mitel MiCollab: Mitel MiCollab XML Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133303",
+    "summary": "Mitel MiCollab contains an XML injection vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary commands using pre-staged malicious content.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-28",
+    "published": "2026-11-25T00:00:00Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "mitel"
+    ],
+    "cves": [
+      "CVE-2026-133303"
+    ],
+    "epss": 0.00515,
+    "epss_percentile": 0.37111,
+    "cwe": [
+      "CWE-91"
+    ],
+    "product": "Mitel MiCollab"
+  },
+  {
+    "id": "1395602a14aa8e2ffab888fc6c0be533",
+    "source": "cisa-kev",
+    "source_name": "CISA Known Exploited Vulnerabilities",
+    "category": "vuln",
+    "title": "[KEV] CVE-2026-133323 — Mitel MiCollab: Mitel MiCollab OS Command Injection Vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133323",
+    "summary": "Mitel MiCollab contains an improper neutralization of special elements used in an OS command (OS command injection) vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary system commands.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-28",
+    "published": "2026-11-25T00:00:00Z",
+    "fetched": "2026-11-26T03:40:04.354190606Z",
+    "tags": [
+      "kev",
+      "actively-exploited"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "mitel"
+    ],
+    "cves": [
+      "CVE-2026-133323"
+    ],
+    "epss": 0.02546,
+    "epss_percentile": 0.85725,
+    "cwe": [
+      "CWE-78"
+    ],
+    "product": "Mitel MiCollab"
+  },
+  {
     "id": "4c0d4da09737653bf370a486f4e4acee",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -803,290 +2030,6 @@
     "attack": {
       "av": "N",
       "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "5ed5f58869e93f2a451d87ef32deb6bd",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-135789 — A security vulnerability has been detected in D-Link R95 101B06. Affected by thi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135789",
-    "summary": "A security vulnerability has been detected in D-Link R95 101B06. Affected by this issue is the function GetBluetoothAdapterSettings/GetBluetoothBloodPressure/GetBluetoothDeviceList/GetBluetoothScanDeviceList/SetBluetoothAdapterSettings/SetBluetoothUnpairDevice/SetTriggerBluetoothScan/SetBluetoothPairDevice of the file /bin/ssi of the component DHMAPI SOAP Handler. The manipulation of the argument inner_xml leads to os command injection. The attack can be initiated remotely. The exploit has been disclosed publicly and may be used.",
-    "published": "2026-11-24T17:18:43.48Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-135789"
-    ],
-    "cwe": [
-      "CWE-77",
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-    "product": "D-Link R95 101B06",
-    "attack": {
-      "av": "N",
-      "pr": "H",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "bffebcbaa458eee173c1296263a7fa7a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-135788 — A weakness has been identified in D-Link DIR-X1860 4.5.2. Affected by this vulne…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135788",
-    "summary": "A weakness has been identified in D-Link DIR-X1860 4.5.2. Affected by this vulnerability is an unknown functionality of the file /usr/sbin/anweb. Executing a manipulation can lead to os command injection. It is possible to launch the attack remotely. The exploit has been made available to the public and could be used for attacks.",
-    "published": "2026-11-24T17:18:43.25Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-135788"
-    ],
-    "cwe": [
-      "CWE-77",
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "DIR-X1860",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "3c507463ab463b88fcc8e322e8c71e7f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-123172 — Solarwinds Serv-U is affected by a privilege escalation vulnerability that, when…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123172",
-    "summary": "Solarwinds Serv-U is affected by a privilege escalation vulnerability that, when exploited, could lead to the escalation of privileges to root for Linux installations. The risk is lower for Windows installations.",
-    "published": "2026-11-24T17:18:13.933Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "lpe",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 63,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-123172"
-    ],
-    "cwe": [
-      "CWE-250"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Serv-U",
-    "attack": {
-      "av": "N",
-      "pr": "H",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "2d53005aeec9a0b9468e14b15b9730db",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-123168 — SolarWinds Serv-U is affected by an insufficient \nvalidation vulnerability that,…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123168",
-    "summary": "SolarWinds Serv-U is affected by an insufficient \nvalidation vulnerability that, when exploited, could lead \nto privilege escalation into the root user in Linux \ninstallations. The risk is lower for Windows installations.",
-    "published": "2026-11-24T17:18:13.427Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "lpe",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 63,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-123168"
-    ],
-    "cwe": [
-      "CWE-20"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Serv-U",
-    "attack": {
-      "av": "N",
-      "pr": "H",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "0e97cf5df625fce482130edc0520f748",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-123167 — SolarWinds Serv-U is affected by a privilege escalation vulnerability that, when…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123167",
-    "summary": "SolarWinds Serv-U is affected by a privilege escalation vulnerability that, when exploited, can allow a domain administrator to access files that otherwise would require elevated privileges. The risk is lower for Windows installations.",
-    "published": "2026-11-24T17:18:13.293Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "lpe",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 63,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-123167"
-    ],
-    "cwe": [
-      "CWE-35"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Serv-U",
-    "attack": {
-      "av": "N",
-      "pr": "H",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "267af2736361328d1f84aa8a3f5fdef4",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-136158 — In Valkey JSON 1.0.0 through 1.0.2, a recursive JSONPath expression such as $..*…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136158",
-    "summary": "In Valkey JSON 1.0.0 through 1.0.2, a recursive JSONPath expression such as $..* returns both an array and elements nested inside it. The size-changing mutators (JSON.ARRAPPEND, JSON.ARRINSERT, JSON.ARRPOP, JSON.ARRTRIM and JSON.CLEAR) process the ancestor first, which can reallocate its element buffer and free the old storage while the descendant entries in the result set still point into it; the module then writes through those dangling pointers. An authenticated user who can run these commands can use this to reliably crash the server, and it has been developed into remote code execution as the user the server runs as. Servers that do not load the JSON module, including through valkey-bundle, are not affected.",
-    "published": "2026-11-24T15:17:33.913Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-136158"
-    ],
-    "cwe": [
-      "CWE-416"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "Valkey",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "d95b4ce52eccc807781a4bfd8f535f9a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-136156 — In Valkey before 7.2.15, 8.0.x before 8.0.12, 8.1.x before 8.1.11, 9.0.x before …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136156",
-    "summary": "In Valkey before 7.2.15, 8.0.x before 8.0.12, 8.1.x before 8.1.11, 9.0.x before 9.0.7, 9.1.x before 9.1.3 and 9.2.0-rc1, running in cluster mode, clusterCreatePublishMsgBlock computes the length of the cluster bus message for a PUBLISH or SPUBLISH as a size_t but passes it to createClusterMsgSendBlock as a uint32_t. When the channel and message together exceed 4 GiB, the length is truncated, a buffer far smaller than the message is allocated, and the full channel and message are then copied into it. An authenticated user who can publish, for example by building the arguments in a script, can overflow the heap with attacker-controlled bytes. This reliably crashes the server and may lead to remote code execution. Servers that do not run in cluster mode are not affected.",
-    "published": "2026-11-24T15:17:33.677Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-136156"
-    ],
-    "cwe": [
-      "CWE-122",
-      "CWE-197"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "Valkey",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "2cfe5ec5170ea407c2281635be80a847",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-136155 — In Valkey 9.1.0 and 9.1.1, the Lua script debugger builds its command table once…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136155",
-    "summary": "In Valkey 9.1.0 and 9.1.1, the Lua script debugger builds its command table once and caches it with a pointer to the Lua interpreter state that was current at the time. SCRIPT FLUSH ASYNC recreates the scripting engine and frees the previous interpreter state without invalidating that cache, so the next debugger command dereferences freed memory. An authenticated user who can run scripting commands can use this to reliably crash the server, and by reclaiming the freed heap chunk with attacker-controlled bytes can escalate it to control of an indirect call, which may lead to remote code execution. The fix also addresses a second use-after-free in ldbLogStackValue. Valkey 8.0.x and 8.1.x use the previous debugger and are not affected.",
-    "published": "2026-11-24T15:17:33.553Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-136155"
-    ],
-    "cwe": [
-      "CWE-416"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "Valkey",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "3340042c01d022d42b0f431c8c07921a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.6 HIGH] CVE-2026-136132 — Pangolin before 1.21.0 contains an authentication bypass vulnerability in isPath…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136132",
-    "summary": "Pangolin before 1.21.0 contains an authentication bypass vulnerability in isPathAllowed() in server/lib/pathMatch.ts that splits paths on literal slashes without percent-decoding or resolving dot segments. Unauthenticated remote attackers can send paths with encoded slashes and dot segments to match public bypass rules while backends serve protected paths.",
-    "published": "2026-11-24T15:17:33.24Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-136132"
-    ],
-    "cwe": [
-      "CWE-647"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
-    "product": "Pangolin",
-    "attack": {
-      "av": "N",
-      "pr": "N",
       "ui": "N"
     }
   },
@@ -3358,210 +4301,5 @@
     ],
     "title_ja": "アパッチがローラーのRCE脆弱性の悪用攻撃に対応する安全更新を発表",
     "summary_ja": "アパッチは、脅威アクターが脆弱なサーバー上でコード実行を獲得するために悪用している重要なローラーの脆弱性に対応するための安全更新をリリースしました。 [...]"
-  },
-  {
-    "id": "cb4e28640d71a7600bf03dadb8e5b106",
-    "source": "krebs",
-    "source_name": "Krebs on Security",
-    "category": "news",
-    "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
-    "url": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/",
-    "summary": "At least 178 top web destinations unwittingly served a variety of malware exploits against visitors over the past 24 hours thanks to a security vulnerability involving Optimizely, a company that helps websites customize user experiences and test out new features. Experts say the incident, which saw data-stealing malicious software silently injected into sites like the BBC, CNN, Equifax, Ledger and Zoom, was exacerbated by the reality that few popular websites enforce strict rules on the sources of third-party content.",
-    "published": "2026-11-18T02:52:04Z",
-    "fetched": "2026-11-19T02:41:45.409286828Z",
-    "tags": [
-      "rce",
-      "malware"
-    ],
-    "severity": "high",
-    "score": 60,
-    "title_ja": "攻撃者たちが Optimizely を使ってトップウェブサイトへのマルウェアテストを実行",
-    "summary_ja": "過去24時間以内に、Optimizelyというウェブサイトでユーザー体験をカスタマイズし、新機能をテストするサービスのセキュリティ脆弱性により、少なくとも178のトップウェブサイトが訪問者にさまざまなマルウェアの悪用を無意識に提供した。専門家によると、BBC、CNN、Equifax、Ledger、Zoomなどのサイトにデータを盗み取る悪意あるソフトウェアが静かに注入されたこの事件は、多くのサイトがその脆弱性を認識していない現実によって悪化した。"
-  },
-  {
-    "id": "d0a22d7f44ad075c9ce7671e5792bae7",
-    "source": "talos",
-    "source_name": "Cisco Talos",
-    "category": "research",
-    "title": "CVE-2026-114938: Critical vulnerability in OpenJDK JAVA",
-    "url": "https://blog.talosintelligence.com/java4shell/",
-    "summary": "Cisco Talos is tracking the disclosure of a critical vulnerability in OpenJDK Java (CVE-2026-114938), dubbed “Java4Shell,” with a CVSS 4.0 score of 9.2 that may lead to unauthenticated remote code execution (RCE).",
-    "published": "2026-11-18T01:53:03Z",
-    "fetched": "2026-11-18T02:59:13.567408358Z",
-    "tags": [
-      "cisco",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "cisco"
-    ],
-    "cves": [
-      "CVE-2026-114938"
-    ],
-    "title_ja": "CVE-2026-114938: OpenJDK JAVAにおける重大な脆弱性",
-    "summary_ja": "Cisco Talosは、OpenJDK Java（CVE-2026-114938）における重大な脆弱性、「Java4Shell」と呼ばれるものについての公開を追跡しています。この脆弱性はCVSSスコア9.2（4.0）で、未認証リモートコード実行（RCE）を引き起こす可能性があります。"
-  },
-  {
-    "id": "9fd3c9cfd1c95f0bcfc74e76a4ae8acd",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2024-10441 — Synology DiskStation Manager (DSM): Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-10441",
-    "summary": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-21",
-    "published": "2026-11-18T00:00:00Z",
-    "fetched": "2026-11-19T02:41:45.409286828Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "synology"
-    ],
-    "cves": [
-      "CVE-2024-10441"
-    ],
-    "epss": 0.01251,
-    "epss_percentile": 0.70014,
-    "cwe": [
-      "CWE-116"
-    ],
-    "product": "Synology DiskStation Manager (DSM)"
-  },
-  {
-    "id": "8f3b031876cd227d13e3e75f3e283618",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-40217 — BerriAI LiteLLM: BerriAI LiteLLM Unprotected Alternate Channel Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40217",
-    "summary": "BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-12-02",
-    "published": "2026-11-18T00:00:00Z",
-    "fetched": "2026-11-19T02:41:45.409286828Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 93,
-    "vendors": [
-      "berriai"
-    ],
-    "cves": [
-      "CVE-2026-40217"
-    ],
-    "epss": 0.1702,
-    "epss_percentile": 0.97134,
-    "cwe": [
-      "CWE-420"
-    ],
-    "product": "BerriAI LiteLLM"
-  },
-  {
-    "id": "e0c010e5b5bf38674e6f5b09ea432b3b",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-90817 — Vanderbilt University Research Electronic Data Capture (REDCap): Vanderbilt University Research Electronic Data Capture (REDCap) Code Injection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90817",
-    "summary": "Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that access an unintended controller route from a public survey context and supply a crafted file-path or stream parameter during data import processing. Exploitation requires knowledge of a valid public survey hash.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-21",
-    "published": "2026-11-18T00:00:00Z",
-    "fetched": "2026-11-19T02:41:45.409286828Z",
-    "tags": [
-      "kev",
-      "actively-exploited"
-    ],
-    "severity": "critical",
-    "score": 85,
-    "vendors": [
-      "vanderbilt"
-    ],
-    "cves": [
-      "CVE-2026-90817"
-    ],
-    "epss": 0.03749,
-    "epss_percentile": 0.90092,
-    "cwe": [
-      "CWE-73",
-      "CWE-94"
-    ],
-    "product": "Vanderbilt University Research Electronic Data Capture (REDCap)"
-  },
-  {
-    "id": "6b28d0c1bebddd1060dbdc203e2672a6",
-    "source": "cisa-kev",
-    "source_name": "CISA Known Exploited Vulnerabilities",
-    "category": "vuln",
-    "title": "[KEV] CVE-2026-90436 — Apache Axis: Apache Axis Unsafe Reflection Vulnerability",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90436",
-    "summary": "Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.\nRequired: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\nDue: 2026-11-21",
-    "published": "2026-11-18T00:00:00Z",
-    "fetched": "2026-11-19T02:41:45.409286828Z",
-    "tags": [
-      "kev",
-      "actively-exploited",
-      "apache",
-      "watch"
-    ],
-    "severity": "critical",
-    "score": 95,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2026-90436"
-    ],
-    "epss": 0.01128,
-    "epss_percentile": 0.67007,
-    "cwe": [
-      "CWE-470"
-    ],
-    "product": "Apache Axis"
-  },
-  {
-    "id": "f0a0684d697e678672b9e8180ede6840",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Critical Java4Shell flaw allows RCE attacks on major Java applications",
-    "url": "https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/",
-    "summary": "A critical vulnerability dubbed Java4Shell in OpenJDK, the open-source implementation of Java, can allow unauthenticated attackers to remotely execute code on popular enterprise applications, including Jenkins, Atlassian Jira, Confluence, and Keycloak. [...]",
-    "published": "2026-11-17T23:04:21Z",
-    "fetched": "2026-11-18T02:59:13.567408358Z",
-    "tags": [
-      "confluence",
-      "jenkins",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "confluence",
-      "jenkins"
-    ]
-  },
-  {
-    "id": "30f064059f2220ce259071dcdea5dfa3",
-    "source": "unit42",
-    "source_name": "Palo Alto Networks Unit 42",
-    "category": "research",
-    "title": "Borrowed Code, Real Consequences: What OPTIMJACK Teaches Us",
-    "url": "https://unit42.paloaltonetworks.com/optimjack-supply-chain-attack/",
-    "summary": "The OPTIMJACK supply chain attack demonstrates how a compromised vendor script can expose websites, highlighting the need for strict segmentation. The post Borrowed Code, Real Consequences: What OPTIMJACK Teaches Us appeared first on Unit 42.",
-    "published": "2026-11-17T20:43:14Z",
-    "fetched": "2026-11-18T02:59:13.567408358Z",
-    "tags": [
-      "supply-chain"
-    ],
-    "severity": "high",
-    "score": 60,
-    "title_ja": "借用されたコード、実際の影響：OPTIMJACKが教えてくれること",
-    "summary_ja": "OPTIMJACKのサプライチェーン攻撃は、ベンダーのスクリプトが compromise されたことによってウェブサイトが暴露される可能性を示しており、厳格なセグメンテーションの重要性を強調している。『借用されたコード、実際の影響：OPTIMJACKが教えてくれること』はまずUnit 42で掲載された。"
   }
 ]

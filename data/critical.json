@@ -1,5 +1,747 @@
 [
   {
+    "id": "b4027ef1144f2a4f4936a9f3dd8c922e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-115867 — The Database for Contact Form 7, WPforms, Elementor forms plugin for WordPress i…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115867",
+    "summary": "The Database for Contact Form 7, WPforms, Elementor forms plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.5.5 via the copy_files function. This is due to missing file extension validation in the copy_files function, which accepts attacker-controlled stream wrapper URIs as the file source and derives the destination filename without restricting executable extensions. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. The plugin places an .htaccess file in its uploads directory to block PHP execution, but this mitigation is ineffective on Nginx, LiteSpeed in certain configurations, and Apache servers with AllowOverride None, and the file is not restored if deleted.",
+    "published": "2026-11-27T02:16:43.77Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "apache",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "apache",
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-115867"
+    ],
+    "cwe": [
+      "CWE-434"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "b6565efddaedf8f6314d94b3663a6a6e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-106125 — The Sneeit Framework plugin for WordPress is vulnerable to Remote Code Execution…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106125",
+    "summary": "The Sneeit Framework plugin for WordPress is vulnerable to Remote Code Execution in versions up to, and including, 8.7 via the 'callback' parameter of the sneeit_compact_menu_mega_content AJAX action. The handler sneeit_compact_menu_mega_content_callback() is registered on the wp_ajax_nopriv_ hook and passes the attacker-supplied 'callback' value directly into call_user_func() after only a function_exists() check, with the single argument also attacker-controlled via a JSON-decoded 'args' parameter. There is no authentication, no capability check, no nonce, and no allow-list of callable functions. This makes it possible for unauthenticated attackers to execute arbitrary existing PHP/WordPress functions with controlled arguments.",
+    "published": "2026-11-27T02:16:43.46Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-106125"
+    ],
+    "cwe": [
+      "CWE-94"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "495f3720dd99e169208548e46df8c19f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-135279 — @fastify/express is the plugin that lets an application run Express middleware a…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135279",
+    "summary": "@fastify/express is the plugin that lets an application run Express middleware and Express applications inside the Fastify web framework. In versions before 4.0.14, a request with an empty dynamic route parameter reaches a Fastify route handler while middleware mounted for that path inside an Express Router or sub-application is skipped, because Fastify's router accepts an empty value where Express requires a non-empty one, and an unanchored regular-expression mount passed to the plugin is bypassed the same way. An earlier fix covered only the mount paths passed to the plugin directly, not middleware mounted inside a routed Express application. An attacker can use this to bypass authentication or other middleware-based access controls on the affected routes, with the practical impact depending on what the empty value selects in the application. The issue is fixed in @fastify/express 4.0.14, and users should upgrade to 4.0.14 or later. As a workaround, enforce authentication in a Fastify hook such as preHandler that runs after routing, mount the middleware on a static parent path, or require non-empty values in the route params schema.",
+    "published": "2026-11-26T17:17:06.49Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "rce"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-135279"
+    ],
+    "cwe": [
+      "CWE-287",
+      "CWE-436"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "ea4593ac034b32322d197b6d078e46bb",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-76075 — The Warehouse Cargo theme for WordPress is vulnerable to Arbitrary File Upload i…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76075",
+    "summary": "The Warehouse Cargo theme for WordPress is vulnerable to Arbitrary File Upload in versions up to, and including, 2.7.4 via the warehouse_cargo_install_and_activate_plugin() AJAX handler. The handler is registered on wp_ajax_ but performs no nonce verification and no capability check, allowing any authenticated user to supply an attacker-controlled URL that the server fetches, writes into wp-content/plugins/ with file_put_contents(), extracts with unzip_file() (which does not filter file extensions), and then activates via activate_plugin(). This makes it possible for authenticated attackers, with Subscriber-level access and above, to upload arbitrary files on the affected site's server which makes remote code execution possible.",
+    "published": "2026-11-26T16:18:11.853Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-76075"
+    ],
+    "cwe": [
+      "CWE-434"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "7d03cdf0cbf36315ba66e6885a209583",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-137556 — Dockhand before 1.0.57 contains a path traversal vulnerability in validateStackP…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137556",
+    "summary": "Dockhand before 1.0.57 contains a path traversal vulnerability in validateStackPath, which omits the isProtectedPath() check and permits writes to protected system directories. Authenticated users with stacks:edit permission can send a crafted composePath to PUT /api/stacks/[name]/compose to write arbitrary files, such as cron payloads, achieving remote code execution as root.",
+    "published": "2026-11-26T16:18:09.527Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "rce",
+      "path-traversal"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-137556"
+    ],
+    "cwe": [
+      "CWE-22"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "6f064a64004d97b0560a26e293992cbc",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-137544 — LaraDashboard before 1.5.0 contains a path traversal vulnerability in module.jso…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137544",
+    "summary": "LaraDashboard before 1.5.0 contains a path traversal vulnerability in module.json providers and composer.json psr-4 namespace parsing that derives destination folder names without excluding traversal characters. Attackers with module.create permission can upload a crafted module ZIP to write PHP files into the public directory, achieving unauthenticated remote code execution.",
+    "published": "2026-11-26T16:18:07.603Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "path-traversal"
+    ],
+    "severity": "critical",
+    "score": 83,
+    "cves": [
+      "CVE-2026-137544"
+    ],
+    "cwe": [
+      "CWE-22"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "H",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "193bb0ae07b368a184d441086b8b124c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-137536 — ToolJet before 3.21.94-beta contains an authentication bypass in its server OAut…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137536",
+    "summary": "ToolJet before 3.21.94-beta contains an authentication bypass in its server OAuth SSO sign-in module, which resolves Google and Git SSO logins solely by the provider-asserted email without checking email_verified or binding the SSO subject. Unauthenticated attackers can submit a trusted-issuer token carrying a victim's unverified email to the SSO callback to obtain the victim's session, including admin accounts.",
+    "published": "2026-11-26T16:18:06.41Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-137536"
+    ],
+    "cwe": [
+      "CWE-290"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "e4663381573773fe8e1e1cd5db7bfc4c",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-137523 — ToolJet before 3.21.96-LTS contains an authentication bypass in instance-level G…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137523",
+    "summary": "ToolJet before 3.21.96-LTS contains an authentication bypass in instance-level Google SSO because the id_token audience is not verified when no Google OAuth client ID is configured, the shipped default. Unauthenticated attackers can submit a Google-signed id_token minted for their own OAuth client to /api/sso/sign-in/common/google without an organizationId, obtaining a session as any existing user with the matching email.",
+    "published": "2026-11-26T16:18:04.52Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-137523"
+    ],
+    "cwe": [
+      "CWE-287"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "7f53f8a9527324bcac3a0610fd72f902",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-137499 — Budibase from 3.41.0 before 4.0.0 contains an authentication bypass vulnerabilit…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137499",
+    "summary": "Budibase from 3.41.0 before 4.0.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to take over password-less global Builder accounts via unverified-email OIDC/SSO account linking. Attackers can assert a victim's email with email_verified=false at a trusted IdP, bypassing the isAccountLinkable allowlist to control all apps, datasources, and automations.",
+    "published": "2026-11-26T16:18:01.16Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 75,
+    "cves": [
+      "CVE-2026-137499"
+    ],
+    "cwe": [
+      "CWE-287"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "d2697901759d0e230e82cdd73ad9246d",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.7 HIGH] CVE-2026-137480 — Traefik 3.7.15 before 3.7.18 and 3.8.0-rc.1 before 3.8.0-rc.2 contains a client …",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137480",
+    "summary": "Traefik 3.7.15 before 3.7.18 and 3.8.0-rc.1 before 3.8.0-rc.2 contains a client certificate authentication bypass in the Kubernetes Ingress NGINX provider because, on hosts shared by multiple Ingresses using auth-tls-secret, Ssl-Client-* headers are built per Ingress while the TLS handshake uses the first Ingress's settings. Unauthenticated remote attackers can obtain Ssl-Client-Verify: SUCCESS with a client-chosen subject and issuer for an unverified certificate, or inject Ssl-Client-* headers directly, presenting forged identities to backends that trust the proxy.",
+    "published": "2026-11-26T16:17:57.497Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "auth-bypass",
+      "kubernetes"
+    ],
+    "severity": "high",
+    "score": 60,
+    "vendors": [
+      "kubernetes"
+    ],
+    "cves": [
+      "CVE-2026-137480"
+    ],
+    "cwe": [
+      "CWE-290"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "d631335b567f4939a807e30b4f48dd36",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.7 HIGH] CVE-2026-137478 — Traefik before 2.11.62, 3.x before 3.7.18, and 3.8.0-rc.1 contain an authenticat…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137478",
+    "summary": "Traefik before 2.11.62, 3.x before 3.7.18, and 3.8.0-rc.1 contain an authentication bypass in the ForwardAuth middleware because connection isolation for NTLM and Negotiate credentials checks only the Authorization header, not Proxy-Authorization. Unauthenticated attackers can send such credentials in Proxy-Authorization to reuse a shared authentication-server connection already authenticated by another user, receive that user's identity via authResponseHeaders, and access backends as that user.",
+    "published": "2026-11-26T16:17:57.157Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-137478"
+    ],
+    "cwe": [
+      "CWE-287"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "831cad58b61e0237d3591d4a8af5079f",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-109921 — Authentication bypass in the system.setPillar and system.getPillar functions in…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109921",
+    "summary": "Authentication bypass in the system.setPillar and system.getPillar functions in Uyuni before 5.1.35, 5.2.0 before 5.2.25, 5.3.0 before 5.3.5 could be used by logged in attackers to inject code into other managed system spaces.",
+    "published": "2026-11-26T16:17:49.107Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "auth-bypass"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-109921"
+    ],
+    "cwe": [
+      "CWE-639"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "64f52f29b65a229922873ab5d2a4a03a",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.1 HIGH] CVE-2026-103886 — The App Builder – Create Native Android & iOS Apps On The Flight plugin for Wo…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103886",
+    "summary": "The App Builder – Create Native Android & iOS Apps On The Flight plugin for WordPress is vulnerable to Authentication Bypass via Google ID Token Audience Validation Bypass in all versions up to, and including, 5.7.1. This is due to the `LoginGoogle::login()` function failing to validate the `aud` (audience) claim of the supplied `idToken` against any OAuth client ID belonging to the WordPress site, failing to verify the `email_verified` claim, and resolving WordPress accounts solely by the email claim without binding to the Google `sub` (subject) identifier — while the `/app-builder/v1/login` REST endpoint is registered with a `permission_callback` that unconditionally returns `true`, leaving it fully reachable by unauthenticated requesters. This makes it possible for unauthenticated attackers to authenticate as any existing WordPress user — including Administrators — whose email address is known, by supplying a Google-signed ID token obtained from an entirely unrelated OAuth client containing the target user's email claim, which causes the plugin to issue a signed App Builder JWT granting that user's full privileges. Exploitation requires the attacker to obtain a valid Google-signed ID token carrying the target user's email address, which can be achieved by operating a separate Google OAuth client and inducing the target user to authenticate through it.",
+    "published": "2026-11-26T16:17:48.097Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "auth-bypass",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "high",
+    "score": 70,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-103886"
+    ],
+    "cwe": [
+      "CWE-287"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "92e06d6d01f6f8bf7b1fd65702453814",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "Remus malware steals Gmail messages via fake Google Sheets extension",
+    "url": "https://www.bleepingcomputer.com/news/security/remus-malware-steals-gmail-messages-via-fake-google-sheets-extension/",
+    "summary": "The Remus infostealer is stealing Gmail messages through a stealthy malicious Chrome extension, a capability the malware operators marketed as a zero-day exploit in Google's email service. [...]",
+    "published": "2026-11-26T15:23:28Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "chrome",
+      "watch",
+      "0day",
+      "malware"
+    ],
+    "severity": "high",
+    "score": 77,
+    "vendors": [
+      "chrome"
+    ]
+  },
+  {
+    "id": "ca09257917fa9082edbabd436f442f1e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.2 HIGH] CVE-2026-93087 — A maliciously modified field in the locally stored JSON description for an updat…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93087",
+    "summary": "A maliciously modified field in the locally stored JSON description for an update made available by Autodesk, when processed by Autodesk Access, can cause attacker-controlled HTML content to be executed in another user's session. A local, authenticated malicious actor can leverage this vulnerability to execute arbitrary code in the context of another user if that user interacts with an injected link, resulting in privilege escalation.",
+    "published": "2026-11-26T15:17:42.827Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "rce",
+      "lpe"
+    ],
+    "severity": "high",
+    "score": 68,
+    "cves": [
+      "CVE-2026-93087"
+    ],
+    "cwe": [
+      "CWE-732"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+    "attack": {
+      "av": "L",
+      "pr": "L",
+      "ui": "R"
+    }
+  },
+  {
+    "id": "ca5d1c5ce4097f50b85d48acb6a89f8e",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-136240 — The PDF Invoice for WooCommerce + Drag and Drop Template Builder plugin for Word…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136240",
+    "summary": "The PDF Invoice for WooCommerce + Drag and Drop Template Builder plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 7.2.0 via deserialization of untrusted input . This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present. The incomplete remediation in version 7.2.0 applied escape_pdf_note() only to the customer_note path; the billing address path at woocommerce/shortcodes.php:975–978 remains unpatched, and exploitation requires guest checkout to be enabled along with a payment method that transitions orders to on-hold status (such as the stock WooCommerce Direct Bank Transfer option).",
+    "published": "2026-11-26T15:17:26.867Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "deserialization",
+      "wordpress",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-136240"
+    ],
+    "cwe": [
+      "CWE-502"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "cdb30974e0de452ecfcac2e237a2dec7",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-135641 — The WP Job Portal – AI-Powered Recruitment System for Company or Job Board web…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135641",
+    "summary": "The WP Job Portal – AI-Powered Recruitment System for Company or Job Board website plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 2.7.2 This is due to a flaw in `WPJOBPORTALuser::__construct()` where the non-empty guard on the `wpjobportal-socialid` cookie is evaluated against the raw cookie value before `sanitize_key()` is applied — allowing a value composed entirely of characters outside `[a-z0-9_-]` to pass the guard, be reduced to an empty string by `sanitize_key()`, and be used as the literal value in a `WHERE socialid = ''` database query that matches the first portal account whose `socialid` column is empty. This makes it possible for unauthenticated attackers to be bound to an existing WP Job Portal Employer or Jobseeker account, gaining the ability to create, edit, and delete the victim's companies, job listings, resumes, and applications, as well as overwrite the linked WordPress user's first name, last name, and display name via the `saveuser`→`syncWPUserName()` path. Exploitation is viable on virtually all installations because every portal account not registered through the social-login flow retains the default empty `socialid` value; nonce checks on downstream actions such as `savecompany` and `saveuser` do not mitigate this issue because those nonces are minted within the already-hijacked session and validate against the attacker's own subsequent requests. Successful exploitation gives the attacker control of a distinct, already-privileged WP Job Portal Employer / Jobseeker (bound to a specific WordPress user) account; it does not promote the attacker's original account.",
+    "published": "2026-11-26T15:17:26.1Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-135641"
+    ],
+    "cwe": [
+      "CWE-269"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "5ba378116c494f5a58526a34de277710",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-134173 — The WordPress File Upload plugin for WordPress is vulnerable to Arbitrary File D…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134173",
+    "summary": "The WordPress File Upload plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to, and including, 5.3.1 via the 'wfu_ajax_action_handshake' and 'wfu_ajax_action_send_email_notification' AJAX Actions. This is due to the unauthenticated handshake accepting a 'sid' parameter sanitized only with sanitize_text_field(), which does not strip '[', ']', '{', or '}', allowing the sid to be crafted as an item name containing embedded delimiter pairs that plant forged records for arbitrary other item names — including the per-session file path list and the consent flag — in the plugin's shared concatenated user-state option store, combined with the notification handler being gated only by a nonce freely minted by the same nopriv handshake. This makes it possible for unauthenticated attackers to delete arbitrary files on the affected site's server which may make remote code execution possible.",
+    "published": "2026-11-26T15:17:25.647Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-134173"
+    ],
+    "cwe": [
+      "CWE-22"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "1fffa5e34fb2082f930ef8618d641aa8",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.1 CRITICAL] CVE-2026-133951 — The Simple Membership plugin for WordPress is vulnerable to Privilege Escalation…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133951",
+    "summary": "The Simple Membership plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 4.8.9 This is due to the site-wide signing secret `swpm_private_key_one` being generated at install time with PHP's non-cryptographic `uniqid('', true)` function in `SwpmInstallation::installer()`, whose timestamp-derived keyspace (~10^15 candidates / ~50 bits) can be constrained via the public WordPress REST API date of the plugin's auto-created registration page, combined with a single-MD5 oracle (`md5(key|level)`) that the public registration form prints as `swpm_level_hash` and a non-constant-time `!=` comparison in `SwpmFrontRegistration::register_front_end()` as the sole authorization gate on which membership level a visitor may register into; `SwpmUtils::get_free_level()` then honors an attacker-posted `level_identifier=md5(level)` regardless of the configured free-membership setting, and `prepare_and_create_wp_user_front_end()` creates the WordPress account with whatever role the level is configured to grant (only the `administrator` role is refused). This makes it possible for unauthenticated attackers, after an offline brute-force recovery of the install-time secret against the public MD5 oracle, to forge a valid `swpm_level_hash` for any configured membership level and self-register into that level, elevating their newly created WordPress account to the level's assigned role — e. Successful exploitation causes the attacker's own account to receive the complete editor role.",
+    "published": "2026-11-26T15:17:25.487Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "lpe",
+      "wordpress",
+      "oracle",
+      "watch",
+      "rce"
+    ],
+    "severity": "critical",
+    "score": 93,
+    "vendors": [
+      "wordpress",
+      "oracle"
+    ],
+    "cves": [
+      "CVE-2026-133951"
+    ],
+    "cwe": [
+      "CWE-269"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "a7ee13cb532b77815a80e49554b2e1c8",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-104998 — The Product Input Fields for WooCommerce plugin for WordPress is vulnerable to A…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104998",
+    "summary": "The Product Input Fields for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.1.0 via the process_file_input_field function. This is due to missing file type validation in the process_file_input_field function, which accepts the client-supplied multipart Content-Type header as the sole type gate and writes the uploaded file to the unprotected pif_temp directory using the verbatim client-supplied filename. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. Exploitation requires that an administrator has configured at least one product with a File-type Product Input Field with the \"Show thumbnail\" option enabled, which is a standard use of the feature; additionally, the pif_temp/ upload directory is created without .htaccess or index.php restrictions, leaving written files directly web-accessible and executable on default Apache/mod_php configurations.",
+    "published": "2026-11-26T15:17:22.833Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "rce",
+      "wordpress",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "wordpress"
+    ],
+    "cves": [
+      "CVE-2026-104998"
+    ],
+    "cwe": [
+      "CWE-434"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "c311f6264c114fbd0fe862dda1fa6065",
+    "source": "bleeping",
+    "source_name": "Bleeping Computer",
+    "category": "news",
+    "title": "SYS010 malware abuses browser management to spy on Gmail, Outlook",
+    "url": "https://www.bleepingcomputer.com/news/security/sys010-malware-abuses-browser-management-to-spy-on-gmail-outlook/",
+    "summary": "A new version of the SYS01 infostealer malware delivered through Meta ads is enrolling browsers into enterprise-style management to force the installation of an extension that steals sensitive data, including Gmail and Outlook emails. [...]",
+    "published": "2026-11-26T11:50:17Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "microsoft",
+      "watch",
+      "rce",
+      "malware"
+    ],
+    "severity": "high",
+    "score": 67,
+    "vendors": [
+      "microsoft"
+    ]
+  },
+  {
+    "id": "aa404eb6355ad4c029f3b53a40773ca6",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 9.8 CRITICAL] CVE-2026-123903 — VMware vCenter contains an authentication bypass vulnerability in the VMware Dir…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123903",
+    "summary": "VMware vCenter contains an authentication bypass vulnerability in the VMware Directory Service. Broadcom has evaluated the severity of this issue to be in the Critical severity range with a maximum CVSSv3 base score of 9.8.\nAffected versions:\nVMware vCenter Server 9.1.x.x: fixed in 9.1.2\nVMware vCenter Server 9.0.x.x: fixed in 9.0.2.0300\nVMware vCenter Server 8.0: fixed in 8.0 U3m\nVMware Cloud Foundation 5.x: fixed in 5.2.5\nVMware Telco Cloud Platform 3.0: fixed in KB463501\nVMware Telco Cloud Platform 4.x: fixed in KB463501\nVMware Telco Cloud Platform 5.0.x: fixed in KB463501\nVMware Telco Cloud Platform 5.1.x: fixed in KB463501\nVMware Telco Cloud Platform 5.2: fixed in KB463501\nVMware Telco Cloud Infrastructure 3.0: fixed in KB463501",
+    "published": "2026-11-26T11:17:00.283Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "critical-cvss",
+      "auth-bypass",
+      "vmware",
+      "watch"
+    ],
+    "severity": "critical",
+    "score": 85,
+    "vendors": [
+      "vmware"
+    ],
+    "cves": [
+      "CVE-2026-123903"
+    ],
+    "epss": 0.00614,
+    "epss_percentile": 0.4369,
+    "cwe": [
+      "CWE-287"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "N",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "f43c1e9ac05cd18fc4e38cf2ed7ad385",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-137390 — Mail2000 developed by Openfind has an OS Command Injection vulnerability.Authent…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137390",
+    "summary": "Mail2000 developed by Openfind has an OS Command Injection vulnerability.Authenticated remote attackers can inject arbitrary OS commands and execute them on the server.",
+    "published": "2026-11-26T09:17:10.09Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-137390"
+    ],
+    "epss": 0.01255,
+    "epss_percentile": 0.69485,
+    "cwe": [
+      "CWE-78"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
+    "id": "ee90ba249bc4a19d0bb3fbdf6d7d97e0",
+    "source": "nvd-recent",
+    "source_name": "NVD CVE recent",
+    "category": "vuln",
+    "title": "[CVSS 8.8 HIGH] CVE-2026-137389 — MailGates/MailAudit developed by Openfind has a Command Injection vulnerability.…",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-137389",
+    "summary": "MailGates/MailAudit developed by Openfind has a Command Injection vulnerability.Authenticated remote attackers can inject commands and execute them on the server.",
+    "published": "2026-11-26T09:17:09.937Z",
+    "fetched": "2026-11-27T03:41:32.155307878Z",
+    "tags": [
+      "rce"
+    ],
+    "severity": "high",
+    "score": 60,
+    "cves": [
+      "CVE-2026-137389"
+    ],
+    "epss": 0.01255,
+    "epss_percentile": 0.69485,
+    "cwe": [
+      "CWE-77"
+    ],
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "attack": {
+      "av": "N",
+      "pr": "L",
+      "ui": "N"
+    }
+  },
+  {
     "id": "250c1645d818999d582ccca77be3b7d2",
     "source": "nvd-recent",
     "source_name": "NVD CVE recent",
@@ -1256,813 +1998,6 @@
       "CWE-78"
     ],
     "product": "Mitel MiCollab"
-  },
-  {
-    "id": "4c0d4da09737653bf370a486f4e4acee",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-123340 — Copeland XWEB Pro contains an OS command injection vulnerability that allows a r…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123340",
-    "summary": "Copeland XWEB Pro contains an OS command injection vulnerability that allows a remote, authenticated attacker to execute arbitrary commands as the root user. Fixed in 1.16.1.",
-    "published": "2026-11-24T20:18:47.96Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-123340"
-    ],
-    "cwe": [
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
-    "product": "Copeland XWEB Pro",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "c7c4f0a8bba6bcd3e31802fbb2b215c6",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.6 CRITICAL] CVE-2026-123216 — Copeland XWEB Pro contains an OS command injection vulnerability that allows a r…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123216",
-    "summary": "Copeland XWEB Pro contains an OS command injection vulnerability that allows a remote, authenticated attacker to execute arbitrary commands as the root user. Fixed in 1.16.1.",
-    "published": "2026-11-24T20:18:46.097Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-123216"
-    ],
-    "cwe": [
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
-    "product": "Copeland XWEB Pro",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "59f5f817bcc79acc115ef1b0f07f8def",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-136441 — Bytebase DBHub MCP Incorrect Authorization Authentication Bypass Vulnerability. …",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136441",
-    "summary": "Bytebase DBHub MCP Incorrect Authorization Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of Bytebase DBHub. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the implementation of the MCP server. The issue results from an incorrect authorization decision when parsing untrusted SQL. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-27635.",
-    "published": "2026-11-24T19:18:20.13Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "auth-bypass"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-136441"
-    ],
-    "cwe": [
-      "CWE-863"
-    ],
-    "cvss_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "product": "DBHub",
-    "attack": {
-      "av": "N",
-      "pr": "N",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "ae6dfdcf2b11eebca5708bd56f04a72b",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.8 CRITICAL] CVE-2026-136434 — Super Magic PHPSandbox Command Injection Sandbox Escape Vulnerability. This vuln…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136434",
-    "summary": "Super Magic PHPSandbox Command Injection Sandbox Escape Vulnerability. This vulnerability allows remote attackers to bypass the sandbox on affected installations of Super Magic. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the PHPSandbox endpoint. The issue results from the lack of proper validation of a user-supplied string before using it to execute PHP code. An attacker can leverage this vulnerability to escape the sandbox and execute arbitrary code in the context of the service account. Was ZDI-CAN-28102.",
-    "published": "2026-11-24T19:18:19.273Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-136434"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "cvss_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "product": "Super Magic",
-    "attack": {
-      "av": "N",
-      "pr": "N",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "1decc47094d7b56e54df22763001663e",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 10.0 CRITICAL] CVE-2026-135797 — A vulnerability was identified in Volans NGFW Next-Generation Firewall r5.1. Imp…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135797",
-    "summary": "A vulnerability was identified in Volans NGFW Next-Generation Firewall r5.1. Impacted is the function exec of the file sslvpn/sslvpn_client.php of the component SSLVPN Client. Such manipulation of the argument img leads to os command injection. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-11-24T19:18:14.63Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-135797"
-    ],
-    "cwe": [
-      "CWE-77",
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Volans NGFW Next-Generation Firewall",
-    "attack": {
-      "av": "N",
-      "pr": "N",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "f918c36b04d007be748e0537f06c2ef2",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-135796 — A vulnerability was determined in Volans NGFW Next-Generation Firewall r5.1. Thi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135796",
-    "summary": "A vulnerability was determined in Volans NGFW Next-Generation Firewall r5.1. This issue affects the function exec/system of the file modules/assets/port_serve_scan.mds of the component Web Management UI. This manipulation of the argument task_name/where/path causes os command injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-11-24T19:18:14.43Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-135796"
-    ],
-    "cwe": [
-      "CWE-77",
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Volans NGFW Next-Generation Firewall",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "3d1ab0a0717d2d15a68f8f5ab38e0f51",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-134986 — Cross-Site Request Forgery (CSRF) vulnerability in Brainstorm Force SureCart sur…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134986",
-    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in Brainstorm Force SureCart surecart allows Cross Site Request Forgery.This issue affects SureCart: from n/a through 4.13.1.",
-    "published": "2026-11-24T19:18:11.42Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "rce"
-    ],
-    "severity": "high",
-    "score": 60,
-    "cves": [
-      "CVE-2026-134986"
-    ],
-    "cwe": [
-      "CWE-352"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "product": "SureCart",
-    "attack": {
-      "av": "N",
-      "pr": "N",
-      "ui": "R"
-    }
-  },
-  {
-    "id": "b987b96ac96c66f2de102dd6fabb3dbc",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-132877 — Adobe Experience Manager is affected by an Improper Control of Generation of Cod…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132877",
-    "summary": "Adobe Experience Manager is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
-    "published": "2026-11-24T19:18:09.507Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "adobe"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-132877"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Adobe Experience Manager",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "62b7f1eb1c100bd56c9e88ab8b1b460f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-129959 — When sftpEnabled=true (the default configuration in etc/org.apache.karaf.shel…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129959",
-    "summary": "When sftpEnabled=true (the default configuration in etc/org.apache.karaf.shell.cfg), the SSH server exposes the karaf.base directory tree through the MINA SSHD SFTP subsystem and SCP command factory without verifying the authenticated user's roles beyond the initial sshRole login check. Consequently, an authenticated user with only low-privileged roles (such as viewer and ssh) can read sensitive configuration and key files (including etc/users.properties and etc/host.key) or write arbitrary bundles/configurations into monitored directories (such as deploy/ or etc/), leading to privilege escalation and arbitrary code execution.\n\n\nApache Karaf 4.4.13 and 4.5.0 introduce the sftpRole configuration property in org.apache.karaf.shell (defaulting to admin) and enforce role-based access control on SFTP subsystem creation, SCP command execution, and virtual filesystem access.\n\nMitigation / WorkaroundUsers are recommended to upgrade to Apache Karaf 4.4.13 or 4.5.0.\n\n\n\n\nOn earlier versions where SFTP/SCP access is not required, set sftpEnabled=false in etc/org.apache.karaf.shell.cfg and restart the SSH server bundle (or Karaf instance).",
-    "published": "2026-11-24T19:18:08.4Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "rce",
-      "lpe",
-      "apache",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 78,
-    "vendors": [
-      "apache"
-    ],
-    "cves": [
-      "CVE-2026-129959"
-    ],
-    "cwe": [
-      "CWE-862"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "Apache Karaf",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "b99614c57c7a6f48bf58ede373582bc2",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-123266 — Adobe Experience Manager is affected by an Improper Control of Generation of Cod…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123266",
-    "summary": "Adobe Experience Manager is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
-    "published": "2026-11-24T19:18:04.28Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "adobe"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-123266"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Adobe Experience Manager",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "ae4a6471d9463f133001c52418c2a5d0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 10.0 CRITICAL] CVE-2026-135792 — A vulnerability has been found in Panabit Smart Application Gateway TANGr7p10. T…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135792",
-    "summary": "A vulnerability has been found in Panabit Smart Application Gateway TANGr7p10. This issue affects the function send_email_authcode of the file user.cgi of the component Email Auth Code Sender. Such manipulation of the argument Username leads to os command injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-11-24T18:19:03.15Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-135792"
-    ],
-    "cwe": [
-      "CWE-77",
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Panabit Smart Application Gateway",
-    "attack": {
-      "av": "N",
-      "pr": "N",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "0c8c66263e48bbf2c1a72bca3c774208",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-135791 — A flaw has been found in Panabit Smart Application Gateway TANGr7p10. This vulne…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135791",
-    "summary": "A flaw has been found in Panabit Smart Application Gateway TANGr7p10. This vulnerability affects the function edit_data_pie of the file /cgi-bin/flowcontrol/ajax_data_pie. This manipulation of the argument Name causes os command injection. The attack may be initiated remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-11-24T18:19:02.88Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-135791"
-    ],
-    "cwe": [
-      "CWE-77",
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Panabit Smart Application Gateway",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "6c98ee24fa8dfac750b0c2cc7c6b8d92",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-125676 — Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125676",
-    "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
-    "published": "2026-11-24T18:18:54.227Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "adobe"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-125676"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Adobe Campaign Classic",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "8f4e27cf8a1bdb60e6e2348c151328ab",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-125675 — Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125675",
-    "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
-    "published": "2026-11-24T18:18:54.08Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "adobe"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-125675"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Adobe Campaign Classic",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "032918b1676e248c5b0d5fe1e34b7c52",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-123987 — Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123987",
-    "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
-    "published": "2026-11-24T18:18:53.753Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "adobe"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-123987"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Adobe Campaign Classic",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "9f1c994c7e1269e1ceb308fe862a6da0",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-123986 — Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123986",
-    "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
-    "published": "2026-11-24T18:18:53.603Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "adobe"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-123986"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Adobe Campaign Classic",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "998cdd18d0fd8178e99ba64b93a04919",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-123723 — Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123723",
-    "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
-    "published": "2026-11-24T18:18:53.453Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "adobe"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-123723"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Adobe Campaign Classic",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "102127c9a6a99839f4b84e10a350694a",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-123722 — Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123722",
-    "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
-    "published": "2026-11-24T18:18:53.31Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "adobe"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-123722"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Adobe Campaign Classic",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "d006a64c0f00107b768de234fd961aef",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-123342 — Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123342",
-    "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
-    "published": "2026-11-24T18:18:53Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "adobe"
-    ],
-    "severity": "high",
-    "score": 75,
-    "vendors": [
-      "adobe"
-    ],
-    "cves": [
-      "CVE-2026-123342"
-    ],
-    "cwe": [
-      "CWE-94"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Adobe Campaign Classic",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "c18d9ac0ee54203bae162400c3f0598f",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-121756 — Parallels Desktop CSHAShellExt Improper Access Control Local Privilege Escalatio…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121756",
-    "summary": "Parallels Desktop CSHAShellExt Improper Access Control Local Privilege Escalation Vulnerability. This vulnerability allows local attackers to escalate privileges on affected installations of Parallels Desktop. An attacker must first obtain the ability to execute low-privileged code on the target guest system in order to exploit this vulnerability.\n\nThe specific flaw exists within the CSHAShellExt component. The issue results from improper access control. An attacker can leverage this vulnerability to escalate privileges and execute arbitrary code in the context of the hypervisor. Was ZDI-CAN-30030.",
-    "published": "2026-11-24T18:18:51.65Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "rce",
-      "lpe"
-    ],
-    "severity": "high",
-    "score": 68,
-    "cves": [
-      "CVE-2026-121756"
-    ],
-    "cwe": [
-      "CWE-284"
-    ],
-    "cvss_vector": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Parallels Desktop",
-    "attack": {
-      "av": "L",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "4076e565cd291f622138cc8ee8503e2c",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-111546 — Dell PowerStore contains an OS Command Injection vulnerability. An authenticated…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111546",
-    "summary": "Dell PowerStore contains an OS Command Injection vulnerability. An authenticated user with limited privileges could potentially exploit this vulnerability, potentially leading to privilege escalation to root on the appliance.",
-    "published": "2026-11-24T18:18:45.487Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce",
-      "lpe"
-    ],
-    "severity": "critical",
-    "score": 83,
-    "cves": [
-      "CVE-2026-111546"
-    ],
-    "cwe": [
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Dell PowerStore",
-    "attack": {
-      "av": "N",
-      "pr": "H",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "05cb6d6723a2ed4be9370d77149b22ae",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.1 CRITICAL] CVE-2026-82319 — SolarWinds Serv-U is affected by a time-of-check to time-of-use (TOCTOU) vulnera…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82319",
-    "summary": "SolarWinds Serv-U is affected by a time-of-check to time-of-use (TOCTOU) vulnerability. A user with domain \nadministrator or higher privileges may allow a user to \nmodify protected files outside their home directory. The \nissue can result in read and write access to the \napplication files and privilege escalation. The risk is \nlower in Windows installations.",
-    "published": "2026-11-24T17:18:54.453Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "lpe",
-      "microsoft",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 63,
-    "vendors": [
-      "microsoft"
-    ],
-    "cves": [
-      "CVE-2026-82319"
-    ],
-    "cwe": [
-      "CWE-367"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Serv-U",
-    "attack": {
-      "av": "N",
-      "pr": "H",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "ee734d81ad7d0590131400ef818ea6ce",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.3 HIGH] CVE-2026-82169 — Dell Virtual Storage Integrator for VMware vSphere Web Client, versions prior to…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82169",
-    "summary": "Dell Virtual Storage Integrator for VMware vSphere Web Client, versions prior to 10.12.0.0, contains an OS Command Injection – confirm single CWE vulnerability in Upgrade Service. A low privileged remote attacker could potentially exploit this vulnerability, leading to arbitrary command execution.",
-    "published": "2026-11-24T17:18:53.513Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "rce",
-      "vmware",
-      "watch"
-    ],
-    "severity": "high",
-    "score": 70,
-    "vendors": [
-      "vmware"
-    ],
-    "cves": [
-      "CVE-2026-82169"
-    ],
-    "cwe": [
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "e8cd2964c3df3862c862b395d5fe19dd",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 8.8 HIGH] CVE-2026-136187 — Spug 4.0.0 before 4.1.1 contains an OS command injection vulnerability that allo…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136187",
-    "summary": "Spug 4.0.0 before 4.1.1 contains an OS command injection vulnerability that allows any authenticated user to execute commands by supplying a crafted git URL to the /api/credential/check/ endpoint. Attackers can inject shell metacharacters into the data field passed to git ls-remote with shell=True, executing commands as the Spug service account, which is root in Docker deployments.",
-    "published": "2026-11-24T17:18:46.707Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "rce",
-      "docker"
-    ],
-    "severity": "high",
-    "score": 60,
-    "vendors": [
-      "docker"
-    ],
-    "cves": [
-      "CVE-2026-136187"
-    ],
-    "cwe": [
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "product": "Spug",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
-  },
-  {
-    "id": "557bf348db32574210b499bba2116bb1",
-    "source": "nvd-recent",
-    "source_name": "NVD CVE recent",
-    "category": "vuln",
-    "title": "[CVSS 9.9 CRITICAL] CVE-2026-135790 — A vulnerability was detected in Panabit Smart Application Gateway TANGr7p10. Thi…",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135790",
-    "summary": "A vulnerability was detected in Panabit Smart Application Gateway TANGr7p10. This affects an unknown part of the file /cgi-bin/dashboard/ajax_chart_dump. The manipulation of the argument isntmeye results in os command injection. The attack can be launched remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
-    "published": "2026-11-24T17:18:43.717Z",
-    "fetched": "2026-11-25T04:22:53.129175958Z",
-    "tags": [
-      "critical-cvss",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 75,
-    "cves": [
-      "CVE-2026-135790"
-    ],
-    "cwe": [
-      "CWE-77",
-      "CWE-78"
-    ],
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-    "product": "Panabit Smart Application Gateway",
-    "attack": {
-      "av": "N",
-      "pr": "L",
-      "ui": "N"
-    }
   },
   {
     "id": "58361b10eb7c0a762de7f3801e9d8ab4",
@@ -4309,28 +4244,5 @@
     ],
     "title_ja": "ARMORY CASTLE が vSphere をexploit",
     "summary_ja": "執筆者：Jayson Frost, Bryce Greathouse, Dhanesh Kizhakkinan, John Palmisano, Steve Rasch, Daniel Sislo, John Wolfram\n紹介\n2026年10月15日、MandiantおよびGoogle Threat Intelligence Group（GTIG）が、PRC-nexus系の脅威アクターARMORY CASTLE（以前はUNC5221と記録されていた）が、BeyondTrust Remote Supportにおけるゼロデイ脆弱性CVE-2026-102764を悪用した活動について、ブログ記事を公開しました。この脆弱性は、パッチが適用された後も、依然として悪用されたとされています。"
-  },
-  {
-    "id": "9c764da0524490f5195cf61ea70ab870",
-    "source": "bleeping",
-    "source_name": "Bleeping Computer",
-    "category": "news",
-    "title": "Apache warns of Roller RCE vulnerability exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/apache-warns-of-roller-rce-vulnerability-exploited-in-attacks/",
-    "summary": "Apache has released security updates to address a critical Roller flaw that threat actors are exploiting to gain code execution on vulnerable servers. [...]",
-    "published": "2026-11-18T10:35:05Z",
-    "fetched": "2026-11-19T02:41:45.409286828Z",
-    "tags": [
-      "apache",
-      "watch",
-      "rce"
-    ],
-    "severity": "high",
-    "score": 67,
-    "vendors": [
-      "apache"
-    ],
-    "title_ja": "アパッチがローラーのRCE脆弱性の悪用攻撃に対応する安全更新を発表",
-    "summary_ja": "アパッチは、脅威アクターが脆弱なサーバー上でコード実行を獲得するために悪用している重要なローラーの脆弱性に対応するための安全更新をリリースしました。 [...]"
   }
 ]
